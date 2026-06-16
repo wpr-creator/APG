@@ -1,0 +1,40 @@
+{
+  "current_unit": "Unit 3: Civil Liberties & Civil Rights",
+  "week": "Week of May 26",
+  "periods": [
+    {
+      "id": "1",
+      "label": "Period 1",
+      "students": ["Adams, Jordan", "Baker, Taylor", "Chen, Marcus", "Davis, Riley", "Evans, Sam"]
+    },
+    {
+      "id": "3",
+      "label": "Period 3",
+      "students": ["Fisher, Alex", "Garcia, Mia", "Harris, Devon", "Ingram, Casey", "Johnson, Pat"]
+    },
+    {
+      "id": "5",
+      "label": "Period 5",
+      "students": ["King, Morgan", "Lopez, Jamie", "Miller, Avery", "Nelson, Chris", "Owen, Drew"]
+    }
+  ],
+  "exit_ticket": "In your own words, explain the significance of Tinker v. Des Moines. How does it affect students today?",
+  "materials": [
+    { "title": "Unit 3 Slides — 1st Amendment", "type": "slides", "url": "https://docs.google.com/presentation", "date": "May 27" },
+    { "title": "Due Process Study Guide", "type": "doc", "url": "https://docs.google.com/document", "date": "May 24" },
+    { "title": "Khan Academy — Civil Rights Overview", "type": "video", "url": "https://khanacademy.org", "date": "May 22" },
+    { "title": "FRQ Practice — Unit 2 Answer Key", "type": "doc", "url": "https://docs.google.com/document", "date": "May 20" }
+  ],
+  "upcoming": [
+    { "title": "Unit 3 Quiz", "date": "Jun 2" },
+    { "title": "FRQ — Argumentative Essay", "date": "Jun 6" },
+    { "title": "Unit 4 Begins", "date": "Jun 9" }
+  ],
+  "key_links": [
+    { "title": "AP Classroom", "url": "https://myap.collegeboard.org", "icon": "ti-school" },
+    { "title": "College Board", "url": "https://collegeboard.org", "icon": "ti-certificate" },
+    { "title": "Google Classroom", "url": "https://classroom.google.com", "icon": "ti-brand-google" },
+    { "title": "Newsela", "url": "https://newsela.com", "icon": "ti-news" },
+    { "title": "iCivics", "url": "https://icivics.org", "icon": "ti-building-community" }
+  ]
+}
