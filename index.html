@@ -4,29 +4,38 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Mr. Rogers — AP Government & Politics</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <style>
     :root {
       --navy: #1a2e5a;
       --navy-dark: #0f1c38;
-      --navy-light: #2a4080;
+      --navy-light: #243f7a;
+      --navy-xlight: #e8eef8;
       --crimson: #B22234;
       --crimson-dark: #8b1a27;
-      --crimson-light: #d42d42;
+      --crimson-light: #fde8e8;
+      --gold: #c8922a;
+      --gold-light: #fdf3e0;
+      --green: #1a5c2a;
+      --green-light: #e4f4e8;
       --cream: #f5f0e8;
       --cream-dark: #e8e0d0;
       --white: #ffffff;
       --gray-100: #f8f8f8;
       --gray-200: #eeeeee;
+      --gray-300: #dddddd;
       --gray-400: #aaaaaa;
+      --gray-600: #666666;
       --gray-700: #444444;
       --text: #1a1a1a;
       --text-muted: #666666;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.07);
       --shadow-md: 0 4px 16px rgba(0,0,0,0.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,0.13);
       --radius: 10px;
       --radius-sm: 6px;
+      --radius-lg: 14px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -38,127 +47,101 @@
       min-height: 100vh;
     }
 
-    /* ── HEADER ── */
+    /* ── STRIPE + HEADER ── */
+    .stars-stripe {
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--crimson) 0px, var(--crimson) 18px,
+        var(--white) 18px, var(--white) 36px
+      );
+    }
+
     header {
       background: var(--navy-dark);
-      border-bottom: 5px solid var(--crimson);
+      border-bottom: 4px solid var(--crimson);
       position: sticky;
       top: 0;
       z-index: 100;
     }
 
-    .stars-stripe {
-      height: 6px;
-      background: repeating-linear-gradient(
-        90deg,
-        var(--crimson) 0px, var(--crimson) 20px,
-        var(--white) 20px, var(--white) 40px
-      );
-    }
-
     .header-inner {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
-      padding: 0.9rem 1.5rem;
+      padding: 0.85rem 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .header-brand {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
+    .header-brand { display: flex; align-items: center; gap: 13px; }
 
     .header-seal {
-      width: 44px;
-      height: 44px;
+      width: 42px; height: 42px;
       background: var(--crimson);
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      color: white;
-      flex-shrink: 0;
-      border: 2px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; color: white; flex-shrink: 0;
+      border: 2px solid rgba(255,255,255,0.18);
     }
 
     .header-text h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 900;
+      font-size: 17px; font-weight: 900;
       color: var(--white);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      line-height: 1.1;
+      text-transform: uppercase; letter-spacing: 0.06em; line-height: 1.1;
     }
 
     .header-text p {
-      font-size: 11px;
-      color: rgba(255,255,255,0.55);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-top: 2px;
+      font-size: 10px; color: rgba(255,255,255,0.5);
+      letter-spacing: 0.1em; text-transform: uppercase; margin-top: 2px;
     }
 
+    .header-right { display: flex; align-items: center; gap: 10px; }
+
     .header-year {
-      background: rgba(255,255,255,0.1);
-      color: rgba(255,255,255,0.7);
-      font-size: 11px;
-      padding: 4px 12px;
-      border-radius: 99px;
-      letter-spacing: 0.06em;
-      border: 1px solid rgba(255,255,255,0.15);
+      background: rgba(255,255,255,0.09);
+      color: rgba(255,255,255,0.65);
+      font-size: 10px; padding: 4px 12px; border-radius: 99px;
+      letter-spacing: 0.07em;
+      border: 1px solid rgba(255,255,255,0.13);
     }
 
     /* ── NAV ── */
     nav {
       background: var(--navy);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
     }
 
     .nav-inner {
-      max-width: 1100px;
-      margin: 0 auto;
+      max-width: 1140px; margin: 0 auto;
       padding: 0 1.5rem;
-      display: flex;
-      gap: 0;
-      overflow-x: auto;
+      display: flex; gap: 0; overflow-x: auto;
     }
-
     .nav-inner::-webkit-scrollbar { display: none; }
 
     .nav-tab {
       font-family: 'Source Sans 3', sans-serif;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
-      padding: 13px 16px;
-      cursor: pointer;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(255,255,255,0.48);
+      padding: 13px 17px; cursor: pointer;
       border-bottom: 3px solid transparent;
       white-space: nowrap;
       transition: color 0.2s, border-color 0.2s;
       user-select: none;
     }
-
-    .nav-tab:hover { color: rgba(255,255,255,0.85); }
+    .nav-tab:hover { color: rgba(255,255,255,0.82); }
     .nav-tab.active { color: var(--white); border-bottom-color: var(--crimson); }
 
     /* ── MAIN LAYOUT ── */
     main {
-      max-width: 1100px;
+      max-width: 1140px;
       margin: 0 auto;
       padding: 1.5rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      gap: 16px;
     }
 
+    /* ── CARDS ── */
     .card {
       background: var(--white);
       border-radius: var(--radius);
@@ -168,340 +151,522 @@
     }
 
     .card-head {
-      padding: 0.75rem 1rem;
+      padding: 0.7rem 1rem;
       border-bottom: 1px solid var(--cream-dark);
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: flex; align-items: center; gap: 8px;
     }
-
-    .card-head i {
-      font-size: 15px;
-      color: var(--crimson);
-    }
-
+    .card-head i { font-size: 14px; color: var(--crimson); }
     .card-head h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--navy);
+      font-size: 11px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.12em; color: var(--navy);
     }
+    .card-head .card-badge {
+      margin-left: auto;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 2px 8px; border-radius: 99px;
+    }
+    .badge-crimson { background: var(--crimson-light); color: var(--crimson); }
+    .badge-navy { background: var(--navy-xlight); color: var(--navy); }
+    .badge-gold { background: var(--gold-light); color: var(--gold); }
+    .badge-green { background: var(--green-light); color: var(--green); }
 
     .card-body { padding: 1rem; }
 
-    /* ── HERO BANNER ── */
+    /* ── HOME GRID ── */
+    #tab-home {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ── HERO ── */
     .hero {
       grid-column: 1 / -1;
-      background: var(--navy);
-      color: white;
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      border: none;
-      box-shadow: var(--shadow-md);
-      position: relative;
-      overflow: hidden;
+      background: linear-gradient(120deg, var(--navy-dark) 0%, var(--navy) 100%);
+      color: white; border-radius: var(--radius-lg);
+      padding: 1.4rem 1.6rem;
+      display: flex; align-items: center; justify-content: space-between;
+      border: none; box-shadow: var(--shadow-md);
+      position: relative; overflow: hidden;
     }
-
     .hero::before {
       content: '';
-      position: absolute;
-      right: 0; top: 0; bottom: 0;
-      width: 6px;
-      background: repeating-linear-gradient(
-        180deg,
-        var(--crimson) 0px, var(--crimson) 14px,
-        var(--white) 14px, var(--white) 28px
-      );
+      position: absolute; right: 0; top: 0; bottom: 0; width: 5px;
+      background: repeating-linear-gradient(180deg, var(--crimson) 0px, var(--crimson) 12px, var(--white) 12px, var(--white) 24px);
     }
-
+    .hero::after {
+      content: '';
+      position: absolute; right: 40px; top: -30px;
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(178,34,52,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
     .hero-unit-label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-      margin-bottom: 5px;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.15em;
+      text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 4px;
     }
-
     .hero h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 900;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      color: var(--white);
-      line-height: 1.15;
+      font-size: 21px; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.03em;
+      color: var(--white); line-height: 1.15;
     }
-
     .hero-week {
-      font-size: 12px;
-      color: rgba(255,255,255,0.55);
-      margin-top: 5px;
-      letter-spacing: 0.05em;
+      font-size: 11px; color: rgba(255,255,255,0.48); margin-top: 5px; letter-spacing: 0.06em;
+    }
+    .hero-right { display: flex; flex-direction: column; align-items: flex-end; gap: 8px; margin-right: 14px; }
+    .hero-badge {
+      background: var(--crimson); color: white;
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; padding: 5px 14px; border-radius: 99px;
+    }
+    .hero-date {
+      font-size: 11px; color: rgba(255,255,255,0.4); letter-spacing: 0.04em;
     }
 
-    .hero-badge {
-      background: var(--crimson);
-      color: white;
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 99px;
-      flex-shrink: 0;
-      margin-right: 16px;
+    /* ── TODAY COLUMN (vocab + links) ── */
+    .today-col { display: flex; flex-direction: column; gap: 16px; }
+
+    /* ── VOCAB OF THE DAY ── */
+    .vocab-term {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--navy);
+      margin-bottom: 6px; line-height: 1.2;
+    }
+    .vocab-def {
+      font-size: 13px; line-height: 1.6; color: var(--gray-700);
+    }
+    .vocab-nav {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 12px; padding-top: 10px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .vocab-nav button {
+      background: none; border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm); padding: 4px 10px;
+      font-size: 11px; font-weight: 600; color: var(--navy);
+      cursor: pointer; letter-spacing: 0.04em;
+      transition: background 0.15s;
+    }
+    .vocab-nav button:hover { background: var(--navy-xlight); }
+    .vocab-counter { font-size: 10px; color: var(--gray-400); letter-spacing: 0.06em; }
+
+    /* ── KEY LINKS ── */
+    .key-links-row {
+      display: flex; gap: 8px;
+    }
+    .key-link {
+      flex: 1;
+      display: flex; flex-direction: column; align-items: center; gap: 6px;
+      padding: 14px 10px;
+      background: var(--gray-100); border-radius: var(--radius-sm);
+      text-decoration: none; color: var(--text);
+      border: 1px solid var(--gray-200);
+      font-size: 11px; font-weight: 600; letter-spacing: 0.04em;
+      text-align: center;
+      transition: background 0.15s, color 0.15s, box-shadow 0.15s;
+    }
+    .key-link i { font-size: 22px; color: var(--navy); }
+    .key-link:hover { background: var(--navy); color: white; box-shadow: var(--shadow-sm); }
+    .key-link:hover i { color: white; }
+
+    /* ── THIS DAY IN HISTORY ── */
+    .tdih-card { grid-column: 1 / -1; }
+    .tdih-body { display: flex; align-items: flex-start; gap: 14px; }
+    .tdih-icon {
+      width: 42px; height: 42px; background: var(--crimson);
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 18px; flex-shrink: 0; margin-top: 2px;
+    }
+    .tdih-year {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.1em; color: var(--crimson); margin-bottom: 4px;
+    }
+    .tdih-text { font-size: 14px; line-height: 1.65; color: var(--text); }
+    .tdih-source { font-size: 11px; color: var(--gray-400); margin-top: 5px; }
+    .tdih-actions { display: flex; gap: 8px; margin-top: 10px; }
+    .tdih-btn {
+      background: none; border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm); padding: 4px 12px;
+      font-size: 11px; font-weight: 600; color: var(--navy);
+      cursor: pointer; letter-spacing: 0.04em;
+      transition: background 0.15s;
+    }
+    .tdih-btn:hover { background: var(--navy-xlight); }
+    .tdih-btn.crimson { border-color: var(--crimson); color: var(--crimson); }
+    .tdih-btn.crimson:hover { background: var(--crimson-light); }
+
+    /* ── GOV NEWS ── */
+    .news-card { grid-column: span 2; }
+    .news-item {
+      display: flex; gap: 12px; padding: 10px 0;
+      border-bottom: 1px solid var(--gray-200); text-decoration: none; color: inherit;
+    }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-tag {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; padding: 2px 7px; border-radius: 4px;
+      background: var(--navy-xlight); color: var(--navy);
+      white-space: nowrap; align-self: flex-start; margin-top: 2px; flex-shrink: 0;
+    }
+    .news-content { flex: 1; }
+    .news-headline {
+      font-size: 13px; font-weight: 600; color: var(--text);
+      line-height: 1.4; margin-bottom: 2px;
+      transition: color 0.15s;
+    }
+    .news-item:hover .news-headline { color: var(--crimson); }
+    .news-meta { font-size: 11px; color: var(--gray-400); }
+    .news-empty {
+      font-size: 13px; color: var(--text-muted); font-style: italic;
+      padding: 8px 0;
     }
 
     /* ── MATERIALS ── */
     .material-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--gray-200);
-      text-decoration: none;
-      color: inherit;
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 0; border-bottom: 1px solid var(--gray-200);
+      text-decoration: none; color: inherit;
       transition: background 0.15s;
     }
-
     .material-row:last-child { border-bottom: none; }
     .material-row:hover .material-title { color: var(--crimson); }
-
     .material-icon {
-      width: 30px;
-      height: 30px;
-      border-radius: var(--radius-sm);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 14px;
+      width: 30px; height: 30px; border-radius: var(--radius-sm);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 13px;
     }
-
     .material-icon.slides { background: #fff3cd; color: #856404; }
     .material-icon.doc { background: #d4edff; color: #0a5a99; }
     .material-icon.video { background: #fde8e8; color: #8b1a1a; }
     .material-icon.link { background: #e8f5e9; color: #1a5c2a; }
-
-    .material-title {
-      font-size: 13px;
-      font-weight: 500;
-      flex: 1;
-      transition: color 0.15s;
-    }
-
-    .material-date {
-      font-size: 11px;
-      color: var(--gray-400);
-      flex-shrink: 0;
-    }
-
-    /* ── KEY LINKS ── */
-    .key-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 9px 10px;
-      background: var(--gray-100);
-      border-radius: var(--radius-sm);
-      margin-bottom: 7px;
-      text-decoration: none;
-      color: var(--text);
-      font-size: 13px;
-      font-weight: 500;
-      transition: background 0.15s, color 0.15s;
-      border: 1px solid var(--gray-200);
-    }
-
-    .key-link:last-child { margin-bottom: 0; }
-    .key-link:hover { background: var(--cream-dark); color: var(--navy); }
-    .key-link i { font-size: 16px; color: var(--navy); }
-    .key-link .ext { margin-left: auto; font-size: 12px; color: var(--gray-400); }
+    .material-title { font-size: 13px; font-weight: 500; flex: 1; transition: color 0.15s; }
+    .material-date { font-size: 10px; color: var(--gray-400); flex-shrink: 0; }
 
     /* ── UPCOMING ── */
     .upcoming-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 8px 0;
-      border-bottom: 1px solid var(--gray-200);
-      font-size: 13px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 8px 0; border-bottom: 1px solid var(--gray-200); font-size: 13px;
     }
-
     .upcoming-row:last-child { border-bottom: none; }
-
     .upcoming-title { font-weight: 500; }
-
     .upcoming-date {
-      font-size: 11px;
-      font-weight: 600;
-      background: var(--cream);
-      color: var(--navy);
-      padding: 2px 9px;
-      border-radius: 99px;
-      border: 1px solid var(--cream-dark);
-      white-space: nowrap;
+      font-size: 10px; font-weight: 700;
+      background: var(--cream); color: var(--navy);
+      padding: 2px 9px; border-radius: 99px;
+      border: 1px solid var(--cream-dark); white-space: nowrap;
     }
+    .upcoming-row.soon .upcoming-date { background: var(--crimson-light); color: var(--crimson); border-color: var(--crimson); }
 
-    /* ── THIS DAY IN HISTORY ── */
-    .tdih-card {
-      grid-column: 1 / -1;
-    }
-
-    .tdih-body {
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .tdih-icon {
-      width: 40px;
-      height: 40px;
-      background: var(--crimson);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 18px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .tdih-content p {
-      font-size: 14px;
-      line-height: 1.6;
-      color: var(--text);
-    }
-
-    .tdih-content .tdih-year {
-      font-family: 'Playfair Display', serif;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--crimson);
-      margin-bottom: 4px;
-    }
-
-    .tdih-loading {
-      font-size: 13px;
-      color: var(--text-muted);
-      font-style: italic;
-    }
-
-    /* ── EXIT TICKET ── */
-    .exit-card {
-      grid-column: span 2;
-    }
-
+    /* ── EXIT TICKET (home preview) ── */
+    .exit-mini { grid-column: span 2; }
     .exit-question {
       background: var(--cream);
       border-left: 4px solid var(--crimson);
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 10px 14px;
-      font-size: 14px;
-      font-weight: 500;
-      line-height: 1.5;
-      color: var(--navy);
-      margin-bottom: 12px;
+      padding: 10px 14px; font-size: 14px; font-weight: 500;
+      line-height: 1.55; color: var(--navy); margin-bottom: 12px;
     }
-
     .exit-selects {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-      margin-bottom: 10px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;
     }
-
     select, textarea {
-      width: 100%;
-      padding: 9px 12px;
-      border: 1px solid var(--cream-dark);
-      border-radius: var(--radius-sm);
-      font-family: 'Source Sans 3', sans-serif;
-      font-size: 13px;
-      color: var(--text);
-      background: var(--white);
-      appearance: none;
-      -webkit-appearance: none;
-      outline: none;
-      transition: border-color 0.2s;
+      width: 100%; padding: 9px 12px;
+      border: 1px solid var(--cream-dark); border-radius: var(--radius-sm);
+      font-family: 'Source Sans 3', sans-serif; font-size: 13px;
+      color: var(--text); background: var(--white);
+      appearance: none; -webkit-appearance: none;
+      outline: none; transition: border-color 0.2s;
     }
-
-    select:focus, textarea:focus {
-      border-color: var(--navy);
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 90px;
-      margin-bottom: 10px;
-    }
-
+    select:focus, textarea:focus { border-color: var(--navy); }
+    textarea { resize: vertical; min-height: 85px; margin-bottom: 10px; }
     .submit-btn {
-      width: 100%;
-      padding: 11px;
-      background: var(--crimson);
-      color: white;
-      border: none;
+      width: 100%; padding: 11px;
+      background: var(--crimson); color: white; border: none;
       border-radius: var(--radius-sm);
       font-family: 'Source Sans 3', sans-serif;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 7px;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 7px;
       transition: background 0.2s, transform 0.1s;
     }
-
     .submit-btn:hover { background: var(--crimson-dark); }
     .submit-btn:active { transform: scale(0.99); }
     .submit-btn:disabled { background: var(--gray-400); cursor: not-allowed; }
-
     .submit-success {
-      text-align: center;
-      padding: 1rem;
-      color: #1a5c2a;
-      font-size: 14px;
-      font-weight: 500;
+      text-align: center; padding: 1rem;
+      color: var(--green); font-size: 14px; font-weight: 500;
     }
-
     .submit-success i { font-size: 28px; display: block; margin-bottom: 6px; }
 
-    /* ── TABS CONTENT ── */
-    .tab-content { display: none; }
-    .tab-content.active { display: contents; }
+    /* ══════════════════════════════════
+       UNITS TAB
+    ══════════════════════════════════ */
+    #tab-units { display: none; }
+    #tab-units.active { display: block; }
 
-    /* ── FOOTER ── */
-    footer {
-      max-width: 1100px;
-      margin: 0.5rem auto 2rem;
-      padding: 0 1.5rem;
-      text-align: center;
-      font-size: 11px;
-      color: var(--gray-400);
-      letter-spacing: 0.04em;
+    .units-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 720px) {
-      main { grid-template-columns: 1fr; padding: 1rem; }
+    .unit-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      border: 1px solid var(--cream-dark); box-shadow: var(--shadow-sm);
+      overflow: hidden; position: relative;
+    }
+    .unit-card.current-unit {
+      border-color: var(--crimson); box-shadow: 0 0 0 2px rgba(178,34,52,0.15), var(--shadow-md);
+    }
+    .unit-header {
+      background: var(--navy); padding: 1rem 1.1rem;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .unit-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px; font-weight: 500; color: rgba(255,255,255,0.2);
+      line-height: 1; flex-shrink: 0; margin-top: 2px;
+    }
+    .unit-header-text { flex: 1; }
+    .unit-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; font-weight: 700; color: var(--white); line-height: 1.2;
+      margin-bottom: 4px;
+    }
+    .unit-weight {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gold); background: rgba(200,146,42,0.15);
+      padding: 2px 8px; border-radius: 4px; display: inline-block;
+    }
+    .unit-body { padding: 0.9rem 1.1rem; }
+    .unit-section-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 6px; margin-top: 10px;
+    }
+    .unit-section-label:first-child { margin-top: 0; }
+    .unit-topics { list-style: none; }
+    .unit-topics li {
+      font-size: 12px; color: var(--gray-700); padding: 3px 0;
+      border-bottom: 1px solid var(--gray-100);
+      display: flex; align-items: center; gap: 7px;
+    }
+    .unit-topics li:last-child { border-bottom: none; }
+    .unit-topics li::before {
+      content: ''; width: 4px; height: 4px; border-radius: 50%;
+      background: var(--crimson); flex-shrink: 0;
+    }
+    .unit-cases { display: flex; flex-wrap: wrap; gap: 5px; }
+    .case-chip {
+      font-size: 10px; font-weight: 600;
+      background: var(--crimson-light); color: var(--crimson);
+      padding: 2px 8px; border-radius: 4px; cursor: default;
+    }
+    .unit-docs { display: flex; flex-wrap: wrap; gap: 5px; }
+    .doc-chip {
+      font-size: 10px; font-weight: 600;
+      background: var(--navy-xlight); color: var(--navy);
+      padding: 2px 8px; border-radius: 4px; cursor: default;
+    }
+    .current-badge {
+      position: absolute; top: 10px; right: 10px;
+      font-size: 8px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; background: var(--crimson);
+      color: white; padding: 3px 8px; border-radius: 99px;
+    }
+
+    /* ══════════════════════════════════
+       REVIEW TAB
+    ══════════════════════════════════ */
+    #tab-review { display: none; }
+    #tab-review.active { display: block; }
+
+    .review-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .frq-type-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); box-shadow: var(--shadow-sm);
+      overflow: hidden; margin-bottom: 0;
+    }
+    .frq-header {
+      background: var(--navy-dark);
+      padding: 0.75rem 1rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .frq-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; font-weight: 700; color: var(--white);
+    }
+    .frq-pts {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; background: var(--gold);
+      color: var(--white); padding: 3px 9px; border-radius: 99px;
+    }
+    .frq-tips { padding: 0.85rem 1rem; }
+    .frq-tip {
+      display: flex; align-items: flex-start; gap: 9px;
+      padding: 5px 0; border-bottom: 1px solid var(--gray-100);
+      font-size: 12px; line-height: 1.5; color: var(--gray-700);
+    }
+    .frq-tip:last-child { border-bottom: none; }
+    .frq-tip-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 500; color: var(--crimson);
+      flex-shrink: 0; margin-top: 2px; min-width: 16px;
+    }
+
+    .required-docs-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); box-shadow: var(--shadow-sm);
+    }
+    .required-docs-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 1rem;
+    }
+    .doc-item {
+      background: var(--navy-xlight); border-radius: var(--radius-sm);
+      padding: 8px 10px;
+    }
+    .doc-item-name {
+      font-size: 12px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 2px;
+    }
+    .doc-item-type { font-size: 10px; color: var(--gray-400); }
+
+    .review-cases-card {
+      grid-column: 1 / -1;
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); box-shadow: var(--shadow-sm);
+    }
+    .cases-filter-row {
+      padding: 0.75rem 1rem; border-bottom: 1px solid var(--gray-200);
+      display: flex; gap: 6px; flex-wrap: wrap;
+    }
+    .filter-btn {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 4px 12px; border-radius: 99px;
+      border: 1px solid var(--gray-200); background: var(--gray-100);
+      color: var(--gray-600); cursor: pointer; transition: all 0.15s;
+    }
+    .filter-btn:hover { background: var(--cream-dark); }
+    .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+    .cases-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      padding: 0 0.5rem;
+    }
+    .case-item {
+      padding: 10px 0.75rem; border-bottom: 1px solid var(--gray-100);
+      cursor: pointer; transition: background 0.15s; border-radius: var(--radius-sm);
+    }
+    .case-item:hover { background: var(--gray-100); }
+    .case-name { font-size: 12px; font-weight: 600; color: var(--navy); margin-bottom: 2px; }
+    .case-year { font-size: 10px; color: var(--gray-400); }
+    .case-unit-tag {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; padding: 1px 6px; border-radius: 3px;
+      background: var(--crimson-light); color: var(--crimson);
+      display: inline-block; margin-top: 3px;
+    }
+
+    /* Case detail modal */
+    .case-modal {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 1000; padding: 1rem; opacity: 0; pointer-events: none;
+      transition: opacity 0.2s;
+    }
+    .case-modal.open { opacity: 1; pointer-events: all; }
+    .case-modal-inner {
+      background: var(--white); border-radius: var(--radius-lg);
+      max-width: 560px; width: 100%; box-shadow: var(--shadow-lg);
+      overflow: hidden; transform: translateY(10px);
+      transition: transform 0.2s;
+    }
+    .case-modal.open .case-modal-inner { transform: translateY(0); }
+    .case-modal-header {
+      background: var(--navy-dark); padding: 1rem 1.2rem;
+      display: flex; align-items: flex-start; justify-content: space-between;
+    }
+    .case-modal-header h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: white; line-height: 1.2;
+    }
+    .case-modal-close {
+      background: none; border: none; color: rgba(255,255,255,0.5);
+      font-size: 20px; cursor: pointer; padding: 0 4px; line-height: 1;
+    }
+    .case-modal-body { padding: 1.2rem; }
+    .case-detail-row {
+      display: flex; gap: 8px; align-items: flex-start; margin-bottom: 10px;
+    }
+    .case-detail-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gray-400);
+      min-width: 80px; padding-top: 1px; flex-shrink: 0;
+    }
+    .case-detail-value { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .case-detail-value strong { color: var(--navy); }
+
+    /* ══════════════════════════════════
+       EXIT TICKET TAB (full page)
+    ══════════════════════════════════ */
+    #tab-exit { display: none; }
+    #tab-exit.active { display: block; }
+    .exit-page { max-width: 680px; margin: 0 auto; }
+    .exit-page .exit-question { font-size: 16px; margin-bottom: 16px; padding: 14px 18px; }
+    .exit-page .exit-selects { grid-template-columns: 1fr 1fr; }
+    .exit-page textarea { min-height: 140px; font-size: 14px; }
+
+    /* ══════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════ */
+    @media (max-width: 760px) {
+      #tab-home { grid-template-columns: 1fr; }
       .hero { flex-direction: column; align-items: flex-start; gap: 10px; }
-      .hero-badge { margin-right: 0; }
-      .exit-card { grid-column: span 1; }
-      .exit-selects { grid-template-columns: 1fr; }
+      .hero-right { align-items: flex-start; }
+      .exit-mini { grid-column: 1; }
+      .news-card { grid-column: 1; }
+      .today-col { grid-column: 1; }
       .tdih-card { grid-column: 1; }
+      .units-grid { grid-template-columns: 1fr; }
+      .review-layout { grid-template-columns: 1fr; }
+      .cases-grid { grid-template-columns: 1fr 1fr; }
+      .review-cases-card { grid-column: 1; }
+      .required-docs-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 480px) {
+      .cases-grid { grid-template-columns: 1fr; }
+      .exit-selects { grid-template-columns: 1fr !important; }
+    }
+
+    /* ── UTILITY ── */
+    .hidden { display: none !important; }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--navy);
+      margin-bottom: 14px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--cream-dark);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-title i { color: var(--crimson); font-size: 18px; }
+    .section-subtitle { font-size: 12px; color: var(--text-muted); font-weight: 400; font-family: 'Source Sans 3', sans-serif; }
+
+    footer {
+      max-width: 1140px; margin: 0.5rem auto 2.5rem;
+      padding: 0 1.5rem; text-align: center;
+      font-size: 10px; color: var(--gray-400); letter-spacing: 0.06em;
+    }
+
+    /* ── LOADING STATE ── */
+    .skeleton {
+      background: linear-gradient(90deg, var(--gray-200) 25%, var(--gray-100) 50%, var(--gray-200) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 4px; height: 14px;
+    }
+    @keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
@@ -512,15 +677,15 @@
   <header>
     <div class="header-inner">
       <div class="header-brand">
-        <div class="header-seal">
-          <i class="ti ti-building-community" aria-hidden="true"></i>
-        </div>
+        <div class="header-seal"><i class="ti ti-building-community" aria-hidden="true"></i></div>
         <div class="header-text">
           <h1>Mr. Rogers — AP Government &amp; Politics</h1>
-          <p>San Diego · Advanced Placement</p>
+          <p>San Diego · Advanced Placement · College Board</p>
         </div>
       </div>
-      <span class="header-year">2025–26</span>
+      <div class="header-right">
+        <span class="header-year" id="header-date">2025–26</span>
+      </div>
     </div>
   </header>
 
@@ -528,52 +693,108 @@
     <div class="nav-inner">
       <div class="nav-tab active" data-tab="home">Home</div>
       <div class="nav-tab" data-tab="units">Units</div>
-      <div class="nav-tab" data-tab="review">Review</div>
+      <div class="nav-tab" data-tab="review">FRQ &amp; Review</div>
       <div class="nav-tab" data-tab="exit">Exit Ticket</div>
-      <div class="nav-tab" data-tab="links">Key Links</div>
     </div>
   </nav>
 
-  <main id="main-grid">
+  <main>
 
-    <!-- HOME TAB -->
-    <div class="tab-content active" id="tab-home">
+    <!-- ═══════════════════ HOME TAB ═══════════════════ -->
+    <div id="tab-home">
 
-      <!-- Hero -->
-      <div class="hero card" id="hero-banner">
+      <!-- Hero Banner -->
+      <div class="hero card">
         <div>
           <div class="hero-unit-label">Current Unit</div>
           <h2 id="hero-unit">Loading...</h2>
           <div class="hero-week" id="hero-week"></div>
         </div>
-        <span class="hero-badge">Active</span>
+        <div class="hero-right">
+          <span class="hero-badge">Active</span>
+          <span class="hero-date" id="hero-date"></span>
+        </div>
       </div>
 
-      <!-- This Day in History -->
+      <!-- This Day in History (spans full width) -->
       <div class="card tdih-card">
         <div class="card-head">
           <i class="ti ti-history" aria-hidden="true"></i>
-          <h2>This Day in American History</h2>
+          <h2>This Day in American Government</h2>
+          <span class="card-badge badge-crimson" id="tdih-date-badge">Today</span>
         </div>
         <div class="card-body">
           <div class="tdih-body">
-            <div class="tdih-icon"><i class="ti ti-star" aria-hidden="true"></i></div>
-            <div class="tdih-content">
+            <div class="tdih-icon"><i class="ti ti-gavel" aria-hidden="true"></i></div>
+            <div style="flex:1;">
               <div class="tdih-year" id="tdih-year">Loading...</div>
-              <p id="tdih-text"><span class="tdih-loading">Fetching today's historical event...</span></p>
+              <p class="tdih-text" id="tdih-text"><span style="color:var(--gray-400);font-style:italic;font-size:13px;">Fetching today's event...</span></p>
+              <div class="tdih-actions">
+                <button class="tdih-btn" id="tdih-prev" title="Previous event">&#8592; Previous</button>
+                <button class="tdih-btn" id="tdih-next" title="Next event">Next &#8594;</button>
+                <button class="tdih-btn crimson" id="tdih-discuss" style="margin-left:auto;">Use as Discussion Starter</button>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Recent Materials -->
+      <!-- Gov News (2 cols) -->
+      <div class="card news-card">
+        <div class="card-head">
+          <i class="ti ti-news" aria-hidden="true"></i>
+          <h2>In the News This Week</h2>
+          <span class="card-badge badge-navy">Mr. Rogers curates</span>
+        </div>
+        <div class="card-body" id="news-list">
+          <p class="news-empty">No news items this week yet — check back soon.</p>
+        </div>
+      </div>
+
+      <!-- Today column: Vocab + Links (1 col) -->
+      <div class="today-col">
+
+        <!-- Vocab of the Day -->
+        <div class="card">
+          <div class="card-head">
+            <i class="ti ti-vocabulary" aria-hidden="true"></i>
+            <h2>Vocab of the Day</h2>
+            <span class="card-badge badge-gold" id="vocab-unit-tag">AP Gov</span>
+          </div>
+          <div class="card-body">
+            <div class="vocab-term" id="vocab-term">Loading...</div>
+            <div class="vocab-def" id="vocab-def"></div>
+            <div class="vocab-nav">
+              <button id="vocab-prev">&#8592; Prev</button>
+              <span class="vocab-counter" id="vocab-counter"></span>
+              <button id="vocab-next">Next &#8594;</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Key Links (only the 2 useful ones) -->
+        <div class="card">
+          <div class="card-head">
+            <i class="ti ti-link" aria-hidden="true"></i>
+            <h2>Quick Links</h2>
+          </div>
+          <div class="card-body">
+            <div class="key-links-row" id="links-list"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Materials -->
       <div class="card" style="grid-column: span 2;">
         <div class="card-head">
           <i class="ti ti-files" aria-hidden="true"></i>
           <h2>Recent Materials</h2>
         </div>
         <div class="card-body" id="materials-list">
-          <p style="font-size:13px; color: var(--text-muted);">Loading...</p>
+          <div class="skeleton" style="margin-bottom:8px;"></div>
+          <div class="skeleton" style="width:80%;margin-bottom:8px;"></div>
+          <div class="skeleton" style="width:65%;"></div>
         </div>
       </div>
 
@@ -583,226 +804,845 @@
           <i class="ti ti-calendar-event" aria-hidden="true"></i>
           <h2>Upcoming</h2>
         </div>
-        <div class="card-body" id="upcoming-list">
-          <p style="font-size:13px; color: var(--text-muted);">Loading...</p>
-        </div>
+        <div class="card-body" id="upcoming-list"></div>
       </div>
 
-      <!-- Exit Ticket -->
-      <div class="card exit-card">
+      <!-- Exit Ticket (home version, 2 cols) -->
+      <div class="card exit-mini">
         <div class="card-head">
           <i class="ti ti-checklist" aria-hidden="true"></i>
           <h2>Exit Ticket</h2>
+          <span class="card-badge badge-crimson">Submit before you leave</span>
         </div>
         <div class="card-body">
-          <div class="exit-question" id="exit-question">Loading today's question...</div>
-          <div id="exit-form-wrapper">
+          <div class="exit-question" id="exit-question-home">Loading today's question...</div>
+          <div id="exit-form-home">
             <div class="exit-selects">
-              <select id="period-select">
-                <option value="">Select your period...</option>
-              </select>
-              <select id="name-select" disabled>
-                <option value="">Select your name...</option>
-              </select>
+              <select id="period-select-home"><option value="">Your period...</option></select>
+              <select id="name-select-home" disabled><option value="">Your name...</option></select>
             </div>
-            <textarea id="exit-response" placeholder="Type your response here..."></textarea>
-            <button class="submit-btn" id="submit-btn" disabled>
+            <textarea id="exit-response-home" placeholder="Type your response here..."></textarea>
+            <button class="submit-btn" id="submit-btn-home" disabled>
               <i class="ti ti-send" aria-hidden="true"></i> Submit Exit Ticket
             </button>
           </div>
-          <div id="submit-success" style="display:none;" class="submit-success">
+          <div id="submit-success-home" class="submit-success hidden">
             <i class="ti ti-circle-check"></i>
             Response submitted — nice work!
           </div>
         </div>
       </div>
 
-      <!-- Key Links -->
-      <div class="card">
-        <div class="card-head">
-          <i class="ti ti-link" aria-hidden="true"></i>
-          <h2>Key Links</h2>
+    </div>
+    <!-- end home tab -->
+
+    <!-- ═══════════════════ UNITS TAB ═══════════════════ -->
+    <div id="tab-units">
+      <div class="section-title">
+        <i class="ti ti-layout-grid"></i>
+        AP Gov Units
+        <span class="section-subtitle">— 5 units · All weighted for the exam</span>
+      </div>
+      <div class="units-grid" id="units-grid"></div>
+    </div>
+
+    <!-- ═══════════════════ REVIEW TAB ═══════════════════ -->
+    <div id="tab-review">
+      <div class="section-title">
+        <i class="ti ti-school"></i>
+        FRQ Guide &amp; Case Review
+        <span class="section-subtitle">— Strategies and required content</span>
+      </div>
+      <div class="review-layout">
+
+        <!-- FRQ Cards (built dynamically) -->
+        <div id="frq-cards"></div>
+
+        <!-- Required Foundational Documents -->
+        <div>
+          <div class="card required-docs-card" style="margin-bottom:16px;">
+            <div class="card-head">
+              <i class="ti ti-file-certificate" aria-hidden="true"></i>
+              <h2>Required Foundational Documents</h2>
+            </div>
+            <div class="required-docs-grid" id="req-docs-grid"></div>
+          </div>
+
+          <!-- FRQ Scoring Reminder -->
+          <div class="card">
+            <div class="card-head">
+              <i class="ti ti-target" aria-hidden="true"></i>
+              <h2>Exam Scoring Reminder</h2>
+            </div>
+            <div class="card-body" style="font-size:13px;line-height:1.7;color:var(--gray-700);">
+              <p style="margin-bottom:8px;"><strong style="color:var(--navy);">4 FRQs total</strong> — each scored separately by AP readers.</p>
+              <p style="margin-bottom:8px;">Points are earned by explicitly meeting each bullet in the prompt. Graders look for <em>specific evidence</em>, not general knowledge.</p>
+              <p style="margin-bottom:8px;"><strong style="color:var(--navy);">Never leave an FRQ blank.</strong> Attempt every part — partial credit is real.</p>
+              <p><strong style="color:var(--crimson);">Vocab matters:</strong> Use the exact AP terms (e.g., "judicial review," "selective incorporation") rather than general descriptions.</p>
+            </div>
+          </div>
         </div>
-        <div class="card-body" id="links-list">
-          <p style="font-size:13px; color: var(--text-muted);">Loading...</p>
+
+        <!-- SCOTUS Cases (full width, filterable) -->
+        <div class="card review-cases-card">
+          <div class="card-head">
+            <i class="ti ti-gavel" aria-hidden="true"></i>
+            <h2>Required SCOTUS Cases</h2>
+            <span class="card-badge badge-crimson">15 Required</span>
+          </div>
+          <div class="cases-filter-row" id="case-filter-row"></div>
+          <div class="cases-grid" id="cases-grid"></div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ═══════════════════ EXIT TICKET TAB ═══════════════════ -->
+    <div id="tab-exit">
+      <div class="exit-page">
+        <div class="section-title">
+          <i class="ti ti-checklist"></i>
+          Exit Ticket
+          <span class="section-subtitle">— Submit before the bell</span>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <div class="exit-question" id="exit-question-page">Loading today's question...</div>
+            <div id="exit-form-page">
+              <div class="exit-selects">
+                <select id="period-select-page"><option value="">Select your period...</option></select>
+                <select id="name-select-page" disabled><option value="">Select your name...</option></select>
+              </div>
+              <textarea id="exit-response-page" placeholder="Write a complete, thoughtful response..."></textarea>
+              <button class="submit-btn" id="submit-btn-page" disabled>
+                <i class="ti ti-send" aria-hidden="true"></i> Submit Exit Ticket
+              </button>
+            </div>
+            <div id="submit-success-page" class="submit-success hidden">
+              <i class="ti ti-circle-check"></i>
+              Response submitted — nice work!
+            </div>
+          </div>
         </div>
       </div>
-
-    </div><!-- end home tab -->
+    </div>
 
   </main>
 
   <footer>
-    <p>Mr. Rogers · AP Government &amp; Politics · Updated weekly</p>
+    <p>Mr. Rogers · AP Government &amp; Politics · <span id="footer-date"></span></p>
   </footer>
 
-  <script>
-    // ── LOAD CONTENT ──
-    async function loadContent() {
-      const res = await fetch('content.json');
-      const data = await res.json();
-
-      // Hero
-      document.getElementById('hero-unit').textContent = data.current_unit.toUpperCase();
-      document.getElementById('hero-week').textContent = data.week;
-
-      // Exit ticket question
-      document.getElementById('exit-question').textContent = data.exit_ticket;
-
-      // Materials
-      const matList = document.getElementById('materials-list');
-      const iconMap = { slides: 'ti-presentation', doc: 'ti-file-text', video: 'ti-video', link: 'ti-external-link' };
-      const colorMap = { slides: 'slides', doc: 'doc', video: 'video', link: 'link' };
-      matList.innerHTML = data.materials.map(m => `
-        <a class="material-row" href="${m.url}" target="_blank" rel="noopener">
-          <div class="material-icon ${colorMap[m.type] || 'link'}">
-            <i class="ti ${iconMap[m.type] || 'ti-file'}" aria-hidden="true"></i>
-          </div>
-          <span class="material-title">${m.title}</span>
-          <span class="material-date">${m.date}</span>
-        </a>
-      `).join('');
-
-      // Upcoming
-      const upList = document.getElementById('upcoming-list');
-      upList.innerHTML = data.upcoming.map(u => `
-        <div class="upcoming-row">
-          <span class="upcoming-title">${u.title}</span>
-          <span class="upcoming-date">${u.date}</span>
+  <!-- ═══════════════ CASE DETAIL MODAL ═══════════════ -->
+  <div class="case-modal" id="case-modal" role="dialog" aria-modal="true" aria-label="Case details">
+    <div class="case-modal-inner">
+      <div class="case-modal-header">
+        <div>
+          <div style="font-size:9px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:4px;" id="modal-unit-tag">Unit</div>
+          <h3 id="modal-case-name">Case Name</h3>
         </div>
-      `).join('');
+        <button class="case-modal-close" id="modal-close" aria-label="Close">&#x2715;</button>
+      </div>
+      <div class="case-modal-body">
+        <div class="case-detail-row">
+          <div class="case-detail-label">Year</div>
+          <div class="case-detail-value" id="modal-year"></div>
+        </div>
+        <div class="case-detail-row">
+          <div class="case-detail-label">Issue</div>
+          <div class="case-detail-value" id="modal-issue"></div>
+        </div>
+        <div class="case-detail-row">
+          <div class="case-detail-label">Ruling</div>
+          <div class="case-detail-value" id="modal-ruling"></div>
+        </div>
+        <div class="case-detail-row">
+          <div class="case-detail-label">Significance</div>
+          <div class="case-detail-value" id="modal-sig"></div>
+        </div>
+        <div class="case-detail-row">
+          <div class="case-detail-label">AP Tip</div>
+          <div class="case-detail-value" id="modal-tip" style="color:var(--crimson);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-      // Key Links
-      const linksList = document.getElementById('links-list');
-      linksList.innerHTML = data.key_links.map(l => `
-        <a class="key-link" href="${l.url}" target="_blank" rel="noopener">
-          <i class="ti ${l.icon}" aria-hidden="true"></i>
-          ${l.title}
-          <i class="ti ti-external-link ext" aria-hidden="true"></i>
+  <script>
+  // ══════════════════════════════════════════════════════════
+  //  DATA: SCOTUS CASES
+  // ══════════════════════════════════════════════════════════
+  const SCOTUS_CASES = [
+    {
+      name: "Marbury v. Madison", year: 1803, unit: 2,
+      issue: "Can the Supreme Court declare an act of Congress unconstitutional?",
+      ruling: "Yes. Chief Justice Marshall established the doctrine of judicial review.",
+      sig: "Established judicial review — the Court's power to strike down laws that violate the Constitution. Foundation of the entire federal court system's role.",
+      tip: "Know this cold. Any FRQ about the judiciary, separation of powers, or checks and balances will likely test judicial review."
+    },
+    {
+      name: "McCulloch v. Maryland", year: 1819, unit: 2,
+      issue: "Does Congress have the power to create a national bank? Can states tax federal institutions?",
+      ruling: "Yes and no. Congress has implied powers; states cannot tax federal government.",
+      sig: "Established implied powers via the Necessary & Proper Clause and federal supremacy over the states.",
+      tip: "Connect to Federalist No. 51 and the Supremacy Clause. Classic federalism FRQ case."
+    },
+    {
+      name: "Schenck v. United States", year: 1919, unit: 3,
+      issue: "Can the government limit speech during wartime?",
+      ruling: "Yes. Speech creating a 'clear and present danger' can be restricted.",
+      sig: "Established the 'clear and present danger' test for limiting First Amendment rights.",
+      tip: "Contrast with Tinker v. Des Moines to show how speech protections have evolved."
+    },
+    {
+      name: "Brown v. Board of Education", year: 1954, unit: 3,
+      issue: "Does racial segregation in public schools violate the Equal Protection Clause?",
+      ruling: "Yes. Unanimous decision overturning Plessy v. Ferguson's 'separate but equal' doctrine.",
+      sig: "Landmark civil rights ruling. Used the 14th Amendment's Equal Protection Clause to end de jure school segregation.",
+      tip: "Know that it overruled Plessy (1896). Often paired with civil rights FRQs and the 14th Amendment."
+    },
+    {
+      name: "Engel v. Vitale", year: 1962, unit: 3,
+      issue: "Does state-sponsored prayer in public schools violate the Establishment Clause?",
+      ruling: "Yes. Even nondenominational government-composed prayer violates the First Amendment.",
+      sig: "Landmark Establishment Clause ruling separating government from religion in public schools.",
+      tip: "Know the difference between Establishment Clause (Engel) and Free Exercise Clause cases."
+    },
+    {
+      name: "Baker v. Carr", year: 1962, unit: 5,
+      issue: "Are legislative apportionment disputes justiciable (can courts rule on them)?",
+      ruling: "Yes. The Court held that redistricting cases are justiciable under the Equal Protection Clause.",
+      sig: "Opened the door for courts to rule on redistricting. Led to 'one person, one vote' principle.",
+      tip: "Pair with Shaw v. Reno. Both deal with redistricting — Baker opened courts to it, Shaw addressed racial gerrymandering."
+    },
+    {
+      name: "Gideon v. Wainwright", year: 1963, unit: 3,
+      issue: "Does the 6th Amendment right to counsel apply to state criminal trials?",
+      ruling: "Yes. States must provide an attorney to defendants who cannot afford one.",
+      sig: "Key selective incorporation case — applied the right to counsel to the states via the 14th Amendment.",
+      tip: "Example of selective incorporation. Connect to Mapp v. Ohio and Miranda for a pattern of 1960s rights expansion."
+    },
+    {
+      name: "Tinker v. Des Moines", year: 1969, unit: 3,
+      issue: "Can schools prohibit students from wearing black armbands to protest the Vietnam War?",
+      ruling: "No. Students do not 'shed their constitutional rights at the schoolhouse gate.'",
+      sig: "Established that students retain First Amendment rights in school unless speech causes 'substantial disruption.'",
+      tip: "High-frequency case. Know the 'substantial disruption' test. Contrast with Bethel School District v. Fraser."
+    },
+    {
+      name: "New York Times v. United States", year: 1971, unit: 3,
+      issue: "Can the government prevent the press from publishing the Pentagon Papers?",
+      ruling: "No. Prior restraint requires an extremely heavy burden of justification. Press prevailed.",
+      sig: "Reaffirmed freedom of the press and the near-absolute ban on prior restraint of publication.",
+      tip: "Know 'prior restraint' — the government stopping publication before it happens. This case rejected it."
+    },
+    {
+      name: "Wisconsin v. Yoder", year: 1972, unit: 3,
+      issue: "Can states compel Amish children to attend school beyond 8th grade?",
+      ruling: "No. The Free Exercise Clause protects Amish families from compulsory school attendance laws.",
+      sig: "Major Free Exercise Clause ruling balancing religious freedom against state interest in education.",
+      tip: "Contrast with Engel v. Vitale (Establishment) — Yoder is a Free Exercise case where religion wins."
+    },
+    {
+      name: "Roe v. Wade", year: 1973, unit: 3,
+      issue: "Does the Constitution protect a woman's right to an abortion?",
+      ruling: "Yes (at the time). The right to privacy under the 14th Amendment extends to abortion decisions.",
+      sig: "Established a constitutional right to abortion (later overturned by Dobbs v. Jackson, 2022). Based on implied right to privacy.",
+      tip: "Know this was overturned in 2022 by Dobbs. The AP exam still includes it as a required case — focus on the privacy/14th Amendment rationale."
+    },
+    {
+      name: "Shaw v. Reno", year: 1993, unit: 5,
+      issue: "Can states draw oddly shaped legislative districts solely to create majority-minority districts?",
+      ruling: "Such districts can be challenged under the Equal Protection Clause if race is the predominant factor.",
+      sig: "Limited racial gerrymandering. While the Voting Rights Act permits some race-consciousness, race cannot be the sole factor.",
+      tip: "Pair with Baker v. Carr. Shaw addresses racial gerrymandering — know the difference between political and racial gerrymandering."
+    },
+    {
+      name: "U.S. v. Lopez", year: 1995, unit: 2,
+      issue: "Did Congress exceed its Commerce Clause power by banning guns near schools?",
+      ruling: "Yes. The Gun-Free School Zones Act exceeded Congressional commerce power.",
+      sig: "First major case in decades to limit Congress's Commerce Clause power, signaling a new federalism.",
+      tip: "Shows limits on federal power. Contrast with McCulloch (broad federal power) — shows the tension in federalism."
+    },
+    {
+      name: "McDonald v. City of Chicago", year: 2010, unit: 3,
+      issue: "Does the 2nd Amendment apply to state and local governments?",
+      ruling: "Yes. The 2nd Amendment is incorporated against the states through the 14th Amendment.",
+      sig: "Extended D.C. v. Heller (2008) to states via selective incorporation. Individuals have the right to keep arms for self-defense at home.",
+      tip: "Another selective incorporation case — the 2nd Amendment applied to states via the 14th. Connect to the incorporation doctrine."
+    },
+    {
+      name: "Citizens United v. FEC", year: 2010, unit: 5,
+      issue: "Can the government limit independent political expenditures by corporations and other groups?",
+      ruling: "No. Political spending by corporations is a form of protected speech under the 1st Amendment.",
+      sig: "Opened the door to unlimited 'outside spending' in elections and the rise of Super PACs.",
+      tip: "Major campaign finance case. Know the connection to Super PACs, dark money, and the debate over money as speech."
+    }
+  ];
+
+  // ══════════════════════════════════════════════════════════
+  //  DATA: REQUIRED FOUNDATIONAL DOCUMENTS
+  // ══════════════════════════════════════════════════════════
+  const REQ_DOCS = [
+    { name: "Declaration of Independence", type: "Historical Document", year: "1776" },
+    { name: "Articles of Confederation", type: "Historical Document", year: "1777" },
+    { name: "U.S. Constitution", type: "Founding Document", year: "1787" },
+    { name: "Federalist No. 10", type: "Federalist Paper", year: "1787" },
+    { name: "Brutus No. 1", type: "Anti-Federalist", year: "1787" },
+    { name: "Federalist No. 51", type: "Federalist Paper", year: "1788" },
+    { name: "Federalist No. 70", type: "Federalist Paper", year: "1788" },
+    { name: "Federalist No. 76", type: "Federalist Paper", year: "1788" },
+    { name: "Letter from Birmingham Jail", type: "Historical Document", year: "1963" }
+  ];
+
+  // ══════════════════════════════════════════════════════════
+  //  DATA: THIS DAY IN GOV HISTORY (curated fallbacks, date-keyed)
+  //  Format: "M/D": [ { year, text }, ... ]
+  // ══════════════════════════════════════════════════════════
+  const GOV_HISTORY = {
+    "1/1":  [{ year: "1863", text: "President Lincoln issues the Emancipation Proclamation, declaring enslaved people in Confederate states to be free." }],
+    "1/4":  [{ year: "1965", text: "President Lyndon B. Johnson outlines his 'Great Society' domestic program in his State of the Union address." }],
+    "1/8":  [{ year: "1918", text: "President Woodrow Wilson presents his Fourteen Points to Congress, his vision for post-WWI peace including the League of Nations." }],
+    "1/20": [{ year: "1961", text: "John F. Kennedy is inaugurated, delivering his famous address: 'Ask not what your country can do for you—ask what you can do for your country.'" }],
+    "2/3":  [{ year: "1870", text: "The 15th Amendment is ratified, prohibiting denial of the vote based on race, color, or previous condition of servitude." }],
+    "2/6":  [{ year: "1933", text: "The 20th Amendment is ratified, moving the presidential inauguration date from March 4 to January 20." }],
+    "2/24": [{ year: "1803", text: "Chief Justice John Marshall delivers the Marbury v. Madison opinion, establishing the doctrine of judicial review." }],
+    "3/4":  [{ year: "1933", text: "Franklin D. Roosevelt is inaugurated during the Great Depression, declaring 'The only thing we have to fear is fear itself.'" }],
+    "3/5":  [{ year: "1770", text: "The Boston Massacre occurs, becoming a catalyst for colonial opposition to British rule." }],
+    "3/6":  [{ year: "1857", text: "The Supreme Court issues Dred Scott v. Sandford, ruling that enslaved people are property, not citizens." }],
+    "3/25": [{ year: "1965", text: "Martin Luther King Jr. leads the Selma-to-Montgomery voting rights march, a key event leading to the Voting Rights Act of 1965." }],
+    "4/9":  [{ year: "1865", text: "Confederate General Robert E. Lee surrenders at Appomattox Court House, effectively ending the Civil War." }],
+    "4/12": [{ year: "1861", text: "Confederate forces fire on Fort Sumter, South Carolina, beginning the Civil War." }],
+    "4/14": [{ year: "1865", text: "President Abraham Lincoln is shot at Ford's Theatre; he dies the following morning." }],
+    "4/19": [{ year: "1775", text: "Battles of Lexington and Concord — 'the shot heard round the world' — begin the American Revolutionary War." }],
+    "5/17": [{ year: "1954", text: "The Supreme Court unanimously rules in Brown v. Board of Education that racial segregation in public schools is unconstitutional." }],
+    "5/18": [{ year: "1896", text: "The Supreme Court decides Plessy v. Ferguson, establishing the 'separate but equal' doctrine that would stand for 58 years." }],
+    "5/25": [{ year: "1787", text: "The Constitutional Convention opens in Philadelphia with delegates from 12 states — the drafting of the U.S. Constitution begins." }],
+    "6/2":  [{ year: "1924", text: "President Coolidge signs the Indian Citizenship Act, granting U.S. citizenship to all Native Americans born in the country." }],
+    "6/5":  [{ year: "1968", text: "Senator Robert F. Kennedy is assassinated in Los Angeles after winning the California Democratic primary." }],
+    "6/13": [{ year: "1966", text: "The Supreme Court rules in Miranda v. Arizona that suspects must be informed of their rights before police interrogation." }],
+    "6/15": [{ year: "1215", text: "King John of England seals the Magna Carta — the foundational document for constitutional limits on government power, later influencing the Founders." }],
+    "6/17": [{ year: "1972", text: "Five men are arrested breaking into the Democratic National Committee headquarters at the Watergate complex, beginning the Watergate scandal." }],
+    "6/19": [{ year: "1865", text: "Juneteenth: Union soldiers arrive in Galveston, Texas, announcing the end of slavery — two months after the Civil War ended." }],
+    "6/20": [{ year: "1788", text: "New Hampshire becomes the 9th state to ratify the Constitution, the minimum needed to put it into effect." }],
+    "6/21": [{ year: "1788", text: "The U.S. Constitution officially goes into effect after New Hampshire's ratification the prior day." }],
+    "6/26": [{ year: "2015", text: "The Supreme Court rules in Obergefell v. Hodges that the Constitution guarantees a right to same-sex marriage nationwide." }],
+    "7/2":  [{ year: "1964", text: "President Lyndon B. Johnson signs the Civil Rights Act of 1964, outlawing discrimination based on race, color, religion, sex, or national origin." }],
+    "7/4":  [{ year: "1776", text: "The Continental Congress formally adopts the Declaration of Independence, asserting that 'all men are created equal.'" }],
+    "7/9":  [{ year: "1868", text: "The 14th Amendment is ratified, granting citizenship to former enslaved people and guaranteeing equal protection and due process." }],
+    "7/26": [{ year: "1948", text: "President Truman signs Executive Order 9981, desegregating the United States Armed Forces." }],
+    "8/6":  [{ year: "1965", text: "President Johnson signs the Voting Rights Act of 1965, prohibiting discriminatory voting practices that had disenfranchised Black Americans." }],
+    "8/9":  [{ year: "1974", text: "President Richard Nixon resigns from office following the Watergate scandal, the only president to do so." }],
+    "8/18": [{ year: "1920", text: "The 19th Amendment is ratified, granting women the right to vote after a decades-long suffrage movement." }],
+    "8/26": [{ year: "1920", text: "Women officially gained the right to vote as Secretary of State Bainbridge Colby certified the 19th Amendment." }],
+    "8/28": [{ year: "1963", text: "Martin Luther King Jr. delivers his 'I Have a Dream' speech at the March on Washington, calling for civil rights and racial equality." }],
+    "9/4":  [{ year: "1957", text: "Arkansas Governor Orval Faubus calls out the National Guard to prevent Black students from entering Little Rock Central High School." }],
+    "9/9":  [{ year: "1776", text: "The Continental Congress officially renames the country from 'United Colonies' to 'United States.'" }],
+    "9/17": [{ year: "1787", text: "Delegates to the Constitutional Convention sign the final draft of the U.S. Constitution in Philadelphia." }],
+    "9/22": [{ year: "1862", text: "President Lincoln issues the preliminary Emancipation Proclamation, announcing his intention to free enslaved people in rebel states." }],
+    "10/2": [{ year: "1967", text: "Thurgood Marshall is sworn in as the first African American Supreme Court Justice." }],
+    "10/7": [{ year: "1777", text: "American forces defeat British troops at the Battle of Saratoga — a turning point that brings France into the Revolutionary War." }],
+    "10/26":[{ year: "2001", text: "President Bush signs the USA PATRIOT Act into law, expanding government surveillance powers after the September 11 attacks." }],
+    "11/2": [{ year: "1920", text: "Warren G. Harding wins the first presidential election in which women could vote nationally following the 19th Amendment." }],
+    "11/8": [{ year: "1960", text: "John F. Kennedy defeats Richard Nixon in one of the closest presidential elections in U.S. history." }],
+    "11/19":[{ year: "1863", text: "President Lincoln delivers the Gettysburg Address, reframing the Civil War as a fight for democratic equality." }],
+    "12/7": [{ year: "1941", text: "Japan attacks Pearl Harbor; President Roosevelt calls it 'a date which will live in infamy' and Congress declares war." }],
+    "12/10":[{ year: "1948", text: "The United Nations adopts the Universal Declaration of Human Rights, drafted with significant U.S. involvement." }],
+    "12/15":[{ year: "1791", text: "The Bill of Rights — the first 10 amendments to the Constitution — is ratified, protecting individual liberties from government overreach." }]
+  };
+
+  // ══════════════════════════════════════════════════════════
+  //  STATE
+  // ══════════════════════════════════════════════════════════
+  let contentData = null;
+  let tdihEvents = [];
+  let tdihIndex = 0;
+  let vocabIndex = 0;
+  let caseFilter = 'all';
+
+  // ══════════════════════════════════════════════════════════
+  //  INIT
+  // ══════════════════════════════════════════════════════════
+  async function init() {
+    updateDates();
+    buildStaticSections();
+    await loadContent();
+    loadHistory();
+  }
+
+  function updateDates() {
+    const now = new Date();
+    const opts = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const dateStr = now.toLocaleDateString('en-US', opts);
+    document.getElementById('hero-date').textContent = dateStr;
+    document.getElementById('footer-date').textContent = 'Updated weekly · ' + now.getFullYear();
+
+    // Badge in header
+    const m = now.getMonth() + 1;
+    const d = now.getDate();
+    document.getElementById('tdih-date-badge').textContent =
+      now.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  LOAD CONTENT.JSON
+  // ══════════════════════════════════════════════════════════
+  async function loadContent() {
+    try {
+      const res = await fetch('content.json');
+      contentData = await res.json();
+    } catch(e) {
+      console.error('content.json load failed', e);
+      return;
+    }
+
+    // Hero
+    document.getElementById('hero-unit').textContent = contentData.current_unit.toUpperCase();
+    document.getElementById('hero-week').textContent = contentData.week;
+
+    // Exit questions
+    ['home', 'page'].forEach(suffix => {
+      const el = document.getElementById('exit-question-' + suffix);
+      if (el) el.textContent = contentData.exit_ticket;
+    });
+
+    // Materials
+    const iconMap = { slides: 'ti-presentation', doc: 'ti-file-text', video: 'ti-video', link: 'ti-external-link' };
+    document.getElementById('materials-list').innerHTML = contentData.materials.map(m => `
+      <a class="material-row" href="${m.url}" target="_blank" rel="noopener">
+        <div class="material-icon ${m.type || 'link'}">
+          <i class="ti ${iconMap[m.type] || 'ti-file'}" aria-hidden="true"></i>
+        </div>
+        <span class="material-title">${m.title}</span>
+        <span class="material-date">${m.date}</span>
+      </a>
+    `).join('');
+
+    // Upcoming — highlight items within 3 days
+    const now = new Date();
+    document.getElementById('upcoming-list').innerHTML = contentData.upcoming.map(u => {
+      const d = new Date(u.date + ', ' + now.getFullYear());
+      const soon = (d - now) < 1000 * 60 * 60 * 72;
+      return `<div class="upcoming-row${soon ? ' soon' : ''}">
+        <span class="upcoming-title">${u.title}</span>
+        <span class="upcoming-date">${u.date}</span>
+      </div>`;
+    }).join('');
+
+    // Key Links
+    document.getElementById('links-list').innerHTML = contentData.key_links.map(l => `
+      <a class="key-link" href="${l.url}" target="_blank" rel="noopener">
+        <i class="ti ${l.icon}" aria-hidden="true"></i>
+        ${l.title}
+      </a>
+    `).join('');
+
+    // Gov news
+    if (contentData.gov_news && contentData.gov_news.length) {
+      document.getElementById('news-list').innerHTML = contentData.gov_news.map(n => `
+        <a class="news-item" href="${n.url}" target="_blank" rel="noopener">
+          <span class="news-tag">${n.tag}</span>
+          <div class="news-content">
+            <div class="news-headline">${n.headline}</div>
+            <div class="news-meta">${n.source} · ${n.date}</div>
+          </div>
+          <i class="ti ti-external-link" style="color:var(--gray-400);font-size:13px;flex-shrink:0;align-self:center;"></i>
         </a>
       `).join('');
+    }
 
-      // Period dropdown
-      const periodSelect = document.getElementById('period-select');
-      const nameSelect = document.getElementById('name-select');
+    // Period dropdowns (both home and page)
+    buildPeriodDropdowns();
 
-      data.periods.forEach(p => {
+    // Vocab
+    buildVocab();
+
+    // Units tab
+    buildUnits();
+
+    // Review tab
+    buildReview();
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  PERIOD DROPDOWNS
+  // ══════════════════════════════════════════════════════════
+  function buildPeriodDropdowns() {
+    ['home', 'page'].forEach(suffix => {
+      const periodSel = document.getElementById('period-select-' + suffix);
+      const nameSel = document.getElementById('name-select-' + suffix);
+      if (!periodSel) return;
+
+      contentData.periods.forEach(p => {
         const opt = document.createElement('option');
-        opt.value = p.id;
-        opt.textContent = p.label;
-        periodSelect.appendChild(opt);
+        opt.value = p.id; opt.textContent = p.label;
+        periodSel.appendChild(opt);
       });
 
-      periodSelect.addEventListener('change', () => {
-        const period = data.periods.find(p => p.id === periodSelect.value);
-        nameSelect.innerHTML = '<option value="">Select your name...</option>';
+      periodSel.addEventListener('change', () => {
+        const period = contentData.periods.find(p => p.id === periodSel.value);
+        nameSel.innerHTML = '<option value="">Select your name...</option>';
         if (period) {
           period.students.forEach(s => {
             const opt = document.createElement('option');
-            opt.value = s;
-            opt.textContent = s;
-            nameSelect.appendChild(opt);
+            opt.value = s; opt.textContent = s;
+            nameSel.appendChild(opt);
           });
-          nameSelect.disabled = false;
-        } else {
-          nameSelect.disabled = true;
+          nameSel.disabled = false;
+        } else { nameSel.disabled = true; }
+        checkReady(suffix);
+      });
+
+      nameSel.addEventListener('change', () => checkReady(suffix));
+      document.getElementById('exit-response-' + suffix)
+        .addEventListener('input', () => checkReady(suffix));
+    });
+  }
+
+  function checkReady(suffix) {
+    const period = document.getElementById('period-select-' + suffix).value;
+    const name = document.getElementById('name-select-' + suffix).value;
+    const response = document.getElementById('exit-response-' + suffix).value.trim();
+    document.getElementById('submit-btn-' + suffix).disabled = !(period && name && response.length > 3);
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  SUBMIT EXIT TICKET
+  // ══════════════════════════════════════════════════════════
+  const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+
+  ['home', 'page'].forEach(suffix => {
+    document.addEventListener('DOMContentLoaded', () => {});
+    // Attached after DOM ready — use event delegation
+  });
+
+  function setupSubmitButtons() {
+    ['home', 'page'].forEach(suffix => {
+      const btn = document.getElementById('submit-btn-' + suffix);
+      if (!btn) return;
+      btn.addEventListener('click', async () => {
+        btn.disabled = true;
+        btn.innerHTML = '<i class="ti ti-loader-2" style="animation:spin 1s linear infinite;"></i> Submitting...';
+
+        const period = document.getElementById('period-select-' + suffix).value;
+        const name = document.getElementById('name-select-' + suffix).value;
+        const response = document.getElementById('exit-response-' + suffix).value.trim();
+        const question = document.getElementById('exit-question-' + suffix).textContent;
+        const today = new Date().toLocaleDateString('en-US');
+
+        try {
+          await fetch(SCRIPT_URL, {
+            method: 'POST', mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ date: today, period, name, question, response })
+          });
+          document.getElementById('exit-form-' + suffix).style.display = 'none';
+          document.getElementById('submit-success-' + suffix).classList.remove('hidden');
+        } catch (err) {
+          btn.disabled = false;
+          btn.innerHTML = '<i class="ti ti-send"></i> Submit Exit Ticket';
+          alert('Something went wrong. Please try again.');
         }
-        checkReady();
       });
+    });
+  }
 
-      nameSelect.addEventListener('change', checkReady);
-      document.getElementById('exit-response').addEventListener('input', checkReady);
+  // ══════════════════════════════════════════════════════════
+  //  VOCAB OF THE DAY
+  // ══════════════════════════════════════════════════════════
+  function buildVocab() {
+    if (!contentData || !contentData.vocab_of_day) return;
+    const vocab = contentData.vocab_of_day;
+
+    // Start on the day-of-year index so it feels "different" each day
+    const doy = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
+    vocabIndex = doy % vocab.length;
+
+    function render() {
+      const v = vocab[vocabIndex];
+      document.getElementById('vocab-term').textContent = v.term;
+      document.getElementById('vocab-def').textContent = v.definition;
+      document.getElementById('vocab-counter').textContent = (vocabIndex + 1) + ' / ' + vocab.length;
     }
 
-    function checkReady() {
-      const period = document.getElementById('period-select').value;
-      const name = document.getElementById('name-select').value;
-      const response = document.getElementById('exit-response').value.trim();
-      document.getElementById('submit-btn').disabled = !(period && name && response.length > 3);
-    }
-
-    // ── SUBMIT EXIT TICKET ──
-    document.getElementById('submit-btn').addEventListener('click', async () => {
-      const btn = document.getElementById('submit-btn');
-      btn.disabled = true;
-      btn.textContent = 'Submitting...';
-
-      const period = document.getElementById('period-select').value;
-      const name = document.getElementById('name-select').value;
-      const response = document.getElementById('exit-response').value.trim();
-      const question = document.getElementById('exit-question').textContent;
-      const today = new Date().toLocaleDateString('en-US');
-
-      // ── REPLACE THIS URL with your Google Apps Script deployment URL ──
-      const SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-
-      try {
-        await fetch(SCRIPT_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ date: today, period, name, question, response })
-        });
-        document.getElementById('exit-form-wrapper').style.display = 'none';
-        document.getElementById('submit-success').style.display = 'block';
-      } catch (err) {
-        btn.disabled = false;
-        btn.innerHTML = '<i class="ti ti-send"></i> Submit Exit Ticket';
-        alert('Something went wrong. Please try again.');
-      }
+    document.getElementById('vocab-prev').addEventListener('click', () => {
+      vocabIndex = (vocabIndex - 1 + vocab.length) % vocab.length;
+      render();
+    });
+    document.getElementById('vocab-next').addEventListener('click', () => {
+      vocabIndex = (vocabIndex + 1) % vocab.length;
+      render();
     });
 
-    // ── THIS DAY IN HISTORY ──
-    async function loadHistory() {
-      const now = new Date();
-      const month = now.getMonth() + 1;
-      const day = now.getDate();
+    render();
+  }
 
-      const GOV_KEYWORDS = [
-        'congress', 'senate', 'house of representatives', 'president', 'constitution',
-        'amendment', 'supreme court', 'court', 'law', 'act', 'bill', 'signed',
-        'ratified', 'election', 'vote', 'declaration', 'independence', 'rights',
-        'civil', 'government', 'federal', 'republic', 'democracy', 'war', 'treaty',
-        'inaugural', 'white house', 'justice', 'ruling', 'landmark'
+  // ══════════════════════════════════════════════════════════
+  //  THIS DAY IN HISTORY
+  // ══════════════════════════════════════════════════════════
+  async function loadHistory() {
+    const now = new Date();
+    const m = now.getMonth() + 1;
+    const d = now.getDate();
+    const key = m + '/' + d;
+
+    const GOV_KEYWORDS = [
+      'congress', 'senate', 'house of representatives', 'president', 'constitution',
+      'amendment', 'supreme court', 'court', 'law', 'act', 'bill', 'signed',
+      'ratified', 'election', 'vote', 'declaration', 'independence', 'rights',
+      'civil', 'government', 'federal', 'republic', 'democracy', 'treaty',
+      'inaugural', 'white house', 'justice', 'ruling', 'landmark', 'congress',
+      'legislature', 'veto', 'impeach', 'suffrage', 'segregation', 'slavery'
+    ];
+
+    // First try Wikipedia's On This Day API
+    try {
+      const res = await fetch(`https://history.muffinlabs.com/date/${m}/${d}`);
+      const data = await res.json();
+      const events = data.data.Events;
+
+      const scored = events.map(e => {
+        const text = e.text.toLowerCase();
+        const score = GOV_KEYWORDS.reduce((acc, kw) => acc + (text.includes(kw) ? 1 : 0), 0);
+        return { year: e.year, text: e.text, score };
+      });
+
+      scored.sort((a, b) => b.score - a.score);
+      // Take top 5 government-relevant events
+      tdihEvents = scored.slice(0, 5).filter(e => e.score > 0);
+
+      if (tdihEvents.length === 0 && GOV_HISTORY[key]) {
+        tdihEvents = GOV_HISTORY[key];
+      } else if (tdihEvents.length === 0) {
+        tdihEvents = [{ year: '—', text: 'No notable American government events found for today.' }];
+      }
+    } catch (err) {
+      // Fall back to our curated data
+      tdihEvents = GOV_HISTORY[key] || [
+        { year: '—', text: 'Historical data unavailable. Check your connection.' }
       ];
-
-      try {
-        const res = await fetch(`https://history.muffinlabs.com/date/${month}/${day}`);
-        const data = await res.json();
-        const events = data.data.Events;
-
-        // Score each event by keyword matches
-        const scored = events.map(e => {
-          const text = e.text.toLowerCase();
-          const score = GOV_KEYWORDS.reduce((acc, kw) => acc + (text.includes(kw) ? 1 : 0), 0);
-          return { ...e, score };
-        });
-
-        // Sort by score then pick top result
-        scored.sort((a, b) => b.score - a.score);
-        const best = scored[0];
-
-        document.getElementById('tdih-year').textContent = `On This Day — ${best.year}`;
-        document.getElementById('tdih-text').textContent = best.text;
-
-      } catch (err) {
-        document.getElementById('tdih-year').textContent = 'On This Day';
-        document.getElementById('tdih-text').textContent = 'Could not load today\'s historical event. Check your connection.';
-      }
     }
 
-    // ── NAV TABS ──
-    document.querySelectorAll('.nav-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        // Additional tab content sections can be wired up here
+    tdihIndex = 0;
+    renderTdih();
+  }
+
+  function renderTdih() {
+    if (!tdihEvents.length) return;
+    const e = tdihEvents[tdihIndex];
+    document.getElementById('tdih-year').textContent = 'On This Day in ' + e.year;
+    document.getElementById('tdih-text').textContent = e.text;
+
+    // Prev/next visibility
+    document.getElementById('tdih-prev').disabled = tdihIndex === 0;
+    document.getElementById('tdih-next').disabled = tdihIndex === tdihEvents.length - 1;
+    document.getElementById('tdih-prev').style.opacity = tdihIndex === 0 ? '0.35' : '1';
+    document.getElementById('tdih-next').style.opacity = tdihIndex === tdihEvents.length - 1 ? '0.35' : '1';
+  }
+
+  document.getElementById('tdih-prev').addEventListener('click', () => {
+    if (tdihIndex > 0) { tdihIndex--; renderTdih(); }
+  });
+  document.getElementById('tdih-next').addEventListener('click', () => {
+    if (tdihIndex < tdihEvents.length - 1) { tdihIndex++; renderTdih(); }
+  });
+  document.getElementById('tdih-discuss').addEventListener('click', () => {
+    if (!tdihEvents.length) return;
+    const e = tdihEvents[tdihIndex];
+    const text = `Discussion starter: In ${e.year}, ${e.text} — How does this event connect to what we're studying in AP Gov?`;
+    // Copy to clipboard
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = document.getElementById('tdih-discuss');
+      btn.textContent = '✓ Copied!';
+      setTimeout(() => btn.textContent = 'Use as Discussion Starter', 2000);
+    }).catch(() => {
+      alert(text);
+    });
+  });
+
+  // ══════════════════════════════════════════════════════════
+  //  UNITS TAB
+  // ══════════════════════════════════════════════════════════
+  function buildUnits() {
+    if (!contentData || !contentData.units) return;
+    const currentUnitNum = parseInt(contentData.current_unit.match(/\d+/)?.[0]);
+
+    const grid = document.getElementById('units-grid');
+    grid.innerHTML = contentData.units.map(u => {
+      const isCurrent = u.number === currentUnitNum;
+      return `
+        <div class="unit-card${isCurrent ? ' current-unit' : ''}">
+          ${isCurrent ? '<div class="current-badge">Current Unit</div>' : ''}
+          <div class="unit-header">
+            <div class="unit-num">0${u.number}</div>
+            <div class="unit-header-text">
+              <div class="unit-title">${u.title}</div>
+              <span class="unit-weight">${u.weight} of exam</span>
+            </div>
+          </div>
+          <div class="unit-body">
+            <div class="unit-section-label">Key Topics</div>
+            <ul class="unit-topics">
+              ${u.topics.map(t => `<li>${t}</li>`).join('')}
+            </ul>
+            ${u.key_cases.length ? `
+              <div class="unit-section-label">Required Cases</div>
+              <div class="unit-cases">
+                ${u.key_cases.map(c => `<span class="case-chip">${c}</span>`).join('')}
+              </div>
+            ` : ''}
+            ${u.key_docs.length ? `
+              <div class="unit-section-label">Foundational Documents</div>
+              <div class="unit-docs">
+                ${u.key_docs.map(d => `<span class="doc-chip">${d}</span>`).join('')}
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  REVIEW TAB
+  // ══════════════════════════════════════════════════════════
+  function buildStaticSections() {
+    // SCOTUS cases (static data, no content.json dependency)
+    buildCasesGrid('all');
+    buildCaseFilters();
+    buildReqDocs();
+  }
+
+  function buildReview() {
+    if (!contentData || !contentData.frq_types) return;
+    const container = document.getElementById('frq-cards');
+    container.innerHTML = contentData.frq_types.map(f => `
+      <div class="frq-type-card" style="margin-bottom:16px;">
+        <div class="frq-header">
+          <h3>${f.type}</h3>
+          <span class="frq-pts">${f.points} pts</span>
+        </div>
+        <div class="frq-tips">
+          ${f.tips.map((tip, i) => `
+            <div class="frq-tip">
+              <span class="frq-tip-num">${String(i+1).padStart(2,'0')}</span>
+              <span>${tip}</span>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `).join('');
+  }
+
+  function buildReqDocs() {
+    const grid = document.getElementById('req-docs-grid');
+    if (!grid) return;
+    grid.innerHTML = REQ_DOCS.map(d => `
+      <div class="doc-item">
+        <div class="doc-item-name">${d.name}</div>
+        <div class="doc-item-type">${d.type} · ${d.year}</div>
+      </div>
+    `).join('');
+  }
+
+  function buildCaseFilters() {
+    const units = [1,2,3,4,5];
+    const row = document.getElementById('case-filter-row');
+    row.innerHTML = `
+      <button class="filter-btn active" data-filter="all">All Cases</button>
+      ${units.map(u => `<button class="filter-btn" data-filter="${u}">Unit ${u}</button>`).join('')}
+    `;
+    row.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        row.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        caseFilter = btn.dataset.filter;
+        buildCasesGrid(caseFilter);
       });
     });
+  }
 
-    // ── INIT ──
-    loadContent();
-    loadHistory();
+  function buildCasesGrid(filter) {
+    const grid = document.getElementById('cases-grid');
+    if (!grid) return;
+    const filtered = filter === 'all' ? SCOTUS_CASES : SCOTUS_CASES.filter(c => c.unit === parseInt(filter));
+    grid.innerHTML = filtered.map(c => `
+      <div class="case-item" data-case="${c.name}" tabindex="0" role="button" aria-label="View details for ${c.name}">
+        <div class="case-name">${c.name}</div>
+        <div class="case-year">${c.year}</div>
+        <span class="case-unit-tag">Unit ${c.unit}</span>
+      </div>
+    `).join('');
+
+    grid.querySelectorAll('.case-item').forEach(item => {
+      item.addEventListener('click', () => openCaseModal(item.dataset.case));
+      item.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') openCaseModal(item.dataset.case); });
+    });
+  }
+
+  function openCaseModal(name) {
+    const c = SCOTUS_CASES.find(x => x.name === name);
+    if (!c) return;
+    document.getElementById('modal-case-name').textContent = c.name + ' (' + c.year + ')';
+    document.getElementById('modal-unit-tag').textContent = 'Unit ' + c.unit;
+    document.getElementById('modal-year').textContent = c.year;
+    document.getElementById('modal-issue').textContent = c.issue;
+    document.getElementById('modal-ruling').innerHTML = '<strong>' + c.ruling + '</strong>';
+    document.getElementById('modal-sig').textContent = c.sig;
+    document.getElementById('modal-tip').textContent = '★ ' + c.tip;
+    document.getElementById('case-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  document.getElementById('modal-close').addEventListener('click', closeCaseModal);
+  document.getElementById('case-modal').addEventListener('click', e => {
+    if (e.target === document.getElementById('case-modal')) closeCaseModal();
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCaseModal(); });
+
+  function closeCaseModal() {
+    document.getElementById('case-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  NAV TABS
+  // ══════════════════════════════════════════════════════════
+  const TAB_IDS = ['home', 'units', 'review', 'exit'];
+
+  document.querySelectorAll('.nav-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const target = tab.dataset.tab;
+      TAB_IDS.forEach(id => {
+        const el = document.getElementById('tab-' + id);
+        if (el) {
+          el.style.display = (id === target) ? '' : 'none';
+          el.classList.toggle('active', id === target);
+        }
+      });
+    });
+  });
+
+  // Ensure home tab shows on load
+  TAB_IDS.forEach(id => {
+    const el = document.getElementById('tab-' + id);
+    if (el && id !== 'home') el.style.display = 'none';
+  });
+
+  // ══════════════════════════════════════════════════════════
+  //  SPIN ANIMATION (submit button)
+  // ══════════════════════════════════════════════════════════
+  const style = document.createElement('style');
+  style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+  document.head.appendChild(style);
+
+  // ══════════════════════════════════════════════════════════
+  //  BOOT
+  // ══════════════════════════════════════════════════════════
+  init().then(() => setupSubmitButtons());
+
   </script>
 </body>
 </html>
