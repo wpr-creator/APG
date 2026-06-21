@@ -1438,7 +1438,9 @@
     updateDates();
     buildStaticSections();
     await loadContent();
-    loadHistory();
+    loadHistory().catch(() => {
+      // TDIH failed silently — fallback already handled inside loadHistory
+    });
   }
 
   function updateDates() {
@@ -1569,11 +1571,6 @@
   // ══════════════════════════════════════════════════════════
   const SCRIPT_URL = 'https://script.google.com/a/macros/ofarrellschool.org/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec';
 
-  ['home', 'page'].forEach(suffix => {
-    document.addEventListener('DOMContentLoaded', () => {});
-    // Attached after DOM ready — use event delegation
-  });
-
   function setupSubmitButtons() {
     ['home', 'page'].forEach(suffix => {
       const btn = document.getElementById('submit-btn-' + suffix);
@@ -1655,7 +1652,10 @@
 
     // First try Wikipedia's On This Day API
     try {
-      const res = await fetch(`https://history.muffinlabs.com/date/${m}/${d}`);
+      const controller = new AbortController();
+      const tId = setTimeout(() => controller.abort(), 4000);
+      const res = await fetch(`https://history.muffinlabs.com/date/${m}/${d}`, { signal: controller.signal });
+      clearTimeout(tId);
       const data = await res.json();
       const events = data.data.Events;
 
