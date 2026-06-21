@@ -1508,19 +1508,7 @@
       </a>
     `).join('');
 
-    // Gov news
-    if (contentData.gov_news && contentData.gov_news.length) {
-      document.getElementById('news-list').innerHTML = contentData.gov_news.map(n => `
-        <a class="news-item" href="${n.url}" target="_blank" rel="noopener">
-          <span class="news-tag">${n.tag}</span>
-          <div class="news-content">
-            <div class="news-headline">${n.headline}</div>
-            <div class="news-meta">${n.source} · ${n.date}</div>
-          </div>
-          <i class="ti ti-external-link" style="color:var(--gray-400);font-size:13px;flex-shrink:0;align-self:center;"></i>
-        </a>
-      `).join('');
-    }
+    // Gov news (removed from UI — skipped)
 
     // Period dropdowns (both home and page)
     buildPeriodDropdowns();

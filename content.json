@@ -3,58 +3,74 @@
   "week": "Week of June 23",
   "periods": [
     {
-      "id": "1",
-      "label": "Period 1",
-      "students": ["Adams, Jordan", "Baker, Taylor", "Chen, Marcus", "Davis, Riley", "Evans, Sam"]
+      "id": "2A",
+      "label": "Period 2A",
+      "students": []
     },
     {
-      "id": "3",
-      "label": "Period 3",
-      "students": ["Fisher, Alex", "Garcia, Mia", "Harris, Devon", "Ingram, Casey", "Johnson, Pat"]
-    },
-    {
-      "id": "5",
-      "label": "Period 5",
-      "students": ["King, Morgan", "Lopez, Jamie", "Miller, Avery", "Nelson, Chris", "Owen, Drew"]
+      "id": "2B",
+      "label": "Period 2B",
+      "students": []
     }
   ],
   "exit_ticket": "In your own words, explain the significance of Tinker v. Des Moines. How does it affect students today?",
   "materials": [
-    { "title": "Unit 3 Slides — 1st Amendment", "type": "slides", "url": "https://docs.google.com/presentation", "date": "Jun 20" },
-    { "title": "Due Process Study Guide", "type": "doc", "url": "https://docs.google.com/document", "date": "Jun 18" },
-    { "title": "Khan Academy — Civil Rights Overview", "type": "video", "url": "https://khanacademy.org", "date": "Jun 17" },
-    { "title": "FRQ Practice — Unit 2 Answer Key", "type": "doc", "url": "https://docs.google.com/document", "date": "Jun 14" }
-  ],
-  "upcoming": [
-    { "title": "Unit 3 Quiz", "date": "Jun 27" },
-    { "title": "FRQ — Argumentative Essay", "date": "Jul 1" },
-    { "title": "Unit 4 Begins", "date": "Jul 7" }
-  ],
-  "key_links": [
-    { "title": "AP Classroom", "url": "https://myap.collegeboard.org", "icon": "ti-school" },
-    { "title": "Google Classroom", "url": "https://classroom.google.com", "icon": "ti-brand-google" }
-  ],
-  "gov_news": [
     {
-      "headline": "Supreme Court Ends Term with Major First Amendment Ruling",
-      "source": "SCOTUSblog",
-      "url": "https://www.scotusblog.com",
-      "date": "Jun 20",
-      "tag": "Supreme Court"
+      "title": "Unit 3 Slides \u2014 1st Amendment",
+      "type": "slides",
+      "url": "https://docs.google.com/presentation",
+      "date": "Jun 20"
     },
     {
-      "headline": "Senate Debates New Budget Reconciliation Bill",
-      "source": "NPR Politics",
-      "url": "https://www.npr.org/sections/politics",
-      "date": "Jun 19",
-      "tag": "Congress"
+      "title": "Due Process Study Guide",
+      "type": "doc",
+      "url": "https://docs.google.com/document",
+      "date": "Jun 18"
+    },
+    {
+      "title": "Khan Academy \u2014 Civil Rights Overview",
+      "type": "video",
+      "url": "https://khanacademy.org",
+      "date": "Jun 17"
+    },
+    {
+      "title": "FRQ Practice \u2014 Unit 2 Answer Key",
+      "type": "doc",
+      "url": "https://docs.google.com/document",
+      "date": "Jun 14"
+    }
+  ],
+  "upcoming": [
+    {
+      "title": "Unit 3 Quiz",
+      "date": "Jun 27"
+    },
+    {
+      "title": "FRQ \u2014 Argumentative Essay",
+      "date": "Jul 1"
+    },
+    {
+      "title": "Unit 4 Begins",
+      "date": "Jul 7"
+    }
+  ],
+  "key_links": [
+    {
+      "title": "AP Classroom",
+      "url": "https://myap.collegeboard.org",
+      "icon": "ti-school"
+    },
+    {
+      "title": "Google Classroom",
+      "url": "https://classroom.google.com",
+      "icon": "ti-brand-google"
     }
   ],
   "units": [
     {
       "number": 1,
       "title": "Foundations of American Democracy",
-      "weight": "15–22%",
+      "weight": "15\u201322%",
       "topics": [
         "Principles of American Democracy",
         "Articles of Confederation & Constitutional Convention",
@@ -64,12 +80,19 @@
         "American Political Values & Culture"
       ],
       "key_cases": [],
-      "key_docs": ["Declaration of Independence", "Articles of Confederation", "U.S. Constitution", "Federalist No. 10", "Federalist No. 51", "Brutus No. 1"]
+      "key_docs": [
+        "Declaration of Independence",
+        "Articles of Confederation",
+        "U.S. Constitution",
+        "Federalist No. 10",
+        "Federalist No. 51",
+        "Brutus No. 1"
+      ]
     },
     {
       "number": 2,
       "title": "Interactions Among Branches of Government",
-      "weight": "25–36%",
+      "weight": "25\u201336%",
       "topics": [
         "Congress: Structure, Powers & Process",
         "The Presidency: Powers, Roles & Limits",
@@ -77,13 +100,21 @@
         "The Federal Courts & Judicial Review",
         "Checks & Balances in Action"
       ],
-      "key_cases": ["Marbury v. Madison (1803)", "McCulloch v. Maryland (1819)", "U.S. v. Nixon (1974)", "Clinton v. City of New York (1998)"],
-      "key_docs": ["Federalist No. 70", "Federalist No. 76"]
+      "key_cases": [
+        "Marbury v. Madison (1803)",
+        "McCulloch v. Maryland (1819)",
+        "U.S. v. Nixon (1974)",
+        "Clinton v. City of New York (1998)"
+      ],
+      "key_docs": [
+        "Federalist No. 70",
+        "Federalist No. 76"
+      ]
     },
     {
       "number": 3,
       "title": "Civil Liberties & Civil Rights",
-      "weight": "13–18%",
+      "weight": "13\u201318%",
       "topics": [
         "First Amendment Freedoms",
         "Second Amendment & Gun Rights Debate",
@@ -92,13 +123,25 @@
         "Equal Protection & Civil Rights Movement",
         "Affirmative Action Debate"
       ],
-      "key_cases": ["Schenck v. U.S. (1919)", "Engel v. Vitale (1962)", "Tinker v. Des Moines (1969)", "New York Times v. U.S. (1971)", "Wisconsin v. Yoder (1972)", "Roe v. Wade (1973)", "McDonald v. Chicago (2010)", "Gideon v. Wainwright (1963)", "Miranda v. Arizona (1966)", "Mapp v. Ohio (1961)", "Brown v. Board of Education (1954)"],
+      "key_cases": [
+        "Schenck v. U.S. (1919)",
+        "Engel v. Vitale (1962)",
+        "Tinker v. Des Moines (1969)",
+        "New York Times v. U.S. (1971)",
+        "Wisconsin v. Yoder (1972)",
+        "Roe v. Wade (1973)",
+        "McDonald v. Chicago (2010)",
+        "Gideon v. Wainwright (1963)",
+        "Miranda v. Arizona (1966)",
+        "Mapp v. Ohio (1961)",
+        "Brown v. Board of Education (1954)"
+      ],
       "key_docs": []
     },
     {
       "number": 4,
       "title": "American Political Ideologies & Beliefs",
-      "weight": "10–15%",
+      "weight": "10\u201315%",
       "topics": [
         "American Political Culture",
         "Political Socialization",
@@ -112,7 +155,7 @@
     {
       "number": 5,
       "title": "Political Participation",
-      "weight": "20–27%",
+      "weight": "20\u201327%",
       "topics": [
         "Political Parties: Structure & Function",
         "Party Realignment & Third Parties",
@@ -123,7 +166,11 @@
         "The Media & Its Political Role",
         "Social Media & Political Engagement"
       ],
-      "key_cases": ["Baker v. Carr (1962)", "Shaw v. Reno (1993)", "Citizens United v. FEC (2010)"],
+      "key_cases": [
+        "Baker v. Carr (1962)",
+        "Shaw v. Reno (1993)",
+        "Citizens United v. FEC (2010)"
+      ],
       "key_docs": []
     }
   ],
@@ -134,7 +181,7 @@
       "tips": [
         "Describe the scenario in your own words first",
         "Apply the specific concept named in the prompt",
-        "Connect back to the specific scenario — always bring it home"
+        "Connect back to the specific scenario \u2014 always bring it home"
       ]
     },
     {
@@ -142,7 +189,7 @@
       "points": 4,
       "tips": [
         "Read the data source and title carefully",
-        "Describe the data accurately — do not interpret yet",
+        "Describe the data accurately \u2014 do not interpret yet",
         "Draw a connection to a course concept",
         "Use evidence from the data to support your conclusion"
       ]
@@ -153,7 +200,7 @@
       "tips": [
         "Identify the constitutional principle at stake in the required case",
         "Describe the ruling AND the reasoning",
-        "Compare to the non-required case — similarities AND differences",
+        "Compare to the non-required case \u2014 similarities AND differences",
         "Apply the reasoning to a new scenario if asked"
       ]
     },
@@ -161,44 +208,134 @@
       "type": "Argumentative Essay",
       "points": 6,
       "tips": [
-        "State a defensible claim — take a clear position",
+        "State a defensible claim \u2014 take a clear position",
         "Use at least ONE of the required foundational documents",
         "Provide evidence from TWO different pieces of evidence",
-        "Respond to the opposing perspective — don't ignore it",
+        "Respond to the opposing perspective \u2014 don't ignore it",
         "Conclude with a broader implication"
       ]
     }
   ],
   "vocab_of_day": [
-    { "term": "Judicial Review", "definition": "The power of the Supreme Court to declare laws or executive actions unconstitutional, established in Marbury v. Madison (1803)." },
-    { "term": "Federalism", "definition": "A system of government where power is divided between a national government and state governments, each with defined authority." },
-    { "term": "Selective Incorporation", "definition": "The legal doctrine by which the Bill of Rights is applied to the states through the 14th Amendment's Due Process Clause, one case at a time." },
-    { "term": "Checks and Balances", "definition": "Constitutional mechanisms that allow each branch of government to limit the powers of the other branches, preventing any one branch from becoming too powerful." },
-    { "term": "Enumerated Powers", "definition": "Powers explicitly granted to Congress by the Constitution, listed in Article I, Section 8, such as the power to declare war and coin money." },
-    { "term": "Implied Powers", "definition": "Powers not explicitly stated in the Constitution but inferred from the Necessary and Proper Clause (Article I, Section 8); upheld in McCulloch v. Maryland." },
-    { "term": "Civil Liberties", "definition": "Individual rights protected by the Constitution from government intrusion, such as freedoms of speech, religion, and protection against unreasonable searches." },
-    { "term": "Civil Rights", "definition": "The rights of citizens to political and social equality — protections against discrimination based on race, gender, religion, or other characteristics." },
-    { "term": "Due Process", "definition": "Constitutional guarantee that the government cannot deprive citizens of life, liberty, or property without fair legal procedures (5th and 14th Amendments)." },
-    { "term": "Equal Protection", "definition": "14th Amendment guarantee that no state shall deny any person equal protection of the laws — the foundation of most civil rights litigation." },
-    { "term": "Bicameralism", "definition": "A legislature divided into two chambers (Senate and House). The Founders created it to balance representation of population vs. states." },
-    { "term": "Filibuster", "definition": "A Senate tactic where a member extends debate to delay or block a vote. Requires 60 votes (cloture) to end, giving the minority significant power." },
-    { "term": "Cloture", "definition": "A Senate procedure requiring 60 votes to end a filibuster and force a vote on legislation." },
-    { "term": "Gerrymandering", "definition": "The manipulation of electoral district boundaries to favor a particular party or group. Baker v. Carr and Shaw v. Reno addressed redistricting." },
-    { "term": "Electoral College", "definition": "The body of electors established by the Constitution to formally elect the President. Each state receives electors equal to its Congressional delegation." },
-    { "term": "Precedent (Stare Decisis)", "definition": "The legal principle that courts should follow prior rulings when deciding similar cases, ensuring consistency and stability in the law." },
-    { "term": "Iron Triangle", "definition": "The stable relationship between a Congressional committee, federal agency, and interest group, each benefiting from the relationship at the public's expense." },
-    { "term": "Linkage Institutions", "definition": "Institutions that connect citizens to government, including political parties, elections, interest groups, and the media." },
-    { "term": "Political Socialization", "definition": "The process by which people develop their political values, beliefs, and identities — primarily through family, school, peers, and media." },
-    { "term": "Writ of Certiorari", "definition": "An order from the Supreme Court to a lower court to send up the record of a case for review. The 'Rule of Four' requires four justices to agree." },
-    { "term": "Amicus Curiae", "definition": "'Friend of the court' — a brief filed by an outside party (often an interest group) offering information or arguments in a case before the court." },
-    { "term": "Exclusionary Rule", "definition": "Evidence obtained illegally cannot be used in court. Established in Mapp v. Ohio (1961) via selective incorporation of the 4th Amendment." },
-    { "term": "Miranda Rights", "definition": "Required warnings police must give before interrogating a suspect in custody, established in Miranda v. Arizona (1966): right to remain silent, right to attorney." },
-    { "term": "Establishment Clause", "definition": "First Amendment clause prohibiting Congress from making any law 'respecting an establishment of religion' — separation of church and state." },
-    { "term": "Free Exercise Clause", "definition": "First Amendment clause protecting individuals' rights to practice their religion without government interference." },
-    { "term": "Prior Restraint", "definition": "Government censorship of information before it is published. Generally unconstitutional per New York Times v. United States (1971)." },
-    { "term": "Clear and Present Danger", "definition": "Test from Schenck v. U.S. (1919): speech can be restricted only if it poses a clear and present danger of producing imminent lawless action." },
-    { "term": "Dual Federalism", "definition": "'Layer cake' federalism — national and state governments each operate independently in their own sphere. Dominant from the Founding to the New Deal." },
-    { "term": "Cooperative Federalism", "definition": "'Marble cake' federalism — national and state governments share responsibilities and work together. Dominant since the New Deal era." },
-    { "term": "Categorical Grants", "definition": "Federal money given to states for specific purposes with strings attached. Gives the federal government more control over state policy." }
+    {
+      "term": "Judicial Review",
+      "definition": "The power of the Supreme Court to declare laws or executive actions unconstitutional, established in Marbury v. Madison (1803)."
+    },
+    {
+      "term": "Federalism",
+      "definition": "A system of government where power is divided between a national government and state governments, each with defined authority."
+    },
+    {
+      "term": "Selective Incorporation",
+      "definition": "The legal doctrine by which the Bill of Rights is applied to the states through the 14th Amendment's Due Process Clause, one case at a time."
+    },
+    {
+      "term": "Checks and Balances",
+      "definition": "Constitutional mechanisms that allow each branch of government to limit the powers of the other branches, preventing any one branch from becoming too powerful."
+    },
+    {
+      "term": "Enumerated Powers",
+      "definition": "Powers explicitly granted to Congress by the Constitution, listed in Article I, Section 8, such as the power to declare war and coin money."
+    },
+    {
+      "term": "Implied Powers",
+      "definition": "Powers not explicitly stated in the Constitution but inferred from the Necessary and Proper Clause (Article I, Section 8); upheld in McCulloch v. Maryland."
+    },
+    {
+      "term": "Civil Liberties",
+      "definition": "Individual rights protected by the Constitution from government intrusion, such as freedoms of speech, religion, and protection against unreasonable searches."
+    },
+    {
+      "term": "Civil Rights",
+      "definition": "The rights of citizens to political and social equality \u2014 protections against discrimination based on race, gender, religion, or other characteristics."
+    },
+    {
+      "term": "Due Process",
+      "definition": "Constitutional guarantee that the government cannot deprive citizens of life, liberty, or property without fair legal procedures (5th and 14th Amendments)."
+    },
+    {
+      "term": "Equal Protection",
+      "definition": "14th Amendment guarantee that no state shall deny any person equal protection of the laws \u2014 the foundation of most civil rights litigation."
+    },
+    {
+      "term": "Bicameralism",
+      "definition": "A legislature divided into two chambers (Senate and House). The Founders created it to balance representation of population vs. states."
+    },
+    {
+      "term": "Filibuster",
+      "definition": "A Senate tactic where a member extends debate to delay or block a vote. Requires 60 votes (cloture) to end, giving the minority significant power."
+    },
+    {
+      "term": "Cloture",
+      "definition": "A Senate procedure requiring 60 votes to end a filibuster and force a vote on legislation."
+    },
+    {
+      "term": "Gerrymandering",
+      "definition": "The manipulation of electoral district boundaries to favor a particular party or group. Baker v. Carr and Shaw v. Reno addressed redistricting."
+    },
+    {
+      "term": "Electoral College",
+      "definition": "The body of electors established by the Constitution to formally elect the President. Each state receives electors equal to its Congressional delegation."
+    },
+    {
+      "term": "Precedent (Stare Decisis)",
+      "definition": "The legal principle that courts should follow prior rulings when deciding similar cases, ensuring consistency and stability in the law."
+    },
+    {
+      "term": "Iron Triangle",
+      "definition": "The stable relationship between a Congressional committee, federal agency, and interest group, each benefiting from the relationship at the public's expense."
+    },
+    {
+      "term": "Linkage Institutions",
+      "definition": "Institutions that connect citizens to government, including political parties, elections, interest groups, and the media."
+    },
+    {
+      "term": "Political Socialization",
+      "definition": "The process by which people develop their political values, beliefs, and identities \u2014 primarily through family, school, peers, and media."
+    },
+    {
+      "term": "Writ of Certiorari",
+      "definition": "An order from the Supreme Court to a lower court to send up the record of a case for review. The 'Rule of Four' requires four justices to agree."
+    },
+    {
+      "term": "Amicus Curiae",
+      "definition": "'Friend of the court' \u2014 a brief filed by an outside party (often an interest group) offering information or arguments in a case before the court."
+    },
+    {
+      "term": "Exclusionary Rule",
+      "definition": "Evidence obtained illegally cannot be used in court. Established in Mapp v. Ohio (1961) via selective incorporation of the 4th Amendment."
+    },
+    {
+      "term": "Miranda Rights",
+      "definition": "Required warnings police must give before interrogating a suspect in custody, established in Miranda v. Arizona (1966): right to remain silent, right to attorney."
+    },
+    {
+      "term": "Establishment Clause",
+      "definition": "First Amendment clause prohibiting Congress from making any law 'respecting an establishment of religion' \u2014 separation of church and state."
+    },
+    {
+      "term": "Free Exercise Clause",
+      "definition": "First Amendment clause protecting individuals' rights to practice their religion without government interference."
+    },
+    {
+      "term": "Prior Restraint",
+      "definition": "Government censorship of information before it is published. Generally unconstitutional per New York Times v. United States (1971)."
+    },
+    {
+      "term": "Clear and Present Danger",
+      "definition": "Test from Schenck v. U.S. (1919): speech can be restricted only if it poses a clear and present danger of producing imminent lawless action."
+    },
+    {
+      "term": "Dual Federalism",
+      "definition": "'Layer cake' federalism \u2014 national and state governments each operate independently in their own sphere. Dominant from the Founding to the New Deal."
+    },
+    {
+      "term": "Cooperative Federalism",
+      "definition": "'Marble cake' federalism \u2014 national and state governments share responsibilities and work together. Dominant since the New Deal era."
+    },
+    {
+      "term": "Categorical Grants",
+      "definition": "Federal money given to states for specific purposes with strings attached. Gives the federal government more control over state policy."
+    }
   ]
 }
