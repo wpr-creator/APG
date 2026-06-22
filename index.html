@@ -1262,6 +1262,158 @@
       padding: 2px 10px; border-radius: 99px;
     }
     .frq-pts-label { font-size: 11px; color: var(--gray-400); }
+
+    /* ══════════════════════════════════════════════════════
+       ADMIN PANEL
+    ══════════════════════════════════════════════════════ */
+    #admin-overlay {
+      position: fixed; inset: 0; z-index: 10000;
+      background: rgba(10,18,40,0.92); backdrop-filter: blur(6px);
+      display: none; align-items: flex-start; justify-content: center;
+      padding: 20px; overflow-y: auto;
+    }
+    #admin-overlay.open { display: flex; }
+    #admin-panel {
+      background: #f8f7f3; border-radius: 12px;
+      width: 100%; max-width: 820px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+      overflow: hidden; margin: auto;
+    }
+    .admin-header {
+      background: var(--navy-dark); padding: 18px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .admin-header-left { display: flex; align-items: center; gap: 12px; }
+    .admin-logo {
+      width: 32px; height: 32px; border-radius: 8px;
+      background: var(--crimson); display: flex; align-items: center;
+      justify-content: center; color: white; font-size: 16px;
+    }
+    .admin-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 700; color: white;
+    }
+    .admin-subtitle { font-size: 11px; color: rgba(255,255,255,0.4); margin-top: 1px; }
+    .admin-close-btn {
+      background: rgba(255,255,255,0.08); border: none; color: rgba(255,255,255,0.6);
+      width: 32px; height: 32px; border-radius: 8px; cursor: pointer;
+      font-size: 18px; display: flex; align-items: center; justify-content: center;
+      transition: background 0.15s;
+    }
+    .admin-close-btn:hover { background: rgba(255,255,255,0.15); color: white; }
+    .admin-tabs {
+      display: flex; border-bottom: 1px solid #e5e0d5;
+      background: white; overflow-x: auto;
+    }
+    .admin-tab {
+      padding: 11px 18px; font-size: 12px; font-weight: 700;
+      color: var(--gray-500); border-bottom: 2px solid transparent;
+      cursor: pointer; white-space: nowrap; transition: color 0.15s;
+      letter-spacing: 0.04em;
+    }
+    .admin-tab:hover { color: var(--navy); }
+    .admin-tab.active { color: var(--navy); border-bottom-color: var(--crimson); }
+    .admin-body { padding: 24px; }
+    .admin-section { display: none; }
+    .admin-section.active { display: block; }
+    .admin-field-group { margin-bottom: 20px; }
+    .admin-label {
+      display: block; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--gray-500); margin-bottom: 6px;
+    }
+    .admin-hint { font-size: 11px; color: var(--gray-400); margin-bottom: 6px; }
+    .admin-input, .admin-textarea, .admin-select {
+      width: 100%; padding: 9px 12px;
+      border: 1px solid #ddd; border-radius: 6px;
+      font-family: 'Source Sans 3', sans-serif; font-size: 13px;
+      color: var(--text); background: white;
+      transition: border-color 0.15s; box-sizing: border-box;
+    }
+    .admin-input:focus, .admin-textarea:focus { outline: none; border-color: var(--navy); }
+    .admin-textarea { min-height: 80px; resize: vertical; }
+    .admin-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .admin-row-3 { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 10px; }
+    .admin-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+    .admin-list-item {
+      background: white; border: 1px solid #e5e0d5;
+      border-radius: 6px; padding: 10px 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .admin-list-item-fields { flex: 1; display: grid; gap: 6px; }
+    .admin-list-item-fields.cols2 { grid-template-columns: 2fr 1fr; }
+    .admin-list-item-fields.cols3 { grid-template-columns: 2fr 1fr 1fr; }
+    .admin-list-item-fields.cols4 { grid-template-columns: 2fr 1fr 1fr 1fr; }
+    .admin-remove-btn {
+      background: none; border: 1px solid #e5e0d5; color: var(--gray-400);
+      width: 28px; height: 28px; border-radius: 6px; cursor: pointer;
+      font-size: 14px; display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: background 0.12s, color 0.12s;
+    }
+    .admin-remove-btn:hover { background: #fee2e2; color: var(--crimson); border-color: #fca5a5; }
+    .admin-add-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 14px; border-radius: 6px;
+      border: 1px dashed #bbb; background: transparent;
+      color: var(--gray-500); font-size: 12px; font-weight: 600;
+      cursor: pointer; width: 100%; justify-content: center;
+      transition: background 0.12s, border-color 0.12s, color 0.12s;
+    }
+    .admin-add-btn:hover { background: #f0ede6; border-color: var(--navy); color: var(--navy); }
+    .admin-section-divider {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--crimson);
+      margin: 20px 0 12px; padding-bottom: 6px;
+      border-bottom: 1px solid #e5e0d5;
+    }
+    .admin-footer {
+      padding: 16px 24px; background: white;
+      border-top: 1px solid #e5e0d5;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .admin-footer-left { font-size: 11px; color: var(--gray-400); }
+    .admin-footer-btns { display: flex; gap: 8px; }
+    .admin-dl-btn {
+      padding: 9px 20px; border-radius: 6px;
+      background: var(--navy); color: white; border: none;
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; gap: 6px;
+      transition: opacity 0.15s;
+    }
+    .admin-dl-btn:hover { opacity: 0.88; }
+    .admin-dl-btn.secondary {
+      background: white; color: var(--navy);
+      border: 1px solid var(--navy);
+    }
+    .admin-toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--navy-dark); color: white;
+      padding: 10px 20px; border-radius: 8px; font-size: 13px;
+      font-weight: 600; z-index: 10001; opacity: 0;
+      transition: opacity 0.2s; pointer-events: none;
+    }
+    .admin-toast.show { opacity: 1; }
+    .admin-period-block {
+      background: white; border: 1px solid #e5e0d5;
+      border-radius: 8px; margin-bottom: 16px; overflow: hidden;
+    }
+    .admin-period-head {
+      background: var(--navy-xlight); padding: 10px 14px;
+      font-size: 12px; font-weight: 700; color: var(--navy);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .admin-student-list { padding: 10px 14px; display: flex; flex-direction: column; gap: 6px; }
+    .admin-student-row { display: flex; align-items: center; gap: 8px; }
+    .admin-student-row input { flex: 1; }
+    .admin-vocab-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 10px; }
+    .admin-vocab-item {
+      background: white; border: 1px solid #e5e0d5;
+      border-radius: 6px; padding: 10px 12px;
+      display: flex; gap: 10px; align-items: flex-start;
+    }
+    .admin-vocab-fields { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+  
   </style>
 </head>
 <body>
@@ -3581,6 +3733,249 @@
     if (!frqTimerBuilt) { setTimeout(buildFrqTimerUI, 50); frqTimerBuilt = true; }
   });
 
+
+  // ══════════════════════════════════════════════════════════
+  //  ADMIN PANEL — type "dev" anywhere to open
+  // ══════════════════════════════════════════════════════════
+  (function() {
+    var keyBuffer = '';
+    var SECRET = 'dev';
+
+    document.addEventListener('keydown', function(e) {
+      // Ignore if typing in an input/textarea
+      var tag = document.activeElement.tagName;
+      if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+      keyBuffer += e.key.toLowerCase();
+      if (keyBuffer.length > SECRET.length) keyBuffer = keyBuffer.slice(-SECRET.length);
+      if (keyBuffer === SECRET) { openAdmin(); keyBuffer = ''; }
+    });
+  })();
+
+  function openAdmin() {
+    if (!contentData) { adminToast('Content not loaded yet — wait a moment and try again.'); return; }
+    adminLoadData();
+    document.getElementById('admin-overlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeAdmin() {
+    document.getElementById('admin-overlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('admin-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeAdmin();
+  });
+
+  function adminTab(name) {
+    document.querySelectorAll('.admin-tab').forEach(function(t) { t.classList.remove('active'); });
+    document.querySelectorAll('.admin-section').forEach(function(s) { s.classList.remove('active'); });
+    event.target.classList.add('active');
+    document.getElementById('admin-sec-' + name).classList.add('active');
+  }
+
+  function adminToast(msg) {
+    var t = document.getElementById('admin-toast');
+    t.textContent = msg; t.classList.add('show');
+    setTimeout(function() { t.classList.remove('show'); }, 2800);
+  }
+
+  // ── Load current contentData into admin fields ──
+  function adminLoadData() {
+    if (!contentData) return;
+
+    // Weekly
+    document.getElementById('ad-current-unit').value = contentData.current_unit || '';
+    document.getElementById('ad-week').value = contentData.week || '';
+    document.getElementById('ad-exit-ticket').value = contentData.exit_ticket || '';
+
+    // Materials
+    var matList = document.getElementById('ad-materials-list');
+    matList.innerHTML = '';
+    (contentData.materials || []).forEach(function(m) { adminAddMaterial(m); });
+
+    // Upcoming
+    var upList = document.getElementById('ad-upcoming-list');
+    upList.innerHTML = '';
+    (contentData.upcoming || []).forEach(function(u) { adminAddUpcoming(u); });
+
+    // Roster
+    var rosterDiv = document.getElementById('ad-roster-blocks');
+    rosterDiv.innerHTML = '';
+    (contentData.periods || []).forEach(function(p) {
+      var block = document.createElement('div');
+      block.className = 'admin-period-block';
+      block.dataset.period = p.id;
+      var studentRows = (p.students || []).map(function(s) {
+        return '<div class="admin-student-row"><input class="admin-input student-name-input" value="' +
+          s.replace(/"/g, '&quot;') + '" placeholder="Last, First" />' +
+          '<button class="admin-remove-btn" onclick="this.parentElement.remove()">✕</button></div>';
+      }).join('');
+      block.innerHTML = '<div class="admin-period-head"><span>Period ' + p.id +
+        '</span><button class="admin-add-btn" style="width:auto;padding:4px 12px;border-style:solid;" ' +
+        'onclick="adminAddStudent(this.closest('.admin-period-block'))">+ Add Student</button></div>' +
+        '<div class="admin-student-list" id="roster-' + p.id + '">' + studentRows + '</div>';
+      rosterDiv.appendChild(block);
+    });
+
+    // Vocab
+    var vocabList = document.getElementById('ad-vocab-list');
+    vocabList.innerHTML = '';
+    (contentData.vocab_of_day || []).forEach(function(v) { adminAddVocab(v); });
+
+    // Links
+    var linksList = document.getElementById('ad-links-list');
+    linksList.innerHTML = '';
+    (contentData.key_links || []).forEach(function(l) { adminAddLink(l); });
+  }
+
+  // ── Add row helpers ──
+  function adminAddMaterial(m) {
+    m = m || {};
+    var row = document.createElement('div');
+    row.className = 'admin-list-item';
+    row.innerHTML = '<div class="admin-list-item-fields cols4">' +
+      '<input class="admin-input" placeholder="Title" value="' + (m.title || '').replace(/"/g,'&quot;') + '" data-field="title" />' +
+      '<select class="admin-select" data-field="type">' +
+        ['slides','doc','video','link'].map(function(t) {
+          return '<option value="' + t + '"' + (m.type === t ? ' selected' : '') + '>' + t + '</option>';
+        }).join('') +
+      '</select>' +
+      '<input class="admin-input" placeholder="URL" value="' + (m.url || '').replace(/"/g,'&quot;') + '" data-field="url" />' +
+      '<input class="admin-input" placeholder="Date e.g. Sep 8" value="' + (m.date || '') + '" data-field="date" />' +
+      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+    document.getElementById('ad-materials-list').appendChild(row);
+  }
+
+  function adminAddUpcoming(u) {
+    u = u || {};
+    var row = document.createElement('div');
+    row.className = 'admin-list-item';
+    row.innerHTML = '<div class="admin-list-item-fields cols2">' +
+      '<input class="admin-input" placeholder="Title e.g. Unit 3 Quiz" value="' + (u.title || '').replace(/"/g,'&quot;') + '" data-field="title" />' +
+      '<input class="admin-input" placeholder="Date e.g. Sep 12" value="' + (u.date || '') + '" data-field="date" />' +
+      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+    document.getElementById('ad-upcoming-list').appendChild(row);
+  }
+
+  function adminAddStudent(block) {
+    var list = block.querySelector('.admin-student-list');
+    var row = document.createElement('div');
+    row.className = 'admin-student-row';
+    row.innerHTML = '<input class="admin-input student-name-input" placeholder="Last, First" />' +
+      '<button class="admin-remove-btn" onclick="this.parentElement.remove()">✕</button>';
+    list.appendChild(row);
+    row.querySelector('input').focus();
+  }
+
+  function adminAddVocab(v) {
+    v = v || {};
+    var item = document.createElement('div');
+    item.className = 'admin-vocab-item';
+    item.innerHTML = '<div class="admin-vocab-fields">' +
+      '<input class="admin-input" placeholder="Term" value="' + (v.term || '').replace(/"/g,'&quot;') + '" data-field="term" />' +
+      '<textarea class="admin-textarea" placeholder="Definition" data-field="definition" style="min-height:56px;">' + (v.definition || '') + '</textarea>' +
+      '</div><button class="admin-remove-btn" style="margin-top:4px;" onclick="this.closest('.admin-vocab-item').remove()">✕</button>';
+    document.getElementById('ad-vocab-list').appendChild(item);
+  }
+
+  function adminAddLink(l) {
+    l = l || {};
+    var row = document.createElement('div');
+    row.className = 'admin-list-item';
+    row.innerHTML = '<div class="admin-list-item-fields cols3">' +
+      '<input class="admin-input" placeholder="Label e.g. AP Classroom" value="' + (l.title || '').replace(/"/g,'&quot;') + '" data-field="title" />' +
+      '<input class="admin-input" placeholder="URL" value="' + (l.url || '').replace(/"/g,'&quot;') + '" data-field="url" />' +
+      '<input class="admin-input" placeholder="Icon e.g. ti-school" value="' + (l.icon || '') + '" data-field="icon" />' +
+      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+    document.getElementById('ad-links-list').appendChild(row);
+  }
+
+  // ── Build JSON from current form state ──
+  function adminBuildJSON() {
+    // Weekly
+    var out = {};
+    out.current_unit = document.getElementById('ad-current-unit').value.trim();
+    out.week = document.getElementById('ad-week').value.trim();
+
+    // Periods / roster
+    out.periods = [];
+    document.querySelectorAll('.admin-period-block').forEach(function(block) {
+      var id = block.dataset.period;
+      var students = [];
+      block.querySelectorAll('.student-name-input').forEach(function(inp) {
+        var v = inp.value.trim();
+        if (v) students.push(v);
+      });
+      out.periods.push({ id: id, label: 'Period ' + id, students: students });
+    });
+
+    out.exit_ticket = document.getElementById('ad-exit-ticket').value.trim();
+
+    // Materials
+    out.materials = [];
+    document.querySelectorAll('#ad-materials-list .admin-list-item').forEach(function(row) {
+      var fields = {};
+      row.querySelectorAll('[data-field]').forEach(function(el) {
+        fields[el.dataset.field] = el.value.trim();
+      });
+      if (fields.title) out.materials.push(fields);
+    });
+
+    // Upcoming
+    out.upcoming = [];
+    document.querySelectorAll('#ad-upcoming-list .admin-list-item').forEach(function(row) {
+      var fields = {};
+      row.querySelectorAll('[data-field]').forEach(function(el) {
+        fields[el.dataset.field] = el.value.trim();
+      });
+      if (fields.title) out.upcoming.push(fields);
+    });
+
+    // Key links
+    out.key_links = [];
+    document.querySelectorAll('#ad-links-list .admin-list-item').forEach(function(row) {
+      var fields = {};
+      row.querySelectorAll('[data-field]').forEach(function(el) {
+        fields[el.dataset.field] = el.value.trim();
+      });
+      if (fields.title) out.key_links.push(fields);
+    });
+
+    // Vocab
+    out.vocab_of_day = [];
+    document.querySelectorAll('.admin-vocab-item').forEach(function(item) {
+      var term = item.querySelector('[data-field="term"]').value.trim();
+      var def = item.querySelector('[data-field="definition"]').value.trim();
+      if (term) out.vocab_of_day.push({ term: term, definition: def });
+    });
+
+    // Preserve unchanged arrays from contentData
+    out.units = contentData.units || [];
+    out.frq_types = contentData.frq_types || [];
+
+    return out;
+  }
+
+  function adminDownload() {
+    var json = adminBuildJSON();
+    var blob = new Blob([JSON.stringify(json, null, 2)], { type: 'application/json' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'content.json';
+    a.click();
+    adminToast('✓ content.json downloaded — drag it into your GitHub repo to publish');
+  }
+
+  function adminPreview() {
+    var json = adminBuildJSON();
+    var w = window.open('', '_blank');
+    w.document.write('<pre style="font-family:monospace;font-size:13px;padding:20px;background:#f5f0e8;">' +
+      JSON.stringify(json, null, 2).replace(/</g,'&lt;').replace(/>/g,'&gt;') + '</pre>');
+    w.document.title = 'content.json preview';
+  }
+
+
   // ══════════════════════════════════════════════════════════
 
   // ══════════════════════════════════════════════════════════
@@ -3619,6 +4014,105 @@
       </div>
     </div>
   </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       ADMIN PANEL — type "dev" anywhere on page to open
+  ═══════════════════════════════════════════════════════ -->
+  <div id="admin-overlay">
+    <div id="admin-panel">
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <div class="admin-logo"><i class="ti ti-settings"></i></div>
+          <div>
+            <div class="admin-title">Site Admin Panel</div>
+            <div class="admin-subtitle">Mr. Rogers · AP Gov · Type "dev" to open/close</div>
+          </div>
+        </div>
+        <button class="admin-close-btn" onclick="closeAdmin()">✕</button>
+      </div>
+
+      <div class="admin-tabs">
+        <div class="admin-tab active" onclick="adminTab('weekly')">📅 Weekly</div>
+        <div class="admin-tab" onclick="adminTab('materials')">📁 Materials</div>
+        <div class="admin-tab" onclick="adminTab('upcoming')">📌 Upcoming</div>
+        <div class="admin-tab" onclick="adminTab('roster')">👥 Roster</div>
+        <div class="admin-tab" onclick="adminTab('vocab')">📖 Vocab</div>
+        <div class="admin-tab" onclick="adminTab('links')">🔗 Links</div>
+      </div>
+
+      <div class="admin-body">
+
+        <!-- ── WEEKLY TAB ── -->
+        <div class="admin-section active" id="admin-sec-weekly">
+          <div class="admin-field-group">
+            <label class="admin-label">Current Unit</label>
+            <div class="admin-hint">Appears in the hero banner — e.g. "Unit 3: Civil Liberties & Civil Rights"</div>
+            <input class="admin-input" id="ad-current-unit" placeholder="Unit 3: Civil Liberties & Civil Rights" />
+          </div>
+          <div class="admin-field-group">
+            <label class="admin-label">Week Label</label>
+            <div class="admin-hint">e.g. "Week of September 8"</div>
+            <input class="admin-input" id="ad-week" placeholder="Week of September 8" />
+          </div>
+          <div class="admin-field-group">
+            <label class="admin-label">Exit Ticket Question</label>
+            <div class="admin-hint">The question students answer on the exit ticket form</div>
+            <textarea class="admin-textarea" id="ad-exit-ticket" placeholder="In your own words, explain judicial review..."></textarea>
+          </div>
+        </div>
+
+        <!-- ── MATERIALS TAB ── -->
+        <div class="admin-section" id="admin-sec-materials">
+          <div class="admin-hint" style="margin-bottom:14px;">Add links to slides, docs, and videos. Newest at the top. Types: <strong>slides · doc · video · link</strong></div>
+          <div class="admin-list" id="ad-materials-list"></div>
+          <button class="admin-add-btn" onclick="adminAddMaterial()">+ Add Material</button>
+        </div>
+
+        <!-- ── UPCOMING TAB ── -->
+        <div class="admin-section" id="admin-sec-upcoming">
+          <div class="admin-hint" style="margin-bottom:14px;">Due dates within 72 hours automatically turn red. Format: "Sep 12" or "Oct 3"</div>
+          <div class="admin-list" id="ad-upcoming-list"></div>
+          <button class="admin-add-btn" onclick="adminAddUpcoming()">+ Add Item</button>
+        </div>
+
+        <!-- ── ROSTER TAB ── -->
+        <div class="admin-section" id="admin-sec-roster">
+          <div class="admin-hint" style="margin-bottom:14px;">Names appear in the exit ticket dropdown. Format: <strong>Last, First</strong></div>
+          <div id="ad-roster-blocks"></div>
+        </div>
+
+        <!-- ── VOCAB TAB ── -->
+        <div class="admin-section" id="admin-sec-vocab">
+          <div class="admin-hint" style="margin-bottom:14px;">The site rotates through these daily. Students can also browse with Prev/Next.</div>
+          <div class="admin-vocab-list" id="ad-vocab-list"></div>
+          <button class="admin-add-btn" onclick="adminAddVocab()">+ Add Term</button>
+        </div>
+
+        <!-- ── LINKS TAB ── -->
+        <div class="admin-section" id="admin-sec-links">
+          <div class="admin-hint" style="margin-bottom:14px;">Quick links shown on the home tab. Keep to 2–3 max.</div>
+          <div class="admin-list" id="ad-links-list"></div>
+          <button class="admin-add-btn" onclick="adminAddLink()">+ Add Link</button>
+        </div>
+
+      </div>
+
+      <div class="admin-footer">
+        <div class="admin-footer-left">Changes download as content.json — drag into your GitHub repo to publish.</div>
+        <div class="admin-footer-btns">
+          <button class="admin-dl-btn secondary" onclick="adminPreview()">
+            <i class="ti ti-eye"></i> Preview JSON
+          </button>
+          <button class="admin-dl-btn" onclick="adminDownload()">
+            <i class="ti ti-download"></i> Download content.json
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-toast" id="admin-toast"></div>
 
 </body>
 </html>
