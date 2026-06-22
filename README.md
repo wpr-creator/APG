@@ -5,32 +5,47 @@
 
 ## THE SHORT VERSION
 
-**Weekly updates** → use the built-in Admin Panel (type `dev` on the site)
-**Adding SCOTUS cases / glossary terms** → edit `index.html` directly
-**Everything else** → handled automatically
+**Daily updates** → use the built-in Admin Panel (type `dev` on the site, then hit **Publish to GitHub**)
+**Adding SCOTUS cases / glossary terms** → edit `index.html` in VS Code
+**Everything else** → fully automatic
 
 ---
 
-## THE ADMIN PANEL (no JSON editing needed)
+## DAILY WORKFLOW — THE ADMIN PANEL
 
-Type `d` `e` `v` anywhere on the site (not in a text box). A panel slides in with clean form fields for everything you update regularly. When done, click **Download content.json**, then drag the file into your GitHub repo. Site updates in ~60 seconds.
+1. Go to your site
+2. Click anywhere on the page (not in a text box) and type `d` `e` `v`
+3. The admin panel slides in
+4. Make your changes — exit ticket question, materials, upcoming dates, etc.
+5. Hit **Publish to GitHub** — site updates in ~60 seconds
+
+No JSON, no code, no file dragging.
+
+### First-time setup (one time only)
+The Publish button needs a GitHub token to push changes directly:
+
+1. Click the **"Generate token ↗"** link in the admin panel footer
+2. GitHub opens — name it "AP Gov Site", leave the `repo` scope checked, click **Generate**
+3. Copy the token (starts with `ghp_`)
+4. Paste it into the token field in the admin panel
+5. It saves automatically in your browser — you won't need to paste it again on this device
 
 ### What you can edit in the Admin Panel
 
 | Tab | What you can change |
 |---|---|
 | **Weekly** | Current unit, week label, exit ticket question |
-| **Materials** | Add/remove/reorder links to slides, docs, videos |
+| **Materials** | Links to slides, docs, videos — add/remove/reorder |
 | **Upcoming** | Due dates (auto-turn red within 72 hours) |
 | **Roster** | Student names for Period 2A and 2B |
-| **Vocab** | Add/remove vocab of the day terms |
-| **Links** | Quick links shown on the home tab |
+| **Vocab** | Vocab of the day terms |
+| **Links** | Quick links on the home tab |
 
 ---
 
 ## LESS FREQUENT UPDATES — `index.html`
 
-These only need changing when course content changes, not weekly. Open `index.html` in VS Code or GitHub's editor and find the relevant section.
+Open `index.html` in VS Code. These only change when course content changes, not daily.
 
 ### Adding a SCOTUS Case
 
@@ -49,7 +64,7 @@ Find `const SCOTUS_CASES = [` and add a new object:
 },
 ```
 
-Unit numbers: 1 = Foundations · 2 = Branches · 3 = Civil Liberties · 4 = Ideology · 5 = Participation
+**Unit numbers:** 1 = Foundations · 2 = Branches · 3 = Civil Liberties · 4 = Ideology · 5 = Participation
 
 The case automatically appears in the Review tab with the correct unit filter, and the Glossary tab auto-injects related term links into its modal.
 
@@ -63,7 +78,7 @@ Find `const REQ_DOCS = [` and add:
 
 ### Adding Glossary Terms
 
-Find the relevant unit in `const GLOSSARY_UNITS = [` and add to the correct group:
+Find the relevant unit in `const GLOSSARY_UNITS = [` and add to the correct group array:
 
 ```javascript
 ['Your Term', 'The definition of the term.', ['1.2']],
@@ -71,18 +86,22 @@ Find the relevant unit in `const GLOSSARY_UNITS = [` and add to the correct grou
 
 The third element is the AP standard tag (e.g. `'1.2'`, `'3.4'`).
 
+### Updating Unit Content
+
+Find `"units": [` in `content.json` (or edit via Admin Panel → not available yet for units). Each unit has topics, key_cases, and key_docs arrays you can edit directly.
+
 ---
 
 ## FEATURES OVERVIEW
 
 ### Home Tab
 - **Hero banner** — current unit and week
-- **This Day in American Government** — Wikipedia API, fully automatic, 90+ curated fallbacks
-- **Vocab of the Day** — rotates daily, students can browse Prev/Next
+- **This Day in Politics** — Wikipedia API, fully automatic, 90+ curated fallbacks. No editing needed.
+- **Vocab of the Day** — rotates daily, students browse with Prev/Next
 - **Recent Materials** — links to Google Drive slides, docs, videos
-- **Upcoming** — due dates, turns red within 72 hours
+- **Upcoming** — due dates, turns red within 72 hours automatically
 - **Quick Links** — AP Classroom and Google Classroom
-- **Exit Ticket** — submits to Google Sheets, period + name dropdowns
+- **Exit Ticket** — period selector + name dropdown, submits to Google Sheets
 
 ### Units Tab
 - All 5 AP Gov units with exam weights, topics, required cases, and foundational docs
@@ -92,20 +111,20 @@ The third element is the AP standard tag (e.g. `'1.2'`, `'3.4'`).
 - FRQ strategy cards — all 4 types with point values and tips
 - Required Foundational Documents — all 13 required docs
 - SCOTUS Cases — all 15 required cases, filterable by unit, click for full detail modal
-- **SCOTUS Case Quiz** — 15-question multiple choice, randomized, instant feedback with scoring
+- **SCOTUS Case Quiz** — 15-question multiple choice, randomized, instant feedback
 - **FRQ Practice Timer** — pick type, correct countdown, scoring checklist alongside
 
 ### Glossary Tab
 - 392 terms, 5 units, 23 topic groups, AP standard tags
 - **Browse mode** — search by term/definition/group, filter by unit
-- **Flashcard mode** — flip cards, Got It / Still Learning tracker, persists in browser storage
-- **Tooltips** — `data-term="term name"` on any element shows hover definition
+- **Flashcard mode** — flip cards, Got It / Still Learning, persists in browser storage
+- **Tooltips** — any `data-term="term name"` element shows hover definition
 - **URL navigation** — `yoursite.github.io/#term=judicial-review`
 
 ### Exit Ticket Tab
-- Period selector (2A / 2B) and student name dropdown
-- Submits to Google Sheets
-- Creates Period 2A, Period 2B, and All Responses tabs automatically
+- Period 2A / 2B selector and student name dropdown
+- Submits to Google Sheets automatically
+- Creates Period 2A, Period 2B, and All Responses tabs
 
 ---
 
@@ -115,11 +134,8 @@ Your sheet: `https://docs.google.com/spreadsheets/d/16TcskHZ3QmcLsToZuyfCWnd24t5
 
 Columns: `Date | Period | Student Name | Question | Response | Submitted At`
 
-The Apps Script is already deployed. If you ever need to redeploy:
-1. Go to [script.google.com](https://script.google.com) → your project
-2. Deploy → New Deployment → Web App → Execute as Me → Anyone
-3. Copy the `/exec` URL
-4. In `index.html` find `const SCRIPT_URL =` and update it
+Apps Script is deployed at:
+`https://script.google.com/a/macros/ofarrellschool.org/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec`
 
 ---
 
@@ -128,8 +144,8 @@ The Apps Script is already deployed. If you ever need to redeploy:
 ```
 APG/
 ├── index.html              ← full site (edit for SCOTUS cases, glossary, design)
-├── content.json            ← weekly data (edit via Admin Panel or directly)
-├── exit-ticket-script.gs   ← Google Apps Script backup (already deployed)
+├── content.json            ← weekly data (edit via Admin Panel — no manual editing needed)
+├── exit-ticket-script.gs   ← Google Apps Script backup
 └── README.md               ← this file
 ```
 
@@ -137,19 +153,19 @@ APG/
 
 ## FALL 2026 CED UPDATES (already applied)
 
-- Emancipation Proclamation added (Unit 3, EK 3.12.A.1)
-- Federalist No. 39 added (Unit 1, EK 1.7.A.1)
-- The Gettysburg Address added (Unit 1, EK 1.1.A.3)
-- Core Principles from Adam Smith's *The Wealth of Nations* added (Unit 4, EK 4.1.A.1)
-- Free Enterprise, Adam Smith/Wealth of Nations, Emancipation Proclamation added to glossary
+- Emancipation Proclamation — Unit 3, EK 3.12.A.1
+- Federalist No. 39 — Unit 1, EK 1.7.A.1
+- The Gettysburg Address — Unit 1, EK 1.1.A.3
+- Core Principles from Adam Smith's *The Wealth of Nations* — Unit 4, EK 4.1.A.1
+- Free Enterprise, Adam Smith, Emancipation Proclamation added to glossary
 - Popular Sovereignty updated to reference Gettysburg Address
 
 ---
 
 ## TIPS
 
-- **Add students in September** — open Admin Panel → Roster tab, add names, download, upload to GitHub
-- **Change exit ticket question** — Admin Panel → Weekly tab, takes effect immediately
-- **Link any word to glossary** — add `data-term="term name"` to any HTML element for hover tooltips
-- **Direct link to a term** — `yoursite.github.io/#term=judicial-review`
-- **Test exit ticket** — open your Google Sheet and check for new rows after submitting
+- **Change exit ticket daily** — Admin Panel → Weekly tab → change question → Publish
+- **Add students in September** — Admin Panel → Roster tab → add names → Publish
+- **Token saved in browser** — you only paste the GitHub token once per device
+- **Direct link to glossary term** — `yoursite.github.io/#term=judicial-review`
+- **Hover tooltips** — add `data-term="term name"` to any HTML element

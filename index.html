@@ -1467,7 +1467,7 @@
       <div class="card tdih-card">
         <div class="card-head">
           <i class="ti ti-history" aria-hidden="true"></i>
-          <h2>This Day in American Government</h2>
+          <h2>This Day in Politics</h2>
           <span class="card-badge badge-crimson" id="tdih-date-badge">Today</span>
         </div>
         <div class="card-body">
@@ -2258,7 +2258,7 @@
     // First try Wikipedia's On This Day API
     try {
       const controller = new AbortController();
-      const tId = setTimeout(() => controller.abort(), 4000);
+      const tId = setTimeout(() => controller.abort(), 6000);
       const res = await fetch(`https://history.muffinlabs.com/date/${m}/${d}`, { signal: controller.signal });
       clearTimeout(tId);
       const data = await res.json();
@@ -2293,7 +2293,7 @@
   function renderTdih() {
     if (!tdihEvents.length) return;
     const e = tdihEvents[tdihIndex];
-    document.getElementById('tdih-year').textContent = 'On This Day in ' + e.year;
+    document.getElementById('tdih-year').textContent = e.year ? 'On This Day in ' + e.year : 'On This Day';
     document.getElementById('tdih-text').textContent = e.text;
 
     // Prev/next visibility
@@ -3767,10 +3767,10 @@
     if (e.target === this) closeAdmin();
   });
 
-  function adminTab(name) {
+  function adminTab(name, el) {
     document.querySelectorAll('.admin-tab').forEach(function(t) { t.classList.remove('active'); });
     document.querySelectorAll('.admin-section').forEach(function(s) { s.classList.remove('active'); });
-    event.target.classList.add('active');
+    if (el) el.classList.add('active');
     document.getElementById('admin-sec-' + name).classList.add('active');
   }
 
@@ -3975,6 +3975,106 @@
     w.document.title = 'content.json preview';
   }
 
+  // ── GitHub token persistence ──
+  var GH_TOKEN_KEY = 'apgov_gh_token';
+  function adminGetToken() {
+    var inp = document.getElementById('ad-github-token');
+    if (inp && inp.value.trim()) {
+      localStorage.setItem(GH_TOKEN_KEY, inp.value.trim());
+      return inp.value.trim();
+    }
+    return localStorage.getItem(GH_TOKEN_KEY) || '';
+  }
+
+  // Load saved token into field when admin opens
+  var _origOpenAdmin = openAdmin;
+  openAdmin = function() {
+    _origOpenAdmin();
+    var saved = localStorage.getItem(GH_TOKEN_KEY);
+    if (saved) {
+      var inp = document.getElementById('ad-github-token');
+      if (inp) inp.value = saved;
+    }
+  };
+
+  // ── Publish directly to GitHub ──
+  async function adminPublish() {
+    var token = adminGetToken();
+    if (!token) {
+      adminToast('Paste your GitHub token first — click "Generate token" link');
+      return;
+    }
+
+    var json = adminBuildJSON();
+    var jsonStr = JSON.stringify(json, null, 2);
+    var b64 = btoa(unescape(encodeURIComponent(jsonStr)));
+
+    // GitHub repo details — update if repo changes
+    var OWNER = 'wpr-creator';
+    var REPO  = 'APG';
+    var PATH  = 'content.json';
+    var API   = 'https://api.github.com/repos/' + OWNER + '/' + REPO + '/contents/' + PATH;
+
+    var publishBtn = document.querySelector('.admin-dl-btn[onclick="adminPublish()"]');
+    publishBtn.textContent = 'Publishing...';
+    publishBtn.disabled = true;
+
+    try {
+      // Get current file SHA (required by GitHub API to update a file)
+      var getRes = await fetch(API, {
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json'
+        }
+      });
+      var getData = await getRes.json();
+      var sha = getData.sha;
+
+      if (!sha) {
+        adminToast('Could not get file SHA — check your token has repo access');
+        publishBtn.innerHTML = '<i class="ti ti-brand-github"></i> Publish to GitHub';
+        publishBtn.disabled = false;
+        return;
+      }
+
+      // Push the update
+      var putRes = await fetch(API, {
+        method: 'PUT',
+        headers: {
+          'Authorization': 'token ' + token,
+          'Accept': 'application/vnd.github.v3+json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          message: 'Update content.json via admin panel',
+          content: b64,
+          sha: sha
+        })
+      });
+
+      if (putRes.ok) {
+        adminToast('✓ Published! Site will update in ~60 seconds');
+        publishBtn.innerHTML = '✓ Published!';
+        setTimeout(function() {
+          publishBtn.innerHTML = '<i class="ti ti-brand-github"></i> Publish to GitHub';
+          publishBtn.disabled = false;
+        }, 3000);
+        // Reload contentData so the site reflects changes immediately
+        contentData = json;
+        loadContent && typeof loadContent === 'function' && loadContent();
+      } else {
+        var err = await putRes.json();
+        adminToast('Error: ' + (err.message || 'Check token permissions'));
+        publishBtn.innerHTML = '<i class="ti ti-brand-github"></i> Publish to GitHub';
+        publishBtn.disabled = false;
+      }
+    } catch(e) {
+      adminToast('Network error — check connection');
+      publishBtn.innerHTML = '<i class="ti ti-brand-github"></i> Publish to GitHub';
+      publishBtn.disabled = false;
+    }
+  }
+
 
   // ══════════════════════════════════════════════════════════
 
@@ -4033,12 +4133,12 @@
       </div>
 
       <div class="admin-tabs">
-        <div class="admin-tab active" onclick="adminTab('weekly')">📅 Weekly</div>
-        <div class="admin-tab" onclick="adminTab('materials')">📁 Materials</div>
-        <div class="admin-tab" onclick="adminTab('upcoming')">📌 Upcoming</div>
-        <div class="admin-tab" onclick="adminTab('roster')">👥 Roster</div>
-        <div class="admin-tab" onclick="adminTab('vocab')">📖 Vocab</div>
-        <div class="admin-tab" onclick="adminTab('links')">🔗 Links</div>
+        <div class="admin-tab active" onclick="adminTab('weekly',this)">📅 Weekly</div>
+        <div class="admin-tab" onclick="adminTab('materials',this)">📁 Materials</div>
+        <div class="admin-tab" onclick="adminTab('upcoming',this)">📌 Upcoming</div>
+        <div class="admin-tab" onclick="adminTab('roster',this)">👥 Roster</div>
+        <div class="admin-tab" onclick="adminTab('vocab',this)">📖 Vocab</div>
+        <div class="admin-tab" onclick="adminTab('links',this)">🔗 Links</div>
       </div>
 
       <div class="admin-body">
@@ -4099,13 +4199,26 @@
       </div>
 
       <div class="admin-footer">
-        <div class="admin-footer-left">Changes download as content.json — drag into your GitHub repo to publish.</div>
+        <div style="width:100%;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <label style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gray-500);white-space:nowrap;">GITHUB TOKEN</label>
+          <input id="ad-github-token" type="password" class="admin-input"
+            style="flex:1;min-width:200px;font-family:monospace;font-size:12px;"
+            placeholder="ghp_xxxx — paste once, saved in browser" />
+          <span style="font-size:10px;color:var(--gray-400);">
+            <a href="https://github.com/settings/tokens/new?scopes=repo&description=AP+Gov+Site" target="_blank"
+              style="color:var(--navy);">Generate token ↗</a>
+          </span>
+        </div>
+        <div class="admin-footer-left">Publish pushes directly to GitHub. Download saves a file to drag in manually.</div>
         <div class="admin-footer-btns">
           <button class="admin-dl-btn secondary" onclick="adminPreview()">
-            <i class="ti ti-eye"></i> Preview JSON
+            <i class="ti ti-eye"></i> Preview
           </button>
-          <button class="admin-dl-btn" onclick="adminDownload()">
-            <i class="ti ti-download"></i> Download content.json
+          <button class="admin-dl-btn secondary" onclick="adminDownload()">
+            <i class="ti ti-download"></i> Download
+          </button>
+          <button class="admin-dl-btn" onclick="adminPublish()" style="background:var(--crimson);">
+            <i class="ti ti-brand-github"></i> Publish to GitHub
           </button>
         </div>
       </div>
