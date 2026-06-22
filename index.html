@@ -1840,6 +1840,150 @@
     </div>
   </div>
 
+  <!-- SCOTUS QUIZ MODAL -->
+  <div id="quiz-modal">
+    <div class="quiz-modal-inner">
+      <button class="quiz-close" onclick="closeQuiz()">✕</button>
+      <div id="quiz-game">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div>
+        </div>
+        <div class="quiz-header">
+          <div class="quiz-header-left">
+            <div class="quiz-q-counter" id="quiz-q-counter">Question 1 of 15</div>
+            <div class="quiz-case-name" id="quiz-case-name">Case Name</div>
+          </div>
+          <span class="quiz-unit-badge" id="quiz-unit-badge">Unit 2</span>
+        </div>
+        <div class="quiz-question">What was the central constitutional issue?</div>
+        <div class="quiz-prompt" id="quiz-prompt">Loading question...</div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizNext()">Next Question →</button>
+      </div>
+      <div class="quiz-score-screen" id="quiz-score-screen">
+        <div class="quiz-score-num" id="quiz-score-num">12/15</div>
+        <div class="quiz-score-label">cases correct</div>
+        <div style="font-size:13px;color:var(--gray-600);margin-bottom:20px;" id="quiz-score-msg"></div>
+        <button class="quiz-retry-btn" onclick="launchQuiz()">Try Again</button>
+        <button class="quiz-retry-btn" style="background:var(--crimson);" onclick="closeQuiz()">Done</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════════════════════════════
+       ADMIN PANEL — type "dev" anywhere on page to open
+  ═══════════════════════════════════════════════════════ -->
+  <div id="admin-overlay">
+    <div id="admin-panel">
+      <div class="admin-header">
+        <div class="admin-header-left">
+          <div class="admin-logo"><i class="ti ti-settings"></i></div>
+          <div>
+            <div class="admin-title">Site Admin Panel</div>
+            <div class="admin-subtitle">Mr. Rogers · AP Gov · Type "dev" to open/close</div>
+          </div>
+        </div>
+        <button class="admin-close-btn" onclick="closeAdmin()">✕</button>
+      </div>
+
+      <div class="admin-tabs">
+        <div class="admin-tab active" onclick="adminTab('weekly',this)">📅 Weekly</div>
+        <div class="admin-tab" onclick="adminTab('materials',this)">📁 Materials</div>
+        <div class="admin-tab" onclick="adminTab('upcoming',this)">📌 Upcoming</div>
+        <div class="admin-tab" onclick="adminTab('roster',this)">👥 Roster</div>
+        <div class="admin-tab" onclick="adminTab('vocab',this)">📖 Vocab</div>
+        <div class="admin-tab" onclick="adminTab('links',this)">🔗 Links</div>
+      </div>
+
+      <div class="admin-body">
+
+        <!-- ── WEEKLY TAB ── -->
+        <div class="admin-section active" id="admin-sec-weekly">
+          <div class="admin-field-group">
+            <label class="admin-label">Current Unit</label>
+            <div class="admin-hint">Appears in the hero banner — e.g. "Unit 3: Civil Liberties & Civil Rights"</div>
+            <input class="admin-input" id="ad-current-unit" placeholder="Unit 3: Civil Liberties & Civil Rights" />
+          </div>
+          <div class="admin-field-group">
+            <label class="admin-label">Week Label</label>
+            <div class="admin-hint">e.g. "Week of September 8"</div>
+            <input class="admin-input" id="ad-week" placeholder="Week of September 8" />
+          </div>
+          <div class="admin-field-group">
+            <label class="admin-label">Exit Ticket Question</label>
+            <div class="admin-hint">The question students answer on the exit ticket form</div>
+            <textarea class="admin-textarea" id="ad-exit-ticket" placeholder="In your own words, explain judicial review..."></textarea>
+          </div>
+        </div>
+
+        <!-- ── MATERIALS TAB ── -->
+        <div class="admin-section" id="admin-sec-materials">
+          <div class="admin-hint" style="margin-bottom:14px;">Add links to slides, docs, and videos. Newest at the top. Types: <strong>slides · doc · video · link</strong></div>
+          <div class="admin-list" id="ad-materials-list"></div>
+          <button class="admin-add-btn" onclick="adminAddMaterial()">+ Add Material</button>
+        </div>
+
+        <!-- ── UPCOMING TAB ── -->
+        <div class="admin-section" id="admin-sec-upcoming">
+          <div class="admin-hint" style="margin-bottom:14px;">Due dates within 72 hours automatically turn red. Format: "Sep 12" or "Oct 3"</div>
+          <div class="admin-list" id="ad-upcoming-list"></div>
+          <button class="admin-add-btn" onclick="adminAddUpcoming()">+ Add Item</button>
+        </div>
+
+        <!-- ── ROSTER TAB ── -->
+        <div class="admin-section" id="admin-sec-roster">
+          <div class="admin-hint" style="margin-bottom:14px;">Names appear in the exit ticket dropdown. Format: <strong>Last, First</strong></div>
+          <div id="ad-roster-blocks"></div>
+        </div>
+
+        <!-- ── VOCAB TAB ── -->
+        <div class="admin-section" id="admin-sec-vocab">
+          <div class="admin-hint" style="margin-bottom:14px;">The site rotates through these daily. Students can also browse with Prev/Next.</div>
+          <div class="admin-vocab-list" id="ad-vocab-list"></div>
+          <button class="admin-add-btn" onclick="adminAddVocab()">+ Add Term</button>
+        </div>
+
+        <!-- ── LINKS TAB ── -->
+        <div class="admin-section" id="admin-sec-links">
+          <div class="admin-hint" style="margin-bottom:14px;">Quick links shown on the home tab. Keep to 2–3 max.</div>
+          <div class="admin-list" id="ad-links-list"></div>
+          <button class="admin-add-btn" onclick="adminAddLink()">+ Add Link</button>
+        </div>
+
+      </div>
+
+      <div class="admin-footer">
+        <div style="width:100%;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
+          <label style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gray-500);white-space:nowrap;">GITHUB TOKEN</label>
+          <input id="ad-github-token" type="password" class="admin-input"
+            style="flex:1;min-width:200px;font-family:monospace;font-size:12px;"
+            placeholder="ghp_xxxx — paste once, saved in browser" />
+          <span style="font-size:10px;color:var(--gray-400);">
+            <a href="https://github.com/settings/tokens/new?scopes=repo&description=AP+Gov+Site" target="_blank"
+              style="color:var(--navy);">Generate token ↗</a>
+          </span>
+        </div>
+        <div class="admin-footer-left">Publish pushes directly to GitHub. Download saves a file to drag in manually.</div>
+        <div class="admin-footer-btns">
+          <button class="admin-dl-btn secondary" onclick="adminPreview()">
+            <i class="ti ti-eye"></i> Preview
+          </button>
+          <button class="admin-dl-btn secondary" onclick="adminDownload()">
+            <i class="ti ti-download"></i> Download
+          </button>
+          <button class="admin-dl-btn" onclick="adminPublish()" style="background:var(--crimson);">
+            <i class="ti ti-brand-github"></i> Publish to GitHub
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-toast" id="admin-toast"></div>
+
+
   <script>
   // ══════════════════════════════════════════════════════════
   //  DATA: SCOTUS CASES
@@ -4432,151 +4576,26 @@
   // ══════════════════════════════════════════════════════════
   //  BOOT
   // ══════════════════════════════════════════════════════════
-  init().then(() => setupSubmitButtons());
+  function bootSite() {
+    init()
+      .then(function() { setupSubmitButtons(); })
+      .catch(function(e) {
+        console.error('APG site boot failed', e);
+        try {
+          contentData = JSON.parse(JSON.stringify(DEFAULT_CONTENT));
+          loadContent().then(function(){ setupSubmitButtons(); });
+        } catch (fallbackErr) {
+          console.error('APG fallback boot failed', fallbackErr);
+        }
+      });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', bootSite);
+  } else {
+    bootSite();
+  }
 
   </script>
-  <!-- SCOTUS QUIZ MODAL -->
-  <div id="quiz-modal">
-    <div class="quiz-modal-inner">
-      <button class="quiz-close" onclick="closeQuiz()">✕</button>
-      <div id="quiz-game">
-        <div class="quiz-progress-bar">
-          <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div>
-        </div>
-        <div class="quiz-header">
-          <div class="quiz-header-left">
-            <div class="quiz-q-counter" id="quiz-q-counter">Question 1 of 15</div>
-            <div class="quiz-case-name" id="quiz-case-name">Case Name</div>
-          </div>
-          <span class="quiz-unit-badge" id="quiz-unit-badge">Unit 2</span>
-        </div>
-        <div class="quiz-question">What was the central constitutional issue?</div>
-        <div class="quiz-prompt" id="quiz-prompt">Loading question...</div>
-        <div class="quiz-options" id="quiz-options"></div>
-        <div class="quiz-feedback" id="quiz-feedback"></div>
-        <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizNext()">Next Question →</button>
-      </div>
-      <div class="quiz-score-screen" id="quiz-score-screen">
-        <div class="quiz-score-num" id="quiz-score-num">12/15</div>
-        <div class="quiz-score-label">cases correct</div>
-        <div style="font-size:13px;color:var(--gray-600);margin-bottom:20px;" id="quiz-score-msg"></div>
-        <button class="quiz-retry-btn" onclick="launchQuiz()">Try Again</button>
-        <button class="quiz-retry-btn" style="background:var(--crimson);" onclick="closeQuiz()">Done</button>
-      </div>
-    </div>
-  </div>
-
-
-  <!-- ═══════════════════════════════════════════════════════
-       ADMIN PANEL — type "dev" anywhere on page to open
-  ═══════════════════════════════════════════════════════ -->
-  <div id="admin-overlay">
-    <div id="admin-panel">
-      <div class="admin-header">
-        <div class="admin-header-left">
-          <div class="admin-logo"><i class="ti ti-settings"></i></div>
-          <div>
-            <div class="admin-title">Site Admin Panel</div>
-            <div class="admin-subtitle">Mr. Rogers · AP Gov · Type "dev" to open/close</div>
-          </div>
-        </div>
-        <button class="admin-close-btn" onclick="closeAdmin()">✕</button>
-      </div>
-
-      <div class="admin-tabs">
-        <div class="admin-tab active" onclick="adminTab('weekly',this)">📅 Weekly</div>
-        <div class="admin-tab" onclick="adminTab('materials',this)">📁 Materials</div>
-        <div class="admin-tab" onclick="adminTab('upcoming',this)">📌 Upcoming</div>
-        <div class="admin-tab" onclick="adminTab('roster',this)">👥 Roster</div>
-        <div class="admin-tab" onclick="adminTab('vocab',this)">📖 Vocab</div>
-        <div class="admin-tab" onclick="adminTab('links',this)">🔗 Links</div>
-      </div>
-
-      <div class="admin-body">
-
-        <!-- ── WEEKLY TAB ── -->
-        <div class="admin-section active" id="admin-sec-weekly">
-          <div class="admin-field-group">
-            <label class="admin-label">Current Unit</label>
-            <div class="admin-hint">Appears in the hero banner — e.g. "Unit 3: Civil Liberties & Civil Rights"</div>
-            <input class="admin-input" id="ad-current-unit" placeholder="Unit 3: Civil Liberties & Civil Rights" />
-          </div>
-          <div class="admin-field-group">
-            <label class="admin-label">Week Label</label>
-            <div class="admin-hint">e.g. "Week of September 8"</div>
-            <input class="admin-input" id="ad-week" placeholder="Week of September 8" />
-          </div>
-          <div class="admin-field-group">
-            <label class="admin-label">Exit Ticket Question</label>
-            <div class="admin-hint">The question students answer on the exit ticket form</div>
-            <textarea class="admin-textarea" id="ad-exit-ticket" placeholder="In your own words, explain judicial review..."></textarea>
-          </div>
-        </div>
-
-        <!-- ── MATERIALS TAB ── -->
-        <div class="admin-section" id="admin-sec-materials">
-          <div class="admin-hint" style="margin-bottom:14px;">Add links to slides, docs, and videos. Newest at the top. Types: <strong>slides · doc · video · link</strong></div>
-          <div class="admin-list" id="ad-materials-list"></div>
-          <button class="admin-add-btn" onclick="adminAddMaterial()">+ Add Material</button>
-        </div>
-
-        <!-- ── UPCOMING TAB ── -->
-        <div class="admin-section" id="admin-sec-upcoming">
-          <div class="admin-hint" style="margin-bottom:14px;">Due dates within 72 hours automatically turn red. Format: "Sep 12" or "Oct 3"</div>
-          <div class="admin-list" id="ad-upcoming-list"></div>
-          <button class="admin-add-btn" onclick="adminAddUpcoming()">+ Add Item</button>
-        </div>
-
-        <!-- ── ROSTER TAB ── -->
-        <div class="admin-section" id="admin-sec-roster">
-          <div class="admin-hint" style="margin-bottom:14px;">Names appear in the exit ticket dropdown. Format: <strong>Last, First</strong></div>
-          <div id="ad-roster-blocks"></div>
-        </div>
-
-        <!-- ── VOCAB TAB ── -->
-        <div class="admin-section" id="admin-sec-vocab">
-          <div class="admin-hint" style="margin-bottom:14px;">The site rotates through these daily. Students can also browse with Prev/Next.</div>
-          <div class="admin-vocab-list" id="ad-vocab-list"></div>
-          <button class="admin-add-btn" onclick="adminAddVocab()">+ Add Term</button>
-        </div>
-
-        <!-- ── LINKS TAB ── -->
-        <div class="admin-section" id="admin-sec-links">
-          <div class="admin-hint" style="margin-bottom:14px;">Quick links shown on the home tab. Keep to 2–3 max.</div>
-          <div class="admin-list" id="ad-links-list"></div>
-          <button class="admin-add-btn" onclick="adminAddLink()">+ Add Link</button>
-        </div>
-
-      </div>
-
-      <div class="admin-footer">
-        <div style="width:100%;margin-bottom:10px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;">
-          <label style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gray-500);white-space:nowrap;">GITHUB TOKEN</label>
-          <input id="ad-github-token" type="password" class="admin-input"
-            style="flex:1;min-width:200px;font-family:monospace;font-size:12px;"
-            placeholder="ghp_xxxx — paste once, saved in browser" />
-          <span style="font-size:10px;color:var(--gray-400);">
-            <a href="https://github.com/settings/tokens/new?scopes=repo&description=AP+Gov+Site" target="_blank"
-              style="color:var(--navy);">Generate token ↗</a>
-          </span>
-        </div>
-        <div class="admin-footer-left">Publish pushes directly to GitHub. Download saves a file to drag in manually.</div>
-        <div class="admin-footer-btns">
-          <button class="admin-dl-btn secondary" onclick="adminPreview()">
-            <i class="ti ti-eye"></i> Preview
-          </button>
-          <button class="admin-dl-btn secondary" onclick="adminDownload()">
-            <i class="ti ti-download"></i> Download
-          </button>
-          <button class="admin-dl-btn" onclick="adminPublish()" style="background:var(--crimson);">
-            <i class="ti ti-brand-github"></i> Publish to GitHub
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="admin-toast" id="admin-toast"></div>
-
 </body>
 </html>
