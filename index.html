@@ -3543,9 +3543,16 @@
     document.getElementById('quiz-prompt').textContent = 'What was the central constitutional issue?';
     var optionsEl = document.getElementById('quiz-options');
     optionsEl.innerHTML = q.options.map(function(opt) {
-      return '<button class="quiz-option" onclick="quizAnswer(this, '' +
-        opt.replace(/'/g,"\'").replace(/"/g,'&quot;') + '')">' + opt + '</button>';
+      var safe = String(opt)
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+      return '<button class="quiz-option" data-answer="' + safe + '">' + safe + '</button>';
     }).join('');
+    optionsEl.querySelectorAll('.quiz-option').forEach(function(btn) {
+      btn.addEventListener('click', function() { quizAnswer(btn, btn.dataset.answer); });
+    });
     var fb = document.getElementById('quiz-feedback');
     fb.className = 'quiz-feedback';
     fb.textContent = '';
@@ -3629,7 +3636,7 @@
       checklist: [
         'Identified the constitutional principle at stake',
         'Described the ruling of the required case',
-        'Explained the Court's reasoning (not just outcome)',
+        "Explained the Court\'s reasoning (not just outcome)",
         'Compared to the non-required case (similarities AND differences)',
         'Applied reasoning to the new scenario if asked',
       ]
@@ -3813,7 +3820,7 @@
       }).join('');
       block.innerHTML = '<div class="admin-period-head"><span>Period ' + p.id +
         '</span><button class="admin-add-btn" style="width:auto;padding:4px 12px;border-style:solid;" ' +
-        'onclick="adminAddStudent(this.closest('.admin-period-block'))">+ Add Student</button></div>' +
+        'onclick="adminAddStudent(this.parentElement.parentElement)">+ Add Student</button></div>' +
         '<div class="admin-student-list" id="roster-' + p.id + '">' + studentRows + '</div>';
       rosterDiv.appendChild(block);
     });
@@ -3843,7 +3850,7 @@
       '</select>' +
       '<input class="admin-input" placeholder="URL" value="' + (m.url || '').replace(/"/g,'&quot;') + '" data-field="url" />' +
       '<input class="admin-input" placeholder="Date e.g. Sep 8" value="' + (m.date || '') + '" data-field="date" />' +
-      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+      '</div><button class="admin-remove-btn" onclick="this.parentElement.remove()">✕</button>';
     document.getElementById('ad-materials-list').appendChild(row);
   }
 
@@ -3854,7 +3861,7 @@
     row.innerHTML = '<div class="admin-list-item-fields cols2">' +
       '<input class="admin-input" placeholder="Title e.g. Unit 3 Quiz" value="' + (u.title || '').replace(/"/g,'&quot;') + '" data-field="title" />' +
       '<input class="admin-input" placeholder="Date e.g. Sep 12" value="' + (u.date || '') + '" data-field="date" />' +
-      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+      '</div><button class="admin-remove-btn" onclick="this.parentElement.remove()">✕</button>';
     document.getElementById('ad-upcoming-list').appendChild(row);
   }
 
@@ -3875,7 +3882,7 @@
     item.innerHTML = '<div class="admin-vocab-fields">' +
       '<input class="admin-input" placeholder="Term" value="' + (v.term || '').replace(/"/g,'&quot;') + '" data-field="term" />' +
       '<textarea class="admin-textarea" placeholder="Definition" data-field="definition" style="min-height:56px;">' + (v.definition || '') + '</textarea>' +
-      '</div><button class="admin-remove-btn" style="margin-top:4px;" onclick="this.closest('.admin-vocab-item').remove()">✕</button>';
+      '</div><button class="admin-remove-btn" style="margin-top:4px;" onclick="this.parentElement.remove()">✕</button>';
     document.getElementById('ad-vocab-list').appendChild(item);
   }
 
@@ -3887,7 +3894,7 @@
       '<input class="admin-input" placeholder="Label e.g. AP Classroom" value="' + (l.title || '').replace(/"/g,'&quot;') + '" data-field="title" />' +
       '<input class="admin-input" placeholder="URL" value="' + (l.url || '').replace(/"/g,'&quot;') + '" data-field="url" />' +
       '<input class="admin-input" placeholder="Icon e.g. ti-school" value="' + (l.icon || '') + '" data-field="icon" />' +
-      '</div><button class="admin-remove-btn" onclick="this.closest('.admin-list-item').remove()">✕</button>';
+      '</div><button class="admin-remove-btn" onclick="this.parentElement.remove()">✕</button>';
     document.getElementById('ad-links-list').appendChild(row);
   }
 
