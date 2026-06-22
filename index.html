@@ -908,6 +908,360 @@
       .glossary-unit-pill { flex: 1; min-width: 120px; }
       .glossary-terms-grid { grid-template-columns: 1fr; }
     }
+
+    /* ══ FLASHCARD MODE ══ */
+    .fc-toolbar {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .fc-mode-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 16px; border-radius: var(--radius-sm);
+      border: 1px solid var(--navy); background: transparent;
+      color: var(--navy); font-size: 12px; font-weight: 700;
+      letter-spacing: 0.06em; cursor: pointer;
+      transition: background 0.15s, color 0.15s;
+    }
+    .fc-mode-btn.active { background: var(--navy); color: white; }
+    .fc-mode-btn:hover:not(.active) { background: var(--navy-xlight); }
+    .fc-unit-select {
+      padding: 7px 10px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); font-size: 12px;
+      font-family: inherit; color: var(--navy); background: white;
+      cursor: pointer;
+    }
+    .fc-progress {
+      margin-left: auto; font-size: 11px; color: var(--gray-400);
+      font-family: 'JetBrains Mono', monospace;
+    }
+    #flashcard-area { display: none; }
+    #flashcard-area.visible { display: block; }
+    .fc-stats-bar {
+      display: flex; gap: 12px; margin-bottom: 16px; flex-wrap: wrap;
+    }
+    .fc-stat {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 12px; font-weight: 600;
+    }
+    .fc-stat-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .fc-stat-dot.got { background: #22c55e; }
+    .fc-stat-dot.learning { background: var(--crimson); }
+    .fc-stat-dot.unseen { background: var(--gray-300); }
+    .fc-card-wrap {
+      perspective: 1000px; width: 100%; max-width: 680px;
+      margin: 0 auto 20px; height: 260px; cursor: pointer;
+    }
+    .fc-card-inner {
+      position: relative; width: 100%; height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.45s cubic-bezier(.4,0,.2,1);
+    }
+    .fc-card-wrap.flipped .fc-card-inner { transform: rotateY(180deg); }
+    .fc-front, .fc-back {
+      position: absolute; width: 100%; height: 100%;
+      backface-visibility: hidden; border-radius: var(--radius);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      padding: 28px 32px; text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .fc-front {
+      background: var(--navy-dark);
+      border: 2px solid rgba(255,255,255,0.08);
+    }
+    .fc-back {
+      background: var(--white);
+      border: 2px solid var(--navy);
+      transform: rotateY(180deg);
+    }
+    .fc-front-unit {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .fc-front-term {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700; color: white;
+      line-height: 1.2; margin-bottom: 10px;
+    }
+    .fc-front-standard {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; color: rgba(255,255,255,0.35);
+    }
+    .fc-front-hint {
+      position: absolute; bottom: 14px;
+      font-size: 10px; color: rgba(255,255,255,0.3);
+      letter-spacing: 0.08em;
+    }
+    .fc-back-group {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--crimson);
+      margin-bottom: 10px;
+    }
+    .fc-back-def {
+      font-size: 14px; line-height: 1.65; color: var(--gray-700);
+    }
+    .fc-nav {
+      display: flex; align-items: center; justify-content: center;
+      gap: 10px; margin-bottom: 12px;
+    }
+    .fc-nav-btn {
+      padding: 8px 20px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      transition: background 0.15s, border-color 0.15s;
+    }
+    .fc-nav-btn:hover { background: var(--cream); }
+    .fc-nav-btn:disabled { opacity: 0.35; cursor: default; }
+    .fc-nav-counter {
+      font-size: 12px; color: var(--gray-400);
+      font-family: 'JetBrains Mono', monospace; min-width: 60px; text-align: center;
+    }
+    .fc-response-btns {
+      display: flex; gap: 10px; justify-content: center; margin-top: 4px;
+    }
+    .fc-resp-btn {
+      padding: 9px 24px; border-radius: var(--radius-sm);
+      border: none; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: transform 0.1s, opacity 0.15s;
+      letter-spacing: 0.04em;
+    }
+    .fc-resp-btn:active { transform: scale(0.96); }
+    .fc-resp-btn.got-it {
+      background: #22c55e; color: white;
+    }
+    .fc-resp-btn.still-learning {
+      background: var(--crimson); color: white;
+    }
+    .fc-complete {
+      text-align: center; padding: 40px 20px; display: none;
+    }
+    .fc-complete.visible { display: block; }
+    .fc-complete-icon { font-size: 48px; margin-bottom: 12px; }
+    .fc-complete-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .fc-complete-sub { font-size: 13px; color: var(--gray-500); margin-bottom: 20px; }
+    .fc-restart-btn {
+      padding: 10px 24px; border-radius: var(--radius-sm);
+      background: var(--navy); color: white; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+
+    /* ══ SCOTUS QUIZ ══ */
+    #scotus-quiz-section {
+      margin-top: 24px;
+    }
+    .quiz-launch-card {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      border-radius: var(--radius); padding: 24px 28px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px; flex-wrap: wrap;
+    }
+    .quiz-launch-left {}
+    .quiz-launch-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+    }
+    .quiz-launch-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: white; margin-bottom: 4px;
+    }
+    .quiz-launch-sub { font-size: 12px; color: rgba(255,255,255,0.5); }
+    .quiz-launch-btn {
+      padding: 11px 24px; border-radius: var(--radius-sm);
+      background: var(--crimson); color: white; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      white-space: nowrap; transition: opacity 0.15s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .quiz-launch-btn:hover { opacity: 0.88; }
+    #quiz-modal {
+      position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+      display: none; align-items: center; justify-content: center;
+      padding: 16px;
+    }
+    #quiz-modal.open { display: flex; }
+    .quiz-modal-inner {
+      background: white; border-radius: var(--radius);
+      max-width: 560px; width: 100%; padding: 28px;
+      box-shadow: var(--shadow-lg); position: relative;
+    }
+    .quiz-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .quiz-header-left {}
+    .quiz-q-counter {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 4px;
+    }
+    .quiz-case-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--navy);
+    }
+    .quiz-unit-badge {
+      font-size: 10px; font-weight: 700;
+      background: var(--navy-xlight); color: var(--navy);
+      padding: 3px 10px; border-radius: 99px;
+    }
+    .quiz-close {
+      position: absolute; top: 16px; right: 16px;
+      background: none; border: none; font-size: 20px;
+      cursor: pointer; color: var(--gray-400); line-height: 1;
+    }
+    .quiz-question {
+      font-size: 13px; font-weight: 600; color: var(--gray-700);
+      margin-bottom: 6px; letter-spacing: 0.02em;
+    }
+    .quiz-prompt {
+      font-size: 14px; color: var(--text);
+      margin-bottom: 18px; line-height: 1.5;
+      padding: 12px; background: var(--gray-100);
+      border-radius: var(--radius-sm); border-left: 3px solid var(--navy);
+    }
+    .quiz-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 20px; }
+    .quiz-option {
+      padding: 11px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      text-align: left; font-size: 13px; cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+      line-height: 1.4;
+    }
+    .quiz-option:hover:not(:disabled) { background: var(--cream); border-color: var(--navy-xlight); }
+    .quiz-option.correct { background: #dcfce7; border-color: #22c55e; color: #166534; font-weight: 600; }
+    .quiz-option.wrong { background: #fee2e2; border-color: var(--crimson); color: #991b1b; }
+    .quiz-option:disabled { cursor: default; }
+    .quiz-feedback {
+      font-size: 12px; line-height: 1.6; padding: 10px 12px;
+      border-radius: var(--radius-sm); margin-bottom: 16px;
+      display: none;
+    }
+    .quiz-feedback.show { display: block; }
+    .quiz-feedback.correct { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .quiz-feedback.wrong { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .quiz-next-btn {
+      width: 100%; padding: 11px; border-radius: var(--radius-sm);
+      background: var(--navy); color: white; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      display: none; transition: opacity 0.15s;
+    }
+    .quiz-next-btn.show { display: block; }
+    .quiz-next-btn:hover { opacity: 0.88; }
+    .quiz-progress-bar {
+      height: 4px; background: var(--gray-200); border-radius: 2px;
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .quiz-progress-fill {
+      height: 100%; background: var(--crimson);
+      border-radius: 2px; transition: width 0.3s;
+    }
+    .quiz-score-screen { text-align: center; padding: 20px 0; display: none; }
+    .quiz-score-screen.show { display: block; }
+    .quiz-score-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px; font-weight: 700; color: var(--navy); line-height: 1;
+    }
+    .quiz-score-label { font-size: 14px; color: var(--gray-500); margin: 6px 0 20px; }
+    .quiz-retry-btn {
+      padding: 10px 28px; border-radius: var(--radius-sm);
+      background: var(--navy); color: white; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer; margin: 0 6px;
+    }
+
+    /* ══ FRQ TIMER ══ */
+    #frq-timer-section { margin-top: 24px; }
+    .frq-timer-card {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark);
+      box-shadow: var(--shadow-sm);
+    }
+    .frq-timer-head {
+      padding: 14px 18px; border-bottom: 1px solid var(--cream-dark);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .frq-timer-head i { color: var(--crimson); font-size: 18px; }
+    .frq-timer-head h3 {
+      font-size: 14px; font-weight: 700; color: var(--navy); margin: 0; flex: 1;
+    }
+    .frq-type-btns {
+      display: flex; gap: 6px; padding: 14px 18px;
+      flex-wrap: wrap; border-bottom: 1px solid var(--cream-dark);
+    }
+    .frq-type-pick-btn {
+      padding: 6px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      font-size: 11px; font-weight: 600; cursor: pointer;
+      color: var(--navy); transition: background 0.12s, border-color 0.12s;
+    }
+    .frq-type-pick-btn.active {
+      background: var(--navy); color: white; border-color: var(--navy);
+    }
+    .frq-timer-body { padding: 18px; }
+    .frq-timer-display {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; margin-bottom: 18px;
+    }
+    .frq-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 44px; font-weight: 700; color: var(--navy);
+      letter-spacing: 0.04em; min-width: 120px; text-align: center;
+    }
+    .frq-clock.warning { color: var(--crimson); }
+    .frq-timer-controls { display: flex; gap: 8px; }
+    .frq-ctrl-btn {
+      padding: 8px 18px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: background 0.12s;
+    }
+    .frq-ctrl-btn.start { background: var(--navy); color: white; border-color: var(--navy); }
+    .frq-ctrl-btn.start:hover { opacity: 0.88; }
+    .frq-ctrl-btn:hover:not(.start) { background: var(--cream); }
+    .frq-checklist { border-top: 1px solid var(--cream-dark); padding-top: 14px; }
+    .frq-checklist-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 10px;
+    }
+    .frq-check-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 7px 0; border-bottom: 1px solid var(--gray-100);
+      cursor: pointer;
+    }
+    .frq-check-item:last-child { border-bottom: none; }
+    .frq-check-box {
+      width: 18px; height: 18px; border-radius: 4px;
+      border: 2px solid var(--cream-dark); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 1px; transition: background 0.15s, border-color 0.15s;
+    }
+    .frq-check-item.checked .frq-check-box {
+      background: #22c55e; border-color: #22c55e;
+    }
+    .frq-check-item.checked .frq-check-box::after {
+      content: '✓'; color: white; font-size: 11px; font-weight: 700;
+    }
+    .frq-check-text {
+      font-size: 12px; line-height: 1.5; color: var(--gray-700);
+    }
+    .frq-check-item.checked .frq-check-text {
+      text-decoration: line-through; color: var(--gray-400);
+    }
+    .frq-pts-row {
+      display: flex; align-items: center; gap: 6px;
+      margin-bottom: 12px;
+    }
+    .frq-pts-badge {
+      font-size: 11px; font-weight: 700;
+      background: var(--crimson); color: white;
+      padding: 2px 10px; border-radius: 99px;
+    }
+    .frq-pts-label { font-size: 11px; color: var(--gray-400); }
   </style>
 </head>
 <body>
@@ -1124,6 +1478,46 @@
         </div>
 
       </div>
+
+      <!-- ── SCOTUS QUIZ ── -->
+      <div id="scotus-quiz-section">
+        <div class="quiz-launch-card">
+          <div class="quiz-launch-left">
+            <div class="quiz-launch-label">Practice Quiz</div>
+            <div class="quiz-launch-title">SCOTUS Case Challenge</div>
+            <div class="quiz-launch-sub">15 required cases · 4-option multiple choice · instant feedback</div>
+          </div>
+          <button class="quiz-launch-btn" onclick="launchQuiz()">
+            <i class="ti ti-trophy"></i> Start Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- ── FRQ TIMER ── -->
+      <div id="frq-timer-section">
+        <div class="frq-timer-card">
+          <div class="frq-timer-head">
+            <i class="ti ti-clock"></i>
+            <h3>FRQ Practice Timer</h3>
+          </div>
+          <div class="frq-type-btns" id="frq-type-btns"></div>
+          <div class="frq-timer-body">
+            <div class="frq-timer-display">
+              <div class="frq-clock" id="frq-clock">25:00</div>
+              <div class="frq-timer-controls">
+                <button class="frq-ctrl-btn start" id="frq-start-btn" onclick="frqTimerToggle()">Start</button>
+                <button class="frq-ctrl-btn" onclick="frqTimerReset()">Reset</button>
+              </div>
+            </div>
+            <div class="frq-pts-row">
+              <span class="frq-pts-badge" id="frq-pts-badge">6 pts</span>
+              <span class="frq-pts-label" id="frq-pts-label">Argumentative Essay</span>
+            </div>
+            <div class="frq-checklist" id="frq-checklist"></div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <!-- ═══════════════════ GLOSSARY TAB ═══════════════════ -->
@@ -1132,6 +1526,65 @@
         <i class="ti ti-book-2"></i>
         AP Gov Glossary
         <span class="section-subtitle" id="glossary-count-title">— 392 terms across all 5 units</span>
+      </div>
+
+      <!-- Flashcard toolbar -->
+      <div class="fc-toolbar">
+        <button class="fc-mode-btn" id="fc-browse-btn" onclick="setGlossaryMode('browse')">
+          <i class="ti ti-layout-list"></i> Browse
+        </button>
+        <button class="fc-mode-btn" id="fc-flash-btn" onclick="setGlossaryMode('flashcard')">
+          <i class="ti ti-cards"></i> Flashcard Mode
+        </button>
+        <select class="fc-unit-select" id="fc-unit-filter" onchange="fcUnitChanged()">
+          <option value="all">All Units</option>
+          <option value="unit1">Unit 1 — Foundations</option>
+          <option value="unit2">Unit 2 — Branches</option>
+          <option value="unit3">Unit 3 — Civil Liberties</option>
+          <option value="unit4">Unit 4 — Ideology</option>
+          <option value="unit5">Unit 5 — Participation</option>
+        </select>
+        <span class="fc-progress" id="fc-progress-label"></span>
+      </div>
+
+      <!-- Flashcard area (hidden in browse mode) -->
+      <div id="flashcard-area">
+        <div class="fc-stats-bar" id="fc-stats-bar"></div>
+        <div class="fc-card-wrap" id="fc-card" onclick="flipCard()">
+          <div class="fc-card-inner" id="fc-card-inner">
+            <div class="fc-front">
+              <div class="fc-front-unit" id="fc-unit-label"></div>
+              <div class="fc-front-term" id="fc-term-text">Term</div>
+              <div class="fc-front-standard" id="fc-standard-text"></div>
+              <div class="fc-front-hint">Click to flip</div>
+            </div>
+            <div class="fc-back">
+              <div class="fc-back-group" id="fc-group-text"></div>
+              <div class="fc-back-def" id="fc-def-text">Definition</div>
+            </div>
+          </div>
+        </div>
+        <div class="fc-nav">
+          <button class="fc-nav-btn" id="fc-prev-btn" onclick="fcNavigate(-1)">← Prev</button>
+          <span class="fc-nav-counter" id="fc-counter">1 / 1</span>
+          <button class="fc-nav-btn" id="fc-next-btn" onclick="fcNavigate(1)">Next →</button>
+        </div>
+        <div class="fc-response-btns">
+          <button class="fc-resp-btn still-learning" onclick="fcRespond('learning')">
+            ✗ Still Learning
+          </button>
+          <button class="fc-resp-btn got-it" onclick="fcRespond('got')">
+            ✓ Got It
+          </button>
+        </div>
+        <div class="fc-complete" id="fc-complete">
+          <div class="fc-complete-icon">🎉</div>
+          <div class="fc-complete-title">Round Complete!</div>
+          <div class="fc-complete-sub" id="fc-complete-sub"></div>
+          <button class="fc-restart-btn" onclick="fcRestart('all')">Review All Again</button>
+          &nbsp;
+          <button class="fc-restart-btn" style="background:var(--crimson);" onclick="fcRestart('learning')">Review Still Learning</button>
+        </div>
       </div>
       <div class="glossary-layout">
 
@@ -2726,6 +3179,409 @@
   };
 
   // ══════════════════════════════════════════════════════════
+  //  FLASHCARD ENGINE
+  // ══════════════════════════════════════════════════════════
+  var fcDeck = [];
+  var fcIndex = 0;
+  var fcMode = 'browse';
+  var FC_STORAGE_KEY = 'apgov_fc_progress';
+
+  function fcGetProgress() {
+    try { return JSON.parse(localStorage.getItem(FC_STORAGE_KEY) || '{}'); } catch(e) { return {}; }
+  }
+  function fcSetProgress(key, val) {
+    var p = fcGetProgress(); p[key] = val;
+    localStorage.setItem(FC_STORAGE_KEY, JSON.stringify(p));
+  }
+
+  function setGlossaryMode(mode) {
+    fcMode = mode;
+    var browseBtn = document.getElementById('fc-browse-btn');
+    var flashBtn = document.getElementById('fc-flash-btn');
+    var browseArea = document.querySelector('.glossary-layout');
+    var flashArea = document.getElementById('flashcard-area');
+    if (mode === 'browse') {
+      browseBtn.classList.add('active'); flashBtn.classList.remove('active');
+      browseArea.style.display = ''; flashArea.classList.remove('visible');
+      document.getElementById('fc-progress-label').textContent = '';
+    } else {
+      flashBtn.classList.add('active'); browseBtn.classList.remove('active');
+      browseArea.style.display = 'none'; flashArea.classList.add('visible');
+      buildGlossary();
+      fcBuildDeck();
+      fcShowCard();
+    }
+  }
+
+  function fcBuildDeck() {
+    var unitFilter = document.getElementById('fc-unit-filter').value;
+    fcDeck = [];
+    GLOSSARY_UNITS.forEach(function(u) {
+      if (unitFilter !== 'all' && u.key !== unitFilter) return;
+      Object.entries(u.groups).forEach(function(entry) {
+        var group = entry[0], terms = entry[1];
+        terms.forEach(function(t) {
+          fcDeck.push({
+            term: t[0], def: t[1], standards: t[2] || [],
+            unit: u.key, unitNum: u.key.replace('unit',''), group: group,
+            unitLabel: u.label.split(':')[1].trim()
+          });
+        });
+      });
+    });
+    // Shuffle
+    for (var i = fcDeck.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = fcDeck[i]; fcDeck[i] = fcDeck[j]; fcDeck[j] = tmp;
+    }
+    fcIndex = 0;
+    document.getElementById('fc-complete').classList.remove('visible');
+    document.getElementById('fc-card').style.display = '';
+    document.querySelector('.fc-nav').style.display = '';
+    document.querySelector('.fc-response-btns').style.display = '';
+    updateFcStats();
+  }
+
+  function fcUnitChanged() {
+    if (fcMode === 'flashcard') { fcBuildDeck(); fcShowCard(); }
+  }
+
+  function fcShowCard() {
+    if (fcDeck.length === 0) return;
+    var card = fcDeck[fcIndex];
+    // Unflip
+    document.getElementById('fc-card').classList.remove('flipped');
+    document.getElementById('fc-unit-label').textContent = 'UNIT ' + card.unitNum + ' · ' + card.unitLabel;
+    document.getElementById('fc-term-text').textContent = card.term;
+    document.getElementById('fc-standard-text').textContent = card.standards[0] || '';
+    document.getElementById('fc-group-text').textContent = card.group;
+    document.getElementById('fc-def-text').textContent = card.def;
+    document.getElementById('fc-counter').textContent = (fcIndex + 1) + ' / ' + fcDeck.length;
+    document.getElementById('fc-prev-btn').disabled = fcIndex === 0;
+    document.getElementById('fc-next-btn').disabled = fcIndex === fcDeck.length - 1;
+    var progress = fcGetProgress();
+    var status = progress[card.term.toLowerCase()];
+    document.getElementById('fc-progress-label').textContent =
+      status === 'got' ? '✓ Got it' : status === 'learning' ? '✗ Still learning' : '';
+    updateFcStats();
+  }
+
+  function flipCard() {
+    document.getElementById('fc-card').classList.toggle('flipped');
+  }
+
+  function fcNavigate(dir) {
+    fcIndex = Math.max(0, Math.min(fcDeck.length - 1, fcIndex + dir));
+    fcShowCard();
+  }
+
+  function fcRespond(status) {
+    if (fcDeck.length === 0) return;
+    var card = fcDeck[fcIndex];
+    fcSetProgress(card.term.toLowerCase(), status);
+    // Auto-advance
+    if (fcIndex < fcDeck.length - 1) {
+      fcIndex++;
+      fcShowCard();
+    } else {
+      // End of deck
+      var progress = fcGetProgress();
+      var got = fcDeck.filter(function(c) { return progress[c.term.toLowerCase()] === 'got'; }).length;
+      var learning = fcDeck.filter(function(c) { return progress[c.term.toLowerCase()] === 'learning'; }).length;
+      document.getElementById('fc-card').style.display = 'none';
+      document.querySelector('.fc-nav').style.display = 'none';
+      document.querySelector('.fc-response-btns').style.display = 'none';
+      var complete = document.getElementById('fc-complete');
+      complete.classList.add('visible');
+      document.getElementById('fc-complete-sub').textContent =
+        got + ' got it · ' + learning + ' still learning out of ' + fcDeck.length + ' cards';
+    }
+    updateFcStats();
+  }
+
+  function fcRestart(which) {
+    var progress = fcGetProgress();
+    if (which === 'learning') {
+      fcDeck = fcDeck.filter(function(c) {
+        return progress[c.term.toLowerCase()] === 'learning' || !progress[c.term.toLowerCase()];
+      });
+    }
+    fcIndex = 0;
+    // Shuffle again
+    for (var i = fcDeck.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = fcDeck[i]; fcDeck[i] = fcDeck[j]; fcDeck[j] = tmp;
+    }
+    document.getElementById('fc-complete').classList.remove('visible');
+    document.getElementById('fc-card').style.display = '';
+    document.querySelector('.fc-nav').style.display = '';
+    document.querySelector('.fc-response-btns').style.display = '';
+    fcShowCard();
+  }
+
+  function updateFcStats() {
+    var progress = fcGetProgress();
+    var got = 0, learning = 0, unseen = 0;
+    fcDeck.forEach(function(c) {
+      var s = progress[c.term.toLowerCase()];
+      if (s === 'got') got++;
+      else if (s === 'learning') learning++;
+      else unseen++;
+    });
+    document.getElementById('fc-stats-bar').innerHTML =
+      '<div class="fc-stat"><div class="fc-stat-dot got"></div>' + got + ' got it</div>' +
+      '<div class="fc-stat"><div class="fc-stat-dot learning"></div>' + learning + ' still learning</div>' +
+      '<div class="fc-stat"><div class="fc-stat-dot unseen"></div>' + unseen + ' unseen</div>';
+  }
+
+  // Initialize browse mode button as active
+  document.getElementById('fc-browse-btn').classList.add('active');
+
+  // ══════════════════════════════════════════════════════════
+  //  SCOTUS QUIZ ENGINE
+  // ══════════════════════════════════════════════════════════
+  var quizQuestions = [];
+  var quizIndex = 0;
+  var quizScore = 0;
+  var quizAnswered = false;
+
+  function launchQuiz() {
+    // Build questions from SCOTUS_CASES
+    var cases = SCOTUS_CASES.slice();
+    // Shuffle
+    for (var i = cases.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = cases[i]; cases[i] = cases[j]; cases[j] = tmp;
+    }
+    quizQuestions = cases.map(function(c) {
+      // Generate 3 wrong answers from other cases
+      var others = SCOTUS_CASES.filter(function(x) { return x.name !== c.name; });
+      // Shuffle others
+      for (var i = others.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = others[i]; others[i] = others[j]; others[j] = tmp;
+      }
+      var wrongs = others.slice(0, 3).map(function(x) { return x.issue; });
+      var options = [c.issue].concat(wrongs);
+      // Shuffle options
+      for (var i = options.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = options[i]; options[i] = options[j]; options[j] = tmp;
+      }
+      return { c: c, options: options, correct: c.issue };
+    });
+    quizIndex = 0;
+    quizScore = 0;
+    document.getElementById('quiz-score-screen').classList.remove('show');
+    document.getElementById('quiz-game').style.display = '';
+    document.getElementById('quiz-modal').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    quizShowQuestion();
+  }
+
+  function quizShowQuestion() {
+    if (quizIndex >= quizQuestions.length) { quizShowScore(); return; }
+    var q = quizQuestions[quizIndex];
+    quizAnswered = false;
+    var pct = (quizIndex / quizQuestions.length * 100).toFixed(0);
+    document.getElementById('quiz-progress-fill').style.width = pct + '%';
+    document.getElementById('quiz-q-counter').textContent = 'Question ' + (quizIndex+1) + ' of ' + quizQuestions.length;
+    document.getElementById('quiz-case-name').textContent = q.c.name + ' (' + q.c.year + ')';
+    document.getElementById('quiz-unit-badge').textContent = 'Unit ' + q.c.unit;
+    document.getElementById('quiz-prompt').textContent = 'What was the central constitutional issue?';
+    var optionsEl = document.getElementById('quiz-options');
+    optionsEl.innerHTML = q.options.map(function(opt) {
+      return '<button class="quiz-option" onclick="quizAnswer(this, '' +
+        opt.replace(/'/g,"\'").replace(/"/g,'&quot;') + '')">' + opt + '</button>';
+    }).join('');
+    var fb = document.getElementById('quiz-feedback');
+    fb.className = 'quiz-feedback';
+    fb.textContent = '';
+    document.getElementById('quiz-next-btn').className = 'quiz-next-btn';
+  }
+
+  function quizAnswer(btn, chosen) {
+    if (quizAnswered) return;
+    quizAnswered = true;
+    var q = quizQuestions[quizIndex];
+    var correct = chosen === q.correct;
+    if (correct) quizScore++;
+    // Mark options
+    document.querySelectorAll('.quiz-option').forEach(function(b) {
+      b.disabled = true;
+      if (b.textContent === q.correct) b.classList.add('correct');
+      else if (b === btn && !correct) b.classList.add('wrong');
+    });
+    // Feedback
+    var fb = document.getElementById('quiz-feedback');
+    fb.className = 'quiz-feedback show ' + (correct ? 'correct' : 'wrong');
+    fb.innerHTML = correct
+      ? '<strong>Correct!</strong> ' + q.c.sig
+      : '<strong>Not quite.</strong> The issue was: <em>' + q.correct + '</em><br>' + q.c.sig;
+    document.getElementById('quiz-next-btn').className = 'quiz-next-btn show';
+  }
+
+  function quizNext() {
+    quizIndex++;
+    quizShowQuestion();
+  }
+
+  function quizShowScore() {
+    document.getElementById('quiz-game').style.display = 'none';
+    var screen = document.getElementById('quiz-score-screen');
+    screen.classList.add('show');
+    document.getElementById('quiz-score-num').textContent = quizScore + '/' + quizQuestions.length;
+    var pct = Math.round(quizScore / quizQuestions.length * 100);
+    var msg = pct >= 80 ? '🎉 Excellent — you know these cases!' :
+              pct >= 60 ? '👍 Good work — review the ones you missed.' :
+              '📚 Keep studying — try the flashcards too!';
+    document.getElementById('quiz-score-msg').textContent = msg;
+    document.getElementById('quiz-progress-fill').style.width = '100%';
+  }
+
+  function closeQuiz() {
+    document.getElementById('quiz-modal').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  FRQ TIMER ENGINE
+  // ══════════════════════════════════════════════════════════
+  var frqTimerInterval = null;
+  var frqTimeLeft = 1500; // 25 min default
+  var frqRunning = false;
+  var frqSelectedType = null;
+
+  var FRQ_TIMER_DATA = [
+    {
+      type: 'Concept Application', pts: 3, minutes: 10,
+      checklist: [
+        'Described the scenario accurately in your own words',
+        'Identified the specific AP concept named in the prompt',
+        'Explained how the concept applies to this scenario',
+        'Brought the answer back to the specific scenario (not generic)',
+      ]
+    },
+    {
+      type: 'Quantitative Analysis', pts: 4, minutes: 15,
+      checklist: [
+        'Read the data source title and labels carefully',
+        'Described what the data shows (no interpretation yet)',
+        'Identified a trend or pattern in the data',
+        'Connected the data to a specific AP Gov concept',
+        'Used specific data as evidence (numbers, labels)',
+      ]
+    },
+    {
+      type: 'SCOTUS Comparison', pts: 4, minutes: 15,
+      checklist: [
+        'Identified the constitutional principle at stake',
+        'Described the ruling of the required case',
+        'Explained the Court's reasoning (not just outcome)',
+        'Compared to the non-required case (similarities AND differences)',
+        'Applied reasoning to the new scenario if asked',
+      ]
+    },
+    {
+      type: 'Argumentative Essay', pts: 6, minutes: 25,
+      checklist: [
+        'Stated a defensible claim — took a clear position',
+        'Used at least ONE required foundational document',
+        'Provided evidence from TWO different sources',
+        'Explained how evidence supports your argument',
+        'Responded to the opposing perspective',
+        'Concluded with a broader implication',
+      ]
+    }
+  ];
+
+  function buildFrqTimerUI() {
+    var btns = document.getElementById('frq-type-btns');
+    if (!btns) return;
+    btns.innerHTML = FRQ_TIMER_DATA.map(function(f, i) {
+      return '<button class="frq-type-pick-btn' + (i === 3 ? ' active' : '') +
+        '" onclick="frqSelectType(' + i + ')">' + f.type + '</button>';
+    }).join('');
+    frqSelectType(3); // Default to Argumentative
+  }
+
+  function frqSelectType(idx) {
+    frqSelectedType = FRQ_TIMER_DATA[idx];
+    // Update button states
+    document.querySelectorAll('.frq-type-pick-btn').forEach(function(b, i) {
+      b.classList.toggle('active', i === idx);
+    });
+    frqTimerReset();
+    // Update pts badge and label
+    document.getElementById('frq-pts-badge').textContent = frqSelectedType.pts + ' pts';
+    document.getElementById('frq-pts-label').textContent = frqSelectedType.type;
+    // Build checklist
+    var cl = document.getElementById('frq-checklist');
+    cl.innerHTML = '<div class="frq-checklist-title">Scoring Checklist</div>' +
+      frqSelectedType.checklist.map(function(item) {
+        return '<div class="frq-check-item" onclick="frqToggleCheck(this)">' +
+          '<div class="frq-check-box"></div>' +
+          '<div class="frq-check-text">' + item + '</div>' +
+          '</div>';
+      }).join('');
+  }
+
+  function frqTimerToggle() {
+    if (frqRunning) {
+      clearInterval(frqTimerInterval);
+      frqRunning = false;
+      document.getElementById('frq-start-btn').textContent = 'Resume';
+    } else {
+      frqRunning = true;
+      document.getElementById('frq-start-btn').textContent = 'Pause';
+      frqTimerInterval = setInterval(function() {
+        frqTimeLeft--;
+        frqUpdateClock();
+        if (frqTimeLeft <= 0) {
+          clearInterval(frqTimerInterval);
+          frqRunning = false;
+          document.getElementById('frq-start-btn').textContent = 'Start';
+          document.getElementById('frq-clock').textContent = 'TIME!';
+          document.getElementById('frq-clock').classList.add('warning');
+        }
+      }, 1000);
+    }
+  }
+
+  function frqTimerReset() {
+    clearInterval(frqTimerInterval);
+    frqRunning = false;
+    frqTimeLeft = frqSelectedType ? frqSelectedType.minutes * 60 : 1500;
+    document.getElementById('frq-start-btn').textContent = 'Start';
+    var clock = document.getElementById('frq-clock');
+    clock.classList.remove('warning');
+    frqUpdateClock();
+    // Reset checklist
+    document.querySelectorAll('.frq-check-item').forEach(function(item) {
+      item.classList.remove('checked');
+    });
+  }
+
+  function frqUpdateClock() {
+    var m = Math.floor(frqTimeLeft / 60);
+    var s = frqTimeLeft % 60;
+    var clock = document.getElementById('frq-clock');
+    clock.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    if (frqTimeLeft <= 120 && frqTimeLeft > 0) clock.classList.add('warning');
+    else clock.classList.remove('warning');
+  }
+
+  function frqToggleCheck(el) {
+    el.classList.toggle('checked');
+  }
+
+  // Build FRQ timer when review tab is opened
+  var frqTimerBuilt = false;
+  document.querySelector('.nav-tab[data-tab="review"]').addEventListener('click', function() {
+    if (!frqTimerBuilt) { setTimeout(buildFrqTimerUI, 50); frqTimerBuilt = true; }
+  });
+
+  // ══════════════════════════════════════════════════════════
 
   // ══════════════════════════════════════════════════════════
   //  BOOT
@@ -2733,5 +3589,36 @@
   init().then(() => setupSubmitButtons());
 
   </script>
+  <!-- SCOTUS QUIZ MODAL -->
+  <div id="quiz-modal">
+    <div class="quiz-modal-inner">
+      <button class="quiz-close" onclick="closeQuiz()">✕</button>
+      <div id="quiz-game">
+        <div class="quiz-progress-bar">
+          <div class="quiz-progress-fill" id="quiz-progress-fill" style="width:0%"></div>
+        </div>
+        <div class="quiz-header">
+          <div class="quiz-header-left">
+            <div class="quiz-q-counter" id="quiz-q-counter">Question 1 of 15</div>
+            <div class="quiz-case-name" id="quiz-case-name">Case Name</div>
+          </div>
+          <span class="quiz-unit-badge" id="quiz-unit-badge">Unit 2</span>
+        </div>
+        <div class="quiz-question">What was the central constitutional issue?</div>
+        <div class="quiz-prompt" id="quiz-prompt">Loading question...</div>
+        <div class="quiz-options" id="quiz-options"></div>
+        <div class="quiz-feedback" id="quiz-feedback"></div>
+        <button class="quiz-next-btn" id="quiz-next-btn" onclick="quizNext()">Next Question →</button>
+      </div>
+      <div class="quiz-score-screen" id="quiz-score-screen">
+        <div class="quiz-score-num" id="quiz-score-num">12/15</div>
+        <div class="quiz-score-label">cases correct</div>
+        <div style="font-size:13px;color:var(--gray-600);margin-bottom:20px;" id="quiz-score-msg"></div>
+        <button class="quiz-retry-btn" onclick="launchQuiz()">Try Again</button>
+        <button class="quiz-retry-btn" style="background:var(--crimson);" onclick="closeQuiz()">Done</button>
+      </div>
+    </div>
+  </div>
+
 </body>
 </html>
