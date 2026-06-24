@@ -1414,6 +1414,399 @@
     }
     .admin-vocab-fields { flex: 1; display: flex; flex-direction: column; gap: 6px; }
   
+
+    /* ══ STUMP THE CLASS ══ */
+    #tab-stump { display: none; }
+    #tab-stump.active { display: block; }
+    .stump-layout {
+      max-width: 780px; margin: 0 auto;
+    }
+    .stump-hero {
+      background: var(--navy-dark); border-radius: var(--radius);
+      padding: 32px; text-align: center; margin-bottom: 20px;
+      position: relative; overflow: hidden;
+    }
+    .stump-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: repeating-linear-gradient(
+        45deg, transparent, transparent 40px,
+        rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 80px
+      );
+    }
+    .stump-mode-badge {
+      display: inline-block; font-size: 9px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+    .stump-case-display {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 700; color: white;
+      line-height: 1.2; margin-bottom: 8px; position: relative;
+      min-height: 90px; display: flex; align-items: center; justify-content: center;
+    }
+    .stump-year-display {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 14px; color: rgba(255,255,255,0.45);
+      margin-bottom: 16px;
+    }
+    .stump-issue-display {
+      font-size: 15px; color: rgba(255,255,255,0.7);
+      max-width: 560px; margin: 0 auto 20px; line-height: 1.6;
+      min-height: 48px;
+    }
+    .stump-timer-ring {
+      width: 80px; height: 80px; margin: 0 auto 16px;
+      position: relative;
+    }
+    .stump-timer-ring svg { transform: rotate(-90deg); }
+    .stump-timer-ring circle {
+      fill: none; stroke-width: 6;
+    }
+    .stump-timer-bg { stroke: rgba(255,255,255,0.1); }
+    .stump-timer-fill {
+      stroke: var(--gold);
+      stroke-linecap: round;
+      stroke-dasharray: 220;
+      stroke-dashoffset: 0;
+      transition: stroke-dashoffset 1s linear, stroke 0.3s;
+    }
+    .stump-timer-num {
+      position: absolute; inset: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 22px; font-weight: 700; color: white;
+    }
+    .stump-controls {
+      display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+    }
+    .stump-btn {
+      padding: 10px 22px; border-radius: var(--radius-sm);
+      border: none; font-size: 13px; font-weight: 700;
+      cursor: pointer; transition: opacity 0.15s, transform 0.1s;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .stump-btn:active { transform: scale(0.96); }
+    .stump-btn.primary { background: var(--crimson); color: white; }
+    .stump-btn.secondary { background: rgba(255,255,255,0.12); color: white; }
+    .stump-btn.success { background: #22c55e; color: white; }
+    .stump-btn:hover { opacity: 0.88; }
+    .stump-btn:disabled { opacity: 0.35; cursor: default; }
+    .stump-reveal {
+      background: white; border-radius: var(--radius);
+      border: 2px solid var(--navy); padding: 20px 24px;
+      margin-bottom: 16px; display: none;
+      animation: stump-pop 0.3s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    .stump-reveal.show { display: block; }
+    @keyframes stump-pop {
+      from { transform: scale(0.92); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .stump-reveal-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--crimson); margin-bottom: 6px;
+    }
+    .stump-reveal-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 700; color: var(--navy); margin-bottom: 6px;
+    }
+    .stump-reveal-ruling {
+      font-size: 13px; color: var(--gray-700); line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .stump-reveal-sig {
+      font-size: 12px; color: var(--gray-500); line-height: 1.5;
+      padding: 10px 12px; background: var(--gray-100);
+      border-radius: var(--radius-sm); border-left: 3px solid var(--navy);
+    }
+    .stump-scoreboard {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); padding: 16px 20px;
+    }
+    .stump-score-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 12px;
+    }
+    .stump-score-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy);
+    }
+    .stump-score-reset {
+      font-size: 11px; color: var(--gray-400); cursor: pointer;
+      background: none; border: none; padding: 0;
+    }
+    .stump-score-reset:hover { color: var(--crimson); }
+    .stump-score-row {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 6px;
+    }
+    .stump-score-label { font-size: 13px; font-weight: 600; color: var(--navy); flex: 1; }
+    .stump-score-track {
+      flex: 2; height: 8px; background: var(--gray-100);
+      border-radius: 4px; overflow: hidden;
+    }
+    .stump-score-fill {
+      height: 100%; border-radius: 4px;
+      transition: width 0.4s cubic-bezier(0.4,0,0.2,1);
+    }
+    .stump-score-fill.got { background: #22c55e; }
+    .stump-score-fill.missed { background: var(--crimson); }
+    .stump-score-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; color: var(--gray-500); min-width: 32px; text-align: right;
+    }
+    .stump-round-info {
+      font-size: 11px; color: var(--gray-400); text-align: center;
+      margin-top: 8px;
+    }
+
+    /* ══ LIVING DOCUMENTS ══ */
+    #tab-docs { display: none; }
+    #tab-docs.active { display: block; }
+    .docs-layout {
+      display: grid; grid-template-columns: 220px 1fr; gap: 20px; align-items: start;
+    }
+    .docs-sidebar { position: sticky; top: 80px; }
+    .docs-doc-list { display: flex; flex-direction: column; gap: 4px; }
+    .docs-doc-item {
+      padding: 9px 12px; border-radius: var(--radius-sm);
+      border: 1px solid transparent; cursor: pointer;
+      transition: background 0.12s, border-color 0.12s;
+      font-size: 12px; font-weight: 600; color: var(--navy);
+      line-height: 1.3;
+    }
+    .docs-doc-item:hover { background: var(--cream); }
+    .docs-doc-item.active {
+      background: var(--navy); color: white; border-color: var(--navy);
+    }
+    .docs-doc-item .doc-year {
+      font-size: 10px; font-weight: 400; opacity: 0.6; display: block; margin-top: 1px;
+    }
+    .docs-main {}
+    .docs-header {
+      background: var(--navy-dark); border-radius: var(--radius);
+      padding: 20px 24px; margin-bottom: 16px;
+    }
+    .docs-header-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 4px;
+    }
+    .docs-header-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: white; margin-bottom: 4px;
+    }
+    .docs-header-meta { font-size: 12px; color: rgba(255,255,255,0.45); }
+    .docs-intro {
+      font-size: 13px; line-height: 1.7; color: var(--gray-600);
+      margin-bottom: 16px; padding: 14px 16px;
+      background: var(--cream); border-radius: var(--radius-sm);
+      border-left: 3px solid var(--gold);
+    }
+    .docs-section { margin-bottom: 20px; }
+    .docs-section-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--crimson);
+      margin-bottom: 10px; padding-bottom: 6px;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .docs-clause {
+      background: white; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); margin-bottom: 8px;
+      overflow: hidden; cursor: pointer;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .docs-clause:hover { border-color: var(--navy-xlight); box-shadow: var(--shadow-sm); }
+    .docs-clause.open { border-color: var(--navy); }
+    .docs-clause-head {
+      display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px;
+    }
+    .docs-clause-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px; font-weight: 700; color: var(--navy);
+      background: var(--navy-xlight); padding: 2px 8px;
+      border-radius: 4px; flex-shrink: 0; margin-top: 2px;
+    }
+    .docs-clause-text {
+      font-size: 13px; line-height: 1.6; color: var(--text);
+      font-style: italic; flex: 1;
+    }
+    .docs-clause-arrow {
+      font-size: 11px; color: var(--gray-400); flex-shrink: 0;
+      margin-top: 3px; transition: transform 0.2s;
+    }
+    .docs-clause.open .docs-clause-arrow { transform: rotate(180deg); }
+    .docs-clause-body {
+      display: none; padding: 0 14px 14px 44px;
+      border-top: 1px solid var(--cream-dark); padding-top: 12px;
+    }
+    .docs-clause.open .docs-clause-body { display: block; padding-top: 12px; }
+    .docs-plain {
+      font-size: 13px; line-height: 1.7; color: var(--gray-700); margin-bottom: 10px;
+    }
+    .docs-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+    .docs-tag {
+      font-size: 10px; font-weight: 700; padding: 2px 8px;
+      border-radius: 4px; letter-spacing: 0.05em;
+    }
+    .docs-tag.standard { background: var(--navy-xlight); color: var(--navy); }
+    .docs-tag.case {
+      background: var(--crimson-light); color: var(--crimson); cursor: pointer;
+    }
+    .docs-tag.case:hover { background: #fbd0d5; }
+    .docs-connections {
+      font-size: 11px; color: var(--gray-500); font-style: italic;
+    }
+    @media (max-width: 760px) {
+      .docs-layout { grid-template-columns: 1fr; }
+      .docs-sidebar { position: static; }
+      .docs-doc-list { flex-direction: row; flex-wrap: wrap; }
+      .docs-doc-item { flex: 1; min-width: 120px; }
+    }
+
+    /* ══ DIAGNOSTIC QUIZ ══ */
+    #tab-diagnostic { display: none; }
+    #tab-diagnostic.active { display: block; }
+    .diag-layout { max-width: 680px; margin: 0 auto; }
+    .diag-start-card {
+      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 100%);
+      border-radius: var(--radius); padding: 36px; text-align: center;
+      margin-bottom: 20px;
+    }
+    .diag-start-icon { font-size: 48px; margin-bottom: 12px; }
+    .diag-start-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700; color: white; margin-bottom: 8px;
+    }
+    .diag-start-sub {
+      font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 20px;
+      max-width: 400px; margin-left: auto; margin-right: auto; line-height: 1.6;
+    }
+    .diag-unit-pills {
+      display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 20px;
+    }
+    .diag-unit-pill {
+      padding: 6px 14px; border-radius: 99px;
+      border: 1px solid rgba(255,255,255,0.2);
+      font-size: 11px; font-weight: 700; color: rgba(255,255,255,0.6);
+      cursor: pointer; transition: all 0.15s;
+    }
+    .diag-unit-pill.selected {
+      background: var(--crimson); border-color: var(--crimson); color: white;
+    }
+    .diag-start-btn {
+      padding: 12px 32px; border-radius: var(--radius-sm);
+      background: var(--crimson); color: white; border: none;
+      font-size: 14px; font-weight: 700; cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .diag-start-btn:hover { opacity: 0.88; }
+    .diag-q-card {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); box-shadow: var(--shadow-sm);
+      padding: 24px; margin-bottom: 16px; display: none;
+    }
+    .diag-q-card.show { display: block; }
+    .diag-q-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 16px;
+    }
+    .diag-q-meta {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gray-400);
+    }
+    .diag-q-unit-tag {
+      font-size: 10px; font-weight: 700;
+      background: var(--navy-xlight); color: var(--navy);
+      padding: 3px 10px; border-radius: 99px;
+    }
+    .diag-progress-bar {
+      height: 4px; background: var(--gray-200); border-radius: 2px;
+      margin-bottom: 20px; overflow: hidden;
+    }
+    .diag-progress-fill {
+      height: 100%; background: var(--crimson); border-radius: 2px;
+      transition: width 0.3s;
+    }
+    .diag-question {
+      font-size: 15px; font-weight: 600; color: var(--navy);
+      line-height: 1.5; margin-bottom: 16px;
+    }
+    .diag-options { display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+    .diag-option {
+      padding: 12px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      text-align: left; font-size: 13px; cursor: pointer;
+      transition: background 0.12s, border-color 0.12s; line-height: 1.4;
+    }
+    .diag-option:hover:not(:disabled) { background: var(--cream); border-color: var(--navy-xlight); }
+    .diag-option.correct { background: #dcfce7; border-color: #22c55e; color: #166534; font-weight: 600; }
+    .diag-option.wrong { background: #fee2e2; border-color: var(--crimson); color: #991b1b; }
+    .diag-option:disabled { cursor: default; }
+    .diag-feedback {
+      font-size: 12px; line-height: 1.6; padding: 10px 12px;
+      border-radius: var(--radius-sm); margin-bottom: 14px; display: none;
+    }
+    .diag-feedback.show { display: block; }
+    .diag-feedback.correct { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .diag-feedback.wrong { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .diag-next-btn {
+      width: 100%; padding: 11px; border-radius: var(--radius-sm);
+      background: var(--navy); color: white; border: none;
+      font-size: 13px; font-weight: 700; cursor: pointer; display: none;
+    }
+    .diag-next-btn.show { display: block; }
+    .diag-results { display: none; }
+    .diag-results.show { display: block; }
+    .diag-results-hero {
+      background: var(--navy-dark); border-radius: var(--radius);
+      padding: 28px; text-align: center; margin-bottom: 16px;
+    }
+    .diag-score-big {
+      font-family: 'Playfair Display', serif;
+      font-size: 56px; font-weight: 700; color: white; line-height: 1;
+    }
+    .diag-score-label { font-size: 13px; color: rgba(255,255,255,0.5); margin: 4px 0 16px; }
+    .diag-score-msg { font-size: 14px; color: rgba(255,255,255,0.75); }
+    .diag-unit-breakdown {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); padding: 20px;
+      margin-bottom: 16px;
+    }
+    .diag-breakdown-title {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 14px;
+    }
+    .diag-unit-row {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 10px;
+    }
+    .diag-unit-name { font-size: 12px; font-weight: 600; color: var(--navy); min-width: 80px; }
+    .diag-unit-bar {
+      flex: 1; height: 10px; background: var(--gray-100);
+      border-radius: 5px; overflow: hidden;
+    }
+    .diag-unit-fill {
+      height: 100%; border-radius: 5px;
+      transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+    }
+    .diag-unit-pct {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; min-width: 36px; text-align: right;
+    }
+    .diag-focus-box {
+      background: #fef3cd; border: 1px solid #fcd34d;
+      border-radius: var(--radius-sm); padding: 14px 16px; margin-bottom: 16px;
+    }
+    .diag-focus-title {
+      font-size: 11px; font-weight: 700; color: #92400e;
+      letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 6px;
+    }
+    .diag-focus-list { font-size: 13px; color: #78350f; line-height: 1.8; }
+    .diag-retry-btns { display: flex; gap: 8px; }
+    .diag-retry-btn {
+      flex: 1; padding: 11px; border-radius: var(--radius-sm);
+      border: none; font-size: 13px; font-weight: 700; cursor: pointer;
+    }
+    .diag-retry-btn.primary { background: var(--navy); color: white; }
+    .diag-retry-btn.secondary { background: white; color: var(--navy); border: 1px solid var(--navy); }
   </style>
 </head>
 <body>
@@ -1441,6 +1834,9 @@
       <div class="nav-tab" data-tab="units">Units</div>
       <div class="nav-tab" data-tab="review">FRQ &amp; Review</div>
       <div class="nav-tab" data-tab="glossary">Glossary</div>
+      <div class="nav-tab" data-tab="docs">📜 Documents</div>
+      <div class="nav-tab" data-tab="diagnostic">🎯 Diagnostic</div>
+      <div class="nav-tab" data-tab="stump">🏆 Stump</div>
       <div class="nav-tab" data-tab="exit">Exit Ticket</div>
     </div>
   </nav>
@@ -1765,6 +2161,128 @@
             <div class="search-result-list" id="search-result-list"></div>
           </div>
           <div id="glossary-units-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ LIVING DOCUMENTS TAB ═══════════════════ -->
+    <div id="tab-docs">
+      <div class="section-title"><i class="ti ti-file-certificate"></i> Living Documents</div>
+      <div class="docs-layout">
+        <div class="docs-sidebar">
+          <div class="docs-doc-list" id="docs-doc-list"></div>
+        </div>
+        <div class="docs-main" id="docs-main"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ DIAGNOSTIC QUIZ TAB ═══════════════════ -->
+    <div id="tab-diagnostic">
+      <div class="section-title"><i class="ti ti-target"></i> Am I Ready? Diagnostic</div>
+      <div class="diag-layout">
+        <div class="diag-start-card" id="diag-start">
+          <div class="diag-start-icon">🎯</div>
+          <div class="diag-start-title">AP Gov Diagnostic Quiz</div>
+          <div class="diag-start-sub">20 questions across all 5 units. See exactly which standards you know and where to focus your studying.</div>
+          <div class="diag-unit-pills" id="diag-unit-pills">
+            <div class="diag-unit-pill selected" data-unit="all" onclick="diagToggleUnit(this)">All Units</div>
+            <div class="diag-unit-pill" data-unit="1" onclick="diagToggleUnit(this)">Unit 1</div>
+            <div class="diag-unit-pill" data-unit="2" onclick="diagToggleUnit(this)">Unit 2</div>
+            <div class="diag-unit-pill" data-unit="3" onclick="diagToggleUnit(this)">Unit 3</div>
+            <div class="diag-unit-pill" data-unit="4" onclick="diagToggleUnit(this)">Unit 4</div>
+            <div class="diag-unit-pill" data-unit="5" onclick="diagToggleUnit(this)">Unit 5</div>
+          </div>
+          <button class="diag-start-btn" onclick="startDiagnostic()">Start Diagnostic →</button>
+        </div>
+        <div class="diag-q-card" id="diag-q-card">
+          <div class="diag-progress-bar"><div class="diag-progress-fill" id="diag-progress-fill"></div></div>
+          <div class="diag-q-header">
+            <div class="diag-q-meta" id="diag-q-meta">Question 1 of 20</div>
+            <div class="diag-q-unit-tag" id="diag-q-unit-tag">Unit 1</div>
+          </div>
+          <div class="diag-question" id="diag-question"></div>
+          <div class="diag-options" id="diag-options"></div>
+          <div class="diag-feedback" id="diag-feedback"></div>
+          <button class="diag-next-btn" id="diag-next-btn" onclick="diagNext()">Next Question →</button>
+        </div>
+        <div class="diag-results" id="diag-results">
+          <div class="diag-results-hero">
+            <div class="diag-score-big" id="diag-score-big">16/20</div>
+            <div class="diag-score-label">questions correct</div>
+            <div class="diag-score-msg" id="diag-score-msg"></div>
+          </div>
+          <div class="diag-unit-breakdown">
+            <div class="diag-breakdown-title">Performance by Unit</div>
+            <div id="diag-breakdown-rows"></div>
+          </div>
+          <div class="diag-focus-box" id="diag-focus-box">
+            <div class="diag-focus-title">📌 Focus on These Topics</div>
+            <div class="diag-focus-list" id="diag-focus-list"></div>
+          </div>
+          <div class="diag-retry-btns">
+            <button class="diag-retry-btn secondary" onclick="resetDiagnostic()">Try Again</button>
+            <button class="diag-retry-btn primary" onclick="diagGoToGlossary()">Study Weak Units →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════ STUMP THE CLASS TAB ═══════════════════ -->
+    <div id="tab-stump">
+      <div class="section-title"><i class="ti ti-trophy"></i> Stump the Class</div>
+      <div class="stump-layout">
+        <div class="stump-hero">
+          <div class="stump-mode-badge" id="stump-mode-badge">READY TO PLAY</div>
+          <div class="stump-case-display" id="stump-case-display">Press Start to Begin</div>
+          <div class="stump-year-display" id="stump-year-display"></div>
+          <div class="stump-issue-display" id="stump-issue-display">A constitutional law challenge for the whole class</div>
+          <div class="stump-timer-ring" id="stump-timer-wrap" style="display:none;">
+            <svg viewBox="0 0 80 80" width="80" height="80">
+              <circle class="stump-timer-bg" cx="40" cy="40" r="35"/>
+              <circle class="stump-timer-fill" id="stump-timer-circle" cx="40" cy="40" r="35"/>
+            </svg>
+            <div class="stump-timer-num" id="stump-timer-num">30</div>
+          </div>
+          <div class="stump-controls">
+            <button class="stump-btn primary" id="stump-start-btn" onclick="stumpStart()">
+              <i class="ti ti-player-play"></i> Start Round
+            </button>
+            <button class="stump-btn secondary" id="stump-reveal-btn" onclick="stumpReveal()" style="display:none;">
+              <i class="ti ti-eye"></i> Reveal Answer
+            </button>
+            <button class="stump-btn success" id="stump-got-btn" onclick="stumpScore(true)" style="display:none;">
+              ✓ Class Got It
+            </button>
+            <button class="stump-btn secondary" id="stump-missed-btn" onclick="stumpScore(false)" style="display:none;">
+              ✗ Class Missed It
+            </button>
+            <button class="stump-btn secondary" id="stump-next-btn" onclick="stumpNext()" style="display:none;">
+              Next Case →
+            </button>
+          </div>
+        </div>
+        <div class="stump-reveal" id="stump-reveal-card">
+          <div class="stump-reveal-label">The Answer</div>
+          <div class="stump-reveal-name" id="stump-reveal-name"></div>
+          <div class="stump-reveal-ruling" id="stump-reveal-ruling"></div>
+          <div class="stump-reveal-sig" id="stump-reveal-sig"></div>
+        </div>
+        <div class="stump-scoreboard">
+          <div class="stump-score-header">
+            <div class="stump-score-title">Class Scoreboard</div>
+            <button class="stump-score-reset" onclick="stumpResetScore()">Reset</button>
+          </div>
+          <div class="stump-score-row">
+            <div class="stump-score-label">✓ Got It</div>
+            <div class="stump-score-track"><div class="stump-score-fill got" id="stump-got-bar" style="width:0%"></div></div>
+            <div class="stump-score-num" id="stump-got-num">0</div>
+          </div>
+          <div class="stump-score-row">
+            <div class="stump-score-label">✗ Missed</div>
+            <div class="stump-score-track"><div class="stump-score-fill missed" id="stump-missed-bar" style="width:0%"></div></div>
+            <div class="stump-score-num" id="stump-missed-num">0</div>
+          </div>
+          <div class="stump-round-info" id="stump-round-info">Cases played: 0 of 15</div>
         </div>
       </div>
     </div>
@@ -2959,7 +3477,7 @@
   // ══════════════════════════════════════════════════════════
   //  NAV TABS
   // ══════════════════════════════════════════════════════════
-  const TAB_IDS = ['home', 'units', 'review', 'glossary', 'exit'];
+  const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'exit'];
 
   document.querySelectorAll('.nav-tab').forEach(tab => {
     tab.addEventListener('click', () => {
@@ -4572,6 +5090,658 @@
 
 
   // ══════════════════════════════════════════════════════════
+
+  // ══════════════════════════════════════════════════════════
+  //  LIVING DOCUMENTS ENGINE
+  // ══════════════════════════════════════════════════════════
+  var LIVING_DOCS = [
+    {
+      id: 'declaration',
+      title: 'Declaration of Independence',
+      year: 1776,
+      author: 'Thomas Jefferson',
+      intro: 'The Declaration announced American independence from Britain and established the philosophical foundation for American democracy — natural rights, popular sovereignty, and the social contract. It is the "why" behind the Constitution\'s "how."',
+      sections: [
+        {
+          title: 'Preamble & Natural Rights',
+          clauses: [
+            {
+              num: '¶1',
+              text: 'When in the Course of human events, it becomes necessary for one people to dissolve the political bands...',
+              plain: 'When a people need to break away from their government, they should explain why to the world.',
+              standards: ['1.1'],
+              cases: [],
+              connections: 'Introduces the idea of popular sovereignty — the people have the right to change their government.'
+            },
+            {
+              num: '¶2',
+              text: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.',
+              plain: 'All people are born equal and have rights that cannot be taken away — life, liberty, and the pursuit of happiness.',
+              standards: ['1.1', '3.4'],
+              cases: ['Brown v. Board of Education'],
+              connections: 'Foundation for the Equal Protection Clause (14th Amendment) and all civil rights arguments. Lincoln cited this in the Gettysburg Address.'
+            },
+            {
+              num: '¶3',
+              text: 'That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed.',
+              plain: 'Governments exist to protect these rights, and their power comes from the people — not from kings or tradition.',
+              standards: ['1.1'],
+              cases: [],
+              connections: 'Defines popular sovereignty. Direct source for the concept that appears in AP Gov FRQs about the basis of legitimate government.'
+            },
+            {
+              num: '¶4',
+              text: 'That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it...',
+              plain: 'When a government fails to protect rights, the people have the right to change or replace it.',
+              standards: ['1.1'],
+              cases: [],
+              connections: 'The social contract theory of Locke — government by consent, with the right of revolution if that contract is broken.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'fed10',
+      title: 'Federalist No. 10',
+      year: 1787,
+      author: 'James Madison',
+      intro: 'Madison\'s most important essay argues that a large republic is the best defense against "factions" — groups that pursue their own interests at the expense of the common good. This is the foundational argument for the entire Constitution.',
+      sections: [
+        {
+          title: 'The Problem of Faction',
+          clauses: [
+            {
+              num: '§1',
+              text: 'Among the numerous advantages promised by a well-constructed Union, none deserves to be more accurately developed than its tendency to break and control the violence of faction.',
+              plain: 'One of the biggest advantages of a strong national government is its ability to control dangerous factions — groups that put their own interests above everyone else\'s.',
+              standards: ['1.3'],
+              cases: [],
+              connections: 'Madison defines the central problem the Constitution solves. Every AP Gov unit traces back to this tension.'
+            },
+            {
+              num: '§2',
+              text: 'By a faction, I understand a number of citizens... who are united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community.',
+              plain: 'A faction is any group — majority or minority — that pursues its own interests at the expense of other citizens or the common good.',
+              standards: ['1.3', '5.3'],
+              cases: [],
+              connections: 'Directly relevant to interest groups (Unit 5). Madison predicted exactly what PACs and lobbying groups would become.'
+            },
+            {
+              num: '§3',
+              text: 'There are two methods of curing the mischiefs of faction: the one, by removing its causes; the other, by controlling its effects.',
+              plain: 'You can either eliminate the causes of factions (impossible in a free society) or design a system that controls their effects. Madison chooses the second.',
+              standards: ['1.3'],
+              cases: [],
+              connections: 'Sets up his argument for the large republic. This is why we have so many checks and balances — not to prevent factions, but to prevent any one from winning completely.'
+            }
+          ]
+        },
+        {
+          title: 'The Republican Solution',
+          clauses: [
+            {
+              num: '§4',
+              text: 'The effect of... is to refine and enlarge the public views, by passing them through the medium of a chosen body of citizens, whose wisdom may best discern the true interest of their country.',
+              plain: 'A representative republic — not a direct democracy — filters public opinion through elected officials who can make wiser decisions than a mob.',
+              standards: ['1.3'],
+              cases: [],
+              connections: 'The argument for representative democracy over direct democracy. Links to the Trustee vs. Delegate models of representation.'
+            },
+            {
+              num: '§5',
+              text: 'Extend the sphere, and you take in a greater variety of parties and interests; you make it less probable that a majority of the whole will have a common motive to invade the rights of other citizens.',
+              plain: 'The bigger the republic, the more groups there are competing — making it harder for any single faction to dominate.',
+              standards: ['1.3'],
+              cases: [],
+              connections: 'The core argument of Federalist 10. A large diverse nation prevents tyranny better than a small homogeneous one.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'fed51',
+      title: 'Federalist No. 51',
+      year: 1788,
+      author: 'James Madison',
+      intro: 'If Federalist 10 explains why we need the Constitution, Federalist 51 explains how it works. Madison argues that the structure of government itself — separation of powers, checks and balances — prevents tyranny without relying on the goodness of those in power.',
+      sections: [
+        {
+          title: 'Structure as Safeguard',
+          clauses: [
+            {
+              num: '§1',
+              text: 'In order to lay a due foundation for that separate and distinct exercise of the different powers of government... it is evident that each department should have a will of its own.',
+              plain: 'For separation of powers to actually work, each branch of government needs to be independent — its own source of authority, not depending on the others.',
+              standards: ['2.2'],
+              cases: ['U.S. v. Nixon'],
+              connections: 'The entire structure of Articles I, II, and III flows from this principle. Key for any FRQ about separation of powers.'
+            },
+            {
+              num: '§2',
+              text: 'Ambition must be made to counteract ambition. The interest of the man must be connected with the constitutional rights of the place.',
+              plain: 'Since people are self-interested, design the system so that each official\'s personal ambition keeps them from letting others take too much power.',
+              standards: ['2.2'],
+              cases: [],
+              connections: 'The most-quoted line in AP Gov. Madison is arguing for human nature — not virtue — as the foundation of constitutional government.'
+            },
+            {
+              num: '§3',
+              text: 'If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary.',
+              plain: 'Because humans are flawed, we need government. And because those in government are also human, we need checks on them too.',
+              standards: ['2.2', '1.1'],
+              cases: [],
+              connections: 'The most powerful sentence in the Federalist Papers. Appears on AP exams constantly. Know it cold.'
+            }
+          ]
+        },
+        {
+          title: 'Federalism as Double Security',
+          clauses: [
+            {
+              num: '§4',
+              text: 'In the compound republic of America, the power surrendered by the people is first divided between two distinct governments, and then the portion allotted to each subdivided among distinct and separate departments.',
+              plain: 'Americans give up power at two levels: to the national government AND state governments. Then each level is divided into three branches. Double protection.',
+              standards: ['1.2', '2.2'],
+              cases: ['McCulloch v. Maryland'],
+              connections: 'This is the argument for federalism AND separation of powers working together. The dual layer of checks and balances.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'brutus1',
+      title: 'Brutus No. 1',
+      year: 1787,
+      author: 'Robert Yates (attributed)',
+      intro: 'The most important Anti-Federalist paper, Brutus No. 1 argues AGAINST ratifying the Constitution. Its author feared the national government would swallow the states, the military would become oppressive, and the Necessary and Proper Clause would give Congress unlimited power. Many of these warnings proved prophetic.',
+      sections: [
+        {
+          title: 'The Danger of Consolidated Government',
+          clauses: [
+            {
+              num: '§1',
+              text: 'This government is to possess absolute and uncontroulable power, legislative, executive and judicial, with respect to every object to which it extends.',
+              plain: 'The proposed national government will have total power over everything it touches — with no limits from the states.',
+              standards: ['1.3', '1.2'],
+              cases: [],
+              connections: 'The Anti-Federalist fear that the Supremacy Clause would eliminate state power. Compare directly to Federalist 51\'s response.'
+            },
+            {
+              num: '§2',
+              text: 'The general legislature... are authorised to make all laws which shall be necessary and proper for carrying into execution the foregoing powers.',
+              plain: 'The Necessary and Proper Clause essentially gives Congress unlimited legislative power.',
+              standards: ['1.3', '2.1'],
+              cases: ['McCulloch v. Maryland'],
+              connections: 'Brutus predicted exactly how the Elastic Clause would be used. McCulloch v. Maryland (1819) confirmed his fears by broadly interpreting implied powers.'
+            },
+            {
+              num: '§3',
+              text: 'In a republic, the manners, sentiments, and interests of the people should be similar. If this be not the case, there will be a constant clashing of opinions.',
+              plain: 'A republic only works in a small, homogeneous community where people share values. America is too big and diverse to be one republic.',
+              standards: ['1.3'],
+              cases: [],
+              connections: 'The direct counter to Federalist 10. Where Madison sees diversity as a strength, Brutus sees it as a fatal weakness.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'gettysburg',
+      title: 'The Gettysburg Address',
+      year: 1863,
+      author: 'Abraham Lincoln',
+      intro: 'In 272 words, Lincoln redefined what the Civil War was about — not just saving the Union, but fulfilling the promise of the Declaration of Independence. He reframed American democracy around equality and popular sovereignty, giving both new meaning. Required document per EK 1.1.A.3.',
+      sections: [
+        {
+          title: 'The Address',
+          clauses: [
+            {
+              num: '¶1',
+              text: 'Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.',
+              plain: 'Eighty-seven years ago (1776), the founders created a nation built on the idea that all people are equal.',
+              standards: ['1.1', '3.4'],
+              cases: ['Brown v. Board of Education'],
+              connections: 'Lincoln reaches back to 1776 — not 1787 — as the nation\'s founding moment. Equality, not the Constitution, is the nation\'s core promise. This reframes the entire debate about civil rights.'
+            },
+            {
+              num: '¶2',
+              text: 'Now we are engaged in a great civil war, testing whether that nation, or any nation so conceived and so dedicated, can long endure.',
+              plain: 'The Civil War is a test of whether a democracy built on equality can survive.',
+              standards: ['1.1'],
+              cases: [],
+              connections: 'Lincoln frames the war as a test of democracy itself — not just American union. This is the argument for why preserving the Union matters to the world.'
+            },
+            {
+              num: '¶3',
+              text: '...that this nation, under God, shall have a new birth of freedom — and that government of the people, by the people, for the people, shall not perish from the earth.',
+              plain: 'America will be reborn with true freedom, and government by the consent of the governed will survive.',
+              standards: ['1.1'],
+              cases: [],
+              connections: 'Popular sovereignty defined in its most powerful form. "Government of the people, by the people, for the people" is Lincoln\'s restatement of the social contract — and the most quoted definition of democracy in American history.'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      id: 'emancipation',
+      title: 'Emancipation Proclamation',
+      year: 1863,
+      author: 'Abraham Lincoln',
+      intro: 'Issued January 1, 1863, the Emancipation Proclamation declared enslaved people in Confederate states to be free. It was a war measure — limited in scope but massive in meaning. It reframed the Civil War as a war against slavery and set the stage for the 13th Amendment. Required document per EK 3.12.A.1.',
+      sections: [
+        {
+          title: 'Key Provisions',
+          clauses: [
+            {
+              num: '§1',
+              text: 'All persons held as slaves within any State or designated part of a State, the people whereof shall then be in rebellion against the United States, shall be then, thenceforward, and forever free.',
+              plain: 'All enslaved people in Confederate states are declared permanently free as of January 1, 1863.',
+              standards: ['3.12', '3.4'],
+              cases: ['Brown v. Board of Education'],
+              connections: 'Note what it did NOT do: it did not free enslaved people in border states loyal to the Union (Kentucky, Missouri, Maryland, Delaware). Lincoln used his war powers as commander-in-chief, not Congress.'
+            },
+            {
+              num: '§2',
+              text: 'The Executive Government of the United States, including the military and naval authorities thereof, will recognize and maintain the freedom of such persons.',
+              plain: 'The federal government and military will enforce and protect this freedom.',
+              standards: ['3.12', '2.3'],
+              cases: [],
+              connections: 'Lincoln used executive/war powers to issue the Proclamation — not an act of Congress. This is a key example of presidential inherent/war powers. The 13th Amendment (1865) made abolition permanent and universal.'
+            }
+          ]
+        }
+      ]
+    }
+  ];
+
+  var docsBuilt = false;
+  function buildDocsTab() {
+    if (docsBuilt) return;
+    docsBuilt = true;
+    var list = document.getElementById('docs-doc-list');
+    var main = document.getElementById('docs-main');
+    if (!list || !main) return;
+
+    LIVING_DOCS.forEach(function(doc, idx) {
+      var item = document.createElement('div');
+      item.className = 'docs-doc-item' + (idx === 0 ? ' active' : '');
+      item.dataset.id = doc.id;
+      item.innerHTML = doc.title + '<span class="doc-year">' + doc.year + ' · ' + doc.author + '</span>';
+      item.addEventListener('click', function() {
+        document.querySelectorAll('.docs-doc-item').forEach(function(d) { d.classList.remove('active'); });
+        item.classList.add('active');
+        renderDoc(doc);
+      });
+      list.appendChild(item);
+    });
+
+    renderDoc(LIVING_DOCS[0]);
+  }
+
+  function renderDoc(doc) {
+    var main = document.getElementById('docs-main');
+    var sectionsHtml = doc.sections.map(function(sec) {
+      var clausesHtml = sec.clauses.map(function(c) {
+        var tags = c.standards.map(function(s) {
+          return '<span class="docs-tag standard">EK ' + s + '</span>';
+        }).join('');
+        var caseTags = c.cases.map(function(name) {
+          return '<span class="docs-tag case" onclick="openCaseModal(\'' + name.replace(/'/g,"\\'") + '\')">' + name + ' ↗</span>';
+        }).join('');
+        return '<div class="docs-clause" onclick="this.classList.toggle(\'open\')">' +
+          '<div class="docs-clause-head">' +
+            '<span class="docs-clause-num">' + c.num + '</span>' +
+            '<span class="docs-clause-text">' + c.text.substring(0,120) + (c.text.length > 120 ? '...' : '') + '</span>' +
+            '<span class="docs-clause-arrow">▾</span>' +
+          '</div>' +
+          '<div class="docs-clause-body">' +
+            '<div class="docs-plain">' + c.plain + '</div>' +
+            '<div class="docs-tags">' + tags + caseTags + '</div>' +
+            (c.connections ? '<div class="docs-connections">🔗 AP Connection: ' + c.connections + '</div>' : '') +
+          '</div>' +
+        '</div>';
+      }).join('');
+      return '<div class="docs-section"><div class="docs-section-title">' + sec.title + '</div>' + clausesHtml + '</div>';
+    }).join('');
+
+    main.innerHTML =
+      '<div class="docs-header">' +
+        '<div class="docs-header-label">Required Foundational Document</div>' +
+        '<div class="docs-header-title">' + doc.title + '</div>' +
+        '<div class="docs-header-meta">' + doc.year + ' · ' + doc.author + '</div>' +
+      '</div>' +
+      '<div class="docs-intro">' + doc.intro + '</div>' +
+      sectionsHtml;
+  }
+
+  document.querySelector('.nav-tab[data-tab="docs"]').addEventListener('click', function() {
+    setTimeout(buildDocsTab, 30);
+  });
+
+  // ══════════════════════════════════════════════════════════
+  //  DIAGNOSTIC QUIZ ENGINE
+  // ══════════════════════════════════════════════════════════
+  var DIAG_QUESTIONS = [
+    { q: 'Which foundational document first articulated the principle that governments derive their just powers from the consent of the governed?', opts: ['U.S. Constitution', 'Declaration of Independence', 'Federalist No. 10', 'Articles of Confederation'], ans: 1, unit: 1, topic: 'Natural Rights & Popular Sovereignty' },
+    { q: 'In Federalist No. 10, Madison argues that a large republic is better than a small one primarily because:', opts: ['Large republics have stronger armies', 'More diversity makes it harder for any one faction to dominate', 'Large republics can collect more taxes', 'The president has more power in a large republic'], ans: 1, unit: 1, topic: 'Federalist Papers' },
+    { q: 'The Supremacy Clause of the Constitution states that:', opts: ['The President is the supreme commander of the military', 'Federal law takes precedence over conflicting state law', 'The Supreme Court has final say on all legal matters', 'Congress must approve all treaties'], ans: 1, unit: 1, topic: 'Federalism' },
+    { q: 'Which type of federal grant gives states the MOST flexibility in how to spend the money?', opts: ['Categorical grants', 'Block grants', 'Unfunded mandates', 'Revenue sharing'], ans: 1, unit: 1, topic: 'Fiscal Federalism' },
+    { q: 'The filibuster is a Senate procedure that:', opts: ['Forces an immediate vote on legislation', 'Allows unlimited debate to delay or block a vote', 'Removes a senator from office', 'Overrides a presidential veto'], ans: 1, unit: 2, topic: 'Congress' },
+    { q: 'An executive order differs from a law passed by Congress because it:', opts: ['Must be approved by the Senate', 'Does not require congressional approval', 'Must be signed by the Chief Justice', 'Requires a two-thirds majority vote'], ans: 1, unit: 2, topic: 'The Presidency' },
+    { q: 'Judicial review — the power to strike down unconstitutional laws — was established in:', opts: ['The Constitution\'s Article III', 'Marbury v. Madison (1803)', 'McCulloch v. Maryland (1819)', 'Federalist No. 78'], ans: 1, unit: 2, topic: 'Judicial Review' },
+    { q: 'The "iron triangle" refers to the relationship between:', opts: ['The President, Senate, and House', 'A congressional committee, federal agency, and interest group', 'Federal, state, and local governments', 'The courts, Congress, and the executive'], ans: 1, unit: 2, topic: 'The Bureaucracy' },
+    { q: 'Which Supreme Court case established that the exclusionary rule applies to state courts?', opts: ['Miranda v. Arizona', 'Gideon v. Wainwright', 'Mapp v. Ohio', 'Tinker v. Des Moines'], ans: 2, unit: 3, topic: 'Rights of the Accused' },
+    { q: 'The "clear and present danger" test was established in:', opts: ['Tinker v. Des Moines', 'New York Times v. United States', 'Schenck v. United States', 'Engel v. Vitale'], ans: 2, unit: 3, topic: 'First Amendment' },
+    { q: 'Selective incorporation means:', opts: ['Congress selects which states must follow federal law', 'The Supreme Court applies Bill of Rights protections to states case by case', 'Only citizens can claim constitutional rights', 'The president selects which laws to enforce'], ans: 1, unit: 3, topic: 'Selective Incorporation' },
+    { q: 'Which standard of review does the Supreme Court use for laws that discriminate based on race?', opts: ['Rational basis test', 'Intermediate scrutiny', 'Strict scrutiny', 'Clear and present danger'], ans: 2, unit: 3, topic: 'Equal Protection' },
+    { q: 'Political socialization refers to:', opts: ['The process of running for political office', 'How individuals develop their political values and beliefs', 'The way politicians socialize with voters', 'Mandatory civics education in schools'], ans: 1, unit: 4, topic: 'Political Socialization' },
+    { q: 'A "push poll" is:', opts: ['A survey that measures genuine public opinion', 'Biased political information presented as a poll to influence views', 'An exit poll conducted after voting', 'A tracking poll used throughout a campaign'], ans: 1, unit: 4, topic: 'Public Opinion & Polling' },
+    { q: 'Keynesian economics holds that during a recession, the government should:', opts: ['Cut spending and raise taxes to balance the budget', 'Increase spending and/or cut taxes to stimulate demand', 'Do nothing and let markets self-correct', 'Raise interest rates to reduce inflation'], ans: 1, unit: 4, topic: 'Economic Ideology' },
+    { q: 'Which Supreme Court case ruled that corporations and unions can spend unlimited money on elections?', opts: ['Shaw v. Reno', 'Baker v. Carr', 'Citizens United v. FEC', 'Buckley v. Valeo'], ans: 2, unit: 5, topic: 'Campaign Finance' },
+    { q: 'The Electoral College uses a winner-take-all system in most states, which means:', opts: ['The candidate with the most popular votes wins all electoral votes in that state', 'Electoral votes are split proportionally among candidates', 'The legislature selects electors', 'Third-party candidates receive electoral votes proportionally'], ans: 0, unit: 5, topic: 'Electoral College' },
+    { q: 'Agenda setting refers to the media\'s ability to:', opts: ['Write legislation for Congress', 'Determine which issues the public thinks are most important', 'Endorse political candidates', 'Control how politicians vote'], ans: 1, unit: 5, topic: 'Media & Politics' },
+    { q: '"Stare decisis" is a legal principle that means:', opts: ['Courts have jurisdiction over interstate disputes', 'Judges must follow precedent from prior cases', 'The Supreme Court has nine justices', 'Lower courts must defer to Congress'], ans: 1, unit: 2, topic: 'The Federal Courts' },
+    { q: 'Brutus No. 1 opposed ratification of the Constitution primarily because:', opts: ['It created a weak national government', 'The national government would become too powerful and consume the states', 'The Bill of Rights was not strong enough', 'Congress had too little power over the President'], ans: 1, unit: 1, topic: 'Anti-Federalist Arguments' }
+  ];
+
+  var diagState = { questions: [], index: 0, score: 0, unitScores: {}, answered: false, selectedUnits: ['all'] };
+
+  function diagToggleUnit(el) {
+    var unit = el.dataset.unit;
+    if (unit === 'all') {
+      diagState.selectedUnits = ['all'];
+      document.querySelectorAll('.diag-unit-pill').forEach(function(p) { p.classList.remove('selected'); });
+      el.classList.add('selected');
+    } else {
+      var allPill = document.querySelector('.diag-unit-pill[data-unit="all"]');
+      if (diagState.selectedUnits.includes('all')) {
+        diagState.selectedUnits = [];
+        if (allPill) allPill.classList.remove('selected');
+      }
+      if (diagState.selectedUnits.includes(unit)) {
+        diagState.selectedUnits = diagState.selectedUnits.filter(function(u) { return u !== unit; });
+        el.classList.remove('selected');
+      } else {
+        diagState.selectedUnits.push(unit);
+        el.classList.add('selected');
+      }
+      if (diagState.selectedUnits.length === 0) {
+        diagState.selectedUnits = ['all'];
+        if (allPill) allPill.classList.add('selected');
+      }
+    }
+  }
+
+  function startDiagnostic() {
+    var pool = diagState.selectedUnits.includes('all')
+      ? DIAG_QUESTIONS
+      : DIAG_QUESTIONS.filter(function(q) { return diagState.selectedUnits.includes(String(q.unit)); });
+
+    if (pool.length < 5) { alert('Please select at least one unit with enough questions.'); return; }
+
+    // Shuffle and take up to 20
+    var shuffled = pool.slice();
+    for (var i = shuffled.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = shuffled[i]; shuffled[i] = shuffled[j]; shuffled[j] = tmp;
+    }
+    diagState.questions = shuffled.slice(0, Math.min(20, shuffled.length));
+    diagState.index = 0;
+    diagState.score = 0;
+    diagState.unitScores = {};
+    diagState.answered = false;
+
+    document.getElementById('diag-start').style.display = 'none';
+    document.getElementById('diag-results').classList.remove('show');
+    document.getElementById('diag-q-card').classList.add('show');
+    diagShowQuestion();
+  }
+
+  function diagShowQuestion() {
+    var q = diagState.questions[diagState.index];
+    var total = diagState.questions.length;
+    var pct = (diagState.index / total * 100).toFixed(0);
+    document.getElementById('diag-progress-fill').style.width = pct + '%';
+    document.getElementById('diag-q-meta').textContent = 'Question ' + (diagState.index + 1) + ' of ' + total;
+    document.getElementById('diag-q-unit-tag').textContent = 'Unit ' + q.unit + ' · ' + q.topic;
+    document.getElementById('diag-question').textContent = q.q;
+    diagState.answered = false;
+
+    var optionsEl = document.getElementById('diag-options');
+    optionsEl.innerHTML = q.opts.map(function(opt, i) {
+      return '<button class="diag-option" onclick="diagAnswer(this,' + i + ')">' + opt + '</button>';
+    }).join('');
+
+    var fb = document.getElementById('diag-feedback');
+    fb.className = 'diag-feedback';
+    fb.textContent = '';
+    var nextBtn = document.getElementById('diag-next-btn');
+    nextBtn.className = 'diag-next-btn';
+    nextBtn.textContent = diagState.index < diagState.questions.length - 1 ? 'Next Question →' : 'See Results →';
+  }
+
+  function diagAnswer(btn, chosen) {
+    if (diagState.answered) return;
+    diagState.answered = true;
+    var q = diagState.questions[diagState.index];
+    var correct = chosen === q.ans;
+    if (correct) diagState.score++;
+
+    var unit = String(q.unit);
+    if (!diagState.unitScores[unit]) diagState.unitScores[unit] = { correct: 0, total: 0 };
+    diagState.unitScores[unit].total++;
+    if (correct) diagState.unitScores[unit].correct++;
+
+    document.querySelectorAll('.diag-option').forEach(function(b, i) {
+      b.disabled = true;
+      if (i === q.ans) b.classList.add('correct');
+      else if (b === btn && !correct) b.classList.add('wrong');
+    });
+
+    var fb = document.getElementById('diag-feedback');
+    fb.className = 'diag-feedback show ' + (correct ? 'correct' : 'wrong');
+    fb.textContent = correct
+      ? '✓ Correct! ' + q.topic
+      : '✗ The correct answer is: ' + q.opts[q.ans] + ' (' + q.topic + ')';
+
+    document.getElementById('diag-next-btn').className = 'diag-next-btn show';
+  }
+
+  function diagNext() {
+    diagState.index++;
+    if (diagState.index >= diagState.questions.length) {
+      diagShowResults();
+    } else {
+      diagShowQuestion();
+    }
+  }
+
+  function diagShowResults() {
+    document.getElementById('diag-q-card').classList.remove('show');
+    var results = document.getElementById('diag-results');
+    results.classList.add('show');
+
+    var total = diagState.questions.length;
+    var score = diagState.score;
+    var pct = Math.round(score / total * 100);
+
+    document.getElementById('diag-score-big').textContent = score + '/' + total;
+    var msg = pct >= 80 ? '🎉 Excellent — you know this material!' :
+              pct >= 65 ? '👍 Good work — review the units below.' :
+              pct >= 50 ? '📚 Keep studying — focus on your weak spots.' :
+              '🔄 More review needed — use the flashcards and glossary.';
+    document.getElementById('diag-score-msg').textContent = msg;
+
+    // Unit breakdown
+    var rows = '';
+    var weakUnits = [];
+    [1,2,3,4,5].forEach(function(u) {
+      var s = diagState.unitScores[String(u)];
+      if (!s) return;
+      var upct = Math.round(s.correct / s.total * 100);
+      var color = upct >= 80 ? '#22c55e' : upct >= 60 ? '#f59e0b' : '#ef4444';
+      if (upct < 70) weakUnits.push('Unit ' + u + ' (' + upct + '%)');
+      rows += '<div class="diag-unit-row">' +
+        '<div class="diag-unit-name">Unit ' + u + '</div>' +
+        '<div class="diag-unit-bar"><div class="diag-unit-fill" style="width:' + upct + '%;background:' + color + '"></div></div>' +
+        '<div class="diag-unit-pct" style="color:' + color + '">' + upct + '%</div>' +
+        '</div>';
+    });
+    document.getElementById('diag-breakdown-rows').innerHTML = rows || '<p style="color:var(--gray-400);font-size:13px;">Take more questions to see unit breakdown.</p>';
+
+    var focusBox = document.getElementById('diag-focus-box');
+    var focusList = document.getElementById('diag-focus-list');
+    if (weakUnits.length > 0) {
+      focusList.textContent = 'Focus on: ' + weakUnits.join(', ') + ' — use the Glossary flashcards and review the Living Documents for these units.';
+      focusBox.style.display = '';
+    } else {
+      focusBox.style.display = 'none';
+    }
+  }
+
+  function resetDiagnostic() {
+    document.getElementById('diag-results').classList.remove('show');
+    document.getElementById('diag-q-card').classList.remove('show');
+    document.getElementById('diag-start').style.display = '';
+  }
+
+  function diagGoToGlossary() {
+    document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
+    var glossTab = document.querySelector('.nav-tab[data-tab="glossary"]');
+    if (glossTab) glossTab.classList.add('active');
+    TAB_IDS.forEach(function(id) {
+      var el = document.getElementById('tab-' + id);
+      if (el) { el.style.display = (id === 'glossary') ? '' : 'none'; el.classList.toggle('active', id === 'glossary'); }
+    });
+    buildGlossary && buildGlossary();
+  }
+
+  // ══════════════════════════════════════════════════════════
+  //  STUMP THE CLASS ENGINE
+  // ══════════════════════════════════════════════════════════
+  var stumpState = {
+    deck: [], index: 0,
+    got: 0, missed: 0,
+    timerInterval: null, timeLeft: 30,
+    phase: 'idle' // idle, question, revealed, scored
+  };
+
+  function stumpStart() {
+    // Shuffle SCOTUS_CASES
+    stumpState.deck = SCOTUS_CASES.slice();
+    for (var i = stumpState.deck.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var tmp = stumpState.deck[i]; stumpState.deck[i] = stumpState.deck[j]; stumpState.deck[j] = tmp;
+    }
+    stumpState.index = 0;
+    stumpState.got = 0;
+    stumpState.missed = 0;
+    stumpUpdateScore();
+    stumpShowCase();
+  }
+
+  function stumpShowCase() {
+    var c = stumpState.deck[stumpState.index];
+    if (!c) return;
+    stumpState.phase = 'question';
+
+    document.getElementById('stump-reveal-card').classList.remove('show');
+    document.getElementById('stump-mode-badge').textContent = 'CASE ' + (stumpState.index + 1) + ' OF ' + stumpState.deck.length;
+    document.getElementById('stump-case-display').textContent = c.year;
+    document.getElementById('stump-year-display').textContent = 'Unit ' + c.unit + ' · ' + (c.topic || '');
+    document.getElementById('stump-issue-display').textContent = c.issue;
+
+    // Buttons
+    document.getElementById('stump-start-btn').style.display = 'none';
+    document.getElementById('stump-reveal-btn').style.display = '';
+    document.getElementById('stump-got-btn').style.display = 'none';
+    document.getElementById('stump-missed-btn').style.display = 'none';
+    document.getElementById('stump-next-btn').style.display = 'none';
+
+    // Start timer
+    stumpState.timeLeft = 30;
+    document.getElementById('stump-timer-wrap').style.display = '';
+    stumpUpdateTimer();
+    clearInterval(stumpState.timerInterval);
+    stumpState.timerInterval = setInterval(function() {
+      stumpState.timeLeft--;
+      stumpUpdateTimer();
+      if (stumpState.timeLeft <= 0) {
+        clearInterval(stumpState.timerInterval);
+        stumpReveal();
+      }
+    }, 1000);
+  }
+
+  function stumpUpdateTimer() {
+    var t = stumpState.timeLeft;
+    var circumference = 220;
+    var offset = circumference - (t / 30) * circumference;
+    var circle = document.getElementById('stump-timer-circle');
+    var numEl = document.getElementById('stump-timer-num');
+    if (circle) circle.style.strokeDashoffset = offset;
+    if (numEl) numEl.textContent = t;
+    if (circle) circle.style.stroke = t <= 10 ? '#ef4444' : t <= 20 ? '#f59e0b' : '#c8922a';
+  }
+
+  function stumpReveal() {
+    clearInterval(stumpState.timerInterval);
+    stumpState.phase = 'revealed';
+    var c = stumpState.deck[stumpState.index];
+
+    document.getElementById('stump-case-display').textContent = c.name;
+    document.getElementById('stump-reveal-name').textContent = c.name + ' (' + c.year + ')';
+    document.getElementById('stump-reveal-ruling').textContent = c.ruling;
+    document.getElementById('stump-reveal-sig').textContent = c.sig;
+    document.getElementById('stump-reveal-card').classList.add('show');
+
+    document.getElementById('stump-reveal-btn').style.display = 'none';
+    document.getElementById('stump-got-btn').style.display = '';
+    document.getElementById('stump-missed-btn').style.display = '';
+  }
+
+  function stumpScore(got) {
+    if (got) stumpState.got++; else stumpState.missed++;
+    stumpUpdateScore();
+    stumpState.phase = 'scored';
+    document.getElementById('stump-got-btn').style.display = 'none';
+    document.getElementById('stump-missed-btn').style.display = 'none';
+    document.getElementById('stump-next-btn').style.display = '';
+    if (stumpState.index >= stumpState.deck.length - 1) {
+      document.getElementById('stump-next-btn').textContent = 'Play Again';
+    }
+  }
+
+  function stumpNext() {
+    stumpState.index++;
+    if (stumpState.index >= stumpState.deck.length) {
+      stumpStart();
+    } else {
+      stumpShowCase();
+    }
+    document.getElementById('stump-next-btn').style.display = 'none';
+  }
+
+  function stumpUpdateScore() {
+    var total = stumpState.got + stumpState.missed;
+    var max = Math.max(total, 1);
+    document.getElementById('stump-got-num').textContent = stumpState.got;
+    document.getElementById('stump-missed-num').textContent = stumpState.missed;
+    document.getElementById('stump-got-bar').style.width = (stumpState.got / max * 100) + '%';
+    document.getElementById('stump-missed-bar').style.width = (stumpState.missed / max * 100) + '%';
+    document.getElementById('stump-round-info').textContent = 'Cases played: ' + total + ' of ' + (stumpState.deck.length || SCOTUS_CASES.length);
+  }
+
+  function stumpResetScore() {
+    stumpState.got = 0; stumpState.missed = 0;
+    stumpUpdateScore();
+  }
+
 
   // ══════════════════════════════════════════════════════════
   //  BOOT
