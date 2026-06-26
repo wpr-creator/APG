@@ -1807,6 +1807,208 @@
     }
     .diag-retry-btn.primary { background: var(--navy); color: white; }
     .diag-retry-btn.secondary { background: white; color: var(--navy); border: 1px solid var(--navy); }
+
+    /* ══ FRQ PRACTICE MODE ══ */
+    .frq-practice-wrap {
+      display: none; margin-top: 0;
+    }
+    .frq-practice-wrap.visible { display: block; }
+
+    /* Prompt selector */
+    .frq-prompt-selector {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark); overflow: hidden;
+      margin-bottom: 0;
+    }
+    .frq-selector-head {
+      background: var(--navy-dark); padding: 16px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .frq-selector-head-left {}
+    .frq-selector-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
+    }
+    .frq-selector-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 700; color: white;
+    }
+    .frq-selector-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .frq-type-select-btn {
+      padding: 7px 14px; border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.2);
+      background: transparent; color: rgba(255,255,255,0.6);
+      font-size: 11px; font-weight: 700; cursor: pointer;
+      transition: all 0.15s; white-space: nowrap;
+    }
+    .frq-type-select-btn:hover { background: rgba(255,255,255,0.1); color: white; }
+    .frq-type-select-btn.active {
+      background: var(--crimson); border-color: var(--crimson); color: white;
+    }
+    .frq-prompt-list {
+      padding: 12px; display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 8px;
+    }
+    .frq-prompt-card {
+      padding: 12px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: var(--gray-50);
+      cursor: pointer; transition: border-color 0.15s, background 0.15s;
+    }
+    .frq-prompt-card:hover { border-color: var(--navy); background: var(--cream); }
+    .frq-prompt-card-unit {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--crimson); margin-bottom: 4px;
+    }
+    .frq-prompt-card-text {
+      font-size: 12px; line-height: 1.5; color: var(--navy); font-weight: 600;
+    }
+    .frq-prompt-card-type {
+      font-size: 10px; color: var(--gray-400); margin-top: 4px;
+    }
+    .frq-random-btn {
+      display: flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border-radius: var(--radius-sm);
+      background: var(--navy-xlight); color: var(--navy);
+      border: 1px solid var(--navy-xlight); font-size: 12px;
+      font-weight: 700; cursor: pointer; margin: 0 12px 12px;
+      transition: background 0.15s;
+    }
+    .frq-random-btn:hover { background: #dde5f5; }
+
+    /* Practice screen */
+    .frq-practice-screen {
+      display: none;
+    }
+    .frq-practice-screen.visible { display: block; }
+    .frq-practice-header {
+      background: var(--navy-dark); border-radius: var(--radius) var(--radius) 0 0;
+      padding: 14px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .frq-practice-header-left {}
+    .frq-practice-type-badge {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 2px;
+    }
+    .frq-practice-title {
+      font-size: 14px; font-weight: 700; color: white;
+    }
+    .frq-practice-header-right { display: flex; align-items: center; gap: 10px; }
+    .frq-practice-clock {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 28px; font-weight: 700; color: white;
+      letter-spacing: 0.04em;
+    }
+    .frq-practice-clock.warning { color: #fca5a5; }
+    .frq-practice-ctrl-btn {
+      padding: 6px 14px; border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,0.25);
+      background: transparent; color: white;
+      font-size: 11px; font-weight: 700; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .frq-practice-ctrl-btn:hover { background: rgba(255,255,255,0.12); }
+    .frq-practice-body {
+      display: grid; grid-template-columns: 1fr 280px;
+      border: 1px solid var(--navy); border-top: none;
+      border-radius: 0 0 var(--radius) var(--radius);
+      overflow: hidden; background: white;
+    }
+    .frq-practice-left { padding: 20px; border-right: 1px solid var(--cream-dark); }
+    .frq-prompt-display {
+      font-size: 13px; line-height: 1.7; color: var(--text);
+      margin-bottom: 14px;
+    }
+    .frq-chart-area {
+      margin-bottom: 14px; background: var(--gray-50);
+      border-radius: var(--radius-sm); border: 1px solid var(--cream-dark);
+      padding: 12px; display: none;
+    }
+    .frq-chart-area.visible { display: block; }
+    .frq-chart-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--gray-500); margin-bottom: 10px;
+      text-align: center;
+    }
+    .frq-response-area {
+      width: 100%; min-height: 280px; padding: 12px;
+      border: 1px solid var(--cream-dark); border-radius: var(--radius-sm);
+      font-family: 'Source Sans 3', sans-serif; font-size: 13px;
+      line-height: 1.7; color: var(--text); resize: vertical;
+      box-sizing: border-box;
+    }
+    .frq-response-area:focus { outline: none; border-color: var(--navy); }
+    .frq-word-count {
+      font-size: 11px; color: var(--gray-400); margin-top: 4px; text-align: right;
+    }
+    .frq-practice-right { padding: 16px; background: var(--gray-50); }
+    .frq-side-checklist-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 10px;
+    }
+    .frq-side-pts {
+      display: flex; align-items: center; gap: 6px; margin-bottom: 12px;
+    }
+    .frq-side-pts-badge {
+      font-size: 11px; font-weight: 700; background: var(--crimson);
+      color: white; padding: 2px 10px; border-radius: 99px;
+    }
+    .frq-side-pts-label { font-size: 11px; color: var(--gray-500); }
+    .frq-side-check-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 7px 0; border-bottom: 1px solid var(--gray-200);
+      cursor: pointer;
+    }
+    .frq-side-check-item:last-of-type { border-bottom: none; }
+    .frq-side-check-box {
+      width: 16px; height: 16px; border-radius: 3px;
+      border: 2px solid var(--cream-dark); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 2px; transition: background 0.15s;
+    }
+    .frq-side-check-item.checked .frq-side-check-box {
+      background: #22c55e; border-color: #22c55e;
+    }
+    .frq-side-check-item.checked .frq-side-check-box::after {
+      content: '✓'; color: white; font-size: 10px; font-weight: 700;
+    }
+    .frq-side-check-text {
+      font-size: 11px; line-height: 1.5; color: var(--gray-700);
+    }
+    .frq-side-check-item.checked .frq-side-check-text {
+      text-decoration: line-through; color: var(--gray-400);
+    }
+    .frq-practice-footer {
+      display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap;
+    }
+    .frq-practice-action-btn {
+      padding: 8px 16px; border-radius: var(--radius-sm);
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: opacity 0.15s; display: flex; align-items: center; gap: 5px;
+    }
+    .frq-practice-action-btn.back {
+      background: white; color: var(--navy);
+      border: 1px solid var(--navy);
+    }
+    .frq-practice-action-btn.copy {
+      background: var(--navy-xlight); color: var(--navy); border: none;
+    }
+    .frq-practice-action-btn.print {
+      background: var(--navy); color: white; border: none;
+    }
+    .frq-practice-action-btn.ai {
+      background: var(--gray-200); color: var(--gray-400);
+      border: none; cursor: not-allowed;
+    }
+    .frq-practice-action-btn:hover:not(.ai) { opacity: 0.85; }
+
+    @media (max-width: 760px) {
+      .frq-practice-body { grid-template-columns: 1fr; }
+      .frq-practice-right { border-top: 1px solid var(--cream-dark); border-right: none; }
+    }
   </style>
 </head>
 <body>
@@ -1819,11 +2021,11 @@
         <div class="header-seal"><i class="ti ti-building-community" aria-hidden="true"></i></div>
         <div class="header-text">
           <h1>Mr. Rogers — AP Government &amp; Politics</h1>
-          <p>San Diego · Advanced Placement · College Board</p>
+          <p>O'Farrell High School · Advanced Placement · College Board</p>
         </div>
       </div>
       <div class="header-right">
-        <span class="header-year" id="header-date">2025–26</span>
+        <span class="header-year" id="header-date">2026–27</span>
       </div>
     </div>
   </header>
@@ -2041,29 +2243,72 @@
         </div>
       </div>
 
-      <!-- ── FRQ TIMER ── -->
+      <!-- ── FRQ PRACTICE ── -->
       <div id="frq-timer-section">
-        <div class="frq-timer-card">
-          <div class="frq-timer-head">
-            <i class="ti ti-clock"></i>
-            <h3>FRQ Practice Timer</h3>
-          </div>
-          <div class="frq-type-btns" id="frq-type-btns"></div>
-          <div class="frq-timer-body">
-            <div class="frq-timer-display">
-              <div class="frq-clock" id="frq-clock">25:00</div>
-              <div class="frq-timer-controls">
-                <button class="frq-ctrl-btn start" id="frq-start-btn" onclick="frqTimerToggle()">Start</button>
-                <button class="frq-ctrl-btn" onclick="frqTimerReset()">Reset</button>
+
+        <!-- Prompt selector view -->
+        <div class="frq-practice-wrap visible" id="frq-selector-view">
+          <div class="frq-prompt-selector">
+            <div class="frq-selector-head">
+              <div class="frq-selector-head-left">
+                <div class="frq-selector-label">FRQ Practice</div>
+                <div class="frq-selector-title">Choose a Prompt to Practice</div>
               </div>
+              <div class="frq-selector-btns" id="frq-type-filter-btns"></div>
             </div>
-            <div class="frq-pts-row">
-              <span class="frq-pts-badge" id="frq-pts-badge">6 pts</span>
-              <span class="frq-pts-label" id="frq-pts-label">Argumentative Essay</span>
-            </div>
-            <div class="frq-checklist" id="frq-checklist"></div>
+            <button class="frq-random-btn" onclick="frqLaunchRandom()">
+              <i class="ti ti-shuffle"></i> Random Prompt
+            </button>
+            <div class="frq-prompt-list" id="frq-prompt-list"></div>
           </div>
         </div>
+
+        <!-- Practice screen view -->
+        <div class="frq-practice-screen" id="frq-practice-view">
+          <div class="frq-practice-header">
+            <div class="frq-practice-header-left">
+              <div class="frq-practice-type-badge" id="frq-practice-type-badge">CONCEPT APPLICATION · 3 PTS</div>
+              <div class="frq-practice-title" id="frq-practice-title">Unit 2 · Congress</div>
+            </div>
+            <div class="frq-practice-header-right">
+              <div class="frq-practice-clock" id="frq-practice-clock">10:00</div>
+              <button class="frq-practice-ctrl-btn" id="frq-practice-start-btn" onclick="frqPracticeToggle()">Start</button>
+              <button class="frq-practice-ctrl-btn" onclick="frqPracticeReset()">Reset</button>
+            </div>
+          </div>
+          <div class="frq-practice-body">
+            <div class="frq-practice-left">
+              <div class="frq-chart-area" id="frq-chart-area">
+                <div class="frq-chart-title" id="frq-chart-title"></div>
+                <div id="frq-chart-svg"></div>
+              </div>
+              <div class="frq-prompt-display" id="frq-prompt-display"></div>
+              <textarea class="frq-response-area" id="frq-response-area"
+                placeholder="Write your response here..."></textarea>
+              <div class="frq-word-count" id="frq-word-count">0 words</div>
+              <div class="frq-practice-footer">
+                <button class="frq-practice-action-btn back" onclick="frqBackToSelector()">
+                  <i class="ti ti-arrow-left"></i> Back
+                </button>
+                <button class="frq-practice-action-btn copy" onclick="frqCopyResponse()">
+                  <i class="ti ti-clipboard"></i> Copy Response
+                </button>
+                <button class="frq-practice-action-btn print" onclick="frqPrintResponse()">
+                  <i class="ti ti-printer"></i> Print
+                </button>
+                <button class="frq-practice-action-btn ai" title="Coming soon — requires API key">
+                  <i class="ti ti-robot"></i> Score with AI (Coming Soon)
+                </button>
+              </div>
+            </div>
+            <div class="frq-practice-right">
+              <div class="frq-side-pts" id="frq-side-pts"></div>
+              <div class="frq-side-checklist-title">Scoring Checklist</div>
+              <div id="frq-side-checklist"></div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
@@ -4742,9 +4987,7 @@
 
   // Build FRQ timer when review tab is opened
   var frqTimerBuilt = false;
-  document.querySelector('.nav-tab[data-tab="review"]').addEventListener('click', function() {
-    if (!frqTimerBuilt) { setTimeout(buildFrqTimerUI, 50); frqTimerBuilt = true; }
-  });
+  // FRQ timer UI now handled by frqPracticeBuilt listener below
 
 
   // ══════════════════════════════════════════════════════════
@@ -5741,6 +5984,675 @@
     stumpState.got = 0; stumpState.missed = 0;
     stumpUpdateScore();
   }
+
+
+  // ══════════════════════════════════════════════════════════
+  //  FRQ PRACTICE ENGINE
+  // ══════════════════════════════════════════════════════════
+
+  // ── SVG Charts for Quantitative Analysis ──
+  var FRQ_CHARTS = {
+    approval_ratings: {
+      title: 'Figure 1: Presidential Approval Ratings Over Time',
+      svg: `<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;">
+        <style>.axis{font:10px sans-serif;fill:#666}.label{font:11px sans-serif;fill:#333;font-weight:600}.bar-label{font:10px sans-serif;fill:#fff;font-weight:700}</style>
+        <!-- Y axis -->
+        <line x1="60" y1="10" x2="60" y2="160" stroke="#ccc" stroke-width="1"/>
+        <!-- X axis -->
+        <line x1="60" y1="160" x2="460" y2="160" stroke="#ccc" stroke-width="1"/>
+        <!-- Y gridlines & labels -->
+        <text x="52" y="163" class="axis" text-anchor="end">0%</text>
+        <line x1="60" y1="160" x2="460" y2="160" stroke="#eee"/>
+        <text x="52" y="123" class="axis" text-anchor="end">25%</text>
+        <line x1="60" y1="120" x2="460" y2="120" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="83" class="axis" text-anchor="end">50%</text>
+        <line x1="60" y1="80" x2="460" y2="80" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="43" class="axis" text-anchor="end">75%</text>
+        <line x1="60" y1="40" x2="460" y2="40" stroke="#eee" stroke-dasharray="3"/>
+        <!-- Bars: Years 1-5, approval 62,54,48,42,38 -->
+        <rect x="80" y="41" width="50" height="119" fill="#1a2e5a" rx="2"/>
+        <text x="105" y="55" class="bar-label" text-anchor="middle">62%</text>
+        <text x="105" y="176" class="axis" text-anchor="middle">Year 1</text>
+        <rect x="160" y="73" width="50" height="87" fill="#1a2e5a" rx="2"/>
+        <text x="185" y="87" class="bar-label" text-anchor="middle">54%</text>
+        <text x="185" y="176" class="axis" text-anchor="middle">Year 2</text>
+        <rect x="240" y="97" width="50" height="63" fill="#1a2e5a" rx="2"/>
+        <text x="265" y="111" class="bar-label" text-anchor="middle">48%</text>
+        <text x="265" y="176" class="axis" text-anchor="middle">Year 3</text>
+        <rect x="320" y="113" width="50" height="47" fill="#B22234" rx="2"/>
+        <text x="345" y="127" class="bar-label" text-anchor="middle">42%</text>
+        <text x="345" y="176" class="axis" text-anchor="middle">Year 4</text>
+        <rect x="400" y="129" width="50" height="31" fill="#B22234" rx="2"/>
+        <text x="425" y="143" class="bar-label" text-anchor="middle">38%</text>
+        <text x="425" y="176" class="axis" text-anchor="middle">Year 5</text>
+        <text x="260" y="196" class="label" text-anchor="middle">Source: Gallup Poll, 2026 (Hypothetical)</text>
+      </svg>`
+    },
+    voter_turnout: {
+      title: 'Figure 1: Voter Turnout by Age Group — 2024 Presidential Election',
+      svg: `<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;">
+        <style>.axis{font:10px sans-serif;fill:#666}.label{font:11px sans-serif;fill:#333;font-weight:600}</style>
+        <line x1="110" y1="10" x2="110" y2="170" stroke="#ccc" stroke-width="1"/>
+        <line x1="110" y1="170" x2="460" y2="170" stroke="#ccc" stroke-width="1"/>
+        <!-- Horizontal bars by age group -->
+        <!-- 18-29: 48% -->
+        <text x="105" y="35" class="axis" text-anchor="end">18–29</text>
+        <rect x="112" y="22" width="163" height="22" fill="#1a2e5a" rx="2"/>
+        <text x="280" y="37" style="font:10px sans-serif;fill:#333;font-weight:700">48%</text>
+        <!-- 30-44: 59% -->
+        <text x="105" y="75" class="axis" text-anchor="end">30–44</text>
+        <rect x="112" y="62" width="200" height="22" fill="#1a2e5a" rx="2"/>
+        <text x="317" y="77" style="font:10px sans-serif;fill:#333;font-weight:700">59%</text>
+        <!-- 45-59: 68% -->
+        <text x="105" y="115" class="axis" text-anchor="end">45–59</text>
+        <rect x="112" y="102" width="231" height="22" fill="#1a2e5a" rx="2"/>
+        <text x="348" y="117" style="font:10px sans-serif;fill:#333;font-weight:700">68%</text>
+        <!-- 60+: 74% -->
+        <text x="105" y="155" class="axis" text-anchor="end">60+</text>
+        <rect x="112" y="142" width="251" height="22" fill="#B22234" rx="2"/>
+        <text x="368" y="157" style="font:10px sans-serif;fill:#333;font-weight:700">74%</text>
+        <!-- X axis labels -->
+        <text x="112" y="188" class="axis">0%</text>
+        <text x="197" y="188" class="axis">25%</text>
+        <text x="282" y="188" class="axis">50%</text>
+        <text x="367" y="188" class="axis">75%</text>
+        <text x="260" y="208" class="label" text-anchor="middle">Source: U.S. Census Bureau CPS, 2024 (Hypothetical)</text>
+      </svg>`
+    },
+    party_id: {
+      title: 'Figure 1: Party Identification Among Registered Voters',
+      svg: `<svg viewBox="0 0 320 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:320px;display:block;margin:0 auto;">
+        <style>.axis{font:11px sans-serif;fill:#333}.label{font:11px sans-serif;fill:#333;font-weight:600}</style>
+        <!-- Pie chart: Democrat 31%, Republican 29%, Independent 38%, Other 2% -->
+        <!-- Using pre-calculated arc paths -->
+        <!-- Independent (38%) top -->
+        <path d="M160,100 L160,20 A80,80 0 0,1 224,152 Z" fill="#888" opacity="0.85"/>
+        <!-- Democrat (31%) -->
+        <path d="M160,100 L224,152 A80,80 0 0,1 96,152 Z" fill="#1a2e5a"/>
+        <!-- Republican (29%) -->
+        <path d="M160,100 L96,152 A80,80 0 0,1 145,21 Z" fill="#B22234"/>
+        <!-- Other (2%) -->
+        <path d="M160,100 L145,21 A80,80 0 0,1 160,20 Z" fill="#c8922a"/>
+        <!-- Center circle for donut -->
+        <circle cx="160" cy="100" r="45" fill="white"/>
+        <text x="160" y="97" class="label" text-anchor="middle">Party</text>
+        <text x="160" y="112" class="label" text-anchor="middle">ID</text>
+        <!-- Legend -->
+        <rect x="10" y="155" width="12" height="12" fill="#888"/>
+        <text x="26" y="165" class="axis">Independent 38%</text>
+        <rect x="10" y="173" width="12" height="12" fill="#1a2e5a"/>
+        <text x="26" y="183" class="axis">Democrat 31%</text>
+        <rect x="175" y="155" width="12" height="12" fill="#B22234"/>
+        <text x="191" y="165" class="axis">Republican 29%</text>
+        <rect x="175" y="173" width="12" height="12" fill="#c8922a"/>
+        <text x="191" y="183" class="axis">Other 2%</text>
+        <text x="160" y="198" style="font:10px sans-serif;fill:#666" text-anchor="middle">Source: Pew Research, 2026 (Hypothetical)</text>
+      </svg>`
+    },
+    congress_approval: {
+      title: 'Figure 1: Congressional vs. Presidential Approval Ratings',
+      svg: `<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;">
+        <style>.axis{font:10px sans-serif;fill:#666}.label{font:11px sans-serif;fill:#333;font-weight:600}</style>
+        <line x1="60" y1="10" x2="60" y2="155" stroke="#ccc"/>
+        <line x1="60" y1="155" x2="460" y2="155" stroke="#ccc"/>
+        <!-- Gridlines -->
+        <line x1="60" y1="115" x2="460" y2="115" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="118" class="axis" text-anchor="end">25%</text>
+        <line x1="60" y1="75" x2="460" y2="75" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="78" class="axis" text-anchor="end">50%</text>
+        <line x1="60" y1="35" x2="460" y2="35" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="38" class="axis" text-anchor="end">75%</text>
+        <text x="52" y="158" class="axis" text-anchor="end">0%</text>
+        <!-- Presidential approval line: 62,58,54,50,48 -->
+        <polyline points="90,36 170,52 250,68 330,82 410,90" fill="none" stroke="#1a2e5a" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="90" cy="36" r="4" fill="#1a2e5a"/>
+        <circle cx="170" cy="52" r="4" fill="#1a2e5a"/>
+        <circle cx="250" cy="68" r="4" fill="#1a2e5a"/>
+        <circle cx="330" cy="82" r="4" fill="#1a2e5a"/>
+        <circle cx="410" cy="90" r="4" fill="#1a2e5a"/>
+        <!-- Congressional approval line: 22,20,18,19,17 -->
+        <polyline points="90,127 170,131 250,135 330,133 410,137" fill="none" stroke="#B22234" stroke-width="2.5" stroke-linejoin="round"/>
+        <circle cx="90" cy="127" r="4" fill="#B22234"/>
+        <circle cx="170" cy="131" r="4" fill="#B22234"/>
+        <circle cx="250" cy="135" r="4" fill="#B22234"/>
+        <circle cx="330" cy="133" r="4" fill="#B22234"/>
+        <circle cx="410" cy="137" r="4" fill="#B22234"/>
+        <!-- X labels -->
+        <text x="90" y="170" class="axis" text-anchor="middle">2022</text>
+        <text x="170" y="170" class="axis" text-anchor="middle">2023</text>
+        <text x="250" y="170" class="axis" text-anchor="middle">2024</text>
+        <text x="330" y="170" class="axis" text-anchor="middle">2025</text>
+        <text x="410" y="170" class="axis" text-anchor="middle">2026</text>
+        <!-- Legend -->
+        <rect x="130" y="182" width="14" height="3" fill="#1a2e5a"/>
+        <text x="148" y="187" class="axis">Presidential Approval</text>
+        <rect x="280" y="182" width="14" height="3" fill="#B22234"/>
+        <text x="298" y="187" class="axis">Congressional Approval</text>
+        <text x="260" y="198" class="label" text-anchor="middle">Source: Gallup, 2026 (Hypothetical)</text>
+      </svg>`
+    },
+    ideology: {
+      title: 'Figure 1: Self-Identified Political Ideology of Americans',
+      svg: `<svg viewBox="0 0 480 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;">
+        <style>.axis{font:10px sans-serif;fill:#666}.label{font:11px sans-serif;fill:#333;font-weight:600}.bar-label{font:10px sans-serif;fill:#fff;font-weight:700}</style>
+        <line x1="60" y1="10" x2="60" y2="155" stroke="#ccc"/>
+        <line x1="60" y1="155" x2="460" y2="155" stroke="#ccc"/>
+        <line x1="60" y1="75" x2="460" y2="75" stroke="#eee" stroke-dasharray="3"/>
+        <text x="52" y="78" class="axis" text-anchor="end">50%</text>
+        <text x="52" y="158" class="axis" text-anchor="end">0%</text>
+        <!-- Very Liberal 11%, Liberal 25%, Moderate 36%, Conservative 22%, Very Conservative 6% -->
+        <rect x="72" y="111" width="50" height="44" fill="#1a2e5a" rx="2"/>
+        <text x="97" y="135" class="bar-label" text-anchor="middle">11%</text>
+        <text x="97" y="170" class="axis" text-anchor="middle">Very Liberal</text>
+        <rect x="150" y="75" width="50" height="80" fill="#2a4e8a" rx="2"/>
+        <text x="175" y="120" class="bar-label" text-anchor="middle">25%</text>
+        <text x="175" y="170" class="axis" text-anchor="middle">Liberal</text>
+        <rect x="228" y="44" width="50" height="111" fill="#888" rx="2"/>
+        <text x="253" y="105" class="bar-label" text-anchor="middle">36%</text>
+        <text x="253" y="170" class="axis" text-anchor="middle">Moderate</text>
+        <rect x="306" y="86" width="50" height="69" fill="#B22234" rx="2"/>
+        <text x="331" y="126" class="bar-label" text-anchor="middle">22%</text>
+        <text x="331" y="170" class="axis" text-anchor="middle">Conservative</text>
+        <rect x="384" y="136" width="50" height="19" fill="#8B0000" rx="2"/>
+        <text x="409" y="150" class="bar-label" text-anchor="middle">6%</text>
+        <text x="409" y="170" class="axis" text-anchor="middle">Very Cons.</text>
+        <text x="260" y="190" class="label" text-anchor="middle">Source: Gallup Annual Ideology Survey, 2026 (Hypothetical)</text>
+      </svg>`
+    }
+  };
+
+  // ── FRQ Prompt Bank ──
+  var FRQ_PROMPTS = [
+    // ── CONCEPT APPLICATION (type 0) ──
+    {
+      type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+      unit: 2, unitLabel: 'Unit 2 · Congress',
+      title: 'Congressional Gridlock',
+      chart: null,
+      prompt: `Read the following scenario and answer parts A, B, and C.
+
+The Senate is considering a major immigration reform bill that has already passed the House with bipartisan support. However, a group of senators has threatened to use procedural tactics to prevent the bill from coming to a vote. The Senate Majority Leader is searching for a way to force the bill to a final vote before the session ends.
+
+A. Describe the Senate procedural tactic that senators could use to block the bill from reaching a final vote.
+
+B. Explain ONE constitutional or procedural mechanism the Senate Majority Leader could use to overcome this tactic.
+
+C. Explain how this scenario illustrates the tension between majority rule and minority rights in the United States Senate.`
+    },
+    {
+      type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+      unit: 1, unitLabel: 'Unit 1 · Federalism',
+      title: 'Unfunded Mandates',
+      chart: null,
+      prompt: `Read the following scenario and answer parts A, B, and C.
+
+Congress passes a new law requiring all states to implement specific water quality standards within two years. The law includes detailed regulations but provides no additional federal funding for states to meet the requirements. Several state governors have publicly criticized the law, calling it an overreach of federal power.
+
+A. Define the term "unfunded mandate" and explain how it applies to the scenario above.
+
+B. Describe ONE argument a supporter of the law might make using the Supremacy Clause to defend federal authority.
+
+C. Explain how this scenario reflects the ongoing tension between national and state power in the American federal system.`
+    },
+    {
+      type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+      unit: 3, unitLabel: 'Unit 3 · Civil Liberties',
+      title: 'Student Speech Online',
+      chart: null,
+      prompt: `Read the following scenario and answer parts A, B, and C.
+
+A high school student posts a video on social media, filmed from home on a weekend, mocking and threatening school administrators. School officials suspend the student for violating the school's anti-harassment policy. The student and her parents argue the school violated her First Amendment rights since the speech occurred off-campus.
+
+A. Identify the constitutional clause at issue in this scenario.
+
+B. Using the precedent established in Tinker v. Des Moines (1969), explain what standard courts would use to evaluate whether the school's actions were constitutional.
+
+C. Explain ONE argument the student could make AND one argument the school could make using constitutional reasoning.`
+    },
+    {
+      type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+      unit: 2, unitLabel: 'Unit 2 · The Presidency',
+      title: 'Executive Orders',
+      chart: null,
+      prompt: `Read the following scenario and answer parts A, B, and C.
+
+Shortly after taking office, the President issues an executive order directing all federal agencies to immediately halt implementation of an immigration policy from the previous administration. Members of Congress from the opposing party argue that the President is overstepping executive authority and that the action requires congressional approval.
+
+A. Define "executive order" and explain why the President might choose this method over seeking legislation from Congress.
+
+B. Describe ONE formal power Congress has to check or respond to this executive action.
+
+C. Explain how the use of executive orders reflects the informal powers of the presidency as described in the concept of the "bully pulpit" and going public.`
+    },
+    {
+      type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+      unit: 5, unitLabel: 'Unit 5 · Interest Groups',
+      title: 'Iron Triangle',
+      chart: null,
+      prompt: `Read the following scenario and answer parts A, B, and C.
+
+A major agricultural interest group meets regularly with members of the House Agriculture Committee and officials from the U.S. Department of Agriculture. Over several years, the group has successfully lobbied for increased farm subsidies, helped write legislation favorable to large farming operations, and provided campaign contributions to committee members.
+
+A. Identify the concept from American government that best describes the relationship illustrated in this scenario.
+
+B. Explain how each of the three actors in this relationship benefits from their arrangement.
+
+C. Explain ONE way this relationship could be seen as harmful to democratic representation and the public interest.`
+    },
+
+    // ── QUANTITATIVE ANALYSIS (type 1) ──
+    {
+      type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+      unit: 2, unitLabel: 'Unit 2 · The Presidency',
+      title: 'Presidential Approval Ratings',
+      chart: 'approval_ratings',
+      prompt: `Use the graph above and your knowledge of AP U.S. Government and Politics to answer the following questions.
+
+A. Identify the trend shown in the president's approval ratings over the five-year period.
+
+B. Describe ONE pattern shown in the data that could be explained by the concept of the "honeymoon period."
+
+C. Draw a conclusion about the relationship between presidential approval ratings and the president's ability to achieve legislative goals, using specific data from the graph as evidence.
+
+D. Explain ONE factor not shown in the graph that could account for the decline in approval ratings over time.`
+    },
+    {
+      type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+      unit: 5, unitLabel: 'Unit 5 · Voting & Elections',
+      title: 'Voter Turnout by Age Group',
+      chart: 'voter_turnout',
+      prompt: `Use the bar graph above and your knowledge of AP U.S. Government and Politics to answer the following questions.
+
+A. Identify the age group with the highest voter turnout and the age group with the lowest voter turnout in the 2024 presidential election.
+
+B. Describe the overall pattern shown in the data regarding the relationship between age and voter turnout.
+
+C. Draw a conclusion about what this data suggests for political parties trying to build winning electoral coalitions. Use specific data from the graph as evidence.
+
+D. Explain ONE reason why younger voters (18–29) tend to have lower turnout rates than older voters, based on your knowledge of political participation.`
+    },
+    {
+      type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+      unit: 5, unitLabel: 'Unit 5 · Political Parties',
+      title: 'Party Identification',
+      chart: 'party_id',
+      prompt: `Use the pie chart above and your knowledge of AP U.S. Government and Politics to answer the following questions.
+
+A. Identify the largest single group in terms of party identification among registered voters.
+
+B. Describe what the data suggests about the current state of the American two-party system.
+
+C. Draw a conclusion about what this distribution of party identification means for candidates running in a general election. Use specific data from the chart as evidence.
+
+D. Explain ONE reason why the percentage of voters identifying as Independent has grown in recent decades, using your knowledge of political socialization and party polarization.`
+    },
+    {
+      type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+      unit: 2, unitLabel: 'Unit 2 · Congress',
+      title: 'Congressional vs. Presidential Approval',
+      chart: 'congress_approval',
+      prompt: `Use the line graph above and your knowledge of AP U.S. Government and Politics to answer the following questions.
+
+A. Identify the year in which the gap between presidential and congressional approval was the largest.
+
+B. Describe the overall trend shown for congressional approval ratings over the five-year period.
+
+C. Draw a conclusion about what this consistent gap between presidential and congressional approval suggests about public attitudes toward the two institutions. Use specific data from the graph as evidence.
+
+D. Explain ONE structural or political reason why congressional approval ratings tend to be consistently lower than presidential approval ratings.`
+    },
+    {
+      type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+      unit: 4, unitLabel: 'Unit 4 · Political Ideology',
+      title: 'Political Ideology Distribution',
+      chart: 'ideology',
+      prompt: `Use the bar graph above and your knowledge of AP U.S. Government and Politics to answer the following questions.
+
+A. Identify the ideology that represents the largest single group among Americans surveyed.
+
+B. Describe the overall distribution of political ideology shown in the data.
+
+C. Draw a conclusion about what this distribution suggests for candidates competing in primary elections versus general elections. Use specific data from the graph as evidence.
+
+D. Explain ONE way political socialization contributes to the ideological distribution shown in the graph.`
+    },
+
+    // ── SCOTUS COMPARISON (type 2) ──
+    {
+      type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+      unit: 3, unitLabel: 'Unit 3 · Civil Liberties',
+      title: 'Student Speech Rights',
+      chart: null,
+      prompt: `In Tinker v. Des Moines Independent Community School District (1969), the Supreme Court ruled that students wearing black armbands to protest the Vietnam War was protected speech under the First Amendment.
+
+In Bethel School District v. Fraser (1986), the Court ruled that school officials could discipline a student for giving a sexually suggestive speech at a school assembly without violating the First Amendment.
+
+A. Identify the constitutional provision at issue in both cases.
+
+B. Explain the reasoning of the majority in Tinker v. Des Moines, including the legal standard it established.
+
+C. Explain how Bethel School District v. Fraser reached a different conclusion, and describe ONE similarity and ONE difference in the constitutional reasoning between the two cases.
+
+D. Apply the legal standards from both cases to the following scenario: A student posts a profane video on social media criticizing the school principal, filmed from her bedroom on a Saturday. Explain whether you think a court would likely find the school's suspension of the student constitutional, using reasoning from BOTH cases.`
+    },
+    {
+      type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+      unit: 2, unitLabel: 'Unit 2 · Judicial Review',
+      title: 'Presidential Power & Courts',
+      chart: null,
+      prompt: `In United States v. Nixon (1974), the Supreme Court ruled that President Nixon had to turn over subpoenaed White House tape recordings to a special prosecutor, rejecting the claim of absolute executive privilege.
+
+In Trump v. United States (2024), the Supreme Court ruled that former presidents have absolute immunity from criminal prosecution for actions within their constitutional authority as president, and presumptive immunity for other official acts.
+
+A. Identify the constitutional principle at issue in both cases regarding the scope of presidential power.
+
+B. Explain the reasoning of the Court in U.S. v. Nixon and what limits it placed on executive privilege.
+
+C. Compare the two cases: explain ONE way Trump v. United States extended presidential power beyond what was recognized in Nixon AND one way the two cases are similar in their approach to presidential accountability.
+
+D. Explain what both rulings together suggest about the role of the Supreme Court in checking executive power.`
+    },
+    {
+      type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+      unit: 3, unitLabel: 'Unit 3 · Civil Rights',
+      title: 'Equal Protection & Segregation',
+      chart: null,
+      prompt: `In Plessy v. Ferguson (1896), the Supreme Court ruled that racial segregation on railroad cars was constitutional as long as the facilities were "separate but equal."
+
+In Brown v. Board of Education (1954), the Supreme Court unanimously overruled Plessy, holding that racially segregated public schools were inherently unequal and violated the Equal Protection Clause of the Fourteenth Amendment.
+
+A. Identify the constitutional clause central to both cases.
+
+B. Explain the reasoning of the Court in Brown v. Board of Education, including what evidence the Court used to reach its conclusion.
+
+C. Explain how the two decisions reflect different interpretations of the Equal Protection Clause, and identify ONE way in which the broader historical context between 1896 and 1954 may have influenced the Court's reasoning in Brown.
+
+D. Explain the significance of the Brown decision for the civil rights movement and for future applications of the Equal Protection Clause.`
+    },
+
+    // ── ARGUMENTATIVE ESSAY (type 3) ──
+    {
+      type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+      unit: 2, unitLabel: 'Unit 2 · Branches of Government',
+      title: 'Presidential vs. Congressional Power',
+      chart: null,
+      prompt: `Develop an argument that answers the following question:
+
+Has the power of the presidency grown too strong relative to Congress in the modern era?
+
+In your essay, you must:
+• State a defensible claim that responds to the question
+• Use at least ONE piece of evidence from the following foundational documents: Federalist No. 51, Federalist No. 70, or Brutus No. 1
+• Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics (a Supreme Court case, a specific historical example, or a course concept)
+• Respond to an opposing or alternative perspective to your argument
+• Support your argument with a logical line of reasoning throughout
+
+Consider addressing: executive orders, war powers, veto power, the bully pulpit, agency capture, and the War Powers Resolution.`
+    },
+    {
+      type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+      unit: 1, unitLabel: 'Unit 1 · Federalism',
+      title: 'Federal vs. State Power',
+      chart: null,
+      prompt: `Develop an argument that answers the following question:
+
+Is the current balance of power between the federal government and the states consistent with the original intentions of the Founders?
+
+In your essay, you must:
+• State a defensible claim that responds to the question
+• Use at least ONE piece of evidence from the following foundational documents: Federalist No. 51, Brutus No. 1, or the Constitution (specific article or amendment)
+• Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics
+• Respond to an opposing or alternative perspective to your argument
+• Support your argument with a logical line of reasoning
+
+Consider addressing: the Supremacy Clause, the Tenth Amendment, categorical vs. block grants, cooperative federalism, McCulloch v. Maryland, and the growth of the federal government since the New Deal.`
+    },
+    {
+      type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+      unit: 5, unitLabel: 'Unit 5 · Political Participation',
+      title: 'Money & Democracy',
+      chart: null,
+      prompt: `Develop an argument that answers the following question:
+
+Does the role of money in American politics undermine democratic representation?
+
+In your essay, you must:
+• State a defensible claim that responds to the question
+• Use at least ONE piece of evidence from the following foundational documents: Federalist No. 10, Federalist No. 51, or the First Amendment
+• Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics
+• Respond to an opposing or alternative perspective to your argument
+• Support your argument with a logical line of reasoning
+
+Consider addressing: Citizens United v. FEC, Super PACs, iron triangles, issue networks, the role of interest groups, campaign finance reform, and the concept of equal political participation.`
+    },
+    {
+      type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+      unit: 3, unitLabel: 'Unit 3 · Civil Liberties',
+      title: 'Free Speech & Its Limits',
+      chart: null,
+      prompt: `Develop an argument that answers the following question:
+
+Should the government have broader authority to limit speech in the digital age?
+
+In your essay, you must:
+• State a defensible claim that responds to the question
+• Use at least ONE piece of evidence from the following foundational documents: the First Amendment, Federalist No. 51, or the Declaration of Independence
+• Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics
+• Respond to an opposing or alternative perspective to your argument
+• Support your argument with a logical line of reasoning
+
+Consider addressing: Schenck v. United States, Tinker v. Des Moines, New York Times v. United States, the clear and present danger test, social media platforms, national security, and the Marketplace of Ideas theory.`
+    }
+  ];
+
+  // ── FRQ Practice State ──
+  var frqPracticeState = {
+    currentPrompt: null,
+    timerInterval: null,
+    timeLeft: 0,
+    running: false,
+    activeType: 'all'
+  };
+
+  // ── Build the prompt selector ──
+  function buildFrqPracticeUI() {
+    var filterBtns = document.getElementById('frq-type-filter-btns');
+    var promptList = document.getElementById('frq-prompt-list');
+    if (!filterBtns || !promptList) return;
+
+    var types = ['All', 'Concept Application', 'Quantitative Analysis', 'SCOTUS Comparison', 'Argumentative Essay'];
+    filterBtns.innerHTML = types.map(function(t, i) {
+      return '<button class="frq-type-select-btn' + (i === 0 ? ' active' : '') +
+        '" onclick="frqFilterType(\'' + t + '\', this)">' + t + '</button>';
+    }).join('');
+
+    frqRenderPromptList('All');
+  }
+
+  function frqFilterType(type, btn) {
+    document.querySelectorAll('.frq-type-select-btn').forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    frqPracticeState.activeType = type;
+    frqRenderPromptList(type);
+  }
+
+  function frqRenderPromptList(type) {
+    var list = document.getElementById('frq-prompt-list');
+    if (!list) return;
+    var filtered = type === 'All' ? FRQ_PROMPTS : FRQ_PROMPTS.filter(function(p) { return p.typeName === type; });
+    list.innerHTML = filtered.map(function(p, i) {
+      var realIdx = FRQ_PROMPTS.indexOf(p);
+      return '<div class="frq-prompt-card" onclick="frqLaunchPrompt(' + realIdx + ')">' +
+        '<div class="frq-prompt-card-unit">' + p.unitLabel + '</div>' +
+        '<div class="frq-prompt-card-text">' + p.title + '</div>' +
+        '<div class="frq-prompt-card-type">' + p.typeName + ' · ' + p.pts + ' pts · ' + p.minutes + ' min</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function frqLaunchRandom() {
+    var type = frqPracticeState.activeType;
+    var pool = type === 'All' ? FRQ_PROMPTS : FRQ_PROMPTS.filter(function(p) { return p.typeName === type; });
+    var idx = Math.floor(Math.random() * pool.length);
+    frqLaunchPrompt(FRQ_PROMPTS.indexOf(pool[idx]));
+  }
+
+  function frqLaunchPrompt(idx) {
+    var p = FRQ_PROMPTS[idx];
+    frqPracticeState.currentPrompt = p;
+    frqPracticeState.timeLeft = p.minutes * 60;
+    frqPracticeState.running = false;
+
+    // Switch views
+    document.getElementById('frq-selector-view').classList.remove('visible');
+    document.getElementById('frq-selector-view').style.display = 'none';
+    document.getElementById('frq-practice-view').classList.add('visible');
+
+    // Header
+    document.getElementById('frq-practice-type-badge').textContent =
+      p.typeName.toUpperCase() + ' · ' + p.pts + ' PTS';
+    document.getElementById('frq-practice-title').textContent = p.unitLabel + ' · ' + p.title;
+
+    // Clock
+    frqPracticeUpdateClock();
+    document.getElementById('frq-practice-start-btn').textContent = 'Start';
+    document.getElementById('frq-practice-clock').classList.remove('warning');
+
+    // Chart
+    var chartArea = document.getElementById('frq-chart-area');
+    if (p.chart && FRQ_CHARTS[p.chart]) {
+      var chart = FRQ_CHARTS[p.chart];
+      document.getElementById('frq-chart-title').textContent = chart.title;
+      document.getElementById('frq-chart-svg').innerHTML = chart.svg;
+      chartArea.classList.add('visible');
+    } else {
+      chartArea.classList.remove('visible');
+    }
+
+    // Prompt
+    document.getElementById('frq-prompt-display').innerHTML =
+      p.prompt.split('\n').map(function(line) {
+        return line.trim() ? '<p style="margin:0 0 8px">' + line + '</p>' : '<p style="margin:0 0 4px">&nbsp;</p>';
+      }).join('');
+
+    // Clear response
+    var resp = document.getElementById('frq-response-area');
+    resp.value = '';
+    document.getElementById('frq-word-count').textContent = '0 words';
+    resp.oninput = function() {
+      var words = resp.value.trim().split(/\s+/).filter(function(w) { return w.length > 0; }).length;
+      document.getElementById('frq-word-count').textContent = words + ' word' + (words !== 1 ? 's' : '');
+    };
+
+    // Side panel
+    var typeData = FRQ_TIMER_DATA.find(function(t) { return t.type === p.typeName; });
+    if (typeData) {
+      document.getElementById('frq-side-pts').innerHTML =
+        '<span class="frq-side-pts-badge">' + p.pts + ' pts</span>' +
+        '<span class="frq-side-pts-label">' + p.typeName + '</span>';
+      document.getElementById('frq-side-checklist').innerHTML =
+        typeData.checklist.map(function(item) {
+          return '<div class="frq-side-check-item" onclick="this.classList.toggle(\'checked\')">' +
+            '<div class="frq-side-check-box"></div>' +
+            '<div class="frq-side-check-text">' + item + '</div>' +
+          '</div>';
+        }).join('');
+    }
+
+    clearInterval(frqPracticeState.timerInterval);
+  }
+
+  function frqPracticeToggle() {
+    if (frqPracticeState.running) {
+      clearInterval(frqPracticeState.timerInterval);
+      frqPracticeState.running = false;
+      document.getElementById('frq-practice-start-btn').textContent = 'Resume';
+    } else {
+      frqPracticeState.running = true;
+      document.getElementById('frq-practice-start-btn').textContent = 'Pause';
+      frqPracticeState.timerInterval = setInterval(function() {
+        frqPracticeState.timeLeft--;
+        frqPracticeUpdateClock();
+        if (frqPracticeState.timeLeft <= 0) {
+          clearInterval(frqPracticeState.timerInterval);
+          frqPracticeState.running = false;
+          document.getElementById('frq-practice-start-btn').textContent = 'Start';
+          document.getElementById('frq-practice-clock').textContent = 'TIME!';
+          document.getElementById('frq-practice-clock').classList.add('warning');
+        }
+      }, 1000);
+    }
+  }
+
+  function frqPracticeReset() {
+    clearInterval(frqPracticeState.timerInterval);
+    frqPracticeState.running = false;
+    frqPracticeState.timeLeft = frqPracticeState.currentPrompt
+      ? frqPracticeState.currentPrompt.minutes * 60 : 600;
+    document.getElementById('frq-practice-start-btn').textContent = 'Start';
+    document.getElementById('frq-practice-clock').classList.remove('warning');
+    frqPracticeUpdateClock();
+    document.querySelectorAll('.frq-side-check-item').forEach(function(i) { i.classList.remove('checked'); });
+  }
+
+  function frqPracticeUpdateClock() {
+    var t = frqPracticeState.timeLeft;
+    var m = Math.floor(t / 60);
+    var s = t % 60;
+    var clock = document.getElementById('frq-practice-clock');
+    clock.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+    if (t <= 120 && t > 0) clock.classList.add('warning');
+    else clock.classList.remove('warning');
+  }
+
+  function frqBackToSelector() {
+    clearInterval(frqPracticeState.timerInterval);
+    frqPracticeState.running = false;
+    document.getElementById('frq-practice-view').classList.remove('visible');
+    document.getElementById('frq-selector-view').style.display = '';
+    document.getElementById('frq-selector-view').classList.add('visible');
+  }
+
+  function frqCopyResponse() {
+    var text = document.getElementById('frq-response-area').value;
+    var p = frqPracticeState.currentPrompt;
+    var full = (p ? p.typeName + ' — ' + p.title + '\n\n' : '') + text;
+    navigator.clipboard.writeText(full).then(function() {
+      var btn = document.querySelector('.frq-practice-action-btn.copy');
+      if (btn) { btn.innerHTML = '<i class="ti ti-check"></i> Copied!'; setTimeout(function() { btn.innerHTML = '<i class="ti ti-clipboard"></i> Copy Response'; }, 2000); }
+    });
+  }
+
+  function frqPrintResponse() {
+    var p = frqPracticeState.currentPrompt;
+    var response = document.getElementById('frq-response-area').value;
+    var prompt = p ? p.prompt : '';
+    var w = window.open('', '_blank');
+    w.document.write('<html><head><title>FRQ Practice — ' + (p ? p.title : '') + '</title>' +
+      '<style>body{font-family:Georgia,serif;max-width:700px;margin:40px auto;padding:20px;font-size:14px;line-height:1.7}' +
+      'h2{font-size:18px;margin-bottom:4px}' +
+      '.meta{font-size:12px;color:#666;margin-bottom:20px}' +
+      '.prompt{background:#f5f5f5;padding:16px;border-left:4px solid #1a2e5a;margin-bottom:20px;font-size:13px;white-space:pre-wrap}' +
+      '.response{border-top:2px solid #333;padding-top:16px;white-space:pre-wrap}' +
+      '.response-label{font-weight:bold;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px}' +
+      '</style></head><body>' +
+      '<h2>' + (p ? p.title : 'FRQ Practice') + '</h2>' +
+      '<div class="meta">' + (p ? p.typeName + ' · ' + p.pts + ' pts · ' + p.unitLabel : '') + ' · O\'Farrell High School AP Gov</div>' +
+      '<div class="prompt">' + prompt + '</div>' +
+      '<div class="response"><div class="response-label">Student Response</div>' + response.replace(/\n/g, '<br>') + '</div>' +
+      '</body></html>');
+    w.document.close();
+    w.print();
+  }
+
+  // Wire up FRQ practice when review tab opens
+  var frqPracticeBuilt = false;
+  document.querySelector('.nav-tab[data-tab="review"]').addEventListener('click', function() {
+    if (!frqPracticeBuilt) {
+      setTimeout(function() { buildFrqPracticeUI(); }, 50);
+      frqPracticeBuilt = true;
+    }
+  });
 
 
   // ══════════════════════════════════════════════════════════
