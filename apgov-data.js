@@ -979,7 +979,7 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 //  NAV TABS
 // ══════════════════════════════════════════════════════════
-const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'archive', 'exit'];
+const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'exit'];
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target) {
@@ -1728,6 +1728,65 @@ var frqTimerBuilt = false;
 
 
 var LIVING_DOCS = [
+  {
+    id: "articles",
+    title: "Articles of Confederation",
+    year: 1781,
+    author: "Continental Congress",
+    intro: "The first governing document of the United States, adopted in 1781. It created a very weak central government -- essentially a league of friendship among sovereign states. Its failures led directly to the Constitutional Convention of 1787.",
+    sections: [{
+      title: "Key Provisions and Weaknesses",
+      clauses: [
+        { num: "Art. II", text: "Each state retains its sovereignty, freedom, and independence, and every Power, Jurisdiction, and right, which is not by this confederation expressly delegated to the United States.", plain: "States kept almost all power. The national government only had powers explicitly given to it -- the opposite of the Constitution's implied powers.", standards: ["1.2"], cases: [], connections: "The direct contrast to the Supremacy Clause and Necessary & Proper Clause of the Constitution. The Articles' weakness here is exactly what McCulloch v. Maryland resolved in favor of federal power." },
+        { num: "Art. VIII", text: "All charges of war, and all other expenses that shall be incurred for the common defense or general welfare... shall be defrayed out of a common treasury, which shall be supplied by the several States.", plain: "Congress could request money from states but had no power to tax directly. States could simply refuse.", standards: ["1.2"], cases: [], connections: "Congress had no independent revenue -- it had to beg states for money. This made it impossible to pay war debts or fund a military. Led directly to Shays's Rebellion." },
+        { num: "Art. IX", text: "The United States in Congress assembled shall never engage in a war... nor enter into any treaties or alliances... unless nine States assent to the same.", plain: "Major decisions required 9 of 13 states to agree. Amendments required unanimous consent. Almost impossible to get anything done.", standards: ["1.2","1.3"], cases: [], connections: "The impossibility of governing under these rules is why the Constitutional Convention replaced the Articles entirely rather than amending them. Key context for understanding the Constitution's design." },
+        { num: "Weakness Summary", text: "No executive, no judiciary, no power to regulate commerce, no power to tax, no power to enforce laws on individuals -- only on states.", plain: "The Articles created a government that could not tax, could not enforce its own laws, had no president, and had no courts. It was a recipe for national failure.", standards: ["1.2","1.3"], cases: [], connections: "Every weakness of the Articles directly inspired a feature of the Constitution. Know the pattern: Articles had X problem, Constitution fixed it with Y solution." }
+      ]
+    }]
+  },
+  {
+    id: "constitution",
+    title: "U.S. Constitution",
+    year: 1787,
+    author: "Constitutional Convention (James Madison, principal architect)",
+    intro: "The supreme law of the United States, ratified in 1788. It replaced the Articles of Confederation and established the framework of American government. Every AP Gov unit connects to a specific part of the Constitution.",
+    sections: [
+      {
+        title: "Preamble",
+        clauses: [
+          { num: "Preamble", text: "We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution.", plain: "The people -- not the states -- are the source of the Constitution's authority. It establishes six goals: union, justice, peace, defense, welfare, and liberty.", standards: ["1.1","1.3"], cases: [], connections: "Popular sovereignty in action -- the Preamble establishes the people as sovereign. Also establishes the six purposes of government that courts cite in constitutional interpretation." }
+        ]
+      },
+      {
+        title: "Article I — The Legislative Branch",
+        clauses: [
+          { num: "Art. I §1", text: "All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.", plain: "Congress is the only branch that can make law. The word 'herein' limits Congress to powers specifically granted -- but the Necessary & Proper Clause stretches this.", standards: ["2.1"], cases: ["McCulloch v. Maryland"], connections: "The foundation of congressional power. 'All legislative powers herein granted' -- not all legislative powers, only those granted. Compare with the Necessary & Proper Clause." },
+          { num: "Art. I §8 (Necessary & Proper)", text: "To make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers.", plain: "The Elastic Clause -- Congress can make any law needed to carry out its listed powers. This is the constitutional basis for implied powers.", standards: ["1.2","2.1"], cases: ["McCulloch v. Maryland"], connections: "The most important clause for understanding federal power expansion. McCulloch v. Maryland (1819) interpreted this broadly. Know it as the Elastic Clause or Necessary & Proper Clause." },
+          { num: "Art. I §8 (Commerce)", text: "To regulate Commerce with foreign Nations, and among the several States, and with the Indian Tribes.", plain: "Congress can regulate interstate commerce. This short clause is the basis for most federal economic regulation.", standards: ["1.2","2.1"], cases: ["U.S. v. Lopez"], connections: "The Commerce Clause is the constitutional basis for federal regulation of the economy, civil rights laws, and much more. U.S. v. Lopez (1995) placed the first limits on it in decades." }
+        ]
+      },
+      {
+        title: "Article II — The Executive Branch",
+        clauses: [
+          { num: "Art. II §1", text: "The executive Power shall be vested in a President of the United States of America.", plain: "All executive power belongs to one person -- the President. This is the foundation for the unitary executive theory.", standards: ["2.3"], cases: ["U.S. v. Nixon"], connections: "The vesting clause grants the president all executive power -- not just the powers listed. Compare with Article I which grants only powers 'herein granted.'" },
+          { num: "Art. II §2", text: "The President shall be Commander in Chief of the Army and Navy... he shall have Power, by and with the Advice and Consent of the Senate, to make Treaties, provided two thirds of the Senators present concur.", plain: "The president commands the military and can make treaties -- but treaties need Senate approval. A key separation of powers in foreign policy.", standards: ["2.3","2.2"], cases: [], connections: "Basis for the War Powers debate and executive agreements. Presidents use executive agreements to avoid the two-thirds Senate requirement for treaties." }
+        ]
+      },
+      {
+        title: "Article III — The Judicial Branch",
+        clauses: [
+          { num: "Art. III §1", text: "The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish.", plain: "The Constitution only requires one court -- the Supreme Court. All other federal courts are created by Congress and could be eliminated by Congress.", standards: ["2.5"], cases: ["Marbury v. Madison"], connections: "The Constitution does not mention judicial review -- Marbury v. Madison established it by implication. The power to say what the law is flows from the judicial power granted here." }
+        ]
+      },
+      {
+        title: "Key Structural Clauses",
+        clauses: [
+          { num: "Art. VI (Supremacy)", text: "This Constitution, and the Laws of the United States which shall be made in Pursuance thereof... shall be the supreme Law of the Land.", plain: "Federal law beats state law when they conflict. The Constitution is the highest law of all.", standards: ["1.2"], cases: ["McCulloch v. Maryland"], connections: "The Supremacy Clause is the constitutional basis for federal power over states. Every federalism FRQ connects to this." },
+          { num: "10th Amend.", text: "The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.", plain: "Any power not given to the federal government belongs to the states or the people. The constitutional basis for states' rights.", standards: ["1.2"], cases: [], connections: "The Tenth Amendment is in tension with the Supremacy Clause and Necessary & Proper Clause. The balance between these three clauses defines American federalism." }
+        ]
+      }
+    ]
+  },
   {
     id: 'declaration',
     title: 'Declaration of Independence',
@@ -2741,6 +2800,131 @@ var frqPracticeState = {
 function buildFrqPracticeUI() {
   // Prompt selector is built inline -- see frqRenderPromptList()
 }
+
+
+
+// ══════════════════════════════════════════════════════════
+//  LANDMARK CASES TAB ENGINE
+// ══════════════════════════════════════════════════════════
+
+// SCOTUS case amendments and constitutional provisions by case
+var CASE_META = {
+  "Marbury v. Madison":   { amends: ["Article III", "Article II"], clause: "Judicial Review", unit: 2 },
+  "McCulloch v. Maryland":{ amends: ["Article I", "Supremacy Clause", "Necessary & Proper Clause"], clause: "Implied Powers / Federal Supremacy", unit: 2 },
+  "Schenck v. United States": { amends: ["1st Amendment"], clause: "Clear and Present Danger", unit: 3 },
+  "Brown v. Board of Education": { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Equal Protection", unit: 3 },
+  "Baker v. Carr":        { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Judicial Justiciability / One Person One Vote", unit: 5 },
+  "Engel v. Vitale":      { amends: ["1st Amendment", "Establishment Clause"], clause: "Separation of Church and State", unit: 3 },
+  "Gideon v. Wainwright": { amends: ["6th Amendment", "14th Amendment"], clause: "Selective Incorporation / Right to Counsel", unit: 3 },
+  "Tinker v. Des Moines": { amends: ["1st Amendment"], clause: "Student Free Speech / Substantial Disruption Test", unit: 3 },
+  "New York Times v. United States": { amends: ["1st Amendment"], clause: "Prior Restraint / Freedom of Press", unit: 3 },
+  "Wisconsin v. Yoder":   { amends: ["1st Amendment", "Free Exercise Clause"], clause: "Religious Freedom vs. State Interest", unit: 3 },
+  "Roe v. Wade":          { amends: ["14th Amendment"], clause: "Right to Privacy / Due Process", unit: 3 },
+  "Shaw v. Reno":         { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Racial Gerrymandering", unit: 5 },
+  "U.S. v. Lopez":        { amends: ["Article I", "Commerce Clause"], clause: "Limits on Congressional Commerce Power", unit: 2 },
+  "McDonald v. City of Chicago": { amends: ["2nd Amendment", "14th Amendment"], clause: "Selective Incorporation / Right to Bear Arms", unit: 3 },
+  "Citizens United v. FEC": { amends: ["1st Amendment"], clause: "Political Speech / Campaign Finance", unit: 5 }
+};
+
+// Group cases by unit for sidebar
+var CASES_BY_UNIT = [
+  { unit: 2, label: "Unit 2 — Branches of Government", cases: [] },
+  { unit: 3, label: "Unit 3 — Civil Liberties & Rights", cases: [] },
+  { unit: 5, label: "Unit 5 — Political Participation", cases: [] }
+];
+
+SCOTUS_CASES.forEach(function(c) {
+  var group = CASES_BY_UNIT.find(function(g) { return g.unit === c.unit; });
+  if (group) group.cases.push(c);
+});
+
+var casesBuilt = false;
+var caseCurrentIdx = 0;
+
+function buildCasesTab() {
+  if (casesBuilt) return;
+  casesBuilt = true;
+
+  var sidebar = document.getElementById('cases-sidebar');
+  if (!sidebar) return;
+
+  CASES_BY_UNIT.forEach(function(group) {
+    if (!group.cases.length) return;
+    var div = document.createElement('div');
+    div.className = 'cases-unit-group';
+    div.innerHTML = '<div class="cases-unit-head">' + group.label + '</div>';
+
+    group.cases.forEach(function(c) {
+      var globalIdx = SCOTUS_CASES.findIndex(function(sc) { return sc.name === c.name; });
+      var pill = document.createElement('div');
+      pill.className = 'cases-pill' + (globalIdx === 0 ? ' active' : '');
+      pill.dataset.idx = globalIdx;
+      pill.innerHTML = '<span class="cases-pill-year">' + c.year + '</span>' +
+        '<span class="cases-pill-name">' + c.name + '</span>';
+      pill.addEventListener('click', function() { showCase(globalIdx); });
+      div.appendChild(pill);
+    });
+    sidebar.appendChild(div);
+  });
+
+  showCase(0);
+}
+
+function showCase(idx) {
+  caseCurrentIdx = idx;
+  var c = SCOTUS_CASES[idx];
+  if (!c) return;
+  var meta = CASE_META[c.name] || {};
+
+  // Update sidebar
+  document.querySelectorAll('.cases-pill').forEach(function(p) { p.classList.remove('active'); });
+  var activePill = document.querySelector('.cases-pill[data-idx="' + idx + '"]');
+  if (activePill) {
+    activePill.classList.add('active');
+    activePill.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  var card = document.getElementById('cases-card');
+  if (!card) return;
+
+  var amendTags = (meta.amends || []).map(function(a) {
+    return '<span class="cases-tag amend-tag">' + a + '</span>';
+  }).join('');
+
+  var unitLabel = ['', 'Unit 1 - Foundations', 'Unit 2 - Branches', 'Unit 3 - Civil Liberties', 'Unit 4 - Ideology', 'Unit 5 - Participation'][c.unit] || ('Unit ' + c.unit);
+
+  var prev = SCOTUS_CASES[idx - 1];
+  var next = SCOTUS_CASES[idx + 1];
+
+  card.innerHTML =
+    '<div class="cases-card-header">' +
+      '<div class="cases-card-unit">' + unitLabel + '</div>' +
+      '<div class="cases-card-name">' + c.name + ' (' + c.year + ')</div>' +
+      '<div class="cases-card-meta">' + (meta.clause || '') + '</div>' +
+    '</div>' +
+    '<div class="cases-card-body">' +
+      (amendTags ? '<div class="cases-tags">' + amendTags + '</div>' : '') +
+      '<div class="cases-section-label">Constitutional Question</div>' +
+      '<div class="cases-issue">' + c.issue + '</div>' +
+      '<div class="cases-section-label">The Ruling</div>' +
+      '<div class="cases-ruling">' + c.ruling + '</div>' +
+      '<div class="cases-section-label">Why It Matters</div>' +
+      '<div class="cases-sig">' + c.sig + '</div>' +
+      '<div class="cases-section-label">⭐ AP Exam Tip</div>' +
+      '<div class="cases-tip">' + c.tip + '</div>' +
+    '</div>' +
+    '<div class="cases-nav-btns">' +
+      '<button class="cases-nav-btn" onclick="showCase(' + (idx-1) + ')"' + (idx === 0 ? ' disabled' : '') + '>' +
+        (prev ? '← ' + prev.name : '← Previous') + '</button>' +
+      '<button class="cases-nav-btn" onclick="showCase(' + (idx+1) + ')"' + (idx === SCOTUS_CASES.length-1 ? ' disabled' : '') + '>' +
+        (next ? next.name + ' →' : 'Next →') + '</button>' +
+    '</div>';
+}
+
+document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', function() {
+  setTimeout(buildCasesTab, 30);
+});
+
 
 
 // ════════════════════════════════════════════════════════════════
