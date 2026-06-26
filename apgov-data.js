@@ -1,6 +1,6 @@
 // ════════════════════════════════════════════════════════════════
-// apgov-data.js — AP Government & Politics Site Data
-// O'Farrell High School · 2026–27
+// apgov-data.js -- AP Government & Politics Site Data
+// O'Farrell High School · 2026-27
 //
 // ADD A SCOTUS CASE: find SCOTUS_CASES array, add an object
 // ADD A GLOSSARY TERM: find GLOSSARY_UNITS, add to right group  
@@ -13,7 +13,7 @@ const SCOTUS_CASES = [
     name: "Marbury v. Madison", year: 1803, unit: 2,
     issue: "Can the Supreme Court declare an act of Congress unconstitutional?",
     ruling: "Yes. Chief Justice Marshall established the doctrine of judicial review.",
-    sig: "Established judicial review — the Court's power to strike down laws that violate the Constitution. Foundation of the entire federal court system's role.",
+    sig: "Established judicial review -- the Court's power to strike down laws that violate the Constitution. Foundation of the entire federal court system's role.",
     tip: "Know this cold. Any FRQ about the judiciary, separation of powers, or checks and balances will likely test judicial review."
   },
   {
@@ -49,13 +49,13 @@ const SCOTUS_CASES = [
     issue: "Are legislative apportionment disputes justiciable (can courts rule on them)?",
     ruling: "Yes. The Court held that redistricting cases are justiciable under the Equal Protection Clause.",
     sig: "Opened the door for courts to rule on redistricting. Led to 'one person, one vote' principle.",
-    tip: "Pair with Shaw v. Reno. Both deal with redistricting — Baker opened courts to it, Shaw addressed racial gerrymandering."
+    tip: "Pair with Shaw v. Reno. Both deal with redistricting -- Baker opened courts to it, Shaw addressed racial gerrymandering."
   },
   {
     name: "Gideon v. Wainwright", year: 1963, unit: 3,
     issue: "Does the 6th Amendment right to counsel apply to state criminal trials?",
     ruling: "Yes. States must provide an attorney to defendants who cannot afford one.",
-    sig: "Key selective incorporation case — applied the right to counsel to the states via the 14th Amendment.",
+    sig: "Key selective incorporation case -- applied the right to counsel to the states via the 14th Amendment.",
     tip: "Example of selective incorporation. Connect to Mapp v. Ohio and Miranda for a pattern of 1960s rights expansion."
   },
   {
@@ -70,42 +70,42 @@ const SCOTUS_CASES = [
     issue: "Can the government prevent the press from publishing the Pentagon Papers?",
     ruling: "No. Prior restraint requires an extremely heavy burden of justification. Press prevailed.",
     sig: "Reaffirmed freedom of the press and the near-absolute ban on prior restraint of publication.",
-    tip: "Know 'prior restraint' — the government stopping publication before it happens. This case rejected it."
+    tip: "Know 'prior restraint' -- the government stopping publication before it happens. This case rejected it."
   },
   {
     name: "Wisconsin v. Yoder", year: 1972, unit: 3,
     issue: "Can states compel Amish children to attend school beyond 8th grade?",
     ruling: "No. The Free Exercise Clause protects Amish families from compulsory school attendance laws.",
     sig: "Major Free Exercise Clause ruling balancing religious freedom against state interest in education.",
-    tip: "Contrast with Engel v. Vitale (Establishment) — Yoder is a Free Exercise case where religion wins."
+    tip: "Contrast with Engel v. Vitale (Establishment) -- Yoder is a Free Exercise case where religion wins."
   },
   {
     name: "Roe v. Wade", year: 1973, unit: 3,
     issue: "Does the Constitution protect a woman's right to an abortion?",
     ruling: "Yes (at the time). The right to privacy under the 14th Amendment extends to abortion decisions.",
     sig: "Established a constitutional right to abortion (later overturned by Dobbs v. Jackson, 2022). Based on implied right to privacy.",
-    tip: "Know this was overturned in 2022 by Dobbs. The AP exam still includes it as a required case — focus on the privacy/14th Amendment rationale."
+    tip: "Know this was overturned in 2022 by Dobbs. The AP exam still includes it as a required case -- focus on the privacy/14th Amendment rationale."
   },
   {
     name: "Shaw v. Reno", year: 1993, unit: 5,
     issue: "Can states draw oddly shaped legislative districts solely to create majority-minority districts?",
     ruling: "Such districts can be challenged under the Equal Protection Clause if race is the predominant factor.",
     sig: "Limited racial gerrymandering. While the Voting Rights Act permits some race-consciousness, race cannot be the sole factor.",
-    tip: "Pair with Baker v. Carr. Shaw addresses racial gerrymandering — know the difference between political and racial gerrymandering."
+    tip: "Pair with Baker v. Carr. Shaw addresses racial gerrymandering -- know the difference between political and racial gerrymandering."
   },
   {
     name: "U.S. v. Lopez", year: 1995, unit: 2,
     issue: "Did Congress exceed its Commerce Clause power by banning guns near schools?",
     ruling: "Yes. The Gun-Free School Zones Act exceeded Congressional commerce power.",
     sig: "First major case in decades to limit Congress's Commerce Clause power, signaling a new federalism.",
-    tip: "Shows limits on federal power. Contrast with McCulloch (broad federal power) — shows the tension in federalism."
+    tip: "Shows limits on federal power. Contrast with McCulloch (broad federal power) -- shows the tension in federalism."
   },
   {
     name: "McDonald v. City of Chicago", year: 2010, unit: 3,
     issue: "Does the 2nd Amendment apply to state and local governments?",
     ruling: "Yes. The 2nd Amendment is incorporated against the states through the 14th Amendment.",
     sig: "Extended D.C. v. Heller (2008) to states via selective incorporation. Individuals have the right to keep arms for self-defense at home.",
-    tip: "Another selective incorporation case — the 2nd Amendment applied to states via the 14th. Connect to the incorporation doctrine."
+    tip: "Another selective incorporation case -- the 2nd Amendment applied to states via the 14th. Connect to the incorporation doctrine."
   },
   {
     name: "Citizens United v. FEC", year: 2010, unit: 5,
@@ -131,7 +131,7 @@ const REQ_DOCS = [
   { name: "Emancipation Proclamation", type: "Executive Order", year: "1863" },
   { name: "Federalist No. 39", type: "Federalist Paper", year: "1788" },
   { name: "The Gettysburg Address", type: "Speech", year: "1863" },
-  { name: "Adam Smith — The Wealth of Nations (Core Principles)", type: "Economic Text", year: "1776" },
+  { name: "Adam Smith -- The Wealth of Nations (Core Principles)", type: "Economic Text", year: "1776" },
   { name: "Letter from Birmingham Jail", type: "Historical Document", year: "1963" }
 ];
 
@@ -143,7 +143,7 @@ const GOV_HISTORY = {
   "1/1":  [{ year: "1863", text: "President Lincoln issues the Emancipation Proclamation, declaring enslaved people in Confederate states to be free." }],
   "1/4":  [{ year: "1965", text: "President Lyndon B. Johnson outlines his 'Great Society' domestic program in his State of the Union address." }],
   "1/8":  [{ year: "1918", text: "President Woodrow Wilson presents his Fourteen Points to Congress, his vision for post-WWI peace including the League of Nations." }],
-  "1/20": [{ year: "1961", text: "John F. Kennedy is inaugurated, delivering his famous address: 'Ask not what your country can do for you—ask what you can do for your country.'" }],
+  "1/20": [{ year: "1961", text: "John F. Kennedy is inaugurated, delivering his famous address: 'Ask not what your country can do for you--ask what you can do for your country.'" }],
   "2/3":  [{ year: "1870", text: "The 15th Amendment is ratified, prohibiting denial of the vote based on race, color, or previous condition of servitude." }],
   "2/6":  [{ year: "1933", text: "The 20th Amendment is ratified, moving the presidential inauguration date from March 4 to January 20." }],
   "2/24": [{ year: "1803", text: "Chief Justice John Marshall delivers the Marbury v. Madison opinion, establishing the doctrine of judicial review." }],
@@ -154,16 +154,16 @@ const GOV_HISTORY = {
   "4/9":  [{ year: "1865", text: "Confederate General Robert E. Lee surrenders at Appomattox Court House, effectively ending the Civil War." }],
   "4/12": [{ year: "1861", text: "Confederate forces fire on Fort Sumter, South Carolina, beginning the Civil War." }],
   "4/14": [{ year: "1865", text: "President Abraham Lincoln is shot at Ford's Theatre; he dies the following morning." }],
-  "4/19": [{ year: "1775", text: "Battles of Lexington and Concord — 'the shot heard round the world' — begin the American Revolutionary War." }],
+  "4/19": [{ year: "1775", text: "Battles of Lexington and Concord -- 'the shot heard round the world' -- begin the American Revolutionary War." }],
   "5/17": [{ year: "1954", text: "The Supreme Court unanimously rules in Brown v. Board of Education that racial segregation in public schools is unconstitutional." }],
   "5/18": [{ year: "1896", text: "The Supreme Court decides Plessy v. Ferguson, establishing the 'separate but equal' doctrine that would stand for 58 years." }],
-  "5/25": [{ year: "1787", text: "The Constitutional Convention opens in Philadelphia with delegates from 12 states — the drafting of the U.S. Constitution begins." }],
+  "5/25": [{ year: "1787", text: "The Constitutional Convention opens in Philadelphia with delegates from 12 states -- the drafting of the U.S. Constitution begins." }],
   "6/2":  [{ year: "1924", text: "President Coolidge signs the Indian Citizenship Act, granting U.S. citizenship to all Native Americans born in the country." }],
   "6/5":  [{ year: "1968", text: "Senator Robert F. Kennedy is assassinated in Los Angeles after winning the California Democratic primary." }],
   "6/13": [{ year: "1966", text: "The Supreme Court rules in Miranda v. Arizona that suspects must be informed of their rights before police interrogation." }],
-  "6/15": [{ year: "1215", text: "King John of England seals the Magna Carta — the foundational document for constitutional limits on government power, later influencing the Founders." }],
+  "6/15": [{ year: "1215", text: "King John of England seals the Magna Carta -- the foundational document for constitutional limits on government power, later influencing the Founders." }],
   "6/17": [{ year: "1972", text: "Five men are arrested breaking into the Democratic National Committee headquarters at the Watergate complex, beginning the Watergate scandal." }],
-  "6/19": [{ year: "1865", text: "Juneteenth: Union soldiers arrive in Galveston, Texas, announcing the end of slavery — two months after the Civil War ended." }],
+  "6/19": [{ year: "1865", text: "Juneteenth: Union soldiers arrive in Galveston, Texas, announcing the end of slavery -- two months after the Civil War ended." }],
   "6/20": [{ year: "1788", text: "New Hampshire becomes the 9th state to ratify the Constitution, the minimum needed to put it into effect." }],
   "6/21": [{ year: "1788", text: "The U.S. Constitution officially goes into effect after New Hampshire's ratification the prior day." }],
   "6/26": [{ year: "2015", text: "The Supreme Court rules in Obergefell v. Hodges that the Constitution guarantees a right to same-sex marriage nationwide." }],
@@ -181,14 +181,14 @@ const GOV_HISTORY = {
   "9/17": [{ year: "1787", text: "Delegates to the Constitutional Convention sign the final draft of the U.S. Constitution in Philadelphia." }],
   "9/22": [{ year: "1862", text: "President Lincoln issues the preliminary Emancipation Proclamation, announcing his intention to free enslaved people in rebel states." }],
   "10/2": [{ year: "1967", text: "Thurgood Marshall is sworn in as the first African American Supreme Court Justice." }],
-  "10/7": [{ year: "1777", text: "American forces defeat British troops at the Battle of Saratoga — a turning point that brings France into the Revolutionary War." }],
+  "10/7": [{ year: "1777", text: "American forces defeat British troops at the Battle of Saratoga -- a turning point that brings France into the Revolutionary War." }],
   "10/26":[{ year: "2001", text: "President Bush signs the USA PATRIOT Act into law, expanding government surveillance powers after the September 11 attacks." }],
   "11/2": [{ year: "1920", text: "Warren G. Harding wins the first presidential election in which women could vote nationally following the 19th Amendment." }],
   "11/8": [{ year: "1960", text: "John F. Kennedy defeats Richard Nixon in one of the closest presidential elections in U.S. history." }],
   "11/19":[{ year: "1863", text: "President Lincoln delivers the Gettysburg Address, reframing the Civil War as a fight for democratic equality." }],
   "12/7": [{ year: "1941", text: "Japan attacks Pearl Harbor; President Roosevelt calls it 'a date which will live in infamy' and Congress declares war." }],
   "12/10":[{ year: "1948", text: "The United Nations adopts the Universal Declaration of Human Rights, drafted with significant U.S. involvement." }],
-  "12/15":[{ year: "1791", text: "The Bill of Rights — the first 10 amendments to the Constitution — is ratified, protecting individual liberties from government overreach." }]
+  "12/15":[{ year: "1791", text: "The Bill of Rights -- the first 10 amendments to the Constitution -- is ratified, protecting individual liberties from government overreach." }]
 };
 
 // ══════════════════════════════════════════════════════════
@@ -219,7 +219,7 @@ const DEFAULT_CONTENT = {
   "exit_ticket": "In your own words, explain the significance of Tinker v. Des Moines. How does it affect students today?",
   "materials": [
     {
-      "title": "Unit 3 Slides — 1st Amendment",
+      "title": "Unit 3 Slides -- 1st Amendment",
       "type": "slides",
       "url": "https://docs.google.com/presentation",
       "date": "Jun 20"
@@ -231,13 +231,13 @@ const DEFAULT_CONTENT = {
       "date": "Jun 18"
     },
     {
-      "title": "Khan Academy — Civil Rights Overview",
+      "title": "Khan Academy -- Civil Rights Overview",
       "type": "video",
       "url": "https://khanacademy.org",
       "date": "Jun 17"
     },
     {
-      "title": "FRQ Practice — Unit 2 Answer Key",
+      "title": "FRQ Practice -- Unit 2 Answer Key",
       "type": "doc",
       "url": "https://docs.google.com/document",
       "date": "Jun 14"
@@ -249,7 +249,7 @@ const DEFAULT_CONTENT = {
       "date": "Jun 27"
     },
     {
-      "title": "FRQ — Argumentative Essay",
+      "title": "FRQ -- Argumentative Essay",
       "date": "Jul 1"
     },
     {
@@ -273,7 +273,7 @@ const DEFAULT_CONTENT = {
     {
       "number": 1,
       "title": "Foundations of American Democracy",
-      "weight": "15–22%",
+      "weight": "15-22%",
       "topics": [
         "Principles of American Democracy",
         "Articles of Confederation & Constitutional Convention",
@@ -295,7 +295,7 @@ const DEFAULT_CONTENT = {
     {
       "number": 2,
       "title": "Interactions Among Branches of Government",
-      "weight": "25–36%",
+      "weight": "25-36%",
       "topics": [
         "Congress: Structure, Powers & Process",
         "The Presidency: Powers, Roles & Limits",
@@ -317,7 +317,7 @@ const DEFAULT_CONTENT = {
     {
       "number": 3,
       "title": "Civil Liberties & Civil Rights",
-      "weight": "13–18%",
+      "weight": "13-18%",
       "topics": [
         "First Amendment Freedoms",
         "Second Amendment & Gun Rights Debate",
@@ -344,7 +344,7 @@ const DEFAULT_CONTENT = {
     {
       "number": 4,
       "title": "American Political Ideologies & Beliefs",
-      "weight": "10–15%",
+      "weight": "10-15%",
       "topics": [
         "American Political Culture",
         "Political Socialization",
@@ -358,7 +358,7 @@ const DEFAULT_CONTENT = {
     {
       "number": 5,
       "title": "Political Participation",
-      "weight": "20–27%",
+      "weight": "20-27%",
       "topics": [
         "Political Parties: Structure & Function",
         "Party Realignment & Third Parties",
@@ -384,7 +384,7 @@ const DEFAULT_CONTENT = {
       "tips": [
         "Describe the scenario in your own words first",
         "Apply the specific concept named in the prompt",
-        "Connect back to the specific scenario — always bring it home"
+        "Connect back to the specific scenario -- always bring it home"
       ]
     },
     {
@@ -392,7 +392,7 @@ const DEFAULT_CONTENT = {
       "points": 4,
       "tips": [
         "Read the data source and title carefully",
-        "Describe the data accurately — do not interpret yet",
+        "Describe the data accurately -- do not interpret yet",
         "Draw a connection to a course concept",
         "Use evidence from the data to support your conclusion"
       ]
@@ -403,7 +403,7 @@ const DEFAULT_CONTENT = {
       "tips": [
         "Identify the constitutional principle at stake in the required case",
         "Describe the ruling AND the reasoning",
-        "Compare to the non-required case — similarities AND differences",
+        "Compare to the non-required case -- similarities AND differences",
         "Apply the reasoning to a new scenario if asked"
       ]
     },
@@ -411,10 +411,10 @@ const DEFAULT_CONTENT = {
       "type": "Argumentative Essay",
       "points": 6,
       "tips": [
-        "State a defensible claim — take a clear position",
+        "State a defensible claim -- take a clear position",
         "Use at least ONE of the required foundational documents",
         "Provide evidence from TWO different pieces of evidence",
-        "Respond to the opposing perspective — don't ignore it",
+        "Respond to the opposing perspective -- don't ignore it",
         "Conclude with a broader implication"
       ]
     }
@@ -450,7 +450,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Civil Rights",
-      "definition": "The rights of citizens to political and social equality — protections against discrimination based on race, gender, religion, or other characteristics."
+      "definition": "The rights of citizens to political and social equality -- protections against discrimination based on race, gender, religion, or other characteristics."
     },
     {
       "term": "Due Process",
@@ -458,7 +458,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Equal Protection",
-      "definition": "14th Amendment guarantee that no state shall deny any person equal protection of the laws — the foundation of most civil rights litigation."
+      "definition": "14th Amendment guarantee that no state shall deny any person equal protection of the laws -- the foundation of most civil rights litigation."
     },
     {
       "term": "Bicameralism",
@@ -494,7 +494,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Political Socialization",
-      "definition": "The process by which people develop their political values, beliefs, and identities — primarily through family, school, peers, and media."
+      "definition": "The process by which people develop their political values, beliefs, and identities -- primarily through family, school, peers, and media."
     },
     {
       "term": "Writ of Certiorari",
@@ -502,7 +502,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Amicus Curiae",
-      "definition": "'Friend of the court' — a brief filed by an outside party (often an interest group) offering information or arguments in a case before the court."
+      "definition": "'Friend of the court' -- a brief filed by an outside party (often an interest group) offering information or arguments in a case before the court."
     },
     {
       "term": "Exclusionary Rule",
@@ -514,7 +514,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Establishment Clause",
-      "definition": "First Amendment clause prohibiting Congress from making any law 'respecting an establishment of religion' — separation of church and state."
+      "definition": "First Amendment clause prohibiting Congress from making any law 'respecting an establishment of religion' -- separation of church and state."
     },
     {
       "term": "Free Exercise Clause",
@@ -530,11 +530,11 @@ const DEFAULT_CONTENT = {
     },
     {
       "term": "Dual Federalism",
-      "definition": "'Layer cake' federalism — national and state governments each operate independently in their own sphere. Dominant from the Founding to the New Deal."
+      "definition": "'Layer cake' federalism -- national and state governments each operate independently in their own sphere. Dominant from the Founding to the New Deal."
     },
     {
       "term": "Cooperative Federalism",
-      "definition": "'Marble cake' federalism — national and state governments share responsibilities and work together. Dominant since the New Deal era."
+      "definition": "'Marble cake' federalism -- national and state governments share responsibilities and work together. Dominant since the New Deal era."
     },
     {
       "term": "Categorical Grants",
@@ -551,7 +551,7 @@ async function init() {
   try { buildStaticSections(); } catch(e) { console.error('Static section render failed', e); }
   try { await loadContent(); } catch(e) { console.error('Content render failed', e); }
   loadHistory().catch(() => {
-    // TDIH failed silently — fallback already handled inside loadHistory
+    // TDIH failed silently -- fallback already handled inside loadHistory
   });
 }
 
@@ -604,7 +604,7 @@ async function loadContent() {
     </a>
   `).join('');
 
-  // Upcoming — highlight items within 3 days
+  // Upcoming -- highlight items within 3 days
   const now = new Date();
   document.getElementById('upcoming-list').innerHTML = contentData.upcoming.map(u => {
     const d = new Date(u.date + ', ' + now.getFullYear());
@@ -785,12 +785,12 @@ async function loadHistory() {
     if (tdihEvents.length === 0 && GOV_HISTORY[key]) {
       tdihEvents = GOV_HISTORY[key];
     } else if (tdihEvents.length === 0) {
-      tdihEvents = [{ year: '—', text: 'No notable American government events found for today.' }];
+      tdihEvents = [{ year: '--', text: 'No notable American government events found for today.' }];
     }
   } catch (err) {
     // Fall back to our curated data
     tdihEvents = GOV_HISTORY[key] || [
-      { year: '—', text: 'Historical data unavailable. Check your connection.' }
+      { year: '--', text: 'Historical data unavailable. Check your connection.' }
     ];
   }
 
@@ -820,7 +820,7 @@ document.getElementById('tdih-next').addEventListener('click', () => {
 document.getElementById('tdih-discuss').addEventListener('click', () => {
   if (!tdihEvents.length) return;
   const e = tdihEvents[tdihIndex];
-  const text = `Discussion starter: In ${e.year}, ${e.text} — How does this event connect to what we're studying in AP Gov?`;
+  const text = `Discussion starter: In ${e.year}, ${e.text} -- How does this event connect to what we're studying in AP Gov?`;
   // Copy to clipboard
   navigator.clipboard.writeText(text).then(() => {
     const btn = document.getElementById('tdih-discuss');
@@ -981,18 +981,35 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'archive', 'exit'];
 
+// ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
+function switchToTab(target) {
+  // Remove active from all tabs
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  // Remove has-active from all groups
+  document.querySelectorAll('.nav-group').forEach(g => g.classList.remove('has-active'));
+
+  // Find and activate the clicked tab
+  const activeTab = document.querySelector('.nav-tab[data-tab="' + target + '"]');
+  if (activeTab) {
+    activeTab.classList.add('active');
+    // If it's inside a dropdown group, mark the group as has-active
+    const group = activeTab.closest('.nav-group');
+    if (group) group.classList.add('has-active');
+  }
+
+  // Show/hide tab panels
+  TAB_IDS.forEach(id => {
+    const el = document.getElementById('tab-' + id);
+    if (el) {
+      el.style.display = (id === target) ? '' : 'none';
+      el.classList.toggle('active', id === target);
+    }
+  });
+}
+
 document.querySelectorAll('.nav-tab').forEach(tab => {
   tab.addEventListener('click', () => {
-    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
-    const target = tab.dataset.tab;
-    TAB_IDS.forEach(id => {
-      const el = document.getElementById('tab-' + id);
-      if (el) {
-        el.style.display = (id === target) ? '' : 'none';
-        el.classList.toggle('active', id === target);
-      }
-    });
+    if (tab.dataset.tab) switchToTab(tab.dataset.tab);
   });
 });
 
@@ -1010,7 +1027,7 @@ style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { tr
 document.head.appendChild(style);
 
 // ══════════════════════════════════════════════════════════
-//  GLOSSARY DATA — 392 Terms, 5 Units, 23 Groups
+//  GLOSSARY DATA -- 392 Terms, 5 Units, 23 Groups
 // ══════════════════════════════════════════════════════════
 const GLOSSARY_UNITS = [
   {
@@ -1597,7 +1614,7 @@ var FRQ_TIMER_DATA = [
   {
     type: 'Argumentative Essay', pts: 6, minutes: 25,
     checklist: [
-      'Stated a defensible claim — took a clear position',
+      'Stated a defensible claim -- took a clear position',
       'Used at least ONE required foundational document',
       'Provided evidence from TWO different sources',
       'Explained how evidence supports your argument',
@@ -1693,7 +1710,7 @@ var frqTimerBuilt = false;
 
 
 // ══════════════════════════════════════════════════════════
-//  ADMIN PANEL — type "dev" anywhere to open
+//  ADMIN PANEL -- type "dev" anywhere to open
 // ══════════════════════════════════════════════════════════
 (function() {
   var keyBuffer = '';
@@ -1716,7 +1733,7 @@ var LIVING_DOCS = [
     title: 'Declaration of Independence',
     year: 1776,
     author: 'Thomas Jefferson',
-    intro: 'The Declaration announced American independence from Britain and established the philosophical foundation for American democracy — natural rights, popular sovereignty, and the social contract. It is the "why" behind the Constitution\'s "how."',
+    intro: 'The Declaration announced American independence from Britain and established the philosophical foundation for American democracy -- natural rights, popular sovereignty, and the social contract. It is the "why" behind the Constitution\'s "how."',
     sections: [
       {
         title: 'Preamble & Natural Rights',
@@ -1727,12 +1744,12 @@ var LIVING_DOCS = [
             plain: 'When a people need to break away from their government, they should explain why to the world.',
             standards: ['1.1'],
             cases: [],
-            connections: 'Introduces the idea of popular sovereignty — the people have the right to change their government.'
+            connections: 'Introduces the idea of popular sovereignty -- the people have the right to change their government.'
           },
           {
             num: '¶2',
             text: 'We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.',
-            plain: 'All people are born equal and have rights that cannot be taken away — life, liberty, and the pursuit of happiness.',
+            plain: 'All people are born equal and have rights that cannot be taken away -- life, liberty, and the pursuit of happiness.',
             standards: ['1.1', '3.4'],
             cases: ['Brown v. Board of Education'],
             connections: 'Foundation for the Equal Protection Clause (14th Amendment) and all civil rights arguments. Lincoln cited this in the Gettysburg Address.'
@@ -1740,7 +1757,7 @@ var LIVING_DOCS = [
           {
             num: '¶3',
             text: 'That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed.',
-            plain: 'Governments exist to protect these rights, and their power comes from the people — not from kings or tradition.',
+            plain: 'Governments exist to protect these rights, and their power comes from the people -- not from kings or tradition.',
             standards: ['1.1'],
             cases: [],
             connections: 'Defines popular sovereignty. Direct source for the concept that appears in AP Gov FRQs about the basis of legitimate government.'
@@ -1751,7 +1768,7 @@ var LIVING_DOCS = [
             plain: 'When a government fails to protect rights, the people have the right to change or replace it.',
             standards: ['1.1'],
             cases: [],
-            connections: 'The social contract theory of Locke — government by consent, with the right of revolution if that contract is broken.'
+            connections: 'The social contract theory of Locke -- government by consent, with the right of revolution if that contract is broken.'
           }
         ]
       }
@@ -1762,7 +1779,7 @@ var LIVING_DOCS = [
     title: 'Federalist No. 10',
     year: 1787,
     author: 'James Madison',
-    intro: 'Madison\'s most important essay argues that a large republic is the best defense against "factions" — groups that pursue their own interests at the expense of the common good. This is the foundational argument for the entire Constitution.',
+    intro: 'Madison\'s most important essay argues that a large republic is the best defense against "factions" -- groups that pursue their own interests at the expense of the common good. This is the foundational argument for the entire Constitution.',
     sections: [
       {
         title: 'The Problem of Faction',
@@ -1770,7 +1787,7 @@ var LIVING_DOCS = [
           {
             num: '§1',
             text: 'Among the numerous advantages promised by a well-constructed Union, none deserves to be more accurately developed than its tendency to break and control the violence of faction.',
-            plain: 'One of the biggest advantages of a strong national government is its ability to control dangerous factions — groups that put their own interests above everyone else\'s.',
+            plain: 'One of the biggest advantages of a strong national government is its ability to control dangerous factions -- groups that put their own interests above everyone else\'s.',
             standards: ['1.3'],
             cases: [],
             connections: 'Madison defines the central problem the Constitution solves. Every AP Gov unit traces back to this tension.'
@@ -1778,7 +1795,7 @@ var LIVING_DOCS = [
           {
             num: '§2',
             text: 'By a faction, I understand a number of citizens... who are united and actuated by some common impulse of passion, or of interest, adverse to the rights of other citizens, or to the permanent and aggregate interests of the community.',
-            plain: 'A faction is any group — majority or minority — that pursues its own interests at the expense of other citizens or the common good.',
+            plain: 'A faction is any group -- majority or minority -- that pursues its own interests at the expense of other citizens or the common good.',
             standards: ['1.3', '5.3'],
             cases: [],
             connections: 'Directly relevant to interest groups (Unit 5). Madison predicted exactly what PACs and lobbying groups would become.'
@@ -1789,7 +1806,7 @@ var LIVING_DOCS = [
             plain: 'You can either eliminate the causes of factions (impossible in a free society) or design a system that controls their effects. Madison chooses the second.',
             standards: ['1.3'],
             cases: [],
-            connections: 'Sets up his argument for the large republic. This is why we have so many checks and balances — not to prevent factions, but to prevent any one from winning completely.'
+            connections: 'Sets up his argument for the large republic. This is why we have so many checks and balances -- not to prevent factions, but to prevent any one from winning completely.'
           }
         ]
       },
@@ -1799,7 +1816,7 @@ var LIVING_DOCS = [
           {
             num: '§4',
             text: 'The effect of... is to refine and enlarge the public views, by passing them through the medium of a chosen body of citizens, whose wisdom may best discern the true interest of their country.',
-            plain: 'A representative republic — not a direct democracy — filters public opinion through elected officials who can make wiser decisions than a mob.',
+            plain: 'A representative republic -- not a direct democracy -- filters public opinion through elected officials who can make wiser decisions than a mob.',
             standards: ['1.3'],
             cases: [],
             connections: 'The argument for representative democracy over direct democracy. Links to the Trustee vs. Delegate models of representation.'
@@ -1807,7 +1824,7 @@ var LIVING_DOCS = [
           {
             num: '§5',
             text: 'Extend the sphere, and you take in a greater variety of parties and interests; you make it less probable that a majority of the whole will have a common motive to invade the rights of other citizens.',
-            plain: 'The bigger the republic, the more groups there are competing — making it harder for any single faction to dominate.',
+            plain: 'The bigger the republic, the more groups there are competing -- making it harder for any single faction to dominate.',
             standards: ['1.3'],
             cases: [],
             connections: 'The core argument of Federalist 10. A large diverse nation prevents tyranny better than a small homogeneous one.'
@@ -1821,7 +1838,7 @@ var LIVING_DOCS = [
     title: 'Federalist No. 51',
     year: 1788,
     author: 'James Madison',
-    intro: 'If Federalist 10 explains why we need the Constitution, Federalist 51 explains how it works. Madison argues that the structure of government itself — separation of powers, checks and balances — prevents tyranny without relying on the goodness of those in power.',
+    intro: 'If Federalist 10 explains why we need the Constitution, Federalist 51 explains how it works. Madison argues that the structure of government itself -- separation of powers, checks and balances -- prevents tyranny without relying on the goodness of those in power.',
     sections: [
       {
         title: 'Structure as Safeguard',
@@ -1829,7 +1846,7 @@ var LIVING_DOCS = [
           {
             num: '§1',
             text: 'In order to lay a due foundation for that separate and distinct exercise of the different powers of government... it is evident that each department should have a will of its own.',
-            plain: 'For separation of powers to actually work, each branch of government needs to be independent — its own source of authority, not depending on the others.',
+            plain: 'For separation of powers to actually work, each branch of government needs to be independent -- its own source of authority, not depending on the others.',
             standards: ['2.2'],
             cases: ['U.S. v. Nixon'],
             connections: 'The entire structure of Articles I, II, and III flows from this principle. Key for any FRQ about separation of powers.'
@@ -1840,7 +1857,7 @@ var LIVING_DOCS = [
             plain: 'Since people are self-interested, design the system so that each official\'s personal ambition keeps them from letting others take too much power.',
             standards: ['2.2'],
             cases: [],
-            connections: 'The most-quoted line in AP Gov. Madison is arguing for human nature — not virtue — as the foundation of constitutional government.'
+            connections: 'The most-quoted line in AP Gov. Madison is arguing for human nature -- not virtue -- as the foundation of constitutional government.'
           },
           {
             num: '§3',
@@ -1880,7 +1897,7 @@ var LIVING_DOCS = [
           {
             num: '§1',
             text: 'This government is to possess absolute and uncontroulable power, legislative, executive and judicial, with respect to every object to which it extends.',
-            plain: 'The proposed national government will have total power over everything it touches — with no limits from the states.',
+            plain: 'The proposed national government will have total power over everything it touches -- with no limits from the states.',
             standards: ['1.3', '1.2'],
             cases: [],
             connections: 'The Anti-Federalist fear that the Supremacy Clause would eliminate state power. Compare directly to Federalist 51\'s response.'
@@ -1910,7 +1927,7 @@ var LIVING_DOCS = [
     title: 'The Gettysburg Address',
     year: 1863,
     author: 'Abraham Lincoln',
-    intro: 'In 272 words, Lincoln redefined what the Civil War was about — not just saving the Union, but fulfilling the promise of the Declaration of Independence. He reframed American democracy around equality and popular sovereignty, giving both new meaning. Required document per EK 1.1.A.3.',
+    intro: 'In 272 words, Lincoln redefined what the Civil War was about -- not just saving the Union, but fulfilling the promise of the Declaration of Independence. He reframed American democracy around equality and popular sovereignty, giving both new meaning. Required document per EK 1.1.A.3.',
     sections: [
       {
         title: 'The Address',
@@ -1921,7 +1938,7 @@ var LIVING_DOCS = [
             plain: 'Eighty-seven years ago (1776), the founders created a nation built on the idea that all people are equal.',
             standards: ['1.1', '3.4'],
             cases: ['Brown v. Board of Education'],
-            connections: 'Lincoln reaches back to 1776 — not 1787 — as the nation\'s founding moment. Equality, not the Constitution, is the nation\'s core promise. This reframes the entire debate about civil rights.'
+            connections: 'Lincoln reaches back to 1776 -- not 1787 -- as the nation\'s founding moment. Equality, not the Constitution, is the nation\'s core promise. This reframes the entire debate about civil rights.'
           },
           {
             num: '¶2',
@@ -1929,15 +1946,15 @@ var LIVING_DOCS = [
             plain: 'The Civil War is a test of whether a democracy built on equality can survive.',
             standards: ['1.1'],
             cases: [],
-            connections: 'Lincoln frames the war as a test of democracy itself — not just American union. This is the argument for why preserving the Union matters to the world.'
+            connections: 'Lincoln frames the war as a test of democracy itself -- not just American union. This is the argument for why preserving the Union matters to the world.'
           },
           {
             num: '¶3',
-            text: '...that this nation, under God, shall have a new birth of freedom — and that government of the people, by the people, for the people, shall not perish from the earth.',
+            text: '...that this nation, under God, shall have a new birth of freedom -- and that government of the people, by the people, for the people, shall not perish from the earth.',
             plain: 'America will be reborn with true freedom, and government by the consent of the governed will survive.',
             standards: ['1.1'],
             cases: [],
-            connections: 'Popular sovereignty defined in its most powerful form. "Government of the people, by the people, for the people" is Lincoln\'s restatement of the social contract — and the most quoted definition of democracy in American history.'
+            connections: 'Popular sovereignty defined in its most powerful form. "Government of the people, by the people, for the people" is Lincoln\'s restatement of the social contract -- and the most quoted definition of democracy in American history.'
           }
         ]
       }
@@ -1948,7 +1965,7 @@ var LIVING_DOCS = [
     title: 'Emancipation Proclamation',
     year: 1863,
     author: 'Abraham Lincoln',
-    intro: 'Issued January 1, 1863, the Emancipation Proclamation declared enslaved people in Confederate states to be free. It was a war measure — limited in scope but massive in meaning. It reframed the Civil War as a war against slavery and set the stage for the 13th Amendment. Required document per EK 3.12.A.1.',
+    intro: 'Issued January 1, 1863, the Emancipation Proclamation declared enslaved people in Confederate states to be free. It was a war measure -- limited in scope but massive in meaning. It reframed the Civil War as a war against slavery and set the stage for the 13th Amendment. Required document per EK 3.12.A.1.',
     sections: [
       {
         title: 'Key Provisions',
@@ -1967,11 +1984,85 @@ var LIVING_DOCS = [
             plain: 'The federal government and military will enforce and protect this freedom.',
             standards: ['3.12', '2.3'],
             cases: [],
-            connections: 'Lincoln used executive/war powers to issue the Proclamation — not an act of Congress. This is a key example of presidential inherent/war powers. The 13th Amendment (1865) made abolition permanent and universal.'
+            connections: 'Lincoln used executive/war powers to issue the Proclamation -- not an act of Congress. This is a key example of presidential inherent/war powers. The 13th Amendment (1865) made abolition permanent and universal.'
           }
         ]
       }
     ]
+  },
+  {
+    id: "fed39",
+    title: "Federalist No. 39",
+    year: 1788,
+    author: "James Madison",
+    intro: "Required document per Fall 2026 CED (EK 1.7.A.1). Madison argues the Constitution creates a government that is neither purely national nor purely federal -- a unique hybrid that divides authority to prevent tyranny while allowing broad political participation.",
+    sections: [{
+      title: "National vs. Federal Character",
+      clauses: [
+        { num: "S1", text: "The Constitution is to be founded on the assent and ratification of the people of America... not as individuals composing one entire nation, but as composing the distinct and individual States to which they respectively belong.", plain: "The Constitution is ratified by the people acting through their states -- making it partly federal rather than purely national.", standards: ["1.7"], cases: ["McCulloch v. Maryland"], connections: "Madison's key argument for how the Constitution balances national and state power. The ratification process itself reflects a federal, not national, character." },
+        { num: "S2", text: "The government is of a mixed nature. In its foundation it is federal, not national; in the sources from which the ordinary powers of the government are drawn, it is partly federal and partly national.", plain: "The U.S. government is neither purely federal nor purely national -- it is a unique mix of both.", standards: ["1.7","1.2"], cases: [], connections: "The core AP Gov argument for American federalism. Know this for FRQs on the balance of national and state power." }
+      ]
+    }]
+  },
+  {
+    id: "fed70",
+    title: "Federalist No. 70",
+    year: 1788,
+    author: "Alexander Hamilton",
+    intro: "Hamilton argues for a single, energetic executive. Unity -- one president, not a committee -- is essential to decisive action, accountability, and effective governance.",
+    sections: [{
+      title: "Energy in the Executive",
+      clauses: [
+        { num: "S1", text: "Energy in the executive is a leading character in the definition of good government... A feeble executive implies a feeble execution of the government.", plain: "A strong, energetic president is essential to good government. Presidential weakness means governmental weakness.", standards: ["2.3"], cases: [], connections: "The philosophical foundation for strong presidential power. Connects to executive orders, war powers, and debates about presidential overreach." },
+        { num: "S2", text: "Decision, activity, secrecy, and despatch will generally characterize the proceedings of one man in a much more eminent degree than the proceedings of any greater number.", plain: "A single president can act decisively, quickly, and confidentially -- qualities impossible in a committee.", standards: ["2.3"], cases: ["U.S. v. Nixon"], connections: "The argument for a unitary executive. Connects to executive privilege and the need for confidential presidential deliberation." },
+        { num: "S3", text: "The ingredients which constitute safety in the republican sense are, first, a due dependence on the people, secondly, a due responsibility.", plain: "A safe executive must be accountable to the people. A single president is easier to hold responsible than a committee.", standards: ["2.3","2.2"], cases: [], connections: "Hamilton's accountability argument. Connects to checks and balances and congressional oversight of the executive." }
+      ]
+    }]
+  },
+  {
+    id: "fed76",
+    title: "Federalist No. 76",
+    year: 1788,
+    author: "Alexander Hamilton",
+    intro: "Hamilton defends the presidential appointment power and Senate confirmation process, arguing that a single responsible executive best ensures qualified nominations while the Senate checks corruption.",
+    sections: [{
+      title: "The Appointment Power",
+      clauses: [
+        { num: "S1", text: "The sole and undivided responsibility of one man will naturally beget a livelier sense of duty and a more exact regard to reputation.", plain: "Because the president alone is responsible for nominations, they have a strong personal incentive to choose qualified people -- their reputation is on the line.", standards: ["2.3","2.5"], cases: [], connections: "Foundation for the presidential nomination process. Connects to judicial nominations, senatorial courtesy, and Senate confirmation battles." },
+        { num: "S2", text: "The necessity of their concurrence would have a powerful, though, in general, a silent operation... it would be an excellent check upon a spirit of favoritism in the President.", plain: "Senate confirmation disciplines presidential nominations -- even the threat of rejection prevents cronyism.", standards: ["2.5","2.2"], cases: [], connections: "The Senate advice and consent role. Connects to filibuster of nominees, the nuclear option, and judicial confirmation battles." }
+      ]
+    }]
+  },
+  {
+    id: "fed78",
+    title: "Federalist No. 78",
+    year: 1788,
+    author: "Alexander Hamilton",
+    intro: "Hamilton defends the federal judiciary as the least dangerous branch -- it controls neither the sword nor the purse. He also makes the strongest pre-constitutional argument for judicial review and lifetime tenure.",
+    sections: [{
+      title: "The Least Dangerous Branch",
+      clauses: [
+        { num: "S1", text: "The judiciary, from the nature of its functions, will always be the least dangerous to the political rights of the Constitution.", plain: "Courts are the weakest branch -- they have no army and no budget. Their power depends entirely on persuasion and legitimacy.", standards: ["2.5"], cases: ["Marbury v. Madison"], connections: "Foundation for an independent judiciary. Marbury v. Madison (1803) confirmed that courts ARE powerful, but through interpretation, not force." },
+        { num: "S2", text: "A constitution is, in fact, and must be regarded by the judges, as a fundamental law. It therefore belongs to them to ascertain its meaning.", plain: "It is the courts' job to interpret the Constitution. When a law conflicts with the Constitution, courts must follow the Constitution.", standards: ["2.5"], cases: ["Marbury v. Madison"], connections: "Hamilton directly anticipates judicial review. This is the strongest pre-Marbury argument for the courts' power to strike down unconstitutional laws." },
+        { num: "S3", text: "The complete independence of the courts of justice is peculiarly essential in a limited Constitution... judges should hold their offices during good behavior.", plain: "Independent judges with lifetime tenure are essential -- they cannot be fired for unpopular decisions.", standards: ["2.5"], cases: [], connections: "The argument for lifetime federal judicial appointments. Connects to debates about judicial activism vs. restraint." }
+      ]
+    }]
+  },
+  {
+    id: "birmingham",
+    title: "Letter from Birmingham Jail",
+    year: 1963,
+    author: "Dr. Martin Luther King Jr.",
+    intro: "Written while imprisoned for protesting segregation in Birmingham, Alabama, this letter responds to white clergymen who called King's protests unwise and untimely. It is one of the most powerful defenses of civil disobedience ever written.",
+    sections: [{
+      title: "Just and Unjust Laws",
+      clauses: [
+        { num: "S1", text: "We know through painful experience that freedom is never voluntarily given by the oppressor; it must be demanded by the oppressed.", plain: "Those in power never give up power voluntarily -- freedom must be actively fought for.", standards: ["3.4"], cases: ["Brown v. Board of Education"], connections: "Foundation for the civil rights movement's direct action strategy. Connects to civil disobedience as political participation (Unit 5)." },
+        { num: "S2", text: "One has not only a legal but a moral responsibility to obey just laws. Conversely, one has a moral responsibility to disobey unjust laws.", plain: "People must follow just laws but have a moral duty to disobey unjust ones -- drawing on natural rights theory from the Declaration of Independence.", standards: ["3.4","1.1"], cases: [], connections: "The AP Gov definition of civil disobedience. King uses natural rights theory to argue unjust laws lack moral authority." },
+        { num: "S3", text: "An unjust law is a code that a numerical or power majority group compels a minority group to obey but does not make binding on itself.", plain: "An unjust law is one a majority forces on a minority but does not apply to itself. Segregation laws applied only to Black Americans.", standards: ["3.4"], cases: ["Brown v. Board of Education"], connections: "Directly connects to tyranny of the majority (Unit 1) and the Equal Protection Clause (14th Amendment)." },
+        { num: "S4", text: "The Negro's great stumbling block is not the White Citizen's Counciler or the Ku Klux Klanner, but the white moderate, who is more devoted to order than to justice.", plain: "The biggest obstacle to civil rights is not open racists but moderates who prefer order to justice and ask Black Americans to wait.", standards: ["3.4","5.5"], cases: [], connections: "King's critique of incrementalism. Connects to debates about the pace of reform and political participation strategies." }
+      ]
+    }]
   }
 ];
 
@@ -1984,7 +2075,7 @@ var DIAG_QUESTIONS = [
   { q: 'Which type of federal grant gives states the MOST flexibility in how to spend the money?', opts: ['Categorical grants', 'Block grants', 'Unfunded mandates', 'Revenue sharing'], ans: 1, unit: 1, topic: 'Fiscal Federalism' },
   { q: 'The filibuster is a Senate procedure that:', opts: ['Forces an immediate vote on legislation', 'Allows unlimited debate to delay or block a vote', 'Removes a senator from office', 'Overrides a presidential veto'], ans: 1, unit: 2, topic: 'Congress' },
   { q: 'An executive order differs from a law passed by Congress because it:', opts: ['Must be approved by the Senate', 'Does not require congressional approval', 'Must be signed by the Chief Justice', 'Requires a two-thirds majority vote'], ans: 1, unit: 2, topic: 'The Presidency' },
-  { q: 'Judicial review — the power to strike down unconstitutional laws — was established in:', opts: ['The Constitution\'s Article III', 'Marbury v. Madison (1803)', 'McCulloch v. Maryland (1819)', 'Federalist No. 78'], ans: 1, unit: 2, topic: 'Judicial Review' },
+  { q: 'Judicial review -- the power to strike down unconstitutional laws -- was established in:', opts: ['The Constitution\'s Article III', 'Marbury v. Madison (1803)', 'McCulloch v. Maryland (1819)', 'Federalist No. 78'], ans: 1, unit: 2, topic: 'Judicial Review' },
   { q: 'The "iron triangle" refers to the relationship between:', opts: ['The President, Senate, and House', 'A congressional committee, federal agency, and interest group', 'Federal, state, and local governments', 'The courts, Congress, and the executive'], ans: 1, unit: 2, topic: 'The Bureaucracy' },
   { q: 'Which Supreme Court case established that the exclusionary rule applies to state courts?', opts: ['Miranda v. Arizona', 'Gideon v. Wainwright', 'Mapp v. Ohio', 'Tinker v. Des Moines'], ans: 2, unit: 3, topic: 'Rights of the Accused' },
   { q: 'The "clear and present danger" test was established in:', opts: ['Tinker v. Des Moines', 'New York Times v. United States', 'Schenck v. United States', 'Engel v. Vitale'], ans: 2, unit: 3, topic: 'First Amendment' },
@@ -2122,10 +2213,10 @@ function diagShowResults() {
   var pct = Math.round(score / total * 100);
 
   document.getElementById('diag-score-big').textContent = score + '/' + total;
-  var msg = pct >= 80 ? '🎉 Excellent — you know this material!' :
-            pct >= 65 ? '👍 Good work — review the units below.' :
-            pct >= 50 ? '📚 Keep studying — focus on your weak spots.' :
-            '🔄 More review needed — use the flashcards and glossary.';
+  var msg = pct >= 80 ? '🎉 Excellent -- you know this material!' :
+            pct >= 65 ? '👍 Good work -- review the units below.' :
+            pct >= 50 ? '📚 Keep studying -- focus on your weak spots.' :
+            '🔄 More review needed -- use the flashcards and glossary.';
   document.getElementById('diag-score-msg').textContent = msg;
 
   // Unit breakdown
@@ -2148,7 +2239,7 @@ function diagShowResults() {
   var focusBox = document.getElementById('diag-focus-box');
   var focusList = document.getElementById('diag-focus-list');
   if (weakUnits.length > 0) {
-    focusList.textContent = 'Focus on: ' + weakUnits.join(', ') + ' — use the Glossary flashcards and review the Living Documents for these units.';
+    focusList.textContent = 'Focus on: ' + weakUnits.join(', ') + ' -- use the Glossary flashcards and review the Living Documents for these units.';
     focusBox.style.display = '';
   } else {
     focusBox.style.display = 'none';
@@ -2221,22 +2312,22 @@ var FRQ_CHARTS = {
     </svg>`
   },
   voter_turnout: {
-    title: 'Figure 1: Voter Turnout by Age Group — 2024 Presidential Election',
+    title: 'Figure 1: Voter Turnout by Age Group -- 2024 Presidential Election',
     svg: `<svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:480px;display:block;margin:0 auto;">
       <style>.axis{font:10px sans-serif;fill:#666}.label{font:11px sans-serif;fill:#333;font-weight:600}</style>
       <line x1="110" y1="10" x2="110" y2="170" stroke="#ccc" stroke-width="1"/>
       <line x1="110" y1="170" x2="460" y2="170" stroke="#ccc" stroke-width="1"/>
       <!-- Horizontal bars by age group -->
       <!-- 18-29: 48% -->
-      <text x="105" y="35" class="axis" text-anchor="end">18–29</text>
+      <text x="105" y="35" class="axis" text-anchor="end">18-29</text>
       <rect x="112" y="22" width="163" height="22" fill="#1a2e5a" rx="2"/>
       <text x="280" y="37" style="font:10px sans-serif;fill:#333;font-weight:700">48%</text>
       <!-- 30-44: 59% -->
-      <text x="105" y="75" class="axis" text-anchor="end">30–44</text>
+      <text x="105" y="75" class="axis" text-anchor="end">30-44</text>
       <rect x="112" y="62" width="200" height="22" fill="#1a2e5a" rx="2"/>
       <text x="317" y="77" style="font:10px sans-serif;fill:#333;font-weight:700">59%</text>
       <!-- 45-59: 68% -->
-      <text x="105" y="115" class="axis" text-anchor="end">45–59</text>
+      <text x="105" y="115" class="axis" text-anchor="end">45-59</text>
       <rect x="112" y="102" width="231" height="22" fill="#1a2e5a" rx="2"/>
       <text x="348" y="117" style="font:10px sans-serif;fill:#333;font-weight:700">68%</text>
       <!-- 60+: 74% -->
@@ -2461,7 +2552,7 @@ B. Describe the overall pattern shown in the data regarding the relationship bet
 
 C. Draw a conclusion about what this data suggests for political parties trying to build winning electoral coalitions. Use specific data from the graph as evidence.
 
-D. Explain ONE reason why younger voters (18–29) tend to have lower turnout rates than older voters, based on your knowledge of political participation.`
+D. Explain ONE reason why younger voters (18-29) tend to have lower turnout rates than older voters, based on your knowledge of political participation.`
   },
   {
     type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
@@ -2648,12 +2739,12 @@ var frqPracticeState = {
 
 // ── Build the prompt selector ──
 function buildFrqPracticeUI() {
-  // Prompt selector is built inline — see frqRenderPromptList()
+  // Prompt selector is built inline -- see frqRenderPromptList()
 }
 
 
 // ════════════════════════════════════════════════════════════════
-//  AMENDMENT TRACKER DATA — All 27 Amendments
+//  AMENDMENT TRACKER DATA -- All 27 Amendments
 // ════════════════════════════════════════════════════════════════
 var AMENDMENTS = [
   {
@@ -2662,7 +2753,7 @@ var AMENDMENTS = [
     plain: 'Congress cannot establish an official religion, prevent you from practicing your religion, restrict freedom of speech or the press, or stop people from peacefully assembling or petitioning the government.',
     standards: ['3.1'],
     cases: ['Engel v. Vitale','Tinker v. Des Moines','New York Times v. United States','Schenck v. United States'],
-    frqs: ['First Amendment freedoms appear in nearly every AP Gov exam. Know the Establishment Clause, Free Exercise Clause, freedom of speech, and prior restraint — all tested repeatedly.'],
+    frqs: ['First Amendment freedoms appear in nearly every AP Gov exam. Know the Establishment Clause, Free Exercise Clause, freedom of speech, and prior restraint -- all tested repeatedly.'],
     significance: 'The most litigated amendment in American history. Covers five distinct freedoms and is central to Unit 3.'
   },
   {
@@ -2671,7 +2762,7 @@ var AMENDMENTS = [
     plain: 'The people have the right to keep and bear arms. The Supreme Court has ruled this is an individual right, not just a collective militia right.',
     standards: ['3.2'],
     cases: ['McDonald v. Chicago'],
-    frqs: ['McDonald v. Chicago (2010) is a required SCOTUS case — it applied the 2nd Amendment to the states via selective incorporation.'],
+    frqs: ['McDonald v. Chicago (2010) is a required SCOTUS case -- it applied the 2nd Amendment to the states via selective incorporation.'],
     significance: 'One of the most debated amendments. McDonald v. Chicago incorporated it to the states in 2010.'
   },
   {
@@ -2689,7 +2780,7 @@ var AMENDMENTS = [
     plain: 'The government needs a warrant based on probable cause to search your home or seize your property. Evidence obtained illegally cannot be used in court (exclusionary rule).',
     standards: ['3.2'],
     cases: ['Mapp v. Ohio'],
-    frqs: ['Mapp v. Ohio (1961) applied the exclusionary rule to the states — key selective incorporation case.'],
+    frqs: ['Mapp v. Ohio (1961) applied the exclusionary rule to the states -- key selective incorporation case.'],
     significance: 'Foundation of search and seizure law. The exclusionary rule from Mapp v. Ohio is a required case.'
   },
   {
@@ -2698,7 +2789,7 @@ var AMENDMENTS = [
     plain: 'You cannot be tried for a serious federal crime without a grand jury indictment, tried twice for the same crime, forced to testify against yourself, or deprived of life/liberty/property without due process.',
     standards: ['3.2'],
     cases: ['Miranda v. Arizona'],
-    frqs: ['The 5th Amendment right against self-incrimination is the basis of Miranda v. Arizona (1966) — a required case.'],
+    frqs: ['The 5th Amendment right against self-incrimination is the basis of Miranda v. Arizona (1966) -- a required case.'],
     significance: 'Miranda rights flow from the 5th Amendment. The due process clause here applies to the federal government.'
   },
   {
@@ -2708,7 +2799,7 @@ var AMENDMENTS = [
     standards: ['3.2'],
     cases: ['Gideon v. Wainwright'],
     frqs: ['Gideon v. Wainwright (1963) applied the right to counsel to the states. Classic selective incorporation FRQ case.'],
-    significance: 'Gideon v. Wainwright extended this right to state courts — one of the most important selective incorporation decisions.'
+    significance: 'Gideon v. Wainwright extended this right to state courts -- one of the most important selective incorporation decisions.'
   },
   {
     num: 7, year: 1791, era: 'Bill of Rights',
@@ -2734,7 +2825,7 @@ var AMENDMENTS = [
     plain: 'Just because a right is not listed in the Constitution does not mean the people do not have it. The list of rights is not exhaustive.',
     standards: ['3.3'],
     cases: [],
-    frqs: ['Cited in privacy rights arguments — the right to privacy is not explicitly in the Constitution but courts have found it implied here and in the 14th Amendment.'],
+    frqs: ['Cited in privacy rights arguments -- the right to privacy is not explicitly in the Constitution but courts have found it implied here and in the 14th Amendment.'],
     significance: 'Foundation for unenumerated rights including privacy. Important for understanding how the Constitution is interpreted broadly.'
   },
   {
@@ -2770,7 +2861,7 @@ var AMENDMENTS = [
     plain: 'Slavery and involuntary servitude are abolished throughout the United States, except as punishment for a crime.',
     standards: ['3.4'],
     cases: [],
-    frqs: ['Frequently appears in civil rights FRQs. Know the connection to the Emancipation Proclamation (1863) — the Proclamation was a war measure, the 13th Amendment made abolition permanent.'],
+    frqs: ['Frequently appears in civil rights FRQs. Know the connection to the Emancipation Proclamation (1863) -- the Proclamation was a war measure, the 13th Amendment made abolition permanent.'],
     significance: 'The most fundamental change to the Constitution. Ended legal slavery and prompted the Reconstruction Amendments.'
   },
   {
@@ -2779,17 +2870,17 @@ var AMENDMENTS = [
     plain: 'Anyone born or naturalized in the United States is a citizen. States cannot deny citizens due process or equal protection of the laws.',
     standards: ['3.3','3.4'],
     cases: ['Brown v. Board of Education','Gideon v. Wainwright','Mapp v. Ohio','Miranda v. Arizona','McDonald v. Chicago'],
-    frqs: ['The MOST important amendment for AP Gov. Selective incorporation, equal protection, due process — all Unit 3 flows through the 14th. Know it cold.'],
+    frqs: ['The MOST important amendment for AP Gov. Selective incorporation, equal protection, due process -- all Unit 3 flows through the 14th. Know it cold.'],
     significance: 'The single most litigated amendment. Foundation for selective incorporation, equal protection, and civil rights. Every required SCOTUS case in Unit 3 touches the 14th Amendment.'
   },
   {
     num: 15, year: 1870, era: 'Reconstruction',
-    title: 'Voting Rights — Race',
+    title: 'Voting Rights -- Race',
     plain: 'The right to vote cannot be denied based on race, color, or previous condition of servitude.',
     standards: ['3.4','5.2'],
     cases: [],
     frqs: ['Pair with the Voting Rights Act of 1965 and the history of voter suppression (literacy tests, grandfather clauses, white primaries).'],
-    significance: 'Granted Black men the right to vote — but was effectively nullified for nearly a century by Jim Crow laws.'
+    significance: 'Granted Black men the right to vote -- but was effectively nullified for nearly a century by Jim Crow laws.'
   },
   {
     num: 16, year: 1913, era: 'Progressive Era',
@@ -2816,7 +2907,7 @@ var AMENDMENTS = [
     standards: ['1.1'],
     cases: [],
     frqs: ['Used as an example of federalism, the limits of government power, and constitutional amendment. Notable as the only amendment later repealed.'],
-    significance: 'The only amendment later repealed. Classic example of using constitutional amendment for social policy — and its failures.'
+    significance: 'The only amendment later repealed. Classic example of using constitutional amendment for social policy -- and its failures.'
   },
   {
     num: 19, year: 1920, era: "Women's Suffrage",
@@ -2851,7 +2942,7 @@ var AMENDMENTS = [
     plain: 'No person can be elected President more than twice. Passed after FDR won four terms.',
     standards: ['2.3'],
     cases: [],
-    frqs: ['Connects to separation of powers, presidential power, and the lame duck period. Know WHY it was passed — FDR\'s four terms.'],
+    frqs: ['Connects to separation of powers, presidential power, and the lame duck period. Know WHY it was passed -- FDR\'s four terms.'],
     significance: 'Passed in reaction to FDR\'s four terms. Limits presidential power by preventing entrenchment in office.'
   },
   {
@@ -2870,7 +2961,7 @@ var AMENDMENTS = [
     standards: ['3.4','5.2'],
     cases: [],
     frqs: ['Appears in voting rights FRQs alongside the Voting Rights Act of 1965. Know the history of poll taxes as voter suppression tools.'],
-    significance: 'Eliminated poll taxes in federal elections — a key voter suppression tool used to disenfranchise poor Black voters in the South.'
+    significance: 'Eliminated poll taxes in federal elections -- a key voter suppression tool used to disenfranchise poor Black voters in the South.'
   },
   {
     num: 25, year: 1967, era: 'Cold War Era',
@@ -2884,7 +2975,7 @@ var AMENDMENTS = [
   {
     num: 26, year: 1971, era: 'Vietnam Era',
     title: 'Voting Age Lowered to 18',
-    plain: 'The right to vote cannot be denied to citizens 18 years of age or older. Passed during Vietnam War — "old enough to fight, old enough to vote."',
+    plain: 'The right to vote cannot be denied to citizens 18 years of age or older. Passed during Vietnam War -- "old enough to fight, old enough to vote."',
     standards: ['3.4','5.2'],
     cases: [],
     frqs: ['Appears in political participation FRQs about voting rights and youth turnout.'],
@@ -2893,7 +2984,7 @@ var AMENDMENTS = [
   {
     num: 27, year: 1992, era: 'Modern Era',
     title: 'Congressional Pay',
-    plain: 'Any law changing congressional pay cannot take effect until after the next election. Originally proposed in 1789 — took 203 years to ratify.',
+    plain: 'Any law changing congressional pay cannot take effect until after the next election. Originally proposed in 1789 -- took 203 years to ratify.',
     standards: ['2.1'],
     cases: [],
     frqs: ['Good example of the amendment process and its slowness. The 203-year gap between proposal and ratification is remarkable.'],
@@ -2902,7 +2993,7 @@ var AMENDMENTS = [
 ];
 
 // ════════════════════════════════════════════════════════════════
-//  AP EXAM FRQ ARCHIVE — Released Questions 2015-2024
+//  AP EXAM FRQ ARCHIVE -- Released Questions 2015-2024
 //  Source: College Board AP Central (public domain)
 // ════════════════════════════════════════════════════════════════
 var FRQ_ARCHIVE = [
@@ -3012,7 +3103,7 @@ var FRQ_ARCHIVE = [
     prompt: 'A state passes a law requiring police officers to check the immigration status of anyone they stop for any reason. The federal government argues the state law interferes with federal immigration policy.\n\na. Identify the constitutional clause that gives the federal government authority over immigration policy.\n\nb. Explain how this scenario illustrates the tension between state and federal power in the American federal system.\n\nc. Explain one argument the state government might make to defend its law.' },
   { year: 2016, type: 'Argumentative Essay', unit: 2, standard: '2.1',
     title: 'Representation and the Role of Congress',
-    prompt: 'Develop an argument that responds to the following question:\n\nWhich model of representation — delegate, trustee, or politico — best serves the interests of American democracy?\n\nUse at least ONE piece of evidence from: Federalist No. 51, Federalist No. 10, or your knowledge of congressional representation. Use at least one additional piece of evidence. Respond to an opposing perspective.' },
+    prompt: 'Develop an argument that responds to the following question:\n\nWhich model of representation -- delegate, trustee, or politico -- best serves the interests of American democracy?\n\nUse at least ONE piece of evidence from: Federalist No. 51, Federalist No. 10, or your knowledge of congressional representation. Use at least one additional piece of evidence. Respond to an opposing perspective.' },
 
   // ── 2015 ──
   { year: 2015, type: 'Concept Application', unit: 5, standard: '5.4',

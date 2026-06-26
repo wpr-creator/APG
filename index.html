@@ -112,27 +112,83 @@
       background: var(--navy);
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-
     .nav-inner {
       max-width: 1140px; margin: 0 auto;
       padding: 0 1.5rem;
-      display: flex; gap: 0; overflow-x: auto;
+      display: flex; gap: 0;
     }
-    .nav-inner::-webkit-scrollbar { display: none; }
 
+    /* Top-level nav items */
     .nav-tab {
       font-family: 'Source Sans 3', sans-serif;
       font-size: 11px; font-weight: 700;
-      letter-spacing: 0.12em; text-transform: uppercase;
+      letter-spacing: 0.1em; text-transform: uppercase;
       color: rgba(255,255,255,0.48);
-      padding: 13px 17px; cursor: pointer;
+      padding: 13px 16px; cursor: pointer;
+      border-bottom: 3px solid transparent;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+      user-select: none; position: relative;
+    }
+    .nav-tab:hover { color: rgba(255,255,255,0.82); }
+    .nav-tab.active { color: var(--white); border-bottom-color: var(--crimson); }
+
+    /* Dropdown group */
+    .nav-group {
+      position: relative;
+    }
+    .nav-group-label {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(255,255,255,0.48);
+      padding: 13px 16px; cursor: pointer;
       border-bottom: 3px solid transparent;
       white-space: nowrap;
       transition: color 0.2s, border-color 0.2s;
       user-select: none;
+      display: flex; align-items: center; gap: 5px;
     }
-    .nav-tab:hover { color: rgba(255,255,255,0.82); }
-    .nav-tab.active { color: var(--white); border-bottom-color: var(--crimson); }
+    .nav-group-label::after {
+      content: '▾'; font-size: 9px; opacity: 0.6;
+    }
+    .nav-group:hover .nav-group-label,
+    .nav-group.has-active .nav-group-label {
+      color: rgba(255,255,255,0.82);
+    }
+    .nav-group.has-active .nav-group-label {
+      border-bottom: 3px solid var(--crimson);
+      color: white;
+    }
+    .nav-dropdown {
+      display: none;
+      position: absolute; top: 100%; left: 0;
+      background: var(--navy-dark);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 0 0 8px 8px;
+      min-width: 180px; z-index: 200;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      padding: 6px 0;
+    }
+    .nav-group:hover .nav-dropdown { display: block; }
+    .nav-dropdown .nav-tab {
+      display: block; padding: 9px 16px;
+      border-bottom: none;
+      font-size: 11px; letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.55);
+    }
+    .nav-dropdown .nav-tab:hover { color: white; background: rgba(255,255,255,0.06); }
+    .nav-dropdown .nav-tab.active {
+      color: white;
+      background: rgba(178,34,52,0.2);
+      border-left: 3px solid var(--crimson);
+      padding-left: 13px;
+    }
+    @media (max-width: 700px) {
+      .nav-inner { overflow-x: auto; }
+      .nav-inner::-webkit-scrollbar { display: none; }
+      .nav-dropdown { position: fixed; top: auto; }
+    }
 
     /* ── MAIN LAYOUT ── */
     main {
@@ -2213,16 +2269,42 @@
 
   <nav>
     <div class="nav-inner">
+
+      <!-- Home -->
       <div class="nav-tab active" data-tab="home">Home</div>
-      <div class="nav-tab" data-tab="units">Units</div>
-      <div class="nav-tab" data-tab="review">FRQ &amp; Review</div>
-      <div class="nav-tab" data-tab="glossary">Glossary</div>
-      <div class="nav-tab" data-tab="docs">📜 Documents</div>
-      <div class="nav-tab" data-tab="diagnostic">🎯 Diagnostic</div>
-      <div class="nav-tab" data-tab="stump">🏆 Stump</div>
-      <div class="nav-tab" data-tab="amendments">📋 Amendments</div>
-      <div class="nav-tab" data-tab="archive">📚 FRQ Archive</div>
+
+      <!-- Course Content -->
+      <div class="nav-group" id="navgroup-course">
+        <div class="nav-group-label">Course</div>
+        <div class="nav-dropdown">
+          <div class="nav-tab" data-tab="units">Units &amp; Topics</div>
+          <div class="nav-tab" data-tab="amendments">Amendments</div>
+          <div class="nav-tab" data-tab="docs">Documents</div>
+        </div>
+      </div>
+
+      <!-- Practice & Review -->
+      <div class="nav-group" id="navgroup-practice">
+        <div class="nav-group-label">Practice</div>
+        <div class="nav-dropdown">
+          <div class="nav-tab" data-tab="review">FRQ &amp; Review</div>
+          <div class="nav-tab" data-tab="archive">FRQ Archive</div>
+          <div class="nav-tab" data-tab="glossary">Glossary</div>
+          <div class="nav-tab" data-tab="diagnostic">Diagnostic Quiz</div>
+        </div>
+      </div>
+
+      <!-- Classroom Tools -->
+      <div class="nav-group" id="navgroup-classroom">
+        <div class="nav-group-label">Classroom</div>
+        <div class="nav-dropdown">
+          <div class="nav-tab" data-tab="stump">Stump the Class</div>
+        </div>
+      </div>
+
+      <!-- Exit Ticket -->
       <div class="nav-tab" data-tab="exit">Exit Ticket</div>
+
     </div>
   </nav>
 
@@ -3188,13 +3270,7 @@
     var data = TERM_INDEX.get(termKey);
     if (!data) return;
     // Switch to glossary tab
-    document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
-    var glossTab = document.querySelector('.nav-tab[data-tab="glossary"]');
-    if (glossTab) glossTab.classList.add('active');
-    TAB_IDS.forEach(function(id) {
-      var el = document.getElementById('tab-' + id);
-      if (el) { el.style.display = (id === 'glossary') ? '' : 'none'; el.classList.toggle('active', id === 'glossary'); }
-    });
+    switchToTab('glossary');
     buildGlossary();
     filterGlossary(data.unit);
     document.querySelectorAll('.glossary-unit-pill').forEach(function(p) { p.classList.remove('active'); });
@@ -4440,13 +4516,7 @@
   function archivePractice(idx) {
     var q = FRQ_ARCHIVE[idx];
     // Switch to review tab and pre-load this prompt in the practice area
-    document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
-    var reviewTab = document.querySelector('.nav-tab[data-tab="review"]');
-    if (reviewTab) reviewTab.classList.add('active');
-    TAB_IDS.forEach(function(id) {
-      var el = document.getElementById('tab-' + id);
-      if (el) { el.style.display = (id === 'review') ? '' : 'none'; el.classList.toggle('active', id === 'review'); }
-    });
+    switchToTab('review');
     // Build a temporary prompt object from archive entry
     setTimeout(function() {
       if (!frqPracticeBuilt) { buildFrqPracticeUI(); frqPracticeBuilt = true; }
