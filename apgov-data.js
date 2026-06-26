@@ -2648,6 +2648,8 @@ var frqPracticeState = {
 
 // ── Build the prompt selector ──
 function buildFrqPracticeUI() {
+  // Prompt selector is built inline — see frqRenderPromptList()
+}
 
 
 // ════════════════════════════════════════════════════════════════

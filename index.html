@@ -4049,7 +4049,8 @@
   //  FRQ PRACTICE ENGINE
   // ══════════════════════════════════════════════════════════
 
-  // ── SVG Charts for Quantitative Analysis ──
+  // ── Build the prompt selector (called when review tab opens) ──
+  function buildFrqPracticeUI() {
     var filterBtns = document.getElementById('frq-type-filter-btns');
     var promptList = document.getElementById('frq-prompt-list');
     if (!filterBtns || !promptList) return;
