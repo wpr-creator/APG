@@ -2350,6 +2350,163 @@
       .cases-layout { grid-template-columns: 1fr; }
       .cases-sidebar { position: static; }
     }
+
+    /* ══ CARTOON ANALYZER ══ */
+    #tab-cartoons { display: none; }
+    #tab-cartoons.active { display: block; }
+
+    .cartoon-layout {
+      display: grid; grid-template-columns: 1fr 380px;
+      gap: 20px; align-items: start;
+    }
+    .cartoon-left {}
+    .cartoon-img-wrap {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark);
+      overflow: hidden; margin-bottom: 12px;
+      box-shadow: var(--shadow-sm);
+    }
+    .cartoon-img-wrap img {
+      width: 100%; height: auto; display: block;
+    }
+    .cartoon-img-meta {
+      padding: 10px 14px; border-top: 1px solid var(--cream-dark);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cartoon-img-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; font-weight: 700; color: var(--navy);
+    }
+    .cartoon-img-unit {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--navy-xlight); color: var(--navy);
+      padding: 3px 10px; border-radius: 99px;
+    }
+    .cartoon-nav-row {
+      display: flex; align-items: center; gap: 8px;
+    }
+    .cartoon-nav-btn {
+      padding: 7px 14px; border-radius: var(--radius-sm);
+      border: 1px solid var(--cream-dark); background: white;
+      font-size: 12px; font-weight: 600; cursor: pointer;
+      color: var(--navy); transition: background 0.12s;
+    }
+    .cartoon-nav-btn:hover { background: var(--cream); }
+    .cartoon-nav-btn:disabled { opacity: 0.35; cursor: default; }
+    .cartoon-random-btn {
+      margin-left: auto; padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      background: var(--navy-xlight); color: var(--navy);
+      border: none; font-size: 12px; font-weight: 700;
+      cursor: pointer; transition: background 0.15s;
+      display: flex; align-items: center; gap: 5px;
+    }
+    .cartoon-random-btn:hover { background: #dde5f5; }
+
+    /* Unit filter pills */
+    .cartoon-filter-row {
+      display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 16px;
+    }
+    .cartoon-filter-btn {
+      padding: 5px 12px; border-radius: 99px;
+      border: 1px solid var(--cream-dark); background: white;
+      font-size: 11px; font-weight: 600; color: var(--navy);
+      cursor: pointer; transition: all 0.12s;
+    }
+    .cartoon-filter-btn:hover { background: var(--cream); }
+    .cartoon-filter-btn.active {
+      background: var(--navy); color: white; border-color: var(--navy);
+    }
+
+    /* Right panel — questions */
+    .cartoon-right {}
+    .cartoon-q-panel {
+      background: white; border-radius: var(--radius);
+      border: 1px solid var(--cream-dark);
+      overflow: hidden; box-shadow: var(--shadow-sm);
+    }
+    .cartoon-q-header {
+      background: var(--navy-dark); padding: 14px 18px;
+    }
+    .cartoon-q-header-label {
+      font-size: 9px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold); margin-bottom: 3px;
+    }
+    .cartoon-q-header-title {
+      font-size: 14px; font-weight: 700; color: white;
+    }
+    .cartoon-q-body { padding: 16px 18px; }
+    .cartoon-q-item { margin-bottom: 16px; }
+    .cartoon-q-label {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--crimson); margin-bottom: 5px;
+    }
+    .cartoon-q-text {
+      font-size: 13px; line-height: 1.6; color: var(--navy);
+      font-weight: 600; margin-bottom: 8px;
+    }
+    .cartoon-answer {
+      font-size: 12px; line-height: 1.7; color: var(--gray-700);
+      background: var(--gray-100); padding: 10px 12px;
+      border-radius: var(--radius-sm); border-left: 3px solid var(--navy);
+      display: none;
+    }
+    .cartoon-answer.show { display: block; }
+    .cartoon-reveal-btn {
+      font-size: 11px; font-weight: 700; padding: 5px 12px;
+      border-radius: var(--radius-sm); border: 1px solid var(--cream-dark);
+      background: white; color: var(--gray-500); cursor: pointer;
+      transition: all 0.12s;
+    }
+    .cartoon-reveal-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .cartoon-reveal-btn.revealed {
+      background: var(--navy); color: white; border-color: var(--navy);
+    }
+    .cartoon-divider {
+      height: 1px; background: var(--cream-dark); margin: 14px 0;
+    }
+    .cartoon-checklist {
+      border-top: 1px solid var(--cream-dark); padding: 14px 18px;
+      background: var(--gray-50);
+    }
+    .cartoon-checklist-title {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--navy); margin-bottom: 8px;
+    }
+    .cartoon-check-item {
+      display: flex; align-items: flex-start; gap: 8px;
+      padding: 5px 0; cursor: pointer;
+    }
+    .cartoon-check-box {
+      width: 16px; height: 16px; border-radius: 3px;
+      border: 2px solid var(--cream-dark); flex-shrink: 0;
+      margin-top: 2px; transition: background 0.15s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cartoon-check-item.checked .cartoon-check-box {
+      background: #22c55e; border-color: #22c55e;
+    }
+    .cartoon-check-item.checked .cartoon-check-box::after {
+      content: '✓'; color: white; font-size: 10px; font-weight: 700;
+    }
+    .cartoon-check-text {
+      font-size: 11px; line-height: 1.5; color: var(--gray-700);
+    }
+    .cartoon-check-item.checked .cartoon-check-text {
+      text-decoration: line-through; color: var(--gray-400);
+    }
+    .cartoon-reveal-all-btn {
+      width: 100%; margin-top: 10px; padding: 9px;
+      border-radius: var(--radius-sm); background: var(--crimson);
+      color: white; border: none; font-size: 12px;
+      font-weight: 700; cursor: pointer; transition: opacity 0.15s;
+    }
+    .cartoon-reveal-all-btn:hover { opacity: 0.88; }
+
+    @media (max-width: 820px) {
+      .cartoon-layout { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -2394,6 +2551,7 @@
         <div class="nav-dropdown">
           <div class="nav-tab" data-tab="review">FRQ &amp; Review</div>
           <div class="nav-tab" data-tab="archive">FRQ Archive</div>
+          <div class="nav-tab" data-tab="cartoons">Cartoon Analyzer</div>
           <div class="nav-tab" data-tab="glossary">Glossary</div>
           <div class="nav-tab" data-tab="diagnostic">Diagnostic Quiz</div>
         </div>
@@ -2961,6 +3119,83 @@
         <span class="archive-count" id="archive-count"></span>
       </div>
       <div class="archive-grid" id="archive-grid"></div>
+    </div>
+
+    <!-- ═══════════════════ CARTOON ANALYZER TAB ═══════════════════ -->
+    <div id="tab-cartoons">
+      <div class="section-title">
+        <i class="ti ti-news"></i>
+        Political Cartoon Analyzer
+        <span class="section-subtitle">— Practice the AP exam quantitative analysis skill</span>
+      </div>
+
+      <!-- Filter row -->
+      <div class="cartoon-filter-row" id="cartoon-filter-row">
+        <button class="cartoon-filter-btn active" data-unit="all" onclick="cartoonFilter('all',this)">All Units</button>
+        <button class="cartoon-filter-btn" data-unit="1" onclick="cartoonFilter('1',this)">Unit 1</button>
+        <button class="cartoon-filter-btn" data-unit="2" onclick="cartoonFilter('2',this)">Unit 2</button>
+        <button class="cartoon-filter-btn" data-unit="3" onclick="cartoonFilter('3',this)">Unit 3</button>
+        <button class="cartoon-filter-btn" data-unit="4" onclick="cartoonFilter('4',this)">Unit 4</button>
+        <button class="cartoon-filter-btn" data-unit="5" onclick="cartoonFilter('5',this)">Unit 5</button>
+        <button class="cartoon-random-btn" onclick="cartoonRandom()">
+          <i class="ti ti-shuffle"></i> Random
+        </button>
+      </div>
+
+      <div class="cartoon-layout">
+        <!-- Left: image + nav -->
+        <div class="cartoon-left">
+          <div class="cartoon-img-wrap">
+            <img id="cartoon-img" src="" alt="Political cartoon" />
+            <div class="cartoon-img-meta">
+              <div class="cartoon-img-title" id="cartoon-title"></div>
+              <div class="cartoon-img-unit" id="cartoon-unit-badge"></div>
+            </div>
+          </div>
+          <div class="cartoon-nav-row">
+            <button class="cartoon-nav-btn" id="cartoon-prev-btn" onclick="cartoonNavigate(-1)">← Previous</button>
+            <span style="font-size:11px;color:var(--gray-400);font-family:monospace;" id="cartoon-counter">1 / 15</span>
+            <button class="cartoon-nav-btn" id="cartoon-next-btn" onclick="cartoonNavigate(1)">Next →</button>
+          </div>
+        </div>
+
+        <!-- Right: questions + checklist -->
+        <div class="cartoon-right">
+          <div class="cartoon-q-panel">
+            <div class="cartoon-q-header">
+              <div class="cartoon-q-header-label">AP-Style Analysis</div>
+              <div class="cartoon-q-header-title">Political Cartoon Questions</div>
+            </div>
+            <div class="cartoon-q-body" id="cartoon-q-body"></div>
+            <div class="cartoon-checklist">
+              <div class="cartoon-checklist-title">AP Scoring Checklist</div>
+              <div class="cartoon-check-item" onclick="this.classList.toggle('checked')">
+                <div class="cartoon-check-box"></div>
+                <div class="cartoon-check-text">Identified the main symbol or visual metaphor</div>
+              </div>
+              <div class="cartoon-check-item" onclick="this.classList.toggle('checked')">
+                <div class="cartoon-check-box"></div>
+                <div class="cartoon-check-text">Explained the cartoonist's point of view</div>
+              </div>
+              <div class="cartoon-check-item" onclick="this.classList.toggle('checked')">
+                <div class="cartoon-check-box"></div>
+                <div class="cartoon-check-text">Connected to a specific AP Gov concept</div>
+              </div>
+              <div class="cartoon-check-item" onclick="this.classList.toggle('checked')">
+                <div class="cartoon-check-box"></div>
+                <div class="cartoon-check-text">Named the correct unit and standard</div>
+              </div>
+              <div class="cartoon-check-item" onclick="this.classList.toggle('checked')">
+                <div class="cartoon-check-box"></div>
+                <div class="cartoon-check-text">Used specific evidence from the image</div>
+              </div>
+              <button class="cartoon-reveal-all-btn" onclick="cartoonRevealAll()">
+                Reveal All Answers
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ═══════════════════ EXIT TICKET TAB ═══════════════════ -->

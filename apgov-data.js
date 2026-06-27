@@ -1007,7 +1007,7 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 //  NAV TABS
 // ══════════════════════════════════════════════════════════
-const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'archive', 'exit'];
+const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'exit'];
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target) {
@@ -2769,6 +2769,454 @@ var frqPracticeState = {
 function buildFrqPracticeUI() {
   // Prompt selector is built inline -- see frqRenderPromptList()
 }
+
+
+
+// ════════════════════════════════════════════════════════════════
+//  POLITICAL CARTOON ANALYZER DATA
+// ════════════════════════════════════════════════════════════════
+var CARTOONS = [
+  {
+    id: 1, unit: 1, file: "images/cartoon-01-checks-balances.png",
+    title: "The Constitutional Leash",
+    standard: "2.2",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main visual metaphor in this cartoon and describe what you see.",
+        answer: "The cartoon shows three figures representing Congress, the President, and the Supreme Court connected by chains. Each figure grips a chain attached to the others, preventing any one branch from moving freely. The chains are labeled with specific constitutional checks: Veto Power, Judicial Review, and Senate Confirmation."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What is the cartoonist's point of view about the relationship between the three branches of government?",
+        answer: "The cartoonist argues that the three branches are deliberately and equally constrained by one another. None can act without the others having some check on their power. The strain on each figure's face suggests this tension is ongoing and intentional — by constitutional design, not accident."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the principle of checks and balances (EK 2.2). The Founders, as argued in Federalist No. 51, designed the government so that 'ambition must be made to counteract ambition.' Each branch has specific tools — the veto, judicial review, and Senate confirmation — to prevent the others from accumulating too much power. This reflects Madison's argument that structural design, not the virtue of officeholders, is what prevents tyranny."
+      }
+    ]
+  },
+  {
+    id: 2, unit: 1, file: "images/cartoon-02-federalism.png",
+    title: "Still Tugging",
+    standard: "1.2",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "Two figures are engaged in a tug of war. One figure is larger and labeled 'Federal Government,' the other smaller and labeled 'State Government.' The rope between them represents the contested power between the two levels of government."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the relationship between federal and state governments?",
+        answer: "The cartoonist suggests that the balance of power between federal and state governments is an ongoing, unresolved contest. Neither side has fully won — the tension is permanent and structural, not a temporary dispute."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates federalism (EK 1.2) — the constitutional division of power between national and state governments. The Tenth Amendment reserves powers not delegated to the federal government to the states, while the Supremacy Clause establishes federal law as supreme when conflicts arise. The ongoing tug of war reflects the evolution from dual federalism (layer cake) to cooperative federalism (marble cake) and debates over devolution and unfunded mandates."
+      }
+    ]
+  },
+  {
+    id: 3, unit: 1, file: "images/cartoon-03-factions.png",
+    title: "Madison's Nightmare",
+    standard: "1.3",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A figure in colonial dress stands surrounded by a crowd of modern figures, each holding signs with different interest group labels. The colonial figure — representing a Founder — appears overwhelmed by the chaos of competing interests shouting in different directions."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about factions and the political system?",
+        answer: "The cartoonist suggests that the problem of factions — groups pursuing their own interests at the expense of the common good — is alive and well in modern American politics. The Founder figure's distress implies that the current state of factional politics is exactly what the Founders feared."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon directly illustrates Madison's argument in Federalist No. 10 (EK 1.3). Madison defined a faction as a group whose interests are 'adverse to the rights of other citizens or the aggregate interests of the community.' He argued that factions are inevitable in a free society but that a large republic with many competing interests would prevent any single faction from dominating — the diversity itself becomes a check. The modern interest groups shown (oil, guns, unions, banks) are exactly the kind of factions Madison anticipated."
+      }
+    ]
+  },
+  {
+    id: 4, unit: 2, file: "images/cartoon-04-executive-orders.png",
+    title: "With the Stroke of a Pen",
+    standard: "2.3",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A president sits at a desk signing a large document while Congress is depicted in the corner — marginalized or bypassed. The image emphasizes the president acting alone without congressional involvement."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about presidential power?",
+        answer: "The cartoonist suggests that presidents can and do use executive orders to act unilaterally, bypassing Congress entirely. The image implies this may be an overreach of executive authority — Congress is present but irrelevant to the action being taken."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the informal and inherent powers of the presidency (EK 2.3). Executive orders are policy directives issued by the president that do not require congressional approval. They represent the president's informal power — particularly 'going public' and acting through administrative means. Critics argue they circumvent the separation of powers; defenders argue they are necessary for effective governance. The War Powers Resolution (1973) and debates over executive overreach connect directly to this image."
+      }
+    ]
+  },
+  {
+    id: 5, unit: 2, file: "images/cartoon-05-filibuster.png",
+    title: "The Art of Saying Nothing",
+    standard: "2.1",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A senator stands alone at a podium speaking endlessly. The clock shows it is very late, other senators' seats are empty or senators are asleep, and a piece of legislation sits untouched — gathering dust or cobwebs. The senator appears to hold a very thick document, suggesting they intend to continue speaking indefinitely."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about Senate procedure?",
+        answer: "The cartoonist criticizes the filibuster as a tool for blocking legislation rather than engaging with it. The image implies the tactic wastes time and prevents democratic majority rule — the bill never gets voted on while one senator exercises unlimited delay."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the Senate filibuster (EK 2.1) — a tactic through which a senator may use unlimited debate to delay or block a vote on legislation. Ending a filibuster requires cloture, which needs 60 votes. This gives the minority significant power to obstruct the majority's agenda. The cartoon also connects to the concept of gridlock — the Senate's difficulty in passing legislation — and to debates about whether the filibuster should be reformed or eliminated."
+      }
+    ]
+  },
+  {
+    id: 6, unit: 2, file: "images/cartoon-06-iron-triangle.png",
+    title: "Who's Really in Charge?",
+    standard: "2.4",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "Three figures or hands are connected in a triangular formation, each labeled with one of three entities: a Congressional Committee, a Federal Agency, and an Interest Group (or Lobbyist). The connections between them suggest mutual benefit. A figure outside the triangle — representing the public — appears excluded or unaware of what's happening inside."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about policymaking in the federal bureaucracy?",
+        answer: "The cartoonist argues that real policymaking happens not in public deliberation but in closed relationships between Congress, agencies, and interest groups — all of whom benefit from the arrangement at the public's expense. The public is excluded from this process."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the iron triangle (EK 2.4) — the stable, mutually beneficial relationship between a congressional committee, a federal agency, and an interest group. The committee funds the agency and writes favorable legislation; the agency implements rules that benefit the interest group; the interest group provides campaign donations and votes for committee members. This concept connects to agency capture — when the regulated industry effectively controls the regulating agency — and to concerns about democratic accountability in the bureaucracy."
+      }
+    ]
+  },
+  {
+    id: 7, unit: 2, file: "images/cartoon-07-judicial-review.png",
+    title: "Marbury's Legacy",
+    standard: "2.5",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A robed Supreme Court figure holds an enormous stamp labeled 'VOID' or 'UNCONSTITUTIONAL' over a document representing an Act of Congress. Members of Congress look on in shock. The stamp is coming down with authority, about to invalidate the congressional action."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the power of the Supreme Court?",
+        answer: "The cartoonist illustrates the Supreme Court's power to be the final word on what is constitutional — able to strike down acts of Congress that it determines violate the Constitution. The shock of the congressional figures suggests this power is formidable and final."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates judicial review (EK 2.5) — the power of the Supreme Court to declare laws or executive actions unconstitutional. This power was established in Marbury v. Madison (1803), in which Chief Justice John Marshall asserted that 'it is emphatically the province and duty of the judicial department to say what the law is.' Hamilton anticipated this in Federalist No. 78, arguing the courts would be the 'least dangerous branch.' The cartoon also connects to debates about judicial activism vs. judicial restraint."
+      }
+    ]
+  },
+  {
+    id: 8, unit: 3, file: "images/cartoon-08-first-amendment.png",
+    title: "Free — But Not Absolute",
+    standard: "3.1",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A figure speaks into a microphone, but something in the image — the microphone cord is knotted, a filter is on the microphone, or some speech is blocked — suggests that free speech has limits. One type of speech passes through while another is stopped."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about freedom of speech?",
+        answer: "The cartoonist argues that while freedom of speech is a fundamental right, it is not unlimited. Some categories of speech — those that create an immediate threat to public safety — can be restricted by the government. The image shows the tension between protecting free expression and maintaining public order."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the First Amendment protections for freedom of speech and their limits (EK 3.1). In Schenck v. United States (1919), the Supreme Court established the 'clear and present danger' test — speech that poses an immediate, serious threat to national security is not protected. The cartoon also connects to symbolic speech (protected), prior restraint (generally unconstitutional per New York Times v. United States, 1971), and the ongoing debate about where free speech ends."
+      }
+    ]
+  },
+  {
+    id: 9, unit: 3, file: "images/cartoon-09-incorporation.png",
+    title: "One Right at a Time",
+    standard: "3.3",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A delivery truck labeled 'Bill of Rights' is parked at a state capitol building. A driver delivers boxes one at a time — each box labeled with a specific right (Free Speech, Right to Counsel, etc.). Some boxes are already inside but the truck is not fully unloaded, suggesting the process is incomplete."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the Bill of Rights and the states?",
+        answer: "The cartoonist argues that the Bill of Rights has not been applied to the states all at once — it has been delivered piecemeal, right by right, over many decades. The incomplete delivery suggests the process is still ongoing and that states are not yet bound by every protection in the Bill of Rights."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates selective incorporation (EK 3.3) — the process through which the Supreme Court applies fundamental rights from the Bill of Rights to the states, one case at a time, through the Due Process Clause of the 14th Amendment. Key examples: Mapp v. Ohio (1961) incorporated the 4th Amendment exclusionary rule; Gideon v. Wainwright (1963) incorporated the 6th Amendment right to counsel; McDonald v. Chicago (2010) incorporated the 2nd Amendment right to bear arms. Not every right has been incorporated — the process continues."
+      }
+    ]
+  },
+  {
+    id: 10, unit: 3, file: "images/cartoon-10-equal-protection.png",
+    title: "Separate is Not Equal",
+    standard: "3.4",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "Two school buildings or doors stand side by side, appearing identical. A sign on one is being removed. Diverse groups of students now move freely between both. A date — 1954 — appears prominently. The image captures a moment of transition from segregation to integration."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about racial equality in education?",
+        answer: "The cartoonist argues that the doctrine of 'separate but equal' was wrong and its removal was a necessary step toward genuine equality. The identical buildings highlight that separate facilities could never truly be equal — the separation itself was the inequality."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the Equal Protection Clause of the 14th Amendment and its application in Brown v. Board of Education (1954) (EK 3.4). The Supreme Court unanimously overturned Plessy v. Ferguson (1896)'s 'separate but equal' doctrine, ruling that racially segregated public schools were inherently unequal. Chief Justice Warren argued that separation generated feelings of inferiority that undermined Black children's educational opportunities. Brown marked a turning point in the civil rights movement and established the framework for later equal protection cases using strict scrutiny."
+      }
+    ]
+  },
+  {
+    id: 11, unit: 4, file: "images/cartoon-11-polarization.png",
+    title: "Moderate in a Polarized World",
+    standard: "4.1",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A seesaw is shown with 'Liberal' on one end and 'Conservative' on the other. Both ends are pulled down simultaneously, leaving the middle elevated and empty — or a single figure stands uncomfortably in the middle while groups push from both extremes."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the current state of American political ideology?",
+        answer: "The cartoonist argues that American politics has become increasingly polarized, with both parties moving toward their ideological extremes. The middle — moderate or independent voters — is being squeezed out or left without representation as both bases pull in opposite directions."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates party polarization (EK 4.1 and 5.1) — the shift of party positions away from the center toward ideological extremes. This connects to political ideology, the liberal-conservative spectrum, and the growing gap between Democratic and Republican voters. It also connects to the median voter theorem — candidates in primaries appeal to their base while general election candidates try to capture moderate voters — and to the impact of polarization on congressional gridlock (EK 2.1)."
+      }
+    ]
+  },
+  {
+    id: 12, unit: 4, file: "images/cartoon-12-polling.png",
+    title: "The Polling Problem",
+    standard: "4.3",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A pollster approaches a voter with a clipboard. A Magic 8-Ball labeled 'Public Opinion Poll' sits on a table. The 8-Ball's window reads 'Ask Again Later' — suggesting the poll cannot reliably predict or measure public opinion. The pollster peers hopefully at an instrument that cannot give a definitive answer."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about public opinion polling?",
+        answer: "The cartoonist is skeptical of public opinion polls, suggesting they are unreliable as tools for measuring genuine public sentiment. Just as a Magic 8-Ball gives vague or evasive answers, polls are portrayed as similarly imprecise — the public's opinion is not as easily captured or predicted as pollsters imply."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the limitations of public opinion polling (EK 4.3). Polls can be distorted by sampling error, question wording, question order, and the Bradley effect (respondents giving socially desirable rather than honest answers). Push polls present biased information as neutral questions. Latent preferences — opinions people hold weakly and that change over time — make polling results unstable. The cartoon connects to the idea that measuring 'public opinion' is far more complex than simply asking people what they think."
+      }
+    ]
+  },
+  {
+    id: 13, unit: 5, file: "images/cartoon-13-gerrymandering.png",
+    title: "Drawing the Lines",
+    standard: "5.2",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A politician stands at a drafting table drawing impossibly contorted district lines on a state map. The lines snake and twist in ways that defy geographic logic. The politician appears smug or satisfied with the result. Tools of precision — a ruler, compass — sit unused nearby."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the redistricting process?",
+        answer: "The cartoonist argues that partisan gerrymandering is a deliberate manipulation of electoral maps to benefit the party in power. The absurd shape of the district and the politician's satisfaction suggest this is done cynically to maximize political advantage rather than to create fair representation."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates gerrymandering (EK 5.2) — the intentional redrawing of electoral district boundaries to benefit a specific party or group. It connects to two required SCOTUS cases: Shaw v. Reno (1993), in which the Supreme Court ruled that racially drawn districts could be challenged under the Equal Protection Clause; and Rucho v. Common Cause (2019), in which the Court ruled partisan gerrymandering is a political question beyond federal court jurisdiction. Baker v. Carr (1962) established the principle of 'one person, one vote' through the Equal Protection Clause."
+      }
+    ]
+  },
+  {
+    id: 14, unit: 5, file: "images/cartoon-14-citizens-united.png",
+    title: "Money Talks",
+    standard: "5.3",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "Two figures stand at identical microphones. One is a normal-sized citizen. The other is an enormous bag of money in a suit, labeled 'Corporation' or 'Super PAC.' Both are at the same 'Free Speech' platform but the size difference makes it clear they do not have equal voice. The citizen's microphone may be smaller or their voice drowned out."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about money and political speech?",
+        answer: "The cartoonist argues that equating money with free speech gives wealthy corporations and interest groups a vastly disproportionate voice in American politics compared to ordinary citizens. While both have the same formal right to speak, their practical ability to be heard is wildly unequal."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates the impact of Citizens United v. Federal Election Commission (2010) (EK 5.3). The Supreme Court ruled that corporations and unions have a First Amendment right to spend unlimited amounts on elections, as political spending is a form of protected speech. This enabled the creation of Super PACs — organizations that can spend unlimited money on campaigns as long as spending is not directly coordinated with a candidate. Critics argue this gives wealthy interests disproportionate political influence; supporters argue it protects free speech. This connects to campaign finance, interest group lobbying, and the iron triangle."
+      }
+    ]
+  },
+  {
+    id: 15, unit: 5, file: "images/cartoon-15-agenda-setting.png",
+    title: "What You Think About",
+    standard: "5.4",
+    questions: [
+      {
+        part: "Part A — Describe",
+        q: "Identify the main symbols in this cartoon and describe what you see.",
+        answer: "A television dominates the scene. Multiple viewers face the TV, each with thought bubbles showing the exact same image as what's on the screen — they are all thinking about the same thing. One person in the back faces away from the TV or reads a different source, and their thought bubble shows a completely different topic."
+      },
+      {
+        part: "Part B — Explain",
+        q: "What point is the cartoonist making about the relationship between media and public opinion?",
+        answer: "The cartoonist argues that the media powerfully shapes what the public thinks about — not necessarily what they think, but which issues they consider important. The uniform thought bubbles of the TV viewers show the media's ability to direct public attention, while the outlier figure reading something else thinks about different issues entirely."
+      },
+      {
+        part: "Part C — Connect",
+        q: "Explain how this cartoon relates to a specific concept from AP U.S. Government and Politics.",
+        answer: "This cartoon illustrates agenda setting (EK 5.4) — the media's ability to highlight certain issues and bring them to the attention of the public, influencing which issues citizens consider most important. This is distinct from telling people what to think (propaganda) — it's about what people think about. Related concepts include framing (giving a story a specific context) and priming (predisposing audiences to evaluate issues a certain way). These media effects connect to linkage institutions and the role of media in connecting citizens to government."
+      }
+    ]
+  }
+];
+
+// ════════════════════════════════════════════════════════════════
+//  CARTOON ANALYZER ENGINE
+// ════════════════════════════════════════════════════════════════
+var cartoonCurrentIdx = 0;
+var cartoonFilterUnit = 'all';
+var cartoonDeck = CARTOONS.slice();
+
+function buildCartoonTab() {
+  cartoonDeck = CARTOONS.slice();
+  showCartoon(0);
+}
+
+function cartoonFilter(unit, btn) {
+  document.querySelectorAll('.cartoon-filter-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  btn.classList.add('active');
+  cartoonFilterUnit = unit;
+  cartoonDeck = unit === 'all'
+    ? CARTOONS.slice()
+    : CARTOONS.filter(function(c) { return String(c.unit) === unit; });
+  cartoonCurrentIdx = 0;
+  showCartoon(0);
+}
+
+function cartoonRandom() {
+  var idx = Math.floor(Math.random() * cartoonDeck.length);
+  cartoonCurrentIdx = idx;
+  showCartoon(idx);
+}
+
+function cartoonNavigate(dir) {
+  cartoonCurrentIdx = Math.max(0, Math.min(cartoonDeck.length - 1, cartoonCurrentIdx + dir));
+  showCartoon(cartoonCurrentIdx);
+}
+
+function showCartoon(idx) {
+  var c = cartoonDeck[idx];
+  if (!c) return;
+
+  // Image
+  var img = document.getElementById('cartoon-img');
+  if (img) {
+    img.src = c.file;
+    img.alt = c.title;
+  }
+
+  // Meta
+  var titleEl = document.getElementById('cartoon-title');
+  var unitEl = document.getElementById('cartoon-unit-badge');
+  if (titleEl) titleEl.textContent = c.title;
+  if (unitEl) unitEl.textContent = 'Unit ' + c.unit + ' · EK ' + c.standard;
+
+  // Counter
+  var counter = document.getElementById('cartoon-counter');
+  if (counter) counter.textContent = (idx + 1) + ' / ' + cartoonDeck.length;
+
+  // Nav buttons
+  var prevBtn = document.getElementById('cartoon-prev-btn');
+  var nextBtn = document.getElementById('cartoon-next-btn');
+  if (prevBtn) prevBtn.disabled = idx === 0;
+  if (nextBtn) nextBtn.disabled = idx === cartoonDeck.length - 1;
+
+  // Questions
+  var qBody = document.getElementById('cartoon-q-body');
+  if (!qBody) return;
+  qBody.innerHTML = c.questions.map(function(q, i) {
+    return '<div class="cartoon-q-item">' +
+      '<div class="cartoon-q-label">' + q.part + '</div>' +
+      '<div class="cartoon-q-text">' + q.q + '</div>' +
+      '<div class="cartoon-answer" id="cartoon-ans-' + i + '">' + q.answer + '</div>' +
+      '<button class="cartoon-reveal-btn" id="cartoon-reveal-' + i + '" ' +
+        'onclick="cartoonToggleAnswer(' + i + ')">' +
+        'Show Answer</button>' +
+      (i < c.questions.length - 1 ? '<div class="cartoon-divider"></div>' : '') +
+    '</div>';
+  }).join('');
+
+  // Reset checklist
+  document.querySelectorAll('.cartoon-check-item').forEach(function(item) {
+    item.classList.remove('checked');
+  });
+}
+
+function cartoonToggleAnswer(idx) {
+  var ans = document.getElementById('cartoon-ans-' + idx);
+  var btn = document.getElementById('cartoon-reveal-' + idx);
+  if (!ans || !btn) return;
+  var showing = ans.classList.contains('show');
+  ans.classList.toggle('show', !showing);
+  btn.classList.toggle('revealed', !showing);
+  btn.textContent = showing ? 'Show Answer' : 'Hide Answer';
+}
+
+function cartoonRevealAll() {
+  var c = cartoonDeck[cartoonCurrentIdx];
+  if (!c) return;
+  c.questions.forEach(function(q, i) {
+    var ans = document.getElementById('cartoon-ans-' + i);
+    var btn = document.getElementById('cartoon-reveal-' + i);
+    if (ans) ans.classList.add('show');
+    if (btn) { btn.classList.add('revealed'); btn.textContent = 'Hide Answer'; }
+  });
+}
+
+document.querySelector('.nav-tab[data-tab="cartoons"]').addEventListener('click', function() {
+  setTimeout(buildCartoonTab, 30);
+});
+
 
 
 // ════════════════════════════════════════════════════════════════
