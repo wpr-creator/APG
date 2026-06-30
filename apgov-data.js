@@ -3223,6 +3223,139 @@ document.querySelector('.nav-tab[data-tab="cartoons"]').addEventListener('click'
 // ════════════════════════════════════════════════════════════════
 //  WHAT WOULD MADISON SAY — DEBATE SIMULATOR DATA
 // ════════════════════════════════════════════════════════════════
+
+// ════════════════════════════════════════════════════════════════
+//  LANDMARK CASES TAB ENGINE
+// ════════════════════════════════════════════════════════════════
+
+// SCOTUS case amendments and constitutional provisions by case
+var CASE_META = {
+  "Marbury v. Madison":   { amends: ["Article III", "Article II"], clause: "Judicial Review", unit: 2 },
+  "McCulloch v. Maryland":{ amends: ["Article I", "Supremacy Clause", "Necessary & Proper Clause"], clause: "Implied Powers / Federal Supremacy", unit: 2 },
+  "Schenck v. United States": { amends: ["1st Amendment"], clause: "Clear and Present Danger", unit: 3 },
+  "Brown v. Board of Education": { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Equal Protection", unit: 3 },
+  "Baker v. Carr":        { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Judicial Justiciability / One Person One Vote", unit: 5 },
+  "Engel v. Vitale":      { amends: ["1st Amendment", "Establishment Clause"], clause: "Separation of Church and State", unit: 3 },
+  "Gideon v. Wainwright": { amends: ["6th Amendment", "14th Amendment"], clause: "Selective Incorporation / Right to Counsel", unit: 3 },
+  "Tinker v. Des Moines": { amends: ["1st Amendment"], clause: "Student Free Speech / Substantial Disruption Test", unit: 3 },
+  "New York Times v. United States": { amends: ["1st Amendment"], clause: "Prior Restraint / Freedom of Press", unit: 3 },
+  "Wisconsin v. Yoder":   { amends: ["1st Amendment", "Free Exercise Clause"], clause: "Religious Freedom vs. State Interest", unit: 3 },
+  "Roe v. Wade":          { amends: ["14th Amendment"], clause: "Right to Privacy / Due Process", unit: 3 },
+  "Shaw v. Reno":         { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Racial Gerrymandering", unit: 5 },
+  "U.S. v. Lopez":        { amends: ["Article I", "Commerce Clause"], clause: "Limits on Congressional Commerce Power", unit: 2 },
+  "McDonald v. City of Chicago": { amends: ["2nd Amendment", "14th Amendment"], clause: "Selective Incorporation / Right to Bear Arms", unit: 3 },
+  "Citizens United v. FEC": { amends: ["1st Amendment"], clause: "Political Speech / Campaign Finance", unit: 5 }
+};
+
+// Group cases by unit for sidebar
+var CASES_BY_UNIT = [
+  { unit: 2, label: "Unit 2 -- Branches of Government", cases: [] },
+  { unit: 3, label: "Unit 3 -- Civil Liberties & Rights", cases: [] },
+  { unit: 5, label: "Unit 5 -- Political Participation", cases: [] }
+];
+
+SCOTUS_CASES.forEach(function(c) {
+  var group = CASES_BY_UNIT.find(function(g) { return g.unit === c.unit; });
+  if (group) group.cases.push(c);
+});
+
+// Small SVG icon per case category -- gavel-style icons in unit colors
+var CASE_ICONS = {
+  2: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 4l6 6-8.5 8.5a2.12 2.12 0 0 1-3-3L17 6.5 14 4z"/><path d="M2 22l5-5"/></svg>',
+  3: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+  5: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 0 20 15.3 15.3 0 0 1 0-20z"/></svg>'
+};
+
+var casesBuilt = false;
+var caseCurrentIdx = 0;
+
+function buildCasesTab() {
+  if (casesBuilt) return;
+  casesBuilt = true;
+
+  var sidebar = document.getElementById('cases-sidebar');
+  if (!sidebar) return;
+
+  CASES_BY_UNIT.forEach(function(group) {
+    if (!group.cases.length) return;
+    var div = document.createElement('div');
+    div.className = 'cases-unit-group';
+    div.innerHTML = '<div class="cases-unit-head">' + group.label + '</div>';
+
+    group.cases.forEach(function(c) {
+      var globalIdx = SCOTUS_CASES.findIndex(function(sc) { return sc.name === c.name; });
+      var pill = document.createElement('div');
+      pill.className = 'cases-pill' + (globalIdx === 0 ? ' active' : '');
+      pill.dataset.idx = globalIdx;
+      var icon = CASE_ICONS[c.unit] || CASE_ICONS[2];
+      pill.innerHTML = '<div class="docs-doc-item-row">' + icon +
+        '<span class="cases-pill-year">' + c.year + '</span>' +
+        '<span class="cases-pill-name">' + c.name + '</span></div>';
+      pill.addEventListener('click', function() { showCase(globalIdx); });
+      div.appendChild(pill);
+    });
+    sidebar.appendChild(div);
+  });
+
+  showCase(0);
+}
+
+function showCase(idx) {
+  caseCurrentIdx = idx;
+  var c = SCOTUS_CASES[idx];
+  if (!c) return;
+  var meta = CASE_META[c.name] || {};
+
+  document.querySelectorAll('.cases-pill').forEach(function(p) { p.classList.remove('active'); });
+  var activePill = document.querySelector('.cases-pill[data-idx="' + idx + '"]');
+  if (activePill) {
+    activePill.classList.add('active');
+    activePill.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+  }
+
+  var card = document.getElementById('cases-card');
+  if (!card) return;
+
+  var amendTags = (meta.amends || []).map(function(a) {
+    return '<span class="cases-tag amend-tag">' + a + '</span>';
+  }).join('');
+
+  var unitLabel = ['', 'Unit 1 - Foundations', 'Unit 2 - Branches', 'Unit 3 - Civil Liberties', 'Unit 4 - Ideology', 'Unit 5 - Participation'][c.unit] || ('Unit ' + c.unit);
+
+  var prev = SCOTUS_CASES[idx - 1];
+  var next = SCOTUS_CASES[idx + 1];
+
+  card.innerHTML =
+    '<div class="cases-card-header">' +
+      '<div class="cases-card-unit">' + unitLabel + '</div>' +
+      '<div class="cases-card-name">' + c.name + ' (' + c.year + ')</div>' +
+      '<div class="cases-card-meta">' + (meta.clause || '') + '</div>' +
+    '</div>' +
+    '<div class="cases-card-body">' +
+      (amendTags ? '<div class="cases-tags">' + amendTags + '</div>' : '') +
+      '<div class="cases-section-label">Constitutional Question</div>' +
+      '<div class="cases-issue">' + c.issue + '</div>' +
+      '<div class="cases-section-label">The Ruling</div>' +
+      '<div class="cases-ruling">' + c.ruling + '</div>' +
+      '<div class="cases-section-label">Why It Matters</div>' +
+      '<div class="cases-sig">' + c.sig + '</div>' +
+      '<div class="cases-section-label">\u2b50 AP Exam Tip</div>' +
+      '<div class="cases-tip">' + c.tip + '</div>' +
+    '</div>' +
+    '<div class="cases-nav-btns">' +
+      '<button class="cases-nav-btn" onclick="showCase(' + (idx-1) + ')"' + (idx === 0 ? ' disabled' : '') + '>' +
+        (prev ? '\u2190 ' + prev.name : '\u2190 Previous') + '</button>' +
+      '<button class="cases-nav-btn" onclick="showCase(' + (idx+1) + ')"' + (idx === SCOTUS_CASES.length-1 ? ' disabled' : '') + '>' +
+        (next ? next.name + ' \u2192' : 'Next \u2192') + '</button>' +
+    '</div>';
+}
+
+document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', function() {
+  setTimeout(buildCasesTab, 30);
+});
+
+
+
 var MADISON_TOPICS = [
   {
     id: "executive-orders", icon: "[PEN]",

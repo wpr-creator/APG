@@ -258,6 +258,14 @@
       background: radial-gradient(circle, rgba(178,34,52,0.12) 0%, transparent 70%);
       pointer-events: none;
     }
+    .hero-eagle-watermark {
+      position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+      width: 110px; height: 110px; opacity: 0.10;
+      pointer-events: none;
+    }
+    @media (max-width: 690px) {
+      .hero-eagle-watermark { display: none; }
+    }
     .hero-unit-label {
       font-size: 9px; font-weight: 700; letter-spacing: 0.15em;
       text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 4px;
@@ -1634,6 +1642,11 @@
     }
     .docs-sidebar { position: sticky; top: 80px; }
     .docs-doc-list { display: flex; flex-direction: column; gap: 4px; }
+    .docs-doc-icon {
+      width: 16px; height: 16px; flex-shrink: 0; opacity: 0.7;
+    }
+    .docs-doc-item-row { display: flex; align-items: flex-start; gap: 8px; }
+    .docs-doc-item-text { flex: 1; }
     .docs-doc-item {
       padding: 9px 12px; border-radius: var(--radius-sm);
       border: 1px solid transparent; cursor: pointer;
@@ -1642,6 +1655,8 @@
       line-height: 1.3;
     }
     .docs-doc-item:hover { background: var(--cream); }
+    .docs-doc-item .docs-doc-icon { color: var(--gray-400); }
+    .docs-doc-item.active .docs-doc-icon { color: rgba(255,255,255,0.7); }
     .docs-doc-item.active {
       background: var(--navy); color: white; border-color: var(--navy);
     }
@@ -2276,10 +2291,11 @@
       padding: 4px 0 6px; margin-bottom: 4px;
     }
     .cases-pill {
-      display: flex; align-items: center; gap: 8px; padding: 7px 10px;
+      padding: 7px 10px;
       border-radius: var(--radius-sm); cursor: pointer; margin-bottom: 3px;
       transition: background 0.12s; border: 1px solid transparent;
     }
+    .cases-pill .docs-doc-item-row { align-items: center; }
     .cases-pill:hover { background: var(--cream); }
     .cases-pill.active { background: var(--navy); border-color: var(--navy); }
     .cases-pill-year {
@@ -2287,6 +2303,8 @@
       font-weight: 700; color: var(--gray-400); flex-shrink: 0; min-width: 36px;
     }
     .cases-pill.active .cases-pill-year { color: rgba(255,255,255,0.5); }
+    .cases-pill.active .docs-doc-icon { color: rgba(255,255,255,0.7); }
+    .cases-pill .docs-doc-icon { color: var(--gray-400); }
     .cases-pill-name { font-size: 11px; color: var(--navy); line-height: 1.3; font-weight: 600; }
     .cases-pill.active .cases-pill-name { color: white; }
     .cases-main {}
@@ -2729,6 +2747,10 @@
 
       <!-- Hero Banner -->
       <div class="hero card">
+        <svg class="hero-eagle-watermark" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <path d="M50 15 L45 30 L30 25 L38 38 L15 40 L35 48 L18 58 L40 56 L32 75 L48 62 L50 85 L52 62 L68 75 L60 56 L82 58 L65 48 L85 40 L62 38 L70 25 L55 30 Z" fill="white"/>
+          <circle cx="50" cy="48" r="8" fill="white"/>
+        </svg>
         <div>
           <div class="hero-unit-label">Current Unit</div>
           <h2 id="hero-unit">Loading...</h2>
@@ -4536,6 +4558,23 @@
   // ══════════════════════════════════════════════════════════
   //  LIVING DOCUMENTS ENGINE
   // ══════════════════════════════════════════════════════════
+  // Document type icons -- simple inline SVGs keyed by category
+  var DOC_TYPE_ICONS = {
+    founding: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg>',
+    federalist: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>',
+    speech: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
+    order: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    letter: '<svg class="docs-doc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg>'
+  };
+
+  function getDocIcon(doc) {
+    if (doc.id === 'articles' || doc.id === 'constitution') return DOC_TYPE_ICONS.founding;
+    if (doc.id && doc.id.indexOf('fed') === 0 || doc.id === 'brutus1') return DOC_TYPE_ICONS.federalist;
+    if (doc.id === 'gettysburg' || doc.id === 'birmingham') return DOC_TYPE_ICONS.speech;
+    if (doc.id === 'emancipation') return DOC_TYPE_ICONS.order;
+    return DOC_TYPE_ICONS.letter;
+  }
+
   function buildDocsTab() {
     if (docsBuilt) return;
     docsBuilt = true;
@@ -4547,7 +4586,9 @@
       var item = document.createElement('div');
       item.className = 'docs-doc-item' + (idx === 0 ? ' active' : '');
       item.dataset.id = doc.id;
-      item.innerHTML = doc.title + '<span class="doc-year">' + doc.year + ' · ' + doc.author + '</span>';
+      item.innerHTML = '<div class="docs-doc-item-row">' + getDocIcon(doc) +
+        '<div class="docs-doc-item-text">' + doc.title +
+        '<span class="doc-year">' + doc.year + ' \u00b7 ' + doc.author + '</span></div></div>';
       item.addEventListener('click', function() {
         document.querySelectorAll('.docs-doc-item').forEach(function(d) { d.classList.remove('active'); });
         item.classList.add('active');
