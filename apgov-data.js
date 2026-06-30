@@ -1007,7 +1007,7 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 //  NAV TABS
 // ══════════════════════════════════════════════════════════
-const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'exit'];
+const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'madison', 'exit'];
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target) {
@@ -3215,6 +3215,217 @@ function cartoonRevealAll() {
 
 document.querySelector('.nav-tab[data-tab="cartoons"]').addEventListener('click', function() {
   setTimeout(buildCartoonTab, 30);
+});
+
+
+
+
+// ════════════════════════════════════════════════════════════════
+//  WHAT WOULD MADISON SAY — DEBATE SIMULATOR DATA
+// ════════════════════════════════════════════════════════════════
+var MADISON_TOPICS = [
+  {
+    id: "executive-orders", icon: "[PEN]",
+    title: "Presidential Executive Orders",
+    question: "Should presidents be able to make major policy through executive orders, bypassing Congress?",
+    federalist: {
+      quote: "Energy in the executive is a leading character in the definition of good government... A feeble executive implies a feeble execution of the government.",
+      source: "Federalist No. 70, Hamilton",
+      argument: "Hamilton would argue that a strong, decisive executive is essential to good governance. Congress is slow by design -- deliberation among hundreds of members takes time the nation does not always have. A unified executive can act with 'decision, activity, secrecy, and despatch' that a legislature never could. When Congress is gridlocked, the president using lawful executive authority to act is not a threat to the Constitution -- it is the Constitution working as intended."
+    },
+    antifederalist: {
+      quote: "This government is to possess absolute and uncontroulable power, legislative, executive and judicial, with respect to every object to which it extends.",
+      source: "Brutus No. 1",
+      argument: "An Anti-Federalist would warn that a president acting alone, without the deliberation and consent of the people's representatives, is exactly the kind of unchecked power the Revolution was fought to escape. Today's friendly executive order becomes tomorrow's tyrant's tool. Brutus warned that once a branch tastes unchecked power, it will not give it back willingly -- only the legislature, accountable directly to voters, should make binding national policy."
+    },
+    constitutional: "Article II, Section 1 vests \"the executive Power\" in the President, but Article I, Section 1 vests \"all legislative Powers\" in Congress. Executive orders sit in the gray area between executing existing law (constitutional) and making new law (arguably not). The War Powers Resolution (1973) was Congress's attempt to claw back authority it felt presidents had seized.",
+    tags: ["Article II", "Separation of Powers", "Unit 2"],
+    prompt: "Should Congress pass a law strictly limiting what presidents can do through executive order? Take a position and defend it using reasoning from either side above."
+  },
+  {
+    id: "tiktok-ban", icon: "[PHONE]",
+    title: "Banning Foreign-Owned Apps",
+    question: "Can the government ban a foreign-owned social media app on national security grounds without violating free speech?",
+    federalist: {
+      quote: "The circumstances that endanger the safety of nations are infinite... it is impossible to foresee or define the extent and variety of national exigencies.",
+      source: "Federalist No. 23, Hamilton",
+      argument: "Hamilton would argue that national security threats cannot be fully anticipated, so the government must have broad authority to act against them -- including restricting a platform controlled by a foreign adversary government. The Constitution was designed to give the national government exactly this kind of power because state-by-state or no response at all would leave the country defenseless against modern threats the Founders could not have imagined."
+    },
+    antifederalist: {
+      quote: "The fears of the people of America... that they should be subjected to the absolute and uncontroulable power of the general government.",
+      source: "Brutus No. 1",
+      argument: "An Anti-Federalist would be deeply suspicious of the government banning a communication platform millions of citizens use to speak freely, no matter the justification. \"National security\" has historically been used to justify expansions of government power that outlast the threat that created them. If the government can ban one app today, what stops it from banning a domestic platform tomorrow under the same reasoning?"
+    },
+    constitutional: "The First Amendment protects freedom of speech and association, but courts have generally allowed restrictions when national security is genuinely at stake (see the \"clear and present danger\" framework from Schenck v. United States). The case turns on whether banning a platform is a content-neutral national security measure or an unconstitutional restriction on speech.",
+    tags: ["1st Amendment", "Schenck v. U.S.", "Unit 3"],
+    prompt: "Is banning a foreign-owned app more like restricting speech or more like restricting a national security risk? Defend your position."
+  },
+  {
+    id: "marijuana-federalism", icon: "[SCALE]",
+    title: "Federal vs. State Marijuana Law",
+    question: "When state law legalizes something federal law prohibits, which law should control?",
+    federalist: {
+      quote: "This Constitution, and the Laws of the United States which shall be made in Pursuance thereof... shall be the supreme Law of the Land.",
+      source: "Article VI, the Supremacy Clause",
+      argument: "A Federalist would point to the Supremacy Clause directly: federal law is supreme when it conflicts with state law. Hamilton in Federalist No. 33 explained that without this supremacy, the national government could not function -- a patchwork of 50 different drug policies undermines the uniform national regulation the Commerce Clause was designed to create. If states could simply ignore federal law they disagree with, the Union itself would unravel."
+    },
+    antifederalist: {
+      quote: "Each state retains its sovereignty, freedom, and independence, and every Power, Jurisdiction, and right, which is not by this confederation expressly delegated to the United States.",
+      source: "Articles of Confederation, Art. II (the Anti-Federalist ideal)",
+      argument: "An Anti-Federalist would argue that states are closer to their citizens and better positioned to set policy that reflects local values. Forcing federal drug policy onto a state that has democratically chosen otherwise is exactly the kind of federal overreach the Tenth Amendment was meant to prevent. If voters in a state want different policy, that is federalism working correctly, not a problem to be fixed."
+    },
+    constitutional: "The Commerce Clause (Article I, Section 8) gives Congress power to regulate interstate commerce, which has been interpreted broadly to include drug regulation (see Gonzales v. Raich, 2005). The Tenth Amendment reserves non-delegated powers to the states. This is a live tension in modern federalism -- the federal government has largely chosen not to enforce marijuana law in states that have legalized it, an informal truce rather than a constitutional resolution.",
+    tags: ["Commerce Clause", "10th Amendment", "Unit 1"],
+    prompt: "Should Congress change federal law to match state marijuana laws, or should it enforce federal law uniformly? Defend your position using federalism reasoning."
+  },
+  {
+    id: "student-loans", icon: "[DOC]",
+    title: "Executive Student Loan Forgiveness",
+    question: "Can the president forgive billions in student loan debt through executive action alone, without a vote in Congress?",
+    federalist: {
+      quote: "The President is to be the 'guardian of the people'... investing him with a degree of power and confidence necessary to discharge that important trust.",
+      source: "Federalist No. 71, Hamilton (paraphrased argument)",
+      argument: "A Federalist might argue that Congress has, in past legislation, delegated broad authority to the executive branch to manage federal loan programs during emergencies. The president using existing statutory authority -- rather than inventing new power -- is a legitimate exercise of delegated executive authority, similar to how Hamilton argued the executive needs flexibility to respond to circumstances Congress cannot fully anticipate."
+    },
+    antifederalist: {
+      quote: "All legislative Powers herein granted shall be vested in a Congress of the United States.",
+      source: "Article I, Section 1 (the Anti-Federalist argument)",
+      argument: "An Anti-Federalist would insist that spending hundreds of billions of dollars is precisely the kind of major national policy that must go through Congress, which holds the constitutional power of the purse. If a president can forgive any debt by simply reinterpreting an old statute, the legislative branch's central power -- control over spending -- becomes meaningless. This is exactly the unchecked executive power Brutus warned would emerge if the other branches did not jealously guard their own authority."
+    },
+    constitutional: "Article I, Section 8 grants Congress the power \"to pay the Debts\" and control federal spending -- the \"power of the purse.\" The major questions doctrine, used by the Supreme Court in Biden v. Nebraska (2023), held that executive agencies need clear congressional authorization for actions of major economic and political significance, like mass loan forgiveness.",
+    tags: ["Article I §8", "Major Questions Doctrine", "Unit 2"],
+    prompt: "Does using an old law in a new way count as executive overreach, or is it legitimate use of delegated power? Take a position."
+  },
+  {
+    id: "electoral-college", icon: "[STAR]",
+    title: "The Electoral College",
+    question: "Should the United States replace the Electoral College with a direct national popular vote for president?",
+    federalist: {
+      quote: "It was desirable that the sense of the people should operate in the choice of the person to whom so important a trust was to be confided... [but] it was also peculiarly desirable to afford as little opportunity as possible to tumult and disorder.",
+      source: "Federalist No. 68, Hamilton",
+      argument: "Hamilton would argue the Electoral College was designed deliberately as a filter -- not pure democracy, but a buffer against the passions of the moment. It ensures candidates must build broad coalitions across many different states and regions, not just appeal to the largest population centers. A direct popular vote would let candidates ignore smaller and rural states entirely, undermining the federal character of the Union the Constitution was built to protect."
+    },
+    antifederalist: {
+      quote: "The people of America... have not, nor do not assent to surrender their sovereignty into the hands of any man, or body of men.",
+      source: "Brutus No. 1 (argument adapted)",
+      argument: "An Anti-Federalist focused on direct popular sovereignty would argue that every citizen's vote should count equally regardless of which state they live in. A system where a candidate can win the presidency while losing the national popular vote -- as has happened multiple times -- contradicts the basic democratic principle that government derives its power from the consent of the governed, not from an indirect college of electors."
+    },
+    constitutional: "Article II, Section 1 establishes the Electoral College, and the Twelfth Amendment refined the process after the 1800 election crisis. Changing or eliminating it would require a constitutional amendment -- a deliberately difficult process requiring two-thirds of Congress and three-fourths of the states, reflecting the Founders' intent to make such structural changes rare.",
+    tags: ["Article II", "12th Amendment", "Unit 5"],
+    prompt: "Does the Electoral College still serve its original purpose today, or has it outlived its usefulness? Defend your position."
+  },
+  {
+    id: "filibuster", icon: "[CLOCK]",
+    title: "Eliminating the Senate Filibuster",
+    question: "Should the Senate eliminate the filibuster, allowing legislation to pass with a simple majority instead of 60 votes?",
+    federalist: {
+      quote: "The fundamental principle of free government [is] that the sense of the majority should prevail.",
+      source: "Federalist No. 22, Hamilton",
+      argument: "Hamilton was deeply skeptical of supermajority requirements, arguing in Federalist No. 22 that requiring more than a simple majority gives a minority the power to control the majority -- \"the latter, instead of being able to act, are compelled to court the pleasure of the former.\" He worried that supermajority rules like the filibuster produce \"tedious delays\" and \"continual negotiation\" rather than effective governance, weakening the national government's ability to function."
+    },
+    antifederalist: {
+      quote: "It is in the senate ... that the most odious of all aristocracies, that of wealth, has the fairest field for influence and intrigue.",
+      source: "Brutus No. 16 (paraphrased concern about Senate power concentration)",
+      argument: "An Anti-Federalist concerned with minority protection would argue that the filibuster forces the kind of consensus-building and compromise that prevents a temporary majority from steamrolling the rest of the country. Removing it would let a party with a razor-thin majority impose sweeping change that half the country opposes, with the only check being the next election -- too slow to undo lasting policy damage."
+    },
+    constitutional: "The filibuster is NOT in the Constitution -- it is a Senate rule, not a constitutional requirement. The Constitution specifies simple majority votes for most legislation (Article I) but does list a few exceptions requiring supermajorities, like treaty ratification (two-thirds) and overriding a veto (two-thirds), suggesting the Founders specified supermajorities only where they wanted them.",
+    tags: ["Article I", "Senate Rules", "Unit 2"],
+    prompt: "Since the filibuster isn't in the Constitution, does that make it easier or harder to defend as good policy? Take a position."
+  },
+  {
+    id: "citizens-united", icon: "[MONEY]",
+    title: "Money as Political Speech",
+    question: "Should corporations and unions be allowed to spend unlimited money on political campaigns as a form of free speech?",
+    federalist: {
+      quote: "Liberty is to faction what air is to fire... we might as well wish to annihilate liberty... as to abolish liberty, which is essential to political life.",
+      source: "Federalist No. 10, Madison",
+      argument: "Madison himself warned that you cannot eliminate the causes of faction without destroying liberty itself. A Federalist might argue that restricting how groups -- including corporations and unions -- can spend money to advocate for their views is a restriction on political speech and association. The solution to the influence of money, as Madison argued about factions generally, is not suppression but a large, diverse republic where many competing voices balance each other out."
+    },
+    antifederalist: {
+      quote: "The fears of the people of America... that they should be subjected to ... the most odious of all aristocracies, that of wealth.",
+      source: "Anti-Federalist concern, adapted",
+      argument: "An Anti-Federalist deeply wary of concentrated power would see unlimited corporate political spending as creating exactly the kind of moneyed aristocracy the Revolution sought to escape. If a wealthy corporation can outspend thousands of ordinary citizens combined, the principle of one person, one voice in self-government is hollowed out -- replaced by one dollar, one voice."
+    },
+    constitutional: "Citizens United v. FEC (2010) held that the First Amendment protects political spending by corporations and unions as a form of speech, striking down restrictions on independent campaign expenditures. This remains one of the most contested rulings in modern constitutional law, dividing those who see it as protecting free speech and those who see it as enabling outsized influence by wealthy interests.",
+    tags: ["1st Amendment", "Citizens United v. FEC", "Unit 5"],
+    prompt: "Is political spending the same thing as political speech? Defend your position using reasoning from either side."
+  },
+  {
+    id: "immigration-federalism", icon: "[FLAG]",
+    title: "State Immigration Enforcement",
+    question: "Can states pass their own immigration enforcement laws, or is immigration exclusively a federal responsibility?",
+    federalist: {
+      quote: "This Constitution, and the Laws of the United States... shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby.",
+      source: "Article VI, the Supremacy Clause",
+      argument: "A Federalist would argue that immigration policy must be uniform nationally -- foreign relations and the treatment of non-citizens cannot vary state by state without creating chaos and undermining the federal government's exclusive constitutional authority over naturalization (Article I, Section 8) and foreign affairs. A patchwork of 50 different state immigration policies would be unworkable and would weaken the national government's ability to speak with one voice internationally."
+    },
+    antifederalist: {
+      quote: "Each state retains its sovereignty, freedom, and independence, and every Power, Jurisdiction, and right, which is not by this confederation expressly delegated to the United States.",
+      source: "Articles of Confederation, Art. II",
+      argument: "An Anti-Federalist focused on state sovereignty would argue that states bear the direct, day-to-day consequences of immigration policy within their borders -- on schools, hospitals, and law enforcement -- and should have authority to respond as their citizens see fit when the federal government fails to act. State police powers, reserved by the Tenth Amendment, include protecting public health, safety, and welfare within state borders."
+    },
+    constitutional: "Article I, Section 8 gives Congress power over naturalization, suggesting federal supremacy in immigration policy. However, the Tenth Amendment reserves police powers to the states. Arizona v. United States (2012) addressed this directly -- the Supreme Court struck down several Arizona immigration enforcement provisions as preempted by federal law, reinforcing federal primacy while leaving some room for state cooperation.",
+    tags: ["Article I §8", "10th Amendment", "Unit 1"],
+    prompt: "Should states be allowed to enforce immigration law more strictly than the federal government if their citizens want it? Defend your position."
+  }
+];
+
+// ════════════════════════════════════════════════════════════════
+//  MADISON DEBATE ENGINE
+// ════════════════════════════════════════════════════════════════
+var madisonBuilt = false;
+var madisonCurrentTopic = null;
+
+function buildMadisonTab() {
+  if (madisonBuilt) return;
+  madisonBuilt = true;
+
+  var grid = document.getElementById('madison-topic-grid');
+  if (!grid) return;
+
+  grid.innerHTML = MADISON_TOPICS.map(function(t) {
+    return '<div class="madison-topic-card" data-id="' + t.id + '" onclick="madisonSelectTopic(\'' + t.id + '\', this)">' +
+      '<span class="madison-topic-icon">' + t.icon + '</span>' +
+      '<div class="madison-topic-title">' + t.title + '</div>' +
+    '</div>';
+  }).join('');
+
+  // Auto-select first topic
+  madisonSelectTopic(MADISON_TOPICS[0].id, grid.querySelector('.madison-topic-card'));
+}
+
+function madisonSelectTopic(id, cardEl) {
+  var topic = MADISON_TOPICS.find(function(t) { return t.id === id; });
+  if (!topic) return;
+  madisonCurrentTopic = topic;
+
+  document.querySelectorAll('.madison-topic-card').forEach(function(c) { c.classList.remove('active'); });
+  if (cardEl) cardEl.classList.add('active');
+
+  document.getElementById('madison-question-text').textContent = topic.question;
+
+  document.getElementById('madison-fed-quote').textContent = '"' + topic.federalist.quote + '"';
+  document.getElementById('madison-fed-source').textContent = '— ' + topic.federalist.source;
+  document.getElementById('madison-fed-argument').textContent = topic.federalist.argument;
+
+  document.getElementById('madison-anti-quote').textContent = '"' + topic.antifederalist.quote + '"';
+  document.getElementById('madison-anti-source').textContent = '— ' + topic.antifederalist.source;
+  document.getElementById('madison-anti-argument').textContent = topic.antifederalist.argument;
+
+  document.getElementById('madison-const-text').textContent = topic.constitutional;
+  document.getElementById('madison-const-tags').innerHTML = topic.tags.map(function(tag) {
+    return '<span class="madison-const-tag">' + tag + '</span>';
+  }).join('');
+
+  document.getElementById('madison-prompt-text').textContent = topic.prompt;
+  document.getElementById('madison-response-area').value = '';
+
+  document.getElementById('madison-debate-area').classList.add('show');
+  document.getElementById('madison-debate-area').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+document.querySelector('.nav-tab[data-tab="madison"]').addEventListener('click', function() {
+  setTimeout(buildMadisonTab, 30);
 });
 
 
