@@ -1007,7 +1007,7 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 //  NAV TABS
 // ══════════════════════════════════════════════════════════
-const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'madison', 'exit'];
+const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'madison', 'skills', 'exit'];
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target) {
@@ -3353,6 +3353,391 @@ function showCase(idx) {
 document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', function() {
   setTimeout(buildCasesTab, 30);
 });
+
+
+
+
+// ════════════════════════════════════════════════════════════════
+//  SKILL BUILDERS — Claim, Evidence & Reasoning (CER) Trainer
+// ════════════════════════════════════════════════════════════════
+
+var SKILLS_CER_LEVEL1 = {
+  learnTitle: "Fact vs. Opinion",
+  learnBig: "Every sentence is either a FACT or an OPINION.",
+  learnSub: "A FACT can be proven true or false by checking it. An OPINION is what someone believes or thinks should happen -- you can't prove it true or false, only agree or disagree.",
+  goodExample: "Congress has 535 voting members.",
+  goodLabel: "FACT — you can look this up and check it",
+  badExample: "Congress should have term limits.",
+  badLabel: "OPINION — this is what someone believes should happen",
+  guidedPassage: "The Constitution was written in 1787.",
+  guidedAnswer: "This is a FACT. We can check historical records and verify the exact year the Constitutional Convention took place. There's no opinion involved -- it's either true or it isn't, and it's true.",
+  questions: [
+    { text: "The President lives in the White House.", answer: "fact", explain: "This is a FACT -- you can verify it by checking where the President actually lives." },
+    { text: "The President is doing a great job.", answer: "opinion", explain: "This is an OPINION -- 'great job' depends on who you ask. Different people would disagree." },
+    { text: "There are 50 states in the United States.", answer: "fact", explain: "This is a FACT -- you can count the states and verify this number." },
+    { text: "Voting should be mandatory for all citizens.", answer: "opinion", explain: "This is an OPINION -- 'should be' signals someone's belief about what ought to happen." },
+    { text: "The Supreme Court has 9 justices.", answer: "fact", explain: "This is a FACT -- this is a specific, checkable number." },
+    { text: "The Supreme Court makes too many controversial decisions.", answer: "opinion", explain: "This is an OPINION -- 'too many' and 'controversial' are judgments, not measurable facts." },
+    { text: "Congress passed the Civil Rights Act in 1964.", answer: "fact", explain: "This is a FACT -- this is a historical event you can verify with a date." },
+    { text: "The Civil Rights Act was the most important law in American history.", answer: "opinion", explain: "This is an OPINION -- 'most important' is a judgment that reasonable people could disagree about." },
+    { text: "Each state has two U.S. Senators.", answer: "fact", explain: "This is a FACT -- this is written directly in the Constitution and can be verified." },
+    { text: "Senators should serve shorter terms.", answer: "opinion", explain: "This is an OPINION -- 'should' is the giveaway word. This is what someone thinks ought to change." },
+    { text: "The Declaration of Independence was signed in 1776.", answer: "fact", explain: "This is a FACT -- this is a specific historical date that can be checked." },
+    { text: "The Founding Fathers were the wisest leaders in history.", answer: "opinion", explain: "This is an OPINION -- 'wisest' is a judgment that can't be measured or proven." }
+  ]
+};
+
+var SKILLS_CER_LEVEL2 = {
+  learnTitle: "Claim vs. Evidence",
+  learnBig: "A CLAIM is what someone argues. EVIDENCE is the proof that backs it up.",
+  learnSub: "Think of a claim as the main point someone is trying to make. Evidence is the specific facts, numbers, or examples used to support that point.",
+  goodExample: "Evidence: 'Voter turnout was only 38% in the last midterm election.'",
+  goodLabel: "EVIDENCE — a specific, checkable fact used as proof",
+  badExample: "Claim: 'Americans don't care enough about voting.'",
+  badLabel: "CLAIM — the argument or point being made",
+  guidedPassage: "Claim: \"The filibuster makes the Senate dysfunctional.\" Evidence: \"In 2022, over 90% of bills introduced in the Senate never received a floor vote.\"",
+  guidedAnswer: "The first sentence is the CLAIM -- it's the argument being made about the filibuster. The second sentence is the EVIDENCE -- it's a specific, checkable statistic used to support that argument.",
+  questions: [
+    { text: "\"Social media has too much influence on elections.\"", answer: "claim", explain: "This is a CLAIM -- it's an argument or position being put forward, not a specific proof." },
+    { text: "\"In the 2020 election, campaigns spent over $1 billion on social media ads.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable statistic that could be used to support a claim." },
+    { text: "\"The Electoral College should be abolished.\"", answer: "claim", explain: "This is a CLAIM -- it's an argument about what should happen, not proof of anything." },
+    { text: "\"In 2000 and 2016, the winner of the popular vote lost the presidency.\"", answer: "evidence", explain: "This is EVIDENCE -- these are specific historical facts that could support an argument about the Electoral College." },
+    { text: "\"Gerrymandering undermines fair representation.\"", answer: "claim", explain: "This is a CLAIM -- it's the writer's argument or position." },
+    { text: "\"In North Carolina's 2016 map, Republicans won 10 of 13 seats despite winning only 53% of the statewide vote.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable example that supports a claim about gerrymandering." },
+    { text: "\"The Supreme Court has become too political.\"", answer: "claim", explain: "This is a CLAIM -- 'too political' is the writer's argument." },
+    { text: "\"A 2023 poll found that 58% of Americans believe the Court is influenced by politics rather than law.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, citable data point." },
+    { text: "\"Lobbying gives wealthy interest groups outsized power in Congress.\"", answer: "claim", explain: "This is a CLAIM -- it's the argument being made about lobbying's effect." },
+    { text: "\"In 2022, over $4 billion was spent on federal lobbying.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable dollar figure." }
+  ]
+};
+
+var SKILLS_CER_LEVEL3 = {
+  learnTitle: "Claim, Evidence & Reasoning",
+  learnBig: "REASONING is the bridge that connects your evidence to your claim.",
+  learnSub: "It's not enough to state a claim and drop in a fact -- you have to explain WHY that evidence proves your point. Reasoning answers the question: 'So what? Why does this evidence matter?'",
+  goodExample: "\"This shows that low turnout weakens the legitimacy of elected officials, because leaders who are chosen by a small fraction of the population don't truly represent the will of the people.\"",
+  goodLabel: "REASONING — explains WHY the evidence supports the claim",
+  badExample: "\"Voter turnout was 38%. This is a problem.\"",
+  badLabel: "MISSING REASONING — no explanation of WHY 38% matters or proves anything",
+  guidedPassage: "Claim: \"The Senate filibuster gives the minority party too much power.\" Evidence: \"In 2021, a bill with 59 votes still failed to pass because it needed 60 to overcome a filibuster.\" Reasoning: \"This shows that even when a clear majority of senators support a bill, a smaller minority can block it entirely -- meaning the will of most senators, and the constituents they represent, can be overridden by a small group.\"",
+  guidedAnswer: "Notice how the REASONING doesn't just repeat the evidence -- it explains the broader significance. It connects the specific fact (59 votes still failing) back to the claim (the filibuster gives too much power to the minority) by explaining the mechanism: a majority's will being blocked by a minority.",
+  questions: [
+    {
+      text: "Claim: \"Citizens United increased the influence of money in politics.\" Evidence: \"Following the 2010 ruling, Super PAC spending rose from $0 to over $600 million in the next election cycle.\" Which sentence below is the BEST reasoning connecting this evidence to the claim?",
+      choices: [
+        "This shows that Super PACs are now allowed to spend unlimited money, meaning groups with the most money can have a far greater voice in elections than ordinary citizens.",
+        "Super PACs are a type of political organization that emerged after a major court case."
+      ],
+      answer: 0,
+      explain: "The first option explains WHY the dramatic spending increase matters -- it connects the evidence (the spending jump) to the claim (increased influence of money) by explaining the mechanism (unequal voice based on wealth). The second option just restates background facts without connecting them to the claim."
+    },
+    {
+      text: "Claim: \"Gerrymandering reduces electoral competition.\" Evidence: \"In the 2022 midterms, over 80% of House races were decided by more than 10 percentage points.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "House races happen every two years for all 435 seats.",
+        "This shows that most districts have been drawn to heavily favor one party, meaning the outcome is often decided before voters even go to the polls, reducing meaningful competition."
+      ],
+      answer: 1,
+      explain: "The second option explains the significance of the 80% statistic -- it connects district-drawing to predetermined outcomes, directly supporting the claim about reduced competition. The first option is just unrelated background information."
+    },
+    {
+      text: "Claim: \"Selective incorporation has expanded individual rights over time.\" Evidence: \"Cases like Gideon v. Wainwright (1963) and McDonald v. Chicago (2010) applied Bill of Rights protections to state governments.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "This shows that rights which once only restricted the federal government now also apply to state and local governments, meaning individuals have stronger legal protections no matter where in the country they live.",
+        "The Bill of Rights contains the first ten amendments to the Constitution."
+      ],
+      answer: 0,
+      explain: "The first option explains the broader significance of these cases -- expanding protections to state governments -- connecting it directly to the claim about expanded rights. The second is just a definition, not reasoning."
+    },
+    {
+      text: "Claim: \"Political polarization has made congressional compromise more difficult.\" Evidence: \"Bipartisan votes on major legislation dropped from common in the 1990s to rare by the 2020s.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "Congress is made up of the House of Representatives and the Senate.",
+        "This shows that members of each party have become less willing to work across the aisle, meaning fewer policies can gain the broad support needed to pass and remain stable over time."
+      ],
+      answer: 1,
+      explain: "The second option explains WHY the drop in bipartisan votes matters -- it connects the trend to reduced willingness to compromise, directly supporting the claim. The first is just a structural fact about Congress."
+    }
+  ]
+};
+
+var SKILLS_PROGRESS_KEY = "apgov_skills_progress";
+
+function skillsGetProgress() {
+  try { return JSON.parse(localStorage.getItem(SKILLS_PROGRESS_KEY) || "{}"); }
+  catch (e) { return {}; }
+}
+function skillsSaveProgress(activityId, level, score, total) {
+  var p = skillsGetProgress();
+  if (!p[activityId]) p[activityId] = {};
+  p[activityId]['level' + level] = { score: score, total: total, completed: score >= Math.ceil(total * 0.7), date: new Date().toISOString() };
+  localStorage.setItem(SKILLS_PROGRESS_KEY, JSON.stringify(p));
+}
+function skillsIsLevelUnlocked(activityId, level) {
+  if (level === 1) return true;
+  var p = skillsGetProgress();
+  var prev = p[activityId] && p[activityId]['level' + (level - 1)];
+  return prev && prev.completed;
+}
+
+var skillsState = {
+  activity: null,
+  level: 1,
+  questions: [],
+  qIndex: 0,
+  score: 0,
+  answered: false
+};
+
+var SKILLS_ACTIVITY_DATA = {
+  cer: { name: "Claim, Evidence & Reasoning", levels: [SKILLS_CER_LEVEL1, SKILLS_CER_LEVEL2, SKILLS_CER_LEVEL3] }
+};
+
+function skillsOpenActivity(activityId) {
+  skillsState.activity = activityId;
+  document.getElementById('skills-menu').style.display = 'none';
+  document.getElementById('skills-detail-area').classList.add('show');
+  skillsBuildLevelTabs();
+  skillsLoadLevel(1);
+}
+
+function skillsBackToMenu() {
+  document.getElementById('skills-menu').style.display = '';
+  document.getElementById('skills-detail-area').classList.remove('show');
+  document.getElementById('skills-learn-panel').classList.remove('show');
+  document.getElementById('skills-guided-panel').classList.remove('show');
+  document.getElementById('skills-practice-panel').classList.remove('show');
+  document.getElementById('skills-results').classList.remove('show');
+}
+
+function skillsBuildLevelTabs() {
+  var wrap = document.getElementById('skills-level-tabs');
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  wrap.innerHTML = activity.levels.map(function(lvl, i) {
+    var levelNum = i + 1;
+    var unlocked = skillsIsLevelUnlocked(skillsState.activity, levelNum);
+    var cls = 'skills-level-tab' + (unlocked ? ' unlocked' : ' locked') + (levelNum === skillsState.level ? ' active' : '');
+    return '<div class="' + cls + '" onclick="' + (unlocked ? 'skillsLoadLevel(' + levelNum + ')' : '') + '">' +
+      'Level ' + levelNum + (unlocked ? '' : ' 🔒') + '</div>';
+  }).join('');
+}
+
+function skillsLoadLevel(levelNum) {
+  if (!skillsIsLevelUnlocked(skillsState.activity, levelNum)) return;
+  skillsState.level = levelNum;
+  skillsBuildLevelTabs();
+
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[levelNum - 1];
+
+  // Show Learn It panel
+  document.getElementById('skills-learn-panel').classList.add('show');
+  document.getElementById('skills-guided-panel').classList.remove('show');
+  document.getElementById('skills-practice-panel').classList.remove('show');
+  document.getElementById('skills-results').classList.remove('show');
+
+  document.getElementById('skills-learn-title').textContent = 'Learn It — ' + levelData.learnTitle;
+  document.getElementById('skills-learn-body').innerHTML =
+    '<div class="skills-big-explainer">' + levelData.learnBig + '</div>' +
+    '<div class="skills-explainer-sub">' + levelData.learnSub + '</div>' +
+    '<div class="skills-example-row">' +
+      '<div class="skills-example-box good">' +
+        '<div class="skills-example-label">' + levelData.goodLabel + '</div>' +
+        '<div class="skills-example-text">' + levelData.goodExample + '</div>' +
+      '</div>' +
+      '<div class="skills-example-box bad">' +
+        '<div class="skills-example-label">' + levelData.badLabel + '</div>' +
+        '<div class="skills-example-text">' + levelData.badExample + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'ve Got It → Show Me an Example</button>';
+}
+
+function skillsShowGuided() {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+
+  document.getElementById('skills-learn-panel').classList.remove('show');
+  document.getElementById('skills-guided-panel').classList.add('show');
+
+  document.getElementById('skills-guided-body').innerHTML =
+    '<div class="skills-guided-passage">' + levelData.guidedPassage + '</div>' +
+    '<div class="skills-guided-answer">' +
+      '<div class="skills-guided-answer-label">Here\'s the thinking</div>' +
+      '<div class="skills-guided-answer-text">' + levelData.guidedAnswer + '</div>' +
+    '</div>' +
+    '<button class="skills-continue-btn" onclick="skillsStartPractice()">Ready — My Turn →</button>';
+}
+
+function skillsStartPractice() {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+
+  document.getElementById('skills-guided-panel').classList.remove('show');
+  document.getElementById('skills-practice-panel').classList.add('show');
+  document.getElementById('skills-results').classList.remove('show');
+
+  // Shuffle questions
+  skillsState.questions = levelData.questions.slice();
+  for (var i = skillsState.questions.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = skillsState.questions[i]; skillsState.questions[i] = skillsState.questions[j]; skillsState.questions[j] = tmp;
+  }
+  skillsState.qIndex = 0;
+  skillsState.score = 0;
+  skillsShowQuestion();
+}
+
+function skillsShowQuestion() {
+  var q = skillsState.questions[skillsState.qIndex];
+  var total = skillsState.questions.length;
+  skillsState.answered = false;
+
+  document.getElementById('skills-q-counter').textContent = 'Question ' + (skillsState.qIndex + 1) + ' of ' + total;
+  document.getElementById('skills-progress-fill').style.width = (skillsState.qIndex / total * 100) + '%';
+  document.getElementById('skills-score-badge').textContent = skillsState.score + ' / ' + total;
+
+  var choiceRow = document.getElementById('skills-choice-row');
+  var passage = document.getElementById('skills-q-passage');
+  var instruction = document.getElementById('skills-q-instruction');
+
+  if (q.choices) {
+    // Level 3 style: multi-choice reasoning question
+    instruction.textContent = 'Pick the best answer:';
+    passage.textContent = q.text;
+    choiceRow.style.gridTemplateColumns = '1fr';
+    choiceRow.innerHTML = q.choices.map(function(choice, i) {
+      return '<button class="skills-choice-btn" onclick="skillsAnswer(this,' + i + ')" style="text-align:left;">' + choice + '</button>';
+    }).join('');
+  } else {
+    // Level 1/2 style: binary classification
+    instruction.textContent = skillsState.level === 1 ? 'Is this a FACT or an OPINION?' : 'Is this a CLAIM or EVIDENCE?';
+    passage.textContent = q.text;
+    choiceRow.style.gridTemplateColumns = '1fr 1fr';
+    var labels = skillsState.level === 1 ? ['FACT', 'OPINION'] : ['CLAIM', 'EVIDENCE'];
+    var values = skillsState.level === 1 ? ['fact', 'opinion'] : ['claim', 'evidence'];
+    choiceRow.innerHTML = labels.map(function(label, i) {
+      return '<button class="skills-choice-btn" onclick="skillsAnswerBinary(this,\'' + values[i] + '\')">' + label + '</button>';
+    }).join('');
+  }
+
+  document.getElementById('skills-feedback').className = 'skills-feedback';
+  document.getElementById('skills-next-btn').className = 'skills-next-btn';
+}
+
+function skillsAnswerBinary(btn, value) {
+  if (skillsState.answered) return;
+  skillsState.answered = true;
+  var q = skillsState.questions[skillsState.qIndex];
+  var correct = value === q.answer;
+  if (correct) skillsState.score++;
+
+  document.querySelectorAll('.skills-choice-btn').forEach(function(b) {
+    b.disabled = true;
+    var bVal = b === btn ? value : null;
+    if ((skillsState.level === 1 ? ['fact','opinion'] : ['claim','evidence']).indexOf(b.textContent.toLowerCase()) === (skillsState.level === 1 ? ['fact','opinion'] : ['claim','evidence']).indexOf(q.answer)) {
+      b.classList.add('correct');
+    } else if (b === btn && !correct) {
+      b.classList.add('wrong');
+    }
+  });
+
+  skillsShowFeedback(correct, q.explain);
+}
+
+function skillsAnswer(btn, idx) {
+  if (skillsState.answered) return;
+  skillsState.answered = true;
+  var q = skillsState.questions[skillsState.qIndex];
+  var correct = idx === q.answer;
+  if (correct) skillsState.score++;
+
+  document.querySelectorAll('.skills-choice-btn').forEach(function(b, i) {
+    b.disabled = true;
+    if (i === q.answer) b.classList.add('correct');
+    else if (b === btn && !correct) b.classList.add('wrong');
+  });
+
+  skillsShowFeedback(correct, q.explain);
+}
+
+function skillsShowFeedback(correct, explainText) {
+  var fb = document.getElementById('skills-feedback');
+  fb.className = 'skills-feedback show ' + (correct ? 'correct' : 'wrong');
+  fb.innerHTML = (correct ? '✓ Correct! ' : '✗ Not quite. ') + explainText;
+  document.getElementById('skills-next-btn').className = 'skills-next-btn show';
+  document.getElementById('skills-score-badge').textContent = skillsState.score + ' / ' + skillsState.questions.length;
+}
+
+function skillsNextQuestion() {
+  skillsState.qIndex++;
+  if (skillsState.qIndex >= skillsState.questions.length) {
+    skillsShowResults();
+  } else {
+    skillsShowQuestion();
+  }
+}
+
+function skillsShowResults() {
+  document.getElementById('skills-practice-panel').querySelector('.skills-progress-bar').style.display = 'none';
+  document.getElementById('skills-q-counter').style.display = 'none';
+  document.getElementById('skills-q-instruction').style.display = 'none';
+  document.getElementById('skills-q-passage').style.display = 'none';
+  document.getElementById('skills-choice-row').style.display = 'none';
+  document.getElementById('skills-feedback').style.display = 'none';
+  document.getElementById('skills-next-btn').style.display = 'none';
+
+  var total = skillsState.questions.length;
+  var score = skillsState.score;
+  var pct = Math.round(score / total * 100);
+  var passed = pct >= 70;
+
+  skillsSaveProgress(skillsState.activity, skillsState.level, score, total);
+
+  document.getElementById('skills-results').classList.add('show');
+  document.getElementById('skills-results-emoji').textContent = passed ? '🎉' : '💪';
+  document.getElementById('skills-results-score').textContent = score + ' / ' + total;
+  document.getElementById('skills-results-msg').textContent = passed
+    ? 'Great work! You unlocked the next level.'
+    : 'Almost there -- review and try again to unlock the next level (need 70%+).';
+
+  var nextLevelBtn = document.getElementById('skills-next-level-btn');
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var hasNextLevel = skillsState.level < activity.levels.length;
+  nextLevelBtn.style.display = (passed && hasNextLevel) ? '' : 'none';
+
+  skillsSubmitScoreToSheet();
+  skillsBuildLevelTabs();
+}
+
+function skillsRetryLevel() {
+  document.getElementById('skills-practice-panel').querySelector('.skills-progress-bar').style.display = '';
+  document.getElementById('skills-q-counter').style.display = '';
+  document.getElementById('skills-q-instruction').style.display = '';
+  document.getElementById('skills-q-passage').style.display = '';
+  document.getElementById('skills-choice-row').style.display = '';
+  document.getElementById('skills-feedback').style.display = '';
+  document.getElementById('skills-next-btn').style.display = '';
+  skillsStartPractice();
+}
+
+function skillsNextLevel() {
+  document.getElementById('skills-practice-panel').querySelector('.skills-progress-bar').style.display = '';
+  document.getElementById('skills-q-counter').style.display = '';
+  document.getElementById('skills-q-instruction').style.display = '';
+  document.getElementById('skills-q-passage').style.display = '';
+  document.getElementById('skills-choice-row').style.display = '';
+  document.getElementById('skills-feedback').style.display = '';
+  document.getElementById('skills-next-btn').style.display = '';
+  skillsLoadLevel(skillsState.level + 1);
+}
+
+// Placeholder for Sheets submission -- wired in a later pass
+function skillsSubmitScoreToSheet() {
+  // Will POST to the same Apps Script endpoint as exit tickets,
+  // with a different "type" field, once we wire this up together.
+  console.log('Skill score ready to submit:', skillsState.activity, 'Level ' + skillsState.level, skillsState.score + '/' + skillsState.questions.length);
+}
 
 
 
