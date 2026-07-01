@@ -3362,7 +3362,7 @@ document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', f
 // ════════════════════════════════════════════════════════════════
 
 var SKILLS_CER_LEVEL1 = {
-  learnTitle: "Fact vs. Opinion",
+  learnTitle: "FACT VS. OPINION",
   learnBig: "Every sentence is either a FACT or an OPINION.",
   learnSub: "A FACT can be proven true or false by checking it. An OPINION is what someone believes or thinks should happen -- you can't prove it true or false, only agree or disagree.",
   goodExample: "Congress has 535 voting members.",
@@ -3388,7 +3388,7 @@ var SKILLS_CER_LEVEL1 = {
 };
 
 var SKILLS_CER_LEVEL2 = {
-  learnTitle: "Claim vs. Evidence",
+  learnTitle: "CLAIM VS. EVIDENCE",
   learnBig: "A CLAIM is what someone argues. EVIDENCE is the proof that backs it up.",
   learnSub: "Think of a claim as the main point someone is trying to make. Evidence is the specific facts, numbers, or examples used to support that point.",
   goodExample: "Evidence: 'Voter turnout was only 38% in the last midterm election.'",
@@ -3412,7 +3412,7 @@ var SKILLS_CER_LEVEL2 = {
 };
 
 var SKILLS_CER_LEVEL3 = {
-  learnTitle: "Claim, Evidence & Reasoning",
+  learnTitle: "CLAIM, EVIDENCE & REASONING",
   learnBig: "REASONING is the bridge that connects your evidence to your claim.",
   learnSub: "It's not enough to state a claim and drop in a fact -- you have to explain WHY that evidence proves your point. Reasoning answers the question: 'So what? Why does this evidence matter?'",
   goodExample: "\"This shows that low turnout weakens the legitimacy of elected officials, because leaders who are chosen by a small fraction of the population don't truly represent the will of the people.\"",
@@ -3461,6 +3461,335 @@ var SKILLS_CER_LEVEL3 = {
   ]
 };
 
+
+// ════════════════════════════════════════════════════════════════
+//  SKILL BUILDERS — ACADEMIC VOCABULARY IN CONTEXT
+// ════════════════════════════════════════════════════════════════
+
+var SKILLS_VOCAB_LEVEL1 = {
+  learnTitle: "READING CONTEXT CLUES",
+  learnBig: "You don't need a dictionary. The sentence tells you.",
+  learnSub: "When you hit a word you don't know, don't skip it — look at the words around it. The rest of the sentence almost always gives you a clue about what the unknown word means. This skill works for every class, every test, for the rest of your life.",
+  goodExample: "The senator tried to OPPOSE the bill, voting against it and urging others to reject it.",
+  goodLabel: "CONTEXT CLUE: 'voting against it' tells you OPPOSE means to be against something",
+  badExample: "The senator tried to OPPOSE the bill.",
+  badLabel: "NO CONTEXT: without more information, you'd have to guess",
+  guidedPassage: "The President tried to ASSERT his authority by reminding Congress that the Constitution gave the executive branch power to conduct foreign policy.",
+  guidedAnswer: "Look at what comes after ASSERT: 'reminding Congress that the Constitution gave him power.' He is making a strong statement — claiming something is true. ASSERT means to state something firmly or declare something confidently.",
+  questions: [
+    {
+      text: "The new law was designed to RESTRICT access to certain weapons, making it harder for people to obtain them.",
+      word: "RESTRICT",
+      choices: ["make easier", "limit or reduce", "promote", "ignore"],
+      answer: 1,
+      explain: "The clue is 'making it harder for people to obtain them' — that tells you RESTRICT means to limit or reduce access."
+    },
+    {
+      text: "Congress voted to ABOLISH the outdated regulation, ending it completely after decades of debate.",
+      word: "ABOLISH",
+      choices: ["create", "modify slightly", "end completely", "study"],
+      answer: 2,
+      explain: "The clue is 'ending it completely' — ABOLISH means to officially end or get rid of something."
+    },
+    {
+      text: "The governor chose to VETO the bill, refusing to sign it into law and sending it back to the legislature.",
+      word: "VETO",
+      choices: ["support enthusiastically", "study carefully", "refuse to approve", "rewrite completely"],
+      answer: 2,
+      explain: "The clue is 'refusing to sign it into law and sending it back' — a VETO is when an executive rejects a bill passed by the legislature."
+    },
+    {
+      text: "Many citizens choose to ABSTAIN from voting, neither supporting nor opposing any candidate.",
+      word: "ABSTAIN",
+      choices: ["vote enthusiastically", "choose not to participate", "campaign for a candidate", "protest loudly"],
+      answer: 1,
+      explain: "The clue is 'neither supporting nor opposing' — to ABSTAIN means to deliberately choose not to participate."
+    },
+    {
+      text: "The two senators decided to COMPROMISE, with each side giving up something they wanted in order to reach an agreement.",
+      word: "COMPROMISE",
+      choices: ["fight until one side wins", "give up completely", "reach agreement by both sides giving something up", "ignore the disagreement"],
+      answer: 2,
+      explain: "The clue is 'each side giving up something they wanted in order to reach an agreement' — that IS the definition of COMPROMISE."
+    },
+    {
+      text: "The court ruled the search was ILLEGAL because police had no warrant, meaning the evidence could not be used.",
+      word: "ILLEGAL",
+      choices: ["against the law", "very surprising", "carefully planned", "widely supported"],
+      answer: 0,
+      explain: "The clue is 'police had no warrant' and 'evidence could not be used' — ILLEGAL means against the law."
+    },
+    {
+      text: "The amendment was RATIFIED when three-fourths of the states voted to approve it, making it officially part of the Constitution.",
+      word: "RATIFIED",
+      choices: ["rejected by the states", "formally approved", "argued about for years", "written by Congress"],
+      answer: 1,
+      explain: "The clue is 'voted to approve it, making it officially part of the Constitution' — RATIFIED means formally approved."
+    },
+    {
+      text: "The senator was known for being BIPARTISAN, regularly working with members of the other party to pass legislation.",
+      word: "BIPARTISAN",
+      choices: ["extremely aggressive", "involving only one party", "involving both political parties", "very popular"],
+      answer: 2,
+      explain: "The clue is 'working with members of the other party' — BIPARTISAN means involving both political parties."
+    },
+    {
+      text: "The law was CONTROVERSIAL — supporters praised it as necessary reform while opponents called it dangerous overreach.",
+      word: "CONTROVERSIAL",
+      choices: ["widely popular", "causing strong disagreement", "very expensive", "quickly forgotten"],
+      answer: 1,
+      explain: "The clue is the dash followed by 'supporters praised it... while opponents called it' — when a topic has strong arguments on both sides, it's CONTROVERSIAL."
+    },
+    {
+      text: "The President tried to PERSUADE Congress by giving a speech laying out all the reasons why his proposal was the best option.",
+      word: "PERSUADE",
+      choices: ["threaten", "confuse", "convince someone to agree", "ignore"],
+      answer: 2,
+      explain: "The clue is 'laying out all the reasons why' — when you try to get someone to agree with you by giving reasons, you are trying to PERSUADE them."
+    },
+    {
+      text: "The judge found the law to be UNCONSTITUTIONAL, ruling that it violated rights protected in the Constitution.",
+      word: "UNCONSTITUTIONAL",
+      choices: ["very popular", "against the Constitution", "supported by most states", "expensive to enforce"],
+      answer: 1,
+      explain: "The clue is 'violated rights protected in the Constitution' — UNCONSTITUTIONAL means going against what the Constitution allows."
+    },
+    {
+      text: "After the scandal, the politician's reputation was severely DAMAGED, and many former supporters chose to ABANDON him.",
+      word: "ABANDON",
+      choices: ["support more strongly", "study carefully", "leave or give up on", "publicly defend"],
+      answer: 2,
+      explain: "The clue is 'former supporters' — they used to support him but no longer do. To ABANDON means to leave or give up on someone or something."
+    },
+    {
+      text: "The Constitution DELEGATES specific powers to Congress, such as the power to declare war and collect taxes.",
+      word: "DELEGATES",
+      choices: ["removes", "assigns or gives authority to", "argues against", "hides"],
+      answer: 1,
+      explain: "The clue is 'specific powers to Congress' followed by examples of those powers — to DELEGATE means to officially assign or give authority or responsibility to someone."
+    },
+    {
+      text: "The candidate promised to REFORM the tax system, arguing that the current system was unfair and needed significant changes.",
+      word: "REFORM",
+      choices: ["eliminate entirely", "make changes to improve", "ignore completely", "make more strict"],
+      answer: 1,
+      explain: "The clue is 'needed significant changes' and the word 'improve' is implied by 'unfair' — to REFORM means to change something to make it better."
+    },
+    {
+      text: "The governor IMPLEMENTED the new policy immediately, putting it into effect the same day it was signed.",
+      word: "IMPLEMENTED",
+      choices: ["canceled", "put into action", "studied for years", "argued against"],
+      answer: 1,
+      explain: "The clue is 'putting it into effect the same day' — to IMPLEMENT means to put a plan or decision into action."
+    }
+  ]
+};
+
+var SKILLS_VOCAB_LEVEL2 = {
+  learnTitle: "ACADEMIC WORDS IN CONTEXT",
+  learnBig: "These words show up in textbooks, tests, and AP exams — everywhere.",
+  learnSub: "Level 2 uses harder academic words — the kind you see in AP Gov readings, standardized tests, and college essays. The strategy is the same: use the context around the word to figure out what it means. Look for definitions, examples, contrasts, and explanations nearby.",
+  goodExample: "Madison sought to ENUMERATE the powers of Congress clearly, listing each one explicitly in Article I, Section 8 to prevent disputes about federal authority.",
+  goodLabel: "CONTEXT CLUE: 'listing each one explicitly' tells you ENUMERATE means to list one by one",
+  badExample: "Madison sought to ENUMERATE the powers of Congress.",
+  badLabel: "WITHOUT CONTEXT: the word is too specific to guess from sentence alone",
+  guidedPassage: "The Supreme Court has historically been RELUCTANT to SUPERSEDE acts of Congress, preferring to defer to the legislative branch unless a law clearly violates a constitutional provision.",
+  guidedAnswer: "For RELUCTANT: 'preferring to defer to' tells you the Court doesn't WANT to do something — RELUCTANT means unwilling or hesitant. For SUPERSEDE: 'to defer to the legislative branch unless...' tells you SUPERSEDE means to replace or override something — here, to override acts of Congress.",
+  questions: [
+    {
+      text: "The ruling was seen as ARBITRARY because the justices offered no consistent legal reasoning — the outcome seemed to depend entirely on personal preference rather than principle.",
+      word: "ARBITRARY",
+      choices: ["carefully researched", "based on clear rules", "random or without clear reason", "very expensive"],
+      answer: 2,
+      explain: "The clue is 'no consistent legal reasoning' and 'seemed to depend entirely on personal preference rather than principle' — ARBITRARY means based on random choice rather than a clear rule."
+    },
+    {
+      text: "The senator was known for her ELOQUENCE — her speeches were powerful and persuasive, with carefully chosen words that moved even political opponents.",
+      word: "ELOQUENCE",
+      choices: ["poor communication skills", "the ability to speak powerfully and effectively", "very loud voice", "dishonesty"],
+      answer: 1,
+      explain: "The clue is 'powerful and persuasive, with carefully chosen words that moved even political opponents' — ELOQUENCE is the skill of using language effectively and persuasively."
+    },
+    {
+      text: "The two laws were CONTRADICTORY — one required states to enforce a federal standard while the other explicitly allowed states to set their own rules.",
+      word: "CONTRADICTORY",
+      choices: ["supportive of each other", "directly opposite or conflicting", "difficult to understand", "widely popular"],
+      answer: 1,
+      explain: "The clue is the dash followed by the explanation: one law required X while the other allowed the opposite. CONTRADICTORY means directly opposing or conflicting."
+    },
+    {
+      text: "Critics argued that the new regulation was EXCESSIVE, going far beyond what was necessary to address the problem and placing an unreasonable burden on businesses.",
+      word: "EXCESSIVE",
+      choices: ["carefully measured", "too much, beyond what is needed", "very popular", "legally required"],
+      answer: 1,
+      explain: "The clue is 'far beyond what was necessary' — EXCESSIVE means more than what is appropriate or needed."
+    },
+    {
+      text: "The treaty was designed to be RECIPROCAL — if the U.S. reduced tariffs on foreign goods, those countries would equally reduce tariffs on American goods.",
+      word: "RECIPROCAL",
+      choices: ["one-sided, favoring one country", "mutual, where both sides give and receive equally", "secret", "temporary"],
+      answer: 1,
+      explain: "The clue is 'equally reduce tariffs on American goods' — if one side does something and the other does the same in return, it's RECIPROCAL."
+    },
+    {
+      text: "The court's decision was UNPRECEDENTED — no previous ruling had ever granted this level of protection to digital communications.",
+      word: "UNPRECEDENTED",
+      choices: ["widely expected", "never done or seen before", "very controversial", "overturned quickly"],
+      answer: 1,
+      explain: "The clue is 'no previous ruling had ever' — UNPRECEDENTED means something that has never happened before."
+    },
+    {
+      text: "Some critics felt the new regulations were too AMBIGUOUS, arguing that businesses could not comply because the rules were so unclear and open to interpretation.",
+      word: "AMBIGUOUS",
+      choices: ["perfectly clear", "too strict", "unclear or open to multiple interpretations", "very expensive"],
+      answer: 2,
+      explain: "The clue is 'so unclear and open to interpretation' — AMBIGUOUS means unclear, with multiple possible meanings."
+    },
+    {
+      text: "Congress passed the law to MITIGATE the effects of the economic crisis, hoping that targeted relief would reduce the worst of the damage without solving the entire problem.",
+      word: "MITIGATE",
+      choices: ["make worse", "ignore completely", "reduce or lessen the impact of something", "permanently fix"],
+      answer: 2,
+      explain: "The clue is 'reduce the worst of the damage' — to MITIGATE means to make something less severe or harmful."
+    },
+    {
+      text: "The senator's RHETORIC was powerful but misleading — her speeches were filled with emotional appeals that obscured the actual substance of the policy.",
+      word: "RHETORIC",
+      choices: ["voting record", "use of language to persuade, especially in speaking", "budget proposals", "committee assignments"],
+      answer: 1,
+      explain: "The clue is 'speeches' and 'emotional appeals' — RHETORIC is the art of using language persuasively, especially in political speech."
+    },
+    {
+      text: "The constitutional amendment was intended to be PERMANENT, not subject to repeal or modification by future legislatures.",
+      word: "PERMANENT",
+      choices: ["temporary", "lasting forever, not changing", "controversial", "expensive"],
+      answer: 1,
+      explain: "The clue is 'not subject to repeal or modification' — PERMANENT means lasting indefinitely, not temporary."
+    },
+    {
+      text: "The court found that the police had acted within their JURISDICTION — the city where the arrest occurred was entirely within their legal authority to operate.",
+      word: "JURISDICTION",
+      choices: ["budget", "the area or scope of legal authority", "personal opinion", "time limit"],
+      answer: 1,
+      explain: "The clue is 'legal authority to operate' — JURISDICTION is the official power or authority to make legal decisions within a defined area."
+    },
+    {
+      text: "The law was RETROACTIVE — it applied not just to future actions but also to conduct that had occurred before the law was passed.",
+      word: "RETROACTIVE",
+      choices: ["applying only to future events", "applying to events that already happened in the past", "very controversial", "quickly repealed"],
+      answer: 1,
+      explain: "The clue is 'not just to future actions but also to conduct that had occurred before' — RETROACTIVE means applying backward to past events."
+    },
+    {
+      text: "The Founders were wary of CONSOLIDATING too much power in one place, fearing that a government where power was combined would inevitably lead to tyranny.",
+      word: "CONSOLIDATING",
+      choices: ["spreading out", "combining into one, concentrating", "reducing", "hiding"],
+      answer: 1,
+      explain: "The clue is 'too much power in one place' and 'power was combined' — to CONSOLIDATE means to combine or concentrate things together."
+    },
+    {
+      text: "The legislation was designed to be COMPREHENSIVE, covering every aspect of immigration from border security to citizenship pathways rather than addressing only one part of the issue.",
+      word: "COMPREHENSIVE",
+      choices: ["focused on one narrow area", "covering everything completely", "very short", "unpopular"],
+      answer: 1,
+      explain: "The clue is 'covering every aspect' and 'rather than addressing only one part' — COMPREHENSIVE means complete and including everything."
+    },
+    {
+      text: "The interest group tried to CIRCUMVENT campaign finance laws by funneling money through organizations not subject to contribution limits.",
+      word: "CIRCUMVENT",
+      choices: ["follow carefully", "find a way around", "study thoroughly", "publicly criticize"],
+      answer: 1,
+      explain: "The clue is 'funneling money through organizations not subject to contribution limits' — this is a way of AVOIDING the law without technically breaking it. To CIRCUMVENT means to find a way around a rule or obstacle."
+    }
+  ]
+};
+
+var SKILLS_VOCAB_LEVEL3 = {
+  learnTitle: "PRIMARY SOURCE VOCABULARY",
+  learnBig: "Real words from real documents. This is what the AP exam actually asks.",
+  learnSub: "Level 3 pulls vocabulary directly from SCOTUS opinions, the Federalist Papers, and other primary sources. These sentences are genuinely difficult — they are written the way legal and political writers wrote in 1788 or in SCOTUS opinions. Use every context clue available: what comes before AND after the word, what the overall argument is, and any contrast or comparison nearby.",
+  goodExample: "Hamilton: 'The circumstances that endanger the safety of nations are INFINITE in their variety' — meaning he is saying dangers are INFINITE, too many to fully count or predict.",
+  goodLabel: "PRIMARY SOURCE CLUE: the phrase 'variety' and the context of listing dangers helps clarify the meaning",
+  badExample: "Reading a primary source word with no surrounding context at all",
+  badLabel: "The harder the text, the MORE context you need — read the whole sentence, not just the word",
+  guidedPassage: "Federalist No. 51: 'In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to GOVERN the GOVERNED; and in the next place OBLIGE it to CONTROL ITSELF.'",
+  guidedAnswer: "Even in dense 18th-century writing, context saves you. OBLIGE here means 'force' or 'require' — you can tell because it's paired with 'must' earlier and 'control itself' after. The whole sentence is about the problem of a government needing to both control others AND control its own power. If you slow down and read the whole sentence, the meaning surfaces.",
+  questions: [
+    {
+      text: "Federalist No. 10: 'By a faction, I understand a number of citizens... who are united and ACTUATED by some common impulse of passion, or of interest, ADVERSE to the rights of other citizens.'",
+      word: "ACTUATED",
+      choices: ["calmed or slowed down", "driven or motivated", "confused or misled", "elected or appointed"],
+      answer: 1,
+      explain: "The clue is 'united by some common impulse of passion' — something is driving them together. ACTUATED means motivated or driven into action."
+    },
+    {
+      text: "Brutus No. 1: 'This government is to possess absolute and UNCONTROULABLE power, legislative, executive and judicial, with respect to every object to which it extends.'",
+      word: "UNCONTROULABLE",
+      choices: ["carefully limited", "unable to be checked or restrained", "very complicated", "democratically elected"],
+      answer: 1,
+      explain: "The clue is 'absolute' immediately before it — UNCONTROULABLE (the old spelling of uncontrollable) means unable to be limited or checked. Brutus is warning that federal power cannot be restrained."
+    },
+    {
+      text: "McCulloch v. Maryland (1819): 'Let the end be LEGITIMATE, let it be within the scope of the constitution, and all means which are appropriate, which are plainly ADAPTED to that end... are constitutional.'",
+      word: "LEGITIMATE",
+      choices: ["unpopular or contested", "allowed by law, valid and proper", "very expensive", "passed by Congress"],
+      answer: 1,
+      explain: "The clue is 'within the scope of the constitution' — something is LEGITIMATE if it is valid, proper, and allowed by law."
+    },
+    {
+      text: "Federalist No. 78: 'The judiciary... will always be the least dangerous to the political rights of the Constitution; it can never attack with success either of the other two... it has no influence over either the sword or the PURSE.'",
+      word: "PURSE",
+      choices: ["military power", "control of money and finances", "power to make laws", "ability to appoint judges"],
+      answer: 1,
+      explain: "The clue is 'the sword' is paired with 'the PURSE' as two types of power the courts lack. The sword = military power. The purse = financial power/control of money. This is a classic metaphor Hamilton uses."
+    },
+    {
+      text: "Marbury v. Madison (1803): 'It is EMPHATICALLY the province and duty of the judicial department to say what the law is.'",
+      word: "EMPHATICALLY",
+      choices: ["probably", "with great force and certainty", "reluctantly", "temporarily"],
+      answer: 1,
+      explain: "The word EMPHATICALLY is used to stress that something is absolutely, without question, true. Marshall is declaring this with great confidence and authority — EMPHATICALLY means strongly and forcefully."
+    },
+    {
+      text: "Federalist No. 51: 'Ambition must be made to COUNTERACT ambition. The interest of the man must be connected with the constitutional rights of the place.'",
+      word: "COUNTERACT",
+      choices: ["support and strengthen", "work against and neutralize", "replace entirely", "study carefully"],
+      answer: 1,
+      explain: "The clue is that Madison is describing a system where one person's ambition prevents another's from dominating — they work AGAINST each other. COUNTERACT means to work against something to reduce or cancel its effect."
+    },
+    {
+      text: "Letter from Birmingham Jail: 'An unjust law is a code that a numerical or power majority group COMPELS a minority group to obey but does not make binding on itself.'",
+      word: "COMPELS",
+      choices: ["asks politely", "forces or requires", "teaches or explains", "ignores"],
+      answer: 1,
+      explain: "The clue is contrast — the majority forces the minority to obey something but doesn't follow it themselves. COMPELS means forces or requires."
+    },
+    {
+      text: "Tinker v. Des Moines (1969): 'It can hardly be argued that either students or teachers shed their constitutional rights to freedom of speech or expression at the SCHOOLHOUSE GATE.'",
+      word: "SHED",
+      choices: ["strengthen or gain", "lose or give up", "rediscover", "argue about"],
+      answer: 1,
+      explain: "The clue is the overall argument — Justice Fortas is saying students do NOT give up their rights at school. SHED here means to lose or give up, and the sentence says they DON'T shed their rights."
+    },
+    {
+      text: "Federalist No. 10: 'The regulation of these various and INTERFERING interests forms the principal task of modern legislation, and involves the spirit of party and faction in the necessary and ordinary operations of the government.'",
+      word: "INTERFERING",
+      choices: ["supporting each other", "conflicting or getting in each other's way", "growing over time", "independently formed"],
+      answer: 1,
+      explain: "The clue is 'various' interests that form problems — they conflict with each other. INTERFERING here means competing or conflicting, getting in each other's way."
+    },
+    {
+      text: "Brown v. Board of Education (1954): 'Separate educational facilities are INHERENTLY unequal. Therefore, we hold that the plaintiffs... are... deprived of the equal protection of the laws.'",
+      word: "INHERENTLY",
+      choices: ["possibly, under some circumstances", "by their very nature, fundamentally", "only sometimes", "according to state law"],
+      answer: 1,
+      explain: "INHERENTLY means by its very nature — Warren is saying segregated schools are NOT just unequal in practice but are unequal at their core, by definition. The word 'therefore' after it shows this is a strong, absolute conclusion."
+    }
+  ]
+};
+
+
+
 var SKILLS_PROGRESS_KEY = "apgov_skills_progress";
 
 function skillsGetProgress() {
@@ -3490,7 +3819,8 @@ var skillsState = {
 };
 
 var SKILLS_ACTIVITY_DATA = {
-  cer: { name: "Claim, Evidence & Reasoning", levels: [SKILLS_CER_LEVEL1, SKILLS_CER_LEVEL2, SKILLS_CER_LEVEL3] }
+  cer: { name: "CLAIM, EVIDENCE & REASONING", levels: [SKILLS_CER_LEVEL1, SKILLS_CER_LEVEL2, SKILLS_CER_LEVEL3] },
+  vocab: { name: "ACADEMIC VOCABULARY IN CONTEXT", levels: [SKILLS_VOCAB_LEVEL1, SKILLS_VOCAB_LEVEL2, SKILLS_VOCAB_LEVEL3] }
 };
 
 function skillsOpenActivity(activityId) {
@@ -3536,7 +3866,7 @@ function skillsLoadLevel(levelNum) {
   document.getElementById('skills-practice-panel').classList.remove('show');
   document.getElementById('skills-results').classList.remove('show');
 
-  document.getElementById('skills-learn-title').textContent = 'Learn It — ' + levelData.learnTitle;
+  document.getElementById('skills-learn-title').textContent = 'LEARN IT — ' + levelData.learnTitle;
   document.getElementById('skills-learn-body').innerHTML =
     '<div class="skills-big-explainer">' + levelData.learnBig + '</div>' +
     '<div class="skills-explainer-sub">' + levelData.learnSub + '</div>' +
@@ -3550,7 +3880,7 @@ function skillsLoadLevel(levelNum) {
         '<div class="skills-example-text">' + levelData.badExample + '</div>' +
       '</div>' +
     '</div>' +
-    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'ve Got It → Show Me an Example</button>';
+    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'VE GOT IT — SHOW ME AN EXAMPLE</button>';
 }
 
 function skillsShowGuided() {
@@ -3698,7 +4028,7 @@ function skillsShowResults() {
   document.getElementById('skills-results-emoji').textContent = passed ? '🎉' : '💪';
   document.getElementById('skills-results-score').textContent = score + ' / ' + total;
   document.getElementById('skills-results-msg').textContent = passed
-    ? 'Great work! You unlocked the next level.'
+    ? 'GREAT WORK! You unlocked the next level.'
     : 'Almost there -- review and try again to unlock the next level (need 70%+).';
 
   var nextLevelBtn = document.getElementById('skills-next-level-btn');

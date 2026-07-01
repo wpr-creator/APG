@@ -716,8 +716,9 @@
     /* ── UTILITY ── */
     .hidden { display: none !important; }
     .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 700; color: var(--navy);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px; font-weight: 800; color: var(--navy);
+      letter-spacing: 0.12em; text-transform: uppercase;
       margin-bottom: 14px; padding-bottom: 10px;
       border-bottom: 2px solid var(--cream-dark);
       display: flex; align-items: center; gap: 10px;
@@ -2690,14 +2691,16 @@
     }
 
     .nav-tab-skills {
-      background: var(--skill-orange) !important;
-      color: white !important;
-      border-radius: 8px;
-      margin: 6px 4px;
-      padding: 8px 14px !important;
+      margin-left: auto;
+      border: 1px solid rgba(255,255,255,0.25) !important;
+      border-radius: 6px;
+      color: rgba(255,255,255,0.7) !important;
+      padding: 7px 13px !important;
+      font-size: 10px !important;
+      letter-spacing: 0.08em;
     }
-    .nav-tab-skills:hover { background: #d4641f !important; color: white !important; }
-    .nav-tab-skills.active { border-bottom-color: white !important; }
+    .nav-tab-skills:hover { color: white !important; border-color: rgba(255,255,255,0.5) !important; background: rgba(255,255,255,0.07) !important; }
+    .nav-tab-skills.active { color: white !important; border-color: var(--skill-orange) !important; background: rgba(232,116,44,0.15) !important; border-bottom-color: var(--skill-orange) !important; }
 
     #tab-skills { display: none; }
     #tab-skills.active { display: block; }
@@ -2757,6 +2760,7 @@
     .skills-activity-card.fallacy { border-color: var(--skill-orange); }
     .skills-activity-card.source { border-color: var(--skill-purple); }
     .skills-activity-card.mainidea { border-color: var(--skill-yellow); }
+    .skills-activity-card.vocab { border-color: #0369a1; }
 
     .skills-activity-icon {
       font-size: 40px; margin-bottom: 10px; display: block;
@@ -3048,7 +3052,7 @@
       </div>
 
       <!-- Skill Builders -->
-      <div class="nav-tab nav-tab-skills" data-tab="skills">🧩 Skill Builders</div>
+      <div class="nav-tab nav-tab-skills" data-tab="skills">FOUNDATIONS</div>
 
       <!-- Exit Ticket -->
       <div class="nav-tab" data-tab="exit">Exit Ticket</div>
@@ -3779,8 +3783,8 @@
       <div class="skills-zone">
 
         <div class="skills-hero">
-          <div class="skills-hero-label">Foundational Skills Days</div>
-          <div class="skills-hero-title">🧩 Skill Builders</div>
+          <div class="skills-hero-label">FOUNDATIONAL SKILLS</div>
+          <div class="skills-hero-title">SKILL BUILDERS</div>
           <div class="skills-hero-sub">These activities aren't AP exam review — they're the reading, thinking, and writing skills underneath everything we do in this class. Pick an activity, start at your level, and level up.</div>
         </div>
 
@@ -3788,8 +3792,19 @@
         <div class="skills-activity-grid" id="skills-menu">
           <div class="skills-activity-card cer" onclick="skillsOpenActivity('cer')">
             <span class="skills-activity-icon">🔍</span>
-            <div class="skills-activity-title">Claim, Evidence &amp; Reasoning</div>
+            <div class="skills-activity-title">CLAIM, EVIDENCE &amp; REASONING</div>
             <div class="skills-activity-desc">Tell the difference between facts, opinions, claims, and evidence using real Gov content.</div>
+            <div class="skills-activity-levels">
+              <div class="skills-level-dot l1">1</div>
+              <div class="skills-level-dot l2">2</div>
+              <div class="skills-level-dot l3">3</div>
+            </div>
+          </div>
+
+          <div class="skills-activity-card vocab" onclick="skillsOpenActivity('vocab')">
+            <span class="skills-activity-icon">📖</span>
+            <div class="skills-activity-title">ACADEMIC VOCABULARY IN CONTEXT</div>
+            <div class="skills-activity-desc">Figure out what challenging academic words mean using only the sentences around them — no dictionary.</div>
             <div class="skills-activity-levels">
               <div class="skills-level-dot l1">1</div>
               <div class="skills-level-dot l2">2</div>
