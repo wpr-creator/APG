@@ -2692,15 +2692,11 @@
 
     .nav-tab-skills {
       margin-left: auto;
-      border: 1px solid rgba(255,255,255,0.25) !important;
-      border-radius: 6px;
-      color: rgba(255,255,255,0.7) !important;
-      padding: 7px 13px !important;
-      font-size: 10px !important;
-      letter-spacing: 0.08em;
+      color: rgba(255,255,255,0.48);
+      border-bottom: 3px solid transparent;
     }
-    .nav-tab-skills:hover { color: white !important; border-color: rgba(255,255,255,0.5) !important; background: rgba(255,255,255,0.07) !important; }
-    .nav-tab-skills.active { color: white !important; border-color: var(--skill-orange) !important; background: rgba(232,116,44,0.15) !important; border-bottom-color: var(--skill-orange) !important; }
+    .nav-tab-skills:hover { color: rgba(255,255,255,0.82); }
+    .nav-tab-skills.active { color: white; border-bottom-color: var(--skill-orange) !important; }
 
     #tab-skills { display: none; }
     #tab-skills.active { display: block; }
@@ -3214,14 +3210,12 @@
         <div class="nav-group-label">Classroom</div>
         <div class="nav-dropdown">
           <div class="nav-tab" data-tab="stump">Stump the Class</div>
+          <div class="nav-tab" data-tab="exit">Exit Ticket</div>
         </div>
       </div>
 
-      <!-- Skill Builders -->
-      <div class="nav-tab nav-tab-skills" data-tab="skills">FOUNDATIONS</div>
-
-      <!-- Exit Ticket -->
-      <div class="nav-tab" data-tab="exit">Exit Ticket</div>
+      <!-- Foundations — pushed far right with auto margin -->
+      <div class="nav-tab nav-tab-skills" data-tab="skills">Foundations</div>
 
     </div>
   </nav>
