@@ -3364,26 +3364,91 @@ document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', f
 var SKILLS_CER_LEVEL1 = {
   learnTitle: "FACT VS. OPINION",
   learnBig: "Every sentence is either a FACT or an OPINION.",
-  learnSub: "A FACT can be proven true or false by checking it. An OPINION is what someone believes or thinks should happen -- you can't prove it true or false, only agree or disagree.",
+  learnSub: "A FACT can be proven true or false by looking it up. An OPINION is what someone believes, thinks, or feels — you can agree or disagree, but you can't prove it right or wrong.",
   goodExample: "Congress has 535 voting members.",
-  goodLabel: "FACT — you can look this up and check it",
+  goodLabel: "FACT — you can look this up and verify it",
   badExample: "Congress should have term limits.",
   badLabel: "OPINION — this is what someone believes should happen",
-  guidedPassage: "The Constitution was written in 1787.",
-  guidedAnswer: "This is a FACT. We can check historical records and verify the exact year the Constitutional Convention took place. There's no opinion involved -- it's either true or it isn't, and it's true.",
+  signalWords: true,
+  guidedExamples: [
+    {
+      sentence: "The Constitution was written in 1787.",
+      answer: "fact",
+      thinking: "Step 1: Can we look this up and check it? YES. Step 2: Is there a right or wrong answer? YES — it either happened in 1787 or it didn't. Step 3: Could two reasonable people disagree about whether this is true? NO. This is a FACT.",
+      verdict: "FACT"
+    },
+    {
+      sentence: "The President has too much power over foreign policy.",
+      answer: "opinion",
+      thinking: "Step 1: Can we look this up and check it? NO — 'too much' is a judgment call. Step 2: Watch for the signal word: TOO MUCH. That's an evaluation word. Step 3: Could two reasonable people disagree about this? ABSOLUTELY YES. Some people think the President needs that power, others don't. This is an OPINION.",
+      verdict: "OPINION"
+    },
+    {
+      sentence: "The Supreme Court has struck down over 180 federal laws as unconstitutional since 1789.",
+      answer: "fact",
+      thinking: "Step 1: This looks like it could be an opinion because it's a big claim. But LOOK CAREFULLY — it gives a specific number (180) and a specific timeframe (since 1789). Step 2: Can we check this? YES — court records exist. Step 3: The tricky part: just because something SURPRISES you doesn't make it an opinion. Facts can be surprising. This is a FACT.",
+      verdict: "FACT"
+    },
+    {
+      sentence: "The Founders were brilliant men who created the greatest system of government in history.",
+      answer: "opinion",
+      thinking: "Step 1: Watch for the signal words: BRILLIANT and GREATEST. Both are superlatives — words that make a judgment about how good something is. Step 2: Can we prove the Founders were 'brilliant'? No — brilliance is a judgment. Can we prove their system is 'greatest in history'? No — that's a comparison that depends entirely on values. This is an OPINION.",
+      verdict: "OPINION"
+    },
+    {
+      sentence: "In 2022, voter turnout in the midterm elections was approximately 47% of eligible voters.",
+      answer: "fact",
+      thinking: "Step 1: This gives a specific number (47%) for a specific event (2022 midterms). Step 2: Can we check this? YES — election data is public record. Step 3: Notice the word 'approximately' — that doesn't make it an opinion. Approximations are still facts as long as they can be verified. This is a FACT.",
+      verdict: "FACT"
+    }
+  ],
+  warning: {
+    title: "WATCH OUT FOR THESE TRAPS",
+    points: [
+      "TRAP 1: A sentence that sounds confident is not automatically a fact. 'The Electoral College is clearly outdated' sounds sure of itself — but 'clearly' and 'outdated' are opinions.",
+      "TRAP 2: A sentence with numbers is not automatically a fact. 'Most Americans think Congress is too slow' uses a number word ('most') but expresses an opinion about what Congress should do.",
+      "TRAP 3: Historical facts are still facts even if they happened long ago. 'The Civil War ended in 1865' is a fact even though nobody alive witnessed it.",
+      "TRAP 4: Something you personally agree with can still be an opinion. 'The government should provide healthcare to everyone' might feel true to you — but it\'s still an opinion others would disagree with."
+    ]
+  },
+  applyIt: {
+    intro: "You\'ve learned the skill. Now use it on a real paragraph. Below is a short paragraph about the First Amendment. Click each sentence, then tag it as FACT or OPINION. When you\'re done tagging all 7 sentences, click Check My Work.",
+    sentences: [
+      { text: "The First Amendment was ratified in 1791 as part of the Bill of Rights.", answer: "fact", explain: "This is a FACT — it\'s a specific historical date that can be verified." },
+      { text: "It protects five fundamental freedoms: religion, speech, press, assembly, and petition.", answer: "fact", explain: "This is a FACT — the text of the First Amendment explicitly lists these five freedoms." },
+      { text: "Freedom of speech is the most important right in the Constitution.", answer: "opinion", explain: "This is an OPINION — 'most important' is a judgment. Other people might argue due process or equal protection matters more." },
+      { text: "In Tinker v. Des Moines (1969), the Supreme Court ruled that students do not shed their rights at the schoolhouse gate.", answer: "fact", explain: "This is a FACT — this is a specific legal ruling that can be verified in court records." },
+      { text: "The Court should have given schools more authority to regulate student speech.", answer: "opinion", explain: "This is an OPINION — 'should have' is a clear signal word that this is a belief about what ought to have happened." },
+      { text: "Today, courts continue to debate the limits of free speech in digital spaces.", answer: "fact", explain: "This is a FACT — court cases are public record and we can verify that digital speech cases are being litigated." },
+      { text: "Social media companies have too much control over what Americans are allowed to say online.", answer: "opinion", explain: "This is an OPINION — 'too much control' is an evaluation. Whether this is true depends on values and political perspective." }
+    ]
+  },
   questions: [
-    { text: "The President lives in the White House.", answer: "fact", explain: "This is a FACT -- you can verify it by checking where the President actually lives." },
-    { text: "The President is doing a great job.", answer: "opinion", explain: "This is an OPINION -- 'great job' depends on who you ask. Different people would disagree." },
-    { text: "There are 50 states in the United States.", answer: "fact", explain: "This is a FACT -- you can count the states and verify this number." },
-    { text: "Voting should be mandatory for all citizens.", answer: "opinion", explain: "This is an OPINION -- 'should be' signals someone's belief about what ought to happen." },
-    { text: "The Supreme Court has 9 justices.", answer: "fact", explain: "This is a FACT -- this is a specific, checkable number." },
-    { text: "The Supreme Court makes too many controversial decisions.", answer: "opinion", explain: "This is an OPINION -- 'too many' and 'controversial' are judgments, not measurable facts." },
-    { text: "Congress passed the Civil Rights Act in 1964.", answer: "fact", explain: "This is a FACT -- this is a historical event you can verify with a date." },
-    { text: "The Civil Rights Act was the most important law in American history.", answer: "opinion", explain: "This is an OPINION -- 'most important' is a judgment that reasonable people could disagree about." },
-    { text: "Each state has two U.S. Senators.", answer: "fact", explain: "This is a FACT -- this is written directly in the Constitution and can be verified." },
-    { text: "Senators should serve shorter terms.", answer: "opinion", explain: "This is an OPINION -- 'should' is the giveaway word. This is what someone thinks ought to change." },
-    { text: "The Declaration of Independence was signed in 1776.", answer: "fact", explain: "This is a FACT -- this is a specific historical date that can be checked." },
-    { text: "The Founding Fathers were the wisest leaders in history.", answer: "opinion", explain: "This is an OPINION -- 'wisest' is a judgment that can't be measured or proven." }
+    { text: "The President lives in the White House.", answer: "fact", explain: "FACT — you can verify where the President actually lives." },
+    { text: "The President is doing a great job.", answer: "opinion", explain: "OPINION — \'great job\' is a judgment. People would disagree depending on their politics." },
+    { text: "There are 50 states in the United States.", answer: "fact", explain: "FACT — you can count the states and verify this number." },
+    { text: "Voting should be mandatory for all citizens.", answer: "opinion", explain: "OPINION — \'should be\' is a classic opinion signal word — this is what someone believes ought to happen." },
+    { text: "The Supreme Court has 9 justices.", answer: "fact", explain: "FACT — this is a specific, checkable number established by federal law." },
+    { text: "The Supreme Court makes too many controversial decisions.", answer: "opinion", explain: "OPINION — \'too many\' is a judgment. What counts as \'too many\' depends on who you ask." },
+    { text: "Congress passed the Civil Rights Act in 1964.", answer: "fact", explain: "FACT — this is a historical event with a specific date that can be verified." },
+    { text: "The Civil Rights Act was the most important law in American history.", answer: "opinion", explain: "OPINION — \'most important\' is a ranking based on values. Historians would disagree about this." },
+    { text: "Each state has two U.S. Senators.", answer: "fact", explain: "FACT — this is written in the Constitution and can be verified." },
+    { text: "Senators should serve shorter terms.", answer: "opinion", explain: "OPINION — \'should\' is always a signal that someone is stating a belief about what ought to happen." },
+    { text: "The Declaration of Independence was signed in 1776.", answer: "fact", explain: "FACT — this is a specific historical date that can be checked." },
+    { text: "The Founding Fathers were the wisest leaders in history.", answer: "opinion", explain: "OPINION — \'wisest\' is a superlative judgment that cannot be objectively proven." },
+    { text: "The Bill of Rights contains the first ten amendments to the Constitution.", answer: "fact", explain: "FACT — you can count the amendments and verify this." },
+    { text: "The Second Amendment is the most misunderstood amendment.", answer: "opinion", explain: "OPINION — \'most misunderstood\' is a judgment about how people interpret the amendment." },
+    { text: "The United States has a two-party political system dominated by Democrats and Republicans.", answer: "fact", explain: "FACT — this is a verifiable description of the current political system." },
+    { text: "Third parties should receive equal media coverage in elections.", answer: "opinion", explain: "OPINION — \'should receive\' signals a belief about what ought to happen, not a statement of fact." },
+    { text: "Presidential elections occur every four years in the United States.", answer: "fact", explain: "FACT — this is established in the Constitution and can be verified." },
+    { text: "The Electoral College system is unfair to voters in large states.", answer: "opinion", explain: "OPINION — \'unfair\' is a value judgment. Whether something is fair depends on your perspective and values." },
+    { text: "In the 2020 presidential election, over 155 million Americans cast ballots.", answer: "fact", explain: "FACT — this is a specific, verifiable number from official election records." },
+    { text: "Politicians care more about getting reelected than about helping their constituents.", answer: "opinion", explain: "OPINION — this is a generalization about motivations that cannot be objectively proven for all politicians." },
+    { text: "The 26th Amendment lowered the voting age from 21 to 18.", answer: "fact", explain: "FACT — the text of the 26th Amendment (1971) can be read and verified." },
+    { text: "Eighteen-year-olds are mature enough to vote responsibly.", answer: "opinion", explain: "OPINION — \'mature enough\' and \'responsibly\' are judgments. This is a claim about what ought to be, not a fact." },
+    { text: "Congress is divided into the House of Representatives and the Senate.", answer: "fact", explain: "FACT — this is stated directly in Article I of the Constitution." },
+    { text: "The House of Representatives is more responsive to citizens than the Senate.", answer: "opinion", explain: "OPINION — \'more responsive\' is a comparative judgment. This is a position people argue about, not a provable fact." },
+    { text: "The United States Constitution is the oldest written national constitution still in use.", answer: "fact", explain: "FACT — this is a verifiable historical claim confirmed by constitutional scholars." }
   ]
 };
 
@@ -3838,6 +3903,9 @@ function skillsBackToMenu() {
   document.getElementById('skills-guided-panel').classList.remove('show');
   document.getElementById('skills-practice-panel').classList.remove('show');
   document.getElementById('skills-results').classList.remove('show');
+  document.getElementById('skills-apply-panel').classList.remove('show');
+  applyItTagged = {};
+  applyItSelected = null;
 }
 
 function skillsBuildLevelTabs() {
@@ -3867,9 +3935,52 @@ function skillsLoadLevel(levelNum) {
   document.getElementById('skills-results').classList.remove('show');
 
   document.getElementById('skills-learn-title').textContent = 'LEARN IT — ' + levelData.learnTitle;
+
+  var signalHtml = '';
+  if (levelData.signalWords) {
+    signalHtml = '<div class="skills-signal-grid">' +
+      '<div class="skills-signal-card fact-card">' +
+        '<div class="skills-signal-card-title">✓ FACT SIGNAL WORDS</div>' +
+        '<span class="skills-signal-word">in [year]</span>' +
+        '<span class="skills-signal-word">according to</span>' +
+        '<span class="skills-signal-word">research shows</span>' +
+        '<span class="skills-signal-word">studies found</span>' +
+        '<span class="skills-signal-word">data shows</span>' +
+        '<span class="skills-signal-word">the law states</span>' +
+        '<span class="skills-signal-word">it was recorded</span>' +
+        '<span class="skills-signal-word">statistics show</span>' +
+        '<div class="skills-signal-note">These words point to checkable, verifiable information.</div>' +
+      '</div>' +
+      '<div class="skills-signal-card opinion-card">' +
+        '<div class="skills-signal-card-title">✗ OPINION SIGNAL WORDS</div>' +
+        '<span class="skills-signal-word">should</span>' +
+        '<span class="skills-signal-word">must</span>' +
+        '<span class="skills-signal-word">best / worst</span>' +
+        '<span class="skills-signal-word">I believe</span>' +
+        '<span class="skills-signal-word">I think</span>' +
+        '<span class="skills-signal-word">most important</span>' +
+        '<span class="skills-signal-word">too much / too little</span>' +
+        '<span class="skills-signal-word">always / never</span>' +
+        '<span class="skills-signal-word">clearly / obviously</span>' +
+        '<div class="skills-signal-note">These words express judgments, values, or beliefs.</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  var warningHtml = '';
+  if (levelData.warning) {
+    warningHtml = '<div class="skills-warning-box">' +
+      '<div class="skills-warning-title">⚠️ ' + levelData.warning.title + '</div>' +
+      levelData.warning.points.map(function(p) {
+        return '<div class="skills-warning-text" style="margin-bottom:8px">' + p + '</div>';
+      }).join('') +
+    '</div>';
+  }
+
   document.getElementById('skills-learn-body').innerHTML =
     '<div class="skills-big-explainer">' + levelData.learnBig + '</div>' +
     '<div class="skills-explainer-sub">' + levelData.learnSub + '</div>' +
+    signalHtml +
     '<div class="skills-example-row">' +
       '<div class="skills-example-box good">' +
         '<div class="skills-example-label">' + levelData.goodLabel + '</div>' +
@@ -3880,8 +3991,11 @@ function skillsLoadLevel(levelNum) {
         '<div class="skills-example-text">' + levelData.badExample + '</div>' +
       '</div>' +
     '</div>' +
-    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'VE GOT IT — SHOW ME AN EXAMPLE</button>';
+    warningHtml +
+    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'VE GOT IT — SHOW ME EXAMPLES</button>';
 }
+
+var guidedExampleIdx = 0;
 
 function skillsShowGuided() {
   var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
@@ -3889,14 +4003,62 @@ function skillsShowGuided() {
 
   document.getElementById('skills-learn-panel').classList.remove('show');
   document.getElementById('skills-guided-panel').classList.add('show');
+  guidedExampleIdx = 0;
+
+  if (levelData.guidedExamples && levelData.guidedExamples.length > 0) {
+    skillsRenderGuidedExamples(levelData);
+  } else {
+    // Legacy single example fallback
+    document.getElementById('skills-guided-body').innerHTML =
+      '<div class="skills-guided-passage">' + levelData.guidedPassage + '</div>' +
+      '<div class="skills-guided-answer">' +
+        '<div class="skills-guided-answer-label">HERE\'S THE THINKING</div>' +
+        '<div class="skills-guided-answer-text">' + levelData.guidedAnswer + '</div>' +
+      '</div>' +
+      '<button class="skills-continue-btn" onclick="skillsStartPractice()">READY — MY TURN</button>';
+  }
+}
+
+function skillsRenderGuidedExamples(levelData) {
+  var examples = levelData.guidedExamples;
+  var total = examples.length;
+  var i = guidedExampleIdx;
+  var ex = examples[i];
+
+  var dots = examples.map(function(_, di) {
+    return '<div class="skills-guided-dot' + (di === i ? ' active' : '') + '"></div>';
+  }).join('');
+
+  var prevBtn = i > 0
+    ? '<button class="skills-guided-nav-btn prev" onclick="skillsGuidedNav(-1)">← PREVIOUS</button>'
+    : '<span></span>';
+
+  var nextBtn = i < total - 1
+    ? '<button class="skills-guided-nav-btn next" onclick="skillsGuidedNav(1)">NEXT EXAMPLE →</button>'
+    : '<button class="skills-guided-nav-btn practice" onclick="skillsStartPractice()">START PRACTICE →</button>';
 
   document.getElementById('skills-guided-body').innerHTML =
-    '<div class="skills-guided-passage">' + levelData.guidedPassage + '</div>' +
-    '<div class="skills-guided-answer">' +
-      '<div class="skills-guided-answer-label">Here\'s the thinking</div>' +
-      '<div class="skills-guided-answer-text">' + levelData.guidedAnswer + '</div>' +
-    '</div>' +
-    '<button class="skills-continue-btn" onclick="skillsStartPractice()">Ready — My Turn →</button>';
+    '<div class="skills-guided-step show">' +
+      '<div class="skills-guided-step-counter">WORKED EXAMPLE ' + (i+1) + ' OF ' + total + '</div>' +
+      '<div class="skills-guided-passage">' + ex.sentence + '</div>' +
+      '<div class="skills-guided-thinking">' +
+        '<div class="skills-guided-thinking-label">STEP-BY-STEP THINKING:</div>' +
+        '<div class="skills-guided-thinking-text">' + ex.thinking + '</div>' +
+      '</div>' +
+      '<div class="skills-guided-verdict ' + ex.answer + '">ANSWER: ' + ex.verdict + '</div>' +
+      '<div class="skills-guided-nav">' +
+        prevBtn +
+        '<div class="skills-guided-dots">' + dots + '</div>' +
+        nextBtn +
+      '</div>' +
+    '</div>';
+}
+
+function skillsGuidedNav(dir) {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+  guidedExampleIdx = Math.max(0, Math.min(levelData.guidedExamples.length - 1, guidedExampleIdx + dir));
+  skillsRenderGuidedExamples(levelData);
 }
 
 function skillsStartPractice() {
@@ -4038,6 +4200,121 @@ function skillsShowResults() {
 
   skillsSubmitScoreToSheet();
   skillsBuildLevelTabs();
+
+  // Show Apply It button if this level has one
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+  if (levelData.applyIt) {
+    var applyBtn = document.createElement('button');
+    applyBtn.className = 'skills-results-btn next-level';
+    applyBtn.style.background = 'var(--skill-teal)';
+    applyBtn.textContent = 'APPLY IT →';
+    applyBtn.onclick = skillsStartApplyIt;
+    var btnsEl = document.querySelector('.skills-results-btns');
+    if (btnsEl) btnsEl.insertBefore(applyBtn, btnsEl.firstChild);
+  }
+}
+
+var applyItTagged = {};
+
+function skillsStartApplyIt() {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+  var applyData = levelData.applyIt;
+  if (!applyData) return;
+
+  applyItTagged = {};
+  document.getElementById('skills-results').classList.remove('show');
+  document.getElementById('skills-apply-panel').classList.add('show');
+  document.getElementById('skills-apply-panel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  var sentencesHtml = applyData.sentences.map(function(s, i) {
+    return '<span class="skills-apply-sentence" id="apply-s-' + i + '" onclick="applySelectSentence(' + i + ')">' + s.text + '</span> ';
+  }).join('');
+
+  document.getElementById('skills-apply-body').innerHTML =
+    '<div class="skills-apply-intro">' + applyData.intro + '</div>' +
+    '<div class="skills-apply-tag-btns">' +
+      '<button class="skills-apply-tag-btn fact-btn" onclick="applyTagSelected(\'fact\')">TAG AS FACT</button>' +
+      '<button class="skills-apply-tag-btn opinion-btn" onclick="applyTagSelected(\'opinion\')">TAG AS OPINION</button>' +
+      '<button class="skills-apply-tag-btn clear-btn" onclick="applyTagSelected(\'clear\')">CLEAR TAG</button>' +
+    '</div>' +
+    '<div class="skills-apply-instructions">Click a sentence to select it, then click a tag button above. Selected sentence will highlight in yellow.</div>' +
+    '<div class="skills-apply-passage" id="apply-passage">' + sentencesHtml + '</div>' +
+    '<button class="skills-apply-check-btn" onclick="applyCheckWork()">CHECK MY WORK</button>' +
+    '<div class="skills-apply-feedback" id="apply-feedback"></div>';
+
+  applyItTagged = {};
+  applyItSelected = null;
+}
+
+var applyItSelected = null;
+
+function applySelectSentence(idx) {
+  // Deselect previous
+  if (applyItSelected !== null) {
+    var prev = document.getElementById('apply-s-' + applyItSelected);
+    if (prev && !prev.classList.contains('tagged-fact') && !prev.classList.contains('tagged-opinion')) {
+      prev.style.background = '';
+    } else if (prev) {
+      prev.style.outline = '';
+    }
+  }
+  applyItSelected = idx;
+  var el = document.getElementById('apply-s-' + idx);
+  if (el) el.style.outline = '3px solid var(--skill-purple)';
+}
+
+function applyTagSelected(tag) {
+  if (applyItSelected === null) return;
+  var el = document.getElementById('apply-s-' + applyItSelected);
+  if (!el) return;
+
+  el.classList.remove('tagged-fact', 'tagged-opinion');
+  el.style.outline = '';
+
+  if (tag === 'clear') {
+    delete applyItTagged[applyItSelected];
+  } else {
+    el.classList.add('tagged-' + tag);
+    applyItTagged[applyItSelected] = tag;
+  }
+  applyItSelected = null;
+}
+
+function applyCheckWork() {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+  var sentences = levelData.applyIt.sentences;
+
+  var correct = 0;
+  var resultsHtml = '<div class="skills-apply-score" style="margin-bottom:16px">';
+
+  var breakdown = sentences.map(function(s, i) {
+    var tagged = applyItTagged[i];
+    var isCorrect = tagged === s.answer;
+    if (isCorrect) correct++;
+    var status = !tagged ? 'untagged' : (isCorrect ? 'correct' : 'wrong');
+    var icon = !tagged ? '⚠' : (isCorrect ? '✓' : '✗');
+    var tagLabel = tagged ? tagged.toUpperCase() : 'NOT TAGGED';
+    return '<div class="skills-apply-sentence-result ' + status + '">' +
+      icon + ' <strong>' + tagLabel + ':</strong> "' + s.text + '"<br>' +
+      '<span style="font-size:12px">' + s.explain + '</span>' +
+    '</div>';
+  }).join('');
+
+  var pct = Math.round(correct / sentences.length * 100);
+  var fb = document.getElementById('apply-feedback');
+  fb.className = 'skills-apply-feedback show';
+  fb.innerHTML =
+    '<div class="skills-apply-score">' + correct + ' / ' + sentences.length + ' CORRECT</div>' +
+    '<div style="text-align:center;color:#555;margin-bottom:16px;font-size:13px">' +
+      (pct >= 70 ? 'Great work applying this skill to a real paragraph!' : 'Review the explanations below and try this passage again.') +
+    '</div>' +
+    breakdown +
+    '<button class="skills-apply-check-btn" style="margin-top:16px" onclick="skillsBackToMenu()">BACK TO MENU</button>';
+
+  document.getElementById('apply-feedback').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
 function skillsRetryLevel() {
