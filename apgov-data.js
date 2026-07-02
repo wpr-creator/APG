@@ -654,6 +654,7 @@ async function loadContent() {
   // Gov news removed
   // Period dropdowns (both home and page)
   buildPeriodDropdowns();
+  skillsInitIdGate();
 
   // Vocab
   buildVocab();
@@ -3874,6 +3875,269 @@ function skillsIsLevelUnlocked(activityId, level) {
   return prev && prev.completed;
 }
 
+
+// ════════════════════════════════════════════════════════════════
+//  SKILL BUILDERS — STUDENT IDENTITY + ANTI-RUSH MECHANICS
+// ════════════════════════════════════════════════════════════════
+
+// ── Student Identity Gate ──
+function skillsBuildIdDropdowns() {
+  if (!contentData || !contentData.periods) return;
+  var periodSel = document.getElementById('skills-period-select');
+  var nameSel = document.getElementById('skills-name-select');
+  if (!periodSel) return;
+
+  // Clear and rebuild
+  periodSel.innerHTML = '<option value="">Select your period...</option>';
+  contentData.periods.forEach(function(p) {
+    var opt = document.createElement('option');
+    opt.value = p.id; opt.textContent = p.label;
+    periodSel.appendChild(opt);
+  });
+
+  periodSel.addEventListener('change', function() {
+    var period = contentData.periods.find(function(p) { return p.id === periodSel.value; });
+    nameSel.innerHTML = '<option value="">Select your name...</option>';
+    if (period && period.students && period.students.length) {
+      period.students.forEach(function(s) {
+        var opt = document.createElement('option');
+        opt.value = s; opt.textContent = s;
+        nameSel.appendChild(opt);
+      });
+      nameSel.disabled = false;
+    } else {
+      nameSel.disabled = true;
+    }
+    skillsCheckIdReady();
+  });
+
+  nameSel.addEventListener('change', skillsCheckIdReady);
+
+  // Restore saved identity
+  var savedPeriod = localStorage.getItem('skills_period');
+  var savedName = localStorage.getItem('skills_name');
+  if (savedPeriod && savedName) {
+    periodSel.value = savedPeriod;
+    periodSel.dispatchEvent(new Event('change'));
+    setTimeout(function() {
+      nameSel.value = savedName;
+      skillsCheckIdReady();
+      skillsApplyIdentity(savedPeriod, savedName, true);
+    }, 100);
+  }
+}
+
+function skillsCheckIdReady() {
+  var p = document.getElementById('skills-period-select').value;
+  var n = document.getElementById('skills-name-select').value;
+  var btn = document.getElementById('skills-id-btn');
+  if (btn) btn.disabled = !(p && n);
+}
+
+function skillsConfirmIdentity() {
+  var p = document.getElementById('skills-period-select').value;
+  var n = document.getElementById('skills-name-select').value;
+  if (!p || !n) return;
+  localStorage.setItem('skills_period', p);
+  localStorage.setItem('skills_name', n);
+  skillsApplyIdentity(p, n, false);
+}
+
+function skillsApplyIdentity(period, name, silent) {
+  document.getElementById('skills-id-gate').style.display = 'none';
+  var welcome = document.getElementById('skills-id-welcome');
+  var welcomeText = document.getElementById('skills-id-welcome-text');
+  if (welcome && welcomeText) {
+    welcomeText.textContent = '✓ Signed in as ' + name + ' — ' + period;
+    welcome.style.display = 'block';
+  }
+  document.getElementById('skills-content-area').style.display = '';
+}
+
+function skillsChangeIdentity() {
+  localStorage.removeItem('skills_period');
+  localStorage.removeItem('skills_name');
+  document.getElementById('skills-id-gate').style.display = '';
+  document.getElementById('skills-id-welcome').style.display = 'none';
+  document.getElementById('skills-content-area').style.display = 'none';
+  document.getElementById('skills-period-select').value = '';
+  document.getElementById('skills-name-select').value = '';
+  document.getElementById('skills-name-select').disabled = true;
+  document.getElementById('skills-id-btn').disabled = true;
+}
+
+// Call this after content loads
+function skillsInitIdGate() {
+  skillsBuildIdDropdowns();
+}
+
+// ── Timer lock on Learn It (3 minutes) ──
+var learnItTimerInterval = null;
+var learnItSecondsLeft = 180;
+
+function skillsStartLearnTimer(btn) {
+  if (!btn) return;
+  btn.disabled = true;
+  learnItSecondsLeft = 180;
+
+  // Add timer lock UI
+  var lockDiv = document.createElement('div');
+  lockDiv.className = 'skills-timer-lock';
+  lockDiv.id = 'skills-timer-lock';
+  lockDiv.innerHTML =
+    '<span class="skills-timer-lock-icon">⏳</span>' +
+    '<span>Read through everything above before moving on.</span>' +
+    '<span class="skills-timer-count" id="learn-timer-count">3:00</span>';
+  btn.parentNode.insertBefore(lockDiv, btn);
+
+  clearInterval(learnItTimerInterval);
+  learnItTimerInterval = setInterval(function() {
+    learnItSecondsLeft--;
+    var m = Math.floor(learnItSecondsLeft / 60);
+    var s = learnItSecondsLeft % 60;
+    var el = document.getElementById('learn-timer-count');
+    if (el) el.textContent = m + ':' + (s < 10 ? '0' : '') + s;
+
+    if (learnItSecondsLeft <= 0) {
+      clearInterval(learnItTimerInterval);
+      btn.disabled = false;
+      var lock = document.getElementById('skills-timer-lock');
+      if (lock) {
+        lock.style.background = '#f0fdf4';
+        lock.style.borderColor = '#22c55e';
+        lock.style.color = '#166534';
+        lock.innerHTML = '<span>✓</span><span>Times up -- you can move on now.</span>';
+      }
+    }
+  }, 1000);
+}
+
+// ── Attempt-first in guided examples ──
+var guidedAttempted = false;
+
+function skillsRenderGuidedExamplesWithAttempt(levelData) {
+  var examples = levelData.guidedExamples;
+  var total = examples.length;
+  var i = guidedExampleIdx;
+  var ex = examples[i];
+  guidedAttempted = false;
+
+  var dots = examples.map(function(_, di) {
+    return '<div class="skills-guided-dot' + (di === i ? ' active' : '') + '"></div>';
+  }).join('');
+
+  var labels = ex.answer === 'fact'
+    ? ['FACT', 'OPINION']
+    : (ex.answer === 'claim' ? ['CLAIM', 'EVIDENCE'] : ['FACT', 'OPINION']);
+
+  var attemptHtml =
+    '<div class="skills-guided-attempt" id="guided-attempt-row">' +
+      labels.map(function(label) {
+        var val = label.toLowerCase();
+        return '<button class="skills-guided-attempt-btn" onclick="skillsGuidedAttempt(this,&quot;' + val + '&quot;,&quot;' + ex.answer + '&quot;)">' + label + '</button>';
+      }).join('') +
+    '</div>' +
+    '<div class="skills-guided-attempt-result" id="guided-attempt-result"></div>';
+
+  var prevBtn = i > 0
+    ? '<button class="skills-guided-nav-btn prev" onclick="skillsGuidedNavNew(-1)">← PREVIOUS</button>'
+    : '<span></span>';
+
+  var nextBtn = i < total - 1
+    ? '<button class="skills-guided-nav-btn next" id="guided-next-btn" onclick="skillsGuidedNavNew(1)" disabled>NEXT EXAMPLE →</button>'
+    : '<button class="skills-guided-nav-btn practice" id="guided-next-btn" onclick="skillsStartPractice()" disabled>START PRACTICE →</button>';
+
+  document.getElementById('skills-guided-body').innerHTML =
+    '<div class="skills-guided-step show">' +
+      '<div class="skills-guided-step-counter">EXAMPLE ' + (i+1) + ' OF ' + total + ' — TRY IT FIRST</div>' +
+      '<div class="skills-guided-passage">' + ex.sentence + '</div>' +
+      attemptHtml +
+      '<div class="skills-guided-thinking" id="guided-thinking" style="display:none">' +
+        '<div class="skills-guided-thinking-label">STEP-BY-STEP THINKING:</div>' +
+        '<div class="skills-guided-thinking-text">' + ex.thinking + '</div>' +
+      '</div>' +
+      '<div class="skills-guided-verdict ' + ex.answer + '" id="guided-verdict" style="display:none">ANSWER: ' + ex.verdict + '</div>' +
+      '<div class="skills-guided-nav">' +
+        prevBtn +
+        '<div class="skills-guided-dots">' + dots + '</div>' +
+        nextBtn +
+      '</div>' +
+    '</div>';
+}
+
+function skillsGuidedAttempt(btn, chosen, correct) {
+  if (guidedAttempted) return;
+  guidedAttempted = true;
+
+  var isCorrect = chosen === correct;
+  var btns = document.querySelectorAll('.skills-guided-attempt-btn');
+  btns.forEach(function(b) {
+    b.disabled = true;
+    var bVal = b.textContent.toLowerCase();
+    if (bVal === correct) b.classList.add('correct-pick');
+    else if (b === btn && !isCorrect) b.classList.add('wrong-pick');
+  });
+
+  var result = document.getElementById('guided-attempt-result');
+  if (result) {
+    result.className = 'skills-guided-attempt-result show ' + (isCorrect ? 'correct' : 'wrong');
+    result.textContent = isCorrect
+      ? '✓ Correct! Now see the full thinking below.'
+      : '✗ Not quite — but that is okay. Read the thinking below to see why.';
+  }
+
+  // Reveal thinking + verdict
+  var thinking = document.getElementById('guided-thinking');
+  var verdict = document.getElementById('guided-verdict');
+  if (thinking) thinking.style.display = '';
+  if (verdict) verdict.style.display = '';
+
+  // Unlock next button
+  var nextBtn = document.getElementById('guided-next-btn');
+  if (nextBtn) nextBtn.disabled = false;
+}
+
+function skillsGuidedNavNew(dir) {
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var levelData = activity.levels[skillsState.level - 1];
+  guidedExampleIdx = Math.max(0, Math.min(levelData.guidedExamples.length - 1, guidedExampleIdx + dir));
+  skillsRenderGuidedExamplesWithAttempt(levelData);
+}
+
+// ── Feedback time lock on practice questions (4 seconds) ──
+var feedbackLockInterval = null;
+
+function skillsStartFeedbackLock() {
+  var bar = document.getElementById('skills-next-lock-bar');
+  var fill = document.getElementById('skills-next-lock-fill');
+  var nextBtn = document.getElementById('skills-next-btn');
+  if (!bar || !fill || !nextBtn) return;
+
+  nextBtn.disabled = true;
+  bar.className = 'skills-next-lock-bar show';
+  fill.style.width = '0%';
+  fill.style.transition = 'none';
+
+  var elapsed = 0;
+  var duration = 4000;
+  var interval = 100;
+
+  clearInterval(feedbackLockInterval);
+  feedbackLockInterval = setInterval(function() {
+    elapsed += interval;
+    var pct = Math.min(100, (elapsed / duration) * 100);
+    fill.style.transition = 'width 0.1s linear';
+    fill.style.width = pct + '%';
+    if (elapsed >= duration) {
+      clearInterval(feedbackLockInterval);
+      nextBtn.disabled = false;
+      bar.className = 'skills-next-lock-bar';
+    }
+  }, interval);
+}
+
+
+
 var skillsState = {
   activity: null,
   level: 1,
@@ -3992,7 +4256,11 @@ function skillsLoadLevel(levelNum) {
       '</div>' +
     '</div>' +
     warningHtml +
-    '<button class="skills-continue-btn" onclick="skillsShowGuided()">I\'VE GOT IT — SHOW ME EXAMPLES</button>';
+    '<button class="skills-continue-btn" id="skills-learn-continue-btn" onclick="skillsShowGuided()">I\'VE GOT IT — SHOW ME EXAMPLES</button>';
+  setTimeout(function() {
+    var btn = document.getElementById('skills-learn-continue-btn');
+    if (btn) skillsStartLearnTimer(btn);
+  }, 100);
 }
 
 var guidedExampleIdx = 0;
@@ -4006,7 +4274,7 @@ function skillsShowGuided() {
   guidedExampleIdx = 0;
 
   if (levelData.guidedExamples && levelData.guidedExamples.length > 0) {
-    skillsRenderGuidedExamples(levelData);
+    skillsRenderGuidedExamplesWithAttempt(levelData);
   } else {
     // Legacy single example fallback
     document.getElementById('skills-guided-body').innerHTML =
@@ -4159,6 +4427,7 @@ function skillsShowFeedback(correct, explainText) {
   fb.innerHTML = (correct ? '✓ Correct! ' : '✗ Not quite. ') + explainText;
   document.getElementById('skills-next-btn').className = 'skills-next-btn show';
   document.getElementById('skills-score-badge').textContent = skillsState.score + ' / ' + skillsState.questions.length;
+  skillsStartFeedbackLock();
 }
 
 function skillsNextQuestion() {
@@ -4341,9 +4610,36 @@ function skillsNextLevel() {
 
 // Placeholder for Sheets submission -- wired in a later pass
 function skillsSubmitScoreToSheet() {
-  // Will POST to the same Apps Script endpoint as exit tickets,
-  // with a different "type" field, once we wire this up together.
-  console.log('Skill score ready to submit:', skillsState.activity, 'Level ' + skillsState.level, skillsState.score + '/' + skillsState.questions.length);
+  var period = localStorage.getItem('skills_period') || '';
+  var name = localStorage.getItem('skills_name') || '';
+  if (!period || !name) return;
+
+  var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
+  var activityName = activity ? activity.name : skillsState.activity;
+  var total = skillsState.questions.length;
+  var score = skillsState.score;
+  var pct = total > 0 ? Math.round(score / total * 100) : 0;
+  var today = new Date().toLocaleDateString('en-US');
+  var timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+
+  fetch(SCRIPT_URL, {
+    method: 'POST', mode: 'no-cors',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      type: 'skill',
+      date: today,
+      period: period,
+      name: name,
+      activity: activityName,
+      level: 'Level ' + skillsState.level,
+      score: score,
+      total: total,
+      percent: pct + '%',
+      timestamp: timestamp
+    })
+  }).catch(function(e) {
+    console.log('Skill score submission failed (non-critical):', e);
+  });
 }
 
 

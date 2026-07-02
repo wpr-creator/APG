@@ -3154,6 +3154,111 @@
       .skills-signal-grid { grid-template-columns: 1fr; }
     }
 
+
+    /* ── SKILL BUILDERS: Student ID Gate ── */
+    .skills-id-gate {
+      background: white; border-radius: 18px;
+      border: 3px solid var(--skill-teal);
+      padding: 28px 32px; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(13,125,125,0.12);
+      text-align: center;
+    }
+    .skills-id-gate-icon { font-size: 36px; margin-bottom: 10px; }
+    .skills-id-gate-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 800; color: #1a2e5a;
+      margin-bottom: 6px;
+    }
+    .skills-id-gate-sub {
+      font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.5;
+    }
+    .skills-id-row {
+      display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .skills-id-select {
+      padding: 10px 16px; border-radius: 10px;
+      border: 2px solid var(--skill-teal); font-size: 14px;
+      font-family: inherit; color: #1a2e5a; min-width: 180px;
+      background: white; cursor: pointer;
+    }
+    .skills-id-select:focus { outline: none; border-color: var(--skill-teal-dark); }
+    .skills-id-btn {
+      padding: 12px 32px; border-radius: 99px;
+      background: var(--skill-teal); color: white; border: none;
+      font-size: 14px; font-weight: 800; cursor: pointer;
+      transition: opacity 0.15s;
+    }
+    .skills-id-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .skills-id-btn:not(:disabled):hover { opacity: 0.88; }
+    .skills-id-welcome {
+      background: #f0fdf4; border: 2px solid #22c55e;
+      border-radius: 12px; padding: 12px 20px;
+      font-size: 14px; font-weight: 700; color: #166534;
+      display: none; margin-bottom: 16px;
+    }
+    .skills-id-change-btn {
+      font-size: 11px; color: var(--skill-teal); background: none;
+      border: none; cursor: pointer; text-decoration: underline;
+      margin-left: 8px;
+    }
+
+    /* ── SKILL BUILDERS: Learn It Timer Lock ── */
+    .skills-timer-lock {
+      display: flex; align-items: center; gap: 8px;
+      background: #fef3cd; border: 2px solid #f59e0b;
+      border-radius: 10px; padding: 10px 16px;
+      margin-top: 16px; font-size: 13px; color: #78350f;
+      font-weight: 700;
+    }
+    .skills-timer-lock-icon { font-size: 18px; }
+    .skills-timer-count {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 15px; color: #92400e; margin-left: auto;
+    }
+    .skills-continue-btn:disabled {
+      opacity: 0.35; cursor: not-allowed;
+    }
+
+    /* ── SKILL BUILDERS: Attempt-first guided ── */
+    .skills-guided-attempt {
+      display: flex; gap: 10px; margin: 16px 0;
+    }
+    .skills-guided-attempt-btn {
+      flex: 1; padding: 14px; border-radius: 12px;
+      border: 3px solid #ddd; background: white;
+      font-size: 15px; font-weight: 800; color: #1a2e5a;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .skills-guided-attempt-btn:hover:not(:disabled) {
+      border-color: var(--skill-teal); background: var(--skill-cream);
+    }
+    .skills-guided-attempt-btn.correct-pick {
+      background: #dcfce7; border-color: #22c55e; color: #166534;
+    }
+    .skills-guided-attempt-btn.wrong-pick {
+      background: #fee2e2; border-color: #ef4444; color: #991b1b;
+    }
+    .skills-guided-attempt-result {
+      font-size: 13px; padding: 10px 14px; border-radius: 10px;
+      margin-top: 8px; display: none; font-weight: 600;
+    }
+    .skills-guided-attempt-result.show { display: block; }
+    .skills-guided-attempt-result.correct { background: #dcfce7; color: #166534; }
+    .skills-guided-attempt-result.wrong { background: #fee2e2; color: #991b1b; }
+
+    /* ── SKILL BUILDERS: Feedback time lock ── */
+    .skills-next-lock-bar {
+      height: 4px; background: #e5e5e5; border-radius: 2px;
+      margin-top: 10px; overflow: hidden; display: none;
+    }
+    .skills-next-lock-bar.show { display: block; }
+    .skills-next-lock-fill {
+      height: 100%; background: var(--skill-orange);
+      border-radius: 2px; width: 0%;
+      transition: width 0.1s linear;
+    }
+
   </style>
 </head>
 <body>
@@ -3942,6 +4047,33 @@
     <div id="tab-skills">
       <div class="skills-zone">
 
+        <!-- Student ID Gate -->
+        <div class="skills-id-gate" id="skills-id-gate">
+          <div class="skills-id-gate-icon">👋</div>
+          <div class="skills-id-gate-title">FIRST, WHO ARE YOU?</div>
+          <div class="skills-id-gate-sub">Select your period and name so your teacher can see your progress.</div>
+          <div class="skills-id-row">
+            <select class="skills-id-select" id="skills-period-select">
+              <option value="">Select your period...</option>
+            </select>
+            <select class="skills-id-select" id="skills-name-select" disabled>
+              <option value="">Select your name...</option>
+            </select>
+          </div>
+          <button class="skills-id-btn" id="skills-id-btn" disabled onclick="skillsConfirmIdentity()">
+            LET'S GO →
+          </button>
+        </div>
+
+        <!-- Welcome bar (shown after ID confirmed) -->
+        <div class="skills-id-welcome" id="skills-id-welcome">
+          <span id="skills-id-welcome-text"></span>
+          <button class="skills-id-change-btn" onclick="skillsChangeIdentity()">change</button>
+        </div>
+
+        <!-- Activity grid (hidden until ID confirmed) -->
+        <div id="skills-content-area" style="display:none">
+
         <div class="skills-hero">
           <div class="skills-hero-label">FOUNDATIONAL SKILLS</div>
           <div class="skills-hero-title">SKILL BUILDERS</div>
@@ -4010,7 +4142,10 @@
               <div class="skills-q-passage" id="skills-q-passage"></div>
               <div class="skills-choice-row" id="skills-choice-row"></div>
               <div class="skills-feedback" id="skills-feedback"></div>
-              <button class="skills-next-btn" id="skills-next-btn" onclick="skillsNextQuestion()">Next →</button>
+              <button class="skills-next-btn" id="skills-next-btn" onclick="skillsNextQuestion()">NEXT →</button>
+              <div class="skills-next-lock-bar" id="skills-next-lock-bar">
+                <div class="skills-next-lock-fill" id="skills-next-lock-fill"></div>
+              </div>
 
               <div class="skills-apply-panel" id="skills-apply-panel">
                 <div class="skills-apply-header">
@@ -4035,6 +4170,9 @@
         </div>
 
       </div>
+        </div><!-- /skills-content-area -->
+
+      </div><!-- /skills-zone -->
     </div>
 
     <!-- ═══════════════════ EXIT TICKET TAB ═══════════════════ -->
