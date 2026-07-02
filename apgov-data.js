@@ -1035,6 +1035,14 @@ function switchToTab(target) {
       el.classList.toggle('active', id === target);
     }
   });
+
+  // When switching to Foundations, always rebuild dropdowns with fresh contentData
+  if (target === 'skills') {
+    setTimeout(function() {
+      skillsBuildIdDropdowns();
+      skillsRefreshActivityGrid();
+    }, 50);
+  }
 }
 
 document.querySelectorAll('.nav-tab').forEach(tab => {
@@ -3883,10 +3891,20 @@ function skillsIsLevelUnlocked(activityId, level) {
 
 // ── Student Identity Gate ──
 function skillsBuildIdDropdowns() {
-  if (!contentData || !contentData.periods) return;
+  // If contentData not ready yet, retry after a short delay
+  if (!contentData || !contentData.periods) {
+    setTimeout(skillsBuildIdDropdowns, 300);
+    return;
+  }
   var periodSel = document.getElementById('skills-period-select');
   var nameSel = document.getElementById('skills-name-select');
   if (!periodSel) return;
+
+  // Only rebuild if periods have actual students (avoid clearing a working dropdown)
+  var hasPeriods = contentData.periods.some(function(p) {
+    return p.students && p.students.length > 0;
+  });
+  if (!hasPeriods && periodSel.options.length > 1) return;
 
   // Clear and rebuild
   periodSel.innerHTML = '<option value="">Select your period...</option>';
@@ -3953,6 +3971,14 @@ function skillsApplyIdentity(period, name, silent) {
     welcome.style.display = 'block';
   }
   document.getElementById('skills-content-area').style.display = '';
+}
+
+function skillsTeacherPreview() {
+  var period = 'Teacher';
+  var name = 'Teacher Preview';
+  localStorage.setItem('skills_period', period);
+  localStorage.setItem('skills_name', name);
+  skillsApplyIdentity(period, name, false);
 }
 
 function skillsChangeIdentity() {
