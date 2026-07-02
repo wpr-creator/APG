@@ -5,7 +5,9 @@
     {
       "id": "2A",
       "label": "Period 2A",
-      "students": []
+      "students": [
+        "Mr. Rogers"
+      ]
     },
     {
       "id": "2B",
