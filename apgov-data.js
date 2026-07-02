@@ -655,6 +655,7 @@ async function loadContent() {
   // Period dropdowns (both home and page)
   buildPeriodDropdowns();
   skillsInitIdGate();
+  skillsRefreshActivityGrid();
 
   // Vocab
   buildVocab();
@@ -4138,13 +4139,70 @@ function skillsStartFeedbackLock() {
 
 
 
+// ════════════════════════════════════════════════════════════════
+//  SKILL BUILDERS — ACTIVITY GRID UNLOCK REFRESH
+// ════════════════════════════════════════════════════════════════
+function skillsRefreshActivityGrid() {
+  var activities = ['cer', 'vocab', 'closereading'];
+  activities.forEach(function(actId) {
+    var card = document.getElementById('skills-card-' + actId);
+    if (!card) return;
+
+    var unlocked = skillsIsActivityUnlocked(actId);
+    card.classList.toggle('locked-by-teacher', !unlocked);
+
+    // Update onclick
+    if (!unlocked) {
+      card.setAttribute('onclick', 'skillsShowLockedMessage()');
+    } else {
+      card.setAttribute('onclick', "skillsOpenActivity('" + actId + "')");
+    }
+
+    // Update level dots to show which levels are unlocked
+    var dotsEl = document.getElementById('skills-dots-' + actId);
+    if (!dotsEl) return;
+
+    var act = contentData && contentData.foundations_unlocks && contentData.foundations_unlocks[actId];
+    if (!act || !act.levels) return;
+
+    dotsEl.innerHTML = act.levels.map(function(lv) {
+      var dotClass = 'skills-level-dot';
+      if (lv.level === 1) dotClass += ' l1';
+      else if (lv.level === 2) dotClass += ' l2';
+      else dotClass += ' l3';
+      if (!lv.unlocked) dotClass += ' locked-dot';
+      return '<div class="' + dotClass + '" title="Level ' + lv.level + ': ' + (lv.unlocked ? 'UNLOCKED' : 'LOCKED') + '">' +
+        (lv.unlocked ? lv.level : '🔒') + '</div>';
+    }).join('');
+
+    // Add/remove lock banner
+    var existing = card.querySelector('.skills-activity-lock-banner');
+    if (!unlocked) {
+      if (!existing) {
+        var banner = document.createElement('div');
+        banner.className = 'skills-activity-lock-banner';
+        banner.textContent = '🔒 NOT YET AVAILABLE';
+        card.appendChild(banner);
+      }
+    } else {
+      if (existing) existing.remove();
+    }
+  });
+}
+
+function skillsShowLockedMessage() {
+  var toastFn = typeof adminToast === 'function' ? adminToast : alert;
+  toastFn('This activity has not been unlocked yet. Check back soon!');
+}
+
 var skillsState = {
   activity: null,
   level: 1,
   questions: [],
   qIndex: 0,
   score: 0,
-  answered: false
+  answered: false,
+  startTime: null
 };
 
 var SKILLS_ACTIVITY_DATA = {
@@ -4152,12 +4210,38 @@ var SKILLS_ACTIVITY_DATA = {
   vocab: { name: "ACADEMIC VOCABULARY IN CONTEXT", levels: [SKILLS_VOCAB_LEVEL1, SKILLS_VOCAB_LEVEL2, SKILLS_VOCAB_LEVEL3] }
 };
 
+function skillsIsActivityUnlocked(activityId) {
+  if (!contentData || !contentData.foundations_unlocks) return activityId === 'cer';
+  var act = contentData.foundations_unlocks[activityId];
+  if (!act || !act.levels) return false;
+  return act.levels.some(function(lv) { return lv.unlocked; });
+}
+
+function skillsIsLevelUnlockedByTeacher(activityId, levelNum) {
+  if (!contentData || !contentData.foundations_unlocks) return (activityId === 'cer' && levelNum === 1);
+  var act = contentData.foundations_unlocks[activityId];
+  if (!act || !act.levels) return false;
+  var lv = act.levels.find(function(l) { return l.level === levelNum; });
+  return lv ? lv.unlocked : false;
+}
+
 function skillsOpenActivity(activityId) {
+  if (!skillsIsActivityUnlocked(activityId)) {
+    adminToast && adminToast('This activity has not been unlocked yet. Check back soon!');
+    return;
+  }
   skillsState.activity = activityId;
   document.getElementById('skills-menu').style.display = 'none';
   document.getElementById('skills-detail-area').classList.add('show');
   skillsBuildLevelTabs();
-  skillsLoadLevel(1);
+  // Start at the first unlocked level
+  var act = contentData && contentData.foundations_unlocks && contentData.foundations_unlocks[activityId];
+  var firstUnlocked = 1;
+  if (act && act.levels) {
+    var found = act.levels.find(function(l) { return l.unlocked; });
+    if (found) firstUnlocked = found.level;
+  }
+  skillsLoadLevel(firstUnlocked);
 }
 
 function skillsBackToMenu() {
@@ -4177,16 +4261,35 @@ function skillsBuildLevelTabs() {
   var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
   wrap.innerHTML = activity.levels.map(function(lvl, i) {
     var levelNum = i + 1;
-    var unlocked = skillsIsLevelUnlocked(skillsState.activity, levelNum);
-    var cls = 'skills-level-tab' + (unlocked ? ' unlocked' : ' locked') + (levelNum === skillsState.level ? ' active' : '');
-    return '<div class="' + cls + '" onclick="' + (unlocked ? 'skillsLoadLevel(' + levelNum + ')' : '') + '">' +
-      'Level ' + levelNum + (unlocked ? '' : ' 🔒') + '</div>';
+    // Teacher unlock takes priority; student progress unlock is secondary
+    var teacherUnlocked = skillsIsLevelUnlockedByTeacher(skillsState.activity, levelNum);
+    var studentUnlocked = skillsIsLevelUnlocked(skillsState.activity, levelNum);
+    var canAccess = teacherUnlocked && studentUnlocked;
+    var lockedByTeacher = !teacherUnlocked;
+    var lockedByProgress = teacherUnlocked && !studentUnlocked;
+
+    var cls = 'skills-level-tab';
+    if (canAccess) cls += ' unlocked';
+    if (levelNum === skillsState.level && canAccess) cls += ' active';
+    if (lockedByTeacher || lockedByProgress) cls += ' locked';
+
+    var lockIcon = lockedByTeacher ? ' 🔒' : (lockedByProgress ? ' ⭐' : '');
+    var tooltip = lockedByTeacher ? 'Not available yet' : (lockedByProgress ? 'Complete Level ' + (levelNum-1) + ' first' : '');
+    var onclick = canAccess ? 'onclick="skillsLoadLevel(' + levelNum + ')"' : '';
+
+    return '<div class="' + cls + '" ' + onclick + ' title="' + tooltip + '">' +
+      'LEVEL ' + levelNum + lockIcon + '</div>';
   }).join('');
 }
 
 function skillsLoadLevel(levelNum) {
   if (!skillsIsLevelUnlocked(skillsState.activity, levelNum)) return;
+  if (!skillsIsLevelUnlockedByTeacher(skillsState.activity, levelNum)) {
+    skillsShowLockedMessage();
+    return;
+  }
   skillsState.level = levelNum;
+  skillsState.startTime = Date.now();
   skillsBuildLevelTabs();
 
   var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
@@ -4622,6 +4725,15 @@ function skillsSubmitScoreToSheet() {
   var today = new Date().toLocaleDateString('en-US');
   var timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
 
+  // Calculate time spent
+  var timeSpent = 'Unknown';
+  if (skillsState.startTime) {
+    var elapsed = Math.round((Date.now() - skillsState.startTime) / 1000);
+    var mins = Math.floor(elapsed / 60);
+    var secs = elapsed % 60;
+    timeSpent = mins + 'm ' + secs + 's';
+  }
+
   fetch(SCRIPT_URL, {
     method: 'POST', mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
@@ -4635,6 +4747,7 @@ function skillsSubmitScoreToSheet() {
       score: score,
       total: total,
       percent: pct + '%',
+      timeSpent: timeSpent,
       timestamp: timestamp
     })
   }).catch(function(e) {

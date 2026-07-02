@@ -37,7 +37,8 @@ function doPost(e) {
       const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
 
       const ss = SpreadsheetApp.openByUrl(SHEET_URL);
-      const skillRow = [date, period, name, activity, level, score, total, percent, timestamp];
+      const timeSpent = body.timeSpent || 'Unknown';
+      const skillRow = [date, period, name, activity, level, score, total, percent, timeSpent, timestamp];
       writeSkillTab(ss, skillRow);
 
       return ContentService
@@ -101,7 +102,7 @@ function writeToTab(ss, tabName, row) {
 // ════════════════════════════════════════════════════════════════
 function writeSkillTab(ss, row) {
   const tabName = 'Skill Builders';
-  const headers = ['Date', 'Period', 'Student Name', 'Activity', 'Level', 'Score', 'Total', 'Percent', 'Submitted At'];
+  const headers = ['Date', 'Period', 'Student Name', 'Activity', 'Level', 'Score', 'Total', 'Percent', 'Time Spent', 'Submitted At'];
   let sheet = ss.getSheetByName(tabName);
 
   if (!sheet) {
@@ -120,7 +121,8 @@ function writeSkillTab(ss, row) {
     sheet.setColumnWidth(6, 60);
     sheet.setColumnWidth(7, 60);
     sheet.setColumnWidth(8, 70);
-    sheet.setColumnWidth(9, 150);
+    sheet.setColumnWidth(9, 90);
+    sheet.setColumnWidth(10, 150);
   }
 
   sheet.appendRow(row);

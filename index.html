@@ -2757,6 +2757,19 @@
     .skills-activity-card.source { border-color: var(--skill-purple); }
     .skills-activity-card.mainidea { border-color: var(--skill-yellow); }
     .skills-activity-card.vocab { border-color: #0369a1; }
+    .skills-activity-card.closereading { border-color: #7c3aed; }
+    .skills-activity-card.locked-by-teacher {
+      opacity: 0.5; cursor: not-allowed; filter: grayscale(0.4);
+    }
+    .skills-activity-card.locked-by-teacher:hover {
+      transform: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .skills-activity-lock-banner {
+      font-size: 11px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; color: #92400e;
+      background: #fef3cd; border-radius: 6px;
+      padding: 4px 10px; margin-top: 8px; display: inline-block;
+    }
 
     .skills-activity-icon {
       font-size: 40px; margin-bottom: 10px; display: block;
@@ -2779,6 +2792,7 @@
     .skills-level-dot.l1 { background: #22c55e; }
     .skills-level-dot.l2 { background: var(--skill-orange); }
     .skills-level-dot.l3 { background: #ef4444; }
+    .skills-level-dot.locked-dot { background: #ccc; color: #888; font-size: 9px; }
 
     /* ── Activity detail screen ── */
     .skills-detail-area { display: none; }
@@ -3258,6 +3272,58 @@
       border-radius: 2px; width: 0%;
       transition: width 0.1s linear;
     }
+
+
+    /* ── ADMIN FOUNDATIONS TAB ── */
+    .admin-foundations-activity {
+      background: white; border-radius: 12px;
+      border: 1px solid var(--cream-dark);
+      margin-bottom: 16px; overflow: hidden;
+    }
+    .admin-foundations-activity-head {
+      background: var(--gray-50); padding: 12px 16px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .admin-foundations-activity-name {
+      font-size: 12px; font-weight: 700; color: var(--navy);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .admin-foundations-level-row {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 16px; border-bottom: 1px solid var(--cream-dark);
+    }
+    .admin-foundations-level-row:last-child { border-bottom: none; }
+    .admin-foundations-level-info {}
+    .admin-foundations-level-num {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--gray-400); margin-bottom: 2px;
+    }
+    .admin-foundations-level-name {
+      font-size: 12px; font-weight: 600; color: var(--navy);
+    }
+    .admin-foundations-toggle {
+      display: flex; align-items: center; gap: 8px;
+      cursor: pointer;
+    }
+    .admin-toggle-switch {
+      width: 40px; height: 22px; border-radius: 11px;
+      background: #ddd; position: relative; transition: background 0.2s;
+      flex-shrink: 0;
+    }
+    .admin-toggle-switch.on { background: #22c55e; }
+    .admin-toggle-switch::after {
+      content: ''; position: absolute;
+      width: 18px; height: 18px; border-radius: 50%;
+      background: white; top: 2px; left: 2px;
+      transition: left 0.2s; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+    .admin-toggle-switch.on::after { left: 20px; }
+    .admin-toggle-label {
+      font-size: 11px; font-weight: 700;
+      color: var(--gray-400);
+    }
+    .admin-toggle-switch.on + .admin-toggle-label { color: #166534; }
 
   </style>
 </head>
@@ -4082,22 +4148,33 @@
 
         <!-- Activity selection menu -->
         <div class="skills-activity-grid" id="skills-menu">
-          <div class="skills-activity-card cer" onclick="skillsOpenActivity('cer')">
+          <div class="skills-activity-card cer" id="skills-card-cer" onclick="skillsOpenActivity('cer')">
             <span class="skills-activity-icon">🔍</span>
             <div class="skills-activity-title">CLAIM, EVIDENCE &amp; REASONING</div>
             <div class="skills-activity-desc">Tell the difference between facts, opinions, claims, and evidence using real Gov content.</div>
-            <div class="skills-activity-levels">
+            <div class="skills-activity-levels" id="skills-dots-cer">
               <div class="skills-level-dot l1">1</div>
               <div class="skills-level-dot l2">2</div>
               <div class="skills-level-dot l3">3</div>
             </div>
           </div>
 
-          <div class="skills-activity-card vocab" onclick="skillsOpenActivity('vocab')">
+          <div class="skills-activity-card vocab" id="skills-card-vocab" onclick="skillsOpenActivity('vocab')">
             <span class="skills-activity-icon">📖</span>
             <div class="skills-activity-title">ACADEMIC VOCABULARY IN CONTEXT</div>
             <div class="skills-activity-desc">Figure out what challenging academic words mean using only the sentences around them — no dictionary.</div>
-            <div class="skills-activity-levels">
+            <div class="skills-activity-levels" id="skills-dots-vocab">
+              <div class="skills-level-dot l1">1</div>
+              <div class="skills-level-dot l2">2</div>
+              <div class="skills-level-dot l3">3</div>
+            </div>
+          </div>
+
+          <div class="skills-activity-card closereading" id="skills-card-closereading" onclick="skillsOpenActivity('closereading')">
+            <span class="skills-activity-icon">📄</span>
+            <div class="skills-activity-title">CLOSE READING (AVID)</div>
+            <div class="skills-activity-desc">Read real political documents, speeches, and legal texts the way AVID teaches — three passes, margin notes, and markup.</div>
+            <div class="skills-activity-levels" id="skills-dots-closereading">
               <div class="skills-level-dot l1">1</div>
               <div class="skills-level-dot l2">2</div>
               <div class="skills-level-dot l3">3</div>
@@ -4301,6 +4378,7 @@
         <div class="admin-tab" onclick="adminTab('roster',this)">👥 Roster</div>
         <div class="admin-tab" onclick="adminTab('vocab',this)">📖 Vocab</div>
         <div class="admin-tab" onclick="adminTab('links',this)">🔗 Links</div>
+        <div class="admin-tab" onclick="adminTab('foundations',this)">🧩 Foundations</div>
       </div>
 
       <div class="admin-body">
@@ -4356,6 +4434,15 @@
           <div class="admin-hint" style="margin-bottom:14px;">Quick links shown on the home tab. Keep to 2–3 max.</div>
           <div class="admin-list" id="ad-links-list"></div>
           <button class="admin-add-btn" onclick="adminAddLink()">+ Add Link</button>
+        </div>
+
+        <!-- ── FOUNDATIONS TAB ── -->
+        <div class="admin-section" id="admin-sec-foundations">
+          <div class="admin-hint" style="margin-bottom:14px;">
+            Control which Skill Builder activities and levels are available to students.
+            Toggle ON to unlock. Changes take effect immediately after publishing.
+          </div>
+          <div id="ad-foundations-list"></div>
         </div>
 
       </div>
@@ -5021,6 +5108,61 @@
     var linksList = document.getElementById('ad-links-list');
     linksList.innerHTML = '';
     (contentData.key_links || []).forEach(function(l) { adminAddLink(l); });
+
+    // Foundations unlocks
+    adminLoadFoundations();
+  }
+
+  function adminLoadFoundations() {
+    var container = document.getElementById('ad-foundations-list');
+    if (!container) return;
+    container.innerHTML = '';
+
+    var unlocks = (contentData && contentData.foundations_unlocks) || {};
+    var activityOrder = ['cer', 'vocab', 'closereading'];
+    var activityLabels = {
+      cer: 'CLAIM, EVIDENCE & REASONING',
+      vocab: 'ACADEMIC VOCABULARY IN CONTEXT',
+      closereading: 'CLOSE READING (AVID)'
+    };
+
+    activityOrder.forEach(function(actId) {
+      var actData = unlocks[actId] || { levels: [] };
+      var div = document.createElement('div');
+      div.className = 'admin-foundations-activity';
+
+      var levelsHtml = (actData.levels || []).map(function(lv) {
+        var isOn = lv.unlocked === true;
+        return '<div class="admin-foundations-level-row" data-activity="' + actId + '" data-level="' + lv.level + '">' +
+          '<div class="admin-foundations-level-info">' +
+            '<div class="admin-foundations-level-num">LEVEL ' + lv.level + '</div>' +
+            '<div class="admin-foundations-level-name">' + lv.name + '</div>' +
+          '</div>' +
+          '<div class="admin-foundations-toggle" onclick="adminToggleFoundation(this)">' +
+            '<div class="admin-toggle-switch' + (isOn ? ' on' : '') + '" data-unlocked="' + isOn + '"></div>' +
+            '<span class="admin-toggle-label">' + (isOn ? 'UNLOCKED' : 'LOCKED') + '</span>' +
+          '</div>' +
+        '</div>';
+      }).join('');
+
+      div.innerHTML =
+        '<div class="admin-foundations-activity-head">' +
+          '<div class="admin-foundations-activity-name">' + (activityLabels[actId] || actId) + '</div>' +
+        '</div>' +
+        levelsHtml;
+
+      container.appendChild(div);
+    });
+  }
+
+  function adminToggleFoundation(toggleEl) {
+    var sw = toggleEl.querySelector('.admin-toggle-switch');
+    var label = toggleEl.querySelector('.admin-toggle-label');
+    var isOn = sw.dataset.unlocked === 'true';
+    var newState = !isOn;
+    sw.dataset.unlocked = newState;
+    sw.classList.toggle('on', newState);
+    label.textContent = newState ? 'UNLOCKED' : 'LOCKED';
   }
 
   // ── Add row helpers ──
@@ -5147,6 +5289,21 @@
     // Preserve unchanged arrays from contentData
     out.units = contentData.units || [];
     out.frq_types = contentData.frq_types || [];
+
+    // Foundations unlocks — read from toggles
+    var currentUnlocks = (contentData && contentData.foundations_unlocks) ? JSON.parse(JSON.stringify(contentData.foundations_unlocks)) : {};
+    document.querySelectorAll('.admin-foundations-level-row').forEach(function(row) {
+      var actId = row.dataset.activity;
+      var levelNum = parseInt(row.dataset.level);
+      var sw = row.querySelector('.admin-toggle-switch');
+      if (!sw || !actId) return;
+      var isOn = sw.dataset.unlocked === 'true';
+      if (currentUnlocks[actId] && currentUnlocks[actId].levels) {
+        var lv = currentUnlocks[actId].levels.find(function(l) { return l.level === levelNum; });
+        if (lv) lv.unlocked = isOn;
+      }
+    });
+    out.foundations_unlocks = currentUnlocks;
 
     return out;
   }
