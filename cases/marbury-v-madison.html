@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marbury v. Madison (1803) — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f4f5f7; }
+    .case-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:1fr 260px;gap:28px;align-items:start; }
+    .case-content { min-width:0; }
+    .case-rail { position:sticky;top:24px; }
+    .case-hero { background:linear-gradient(135deg,#1a1a2e 0%,#374151 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .case-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#c8a951;margin-bottom:8px; }
+    .case-hero-title { font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);font-weight:900;color:white;line-height:1.2;margin-bottom:6px; }
+    .case-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(200,169,81,0.5);margin-bottom:14px; }
+    .case-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .case-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .case-tag-unit { background:rgba(200,169,81,0.2);color:#c8a951; }
+    .case-tag-amend { background:rgba(255,255,255,0.1);color:white; }
+    .case-tag-tested { background:rgba(200,169,81,0.15);color:#c8a951; }
+    .case-block { background:white;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(26,26,46,0.05); }
+    .case-block-label { display:flex;align-items:center;gap:10px;padding:10px 16px;background:#f8f9fa;border-bottom:1px solid #e5e7eb;font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a2e; }
+    .case-block-label-icon { width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0; }
+    .icon-bg { background:#dbeafe; } .icon-q { background:#e0e7ff; } .icon-r { background:#dcfce7; }
+    .icon-t { background:#fef3cd; } .icon-d { background:#fee2e2; } .icon-l { background:#f3e8ff; }
+    .case-block-body { padding:16px 18px; }
+    .case-background p { font-size:14px;line-height:1.75;color:#374151;margin-bottom:10px; }
+    .case-background p:last-child { margin-bottom:0; }
+    .case-question-text { font-size:16px;font-weight:700;color:#1a1a2e;line-height:1.55;padding:4px 0; }
+    .case-ruling-verdict { display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:800;margin-bottom:12px; }
+    .verdict-yes { background:#dcfce7;color:#166534; }
+    .case-vote-line { font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;margin-bottom:10px; }
+    .case-ruling-text { font-size:14px;line-height:1.75;color:#374151; }
+    .case-ruling-quote { font-size:14px;font-style:italic;color:#1a1a2e;border-left:3px solid #c8a951;padding:8px 14px;margin:12px 0;background:#f8f9fa;border-radius:0 8px 8px 0;line-height:1.6; }
+    .case-test-box { background:#1a1a2e;border-radius:10px;padding:14px 16px; }
+    .case-test-name { font-size:13px;font-weight:800;color:#c8a951;margin-bottom:6px; }
+    .case-test-rule { font-size:13px;color:rgba(255,255,255,0.8);line-height:1.65; }
+    .case-legacy-list { list-style:none;padding:0;margin:0; }
+    .case-legacy-list li { display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #e5e7eb;font-size:13px;line-height:1.6;color:#374151; }
+    .case-legacy-list li:last-child { border-bottom:none; }
+    .case-legacy-case { font-size:11px;font-weight:700;color:#1a1a2e;white-space:nowrap;flex-shrink:0;font-family:'JetBrains Mono',monospace; }
+    .rail-card { background:white;border-radius:12px;border:1px solid #e5e7eb;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(26,26,46,0.05); }
+    .rail-card-head { background:#1a1a2e;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(200,169,81,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #e5e7eb;font-size:12px;color:#374151;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#1a1a2e;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#1a1a2e;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(255,255,255,0.78); }
+    .rail-mistake { display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid #e5e7eb;font-size:12px;line-height:1.5; }
+    .rail-mistake:last-child { border-bottom:none; }
+    .rail-mistake-x { color:#ef4444;font-weight:800;flex-shrink:0; }
+    @media (max-width:860px) { .case-page{grid-template-columns:1fr;} .case-rail{position:static;} }
+  </style>
+</head>
+<body class="unit-2">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit2.html">Overview</a>
+      <a class="nav-link active" href="/APG/cases/marbury-v-madison.html">Marbury v. Madison</a>
+      <a class="nav-link" href="/APG/cases/mcculloch-v-maryland.html">McCulloch v. Maryland</a>
+      <a class="nav-link" href="/APG/cases/us-v-lopez.html">U.S. v. Lopez</a>
+      <a class="nav-link" href="/APG/docs/federalist-70.html">Federalist No. 70</a>
+      <a class="nav-link" href="/APG/docs/federalist-76.html">Federalist No. 76</a>
+      <a class="nav-link" href="/APG/docs/federalist-78.html">Federalist No. 78</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Unit 3</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit3.html">Overview</a>
+      <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
+      <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="case-page">
+    <div class="case-content">
+
+      <div class="case-hero">
+        <div class="case-hero-eyebrow">Unit 2 · Judicial Branch · Separation of Powers · EK 2.4.A</div>
+        <div class="case-hero-title">Marbury v. Madison</div>
+        <div class="case-hero-cite">5 U.S. 137 · February 24, 1803 · Chief Justice John Marshall</div>
+        <div class="case-hero-tags">
+          <span class="case-tag case-tag-unit">Unit 2</span>
+          <span class="case-tag case-tag-amend">Judicial Review</span>
+          <span class="case-tag case-tag-amend">Article III</span>
+          <span class="case-tag case-tag-tested">⭐ Most Important Case</span>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-bg">📋</div>BACKGROUND</div>
+        <div class="case-block-body case-background">
+          <p>The election of 1800 was a political earthquake. Thomas Jefferson defeated John Adams, ending the Federalist era. In his final days as President, Adams rushed to fill the federal judiciary with Federalist judges — appointing 42 justices of the peace in what became known as the "midnight judges." The commissions were signed and sealed but not yet delivered when Adams left office. Jefferson's Secretary of State, James Madison, refused to deliver them.</p>
+          <p>William Marbury was one of the men who never received his commission. He sued, asking the Supreme Court to issue a writ of mandamus — a court order compelling Madison to deliver it. The case put Marshall in an impossible position: rule for Marbury and risk Jefferson ignoring the order (exposing the Court's weakness), or rule for Jefferson and hand the new administration a victory. Marshall found a third way — one that gave Jefferson the immediate win while seizing far greater power for the Court.</p>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-q">❓</div>CONSTITUTIONAL QUESTION</div>
+        <div class="case-block-body">
+          <div class="case-question-text">Does the Supreme Court have the authority to review acts of Congress and void those that conflict with the Constitution — and did the Judiciary Act of 1789 unconstitutionally expand the Court's original jurisdiction?</div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-r">⚖️</div>THE RULING</div>
+        <div class="case-block-body">
+          <div class="case-ruling-verdict verdict-yes">✓ Marbury has a right to his commission — but the Court cannot help him</div>
+          <div class="case-vote-line">Unanimous · Chief Justice John Marshall writing for the Court</div>
+          <div class="case-ruling-quote">"It is emphatically the province and duty of the judicial department to say what the law is."</div>
+          <div class="case-ruling-text">Marshall's masterstroke: he ruled that Marbury was entitled to his commission, but that the provision of the Judiciary Act of 1789 granting the Supreme Court original jurisdiction to issue writs of mandamus was unconstitutional — it expanded the Court's original jurisdiction beyond what Article III allows. The Court voided part of an act of Congress for the first time. Jefferson got what he wanted (Marbury got nothing), but Marshall established that the Supreme Court — not Congress, not the President — has the final word on what the Constitution means.</div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-t">📐</div>PRINCIPLE ESTABLISHED</div>
+        <div class="case-block-body">
+          <div class="case-test-box">
+            <div class="case-test-name">Judicial Review</div>
+            <div class="case-test-rule">The Supreme Court has the power to review acts of Congress, executive actions, and state laws to determine whether they conform to the Constitution. Laws found to be unconstitutional are void and unenforceable. This power is not in the Constitution's text — Marshall derived it from the logic of constitutional supremacy: if the Constitution is supreme law and courts interpret law, then courts must be able to void laws that contradict it. This principle has governed American constitutional law for over 220 years.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-d">⚡</div>MARSHALL'S THREE-STEP LOGIC</div>
+        <div class="case-block-body">
+          <ul class="case-legacy-list">
+            <li>
+              <span class="case-legacy-case">Step 1</span>
+              The Constitution is supreme law — it is superior to ordinary legislation. If Congress passes a law that conflicts with the Constitution, one of them must give way.
+            </li>
+            <li>
+              <span class="case-legacy-case">Step 2</span>
+              It is the job of courts to say what the law is. When two laws conflict, courts must decide which controls. The Constitution is law, so courts must be able to interpret it.
+            </li>
+            <li>
+              <span class="case-legacy-case">Step 3</span>
+              Therefore: courts must be able to void acts of Congress that conflict with the Constitution. Otherwise the Constitution would be unenforceable — a mere parchment barrier. The Supremacy Clause would be meaningless.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="case-block">
+        <div class="case-block-label"><div class="case-block-label-icon icon-l">🔗</div>LEGACY & SIGNIFICANCE</div>
+        <div class="case-block-body">
+          <ul class="case-legacy-list">
+            <li>
+              <span class="case-legacy-case">Judicial Review<br>Established</span>
+              Every major constitutional ruling since 1803 rests on Marbury. Brown v. Board, Roe v. Wade, Citizens United — all require judicial review to exist. Without Marbury, Congress and the President could pass any law regardless of constitutional limits.
+            </li>
+            <li>
+              <span class="case-legacy-case">Connects to<br>Federalist 78</span>
+              Hamilton anticipated judicial review in Federalist 78, arguing courts must have the power to void laws that contradict the Constitution. Marshall's reasoning tracks Hamilton's almost exactly — making this a direct link between the Federalist Papers and constitutional law.
+            </li>
+            <li>
+              <span class="case-legacy-case">Political<br>Genius</span>
+              Marshall gave Jefferson nothing he could object to (Marbury got no commission) while seizing the power of judicial review permanently. Jefferson recognized what had happened and was furious — but there was nothing he could do. The Court had avoided a confrontation it would have lost and won a constitutional war instead.
+            </li>
+            <li>
+              <span class="case-legacy-case">Limits of<br>Judicial Review</span>
+              Courts can declare laws unconstitutional, but they cannot enforce their own rulings — that requires the executive branch. When President Jackson disagreed with a Cherokee Nation ruling, he reportedly said "Marshall has made his decision; now let him enforce it." The Court's power ultimately depends on political compliance.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="case-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">Marbury is the most important case in AP Government. You must be able to explain judicial review — what it is, that it's NOT in the Constitution, and that Marshall derived it from constitutional logic. It appears in SCOTUS comparison FRQs most often paired with a modern case where the Court struck down a law. Always connect Marbury to Federalist 78.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Decided</strong>February 24, 1803</div>
+        <div class="rail-row"><strong>Vote</strong>Unanimous (4-0)</div>
+        <div class="rail-row"><strong>Author</strong>Chief Justice John Marshall</div>
+        <div class="rail-row"><strong>Provision</strong>Article III · Supremacy Clause</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 2.4.A</div>
+        <div class="rail-row"><strong>Unit</strong>2 — Branches</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Common Mistakes</div>
+        <div class="rail-mistake"><span class="rail-mistake-x">✗</span>Saying judicial review is in the Constitution — it is NOT. Marshall created it.</div>
+        <div class="rail-mistake"><span class="rail-mistake-x">✗</span>Thinking Marbury won — he got nothing. The Court ruled it lacked jurisdiction to help him.</div>
+        <div class="rail-mistake"><span class="rail-mistake-x">✗</span>Forgetting that Marshall ruled AGAINST his own party (Federalists) to establish the larger principle.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Related Cases &amp; Docs</div>
+        <a href="/APG/docs/federalist-78.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a2e;text-decoration:none;font-weight:600;border-bottom:1px solid #e5e7eb;">Federalist No. 78<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">Hamilton anticipates judicial review</span></a>
+        <a href="/APG/cases/mcculloch-v-maryland.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a2e;text-decoration:none;font-weight:600;border-bottom:1px solid #e5e7eb;">McCulloch v. Maryland<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">Marshall again — implied powers</span></a>
+        <a href="/APG/cases/us-v-lopez.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a2e;text-decoration:none;font-weight:600;">U.S. v. Lopez<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">Judicial review limiting Congress</span></a>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+</body>
+</html>
