@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 5: Political Participation — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-pages.css">
+  <style>
+    body { background:#f0f7f0; }
+    .unit-jumpbar { position:sticky;top:0;z-index:90;background:#f0fdf4;border-bottom:3px solid #14532d;padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none; }
+    .unit-jump-link { padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#166534;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .unit-jump-link:hover { color:#14532d; }
+    .unit-jump-link.active { color:#14532d;border-bottom-color:#16a34a; }
+    .unit-layout { display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start;max-width:1140px;margin:0 auto;padding:24px 1.5rem 60px; }
+    .unit-sidebar { position:sticky;top:48px; }
+    .unit-sidebar-section { background:white;border-radius:12px;border:1px solid #bbf7d0;overflow:hidden;margin-bottom:12px; }
+    .unit-sidebar-head { background:#14532d;padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(134,239,172,0.8); }
+    .unit-sidebar-link { display:block;padding:9px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #bbf7d0;transition:all 0.12s; }
+    .unit-sidebar-link:last-child { border-bottom:none; }
+    .unit-sidebar-link:hover { color:#14532d;background:#f0fdf4; }
+    .unit-sidebar-link .sidebar-year { display:block;font-size:10px;font-weight:500;color:#6b7280;margin-top:1px;font-family:'JetBrains Mono',monospace; }
+    .unit-main { min-width:0; }
+    .unit-section { margin-bottom:40px;scroll-margin-top:52px; }
+    .unit-section-header { display:flex;align-items:baseline;gap:12px;margin-bottom:16px; }
+    .unit-section-title { font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#14532d; }
+    .unit-section-rule { flex:1;height:2px;background:#bbf7d0; }
+    .unit-section-count { font-size:10px;font-weight:700;color:#6b7280; }
+    .concepts-list { display:flex;flex-direction:column;gap:10px; }
+    .concept-row { background:white;border-radius:10px;border:1px solid #bbf7d0;overflow:hidden; }
+    .concept-row-header { display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background 0.12s; }
+    .concept-row-header:hover { background:#f0fdf4; }
+    .concept-row-num { width:28px;height:28px;border-radius:50%;background:#14532d;color:#86efac;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    .concept-row-title { font-size:14px;font-weight:800;color:#14532d;flex:1; }
+    .concept-row-toggle { font-size:18px;color:#bbf7d0;transition:transform 0.2s; }
+    .concept-row.open .concept-row-toggle { transform:rotate(180deg); }
+    .concept-row-body { display:none;padding:0 16px 16px 56px;font-size:14px;line-height:1.8;color:#374151; }
+    .concept-row.open .concept-row-body { display:block; }
+    .cases-list { display:flex;flex-direction:column;gap:8px; }
+    .case-row { display:grid;grid-template-columns:80px 1fr auto;background:white;border-radius:10px;border:1px solid #bbf7d0;overflow:hidden;text-decoration:none;transition:border-color 0.15s,box-shadow 0.15s; }
+    .case-row:hover { border-color:#14532d;box-shadow:0 2px 12px rgba(20,83,45,0.12); }
+    .case-row-year { background:#14532d;padding:16px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#86efac;text-align:center; }
+    .case-row-amend { font-size:8px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(134,239,172,0.5);margin-top:4px;line-height:1.3; }
+    .case-row-body { padding:14px 16px;min-width:0; }
+    .case-row-name { font-size:14px;font-weight:800;color:#14532d;margin-bottom:4px; }
+    .case-row-question { font-size:12px;color:#6b7280;line-height:1.5;font-style:italic; }
+    .case-row-ruling { font-size:12px;color:#374151;line-height:1.6;margin-top:6px; }
+    .case-row-arrow { padding:0 16px;display:flex;align-items:center;font-size:18px;color:#bbf7d0;border-left:1px solid #bbf7d0; }
+    .case-row:hover .case-row-arrow { color:#16a34a; }
+    .exam-guide { background:#14532d;border-radius:14px;overflow:hidden; }
+    .exam-guide-tabs { display:flex;border-bottom:1px solid rgba(134,239,172,0.2); }
+    .exam-guide-tab { padding:12px 20px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(134,239,172,0.4);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .exam-guide-tab.active { color:#86efac;border-bottom-color:#86efac; }
+    .exam-guide-panel { display:none;padding:20px 24px; }
+    .exam-guide-panel.active { display:block; }
+    .exam-guide-panel li { font-size:13px;line-height:1.9;color:rgba(255,255,255,0.78);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06); }
+    .exam-guide-panel li:last-child { border-bottom:none; }
+    .exam-guide-bigpicture { font-size:14px;line-height:1.9;color:rgba(255,255,255,0.78); }
+    .frq-list { display:flex;flex-direction:column;gap:8px; }
+    .frq-row { background:white;border-radius:10px;border:1px solid #bbf7d0;padding:14px 16px;display:flex;gap:16px;align-items:flex-start; }
+    .frq-row-type { flex-shrink:0;padding:6px 10px;border-radius:6px;font-size:9px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;text-align:center;min-width:56px; }
+    .frq-row-type.ca { background:#dcfce7;color:#14532d; }
+    .frq-row-type.sc { background:#fce7f3;color:#9d174d; }
+    .frq-row-type.ae { background:#14532d;color:#86efac; }
+    .frq-row-body { flex:1; }
+    .frq-row-title { font-size:14px;font-weight:800;color:#14532d;margin-bottom:4px; }
+    .frq-row-preview { font-size:12px;color:#374151;line-height:1.6; }
+    .frq-row-link { display:block;margin-top:8px;font-size:11px;font-weight:700;color:#16a34a;text-decoration:none; }
+    @media(max-width:860px){ .unit-layout{grid-template-columns:1fr;} .unit-sidebar{position:static;} }
+  </style>
+</head>
+<body class="unit-5">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 1</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit1.html">Overview</a>
+          <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 2</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit2.html">Overview</a>
+          <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
+          <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 3</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit3.html">Overview</a>
+          <a class="nav-link" href="/APG/unit3-docs.html">Documents</a>
+          <a class="nav-link" href="/APG/unit3-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 4</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit4.html">Overview</a>
+        </div>
+      </div>
+      <div class="nav-group  has-active">
+        <div class="nav-group-label">Unit 5</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit5.html">Overview</a>
+          <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Review</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+          <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+          <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Tools</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#glossary">Glossary</a>
+          <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
+          <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
+          <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+          <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+          <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+        </div>
+      </div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+  <div class="unit-jumpbar">
+    <a class="unit-jump-link" href="#concepts">Concepts</a>
+    <a class="unit-jump-link" href="#cases">Cases</a>
+    <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
+    <a class="unit-jump-link" href="#frq">FRQ Practice</a>
+  </div>
+  <div style="background:linear-gradient(135deg,#14532d 0%,#166534 60%,#14532d 100%);padding:28px 1.5rem 32px;">
+    <div style="max-width:1140px;margin:0 auto;">
+      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#86efac;margin-bottom:8px;">AP Government &amp; Politics · 20–27% of Exam</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 5: Political Participation</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">Voting, campaigns, political parties, interest groups, and media — the mechanisms through which citizens try to influence government. This is the largest unit by exam weight and the one most connected to students' lives right now.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Unit 5</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(255,255,255,0.08);color:white;">20–27% of Exam · Largest Unit</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Voting &amp; Elections</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Political Parties</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Media &amp; Money</span>
+      </div>
+    </div>
+  </div>
+  <div class="unit-layout">
+    <div class="unit-sidebar">
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">REQUIRED CASES</div>
+        <a class="unit-sidebar-link" href="/APG/cases/baker-v-carr.html">Baker v. Carr<span class="sidebar-year">1962 · Apportionment</span></a>
+        <a class="unit-sidebar-link" href="/APG/cases/shaw-v-reno.html">Shaw v. Reno<span class="sidebar-year">1993 · Racial Gerrymandering</span></a>
+        <a class="unit-sidebar-link" href="/APG/cases/citizens-united-v-fec.html">Citizens United v. FEC<span class="sidebar-year">2010 · Campaign Finance</span></a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">KEY TOPICS</div>
+        <a class="unit-sidebar-link" href="#concepts">Voting &amp; Turnout</a>
+        <a class="unit-sidebar-link" href="#concepts">Political Parties</a>
+        <a class="unit-sidebar-link" href="#concepts">Interest Groups</a>
+        <a class="unit-sidebar-link" href="#concepts">Media &amp; Agenda Setting</a>
+        <a class="unit-sidebar-link" href="#concepts">Campaign Finance</a>
+      </div>
+    </div>
+    <div class="unit-main">
+      <div id="concepts" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">Key Concepts</div><div class="unit-section-rule"></div><div class="unit-section-count">6 concepts</div></div>
+        <div class="concepts-list">
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">1</div><div class="concept-row-title">Voting, Elections &amp; Voter Turnout</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">The United States has chronically low voter turnout compared to other democracies — typically 55-60% in presidential elections, lower in midterms. Factors that increase turnout: higher education, older age, higher income, strong party identification, competitive elections, and ease of registration. Factors that depress turnout: strict voter ID laws, inconvenient polling hours, registration barriers, and lack of competitive races. The Electoral College means presidential campaigns concentrate on swing states — voters in non-competitive states see little campaign activity and may feel their vote matters less.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">2</div><div class="concept-row-title">Political Parties — What They Do</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Political parties serve as linkage institutions — they connect citizens to government. Key functions: recruiting and nominating candidates, mobilizing voters, organizing government (controlling committees, setting legislative agenda), and providing a "brand" that helps voters make decisions. The U.S. has a two-party system driven by winner-take-all (plurality) elections — third parties consistently fail to win office despite sometimes influencing outcomes. Party platforms are important: they represent the official stated positions of each party on major issues, though elected officials don't always follow them.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">3</div><div class="concept-row-title">Interest Groups &amp; Their Influence</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Interest groups are organizations that advocate for specific policy goals. They influence government through: lobbying (direct contact with legislators and staff), campaign contributions (through PACs and Super PACs), litigation (filing lawsuits to challenge or enforce laws), grassroots mobilization (activating their members to contact elected officials), and the revolving door (moving personnel between government and industry). Pluralism holds that democracy works through competition among interest groups — no single group can dominate because others will counterbalance. Critics argue wealthy, organized interests have disproportionate influence.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">4</div><div class="concept-row-title">Media &amp; Agenda Setting</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">The media doesn't tell people what to think — but it powerfully shapes what they think about (agenda setting). It also frames issues in ways that influence how people evaluate them (framing). <strong>Traditional media</strong> (broadcast TV, newspapers) has declined; <strong>social media</strong> and partisan cable news dominate. The result is increased polarization and echo chambers where people primarily encounter information that confirms existing views. The media acts as a watchdog (investigative journalism) but also as an entertainment industry whose business model often rewards conflict and outrage over substantive policy coverage.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">5</div><div class="concept-row-title">Campaign Finance &amp; Citizens United</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Money in politics is regulated by the Federal Election Commission (FEC). Key concepts: <strong>hard money</strong> (regulated direct contributions to candidates), <strong>soft money</strong> (less regulated money to parties), <strong>PACs</strong> (Political Action Committees — raise and spend money on behalf of candidates with limits), <strong>Super PACs</strong> (can raise and spend unlimited amounts on "independent expenditures" — cannot coordinate directly with campaigns). Citizens United v. FEC (2010) held that corporations and unions have First Amendment rights to spend unlimited money on independent political ads. The result has been a massive increase in outside spending in federal elections.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">6</div><div class="concept-row-title">Gerrymandering &amp; Redistricting</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">After each decennial census, congressional districts are redrawn to reflect population changes. The party in control of state legislatures often draws districts to favor their own candidates — this is gerrymandering. <strong>Partisan gerrymandering</strong> packs opposition voters into few districts or cracks them across many. <strong>Racial gerrymandering</strong> uses race as the predominant factor — Shaw v. Reno (1993) ruled this violates Equal Protection. Baker v. Carr (1962) established that courts can review apportionment questions — before Baker, this was considered a political question courts couldn't touch.</div>
+          </div>
+        </div>
+      </div>
+      <div id="cases" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">Required SCOTUS Cases</div><div class="unit-section-rule"></div><div class="unit-section-count">3 cases</div></div>
+        <div class="cases-list">
+          <a class="case-row" href="/APG/cases/baker-v-carr.html">
+            <div class="case-row-year">1962<div class="case-row-amend">Equal Protection</div></div>
+            <div class="case-row-body"><div class="case-row-name">Baker v. Carr</div><div class="case-row-question">Are legislative apportionment questions justiciable by federal courts?</div><div class="case-row-ruling">Yes — "one person, one vote" framework begins here. Courts CAN review redistricting. Landmark for voting rights and equal representation.</div></div>
+            <div class="case-row-arrow">→</div>
+          </a>
+          <a class="case-row" href="/APG/cases/shaw-v-reno.html">
+            <div class="case-row-year">1993<div class="case-row-amend">Equal Protection</div></div>
+            <div class="case-row-body"><div class="case-row-name">Shaw v. Reno</div><div class="case-row-question">Can race be the predominant factor in drawing congressional district lines?</div><div class="case-row-ruling">No — racial gerrymandering violates Equal Protection even when designed to help minority voters. Bizarre-shaped districts trigger strict scrutiny.</div></div>
+            <div class="case-row-arrow">→</div>
+          </a>
+          <a class="case-row" href="/APG/cases/citizens-united-v-fec.html">
+            <div class="case-row-year">2010<div class="case-row-amend">1st Amend.</div></div>
+            <div class="case-row-body"><div class="case-row-name">Citizens United v. FEC</div><div class="case-row-question">Can Congress limit independent political expenditures by corporations and unions?</div><div class="case-row-ruling">No — political spending is protected First Amendment speech. Opened the door to Super PACs and unlimited outside spending in elections.</div></div>
+            <div class="case-row-arrow">→</div>
+          </a>
+        </div>
+      </div>
+      <div id="examguide" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">AP Exam Guide</div><div class="unit-section-rule"></div></div>
+        <div class="exam-guide">
+          <div class="exam-guide-tabs">
+            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          </div>
+          <div class="exam-guide-panel active" id="ep-tested">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Baker v. Carr — courts can review apportionment; one person one vote principle</li>
+              <li>Shaw v. Reno — racial gerrymandering triggers strict scrutiny even when benefiting minorities</li>
+              <li>Citizens United — political spending = protected speech; led to Super PACs</li>
+              <li>The difference between PACs and Super PACs — coordination rules matter</li>
+              <li>Linkage institutions and their functions — parties, interest groups, media, elections</li>
+              <li>Factors affecting voter turnout — what increases and decreases it</li>
+              <li>Agenda setting, framing, and priming — how media influences but doesn't dictate opinion</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-mistakes">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Confusing PACs (limited, can coordinate) with Super PACs (unlimited, cannot coordinate directly)</li>
+              <li>Saying Citizens United allows unlimited direct contributions — it allows unlimited independent expenditures</li>
+              <li>Forgetting that Shaw v. Reno applies to ALL racial gerrymandering, not just packing minorities into few districts</li>
+              <li>Thinking the two-party system is in the Constitution — it's a product of our election rules (plurality voting)</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-bigpicture">
+            <div class="exam-guide-bigpicture">Unit 5 is the most politically immediate unit — it's about the machinery of democracy that your students will interact with when they turn 18. Voting, campaigns, parties, money, media — these are the channels through which the public (theoretically) controls government. But the picture that emerges from Unit 5 is complicated: low turnout, unlimited campaign money, partisan gerrymandering, algorithmic media bubbles. Understanding these mechanisms — and their flaws — is essential preparation for citizenship. <strong style="color:#86efac;">Know the system well enough to know why it sometimes doesn't work the way it's supposed to.</strong></div>
+          </div>
+        </div>
+      </div>
+      <div id="frq" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">Unit 5 FRQ Practice</div><div class="unit-section-rule"></div><div class="unit-section-count">3 prompts</div></div>
+        <div class="frq-list">
+          <div class="frq-row">
+            <div class="frq-row-type ca">Concept App<br>3 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Super PACs and Campaign Finance</div>
+              <div class="frq-row-preview">Following Citizens United v. FEC (2010), a Super PAC supporting a Senate candidate runs $5 million in television ads without coordinating with the campaign. The candidate's opponent argues this violates campaign finance law. Using the concept of independent expenditures and the ruling in Citizens United, explain whether the Super PAC's spending is constitutionally protected...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+          <div class="frq-row">
+            <div class="frq-row-type sc">SCOTUS Comp<br>4 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Baker v. Carr and Shaw v. Reno</div>
+              <div class="frq-row-preview">In Baker v. Carr (1962), the Supreme Court held that federal courts have jurisdiction to review legislative apportionment. In Shaw v. Reno (1993), the Court held that a majority-minority district in North Carolina was subject to strict scrutiny under the Equal Protection Clause. Explain the constitutional basis for each ruling. In what ways are these cases consistent with each other?</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+          <div class="frq-row">
+            <div class="frq-row-type ae">Arg. Essay<br>6 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Does Money Corrupt Democracy?</div>
+              <div class="frq-row-preview">Develop an argument: Does the role of money in American political campaigns undermine democratic participation? Use at least one piece of evidence from Citizens United v. FEC, the concept of linkage institutions, or your knowledge of campaign finance law. Use at least one additional piece of evidence. Respond to an opposing perspective...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><p>Mr. Rogers · AP Government &amp; Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    function examTab(el,panel){document.querySelectorAll('.exam-guide-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.exam-guide-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');document.getElementById('ep-'+panel).classList.add('active');}
+    const sections=['concepts','cases','examguide','frq'];
+    const jumpLinks=document.querySelectorAll('.unit-jump-link');
+    window.addEventListener('scroll',()=>{let current=sections[0];sections.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-80)current=id;});jumpLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')=='#'+current);});});
+  </script>
+</body>
+</html>

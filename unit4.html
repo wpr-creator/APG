@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 4: Political Ideologies &amp; Beliefs — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-pages.css">
+  <style>
+    body { background:#f8f8fc; }
+    .unit-jumpbar { position:sticky;top:0;z-index:90;background:white;border-bottom:3px solid #1e3a8a;padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none; }
+    .unit-jump-link { padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#64748b;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .unit-jump-link:hover { color:#1e3a8a; }
+    .unit-jump-link.active { color:#b91c1c;border-bottom-color:#b91c1c; }
+    .unit-layout { display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start;max-width:1140px;margin:0 auto;padding:24px 1.5rem 60px; }
+    .unit-sidebar { position:sticky;top:48px; }
+    .unit-sidebar-section { background:white;border-radius:12px;border:1px solid #e0e0f0;overflow:hidden;margin-bottom:12px; }
+    .unit-sidebar-head { background:linear-gradient(90deg,#b91c1c,#1e3a8a);padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.7); }
+    .unit-sidebar-link { display:block;padding:9px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #e0e0f0;transition:all 0.12s; }
+    .unit-sidebar-link:last-child { border-bottom:none; }
+    .unit-sidebar-link:hover { color:#1e3a8a;background:#f8f8fc; }
+    .unit-main { min-width:0; }
+    .unit-section { margin-bottom:40px;scroll-margin-top:52px; }
+    .unit-section-header { display:flex;align-items:baseline;gap:12px;margin-bottom:16px; }
+    .unit-section-title { font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1e3a8a; }
+    .unit-section-rule { flex:1;height:2px;background:#e0e0f0; }
+    .unit-section-count { font-size:10px;font-weight:700;color:#9ca3af; }
+    .concepts-list { display:flex;flex-direction:column;gap:10px; }
+    .concept-row { background:white;border-radius:10px;border:1px solid #e0e0f0;overflow:hidden; }
+    .concept-row-header { display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background 0.12s; }
+    .concept-row-header:hover { background:#f8f8fc; }
+    .concept-row-num { width:28px;height:28px;border-radius:50%;background:#1e3a8a;color:white;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    .concept-row-title { font-size:14px;font-weight:800;color:#1e3a8a;flex:1; }
+    .concept-row-toggle { font-size:18px;color:#d1d5db;transition:transform 0.2s; }
+    .concept-row.open .concept-row-toggle { transform:rotate(180deg); }
+    .concept-row-body { display:none;padding:0 16px 16px 56px;font-size:14px;line-height:1.8;color:#374151; }
+    .concept-row.open .concept-row-body { display:block; }
+    .exam-guide { background:linear-gradient(135deg,#1a0a0a 0%,#0a0a1a 100%);border-radius:14px;overflow:hidden; }
+    .exam-guide-tabs { display:flex;border-bottom:1px solid rgba(255,255,255,0.1); }
+    .exam-guide-tab { padding:12px 20px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .exam-guide-tab.active { color:#93c5fd;border-bottom-color:#93c5fd; }
+    .exam-guide-panel { display:none;padding:20px 24px; }
+    .exam-guide-panel.active { display:block; }
+    .exam-guide-panel li { font-size:13px;line-height:1.9;color:rgba(255,255,255,0.78);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06); }
+    .exam-guide-panel li:last-child { border-bottom:none; }
+    .exam-guide-bigpicture { font-size:14px;line-height:1.9;color:rgba(255,255,255,0.78); }
+    .frq-list { display:flex;flex-direction:column;gap:8px; }
+    .frq-row { background:white;border-radius:10px;border:1px solid #e0e0f0;padding:14px 16px;display:flex;gap:16px;align-items:flex-start; }
+    .frq-row-type { flex-shrink:0;padding:6px 10px;border-radius:6px;font-size:9px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;text-align:center;min-width:56px; }
+    .frq-row-type.ca { background:#dbeafe;color:#1e3a8a; }
+    .frq-row-type.sc { background:#fce7f3;color:#9d174d; }
+    .frq-row-type.ae { background:#1e3a8a;color:white; }
+    .frq-row-body { flex:1; }
+    .frq-row-title { font-size:14px;font-weight:800;color:#1e3a8a;margin-bottom:4px; }
+    .frq-row-preview { font-size:12px;color:#374151;line-height:1.6; }
+    .frq-row-link { display:block;margin-top:8px;font-size:11px;font-weight:700;color:#b91c1c;text-decoration:none; }
+    @media(max-width:860px){ .unit-layout{grid-template-columns:1fr;} .unit-sidebar{position:static;} }
+  </style>
+</head>
+<body class="unit-4">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 1</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit1.html">Overview</a>
+          <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 2</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit2.html">Overview</a>
+          <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
+          <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 3</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit3.html">Overview</a>
+          <a class="nav-link" href="/APG/unit3-docs.html">Documents</a>
+          <a class="nav-link" href="/APG/unit3-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group  has-active">
+        <div class="nav-group-label">Unit 4</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit4.html">Overview</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 5</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit5.html">Overview</a>
+          <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Review</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+          <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+          <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Tools</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#glossary">Glossary</a>
+          <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
+          <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
+          <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+          <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+          <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+        </div>
+      </div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+  <div class="unit-jumpbar">
+    <a class="unit-jump-link" href="#concepts">Concepts</a>
+    <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
+    <a class="unit-jump-link" href="#frq">FRQ Practice</a>
+  </div>
+  <div style="background:linear-gradient(135deg,#b91c1c 0%,#7c0c0c 35%,#0c1a5c 65%,#1e3a8a 100%);padding:28px 1.5rem 32px;">
+    <div style="max-width:1140px;margin:0 auto;">
+      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#93c5fd;margin-bottom:8px;">AP Government &amp; Politics · 10–15% of Exam</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 4: American Political<br>Ideologies &amp; Beliefs</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">How do Americans think about politics? What makes someone liberal or conservative — and how do those labels actually map onto real policy positions? Unit 4 is about the spectrum, the polling, the demographics, and the gap between what people believe and what they tell pollsters.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(147,197,253,0.15);color:#93c5fd;">Unit 4</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(255,255,255,0.08);color:white;">10–15% of Exam</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(185,28,28,0.3);color:#fca5a5;">No Required Cases</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(30,58,138,0.3);color:#93c5fd;">No Required Docs</span>
+      </div>
+    </div>
+  </div>
+  <div class="unit-layout">
+    <div class="unit-sidebar">
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">KEY CONCEPTS</div>
+        <a class="unit-sidebar-link" href="#concepts">Political Socialization</a>
+        <a class="unit-sidebar-link" href="#concepts">Liberal vs. Conservative</a>
+        <a class="unit-sidebar-link" href="#concepts">Public Opinion &amp; Polling</a>
+        <a class="unit-sidebar-link" href="#concepts">Demographics &amp; Political Views</a>
+        <a class="unit-sidebar-link" href="#concepts">Political Ideology Spectrum</a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">NOTE</div>
+        <div style="padding:10px 14px;font-size:11px;color:#374151;line-height:1.6;">Unit 4 has no required SCOTUS cases or foundational documents. It is concept and data-heavy — expect lots of polling scenarios on the AP exam.</div>
+      </div>
+    </div>
+    <div class="unit-main">
+      <div id="concepts" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Key Concepts</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">5 concepts</div>
+        </div>
+        <div class="concepts-list">
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">1</div><div class="concept-row-title">Political Socialization</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Political socialization is the process through which people develop their political beliefs, values, and identities. The most powerful agent is the family — children tend to adopt their parents' party affiliation and ideology. Other agents include schools, peer groups, media, religion, and major life events. Political socialization begins early and is surprisingly stable — most people's core political identity is set by early adulthood and doesn't change dramatically over time.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">2</div><div class="concept-row-title">Liberal vs. Conservative — What These Actually Mean</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">In American politics, <strong>liberals</strong> generally favor an active government role in reducing economic inequality, expanding civil rights, and funding social programs — while being skeptical of government power over personal behavior. <strong>Conservatives</strong> generally favor limited government in economic affairs, lower taxes, free markets, and traditional social values — while being more accepting of government power over national security. These labels are contested and imprecise — many Americans hold mixed views that don't fit neatly on a left-right spectrum.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">3</div><div class="concept-row-title">Public Opinion &amp; Polling</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Public opinion polls measure what Americans think — but how you ask the question matters enormously. Question wording, question order, sample size, sample selection, and response options all affect poll results. Key concepts: <strong>sampling error</strong> (margin of error), <strong>random sampling</strong> (everyone has equal chance of selection), <strong>push polling</strong> (biased questions designed to influence rather than measure), and <strong>bandwagon effect</strong> (people change opinions based on perceived winning side). The AP exam frequently gives you poll data and asks you to identify methodological problems.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">4</div><div class="concept-row-title">Demographics &amp; Political Views</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Political views correlate strongly with demographics. <strong>Age:</strong> older Americans tend more conservative, younger more liberal. <strong>Race:</strong> Black, Hispanic, and Asian Americans vote more Democratic; white Americans (especially non-college) more Republican. <strong>Education:</strong> college-educated voters have shifted Democratic; non-college voters more Republican — this is one of the biggest recent realignments. <strong>Gender:</strong> women lean more Democratic (the gender gap). <strong>Religion:</strong> evangelical Christians strongly Republican; religiously unaffiliated more Democratic. <strong>Geography:</strong> urban areas heavily Democratic; rural strongly Republican; suburbs competitive.</div>
+          </div>
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header"><div class="concept-row-num">5</div><div class="concept-row-title">Ideological Consistency &amp; Polarization</div><div class="concept-row-toggle">⌄</div></div>
+            <div class="concept-row-body">Americans are increasingly ideologically sorted — Democrats have become more uniformly liberal, Republicans more uniformly conservative, with less overlap than at any point in modern history. <strong>Partisan polarization</strong> means the parties are further apart on policy and more hostile toward each other. <strong>Affective polarization</strong> means partisans increasingly dislike the other party personally, not just politically. Most individual Americans, however, hold some mix of liberal and conservative views — the polarization is most extreme among highly engaged partisans, primary voters, and party activists.</div>
+          </div>
+        </div>
+      </div>
+      <div id="examguide" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">AP Exam Guide</div><div class="unit-section-rule"></div></div>
+        <div class="exam-guide">
+          <div class="exam-guide-tabs">
+            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          </div>
+          <div class="exam-guide-panel active" id="ep-tested">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Interpreting polling data — identifying sampling errors, question bias, margin of error</li>
+              <li>Political socialization agents — especially family as primary agent</li>
+              <li>Demographic patterns in political opinion — age, race, education, gender, religion, geography</li>
+              <li>The liberal-conservative spectrum — what each position means on specific policy issues</li>
+              <li>Ideological consistency vs. mixed views — most Americans aren't purely one or the other</li>
+              <li>Linkage institutions — how public opinion connects to government (parties, interest groups, media, elections)</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-mistakes">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Confusing <em>political socialization</em> (how beliefs form) with <em>public opinion</em> (what beliefs are)</li>
+              <li>Assuming all members of a demographic group vote the same way — these are tendencies, not rules</li>
+              <li>Forgetting that a larger sample size reduces margin of error — but only if the sample is random</li>
+              <li>Saying Americans are polarized when most hold mixed views — the polarization is strongest among party activists and engaged voters</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-bigpicture">
+            <div class="exam-guide-bigpicture">Unit 4 asks a deceptively simple question: what do Americans actually believe, and why? The answer is complicated because most people's political views are a product of where they grew up, who they grew up with, what church they attend, where they live now — not careful rational deliberation about policy tradeoffs. Political identity is tribal before it is ideological. Understanding this helps explain why people often vote against their economic interests, why demographic shifts matter so much to political strategists, and why polarization has accelerated in the social media era. <strong style="color:#93c5fd;">Know the patterns — and know their limits.</strong></div>
+          </div>
+        </div>
+      </div>
+      <div id="frq" class="unit-section">
+        <div class="unit-section-header"><div class="unit-section-title">Unit 4 FRQ Practice</div><div class="unit-section-rule"></div><div class="unit-section-count">3 prompts</div></div>
+        <div class="frq-list">
+          <div class="frq-row">
+            <div class="frq-row-type ca">Concept App<br>3 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Interpreting a Poll on Immigration</div>
+              <div class="frq-row-preview">A poll reports that 62% of Americans support a path to citizenship for undocumented immigrants, with a margin of error of ±4%. The poll sampled 800 adults by calling landline phone numbers between 9 AM and 5 PM on weekdays. Identify two methodological problems with this poll and explain how each might affect the results...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+          <div class="frq-row">
+            <div class="frq-row-type sc">SCOTUS Comp<br>4 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Demographics and Voting Patterns</div>
+              <div class="frq-row-preview">The table below shows presidential vote choice by education level in 2016 and 2024. Describe the pattern shown. Explain one reason for the shift in college-educated voters toward the Democratic Party. Explain one reason why this shift might not continue in future elections...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+          <div class="frq-row">
+            <div class="frq-row-type ae">Arg. Essay<br>6 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Is Political Polarization a Threat to Democracy?</div>
+              <div class="frq-row-preview">Develop an argument: Does increasing partisan polarization threaten the effective functioning of American democracy? Use at least one piece of evidence from your knowledge of political ideologies, public opinion, or linkage institutions. Use at least one additional piece of evidence. Respond to an opposing perspective...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer><p>Mr. Rogers · AP Government &amp; Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    function examTab(el,panel){document.querySelectorAll('.exam-guide-tab').forEach(t=>t.classList.remove('active'));document.querySelectorAll('.exam-guide-panel').forEach(p=>p.classList.remove('active'));el.classList.add('active');document.getElementById('ep-'+panel).classList.add('active');}
+    const sections=['concepts','examguide','frq'];
+    const jumpLinks=document.querySelectorAll('.unit-jump-link');
+    window.addEventListener('scroll',()=>{let current=sections[0];sections.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-80)current=id;});jumpLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')=='#'+current);});});
+  </script>
+</body>
+</html>
