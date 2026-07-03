@@ -2241,7 +2241,7 @@
       sectionsHtml;
   }
 
-  document.querySelector('.nav-tab[data-tab="docs"]').addEventListener('click', function() {
+  const docsTab = document.querySelector('.nav-tab[data-tab="docs"]'); if(docsTab) docsTab.addEventListener('click', function() {
     setTimeout(buildDocsTab, 30);
   });
 

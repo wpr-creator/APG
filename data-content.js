@@ -1461,7 +1461,7 @@ function cartoonRevealAll() {
   });
 }
 
-document.querySelector('.nav-tab[data-tab="cartoons"]').addEventListener('click', function() {
+const cartoonTab = document.querySelector('.nav-tab[data-tab="cartoons"]'); if(cartoonTab) cartoonTab.addEventListener('click', function() {
   setTimeout(buildCartoonTab, 30);
 });
 
