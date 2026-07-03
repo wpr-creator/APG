@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 1: Foundations of American Democracy — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-pages.css">
+  <link rel="stylesheet" href="styles-skills.css">
+  <style>
+    /* ── UNIT PAGE LAYOUT (shared structure) ── */
+    .unit-jumpbar {
+      position: sticky; top: 0; z-index: 90;
+      background: #fdf6e8; border-bottom: 3px solid #d4b896;
+      padding: 0 1.5rem;
+      display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+    }
+    .unit-jumpbar::-webkit-scrollbar { display: none; }
+    .unit-jump-link {
+      padding: 12px 18px; font-size: 11px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #8b6914; text-decoration: none; white-space: nowrap;
+      border-bottom: 3px solid transparent; transition: all 0.15s;
+    }
+    .unit-jump-link:hover { color: #2c1810; }
+    .unit-jump-link.active { color: #2c1810; border-bottom-color: #2c1810; }
+
+    .unit-layout {
+      display: grid; grid-template-columns: 220px 1fr;
+      gap: 28px; align-items: start;
+      max-width: 1140px; margin: 0 auto;
+      padding: 24px 1.5rem 60px;
+    }
+    .unit-sidebar { position: sticky; top: 48px; }
+    .unit-sidebar-section {
+      background: #fdf6e8; border-radius: 12px;
+      border: 1px solid #d4b896; overflow: hidden; margin-bottom: 12px;
+    }
+    .unit-sidebar-head {
+      background: #2c1810; padding: 10px 14px;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: rgba(255,255,255,0.6);
+    }
+    .unit-sidebar-link {
+      display: block; padding: 9px 14px;
+      font-size: 12px; font-weight: 600; color: #5c3d2e;
+      text-decoration: none; border-left: 3px solid transparent;
+      border-bottom: 1px solid #d4b896; transition: all 0.12s;
+    }
+    .unit-sidebar-link:last-child { border-bottom: none; }
+    .unit-sidebar-link:hover { color: #2c1810; background: #f5ead6; }
+    .unit-sidebar-link.active { color: #2c1810; border-left-color: #b8952a; background: #f5ead6; }
+    .unit-sidebar-link .sidebar-year {
+      display: block; font-size: 10px; font-weight: 500;
+      color: #8b6914; margin-top: 1px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .unit-main { min-width: 0; }
+    .unit-section { margin-bottom: 40px; scroll-margin-top: 52px; }
+    .unit-section-header {
+      display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;
+    }
+    .unit-section-title {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #2c1810;
+    }
+    .unit-section-rule { flex: 1; height: 2px; background: #d4b896; }
+    .unit-section-count { font-size: 10px; font-weight: 700; color: #8b6914; }
+
+    /* Concept rows */
+    .concepts-list { display: flex; flex-direction: column; gap: 10px; }
+    .concept-row {
+      background: #fdf6e8; border-radius: 10px;
+      border: 1px solid #d4b896; overflow: hidden;
+    }
+    .concept-row-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; cursor: pointer; transition: background 0.12s;
+    }
+    .concept-row-header:hover { background: #f5ead6; }
+    .concept-row-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #2c1810; color: #b8952a;
+      font-size: 12px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .concept-row-title { font-size: 14px; font-weight: 800; color: #2c1810; flex: 1; }
+    .concept-row-toggle { font-size: 18px; color: #d4b896; transition: transform 0.2s; }
+    .concept-row.open .concept-row-toggle { transform: rotate(180deg); }
+    .concept-row-body {
+      display: none; padding: 0 16px 16px 56px;
+      font-size: 14px; line-height: 1.8; color: #5c3d2e;
+    }
+    .concept-row.open .concept-row-body { display: block; }
+
+    /* Case rows — Unit 1 has no required cases, but layout kept for consistency */
+    .cases-list { display: flex; flex-direction: column; gap: 8px; }
+    .case-row {
+      display: grid; grid-template-columns: 80px 1fr auto;
+      background: #fdf6e8; border-radius: 10px;
+      border: 1px solid #d4b896; overflow: hidden;
+      text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .case-row:hover { border-color: #2c1810; box-shadow: 0 2px 12px rgba(44,24,16,0.1); }
+    .case-row-year {
+      background: #2c1810; padding: 16px 12px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; font-weight: 500; color: #b8952a; text-align: center;
+    }
+    .case-row-amend {
+      font-size: 8px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(184,149,42,0.6);
+      margin-top: 4px; text-align: center; line-height: 1.3;
+    }
+    .case-row-body { padding: 14px 16px; min-width: 0; }
+    .case-row-name { font-size: 14px; font-weight: 800; color: #2c1810; margin-bottom: 4px; }
+    .case-row-question { font-size: 12px; color: #8b6914; line-height: 1.5; font-style: italic; }
+    .case-row-ruling { font-size: 12px; color: #5c3d2e; line-height: 1.6; margin-top: 6px; }
+    .case-row-arrow { padding: 0 16px; display: flex; align-items: center; font-size: 18px; color: #d4b896; border-left: 1px solid #d4b896; }
+    .case-row:hover .case-row-arrow { color: #b8952a; }
+
+    /* Document bento */
+    .docs-bento { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .doc-bento-card {
+      background: #fdf6e8; border-radius: 12px;
+      border: 1px solid #d4b896; overflow: hidden;
+      text-decoration: none; display: flex; flex-direction: column;
+      transition: border-color 0.15s, box-shadow 0.15s;
+    }
+    .doc-bento-card:hover { border-color: #2c1810; box-shadow: 0 4px 16px rgba(44,24,16,0.12); }
+    .doc-bento-top {
+      background: linear-gradient(120deg, #2c1810 0%, #5c3d2e 100%);
+      padding: 20px 20px 16px;
+    }
+    .doc-bento-icon { font-size: 28px; margin-bottom: 8px; display: block; }
+    .doc-bento-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; font-weight: 700; color: #f5ead6;
+      line-height: 1.2; margin-bottom: 4px;
+    }
+    .doc-bento-meta { font-size: 10px; color: rgba(184,149,42,0.7); font-family: 'JetBrains Mono', monospace; }
+    .doc-bento-body { padding: 14px 16px; flex: 1; font-size: 12px; line-height: 1.7; color: #5c3d2e; }
+    .doc-bento-footer { padding: 10px 16px; border-top: 1px solid #d4b896; font-size: 11px; font-weight: 700; color: #b8952a; }
+
+    /* Amendment pills */
+    .amends-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .amend-pill {
+      background: #fdf6e8; border-radius: 10px;
+      border: 1px solid #d4b896; padding: 12px 14px;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .amend-pill-num {
+      background: #2c1810; color: #b8952a;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px; font-weight: 700;
+      padding: 3px 8px; border-radius: 4px; flex-shrink: 0; margin-top: 1px;
+    }
+    .amend-pill-title { font-size: 12px; font-weight: 800; color: #2c1810; margin-bottom: 3px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .amend-pill-text { font-size: 11px; line-height: 1.6; color: #5c3d2e; }
+
+    /* Exam guide */
+    .exam-guide { background: #2c1810; border-radius: 14px; overflow: hidden; }
+    .exam-guide-tabs { display: flex; border-bottom: 1px solid rgba(184,149,42,0.2); }
+    .exam-guide-tab {
+      padding: 12px 20px; font-size: 11px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(184,149,42,0.45); cursor: pointer;
+      border-bottom: 3px solid transparent; transition: all 0.15s;
+    }
+    .exam-guide-tab.active { color: #b8952a; border-bottom-color: #b8952a; }
+    .exam-guide-panel { display: none; padding: 20px 24px; }
+    .exam-guide-panel.active { display: block; }
+    .exam-guide-panel li { font-size: 13px; line-height: 1.9; color: rgba(245,234,214,0.85); padding: 4px 0; border-bottom: 1px solid rgba(184,149,42,0.1); }
+    .exam-guide-panel li:last-child { border-bottom: none; }
+    .exam-guide-bigpicture { font-size: 14px; line-height: 1.9; color: rgba(245,234,214,0.85); }
+
+    /* FRQ rows */
+    .frq-list { display: flex; flex-direction: column; gap: 8px; }
+    .frq-row {
+      background: #fdf6e8; border-radius: 10px;
+      border: 1px solid #d4b896; padding: 14px 16px;
+      display: flex; gap: 16px; align-items: flex-start;
+    }
+    .frq-row-type {
+      flex-shrink: 0; padding: 6px 10px; border-radius: 6px;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; text-align: center; min-width: 56px;
+    }
+    .frq-row-type.ca { background: #f5ead6; color: #2c1810; }
+    .frq-row-type.sc { background: #5c3d2e; color: #f5ead6; }
+    .frq-row-type.ae { background: #2c1810; color: #b8952a; }
+    .frq-row-body { flex: 1; }
+    .frq-row-title { font-size: 14px; font-weight: 800; color: #2c1810; margin-bottom: 4px; }
+    .frq-row-preview { font-size: 12px; color: #5c3d2e; line-height: 1.6; }
+    .frq-row-link { display: block; margin-top: 8px; font-size: 11px; font-weight: 700; color: #b8952a; text-decoration: none; }
+
+    @media (max-width: 860px) {
+      .unit-layout { grid-template-columns: 1fr; }
+      .unit-sidebar { position: static; }
+      .docs-bento { grid-template-columns: 1fr; }
+      .amends-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="unit-1">
+
+  <div class="stars-stripe"></div>
+  <header>
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-seal"><i class="ti ti-building-community" aria-hidden="true"></i></div>
+        <div class="header-text">
+          <h1>Mr. Rogers — AP Government &amp; Politics</h1>
+          <p>O'Farrell High School · Advanced Placement · College Board</p>
+        </div>
+      </div>
+      <div class="header-right"><span class="header-year">2026–27</span></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group has-active">
+        <div class="nav-group-label">Unit 1</div>
+        <div class="nav-dropdown">
+          <a class="nav-link active" href="/APG/unit1.html">Overview</a>
+          <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+          <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+          <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+          <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+          <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+          <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 2</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit2.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/marbury-v-madison.html">Marbury v. Madison</a>
+          <a class="nav-link" href="/APG/cases/mcculloch-v-maryland.html">McCulloch v. Maryland</a>
+          <a class="nav-link" href="/APG/cases/us-v-lopez.html">U.S. v. Lopez</a>
+          <a class="nav-link" href="/APG/docs/federalist-70.html">Federalist No. 70</a>
+          <a class="nav-link" href="/APG/docs/federalist-76.html">Federalist No. 76</a>
+          <a class="nav-link" href="/APG/docs/federalist-78.html">Federalist No. 78</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 3</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit3.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/schenck-v-us.html">Schenck v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/engel-v-vitale.html">Engel v. Vitale</a>
+          <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
+          <a class="nav-link" href="/APG/cases/nyt-v-us.html">N.Y. Times v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder</a>
+          <a class="nav-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago</a>
+          <a class="nav-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright</a>
+          <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
+          <a class="nav-link" href="/APG/docs/emancipation-proclamation.html">Emancipation Proclamation</a>
+          <a class="nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 4</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit4.html">Overview</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 5</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit5.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/baker-v-carr.html">Baker v. Carr</a>
+          <a class="nav-link" href="/APG/cases/shaw-v-reno.html">Shaw v. Reno</a>
+          <a class="nav-link" href="/APG/cases/citizens-united-v-fec.html">Citizens United v. FEC</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Tools</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+          <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+          <a class="nav-link" href="/APG/#glossary">Glossary</a>
+          <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+          <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+          <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+          <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+        </div>
+      </div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+
+  <!-- JUMP BAR -->
+  <div class="unit-jumpbar">
+    <a class="unit-jump-link" href="#concepts">Concepts</a>
+    <a class="unit-jump-link" href="#documents">Documents</a>
+    <a class="unit-jump-link" href="#amendments">Amendments</a>
+    <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
+    <a class="unit-jump-link" href="#frq">FRQ Practice</a>
+  </div>
+
+  <!-- HERO -->
+  <div style="background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);padding:28px 1.5rem 32px;">
+    <div style="max-width:1140px;margin:0 auto;">
+      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">AP Government & Politics · 15–22% of Exam</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:#f5ead6;line-height:1.1;margin-bottom:10px;font-style:italic;">Unit 1: Foundations of<br>American Democracy</div>
+      <div style="font-size:14px;color:rgba(245,234,214,0.65);line-height:1.7;max-width:620px;margin-bottom:18px;">The Founders argued about power — how much government should have, who should hold it, and what happens when it's abused. Every document in this unit is either a warning about tyranny or a design for preventing it. They were all writing for their lives.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.2);color:#b8952a;">Unit 1</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(245,234,214,0.1);color:#f5ead6;">15–22% of AP Exam</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Federalism</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Separation of Powers</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Checks &amp; Balances</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-layout">
+
+    <!-- SIDEBAR -->
+    <div class="unit-sidebar">
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">REQUIRED DOCUMENTS</div>
+        <a class="unit-sidebar-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence<span class="sidebar-year">Jefferson · 1776</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation<span class="sidebar-year">Continental Congress · 1781</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/constitution.html">U.S. Constitution<span class="sidebar-year">Convention · 1787</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/federalist-10.html">Federalist No. 10<span class="sidebar-year">Madison · 1787</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/federalist-51.html">Federalist No. 51<span class="sidebar-year">Madison · 1788</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/brutus-1.html">Brutus No. 1<span class="sidebar-year">Anti-Federalist · 1787</span></a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">KEY AMENDMENTS</div>
+        <a class="unit-sidebar-link" href="#amendments">Bill of Rights (1–10)<span class="sidebar-year">Ratified 1791</span></a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">NOTE</div>
+        <div style="padding:10px 14px;font-size:11px;color:#5c3d2e;line-height:1.6;">Unit 1 has no required SCOTUS cases — the cases that interpret foundational principles appear in Units 2 and 3.</div>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="unit-main">
+
+      <!-- KEY CONCEPTS -->
+      <div id="concepts" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Key Concepts</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">7 concepts</div>
+        </div>
+        <div class="concepts-list">
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">1</div>
+              <div class="concept-row-title">Natural Rights & Social Contract</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Enlightenment thinkers — especially John Locke — argued that people are born with natural rights (life, liberty, property) that no government can legitimately take away. Government exists by a "social contract": people give up some freedom in exchange for protection. If the government breaks the contract by violating rights, the people have the right to alter or abolish it. Jefferson built the Declaration of Independence on this framework. It is the philosophical DNA of the American founding.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">2</div>
+              <div class="concept-row-title">The Articles of Confederation — Why They Failed</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">America's first constitution gave almost all power to the states. Congress could not tax, could not raise an army without state cooperation, could not regulate commerce between states, and needed unanimous consent to amend anything. Shays' Rebellion (1786) — a debt crisis in Massachusetts where the state government nearly collapsed — convinced leaders that the Articles were fatally weak. The Constitutional Convention (1787) was called to fix this. Instead, the delegates scrapped the Articles entirely and wrote a new constitution.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">3</div>
+              <div class="concept-row-title">Constitutional Compromises</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">The Constitution was not inevitable — it required four major compromises. The <strong>Great Compromise</strong> created a bicameral legislature: the House (population-based) satisfied large states, the Senate (equal representation) satisfied small states. The <strong>Three-Fifths Compromise</strong> counted enslaved people as 3/5 of a person for representation — a moral catastrophe that empowered slaveholding states. The <strong>Commerce and Slave Trade Compromise</strong> prevented Congress from banning the slave trade until 1808. The <strong>Electoral College</strong> was created as a compromise between direct popular election and congressional selection of the president.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">4</div>
+              <div class="concept-row-title">Federalism</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Federalism divides power between the national government and state governments, each with its own sphere of authority. The Constitution gives the federal government <strong>enumerated powers</strong> (listed in Article I, Section 8) and <strong>implied powers</strong> (from the Necessary and Proper Clause). The <strong>10th Amendment</strong> reserves all other powers to the states. <strong>Dual federalism</strong> (layer cake) kept the spheres separate; <strong>cooperative federalism</strong> (marble cake) has them intertwined since the New Deal. The Supremacy Clause establishes that when federal and state law conflict, federal law wins.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">5</div>
+              <div class="concept-row-title">Separation of Powers & Checks and Balances</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">The Constitution divides power among three branches — legislative (Congress), executive (President), and judicial (courts) — so no single branch can dominate. But separation alone isn't enough; each branch also has tools to limit the others. Congress can override a presidential veto, the President nominates judges and can veto legislation, the courts can strike down laws as unconstitutional. Madison called this "ambition must be made to counteract ambition" — the system relies on the self-interest of each branch to prevent another from overreaching. This is why the system sometimes appears gridlocked: it's designed to make action difficult.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">6</div>
+              <div class="concept-row-title">Federalist vs. Anti-Federalist Debate</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Ratification wasn't guaranteed. <strong>Federalists</strong> (Hamilton, Madison, Jay) argued in the Federalist Papers that a strong central government was necessary to prevent the chaos of the Articles era. A large republic, Madison argued in Federalist 10, would actually protect liberty better than a small one — more factions would cancel each other out. <strong>Anti-Federalists</strong> (writing as "Brutus," "Federal Farmer") feared the new government would destroy states' rights and individual liberty. They demanded a Bill of Rights as the price of ratification. Without that concession, the Constitution might not have been ratified. The Anti-Federalists lost the vote but won the argument about the Bill of Rights.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">7</div>
+              <div class="concept-row-title">American Political Values & Culture</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">American political culture rests on a set of core values that most Americans broadly share despite political disagreements: <strong>liberty</strong> (freedom from government interference), <strong>equality</strong> (equal treatment under law and equal political participation), <strong>democracy</strong> (government by consent of the governed), <strong>individualism</strong> (personal responsibility and self-reliance), and <strong>rule of law</strong> (no one is above the law, including the government). These values coexist in tension — liberty and equality sometimes conflict — and Americans disagree about how to balance them. Understanding this tension is essential for AP Government.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- REQUIRED DOCUMENTS -->
+      <div id="documents" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Required Foundational Documents</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">6 documents</div>
+        </div>
+        <div class="docs-bento">
+
+          <a class="doc-bento-card" href="/APG/docs/declaration-of-independence.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">🦅</span>
+              <div class="doc-bento-title">Declaration of Independence</div>
+              <div class="doc-bento-meta">Thomas Jefferson · July 4, 1776</div>
+            </div>
+            <div class="doc-bento-body">The founding argument for natural rights and self-governance. Jefferson built the case for revolution on Locke's social contract theory. But read it as a legal document, not a poem — it lists 27 specific grievances against King George III, each one a violation of the social contract. The famous second paragraph is the philosophy; the grievance list is the proof.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/articles-of-confederation.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">📜</span>
+              <div class="doc-bento-title">Articles of Confederation</div>
+              <div class="doc-bento-meta">Continental Congress · Ratified 1781</div>
+            </div>
+            <div class="doc-bento-body">America's first constitution — and a cautionary tale. The Articles created a national government so weak it could barely function: no power to tax, no power to regulate commerce, no executive, no national court system. On the AP exam, you need to know what the Articles could NOT do as much as what they could. The Constitution was written in reaction to these failures.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/constitution.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">⚖️</span>
+              <div class="doc-bento-title">U.S. Constitution</div>
+              <div class="doc-bento-meta">Constitutional Convention · Ratified 1788</div>
+            </div>
+            <div class="doc-bento-body">The operating manual for American government. The required portions for AP include the Preamble, Article I (Congress), Article II (President), Article III (Courts), the Supremacy Clause, the Necessary and Proper Clause, and key amendments. You do not need to memorize the whole document — but you need to know every clause that has generated a landmark case.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/federalist-10.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">✍️</span>
+              <div class="doc-bento-title">Federalist No. 10</div>
+              <div class="doc-bento-meta">James Madison · November 22, 1787</div>
+            </div>
+            <div class="doc-bento-body">Madison's most important essay. He argues that factions — groups driven by self-interest at the expense of others — are inevitable in a free society. The solution isn't eliminating factions (that would require eliminating liberty) but controlling their effects. A large republic with many competing factions is safer than a small one where a single faction can dominate. This argument is the foundation for pluralism in American politics.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/federalist-51.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">✍️</span>
+              <div class="doc-bento-title">Federalist No. 51</div>
+              <div class="doc-bento-meta">James Madison · February 6, 1788</div>
+            </div>
+            <div class="doc-bento-body">Madison's defense of separation of powers and checks and balances. "Ambition must be made to counteract ambition." Each branch is given the tools to resist the others — and each branch's members have personal incentives to use those tools. The system doesn't depend on virtue; it's designed to work even when people in power act selfishly. The most important essay for understanding how the Constitution actually works.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/brutus-1.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">⚡</span>
+              <div class="doc-bento-title">Brutus No. 1</div>
+              <div class="doc-bento-meta">Robert Yates (attributed) · October 18, 1787</div>
+            </div>
+            <div class="doc-bento-body">The most important Anti-Federalist essay — and the best counterargument to Madison. "Brutus" warns that the Necessary and Proper Clause and Supremacy Clause give the federal government unlimited power to destroy the states. A large republic, he argues, cannot represent the people — it's too big, too distant, and too easily captured by elites. Read this alongside Federalist 10 and 51: together they frame the debate that still shapes American politics.</div>
+            <div class="doc-bento-footer">Read Full Document with Annotations →</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- KEY AMENDMENTS -->
+      <div id="amendments" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Key Amendments</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">Bill of Rights</div>
+        </div>
+        <div class="amends-grid">
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">1st</div>
+            <div>
+              <div class="amend-pill-title">Religion, Speech, Press, Assembly, Petition</div>
+              <div class="amend-pill-text">The most litigated amendment. Five distinct freedoms in one sentence. All are limited — none are absolute.</div>
+            </div>
+          </div>
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">2nd</div>
+            <div>
+              <div class="amend-pill-title">Right to Bear Arms</div>
+              <div class="amend-pill-text">Individual right per Heller (2008), applied to states via McDonald (2010). Most politically contested right in current law.</div>
+            </div>
+          </div>
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">4th</div>
+            <div>
+              <div class="amend-pill-title">Search and Seizure</div>
+              <div class="amend-pill-text">Unreasonable searches prohibited; warrants require probable cause. Exclusionary rule (Mapp v. Ohio) flows from this.</div>
+            </div>
+          </div>
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">5th</div>
+            <div>
+              <div class="amend-pill-title">Self-Incrimination, Due Process</div>
+              <div class="amend-pill-text">Can't be forced to testify against yourself. Can't be deprived of life, liberty, or property without due process. Foundation of Miranda.</div>
+            </div>
+          </div>
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">6th</div>
+            <div>
+              <div class="amend-pill-title">Right to Counsel & Fair Trial</div>
+              <div class="amend-pill-text">Speedy trial, impartial jury, right to an attorney. Gideon v. Wainwright (1963) applied this to the states.</div>
+            </div>
+          </div>
+
+          <div class="amend-pill">
+            <div class="amend-pill-num">10th</div>
+            <div>
+              <div class="amend-pill-title">Reserved Powers</div>
+              <div class="amend-pill-text">Powers not given to the federal government are reserved to the states or the people. The constitutional foundation of states' rights arguments.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- AP EXAM GUIDE -->
+      <div id="examguide" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">AP Exam Guide</div>
+          <div class="unit-section-rule"></div>
+        </div>
+        <div class="exam-guide">
+          <div class="exam-guide-tabs">
+            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          </div>
+          <div class="exam-guide-panel active" id="ep-tested">
+            <ul style="padding-left:18px;margin:0;">
+              <li>The specific weaknesses of the Articles of Confederation — know at least five</li>
+              <li>The Great Compromise — why both chambers exist and how they differ</li>
+              <li>Madison's argument in Federalist 10 — factions, large republic, pluralism</li>
+              <li>Madison's argument in Federalist 51 — separation of powers, ambition counteracting ambition</li>
+              <li>Brutus No. 1's counterarguments — Necessary and Proper Clause, Supremacy Clause concerns</li>
+              <li>The difference between enumerated, implied, reserved, and concurrent powers</li>
+              <li>Dual federalism vs. cooperative federalism — and which era each belongs to</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-mistakes">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Confusing Federalists (pro-Constitution) with federalism (the system of divided power) — they're related but different</li>
+              <li>Thinking the Declaration of Independence is a legal document — it has no legal force; the Constitution is the law</li>
+              <li>Forgetting that the Three-Fifths Compromise applied to enslaved people, not Native Americans or free Black people</li>
+              <li>Saying Madison wrote Federalist 51 alone — he likely wrote it, but some scholars attribute it to Hamilton. On the AP exam, just know the argument</li>
+              <li>Confusing the Necessary and Proper Clause (implied powers) with the Supremacy Clause (federal law wins over state law) — they do different things</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-bigpicture">
+            <div class="exam-guide-bigpicture">Unit 1 is about one central tension: how do you create a government strong enough to function but not so strong it becomes tyrannical? The Founders had just fought a revolution against an overpowering central authority. They were terrified of concentrating power — in a king, in a majority, in any single faction. Every design choice in the Constitution is a response to that fear. The separation of powers, federalism, checks and balances, the Bill of Rights — all of it is a system for preventing any one group from controlling everything. <strong style="color:#b8952a;">Understand that fear, and you understand the whole unit.</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRQ PRACTICE -->
+      <div id="frq" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Unit 1 FRQ Practice</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">3 prompts</div>
+        </div>
+        <div class="frq-list">
+
+          <div class="frq-row">
+            <div class="frq-row-type ca">Concept App<br>3 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Federalism and State Marijuana Laws</div>
+              <div class="frq-row-preview">Several states have legalized recreational marijuana while it remains illegal under federal law. Using the concept of federalism and the Supremacy Clause, explain the constitutional tension this creates. Then explain one way the federal government has responded to this tension and one way states have pushed back...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+          <div class="frq-row">
+            <div class="frq-row-type sc">SCOTUS Comp<br>4 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Implied Powers & the Necessary and Proper Clause</div>
+              <div class="frq-row-preview">In McCulloch v. Maryland (1819), the Supreme Court upheld Congress's power to charter a national bank even though that power is not explicitly listed in the Constitution. Chief Justice Marshall held that the Necessary and Proper Clause grants Congress broad implied powers. Compare this reasoning to the concerns raised in Brutus No. 1 about federal power. Do the fears Brutus expressed prove justified?</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+          <div class="frq-row">
+            <div class="frq-row-type ae">Arg. Essay<br>6 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Does Federalism Still Work?</div>
+              <div class="frq-row-preview">Develop an argument: Does the constitutional system of federalism effectively balance national power with state autonomy in the 21st century? Use at least one piece of evidence from the U.S. Constitution, Federalist No. 51, or Brutus No. 1. Use at least one additional piece of evidence. Respond to an opposing perspective...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /unit-main -->
+  </div><!-- /unit-layout -->
+
+  <footer>
+    <p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p>
+  </footer>
+
+  <script>
+    function examTab(el, panel) {
+      document.querySelectorAll('.exam-guide-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.exam-guide-panel').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('ep-' + panel).classList.add('active');
+    }
+    const sections = ['concepts','documents','amendments','examguide','frq'];
+    const jumpLinks = document.querySelectorAll('.unit-jump-link');
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 80) current = id;
+      });
+      jumpLinks.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+
+</body>
+</html>
