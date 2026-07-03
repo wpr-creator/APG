@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unit 2: Interactions Among Branches — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-pages.css">
+  <link rel="stylesheet" href="styles-skills.css">
+  <style>
+    /* ── UNIT 2: DC MARBLE IDENTITY ── */
+    body { background: #f4f5f7; }
+
+    .unit-jumpbar {
+      position: sticky; top: 0; z-index: 90;
+      background: white; border-bottom: 3px solid #1a1a2e;
+      padding: 0 1.5rem;
+      display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
+    }
+    .unit-jumpbar::-webkit-scrollbar { display: none; }
+    .unit-jump-link {
+      padding: 12px 18px; font-size: 11px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: #64748b; text-decoration: none; white-space: nowrap;
+      border-bottom: 3px solid transparent; transition: all 0.15s;
+    }
+    .unit-jump-link:hover { color: #1a1a2e; }
+    .unit-jump-link.active { color: #1a1a2e; border-bottom-color: #c8a951; }
+
+    .unit-layout {
+      display: grid; grid-template-columns: 220px 1fr;
+      gap: 28px; align-items: start;
+      max-width: 1140px; margin: 0 auto;
+      padding: 24px 1.5rem 60px;
+    }
+    .unit-sidebar { position: sticky; top: 48px; }
+    .unit-sidebar-section {
+      background: white; border-radius: 12px;
+      border: 1px solid #e5e7eb; overflow: hidden; margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(26,26,46,0.06);
+    }
+    .unit-sidebar-head {
+      background: #1a1a2e; padding: 10px 14px;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.14em;
+      text-transform: uppercase; color: rgba(200,169,81,0.7);
+    }
+    .unit-sidebar-link {
+      display: block; padding: 9px 14px;
+      font-size: 12px; font-weight: 600; color: #374151;
+      text-decoration: none; border-left: 3px solid transparent;
+      border-bottom: 1px solid #e5e7eb; transition: all 0.12s;
+    }
+    .unit-sidebar-link:last-child { border-bottom: none; }
+    .unit-sidebar-link:hover { color: #1a1a2e; background: #f8f9fa; }
+    .unit-sidebar-link.active { color: #1a1a2e; border-left-color: #c8a951; background: #f8f9fa; }
+    .unit-sidebar-link .sidebar-year {
+      display: block; font-size: 10px; font-weight: 500;
+      color: #9ca3af; margin-top: 1px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .unit-main { min-width: 0; }
+    .unit-section { margin-bottom: 40px; scroll-margin-top: 52px; }
+    .unit-section-header {
+      display: flex; align-items: baseline; gap: 12px; margin-bottom: 16px;
+    }
+    .unit-section-title {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 11px; font-weight: 800; letter-spacing: 0.16em;
+      text-transform: uppercase; color: #1a1a2e;
+    }
+    .unit-section-rule { flex: 1; height: 2px; background: #e5e7eb; }
+    .unit-section-count { font-size: 10px; font-weight: 700; color: #9ca3af; }
+
+    /* Concept rows — marble white */
+    .concepts-list { display: flex; flex-direction: column; gap: 10px; }
+    .concept-row {
+      background: white; border-radius: 10px;
+      border: 1px solid #e5e7eb; overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.05);
+    }
+    .concept-row-header {
+      display: flex; align-items: center; gap: 12px;
+      padding: 12px 16px; cursor: pointer; transition: background 0.12s;
+    }
+    .concept-row-header:hover { background: #f8f9fa; }
+    .concept-row-num {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #1a1a2e; color: #c8a951;
+      font-size: 12px; font-weight: 800;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .concept-row-title { font-size: 14px; font-weight: 800; color: #1a1a2e; flex: 1; }
+    .concept-row-toggle { font-size: 18px; color: #d1d5db; transition: transform 0.2s; }
+    .concept-row.open .concept-row-toggle { transform: rotate(180deg); }
+    .concept-row-body {
+      display: none; padding: 0 16px 16px 56px;
+      font-size: 14px; line-height: 1.8; color: #374151;
+    }
+    .concept-row.open .concept-row-body { display: block; }
+
+    /* Case rows */
+    .cases-list { display: flex; flex-direction: column; gap: 8px; }
+    .case-row {
+      display: grid; grid-template-columns: 80px 1fr auto;
+      background: white; border-radius: 10px;
+      border: 1px solid #e5e7eb; overflow: hidden;
+      text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.05);
+    }
+    .case-row:hover { border-color: #1a1a2e; box-shadow: 0 4px 16px rgba(26,26,46,0.12); }
+    .case-row-year {
+      background: #1a1a2e; padding: 16px 12px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; font-weight: 500; color: #c8a951; text-align: center;
+    }
+    .case-row-amend {
+      font-size: 8px; font-weight: 700; letter-spacing: 0.08em;
+      text-transform: uppercase; color: rgba(200,169,81,0.5);
+      margin-top: 4px; line-height: 1.3;
+    }
+    .case-row-body { padding: 14px 16px; min-width: 0; }
+    .case-row-name { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+    .case-row-question { font-size: 12px; color: #64748b; line-height: 1.5; font-style: italic; }
+    .case-row-ruling { font-size: 12px; color: #374151; line-height: 1.6; margin-top: 6px; }
+    .case-row-arrow { padding: 0 16px; display: flex; align-items: center; font-size: 18px; color: #d1d5db; border-left: 1px solid #e5e7eb; }
+    .case-row:hover .case-row-arrow { color: #c8a951; }
+
+    /* Doc bento */
+    .docs-bento { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; }
+    .doc-bento-card {
+      background: white; border-radius: 12px;
+      border: 1px solid #e5e7eb; overflow: hidden;
+      text-decoration: none; display: flex; flex-direction: column;
+      transition: border-color 0.15s, box-shadow 0.15s;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.05);
+    }
+    .doc-bento-card:hover { border-color: #1a1a2e; box-shadow: 0 4px 16px rgba(26,26,46,0.1); }
+    .doc-bento-top {
+      background: linear-gradient(120deg, #1a1a2e 0%, #374151 100%);
+      padding: 20px 20px 16px;
+    }
+    .doc-bento-icon { font-size: 26px; margin-bottom: 8px; display: block; }
+    .doc-bento-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px; font-weight: 700; color: white;
+      line-height: 1.2; margin-bottom: 4px;
+    }
+    .doc-bento-meta { font-size: 10px; color: rgba(200,169,81,0.65); font-family: 'JetBrains Mono', monospace; }
+    .doc-bento-body { padding: 12px 14px; flex: 1; font-size: 12px; line-height: 1.7; color: #374151; }
+    .doc-bento-footer { padding: 8px 14px; border-top: 1px solid #e5e7eb; font-size: 11px; font-weight: 700; color: #c8a951; }
+
+    /* Exam guide */
+    .exam-guide { background: #1a1a2e; border-radius: 14px; overflow: hidden; }
+    .exam-guide-tabs { display: flex; border-bottom: 1px solid rgba(200,169,81,0.15); }
+    .exam-guide-tab {
+      padding: 12px 20px; font-size: 11px; font-weight: 800;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: rgba(200,169,81,0.4); cursor: pointer;
+      border-bottom: 3px solid transparent; transition: all 0.15s;
+    }
+    .exam-guide-tab.active { color: #c8a951; border-bottom-color: #c8a951; }
+    .exam-guide-panel { display: none; padding: 20px 24px; }
+    .exam-guide-panel.active { display: block; }
+    .exam-guide-panel li {
+      font-size: 13px; line-height: 1.9; color: rgba(255,255,255,0.78);
+      padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .exam-guide-panel li:last-child { border-bottom: none; }
+    .exam-guide-bigpicture { font-size: 14px; line-height: 1.9; color: rgba(255,255,255,0.78); }
+
+    /* Branches grid — visual separation of 3 branches */
+    .branches-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+      margin-bottom: 20px;
+    }
+    .branch-card {
+      background: white; border-radius: 10px;
+      border: 1px solid #e5e7eb; overflow: hidden;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.05);
+    }
+    .branch-card-head {
+      padding: 12px 14px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
+      text-transform: uppercase; color: white;
+    }
+    .branch-card-head.leg { background: #1a1a2e; }
+    .branch-card-head.exec { background: #374151; }
+    .branch-card-head.jud { background: #4b5563; }
+    .branch-card-body { padding: 12px 14px; }
+    .branch-card-article {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px; color: #c8a951; font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .branch-card-powers { list-style: none; padding: 0; margin: 0; }
+    .branch-card-powers li {
+      font-size: 11px; line-height: 1.7; color: #374151;
+      padding: 2px 0; border-bottom: 1px solid #f3f4f6;
+    }
+    .branch-card-powers li:last-child { border-bottom: none; }
+
+    /* FRQ rows */
+    .frq-list { display: flex; flex-direction: column; gap: 8px; }
+    .frq-row {
+      background: white; border-radius: 10px;
+      border: 1px solid #e5e7eb; padding: 14px 16px;
+      display: flex; gap: 16px; align-items: flex-start;
+      box-shadow: 0 1px 3px rgba(26,26,46,0.04);
+    }
+    .frq-row-type {
+      flex-shrink: 0; padding: 6px 10px; border-radius: 6px;
+      font-size: 9px; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; text-align: center; min-width: 56px;
+    }
+    .frq-row-type.ca { background: #dbeafe; color: #1e3a8a; }
+    .frq-row-type.sc { background: #e0e7ff; color: #3730a3; }
+    .frq-row-type.ae { background: #1a1a2e; color: #c8a951; }
+    .frq-row-body { flex: 1; }
+    .frq-row-title { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+    .frq-row-preview { font-size: 12px; color: #374151; line-height: 1.6; }
+    .frq-row-link { display: block; margin-top: 8px; font-size: 11px; font-weight: 700; color: #c8a951; text-decoration: none; }
+
+    @media (max-width: 860px) {
+      .unit-layout { grid-template-columns: 1fr; }
+      .unit-sidebar { position: static; }
+      .docs-bento { grid-template-columns: 1fr; }
+      .branches-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="unit-2">
+
+  <div class="stars-stripe"></div>
+  <header>
+    <div class="header-inner">
+      <div class="header-brand">
+        <div class="header-seal"><i class="ti ti-building-community" aria-hidden="true"></i></div>
+        <div class="header-text">
+          <h1>Mr. Rogers — AP Government &amp; Politics</h1>
+          <p>O'Farrell High School · Advanced Placement · College Board</p>
+        </div>
+      </div>
+      <div class="header-right"><span class="header-year">2026–27</span></div>
+    </div>
+  </header>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 1</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit1.html">Overview</a>
+          <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+          <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+          <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+          <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+          <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+          <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+        </div>
+      </div>
+      <div class="nav-group has-active">
+        <div class="nav-group-label">Unit 2</div>
+        <div class="nav-dropdown">
+          <a class="nav-link active" href="/APG/unit2.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/marbury-v-madison.html">Marbury v. Madison</a>
+          <a class="nav-link" href="/APG/cases/mcculloch-v-maryland.html">McCulloch v. Maryland</a>
+          <a class="nav-link" href="/APG/cases/us-v-lopez.html">U.S. v. Lopez</a>
+          <a class="nav-link" href="/APG/docs/federalist-70.html">Federalist No. 70</a>
+          <a class="nav-link" href="/APG/docs/federalist-76.html">Federalist No. 76</a>
+          <a class="nav-link" href="/APG/docs/federalist-78.html">Federalist No. 78</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 3</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit3.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/schenck-v-us.html">Schenck v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/engel-v-vitale.html">Engel v. Vitale</a>
+          <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
+          <a class="nav-link" href="/APG/cases/nyt-v-us.html">N.Y. Times v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder</a>
+          <a class="nav-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright</a>
+          <a class="nav-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago</a>
+          <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
+          <a class="nav-link" href="/APG/docs/emancipation-proclamation.html">Emancipation Proclamation</a>
+          <a class="nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 4</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit4.html">Overview</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Unit 5</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit5.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/baker-v-carr.html">Baker v. Carr</a>
+          <a class="nav-link" href="/APG/cases/shaw-v-reno.html">Shaw v. Reno</a>
+          <a class="nav-link" href="/APG/cases/citizens-united-v-fec.html">Citizens United v. FEC</a>
+        </div>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-label">Tools</div>
+        <div class="nav-dropdown">
+          <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+          <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+          <a class="nav-link" href="/APG/#glossary">Glossary</a>
+          <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+          <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+          <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+          <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+        </div>
+      </div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+
+  <!-- JUMP BAR -->
+  <div class="unit-jumpbar">
+    <a class="unit-jump-link" href="#concepts">Concepts</a>
+    <a class="unit-jump-link" href="#branches">The Three Branches</a>
+    <a class="unit-jump-link" href="#cases">Cases</a>
+    <a class="unit-jump-link" href="#documents">Documents</a>
+    <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
+    <a class="unit-jump-link" href="#frq">FRQ Practice</a>
+  </div>
+
+  <!-- HERO -->
+  <div style="background:linear-gradient(135deg,#1a1a2e 0%,#374151 60%,#1a1a2e 100%);padding:28px 1.5rem 32px;">
+    <div style="max-width:1140px;margin:0 auto;">
+      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#c8a951;margin-bottom:8px;">AP Government & Politics · 15–22% of Exam</div>
+      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 2: Interactions Among<br>Branches of Government</div>
+      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">Three branches. One Constitution. Constant tension. Congress makes the laws, the President executes them, the courts interpret them — and each branch has tools to block the other two. Understanding how these institutions check each other is the core of Unit 2.</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.2);color:#c8a951;">Unit 2</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(255,255,255,0.08);color:white;">15–22% of AP Exam</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Separation of Powers</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Checks &amp; Balances</span>
+        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Judicial Review</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="unit-layout">
+
+    <!-- SIDEBAR -->
+    <div class="unit-sidebar">
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">REQUIRED CASES</div>
+        <a class="unit-sidebar-link" href="/APG/cases/marbury-v-madison.html">Marbury v. Madison<span class="sidebar-year">1803 · Judicial Review</span></a>
+        <a class="unit-sidebar-link" href="/APG/cases/mcculloch-v-maryland.html">McCulloch v. Maryland<span class="sidebar-year">1819 · Implied Powers</span></a>
+        <a class="unit-sidebar-link" href="/APG/cases/us-v-lopez.html">U.S. v. Lopez<span class="sidebar-year">1995 · Commerce Clause</span></a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">REQUIRED DOCUMENTS</div>
+        <a class="unit-sidebar-link" href="/APG/docs/federalist-70.html">Federalist No. 70<span class="sidebar-year">Hamilton · Executive Energy</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/federalist-76.html">Federalist No. 76<span class="sidebar-year">Hamilton · Appointments</span></a>
+        <a class="unit-sidebar-link" href="/APG/docs/federalist-78.html">Federalist No. 78<span class="sidebar-year">Hamilton · Judicial Review</span></a>
+      </div>
+      <div class="unit-sidebar-section">
+        <div class="unit-sidebar-head">KEY ARTICLES</div>
+        <a class="unit-sidebar-link" href="/APG/docs/constitution.html#article1">Article I — Congress</a>
+        <a class="unit-sidebar-link" href="/APG/docs/constitution.html#article2">Article II — President</a>
+        <a class="unit-sidebar-link" href="/APG/docs/constitution.html#article3">Article III — Courts</a>
+      </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="unit-main">
+
+      <!-- KEY CONCEPTS -->
+      <div id="concepts" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Key Concepts</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">7 concepts</div>
+        </div>
+        <div class="concepts-list">
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">1</div>
+              <div class="concept-row-title">Separation of Powers in Practice</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">The Constitution divides government into three branches — legislative, executive, judicial — each with distinct functions and powers. Congress makes law, the President executes law, the courts interpret law. But in practice these functions overlap constantly: the President issues executive orders that look like law, agencies write regulations that function as law, and courts sometimes look like they're making policy. The clean separation on paper is messier in reality, which is exactly why checks and balances are necessary.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">2</div>
+              <div class="concept-row-title">Checks and Balances</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Each branch has specific constitutional tools to limit the other two. Congress can override a presidential veto (2/3 majority), impeach and remove the President and federal judges, and refuse to confirm appointments or ratify treaties. The President can veto legislation, nominate federal judges, and use executive orders. Courts can declare laws and executive actions unconstitutional. These mechanisms mean no single branch can act unchecked — but they also create gridlock when the branches are controlled by opposing parties.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">3</div>
+              <div class="concept-row-title">Congressional Powers — Enumerated and Implied</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Article I, Section 8 lists Congress's enumerated (express) powers: taxation, borrowing, commerce regulation, declaring war, raising armies, coining money, and more. The Necessary and Proper Clause then expands these by allowing Congress to "make all Laws... necessary and proper" to carry out the enumerated powers — the source of implied powers. McCulloch v. Maryland (1819) established that implied powers are broad: Congress doesn't need an explicit grant to do something, just a reasonable connection to an enumerated power.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">4</div>
+              <div class="concept-row-title">Presidential Powers — Formal and Informal</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Formal presidential powers come directly from Article II: commander-in-chief, treaty negotiation, appointments, the veto, pardons, and State of the Union. Informal powers have developed over time through practice and political evolution: executive orders, executive agreements (bypassing the Senate's treaty power), signing statements, and the bully pulpit — using the presidency's platform to influence public opinion and pressure Congress. The modern presidency exercises far more power than the Constitution's text suggests.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">5</div>
+              <div class="concept-row-title">Judicial Review</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">Judicial review is the power of courts to strike down laws and executive actions that violate the Constitution. It is not in the Constitution — Chief Justice John Marshall established it in Marbury v. Madison (1803). Marshall's logic: the Constitution is supreme law; courts decide what the law means; therefore courts must be able to void laws that conflict with the Constitution. Without judicial review, the Constitution would be unenforceable against Congress and the President. Hamilton anticipated this power in Federalist 78.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">6</div>
+              <div class="concept-row-title">The Federal Bureaucracy</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">The bureaucracy — the Cabinet departments, independent agencies, and regulatory bodies that actually implement federal law — is not mentioned in the Constitution but has become the fourth branch in practice. Congress creates agencies and funds them; the President appoints agency heads and directs policy; courts review agency decisions. Bureaucrats exercise enormous discretionary power through rulemaking, enforcement decisions, and policy interpretation. Iron triangles — the tight relationships between congressional committees, executive agencies, and interest groups — often determine policy outcomes more than elected officials do.</div>
+          </div>
+
+          <div class="concept-row" onclick="this.classList.toggle('open')">
+            <div class="concept-row-header">
+              <div class="concept-row-num">7</div>
+              <div class="concept-row-title">Federalism and the Commerce Clause</div>
+              <div class="concept-row-toggle">⌄</div>
+            </div>
+            <div class="concept-row-body">The Commerce Clause (Article I, Sec. 8) gives Congress power to regulate commerce "among the several States." This has been the constitutional basis for most federal economic regulation since the New Deal. The Court interpreted it broadly until U.S. v. Lopez (1995) — the first time in 60 years the Court struck down a federal law for exceeding the Commerce Clause. Lopez established limits: Congress can regulate economic activity that substantially affects interstate commerce, but not non-economic activity just because it might indirectly affect commerce.</div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- THREE BRANCHES VISUAL -->
+      <div id="branches" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">The Three Branches at a Glance</div>
+          <div class="unit-section-rule"></div>
+        </div>
+        <div class="branches-grid">
+          <div class="branch-card">
+            <div class="branch-card-head leg">Legislative · Article I</div>
+            <div class="branch-card-body">
+              <div class="branch-card-article">CONGRESS — HOUSE + SENATE</div>
+              <ul class="branch-card-powers">
+                <li>Make federal law</li>
+                <li>Tax and appropriate funds</li>
+                <li>Declare war</li>
+                <li>Regulate commerce</li>
+                <li>Override presidential veto (2/3)</li>
+                <li>Confirm appointments (Senate)</li>
+                <li>Ratify treaties (Senate, 2/3)</li>
+                <li>Impeach President and judges</li>
+              </ul>
+            </div>
+          </div>
+          <div class="branch-card">
+            <div class="branch-card-head exec">Executive · Article II</div>
+            <div class="branch-card-body">
+              <div class="branch-card-article">PRESIDENT + VICE PRESIDENT</div>
+              <ul class="branch-card-powers">
+                <li>Execute federal law</li>
+                <li>Commander-in-chief</li>
+                <li>Veto legislation</li>
+                <li>Negotiate treaties</li>
+                <li>Nominate judges + officials</li>
+                <li>Issue executive orders</li>
+                <li>Pardon federal offenses</li>
+                <li>State of the Union</li>
+              </ul>
+            </div>
+          </div>
+          <div class="branch-card">
+            <div class="branch-card-head jud">Judicial · Article III</div>
+            <div class="branch-card-body">
+              <div class="branch-card-article">SUPREME COURT + FEDERAL COURTS</div>
+              <ul class="branch-card-powers">
+                <li>Interpret federal law</li>
+                <li>Judicial review (Marbury)</li>
+                <li>Rule on constitutional questions</li>
+                <li>Strike down laws + exec. actions</li>
+                <li>Life tenure (good behavior)</li>
+                <li>Original + appellate jurisdiction</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Checks flow -->
+        <div style="background:#1a1a2e;border-radius:12px;padding:18px 22px;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:12px;">How Each Branch Checks the Others</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
+            <div>
+              <div style="font-size:10px;font-weight:800;color:white;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.08em;">Congress checks...</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.65);line-height:1.8;">→ President: veto override, impeachment, power of the purse, war powers<br>→ Courts: jurisdiction, impeachment, constitutional amendments, court-packing (political)</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;color:white;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.08em;">President checks...</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.65);line-height:1.8;">→ Congress: veto, special sessions, bully pulpit<br>→ Courts: nominates all federal judges, sets DOJ enforcement priorities</div>
+            </div>
+            <div>
+              <div style="font-size:10px;font-weight:800;color:white;margin-bottom:6px;text-transform:uppercase;letter-spacing:0.08em;">Courts check...</div>
+              <div style="font-size:12px;color:rgba(255,255,255,0.65);line-height:1.8;">→ Congress: strike down laws as unconstitutional<br>→ President: strike down executive orders, limit emergency powers</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- REQUIRED CASES -->
+      <div id="cases" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Required SCOTUS Cases</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">3 cases</div>
+        </div>
+        <div class="cases-list">
+
+          <a class="case-row" href="/APG/cases/marbury-v-madison.html">
+            <div class="case-row-year">1803<div class="case-row-amend">Judicial Review</div></div>
+            <div class="case-row-body">
+              <div class="case-row-name">Marbury v. Madison</div>
+              <div class="case-row-question">Does the Supreme Court have the power to void acts of Congress that conflict with the Constitution?</div>
+              <div class="case-row-ruling">Yes — Marshall established judicial review. The Constitution is supreme law; courts interpret law; therefore courts must be able to void unconstitutional legislation. The most important case in American legal history.</div>
+            </div>
+            <div class="case-row-arrow">→</div>
+          </a>
+
+          <a class="case-row" href="/APG/cases/mcculloch-v-maryland.html">
+            <div class="case-row-year">1819<div class="case-row-amend">Implied Powers</div></div>
+            <div class="case-row-body">
+              <div class="case-row-name">McCulloch v. Maryland</div>
+              <div class="case-row-question">Can Congress charter a national bank, and can states tax it?</div>
+              <div class="case-row-ruling">Yes Congress can (implied powers via N&P Clause); No states cannot tax it (Supremacy Clause). Established that federal power is broad and supreme over conflicting state action.</div>
+            </div>
+            <div class="case-row-arrow">→</div>
+          </a>
+
+          <a class="case-row" href="/APG/cases/us-v-lopez.html">
+            <div class="case-row-year">1995<div class="case-row-amend">Commerce Clause</div></div>
+            <div class="case-row-body">
+              <div class="case-row-name">United States v. Lopez</div>
+              <div class="case-row-question">Does Congress have Commerce Clause authority to ban guns near schools?</div>
+              <div class="case-row-ruling">No — the Gun-Free School Zones Act exceeded congressional power. Carrying a gun near a school is not economic activity substantially affecting interstate commerce. First Commerce Clause limit in 60 years.</div>
+            </div>
+            <div class="case-row-arrow">→</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- REQUIRED DOCUMENTS -->
+      <div id="documents" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Required Foundational Documents</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">3 documents</div>
+        </div>
+        <div class="docs-bento">
+
+          <a class="doc-bento-card" href="/APG/docs/federalist-70.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">⚡</span>
+              <div class="doc-bento-title">Federalist No. 70</div>
+              <div class="doc-bento-meta">Alexander Hamilton · March 15, 1788</div>
+            </div>
+            <div class="doc-bento-body">Hamilton's defense of a single, energetic executive. He argues that "energy in the executive is a leading character in the definition of good government." A committee-style executive (as some proposed) would be weak, slow, and prone to internal conflict. One President means clear accountability and decisive action.</div>
+            <div class="doc-bento-footer">Read with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/federalist-76.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">⚖️</span>
+              <div class="doc-bento-title">Federalist No. 76</div>
+              <div class="doc-bento-meta">Alexander Hamilton · April 1, 1788</div>
+            </div>
+            <div class="doc-bento-body">Hamilton defends the presidential appointment power — the President nominates, the Senate confirms. This "advice and consent" process ensures qualified nominees while preventing executive abuse. The Senate acts as a check without making appointments by committee, which Hamilton argues would produce worse results.</div>
+            <div class="doc-bento-footer">Read with Annotations →</div>
+          </a>
+
+          <a class="doc-bento-card" href="/APG/docs/federalist-78.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon">🏛️</span>
+              <div class="doc-bento-title">Federalist No. 78</div>
+              <div class="doc-bento-meta">Alexander Hamilton · May 28, 1788</div>
+            </div>
+            <div class="doc-bento-body">Hamilton's case for an independent judiciary with life tenure and the power of judicial review. Courts are the "least dangerous branch" — they have neither force nor will, only judgment. But that judgment must be independent of political pressure to protect constitutional rights against temporary majorities.</div>
+            <div class="doc-bento-footer">Read with Annotations →</div>
+          </a>
+
+        </div>
+      </div>
+
+      <!-- AP EXAM GUIDE -->
+      <div id="examguide" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">AP Exam Guide</div>
+          <div class="unit-section-rule"></div>
+        </div>
+        <div class="exam-guide">
+          <div class="exam-guide-tabs">
+            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
+            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          </div>
+          <div class="exam-guide-panel active" id="ep-tested">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Judicial review — what it is, where it came from (Marbury), why Hamilton anticipated it in Fed. 78</li>
+              <li>Implied powers — the N&P Clause + McCulloch + the logic of "let the end be legitimate"</li>
+              <li>Commerce Clause limits — Lopez established that non-economic activity isn't covered</li>
+              <li>Formal vs. informal presidential powers — know specific examples of each</li>
+              <li>The appointment and confirmation process — President nominates, Senate confirms</li>
+              <li>Iron triangles — congressional committees + agencies + interest groups</li>
+              <li>Hamilton's argument for an energetic executive in Federalist 70</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-mistakes">
+            <ul style="padding-left:18px;margin:0;">
+              <li>Saying judicial review is in the Constitution — it is NOT; Marshall created it in Marbury</li>
+              <li>Confusing McCulloch (implied powers + supremacy) with Lopez (Commerce Clause limits) — they cut in opposite directions</li>
+              <li>Thinking the President can make treaties alone — requires 2/3 Senate ratification</li>
+              <li>Forgetting that executive orders can be overturned by courts or reversed by the next President</li>
+              <li>Saying Congress controls the bureaucracy — both Congress AND the President have authority over agencies, which creates tension</li>
+            </ul>
+          </div>
+          <div class="exam-guide-panel" id="ep-bigpicture">
+            <div class="exam-guide-bigpicture">Unit 2 is about institutional design under pressure. The Constitution created a structure, but that structure has been tested, stretched, and reinterpreted constantly. The President has more power than Article II says. Congress has less than it seems. The bureaucracy wasn't imagined by the Founders but now employs millions. Courts have the power of judicial review despite the Constitution never saying so. <strong style="color:#c8a951;">The question isn't just what the Constitution says — it's what each branch has been able to claim and hold over 230 years of political conflict.</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FRQ PRACTICE -->
+      <div id="frq" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Unit 2 FRQ Practice</div>
+          <div class="unit-section-rule"></div>
+          <div class="unit-section-count">3 prompts</div>
+        </div>
+        <div class="frq-list">
+
+          <div class="frq-row">
+            <div class="frq-row-type ca">Concept App<br>3 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Executive Orders and Congressional Response</div>
+              <div class="frq-row-preview">The President issues an executive order directing federal agencies to halt enforcement of a federal immigration law passed by Congress. Congressional leaders argue this violates the Take Care Clause. Using the concepts of separation of powers and checks and balances, analyze whether Congress has constitutional tools to respond and what limits exist on presidential use of executive orders...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+          <div class="frq-row">
+            <div class="frq-row-type sc">SCOTUS Comp<br>4 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">McCulloch v. Maryland and Federal Power</div>
+              <div class="frq-row-preview">In McCulloch v. Maryland (1819), the Supreme Court held that Congress has implied powers beyond those explicitly listed in the Constitution, and that states cannot tax federal institutions. In United States v. Lopez (1995), the Court ruled that Congress exceeded its Commerce Clause authority. Explain the constitutional reasoning in each case. Are these decisions consistent with each other?</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+          <div class="frq-row">
+            <div class="frq-row-type ae">Arg. Essay<br>6 pts</div>
+            <div class="frq-row-body">
+              <div class="frq-row-title">Is the Presidency Too Powerful?</div>
+              <div class="frq-row-preview">Develop an argument: Has the growth of informal presidential power undermined the constitutional system of checks and balances? Use at least one piece of evidence from Federalist No. 70, the U.S. Constitution, or Marbury v. Madison. Use at least one additional piece of evidence. Respond to an opposing perspective...</div>
+              <a class="frq-row-link" href="/APG/#review">Practice with Timer →</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div><!-- /unit-main -->
+  </div><!-- /unit-layout -->
+
+  <footer>
+    <p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p>
+  </footer>
+
+  <script>
+    function examTab(el, panel) {
+      document.querySelectorAll('.exam-guide-tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.exam-guide-panel').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      document.getElementById('ep-' + panel).classList.add('active');
+    }
+    const sections = ['concepts','branches','cases','documents','examguide','frq'];
+    const jumpLinks = document.querySelectorAll('.unit-jump-link');
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el && window.scrollY >= el.offsetTop - 80) current = id;
+      });
+      jumpLinks.forEach(l => {
+        l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+
+</body>
+</html>
