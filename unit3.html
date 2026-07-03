@@ -6,7 +6,9 @@
   <title>Unit 3: Civil Liberties & Civil Rights — Mr. Rogers AP Gov</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles-base.css">
+  <link rel="stylesheet" href="styles-pages.css">
+  <link rel="stylesheet" href="styles-skills.css">
   <style>
     /* ── UNIT PAGE REDESIGN ── */
 
@@ -295,7 +297,7 @@
     }
   </style>
 </head>
-<body>
+<body class="unit-3">
 
   <div class="stars-stripe"></div>
 
@@ -350,11 +352,8 @@
           <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
           <a class="nav-link" href="/APG/cases/nyt-v-us.html">N.Y. Times v. U.S.</a>
           <a class="nav-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder</a>
-          <a class="nav-link" href="/APG/cases/roe-v-wade.html">Roe v. Wade</a>
           <a class="nav-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago</a>
           <a class="nav-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright</a>
-          <a class="nav-link" href="/APG/cases/miranda-v-arizona.html">Miranda v. Arizona</a>
-          <a class="nav-link" href="/APG/cases/mapp-v-ohio.html">Mapp v. Ohio</a>
           <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
           <a class="nav-link" href="/APG/docs/emancipation-proclamation.html">Emancipation Proclamation</a>
           <a class="nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
@@ -402,7 +401,7 @@
   </div>
 
   <!-- HERO (full width, above layout) -->
-  <div style="background:var(--navy-dark);padding:28px 1.5rem 32px;max-width:100%;">
+  <div class="unit-hero-inner" style="padding:28px 1.5rem 32px;max-width:100%;">
     <div style="max-width:1140px;margin:0 auto;">
       <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">AP Government & Politics · 13–18% of Exam</div>
       <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 3: Civil Liberties &amp;<br>Civil Rights</div>
@@ -427,12 +426,9 @@
         <a class="unit-sidebar-link" href="/APG/cases/schenck-v-us.html">Schenck v. U.S.<span class="sidebar-year">1919 · 1st Amend.</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/engel-v-vitale.html">Engel v. Vitale<span class="sidebar-year">1962 · Est. Clause</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright<span class="sidebar-year">1963 · 6th Amend.</span></a>
-        <a class="unit-sidebar-link" href="/APG/cases/mapp-v-ohio.html">Mapp v. Ohio<span class="sidebar-year">1961 · 4th Amend.</span></a>
-        <a class="unit-sidebar-link" href="/APG/cases/miranda-v-arizona.html">Miranda v. Arizona<span class="sidebar-year">1966 · 5th Amend.</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines<span class="sidebar-year">1969 · 1st Amend.</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/nyt-v-us.html">NYT v. United States<span class="sidebar-year">1971 · 1st Amend.</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder<span class="sidebar-year">1972 · Free Exercise</span></a>
-        <a class="unit-sidebar-link" href="/APG/cases/roe-v-wade.html">Roe v. Wade<span class="sidebar-year">1973 · Privacy</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/brown-v-board.html">Brown v. Board<span class="sidebar-year">1954 · Eq. Protection</span></a>
         <a class="unit-sidebar-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago<span class="sidebar-year">2010 · 2nd Amend.</span></a>
       </div>
@@ -524,7 +520,7 @@
         <div class="unit-section-header">
           <div class="unit-section-title">Required SCOTUS Cases</div>
           <div class="unit-section-rule"></div>
-          <div class="unit-section-count">11 cases</div>
+          <div class="unit-section-count">8 cases</div>
         </div>
         <div class="cases-list">
 
@@ -548,32 +544,12 @@
             <div class="case-row-arrow">→</div>
           </a>
 
-          <a class="case-row" href="/APG/cases/mapp-v-ohio.html">
-            <div class="case-row-year">1961<div class="case-row-amend">4th Amend.</div></div>
-            <div class="case-row-body">
-              <div class="case-row-name">Mapp v. Ohio</div>
-              <div class="case-row-question">Does the exclusionary rule apply to state courts?</div>
-              <div class="case-row-ruling">Yes — illegally obtained evidence cannot be used in any American court, state or federal. Classic selective incorporation.</div>
-            </div>
-            <div class="case-row-arrow">→</div>
-          </a>
-
           <a class="case-row" href="/APG/cases/gideon-v-wainwright.html">
             <div class="case-row-year">1963<div class="case-row-amend">6th Amend.</div></div>
             <div class="case-row-body">
               <div class="case-row-name">Gideon v. Wainwright</div>
               <div class="case-row-question">Must states provide a lawyer to felony defendants who can't afford one?</div>
               <div class="case-row-ruling">Yes — Gideon's handwritten appeal won a unanimous ruling. The right to counsel is fundamental to a fair trial.</div>
-            </div>
-            <div class="case-row-arrow">→</div>
-          </a>
-
-          <a class="case-row" href="/APG/cases/miranda-v-arizona.html">
-            <div class="case-row-year">1966<div class="case-row-amend">5th &amp; 6th</div></div>
-            <div class="case-row-body">
-              <div class="case-row-name">Miranda v. Arizona</div>
-              <div class="case-row-question">Must police tell suspects their rights before custodial interrogation?</div>
-              <div class="case-row-ruling">Yes — confessions obtained without Miranda warnings are inadmissible. Created the warnings we still use today.</div>
             </div>
             <div class="case-row-arrow">→</div>
           </a>
@@ -604,16 +580,6 @@
               <div class="case-row-name">Wisconsin v. Yoder</div>
               <div class="case-row-question">Can the state compel Amish families to keep children in school past 8th grade?</div>
               <div class="case-row-ruling">No — Wisconsin's compulsory education law violated the Free Exercise Clause. The state's interest didn't outweigh centuries-old religious practice.</div>
-            </div>
-            <div class="case-row-arrow">→</div>
-          </a>
-
-          <a class="case-row" href="/APG/cases/roe-v-wade.html">
-            <div class="case-row-year">1973<div class="case-row-amend">14th Amend.</div></div>
-            <div class="case-row-body">
-              <div class="case-row-name">Roe v. Wade</div>
-              <div class="case-row-question">Does the Constitution protect the right to terminate a pregnancy?</div>
-              <div class="case-row-ruling">Yes (at the time) — overturned by Dobbs v. Jackson (2022). Still heavily tested on AP exams. Know both the ruling AND that it was overturned.</div>
             </div>
             <div class="case-row-arrow">→</div>
           </a>
