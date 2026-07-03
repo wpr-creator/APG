@@ -1598,7 +1598,7 @@ function showCase(idx) {
     '</div>';
 }
 
-document.querySelector('.nav-tab[data-tab="cases"]').addEventListener('click', function() {
+const casesTab=document.querySelector('.nav-tab[data-tab="cases"]');if(casesTab)casesTab.addEventListener('click', function() {
   setTimeout(buildCasesTab, 30);
 });
 

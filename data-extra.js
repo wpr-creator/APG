@@ -204,7 +204,7 @@ function madisonSelectTopic(id, cardEl) {
   document.getElementById('madison-debate-area').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 }
 
-document.querySelector('.nav-tab[data-tab="madison"]').addEventListener('click', function() {
+const madisonTab=document.querySelector('.nav-tab[data-tab="madison"]');if(madisonTab)madisonTab.addEventListener('click', function() {
   setTimeout(buildMadisonTab, 30);
 });
 

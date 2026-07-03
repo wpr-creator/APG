@@ -1438,7 +1438,7 @@
   }
 
   // Build glossary when tab is clicked
-  document.querySelector('.nav-tab[data-tab="glossary"]').addEventListener('click', function() {
+  const glossaryTab=document.querySelector('.nav-tab[data-tab="glossary"]');if(glossaryTab)glossaryTab.addEventListener('click', function() {
     setTimeout(buildGlossary, 30);
   });
 
@@ -2557,7 +2557,7 @@
 
   // Wire up FRQ practice when review tab opens
   var frqPracticeBuilt = false;
-  document.querySelector('.nav-tab[data-tab="review"]').addEventListener('click', function() {
+  const reviewTab=document.querySelector('.nav-tab[data-tab="review"]');if(reviewTab)reviewTab.addEventListener('click', function() {
     if (!frqPracticeBuilt) {
       setTimeout(function() { buildFrqPracticeUI(); }, 50);
       frqPracticeBuilt = true;
@@ -2659,7 +2659,7 @@
       '</div>';
   }
 
-  document.querySelector('.nav-tab[data-tab="amendments"]').addEventListener('click', function() {
+  const amendTab=document.querySelector('.nav-tab[data-tab="amendments"]');if(amendTab)amendTab.addEventListener('click', function() {
     setTimeout(buildAmendmentTracker, 30);
   });
 
@@ -2774,7 +2774,7 @@
     }, 60);
   }
 
-  document.querySelector('.nav-tab[data-tab="archive"]').addEventListener('click', function() {
+  const archiveTab=document.querySelector('.nav-tab[data-tab="archive"]');if(archiveTab)archiveTab.addEventListener('click', function() {
     setTimeout(buildArchive, 30);
   });
 
