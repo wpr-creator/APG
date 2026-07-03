@@ -1025,7 +1025,7 @@ function buildFrqPracticeUI() {
 // ════════════════════════════════════════════════════════════════
 var CARTOONS = [
   {
-    id: 1, unit: 1, file: "images/cartoon-01-checks-balances.png",
+    id: 1, unit: 1, file: "images/cartoon-01-checks-balances.jpg",
     title: "The Constitutional Leash",
     standard: "2.2",
     questions: [
@@ -1047,7 +1047,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 2, unit: 1, file: "images/cartoon-02-federalism.png",
+    id: 2, unit: 1, file: "images/cartoon-02-federalism.jpg",
     title: "Still Tugging",
     standard: "1.2",
     questions: [
@@ -1069,7 +1069,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 3, unit: 1, file: "images/cartoon-03-factions.png",
+    id: 3, unit: 1, file: "images/cartoon-03-factions.jpg",
     title: "Madison's Nightmare",
     standard: "1.3",
     questions: [
@@ -1091,7 +1091,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 4, unit: 2, file: "images/cartoon-04-executive-orders.png",
+    id: 4, unit: 2, file: "images/cartoon-04-executive-orders.jpg",
     title: "With the Stroke of a Pen",
     standard: "2.3",
     questions: [
@@ -1113,7 +1113,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 5, unit: 2, file: "images/cartoon-05-filibuster.png",
+    id: 5, unit: 2, file: "images/cartoon-05-filibuster.jpg",
     title: "The Art of Saying Nothing",
     standard: "2.1",
     questions: [
@@ -1135,7 +1135,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 6, unit: 2, file: "images/cartoon-06-iron-triangle.png",
+    id: 6, unit: 2, file: "images/cartoon-06-iron-triangle.jpg",
     title: "Who's Really in Charge?",
     standard: "2.4",
     questions: [
@@ -1157,7 +1157,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 7, unit: 2, file: "images/cartoon-07-judicial-review.png",
+    id: 7, unit: 2, file: "images/cartoon-07-judicial-review.jpg",
     title: "Marbury's Legacy",
     standard: "2.5",
     questions: [
@@ -1179,7 +1179,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 8, unit: 3, file: "images/cartoon-08-first-amendment.png",
+    id: 8, unit: 3, file: "images/cartoon-08-first-amendment.jpg",
     title: "Free — But Not Absolute",
     standard: "3.1",
     questions: [
@@ -1201,7 +1201,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 9, unit: 3, file: "images/cartoon-09-incorporation.png",
+    id: 9, unit: 3, file: "images/cartoon-09-incorporation.jpg",
     title: "One Right at a Time",
     standard: "3.3",
     questions: [
@@ -1223,7 +1223,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 10, unit: 3, file: "images/cartoon-10-equal-protection.png",
+    id: 10, unit: 3, file: "images/cartoon-10-equal-protection.jpg",
     title: "Separate is Not Equal",
     standard: "3.4",
     questions: [
@@ -1245,7 +1245,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 11, unit: 4, file: "images/cartoon-11-polarization.png",
+    id: 11, unit: 4, file: "images/cartoon-11-polarization.jpg",
     title: "Moderate in a Polarized World",
     standard: "4.1",
     questions: [
@@ -1267,7 +1267,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 12, unit: 4, file: "images/cartoon-12-polling.png",
+    id: 12, unit: 4, file: "images/cartoon-12-polling.jpg",
     title: "The Polling Problem",
     standard: "4.3",
     questions: [
@@ -1289,7 +1289,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 13, unit: 5, file: "images/cartoon-13-gerrymandering.png",
+    id: 13, unit: 5, file: "images/cartoon-13-gerrymandering.jpg",
     title: "Drawing the Lines",
     standard: "5.2",
     questions: [
@@ -1311,7 +1311,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 14, unit: 5, file: "images/cartoon-14-citizens-united.png",
+    id: 14, unit: 5, file: "images/cartoon-14-citizens-united.jpg",
     title: "Money Talks",
     standard: "5.3",
     questions: [
@@ -1333,7 +1333,7 @@ var CARTOONS = [
     ]
   },
   {
-    id: 15, unit: 5, file: "images/cartoon-15-agenda-setting.png",
+    id: 15, unit: 5, file: "images/cartoon-15-agenda-setting.jpg",
     title: "What You Think About",
     standard: "5.4",
     questions: [
