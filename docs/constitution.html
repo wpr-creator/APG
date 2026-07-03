@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U.S. Constitution — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f5ead6; }
+    .doc-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start; }
+    .doc-nav { position:sticky;top:24px; }
+    .doc-nav-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .doc-nav-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .doc-nav-link { display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#5c3d2e;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4b896;transition:all 0.12s; }
+    .doc-nav-link:last-child { border-bottom:none; }
+    .doc-nav-link:hover { background:#f5ead6;color:#2c1810; }
+    .doc-nav-link.active { border-left-color:#b8952a;color:#2c1810;background:#f5ead6; }
+    .doc-main { min-width:0; }
+    .doc-hero { background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .doc-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-hero-title { font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f5ead6;line-height:1.2;margin-bottom:6px; }
+    .doc-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(184,149,42,0.6);margin-bottom:14px; }
+    .doc-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .doc-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .doc-tag-unit { background:rgba(184,149,42,0.2);color:#b8952a; }
+    .doc-context { background:#fdf6e8;border:1px solid #d4b896;border-radius:12px;padding:18px 22px;margin-bottom:20px; }
+    .doc-context-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-context-text { font-size:14px;line-height:1.8;color:#5c3d2e; }
+    .doc-context-text p { margin-bottom:10px; }
+    .doc-context-text p:last-child { margin-bottom:0; }
+    .doc-omit { font-size:12px;color:#8b6914;font-style:italic;background:#f5ead6;border-left:3px solid #d4b896;padding:8px 14px;border-radius:0 8px 8px 0;margin-bottom:16px; }
+    .doc-section { margin-bottom:28px; }
+    .doc-section-title { font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#2c1810;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4b896; }
+    .doc-passage-row { display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start; }
+    .doc-passage-text { font-size:15px;line-height:1.9;color:#2c1810;font-family:'Source Sans 3',sans-serif; }
+    .doc-passage-text .hl { background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600; }
+    .doc-margin { background:#fdf6e8;border:1px solid #d4b896;border-radius:8px;padding:10px 12px; }
+    .doc-margin-label { font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b8952a;margin-bottom:5px; }
+    .doc-margin-text { font-size:11px;line-height:1.6;color:#5c3d2e; }
+    .doc-margin-tag { display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f5ead6;color:#8b6914; }
+    .doc-margin-tag.exam { background:#2c1810;color:#b8952a; }
+    .doc-rail { position:sticky;top:24px; }
+    .rail-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .rail-card-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #d4b896;font-size:12px;color:#5c3d2e;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#2c1810;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#2c1810;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(245,234,214,0.8); }
+    @media (max-width:900px) { .doc-page{grid-template-columns:1fr;} .doc-nav,.doc-rail{position:static;} .doc-passage-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+      <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+      <a class="nav-link active" href="/APG/docs/constitution.html">U.S. Constitution</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit2.html">Overview</a>
+      <a class="nav-link" href="/APG/cases/marbury-v-madison.html">Marbury v. Madison</a>
+      <a class="nav-link" href="/APG/cases/mcculloch-v-maryland.html">McCulloch v. Maryland</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">About This Page</a>
+        <a class="doc-nav-link" href="#preamble">Preamble</a>
+        <a class="doc-nav-link" href="#article1">Article I — Congress</a>
+        <a class="doc-nav-link" href="#article2">Article II — President</a>
+        <a class="doc-nav-link" href="#article3">Article III — Courts</a>
+        <a class="doc-nav-link" href="#key-clauses">Key Clauses</a>
+        <a class="doc-nav-link" href="#amendments">Key Amendments</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">RELATED</div>
+        <a class="doc-nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+        <a class="doc-nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+        <a class="doc-nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Units 1 & 2 · Required Foundational Document · Multiple EK Standards</div>
+        <div class="doc-hero-title">The United States Constitution</div>
+        <div class="doc-hero-cite">Constitutional Convention, Philadelphia · Signed September 17, 1787 · Ratified June 21, 1788</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Units 1–5</span>
+          <span class="doc-tag doc-tag-unit">Required Document</span>
+          <span class="doc-tag doc-tag-unit">Foundational Law</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">About This Page — Required Portions Only (Option B)</div>
+        <div class="doc-context-text">
+          <p>The Constitution is approximately 7,500 words — and you don't need to know all of it for the AP exam. This page covers the specific provisions the College Board designates as required: the Preamble, key Article I clauses (enumerated powers, commerce clause, necessary and proper clause), Article II (presidential powers), Article III (judicial branch), the Supremacy Clause, and the most tested amendments. Sections marked [OMITTED] explain what they cover.</p>
+          <p>The Constitution appears on the AP exam across all five units. Knowing specific clauses and being able to connect them to SCOTUS cases is essential. A student who can say "The Necessary and Proper Clause in Article I, Section 8 was interpreted in McCulloch v. Maryland to allow implied powers" is writing at AP level. A student who says "the Constitution gives Congress powers" is not.</p>
+        </div>
+      </div>
+
+      <div id="preamble" class="doc-section">
+        <div class="doc-section-title">Preamble</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Six Goals</div>
+            <div class="doc-margin-text">The Preamble states six purposes of government: (1) more perfect union, (2) justice, (3) domestic tranquility, (4) common defense, (5) general welfare, (6) liberty. "We the People" signals popular sovereignty — authority comes from citizens, not states. Note: the Preamble has no legal force — courts cannot use it to strike down laws.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Six Goals</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="article1" class="doc-section">
+        <div class="doc-section-title">Article I — The Legislative Branch (Congress)</div>
+        <div class="doc-omit">📋 Article I is the longest article — 10 sections covering the structure, powers, and limits of Congress. Required portions: Section 1 (legislative power vested in Congress), Section 2 (House), Section 3 (Senate), and Section 8 (enumerated powers including commerce, N&P, and taxation). [Sections 4-7 cover elections, procedures, and the legislative process — not required in full.]</div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 1: All legislative Powers herein granted shall be vested in a Congress of the United States, which shall consist of a Senate and House of Representatives.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Bicameralism</div>
+            <div class="doc-margin-text">Congress has ALL legislative power — not some, all. And it's bicameral (two chambers). This was the Great Compromise: House represents population (large states got more seats), Senate represents states equally (2 per state). Both chambers must pass a bill for it to become law.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 8: The Congress shall have Power To lay and collect Taxes, Duties, Imposts and Excises... To regulate Commerce with foreign Nations, and among the several States... <span class="hl">To make all Laws which shall be necessary and proper for carrying into Execution the foregoing Powers, and all other Powers vested by this Constitution in the Government of the United States.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Enumerated + Implied Powers</div>
+            <div class="doc-margin-text">Section 8 lists Congress's enumerated (express) powers — including taxation and commerce. The last clause — the Necessary and Proper Clause (also called the Elastic Clause) — extends Congress's power to anything "necessary and proper" to carry out those enumerated powers. McCulloch v. Maryland (1819) interpreted this broadly to allow implied powers.</div>
+            <span class="doc-margin-tag exam">⭐ Most Tested Clause in Article I</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="article2" class="doc-section">
+        <div class="doc-section-title">Article II — The Executive Branch (President)</div>
+        <div class="doc-omit">📋 Article II covers presidential qualifications, election via Electoral College, powers, and the oath of office. Required portions: Section 1 (executive power vested in President), Section 2 (commander-in-chief, treaty power, appointment power), Section 3 (State of the Union, take care clause). [Section 4 covers impeachment.]</div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 1: The executive Power shall be vested in a President of the United States of America.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Unitary Executive</div>
+            <div class="doc-margin-text">All executive power goes to one person — the President. Compare Article I: "all legislative powers" go to Congress (a body). This unitary executive was controversial — Anti-Federalists feared a monarch. Hamilton defended it in Federalist 70: energy and decisiveness require a single executive.</div>
+            <span class="doc-margin-tag">Connects to Fed. 70</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 2: The President shall be Commander in Chief of the Army and Navy of the United States... <span class="hl">He shall have Power, by and with the Advice and Consent of the Senate, to make Treaties, provided two thirds of the Senators present concur; and he shall nominate, and by and with the Advice and Consent of the Senate, shall appoint... Judges of the supreme Court.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Presidential Powers</div>
+            <div class="doc-margin-text">Key presidential powers: (1) commander-in-chief of military, (2) treaty-making with 2/3 Senate approval, (3) appointment of federal judges (including Supreme Court) with Senate confirmation. These create major checks — the Senate must approve treaties and judicial appointments. Hamilton explains the judicial appointment process in Federalist 76.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Treaty + Appointment Powers</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 3: <span class="hl">He shall take Care that the Laws be faithfully executed.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Take Care Clause</div>
+            <div class="doc-margin-text">The Take Care Clause requires the President to enforce all federal laws — even ones he personally disagrees with. This is the source of debates about prosecutorial discretion, executive orders, and presidential refusal to enforce certain laws. Courts have interpreted it to mean the President cannot simply ignore laws passed by Congress.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Executive Power</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="article3" class="doc-section">
+        <div class="doc-section-title">Article III — The Judicial Branch</div>
+        <div class="doc-omit">📋 Article III is the shortest of the three branch articles — only 3 sections. Required: Section 1 (judicial power vested in courts) and Section 2 (jurisdiction). The Constitution does NOT explicitly grant judicial review — that was established by Marbury v. Madison (1803).</div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 1: The judicial Power of the United States, shall be vested in one supreme Court, and in such inferior Courts as the Congress may from time to time ordain and establish. The Judges, both of the supreme and inferior Courts, shall hold their Offices during good Behaviour.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Life Tenure</div>
+            <div class="doc-margin-text">"Good Behaviour" means life tenure — federal judges serve until they die, resign, or are impeached. This insulates them from political pressure and protects judicial independence. Hamilton defends this in Federalist 78: judges need independence to rule against popular but unconstitutional laws.</div>
+            <span class="doc-margin-tag">Connects to Fed. 78</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Section 2: The judicial Power shall extend to all Cases, in Law and Equity, arising under this Constitution, the Laws of the United States, and Treaties made...</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Federal Court Jurisdiction</div>
+            <div class="doc-margin-text">Federal courts handle cases arising under the Constitution, federal law, and treaties. This is the textual basis for judicial review — if courts handle cases "arising under this Constitution," they must be able to determine what the Constitution means. Marbury v. Madison made this explicit.</div>
+            <span class="doc-margin-tag exam">⭐ Basis for Judicial Review</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="key-clauses" class="doc-section">
+        <div class="doc-section-title">Key Clauses Across the Constitution</div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><strong>Supremacy Clause (Article VI):</strong> <span class="hl">This Constitution, and the Laws of the United States which shall be made in Pursuance thereof... shall be the supreme Law of the Land; and the Judges in every State shall be bound thereby, any Thing in the Constitution or Laws of any State to the Contrary notwithstanding.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Federal Law Wins</div>
+            <div class="doc-margin-text">When federal and state law conflict, federal law wins. Period. State judges must apply federal law even over their own state constitutions. Brutus identified this as one of the most dangerous clauses — it means states have no ultimate defense against federal power. McCulloch v. Maryland confirmed this.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Must Know</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><strong>Commerce Clause (Article I, Section 8):</strong> The Congress shall have Power... <span class="hl">To regulate Commerce with foreign Nations, and among the several States, and with the Indian Tribes.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Most Expanded Clause</div>
+            <div class="doc-margin-text">The Commerce Clause has been interpreted to give Congress enormous power over economic activity. The New Deal programs, civil rights legislation, and most federal regulation rely on the Commerce Clause. U.S. v. Lopez (1995) was the first time in 60 years the Court found Congress exceeded its commerce power.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Lopez Connection</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><strong>10th Amendment:</strong> <span class="hl">The powers not delegated to the United States by the Constitution, nor prohibited by it to the States, are reserved to the States respectively, or to the people.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Reserved Powers</div>
+            <div class="doc-margin-text">The 10th Amendment is the constitutional foundation of states' rights. Whatever power isn't given to the federal government stays with states or the people. Anti-Federalists demanded this as a limit on federal power. In practice, the Necessary and Proper Clause and Supremacy Clause have expanded federal power far beyond what 10th Amendment advocates hoped.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Federalism</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="amendments" class="doc-section">
+        <div class="doc-section-title">Most Tested Amendments</div>
+        <div class="doc-omit">📋 There are 27 amendments. The AP exam focuses on the Bill of Rights (1-10), the Reconstruction Amendments (13th, 14th, 15th), and a handful of others. The 14th Amendment is tested across Units 1, 2, and 3.</div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><strong>14th Amendment, Section 1:</strong> All persons born or naturalized in the United States... are citizens of the United States and of the State wherein they reside. <span class="hl">No State shall make or enforce any law which shall abridge the privileges or immunities of citizens of the United States; nor shall any State deprive any person of life, liberty, or property, without due process of law; nor deny to any person within its jurisdiction the equal protection of the laws.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Engine of Modern Rights</div>
+            <div class="doc-margin-text">The most important amendment after the Bill of Rights. Three key clauses: (1) citizenship by birth, (2) due process applies to states — the basis for selective incorporation, (3) equal protection — the basis for Brown v. Board, voting rights, and most civil rights litigation. If you learn nothing else about amendments, know the 14th.</div>
+            <span class="doc-margin-tag exam">⭐ Most Tested Amendment</span>
+          </div>
+        </div>
+
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><strong>1st Amendment:</strong> Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Five Freedoms</div>
+            <div class="doc-margin-text">One sentence, five freedoms: (1) no established religion, (2) free exercise of religion, (3) free speech, (4) free press, (5) assembly and petition. None are absolute — all have been limited by the Court. All of Unit 3's First Amendment cases trace back to this single sentence.</div>
+            <span class="doc-margin-tag exam">⭐ Most Litigated Amendment</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="background:#2c1810;border-radius:10px;padding:18px;margin-bottom:12px;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:10px;">HOW TO USE THE CONSTITUTION ON THE AP EXAM</div>
+          <div style="font-size:13px;line-height:1.8;color:rgba(245,234,214,0.82);">Every AP Government FRQ that involves SCOTUS cases or government powers traces back to a specific constitutional clause. When you write an FRQ, cite the clause by name: "The Necessary and Proper Clause of Article I, Section 8" not just "the Constitution gives Congress power." "The Equal Protection Clause of the 14th Amendment" not "the Constitution protects rights." Specific citation at this level is what separates a 3 from a 4 on any FRQ.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:14px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">CLAUSE → CASE CONNECTIONS</div>
+            <div style="font-size:11px;line-height:1.9;color:#5c3d2e;">
+              N&P Clause → McCulloch v. Maryland<br>
+              Commerce Clause → U.S. v. Lopez<br>
+              1st Amendment → Tinker, NYT v. US, Engel<br>
+              14th (Due Process) → Gideon, McDonald<br>
+              14th (Equal Protection) → Brown v. Board<br>
+              Supremacy Clause → McCulloch, federal preemption
+            </div>
+          </div>
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:14px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">COMMON MISTAKES</div>
+            <ul style="font-size:11px;line-height:1.9;color:#5c3d2e;padding-left:14px;margin:0;">
+              <li>Citing "the Constitution" without naming the specific clause</li>
+              <li>Thinking the Preamble is law — it isn't</li>
+              <li>Confusing the 5th Amendment due process (federal) with 14th Amendment due process (states)</li>
+              <li>Saying the Constitution created judicial review — Marbury v. Madison did</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">Know these clauses by name: Necessary and Proper, Commerce, Supremacy, Take Care, and the key 14th Amendment clauses. Every time you use the Constitution in an FRQ, name the specific provision. "The Constitution" alone is never sufficient for full credit.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Structure</div>
+        <div class="rail-row"><strong>Preamble</strong>6 goals, no legal force</div>
+        <div class="rail-row"><strong>Article I</strong>Congress — 10 sections</div>
+        <div class="rail-row"><strong>Article II</strong>President — 4 sections</div>
+        <div class="rail-row"><strong>Article III</strong>Courts — 3 sections</div>
+        <div class="rail-row"><strong>Articles IV-VII</strong>States, amendments, supremacy, ratification</div>
+        <div class="rail-row"><strong>27 Amendments</strong>Bill of Rights + 17 more</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Must-Know Clauses</div>
+        <div class="rail-row">Necessary and Proper (Art. I, §8)</div>
+        <div class="rail-row">Commerce Clause (Art. I, §8)</div>
+        <div class="rail-row">Take Care Clause (Art. II, §3)</div>
+        <div class="rail-row">Supremacy Clause (Art. VI)</div>
+        <div class="rail-row">Due Process — 5th & 14th</div>
+        <div class="rail-row">Equal Protection — 14th</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','preamble','article1','article2','article3','key-clauses','amendments','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>

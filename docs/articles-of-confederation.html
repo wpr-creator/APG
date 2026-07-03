@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles of Confederation — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f5ead6; }
+    .doc-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start; }
+    .doc-nav { position:sticky;top:24px; }
+    .doc-nav-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .doc-nav-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .doc-nav-link { display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#5c3d2e;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4b896;transition:all 0.12s; }
+    .doc-nav-link:last-child { border-bottom:none; }
+    .doc-nav-link:hover { background:#f5ead6;color:#2c1810; }
+    .doc-nav-link.active { border-left-color:#b8952a;color:#2c1810;background:#f5ead6; }
+    .doc-main { min-width:0; }
+    .doc-hero { background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .doc-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-hero-title { font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f5ead6;line-height:1.2;margin-bottom:6px; }
+    .doc-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(184,149,42,0.6);margin-bottom:14px; }
+    .doc-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .doc-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .doc-tag-unit { background:rgba(184,149,42,0.2);color:#b8952a; }
+    .doc-tag-req { background:rgba(245,234,214,0.1);color:#f5ead6; }
+    .doc-context { background:#fdf6e8;border:1px solid #d4b896;border-radius:12px;padding:18px 22px;margin-bottom:20px; }
+    .doc-context-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-context-text { font-size:14px;line-height:1.8;color:#5c3d2e; }
+    .doc-context-text p { margin-bottom:10px; }
+    .doc-context-text p:last-child { margin-bottom:0; }
+    .doc-omit { font-size:12px;color:#8b6914;font-style:italic;background:#f5ead6;border-left:3px solid #d4b896;padding:8px 14px;border-radius:0 8px 8px 0;margin-bottom:16px; }
+    .doc-section { margin-bottom:28px; }
+    .doc-section-title { font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#2c1810;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4b896; }
+    .doc-passage-row { display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start; }
+    .doc-passage-text { font-size:15px;line-height:1.9;color:#2c1810;font-family:'Source Sans 3',sans-serif; }
+    .doc-passage-text .hl { background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600; }
+    .doc-margin { background:#fdf6e8;border:1px solid #d4b896;border-radius:8px;padding:10px 12px; }
+    .doc-margin-label { font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b8952a;margin-bottom:5px; }
+    .doc-margin-text { font-size:11px;line-height:1.6;color:#5c3d2e; }
+    .doc-margin-tag { display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f5ead6;color:#8b6914; }
+    .doc-margin-tag.exam { background:#2c1810;color:#b8952a; }
+    .failures-grid { display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:20px; }
+    .failure-card { background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:14px 16px; }
+    .failure-card-title { font-size:12px;font-weight:800;color:#2c1810;margin-bottom:4px;text-transform:uppercase;letter-spacing:0.04em; }
+    .failure-card-text { font-size:12px;line-height:1.6;color:#5c3d2e; }
+    .failure-card-fix { font-size:10px;font-weight:700;color:#b8952a;margin-top:6px; }
+    .doc-rail { position:sticky;top:24px; }
+    .rail-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .rail-card-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #d4b896;font-size:12px;color:#5c3d2e;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#2c1810;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#2c1810;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(245,234,214,0.8); }
+    @media (max-width:900px) { .doc-page{grid-template-columns:1fr;} .doc-nav,.doc-rail{position:static;} .doc-passage-row{grid-template-columns:1fr;} .failures-grid{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+      <a class="nav-link active" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+      <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">Historical Context</a>
+        <a class="doc-nav-link" href="#structure">Structure of Government</a>
+        <a class="doc-nav-link" href="#what-it-could">What It Could Do</a>
+        <a class="doc-nav-link" href="#failures">The Critical Failures</a>
+        <a class="doc-nav-link" href="#shays">Shays' Rebellion</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">RELATED</div>
+        <a class="doc-nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+        <a class="doc-nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+        <a class="doc-nav-link" href="/APG/unit1.html">Unit 1 Overview</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.3.A</div>
+        <div class="doc-hero-title">Articles of Confederation</div>
+        <div class="doc-hero-cite">Continental Congress · Drafted 1777 · Ratified March 1, 1781 · Replaced 1789</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 1</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">First Constitution · Failed</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">Historical Context — Read This First</div>
+        <div class="doc-context-text">
+          <p>The Articles of Confederation were America's first constitution — ratified in 1781, replaced by the current Constitution in 1789. They are important on the AP exam not primarily for what they said but for what they couldn't do. Understanding the Articles means understanding the problems they created, which in turn explains why the Constitution was designed the way it was.</p>
+          <p>The Articles reflected the colonists' deep fear of centralized authority after their experience under the British Crown. They deliberately created a weak central government — a "league of friendship" among sovereign states — with almost no independent power. Congress had to ask states for money, couldn't enforce its own laws, and couldn't stop states from undermining each other's trade agreements.</p>
+          <p>The breaking point came with Shays' Rebellion (1786-87): debt-ridden farmers in Massachusetts took up arms against the state government. The national government was powerless to respond. This convinced key leaders — especially Washington, Madison, and Hamilton — that the Articles had to go. The Constitutional Convention of 1787 was called to revise the Articles; instead, it wrote an entirely new document.</p>
+        </div>
+      </div>
+
+      <div id="structure" class="doc-section">
+        <div class="doc-section-title">I. The Structure — A League, Not a Government</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">Each state retains its sovereignty, freedom, and independence, and every power, jurisdiction, and right, which is not by this Confederation expressly delegated to the United States, in Congress assembled.</span> (Article II)</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">States Retain All Power</div>
+            <div class="doc-margin-text">This is the foundational principle of the Articles: states are sovereign. The national government only has powers explicitly granted to it — everything else stays with the states. Compare this to the Constitution's Necessary and Proper Clause, which implies broad federal power. The contrast is stark and intentional.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — State Sovereignty</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">The United States in Congress assembled shall have authority... to build and equip a navy; to agree upon the number of land forces, and to make requisitions from each state for its quota... <span class="hl">but in determining these questions... the vote of nine States shall be necessary.</span> (Article IX)</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Supermajority for Everything</div>
+            <div class="doc-margin-text">Important decisions required 9 of 13 states (a supermajority). Amending the Articles required unanimous consent of all 13 — which is why they couldn't be fixed. Even on routine matters, getting 9 states to agree was nearly impossible when their interests conflicted.</div>
+            <span class="doc-margin-tag">Unanimous Amendment Rule</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="what-it-could" class="doc-section">
+        <div class="doc-section-title">II. What the Articles Could Do</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Congress under the Articles could: declare war and make peace, send and receive ambassadors, enter into treaties, coin money, run a postal service, manage relations with Native American tribes, and govern the territory northwest of the Ohio River (the Northwest Ordinance of 1787 was passed under the Articles — one of its genuine successes).</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Successes</div>
+            <div class="doc-margin-text">The Articles were not entirely useless. The Northwest Ordinance (1787) established the process for admitting new states and prohibited slavery in the Northwest Territory — a real achievement. Congress also successfully ended the Revolutionary War via the Treaty of Paris (1783). Know these successes to give a balanced answer on the AP exam.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tip — Know the Successes Too</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="failures" class="doc-section">
+        <div class="doc-section-title">III. The Critical Failures — Why It Had to Go</div>
+        <div class="failures-grid">
+          <div class="failure-card">
+            <div class="failure-card-title">❌ No Power to Tax</div>
+            <div class="failure-card-text">Congress could only request money from states — it couldn't collect taxes directly. States routinely ignored these requests. The national government was perpetually broke and couldn't pay war debts or soldiers.</div>
+            <div class="failure-card-fix">Constitution Fix: Article I, Section 8 — Congress has power to tax</div>
+          </div>
+          <div class="failure-card">
+            <div class="failure-card-title">❌ No Regulation of Commerce</div>
+            <div class="failure-card-text">States taxed each other's goods, created trade barriers, and made competing deals with foreign nations. There was no uniform national economic policy.</div>
+            <div class="failure-card-fix">Constitution Fix: Commerce Clause — Congress regulates interstate commerce</div>
+          </div>
+          <div class="failure-card">
+            <div class="failure-card-title">❌ No Executive Branch</div>
+            <div class="failure-card-text">There was no president, no executive authority. Congress made decisions but had no mechanism to enforce them. Laws were suggestions, not commands.</div>
+            <div class="failure-card-fix">Constitution Fix: Article II creates the executive branch</div>
+          </div>
+          <div class="failure-card">
+            <div class="failure-card-title">❌ No National Court System</div>
+            <div class="failure-card-text">No federal courts to interpret national law or resolve disputes between states. Each state's courts applied their own law, often conflicting with each other.</div>
+            <div class="failure-card-fix">Constitution Fix: Article III creates the federal judiciary</div>
+          </div>
+          <div class="failure-card">
+            <div class="failure-card-title">❌ No Power to Raise an Army</div>
+            <div class="failure-card-text">Congress could request troops from states but couldn't compel them. States had their own militias with their own loyalties. No reliable national defense.</div>
+            <div class="failure-card-fix">Constitution Fix: Congress has power to raise armies; President is commander-in-chief</div>
+          </div>
+          <div class="failure-card">
+            <div class="failure-card-title">❌ Unanimity Required to Amend</div>
+            <div class="failure-card-text">All 13 states had to agree to any changes. One state could block any reform. This made the Articles impossible to fix even when everyone knew they were failing.</div>
+            <div class="failure-card-fix">Constitution Fix: Article V — 3/4 of states needed to amend</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="shays" class="doc-section">
+        <div class="doc-section-title">IV. Shays' Rebellion — The Breaking Point</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">In 1786-87, Daniel Shays — a Revolutionary War veteran — led an armed uprising of debt-ridden Massachusetts farmers against the state government and its courts. The farmers were losing their farms to debt collectors and saw no legal recourse. <span class="hl">The national government under the Articles was powerless to respond. Congress had no army to send, no money to raise one, and no authority to compel Massachusetts to act.</span> The rebellion was eventually suppressed by a private militia hired by Massachusetts merchants.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Why It Mattered</div>
+            <div class="doc-margin-text">Shays' Rebellion was the alarm bell. It demonstrated that the national government couldn't maintain order, couldn't protect property rights, and couldn't respond to domestic emergencies. Washington wrote in a letter: "We are fast verging to anarchy and confusion." This fear — that the new nation would fall apart — drove the Constitutional Convention of 1787.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Cause of Constitutional Convention</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="background:#2c1810;border-radius:10px;padding:18px;margin-bottom:12px;">
+          <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:10px;">THE ARTICLES AS CONTEXT FOR EVERYTHING THAT CAME AFTER</div>
+          <div style="font-size:13px;line-height:1.8;color:rgba(245,234,214,0.82);">Every feature of the Constitution makes more sense when you understand the Articles. Why does Congress have the power to tax? Because the national government was broke under the Articles. Why is there a president? Because the Articles had no executive. Why is the Commerce Clause so broad? Because states were strangling interstate trade. Why does the amendment process require only 3/4 of states instead of all of them? Because unanimous consent made the Articles unamendable. The Constitution is a response to specific, documented failures. Know the failures, and the Constitution's design becomes logical rather than arbitrary.</div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">WHAT THE EXAM TESTS</div>
+            <ul style="font-size:12px;line-height:1.9;color:#5c3d2e;padding-left:16px;margin:0;">
+              <li>At least 3-5 specific weaknesses of the Articles</li>
+              <li>How specific Constitution provisions fixed specific Article failures</li>
+              <li>Shays' Rebellion as catalyst for the Convention</li>
+              <li>Why states' rights advocates (Anti-Federalists) preferred the Articles</li>
+            </ul>
+          </div>
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">COMMON MISTAKES</div>
+            <ul style="font-size:12px;line-height:1.9;color:#5c3d2e;padding-left:16px;margin:0;">
+              <li>Saying the Articles had NO power — they could declare war, make treaties, and passed the Northwest Ordinance</li>
+              <li>Forgetting the amendment unanimity rule — this is why they couldn't be fixed</li>
+              <li>Confusing the Articles with the Constitution — they are separate documents</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">The AP exam loves to ask you to identify specific weaknesses of the Articles and connect them to specific Constitution provisions. Have at least 5 weakness → fix pairs memorized. Also know Shays' Rebellion as the event that convinced leaders the Articles had to be replaced.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Ratified</strong>March 1, 1781</div>
+        <div class="rail-row"><strong>Replaced</strong>March 4, 1789</div>
+        <div class="rail-row"><strong>One Congress</strong>No executive, no courts</div>
+        <div class="rail-row"><strong>Amendment Rule</strong>Unanimous — all 13 states</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 1.3.A</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">What Congress COULD Do</div>
+        <div class="rail-row">✓ Declare war and make peace</div>
+        <div class="rail-row">✓ Make treaties</div>
+        <div class="rail-row">✓ Coin money</div>
+        <div class="rail-row">✓ Run postal service</div>
+        <div class="rail-row">✓ Northwest Ordinance (1787)</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','structure','what-it-could','failures','shays','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>

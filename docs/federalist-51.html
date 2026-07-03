@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Federalist No. 51 — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f5ead6; }
+    .doc-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start; }
+    .doc-nav { position:sticky;top:24px; }
+    .doc-nav-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .doc-nav-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .doc-nav-link { display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#5c3d2e;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4b896;transition:all 0.12s; }
+    .doc-nav-link:last-child { border-bottom:none; }
+    .doc-nav-link:hover { background:#f5ead6;color:#2c1810; }
+    .doc-nav-link.active { border-left-color:#b8952a;color:#2c1810;background:#f5ead6; }
+    .doc-main { min-width:0; }
+    .doc-hero { background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .doc-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-hero-title { font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f5ead6;line-height:1.2;margin-bottom:6px; }
+    .doc-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(184,149,42,0.6);margin-bottom:14px; }
+    .doc-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .doc-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .doc-tag-unit { background:rgba(184,149,42,0.2);color:#b8952a; }
+    .doc-tag-req { background:rgba(245,234,214,0.1);color:#f5ead6; }
+    .doc-context { background:#fdf6e8;border:1px solid #d4b896;border-radius:12px;padding:18px 22px;margin-bottom:20px; }
+    .doc-context-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-context-text { font-size:14px;line-height:1.8;color:#5c3d2e; }
+    .doc-context-text p { margin-bottom:10px; }
+    .doc-context-text p:last-child { margin-bottom:0; }
+    .doc-omit { font-size:12px;color:#8b6914;font-style:italic;background:#f5ead6;border-left:3px solid #d4b896;padding:8px 14px;border-radius:0 8px 8px 0;margin-bottom:16px; }
+    .doc-section { margin-bottom:28px; }
+    .doc-section-title { font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#2c1810;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4b896; }
+    .doc-passage-row { display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start; }
+    .doc-passage-text { font-size:15px;line-height:1.9;color:#2c1810;font-family:'Source Sans 3',sans-serif; }
+    .doc-passage-text .hl { background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600; }
+    .doc-margin { background:#fdf6e8;border:1px solid #d4b896;border-radius:8px;padding:10px 12px; }
+    .doc-margin-label { font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b8952a;margin-bottom:5px; }
+    .doc-margin-text { font-size:11px;line-height:1.6;color:#5c3d2e; }
+    .doc-margin-tag { display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f5ead6;color:#8b6914; }
+    .doc-margin-tag.exam { background:#2c1810;color:#b8952a; }
+    .doc-rail { position:sticky;top:24px; }
+    .rail-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .rail-card-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #d4b896;font-size:12px;color:#5c3d2e;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#2c1810;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#2c1810;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(245,234,214,0.8); }
+    @media (max-width:900px) { .doc-page{grid-template-columns:1fr;} .doc-nav,.doc-rail{position:static;} .doc-passage-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+      <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+      <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link active" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit2.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/federalist-70.html">Federalist No. 70</a>
+      <a class="nav-link" href="/APG/docs/federalist-76.html">Federalist No. 76</a>
+      <a class="nav-link" href="/APG/docs/federalist-78.html">Federalist No. 78</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">Historical Context</a>
+        <a class="doc-nav-link" href="#problem">The Problem of Control</a>
+        <a class="doc-nav-link" href="#ambition">Ambition vs. Ambition</a>
+        <a class="doc-nav-link" href="#double-security">Double Security</a>
+        <a class="doc-nav-link" href="#justice">Justice & Majority Rule</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">RELATED</div>
+        <a class="doc-nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+        <a class="doc-nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+        <a class="doc-nav-link" href="/APG/unit1.html">Unit 1 Overview</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.7.A</div>
+        <div class="doc-hero-title">Federalist No. 51</div>
+        <div class="doc-hero-cite">James Madison (attributed) · The Federalist Papers · February 6, 1788</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 1</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">⭐ Most Tested</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">Historical Context — Read This First</div>
+        <div class="doc-context-text">
+          <p>Federalist 51 is the companion to Federalist 10. Where No. 10 asks "how do we control factions?", No. 51 asks "how do we structure the government itself so it doesn't become tyrannical?" Madison's answer is the architecture of the Constitution: separation of powers, checks and balances, and federalism — all working together because human nature cannot be trusted.</p>
+          <p>This essay contains the most quoted line in the Federalist Papers: "Ambition must be made to counteract ambition." It is also the clearest statement of the Founders' view of human nature — not cynical exactly, but clear-eyed. People in power will abuse it. The Constitution's job is to make abuse structurally difficult, not to rely on leaders being virtuous.</p>
+          <p>Note: Some scholars debate whether Madison or Hamilton wrote No. 51. The AP exam attributes it to Madison and you should too.</p>
+        </div>
+      </div>
+
+      <div id="problem" class="doc-section">
+        <div class="doc-section-title">I. The Problem — How Do You Control the Government?</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">To what expedient, then, shall we finally resort, for maintaining in practice the necessary partition of power among the several departments, as laid down in the Constitution? The only answer that can be given is, that <span class="hl">as all these exterior provisions are found to be inadequate, the defect must be supplied, by so contriving the interior structure of the government as that its several constituent parts may, by their mutual relations, be the means of keeping each other in their proper places.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Argument</div>
+            <div class="doc-margin-text">You can't keep government in check from the outside alone — laws and declarations don't work. The government must be structured so its own internal parts keep each other in check. This is the logic behind checks and balances: design the machine to police itself.</div>
+            <span class="doc-margin-tag">Internal Structure Argument</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ambition" class="doc-section">
+        <div class="doc-section-title">II. Ambition Must Counteract Ambition</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">But the great security against a gradual concentration of the several powers in the same department, consists in giving to those who administer each department the necessary constitutional means and personal motives to resist encroachments of the others. Ambition must be made to counteract ambition. The interest of the man must be connected with the constitutional rights of the place.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Key Line</div>
+            <div class="doc-margin-text">"Ambition must counteract ambition" — each branch is given tools AND personal incentives to resist the others. A senator doesn't protect the Senate out of principle; they protect it because their own power depends on the Senate's power. Self-interest becomes constitutional protection.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Must Know This Quote</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">It may be a reflection on human nature, that such devices should be necessary to control the abuses of government. But what is government itself, but the greatest of all reflections on human nature? <span class="hl">If men were angels, no government would be necessary. If angels were to govern men, neither external nor internal controls on government would be necessary.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The "Angels" Line</div>
+            <div class="doc-margin-text">The most famous sentence in Federalist 51. Madison acknowledges the system is complicated because humans are flawed. If people were perfectly virtuous (angels), we wouldn't need government at all. But they're not — so we need a system that works even when leaders are selfish or power-hungry.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Must Know This Quote</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">In framing a government which is to be administered by men over men, the great difficulty lies in this: you must first enable the government to control the governed; and in the next place oblige it to control itself.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Double Problem</div>
+            <div class="doc-margin-text">Two tasks in tension: (1) government must be strong enough to control citizens, and (2) government must be constrained from controlling citizens too much. Checks and balances solve the second problem. This sentence is Madison's clearest statement of the design challenge the Founders faced.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Core Tension</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="double-security" class="doc-section">
+        <div class="doc-section-title">III. The Double Security — Federalism + Separation of Powers</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">In the compound republic of America, the power surrendered by the people is first divided between two distinct governments, and then the portion allotted to each subdivided among distinct and separate departments. Hence a double security arises to the rights of the people. The different governments will control each other, at the same time that each will be controlled by itself.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Double Security</div>
+            <div class="doc-margin-text">Two layers of protection: (1) federalism — national vs. state governments check each other, and (2) separation of powers — the three branches check each other within the national government. Rights are protected by both systems simultaneously. This is Madison's argument that the Constitution is more protective of liberty than any previous government design.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Double Security</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="justice" class="doc-section">
+        <div class="doc-section-title">IV. Justice and the Problem of Majority Rule</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Justice is the end of government. It is the end of civil society. It ever has been and ever will be pursued until it be obtained, or until liberty be lost in the pursuit. <span class="hl">In a society under the forms of which the stronger faction can readily unite and oppress the weaker, anarchy may as truly be said to reign as in a state of nature, where the weaker individual is not secured against the violence of the stronger.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Tyranny of the Majority</div>
+            <div class="doc-margin-text">A majority faction that can oppress a minority is no better than anarchy — both leave the weaker party unprotected. This is Madison's argument for constitutional limits on majority rule: pure democracy without minority protections is just mob rule with nicer paperwork.</div>
+            <span class="doc-margin-tag">Minority Rights</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">In the extended republic of the United States, and among the great variety of interests, parties, and sects which it embraces, a coalition of a majority of the whole society could seldom take place on any other principles than those of justice and the general good.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Solution</div>
+            <div class="doc-margin-text">In a large, diverse republic, any majority coalition that forms must be broad enough to include many different groups — which means it can only form around genuinely shared interests (justice and the general good), not around factional self-interest. This ties back to Federalist 10's "extend the sphere" argument.</div>
+            <span class="doc-margin-tag">Connects to Federalist 10</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">QUOTES TO KNOW COLD</div>
+            <ul style="font-size:12px;line-height:1.9;color:#5c3d2e;padding-left:16px;margin:0;">
+              <li>"Ambition must be made to counteract ambition"</li>
+              <li>"If men were angels, no government would be necessary"</li>
+              <li>"Enable the government to control the governed; oblige it to control itself"</li>
+              <li>"A double security arises to the rights of the people"</li>
+            </ul>
+          </div>
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">HOW IT APPEARS ON EXAMS</div>
+            <ul style="font-size:12px;line-height:1.9;color:#5c3d2e;padding-left:16px;margin:0;">
+              <li>Argumentative Essay — primary source evidence for checks and balances or federalism</li>
+              <li>Concept Application — applying "ambition counteracting ambition" to a modern scenario</li>
+              <li>Paired with Brutus No. 1 on SCOTUS comparison or document analysis questions</li>
+            </ul>
+          </div>
+          <div style="background:#2c1810;border-radius:10px;padding:16px;grid-column:1/-1;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">FEDERALIST 51 vs. FEDERALIST 10 — HOW THEY WORK TOGETHER</div>
+            <div style="font-size:13px;line-height:1.8;color:rgba(245,234,214,0.82);">Federalist 10 solves the problem of factions in society — too many competing interests for any one to dominate. Federalist 51 solves the problem of the government itself — structural design (separation of powers, checks and balances, federalism) makes tyranny difficult even when the people in power are not virtuous. Together they form the complete Madisonian theory of constitutional democracy: control the people through the extended republic, control the government through its internal structure.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">Federalist 51 is tied with No. 10 as the most tested foundational document. You must be able to explain "ambition must counteract ambition" and "if men were angels" in your own words. Also know the "double security" concept — federalism AND separation of powers working together.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Author</strong>Madison (attributed; possibly Hamilton)</div>
+        <div class="rail-row"><strong>Published</strong>February 6, 1788</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 1.7.A</div>
+        <div class="rail-row"><strong>Unit</strong>1 — Foundations</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Common Mistakes</div>
+        <div class="rail-row" style="color:#7f1d1d;">✗ Thinking "ambition counteracts ambition" means people should be selfish — it means the SYSTEM uses self-interest as a tool</div>
+        <div class="rail-row" style="color:#7f1d1d;">✗ Forgetting the "double security" — federalism AND separation of powers are both part of the design</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','problem','ambition','double-security','justice','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>

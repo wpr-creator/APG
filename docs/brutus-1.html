@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Brutus No. 1 — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f5ead6; }
+    .doc-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start; }
+    .doc-nav { position:sticky;top:24px; }
+    .doc-nav-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .doc-nav-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .doc-nav-link { display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#5c3d2e;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4b896;transition:all 0.12s; }
+    .doc-nav-link:last-child { border-bottom:none; }
+    .doc-nav-link:hover { background:#f5ead6;color:#2c1810; }
+    .doc-nav-link.active { border-left-color:#b8952a;color:#2c1810;background:#f5ead6; }
+    .doc-main { min-width:0; }
+    .doc-hero { background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .doc-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-hero-title { font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f5ead6;line-height:1.2;margin-bottom:6px; }
+    .doc-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(184,149,42,0.6);margin-bottom:14px; }
+    .doc-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .doc-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .doc-tag-unit { background:rgba(184,149,42,0.2);color:#b8952a; }
+    .doc-tag-req { background:rgba(245,234,214,0.1);color:#f5ead6; }
+    .doc-context { background:#fdf6e8;border:1px solid #d4b896;border-radius:12px;padding:18px 22px;margin-bottom:20px; }
+    .doc-context-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-context-text { font-size:14px;line-height:1.8;color:#5c3d2e; }
+    .doc-context-text p { margin-bottom:10px; }
+    .doc-context-text p:last-child { margin-bottom:0; }
+    .doc-section { margin-bottom:28px; }
+    .doc-section-title { font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#2c1810;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4b896; }
+    .doc-passage-row { display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start; }
+    .doc-passage-text { font-size:15px;line-height:1.9;color:#2c1810;font-family:'Source Sans 3',sans-serif; }
+    .doc-passage-text .hl { background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600; }
+    .doc-margin { background:#fdf6e8;border:1px solid #d4b896;border-radius:8px;padding:10px 12px; }
+    .doc-margin-label { font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b8952a;margin-bottom:5px; }
+    .doc-margin-text { font-size:11px;line-height:1.6;color:#5c3d2e; }
+    .doc-margin-tag { display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f5ead6;color:#8b6914; }
+    .doc-margin-tag.exam { background:#2c1810;color:#b8952a; }
+    .doc-rail { position:sticky;top:24px; }
+    .rail-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .rail-card-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #d4b896;font-size:12px;color:#5c3d2e;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#2c1810;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#2c1810;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(245,234,214,0.8); }
+    @media (max-width:900px) { .doc-page{grid-template-columns:1fr;} .doc-nav,.doc-rail{position:static;} .doc-passage-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+      <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+      <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link active" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit2.html">Overview</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">Historical Context</a>
+        <a class="doc-nav-link" href="#power">Unlimited Federal Power</a>
+        <a class="doc-nav-link" href="#republic">Large Republic Problem</a>
+        <a class="doc-nav-link" href="#liberty">Threat to Liberty</a>
+        <a class="doc-nav-link" href="#bill-of-rights">The Bill of Rights Demand</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">THE DEBATE</div>
+        <a class="doc-nav-link" href="/APG/docs/federalist-10.html">Federalist 10 (Pro)</a>
+        <a class="doc-nav-link" href="/APG/docs/federalist-51.html">Federalist 51 (Pro)</a>
+        <a class="doc-nav-link" href="/APG/unit1.html">Unit 1 Overview</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.6.B · Anti-Federalist</div>
+        <div class="doc-hero-title">Brutus No. 1</div>
+        <div class="doc-hero-cite">Robert Yates (attributed) · October 18, 1787 · New York Journal</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 1</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">Anti-Federalist</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">Historical Context — Read This First</div>
+        <div class="doc-context-text">
+          <p>The Federalists were not the only ones writing essays about the Constitution. Anti-Federalists — those who opposed ratification — wrote their own responses, publishing under classical pen names like "Brutus," "Centinel," and "Federal Farmer." The most important of these is Brutus No. 1, published in the New York Journal on October 18, 1787 — just days after the Federalist Papers began appearing.</p>
+          <p>The author is believed to be Robert Yates, a New York judge who attended the Constitutional Convention but left early because he opposed the direction the delegates were taking. He knew what was in the Constitution and he was alarmed by it. Brutus No. 1 is his warning: the Necessary and Proper Clause and the Supremacy Clause together give the federal government virtually unlimited power to destroy the states and individual liberty.</p>
+          <p>Here's the remarkable thing: Brutus lost. The Constitution was ratified. But he was right about a lot of it. The federal government has expanded enormously since 1788, largely through the mechanisms Brutus identified. Reading this essay alongside Federalist 10 and 51 is one of the most important exercises in AP Government — you're watching two brilliant minds argue about what the Constitution would actually do, and history has validated both of them in different ways.</p>
+        </div>
+      </div>
+
+      <div id="power" class="doc-section">
+        <div class="doc-section-title">I. The Danger of Unlimited Federal Power</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">This government is to possess absolute and uncontroulable power, legislative, executive and judicial, with respect to every object to which it extends, for by the last clause of section 8th, article 1st, it is declared "that the Congress shall have power to make all laws which shall be necessary and proper for carrying into execution the foregoing powers, and all other powers vested by this constitution, in the government of the United States."</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Necessary & Proper Clause</div>
+            <div class="doc-margin-text">Brutus identifies the Necessary and Proper Clause (Article I, Sec. 8) as the source of potentially unlimited federal power. If Congress can make "all laws necessary and proper" to execute its powers, where does the limit end? This is exactly the question McCulloch v. Maryland (1819) would later answer — in the federal government's favor.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — N&P Clause Concern</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">It is true this government is limited to certain objects, or to speak more properly, some small degree of power is still left to the states, but a little attention to the powers vested in the general government, will convince every candid man, that if it is capable of being executed, all that is reserved for the individual states must very shortly be annihilated.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">States' Rights Warning</div>
+            <div class="doc-margin-text">Brutus argues that whatever powers appear to remain with the states will eventually be absorbed by the federal government. He's predicting the future of cooperative federalism and federal supremacy more than a century before they became dominant.</div>
+            <span class="doc-margin-tag">Federalism Warning</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="republic" class="doc-section">
+        <div class="doc-section-title">II. Why Large Republics Don't Work</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">History furnishes no example of a free republic, any thing like the extent of the United States. The Grecian republics were of small extent; so also was that of the Romans. Both of these, it is true, in process of time, extended their conquests over large territories of country; and the consequence was, that their governments were changed from that of free governments to those of the most tyrannical that ever existed in the world.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Historical Argument</div>
+            <div class="doc-margin-text">Brutus argues from history: every large republic eventually became tyrannical. The Greek and Roman examples show that expanding territory leads to the corruption of republican government. Madison in Federalist 10 argues the opposite — large republics are safer. This is the core debate.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Large Republic Debate</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">In a large republic, the public good is sacrificed to a thousand views; it is subordinate to exceptions, and depends on accidents. In a small one, the interest of the public is easier perceived, better understood, and more within the reach of every citizen.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Small Republic Argument</div>
+            <div class="doc-margin-text">Brutus (following Montesquieu) argues small republics work better because citizens can know and influence their representatives. In a huge nation, representatives lose touch with the people and the common good gets lost in competing interests. This is the argument Madison specifically refutes in Federalist 10.</div>
+            <span class="doc-margin-tag">Montesquieu's Influence</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="liberty" class="doc-section">
+        <div class="doc-section-title">III. The Threat to Individual Liberty</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">The powers of the general legislature extend to every case that is of the least importance — there is nothing valuable to human nature, nothing dear to freemen, but what is within its power. It has authority to make laws which will affect the lives, the liberty, and property of every man in the United States; nor can the constitution or laws of any state, in any way prevent or impede the full and complete execution of every power given.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Scope of Power</div>
+            <div class="doc-margin-text">Brutus argues that the new federal government's power touches every aspect of human life — life, liberty, and property — and the Supremacy Clause means states cannot stop it. This is a direct reading of the Constitution's text, not a distortion. The Founders who supported the Constitution had to admit this power existed; they argued it was necessary and would be used responsibly.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Supremacy Clause Concern</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="bill-of-rights" class="doc-section">
+        <div class="doc-section-title">IV. The Demand for a Bill of Rights</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">If we may collect the sentiments of the people of America from their own most solemn declarations, they hold this truth as self evident, that all men are by nature free. No man, or body of men, on earth, has any authority, of right, to assume or exercise power over them, except such as they voluntarily vest in them. <span class="hl">If this be true, the constitution ought to restrain and not enlarge the powers of congress beyond what they now have... If the proposed constitution should be accepted by the convention... it will be in the power of the first legislature to pass laws, which will tend to establish one religion in the United States.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Bill of Rights Argument</div>
+            <div class="doc-margin-text">Brutus argues the Constitution as written has no protection for religious freedom, free speech, or other individual rights. Without a Bill of Rights, Congress could establish a national religion or restrict speech. This argument won: the first Congress added the Bill of Rights in 1791 as the condition for ratification by several states.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Why Bill of Rights Existed</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">BRUTUS vs. MADISON — THE CORE DEBATE</div>
+            <div style="font-size:12px;line-height:1.8;color:#5c3d2e;">
+              <strong>Madison (Fed. 10):</strong> Large republic = many factions = no one dominates = safer.<br><br>
+              <strong>Brutus:</strong> Large republic = distant government = elite capture = less free.<br><br>
+              Both made accurate predictions. The federal government expanded as Brutus feared. But pluralism — competing interest groups — works roughly as Madison predicted.
+            </div>
+          </div>
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">BRUTUS'S LEGACY — WHO WAS RIGHT?</div>
+            <div style="font-size:12px;line-height:1.8;color:#5c3d2e;">Brutus was right that the N&P and Supremacy Clauses would expand federal power enormously (McCulloch, the New Deal, the modern administrative state). He was right that a Bill of Rights was necessary. He may have been wrong that large republics inevitably become tyrannical — but the jury is still out.</div>
+          </div>
+          <div style="background:#2c1810;border-radius:10px;padding:16px;grid-column:1/-1;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">ON THE AP EXAM — HOW TO USE BRUTUS</div>
+            <div style="font-size:13px;line-height:1.8;color:rgba(245,234,214,0.82);">Brutus No. 1 almost always appears in AP exam essays as a contrast to the Federalist Papers. When you use it, don't just say "Brutus opposed the Constitution." Identify his SPECIFIC arguments: (1) N&P Clause = unlimited federal power, (2) Supremacy Clause = states can't resist, (3) large republic = unrepresentative government, (4) no Bill of Rights = no protection for individual liberty. Then connect those arguments to what actually happened in American history.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">Brutus No. 1 is tested most often as a contrast to Federalist 10. Know his four main arguments: N&P Clause, Supremacy Clause, large republic problem, and demand for a Bill of Rights. Know which argument Madison responds to in which Federalist essay.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Author</strong>Robert Yates (attributed) as "Brutus"</div>
+        <div class="rail-row"><strong>Published</strong>October 18, 1787</div>
+        <div class="rail-row"><strong>Position</strong>Anti-Federalist — opposed ratification</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 1.6.B</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">His Four Arguments</div>
+        <div class="rail-row"><strong>1</strong>N&P Clause gives unlimited power</div>
+        <div class="rail-row"><strong>2</strong>Supremacy Clause destroys states</div>
+        <div class="rail-row"><strong>3</strong>Large republic = unrepresentative</div>
+        <div class="rail-row"><strong>4</strong>No Bill of Rights = no liberty</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','power','republic','liberty','bill-of-rights','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>

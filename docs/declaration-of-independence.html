@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Declaration of Independence — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body { background: #f5ead6; }
+    .doc-page { max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start; }
+    .doc-nav { position:sticky;top:24px; }
+    .doc-nav-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .doc-nav-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .doc-nav-link { display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#5c3d2e;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4b896;transition:all 0.12s; }
+    .doc-nav-link:last-child { border-bottom:none; }
+    .doc-nav-link:hover { background:#f5ead6;color:#2c1810; }
+    .doc-nav-link.active { border-left-color:#b8952a;color:#2c1810;background:#f5ead6; }
+    .doc-main { min-width:0; }
+    .doc-hero { background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px; }
+    .doc-hero-eyebrow { font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-hero-title { font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,32px);font-weight:900;color:#f5ead6;line-height:1.2;margin-bottom:6px; }
+    .doc-hero-cite { font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(184,149,42,0.6);margin-bottom:14px; }
+    .doc-hero-tags { display:flex;gap:6px;flex-wrap:wrap; }
+    .doc-tag { padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em; }
+    .doc-tag-unit { background:rgba(184,149,42,0.2);color:#b8952a; }
+    .doc-tag-req { background:rgba(245,234,214,0.1);color:#f5ead6; }
+    .doc-context { background:#fdf6e8;border:1px solid #d4b896;border-radius:12px;padding:18px 22px;margin-bottom:20px; }
+    .doc-context-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .doc-context-text { font-size:14px;line-height:1.8;color:#5c3d2e; }
+    .doc-context-text p { margin-bottom:10px; }
+    .doc-context-text p:last-child { margin-bottom:0; }
+    .doc-omit { font-size:12px;color:#8b6914;font-style:italic;background:#f5ead6;border-left:3px solid #d4b896;padding:8px 14px;border-radius:0 8px 8px 0;margin-bottom:16px; }
+    .doc-section { margin-bottom:28px; }
+    .doc-section-title { font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#2c1810;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4b896; }
+    .doc-passage-row { display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start; }
+    .doc-passage-text { font-size:15px;line-height:1.9;color:#2c1810;font-family:'Source Sans 3',sans-serif; }
+    .doc-passage-text .hl { background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600; }
+    .doc-margin { background:#fdf6e8;border:1px solid #d4b896;border-radius:8px;padding:10px 12px; }
+    .doc-margin-label { font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b8952a;margin-bottom:5px; }
+    .doc-margin-text { font-size:11px;line-height:1.6;color:#5c3d2e; }
+    .doc-margin-tag { display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f5ead6;color:#8b6914; }
+    .doc-margin-tag.exam { background:#2c1810;color:#b8952a; }
+    .doc-rail { position:sticky;top:24px; }
+    .rail-card { background:#fdf6e8;border-radius:12px;border:1px solid #d4b896;overflow:hidden;margin-bottom:12px; }
+    .rail-card-head { background:#2c1810;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(184,149,42,0.7); }
+    .rail-row { padding:8px 14px;border-bottom:1px solid #d4b896;font-size:12px;color:#5c3d2e;line-height:1.5; }
+    .rail-row:last-child { border-bottom:none; }
+    .rail-row strong { color:#2c1810;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px; }
+    .rail-exam-tip { background:#2c1810;border-radius:12px;padding:14px 16px;margin-bottom:12px; }
+    .rail-exam-tip-label { font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b8952a;margin-bottom:8px; }
+    .rail-exam-tip-text { font-size:12px;line-height:1.7;color:rgba(245,234,214,0.8); }
+    @media (max-width:900px) { .doc-page{grid-template-columns:1fr;} .doc-nav,.doc-rail{position:static;} .doc-passage-row{grid-template-columns:1fr;} }
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav><div class="nav-inner">
+    <a class="nav-link" href="/APG/">Home</a>
+    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/unit1.html">Overview</a>
+      <a class="nav-link active" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
+      <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
+      <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+      <a class="nav-link" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
+      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
+    </div></div>
+    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+      <a class="nav-link" href="/APG/#glossary">Glossary</a>
+    </div></div>
+    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+  </div></nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">Historical Context</a>
+        <a class="doc-nav-link" href="#preamble">Preamble</a>
+        <a class="doc-nav-link" href="#philosophy">Natural Rights Philosophy</a>
+        <a class="doc-nav-link" href="#grievances">The 27 Grievances</a>
+        <a class="doc-nav-link" href="#declaration-text">Declaration of Independence</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">RELATED</div>
+        <a class="doc-nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
+        <a class="doc-nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
+        <a class="doc-nav-link" href="/APG/unit1.html">Unit 1 Overview</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.1.A</div>
+        <div class="doc-hero-title">Declaration of Independence</div>
+        <div class="doc-hero-cite">Thomas Jefferson (primary author) · Adopted July 4, 1776 · Continental Congress</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 1</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">Natural Rights · Social Contract</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">Historical Context — Read This First</div>
+        <div class="doc-context-text">
+          <p>By June 1776, American colonists had been fighting British troops for over a year. But the colonies had not yet officially declared independence — they were still legally British subjects engaged in rebellion. The Continental Congress needed to formally break with Britain, explain why to the world, and appeal to foreign nations (especially France) for support.</p>
+          <p>Jefferson was chosen to draft the document because he was known as an excellent writer — he was not the most prominent political figure in the room. He drew heavily on John Locke's Second Treatise of Government (1689), particularly the concepts of natural rights, social contract, and the right of revolution. He worked on a draft for about two weeks, then submitted it to a committee that included Franklin and Adams, who made revisions. Congress itself debated and amended it, removing a passage condemning the slave trade that Jefferson had included.</p>
+          <p>Here is the most important thing to know about this document for AP Government: <strong>the Declaration of Independence has no legal force.</strong> It is not law. You cannot sue someone for violating your "pursuit of happiness." It is a political document — a statement of principles that the Constitution later tries to implement through specific legal mechanisms. Students frequently confuse these two documents. The Declaration says what America is supposed to stand for; the Constitution creates the machinery for trying to achieve it.</p>
+        </div>
+      </div>
+
+      <div id="philosophy" class="doc-section">
+        <div class="doc-section-title">I. The Philosophy — Locke Put Into American Words</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">We hold these truths to be self-evident, that <span class="hl">all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Natural Rights</div>
+            <div class="doc-margin-text">Three claims packed into one sentence: (1) equality — all men are created equal; (2) rights are natural — given by God/nature, not by government; (3) rights are unalienable — they cannot be taken away or given up. Locke said "life, liberty, and property." Jefferson changed "property" to "pursuit of happiness" — a significant change that opens the concept beyond land ownership.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Most Famous Line</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Social Contract</div>
+            <div class="doc-margin-text">Government's purpose is to protect natural rights — not to grant them or define them, but to secure them. And government gets its authority from the consent of the governed — not from God, not from tradition, not from conquest. This is Locke's social contract theory in one sentence.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Consent of Governed</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government</span>, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to effect their Safety and Happiness.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Right of Revolution</div>
+            <div class="doc-margin-text">If government breaks the social contract by failing to protect rights, the people have the right to overthrow it and replace it. This is the philosophical justification for the American Revolution — and for every revolutionary movement that has cited this document since. Jefferson didn't invent this idea (Locke did), but he stated it more clearly and famously than anyone before or since.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Right of Revolution</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="grievances" class="doc-section">
+        <div class="doc-section-title">II. The 27 Grievances — The Legal Case for Independence</div>
+        <div class="doc-omit">📋 The Declaration lists 27 specific grievances against King George III. The full list follows the philosophical preamble and constitutes the majority of the document. On the AP exam, you need to understand what the grievances are trying to prove: that the King repeatedly violated the social contract by infringing on the colonists' natural rights. You do not need to memorize all 27.</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">He has refused his Assent to Laws, the most wholesome and necessary for the public good... He has dissolved Representative Houses repeatedly, for opposing with manly firmness his invasions on the rights of the people... He has made Judges dependent on his Will alone, for the tenure of their offices... <span class="hl">He has erected a multitude of New Offices, and sent hither swarms of Officers to harrass our people, and eat out their substance.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">What the Grievances Do</div>
+            <div class="doc-margin-text">Each grievance is a specific example of the King breaking the social contract. Read them as legal evidence, not complaints. Jefferson is building a case: here is exactly how this government failed to protect our rights, and here is why we are therefore justified in overthrowing it. The "swarms of Officers" line refers to British customs officials and tax collectors.</div>
+            <span class="doc-margin-tag">Legal Argument Structure</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">He has affected to render the Military independent of and superior to the Civil power... He has combined with others to subject us to a jurisdiction foreign to our constitution, and unacknowledged by our laws... <span class="hl">For quartering large bodies of armed troops among us... For depriving us in many cases, of the benefits of Trial by Jury... For transporting us beyond Seas to be tried for pretended offences.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Connection to Bill of Rights</div>
+            <div class="doc-margin-text">Notice that many grievances — quartering troops, trial by jury, military above civil authority — directly correspond to later amendments in the Bill of Rights. The 3rd Amendment (no quartering soldiers), 6th Amendment (jury trial), and civilian control of the military all trace back to these specific complaints. The Founders remembered exactly what they were angry about.</div>
+            <span class="doc-margin-tag exam">⭐ AP Connection — Grievances → Bill of Rights</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="declaration-text" class="doc-section">
+        <div class="doc-section-title">III. The Actual Declaration — Severing the Bond</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">We, therefore, the Representatives of the united States of America, in General Congress, Assembled, appealing to the Supreme Judge of the world for the rectitude of our intentions, do, in the Name, and by Authority of the good People of these Colonies, <span class="hl">solemnly publish and declare, That these United Colonies are, and of Right ought to be Free and Independent States; that they are Absolved from all Allegiance to the British Crown, and that all political connection between them and the State of Great Britain, is and ought to be totally dissolved.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Legal Break</div>
+            <div class="doc-margin-text">This is the actual declaration — everything before it was setup. The colonies formally sever their legal relationship with Britain. Note "the good People" — the signers claim to act on behalf of all colonists, not just the political elite. This is the consent-of-the-governed principle applied at the moment of revolution.</div>
+            <span class="doc-margin-tag">The Act Itself</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">WHAT THE EXAM TESTS</div>
+            <ul style="font-size:12px;line-height:1.9;color:#5c3d2e;padding-left:16px;margin:0;">
+              <li>Natural rights — life, liberty, pursuit of happiness</li>
+              <li>Social contract — consent of the governed</li>
+              <li>Right of revolution — when it's justified</li>
+              <li>Declaration vs. Constitution — what each one does</li>
+              <li>Influence on later civil rights movements (King used the Declaration)</li>
+            </ul>
+          </div>
+          <div style="background:#fdf6e8;border:1px solid #d4b896;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">CRITICAL DISTINCTION</div>
+            <div style="font-size:12px;line-height:1.8;color:#5c3d2e;">The Declaration is NOT law. You cannot go to court to enforce "pursuit of happiness." It has no legal authority — it is a statement of political philosophy and a justification for revolution. The Constitution is law. This distinction appears on almost every AP exam that addresses Unit 1 documents.</div>
+          </div>
+          <div style="background:#2c1810;border-radius:10px;padding:16px;grid-column:1/-1;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">THE DECLARATION'S CONTRADICTION — AND WHY IT MATTERS</div>
+            <div style="font-size:13px;line-height:1.8;color:rgba(245,234,214,0.82);">"All men are created equal" was written by a man who enslaved over 600 people. Jefferson knew the contradiction — he included language condemning the slave trade that Congress removed. This gap between the Declaration's promise and American reality has been the central tension in American history ever since. Every civil rights movement — abolitionism, suffragism, the Civil Rights Movement — has invoked the Declaration's language to demand that America live up to its own founding principles. King's "Letter from Birmingham Jail" and "I Have a Dream" speech both explicitly use Jefferson's words. On the AP exam, this connection between Unit 1 and Unit 3 is frequently tested.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">Know the three-part structure: natural rights → social contract → right of revolution. Know the key phrases cold. Most importantly: know the Declaration is NOT law — it's a political statement. The Constitution is the law. Students who confuse these lose points every year.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Primary Author</strong>Thomas Jefferson</div>
+        <div class="rail-row"><strong>Adopted</strong>July 4, 1776</div>
+        <div class="rail-row"><strong>Legal Status</strong>NOT law — political document</div>
+        <div class="rail-row"><strong>Philosophical Source</strong>John Locke, Second Treatise (1689)</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 1.1.A</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Locke's Influence</div>
+        <div class="rail-row"><strong>Locke Said</strong>Life, liberty, and property</div>
+        <div class="rail-row"><strong>Jefferson Changed</strong>"Property" → "pursuit of happiness"</div>
+        <div class="rail-row"><strong>Why It Matters</strong>Broader concept — not limited to land ownership</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government & Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','preamble','philosophy','grievances','declaration-text','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if (el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>
