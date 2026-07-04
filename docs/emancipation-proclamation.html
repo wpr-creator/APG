@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Emancipation Proclamation — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    body{background:#fafafa;}
+    .doc-page{max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start;}
+    .doc-nav{position:sticky;top:24px;}
+    .doc-nav-card{background:white;border-radius:12px;border:1px solid #e0e0e0;overflow:hidden;margin-bottom:12px;}
+    .doc-nav-head{background:#0a0a0a;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(252,165,165,0.8);}
+    .doc-nav-link{display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #e0e0e0;transition:all 0.12s;}
+    .doc-nav-link:last-child{border-bottom:none;}
+    .doc-nav-link:hover{background:#f5f5f5;color:#0a0a0a;}
+    .doc-nav-link.active{border-left-color:#b22234;color:#0a0a0a;background:#f5f5f5;}
+    .doc-main{min-width:0;}
+    .doc-hero{background:linear-gradient(135deg,#0a0a0a 0%,#1f1f1f 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+    .doc-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b22234;margin-bottom:8px;}
+    .doc-hero-title{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,30px);font-weight:900;color:white;line-height:1.2;margin-bottom:6px;}
+    .doc-hero-cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:14px;}
+    .doc-hero-tags{display:flex;gap:6px;flex-wrap:wrap;}
+    .doc-tag{padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;}
+    .doc-tag-unit{background:rgba(178,34,52,0.25);color:#fca5a5;} .doc-tag-req{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);}
+    .doc-context{background:white;border:1px solid #e0e0e0;border-radius:12px;padding:18px 22px;margin-bottom:20px;border-left:3px solid #b22234;}
+    .doc-context-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#b22234;margin-bottom:8px;}
+    .doc-context-text{font-size:14px;line-height:1.8;color:#374151;}
+    .doc-context-text p{margin-bottom:10px;} .doc-context-text p:last-child{margin-bottom:0;}
+    .doc-section{margin-bottom:28px;scroll-margin-top:80px;}
+    .doc-section-title{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:#0a0a0a;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #e0e0e0;}
+    .doc-passage-row{display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:20px;align-items:start;}
+    .doc-passage-text{font-size:15px;line-height:1.9;color:#0a0a0a;font-family:'Source Sans 3',sans-serif;}
+    .doc-passage-text .hl{background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600;}
+    .doc-margin{background:white;border:1px solid #e0e0e0;border-radius:8px;padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.04);}
+    .doc-margin-label{font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#b22234;margin-bottom:5px;}
+    .doc-margin-text{font-size:11px;line-height:1.6;color:#374151;}
+    .doc-margin-tag{display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f3f4f6;color:#374151;}
+    .doc-margin-tag.exam{background:#0a0a0a;color:#fca5a5;}
+    .doc-rail{position:sticky;top:24px;}
+    .rail-card{background:white;border-radius:12px;border:1px solid #e0e0e0;overflow:hidden;margin-bottom:12px;}
+    .rail-card-head{background:#0a0a0a;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(252,165,165,0.8);}
+    .rail-row{padding:8px 14px;border-bottom:1px solid #e0e0e0;font-size:12px;color:#374151;line-height:1.5;}
+    .rail-row:last-child{border-bottom:none;}
+    .rail-row strong{color:#0a0a0a;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
+    .rail-exam-tip{background:#0a0a0a;border-radius:12px;padding:14px 16px;margin-bottom:12px;}
+    .rail-exam-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#fca5a5;margin-bottom:8px;}
+    .rail-exam-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
+    @media(max-width:900px){.doc-page{grid-template-columns:1fr;}.doc-nav,.doc-rail{position:static;}.doc-passage-row{grid-template-columns:1fr;}}
+  </style>
+</head>
+<body class="unit-3">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit1.html">Overview</a>
+        <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit2.html">Overview</a>
+        <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
+        <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
+      </div></div>
+      <div class="nav-group has-active"><div class="nav-group-label">Unit 3</div><div class="nav-dropdown">
+          <a class="nav-link" href="/APG/unit3.html">Overview</a>
+          <a class="nav-link" href="/APG/cases/schenck-v-us.html">Schenck v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/engel-v-vitale.html">Engel v. Vitale</a>
+          <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
+          <a class="nav-link" href="/APG/cases/nyt-v-us.html">N.Y. Times v. U.S.</a>
+          <a class="nav-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder</a>
+          <a class="nav-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright</a>
+          <a class="nav-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago</a>
+          <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
+          <a class="nav-link  active" href="/APG/docs/emancipation-proclamation.html">Emancipation Proclamation</a>
+          <a class="nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 4</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit4.html">Overview</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 5</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit5.html">Overview</a>
+        <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Review</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+        <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+        <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/#glossary">Glossary</a>
+        <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
+        <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
+        <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+        <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+        <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+      </div></div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+
+  <div class="doc-page">
+    <div class="doc-nav">
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#context">Historical Context</a>
+        <a class="doc-nav-link" href="#authority">Legal Authority</a>
+        <a class="doc-nav-link" href="#what-it-did">What It Did</a>
+        <a class="doc-nav-link" href="#what-it-didnt">What It Didn't Do</a>
+        <a class="doc-nav-link" href="#significance">Political Significance</a>
+        <a class="doc-nav-link" href="#ap">AP Exam Connections</a>
+      </div>
+      <div class="doc-nav-card">
+        <div class="doc-nav-head">RELATED</div>
+        <a class="doc-nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
+        <a class="doc-nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
+        <a class="doc-nav-link" href="/APG/unit3-docs.html">Unit 3 Documents</a>
+      </div>
+    </div>
+
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 3 · Required Foundational Document · Civil Rights · EK 3.3.B</div>
+        <div class="doc-hero-title">Emancipation Proclamation</div>
+        <div class="doc-hero-cite">President Abraham Lincoln · Executive Order · January 1, 1863</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 3</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">Civil War · Slavery</span>
+        </div>
+      </div>
+
+      <div id="context" class="doc-context">
+        <div class="doc-context-label">Historical Context — Read This First</div>
+        <div class="doc-context-text">
+          <p>By September 1862, the Civil War was nearly 18 months old and the Union was losing. The Confederate army had just driven Union forces back at the Second Battle of Bull Run. Britain and France were considering recognizing the Confederacy as a legitimate nation. Abraham Lincoln, who had insisted the war was about preserving the Union — not ending slavery — made a calculated decision to change that framing entirely.</p>
+          <p>On September 22, 1862, Lincoln issued a preliminary proclamation: unless the Confederate states returned to the Union by January 1, 1863, he would declare their enslaved people free. The Confederate states did not return. On January 1, 1863, Lincoln signed the Emancipation Proclamation. Read this document as a legal and political instrument, not as a moral declaration. Every word is deliberate — including the words that were left out.</p>
+        </div>
+      </div>
+
+      <div id="authority" class="doc-section">
+        <div class="doc-section-title">I. The Legal Authority — Commander-in-Chief Power</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Now, therefore I, Abraham Lincoln, President of the United States, by virtue of the power in me vested as Commander-in-Chief, of the Army and Navy of the United States in time of actual armed rebellion against the authority and government of the United States, and as a fit and necessary war measure for suppressing said rebellion, do, on this first day of January, in the year of our Lord one thousand eight hundred and sixty-three, <span class="hl">order and declare that all persons held as slaves within said designated States, and parts of States, are, and henceforward shall be free.</span></div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">War Powers Justification</div>
+            <div class="doc-margin-text">Lincoln justified the Proclamation as a war measure — not as a moral statement about slavery. He acted under his commander-in-chief authority, not through Congress. This was deliberate: he believed he lacked constitutional authority to end slavery permanently by executive order, but could take military measures to deprive the Confederacy of its labor force. The legal authority was as a weapon of war, not a civil rights declaration.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — Legal Basis</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="what-it-did" class="doc-section">
+        <div class="doc-section-title">II. What It Did</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">The Proclamation freed enslaved people in the Confederate states — specifically the states "in rebellion" against the United States. It also authorized the enlistment of formerly enslaved men into the Union Army and Navy. <span class="hl">By the end of the war, approximately 180,000 Black men had served in the Union Army, comprising about 10% of its total strength.</span> The Proclamation also fundamentally changed the character of the war — Britain and France, both of which had already abolished slavery, could no longer consider recognizing the Confederacy without appearing to endorse slavery.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Three Effects</div>
+            <div class="doc-margin-text">1. Freed enslaved people in rebel states (on paper — enforcement required Union military presence). 2. Authorized Black military service, which transformed the Union war effort. 3. Made European recognition of the Confederacy politically impossible — turning the war into an explicit conflict over slavery.</div>
+            <span class="doc-margin-tag">Strategic Impact</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="what-it-didnt" class="doc-section">
+        <div class="doc-section-title">III. What It Didn't Do — The Critical Limits</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text"><span class="hl">The Proclamation applied only to Confederate states in rebellion. It explicitly exempted enslaved people in Union border states (Kentucky, Missouri, Maryland, Delaware) and in Confederate areas already under Union control.</span> It also had no mechanism for enforcement in Confederate territory where Union forces had no presence. It did not grant citizenship to freed people, did not address the legal status of slavery in the United States generally, and was not a constitutional amendment — it was an executive order that could theoretically be reversed.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">The Critical Limits</div>
+            <div class="doc-margin-text">The Proclamation freed enslaved people where Lincoln had NO power to enforce it (Confederate states) and left them enslaved where he DID have power (Union states). This apparent contradiction reflects Lincoln's war-powers legal theory: he could only act against enemies, not against loyal states. This is why the 13th Amendment was necessary — to permanently abolish slavery everywhere.</div>
+            <span class="doc-margin-tag exam">⭐ AP Tested — What It DIDN'T Do</span>
+          </div>
+        </div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">Specifically exempted: <span class="hl">Tennessee (largely under Union control), parts of Louisiana including New Orleans, and the 48 counties of western Virginia that would become West Virginia.</span> The border states — Missouri, Kentucky, Maryland, Delaware — which had not seceded and remained in the Union, were also entirely exempt. Enslaved people in these areas were not freed by the Proclamation.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Specific Exemptions</div>
+            <div class="doc-margin-text">Lincoln couldn't afford to push the border states toward the Confederacy by threatening their enslaved labor force. Political calculation shaped the document as much as principle. The exemptions were not hypocrisy — they were the price of keeping the Union together while waging the war.</div>
+            <span class="doc-margin-tag">Political Calculation</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="significance" class="doc-section">
+        <div class="doc-section-title">IV. Political and Historical Significance</div>
+        <div class="doc-passage-row">
+          <div class="doc-passage-text">The Emancipation Proclamation transformed the Civil War from a war to preserve the Union into a war to end slavery — whether Lincoln intended it that way or not. Frederick Douglass, initially skeptical, recognized its power: "It is not a proclamation of 'liberty throughout all the land, unto all the inhabitants thereof,' such as we had hoped for, but it is a proclamation of freedom to the slaves of the rebels in arms." Lincoln himself knew the Proclamation's legal authority rested on shaky ground — which is why he pushed hard for the 13th Amendment in the final months of his life.</div>
+          <div class="doc-margin">
+            <div class="doc-margin-label">Douglass's Assessment</div>
+            <div class="doc-margin-text">Frederick Douglass — himself a formerly enslaved man and the foremost Black leader of the era — initially criticized the Proclamation's limits. He later called it "the beginning of the end of slavery." His evolution mirrors the document itself: imperfect, politically constrained, but historically decisive.</div>
+            <span class="doc-margin-tag">Primary Source Perspective</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="ap" class="doc-section">
+        <div class="doc-section-title">AP Exam Connections</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b22234;margin-bottom:8px;">WHAT THE EXAM TESTS</div>
+            <ul style="font-size:12px;line-height:1.9;color:#374151;padding-left:14px;margin:0;">
+              <li>Legal basis — commander-in-chief war powers, NOT moral declaration</li>
+              <li>What it freed: enslaved people in Confederate states only</li>
+              <li>What it did NOT free: enslaved people in Union border states</li>
+              <li>Why the 13th Amendment was still necessary</li>
+              <li>Its role in turning the war into a fight over slavery</li>
+              <li>Connection to Brown v. Board and civil rights tradition</li>
+            </ul>
+          </div>
+          <div style="background:white;border:1px solid #e0e0e0;border-radius:10px;padding:16px;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#b22234;margin-bottom:8px;">COMMON MISTAKES</div>
+            <ul style="font-size:12px;line-height:1.9;color:#374151;padding-left:14px;margin:0;">
+              <li>Saying it freed ALL enslaved people — only those in Confederate states</li>
+              <li>Saying it was a moral statement — Lincoln framed it as a WAR MEASURE</li>
+              <li>Forgetting it was an executive order, not a constitutional amendment</li>
+              <li>Thinking it alone ended slavery — the 13th Amendment (1865) did that</li>
+            </ul>
+          </div>
+          <div style="background:#0a0a0a;border-radius:10px;padding:16px;grid-column:1/-1;">
+            <div style="font-size:9px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:#fca5a5;margin-bottom:8px;">THE PROCLAMATION → 13TH AMENDMENT → 14TH AMENDMENT → BROWN V. BOARD</div>
+            <div style="font-size:13px;line-height:1.8;color:rgba(255,255,255,0.82);">The Emancipation Proclamation (1863) began the legal dismantling of slavery but didn't finish it. The 13th Amendment (1865) permanently abolished slavery everywhere. The 14th Amendment (1868) guaranteed citizenship and equal protection for formerly enslaved people. Brown v. Board (1954) finally used the 14th Amendment to strike down the "separate but equal" doctrine that had allowed legal racial inequality for 58 years after the 14th Amendment was ratified. Understanding this chain — Proclamation → 13th → 14th → Brown — is essential for understanding the long arc of civil rights in America.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-rail">
+      <div class="rail-exam-tip">
+        <div class="rail-exam-tip-label">⭐ AP EXAM TIP</div>
+        <div class="rail-exam-tip-text">The most tested fact about the Emancipation Proclamation is what it DIDN'T do — it didn't free enslaved people in Union border states and didn't permanently abolish slavery (that required the 13th Amendment). Know the legal basis (commander-in-chief war powers), the scope (Confederate states only), and why the 13th Amendment was still necessary.</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">Quick Facts</div>
+        <div class="rail-row"><strong>Issued</strong>January 1, 1863</div>
+        <div class="rail-row"><strong>Authority</strong>Commander-in-chief war powers</div>
+        <div class="rail-row"><strong>Legal Form</strong>Executive order — NOT a constitutional amendment</div>
+        <div class="rail-row"><strong>Freed</strong>Enslaved people in Confederate states</div>
+        <div class="rail-row"><strong>Did NOT Free</strong>Enslaved people in Union border states</div>
+        <div class="rail-row"><strong>AP Standard</strong>EK 3.3.B</div>
+      </div>
+      <div class="rail-card">
+        <div class="rail-card-head">The Constitutional Chain</div>
+        <div class="rail-row">Emancipation Proclamation 1863 → began freeing enslaved people</div>
+        <div class="rail-row">13th Amendment 1865 → permanently abolished slavery</div>
+        <div class="rail-row">14th Amendment 1868 → citizenship &amp; equal protection</div>
+        <div class="rail-row">Brown v. Board 1954 → equal protection enforced in education</div>
+      </div>
+    </div>
+  </div>
+
+  <footer><p>Mr. Rogers · AP Government &amp; Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks = document.querySelectorAll('.doc-nav-link');
+    const sections = ['context','authority','what-it-did','what-it-didnt','significance','ap'];
+    window.addEventListener('scroll', () => {
+      let current = sections[0];
+      sections.forEach(id => { const el = document.getElementById(id); if(el && window.scrollY >= el.offsetTop - 100) current = id; });
+      navLinks.forEach(l => { l.classList.toggle('active', l.getAttribute('href') === '#' + current); });
+    });
+  </script>
+</body>
+</html>
