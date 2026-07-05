@@ -62,53 +62,11 @@
   <div class="stars-stripe"></div>
   <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
   <nav>
-    <div class="nav-inner">
-      <a class="nav-link" href="/APG/">Home</a>
-      <div class="nav-group"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/unit1.html">Overview</a>
-        <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
-      </div></div>
-      <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/unit2.html">Overview</a>
-        <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
-        <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
-      </div></div>
-      <div class="nav-group has-active"><div class="nav-group-label">Unit 3</div><div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit3.html">Overview</a>
-          <a class="nav-link  active" href="/APG/cases/schenck-v-us.html">Schenck v. U.S.</a>
-          <a class="nav-link" href="/APG/cases/engel-v-vitale.html">Engel v. Vitale</a>
-          <a class="nav-link" href="/APG/cases/tinker-v-des-moines.html">Tinker v. Des Moines</a>
-          <a class="nav-link" href="/APG/cases/nyt-v-us.html">N.Y. Times v. U.S.</a>
-          <a class="nav-link" href="/APG/cases/wisconsin-v-yoder.html">Wisconsin v. Yoder</a>
-          <a class="nav-link" href="/APG/cases/gideon-v-wainwright.html">Gideon v. Wainwright</a>
-          <a class="nav-link" href="/APG/cases/mcdonald-v-chicago.html">McDonald v. Chicago</a>
-          <a class="nav-link" href="/APG/cases/brown-v-board.html">Brown v. Board</a>
-          <a class="nav-link" href="/APG/docs/emancipation-proclamation.html">Emancipation Proclamation</a>
-          <a class="nav-link" href="/APG/docs/letter-birmingham-jail.html">Letter from Birmingham Jail</a>
-      </div></div>
-      <div class="nav-group"><div class="nav-group-label">Unit 4</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/unit4.html">Overview</a>
-      </div></div>
-      <div class="nav-group"><div class="nav-group-label">Unit 5</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/unit5.html">Overview</a>
-        <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
-      </div></div>
-      <div class="nav-group"><div class="nav-group-label">Review</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
-        <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
-        <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
-      </div></div>
-      <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
-        <a class="nav-link" href="/APG/#glossary">Glossary</a>
-        <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
-        <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
-        <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
-        <a class="nav-link" href="/APG/#stump">Stump the Class</a>
-        <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
-      </div></div>
-      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
-    </div>
+    <div class="nav-inner" id="app-nav"></div>
   </nav>
+  <script src="../data-required.js"></script>
+  <script src="../nav-render.js"></script>
+  <script>renderNav({ mountId: "app-nav", currentFile: "cases/schenck-v-us.html" });</script>
   <div class="case-page">
     <div class="case-content">
       <div class="case-hero">
