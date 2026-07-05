@@ -538,5 +538,210 @@ var SKILLS_VOCAB_LEVEL3 = {
   }
 };
 
+// ══════════════════════════════════════════════════════════════
+// CLOSE READING (AVID) — 3-PASS PROTOCOL
+// ══════════════════════════════════════════════════════════════
+// Each passage: chunks[] are the clickable spans. modelYellow/Blue/Pink
+// are arrays of chunk INDEXES (0-based) that represent the "correct"
+// annotation for that pass, used to score the student's tagging.
+//
+// COPYRIGHT NOTE: passages 1 and 5 in Level 1 (and several in Levels
+// 2-3, to be added) are under active copyright and are left as
+// TEACHER-SUPPLIED placeholders. Paste the real text into the
+// `chunks` array (break it into 5-10 short clickable pieces), then
+// fill in pass1Model/pass2Model/pass3Model and the matching
+// modelYellow/modelBlue/modelPink index arrays based on your own
+// reading of the passage. Everything else (the engine, scoring,
+// Simplify Text, Sheets export) works automatically once the data
+// is filled in — no code changes needed.
+// ══════════════════════════════════════════════════════════════
+
+var CLOSEREADING_LEVEL1 = {
+  passages: [
+    // ---- PASSAGE 1: TEACHER-SUPPLIED (copyrighted) ----
+    {
+      title: "Eulogy for Rep. John Lewis [PASTE TEXT]",
+      source: "Barack Obama, eulogy for Rep. John Lewis, Ebenezer Baptist Church, July 30, 2020 — TEACHER: this text is under copyright; paste the actual eulogy text into the chunks array below, broken into 5-10 short pieces.",
+      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      chunks: [
+        "[PASTE PASSAGE TEXT HERE — split into 5-10 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
+      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
+      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes (starting at 0) carry the main idea and list them in modelYellow below. Write 2-3 sentences here explaining why.",
+      modelYellow: [],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure — how the speaker moves from one idea to the next.",
+      pass2NoteLabel: "How is this passage organized? What comes first, and what does it build to?",
+      pass2Model: "TEACHER: identify the structural chunks (transitions, turning points) and list their indexes in modelBlue below.",
+      modelBlue: [],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the specific words or phrases where the speaker made a deliberate, powerful language choice.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why do you think the speaker chose that exact word?",
+      pass3Model: "TEACHER: identify the craft-level word/phrase chunks and list their indexes in modelPink below.",
+      modelPink: []
+    },
+
+    // ---- PASSAGE 2: REAL CONTENT — public congressional testimony ----
+    {
+      title: "Testimony on the Uvalde Shooting",
+      source: "Zeneta Everhart, testimony before the House Committee on Oversight and Reform, \"The Urgent Need to Address the Gun Violence Epidemic,\" June 8, 2022",
+      simplify: "A mother whose son was shot and wounded in the Buffalo supermarket shooting tells Congress exactly what his injuries look like, in graphic detail, and then challenges lawmakers to come see the damage in person if her testimony isn't enough to convince them to act on gun laws.",
+      chunks: [
+        "To the lawmakers who feel that we do not need stricter gun laws, let me paint a picture for you.",
+        "My son Zaire has a hole in the right side of his neck, two on his back, and another on his left leg, caused by an exploding bullet from an AR-15.",
+        "As I clean his wounds, I can feel pieces of that bullet in his back.",
+        "Shrapnel will be left inside of his body for the rest of his life.",
+        "Now, I want you to picture that exact scenario for one of your children.",
+        "If after hearing from me and the other people testifying here today does not move you to act on gun laws, I invite you to my home to help me clean Zaire's wounds so that you may see, up close, the damage that has been caused to my son and to my community."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
+      pass1NoteLabel: "In one sentence, what is Everhart's main argument?",
+      pass1Model: "The key content is the graphic description of Zaire's wounds and the direct challenge asking lawmakers to picture that same injury happening to their own child. Together, these two sentences carry Everhart's central argument: gun violence causes real, permanent physical harm, and the people with power to act should be forced to imagine it happening to someone they love.",
+      modelYellow: [1, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure — how the speaker moves from one idea to the next.",
+      pass2NoteLabel: "How does Everhart build her argument from the first sentence to the last?",
+      pass2Model: "Everhart bookends her testimony with a clear structural frame: she opens by promising to make the harm vivid and concrete (\"let me paint a picture\"), and closes with a conditional invitation (\"if...this does not move you...I invite you to my home\") that turns her opening promise into a literal, real offer. Everything in between builds toward that final challenge.",
+      modelBlue: [0, 5],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the specific words or phrases where the speaker made a deliberate, powerful language choice.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why do you think Everhart chose that exact word?",
+      pass3Model: "Notice the specific physical, sensory language: \"I can feel pieces of that bullet in his back\" makes the harm tactile and immediate rather than abstract. \"Shrapnel will be left inside of his body for the rest of his life\" uses permanence to argue this isn't a wound that simply heals — it's a lifelong injury.",
+      modelPink: [2, 3]
+    },
+
+    // ---- PASSAGE 3: REAL CONTENT — public Senate confirmation hearing ----
+    {
+      title: "KBJ Confirmation Hearing: Judicial Philosophy",
+      source: "Senate Judiciary Committee confirmation hearing for Judge Ketanji Brown Jackson, March 22, 2022",
+      simplify: "A senator asks Judge Jackson why judges should avoid making big, sudden changes to legal rules. Jackson explains that if judges keep dramatically shifting the law, people will stop trusting that judges are following the law at all — they'll start suspecting judges are just doing whatever they personally want.",
+      chunks: [
+        "During her Senate confirmation hearing, Judge Ketanji Brown Jackson was asked by senators to explain her judicial philosophy — the approach she uses to decide cases.",
+        "Senator Amy Klobuchar asked her directly: \"What role do you think narrow rulings play in helping to maintain the legitimacy of the court?\"",
+        "Judge Jackson answered: \"If there were big shifts in terms of legal principles and doctrines, it could lead to people not understanding that judges are ruling on legal principles.\"",
+        "\"It could lead to undermining public confidence, thinking that judges are interjecting their own policy preferences rather than following the law in terms of their rulings.\"",
+        "Jackson consistently declined to attach a specific label — like \"originalist\" or \"living constitutionalist\" — to her approach, instead describing a step-by-step methodology she said she applies to every case."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
+      pass1NoteLabel: "In one sentence, what is Jackson's answer actually saying?",
+      pass1Model: "The heart of this passage is Jackson's actual answer: sudden shifts in legal doctrine damage public confidence because people start to suspect judges are imposing personal policy views rather than following the law.",
+      modelYellow: [2, 3],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure — how it moves from one idea to the next.",
+      pass2NoteLabel: "How is this passage organized — what's the setup, and what's the takeaway?",
+      pass2Model: "The passage opens with context (what's being tested — her judicial philosophy) before presenting the specific question that triggered her answer. This context-then-question structure sets up why her answer matters before you even read it.",
+      modelBlue: [0, 1],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the specific words or phrases where the speaker made a deliberate, powerful language choice.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. What is it doing rhetorically?",
+      pass3Model: "Notice the deliberate rhetorical choice described here: Jackson consistently refused to attach a specific philosophical label to herself. Avoiding labels is itself a strategic choice — it lets her describe a process without giving critics a single word (\"originalist,\" \"living constitutionalist\") to attack.",
+      modelPink: [4]
+    },
+
+    // ---- PASSAGE 4: REAL CONTENT — official government form (generic placeholder name used) ----
+    {
+      title: "Notice to Appear (Form I-862)",
+      source: "U.S. Department of Homeland Security, Form I-862 (Notice to Appear) — official boilerplate language. \"Jane Doe\" is used as a generic placeholder name for classroom purposes; this is not a real case.",
+      simplify: "This is the official government form that starts the legal process to remove someone from the country. It says: the government believes you're not a citizen, it's charging you with being removable, and it's ordering you to show up in immigration court. It also warns you that anything you say can be used against you, and that you can hire your own lawyer — but the government won't provide or pay for one.",
+      chunks: [
+        "NOTICE TO APPEAR — In removal proceedings under section 240 of the Immigration and Nationality Act.",
+        "TO: Respondent Jane Doe — You are an alien present in the United States who has not been admitted or paroled.",
+        "The Department of Homeland Security alleges that you are not a citizen or national of the United States.",
+        "On the basis of the foregoing, it is charged that you are subject to removal from the United States.",
+        "YOU ARE ORDERED to appear before an immigration judge of the United States Department of Justice at the address listed above, on a date and time to be set.",
+        "Warning: Any statement you make may be used against you in removal proceedings.",
+        "Representation: If you so choose, you may be represented in this proceeding, at no expense to the Government, by an attorney or other individual authorized and qualified to represent persons before the Executive Office for Immigration Review.",
+        "Failure to appear: If you fail to attend the hearing at the time and place designated on this notice, a removal order may be made by the immigration judge in your absence."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole document once without marking anything. Then go back and highlight YELLOW the sentences that carry the core legal facts.",
+      pass1NoteLabel: "In one sentence, what is this document actually doing to the person who receives it?",
+      pass1Model: "The core of this document is simple even though the language is formal: DHS claims you're not a citizen (the allegation), charges you as removable on that basis (the charge), and orders you to appear before a judge (the consequence). Everything else supports or qualifies these three moves.",
+      modelYellow: [2, 3, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that show the document's legal structure.",
+      pass2NoteLabel: "What order does this document follow, and why might a legal document be organized this way?",
+      pass2Model: "Notice how the document is structurally bookended: it opens with the title and legal authority establishing why this document has power over you, and closes with the failure-to-appear warning establishing what happens if you ignore it. Everything in between — the allegation, charge, and order — is sandwiched between these two structural anchors.",
+      modelBlue: [0, 1, 7],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK specific words where the legal language is doing careful, deliberate work.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. What is it precisely designed to do or avoid saying?",
+      pass3Model: "The warning is written in passive voice (\"may be used against you\") — legal documents often state consequences without naming who's responsible for what comes next. And \"at no expense to the Government\" carefully signals: you can have a lawyer, but the government will not pay for one — this is different from the right to a public defender guaranteed in criminal court (see Gideon v. Wainwright), which is a common point of confusion.",
+      modelPink: [5, 6]
+    },
+
+    // ---- PASSAGE 5: TEACHER-SUPPLIED (copyright status unclear — treat like placeholder) ----
+    {
+      title: "Jan. 6 Speech — Constitutional Section [PASTE TEXT]",
+      source: "TEACHER: paste the specific excerpt you want here, along with an accurate citation (speaker, date, venue). This passage's copyright status is unclear, so it's left for you to supply directly.",
+      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      chunks: [
+        "[PASTE PASSAGE TEXT HERE — split into 5-10 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
+      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
+      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes carry the main idea and list them in modelYellow below.",
+      modelYellow: [],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure.",
+      pass2NoteLabel: "How is this passage organized?",
+      pass2Model: "TEACHER: identify the structural chunks and list their indexes in modelBlue below.",
+      modelBlue: [],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK specific words or phrases with deliberate rhetorical craft.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why that word?",
+      pass3Model: "TEACHER: identify the craft-level chunks and list their indexes in modelPink below.",
+      modelPink: []
+    }
+  ]
+};
+
+// ══════════════════════════════════════════════════════════════
+// LEVEL 2 and LEVEL 3 — STRUCTURAL STUBS
+// These prevent the site from crashing (see note above the Level 1
+// block) but do not yet contain real passages. Coming in the next
+// content pass: Level 2 (Jackson SFFA dissent, LBJ "We Shall
+// Overcome," Coates excerpt [teacher-supplied], Korematsu dissent,
+// federal plea agreement) and Level 3 (Korematsu majority, Birmingham
+// Jail "Wait" section [teacher-supplied], Youngstown/Jackson
+// concurrence, Pentagon Papers opening, Bakke dissent).
+// ══════════════════════════════════════════════════════════════
+
+var CLOSEREADING_LEVEL2 = {
+  passages: [
+    {
+      title: "Coming soon — Level 2 passages in progress",
+      source: "Check back after the next content session.",
+      simplify: "This level is still being built.",
+      chunks: ["Level 2 of Close Reading is under construction. Check back soon for real passages."],
+      pass1Prompt: "This level is still being built.",
+      pass1NoteLabel: "N/A",
+      pass1Model: "Coming soon.",
+      modelYellow: [],
+      pass2Prompt: "This level is still being built.",
+      pass2NoteLabel: "N/A",
+      pass2Model: "Coming soon.",
+      modelBlue: [],
+      pass3Prompt: "This level is still being built.",
+      pass3NoteLabel: "N/A",
+      pass3Model: "Coming soon.",
+      modelPink: []
+    }
+  ]
+};
+
+var CLOSEREADING_LEVEL3 = {
+  passages: [
+    {
+      title: "Coming soon — Level 3 passages in progress",
+      source: "Check back after the next content session.",
+      simplify: "This level is still being built.",
+      chunks: ["Level 3 of Close Reading is under construction. Check back soon for real passages."],
+      pass1Prompt: "This level is still being built.",
+      pass1NoteLabel: "N/A",
+      pass1Model: "Coming soon.",
+      modelYellow: [],
+      pass2Prompt: "This level is still being built.",
+      pass2NoteLabel: "N/A",
+      pass2Model: "Coming soon.",
+      modelBlue: [],
+      pass3Prompt: "This level is still being built.",
+      pass3NoteLabel: "N/A",
+      pass3Model: "Coming soon.",
+      modelPink: []
+    }
+  ]
+};
+
 
 

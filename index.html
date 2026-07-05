@@ -960,6 +960,70 @@
           </div>
         </div>
 
+        <!-- CLOSE READING (AVID) -->
+        <div class="skills-closereading-panel" id="skills-closereading-panel">
+          <div class="cr-passage-header">
+            <div class="cr-passage-counter" id="cr-passage-counter">Passage 1 of 5</div>
+            <div class="cr-passage-title" id="cr-passage-title"></div>
+            <div class="cr-passage-source" id="cr-passage-source"></div>
+          </div>
+
+          <div class="cr-pass-tabs" id="cr-pass-tabs">
+            <div class="cr-pass-tab" id="cr-pass-tab-1" onclick="closeReadingSetPass(1)">
+              <span class="cr-pass-num">1</span> FIRST READ <span class="cr-pass-sub">— gist</span>
+            </div>
+            <div class="cr-pass-tab" id="cr-pass-tab-2" onclick="closeReadingSetPass(2)">
+              <span class="cr-pass-num">2</span> SECOND READ <span class="cr-pass-sub">— structure</span>
+            </div>
+            <div class="cr-pass-tab" id="cr-pass-tab-3" onclick="closeReadingSetPass(3)">
+              <span class="cr-pass-num">3</span> THIRD READ <span class="cr-pass-sub">— craft</span>
+            </div>
+          </div>
+
+          <div class="cr-pass-instruction" id="cr-pass-instruction"></div>
+
+          <div class="cr-legend" id="cr-legend">
+            <span class="cr-legend-item"><span class="cr-swatch yellow"></span> Key ideas (Read 1)</span>
+            <span class="cr-legend-item"><span class="cr-swatch blue"></span> Structure (Read 2)</span>
+            <span class="cr-legend-item"><span class="cr-swatch pink"></span> Craft (Read 3)</span>
+            <button class="cr-simplify-btn" id="cr-simplify-btn" onclick="closeReadingToggleSimplify()">🔍 SIMPLIFY TEXT</button>
+          </div>
+
+          <div class="cr-simplify-box" id="cr-simplify-box">
+            <div class="cr-simplify-label">PLAIN ENGLISH — for reference while you read the real passage below</div>
+            <div class="cr-simplify-body" id="cr-simplify-body"></div>
+          </div>
+
+          <div class="cr-passage-text" id="cr-passage-text"></div>
+
+          <div class="cr-note-box">
+            <label class="cr-note-label" id="cr-note-label">Reflection</label>
+            <textarea class="cr-note-input" id="cr-note-input" rows="3" placeholder="Type your response here..." oninput="closeReadingSaveNote(this.value)"></textarea>
+          </div>
+
+          <div class="cr-nav-row">
+            <button class="cr-nav-btn secondary" id="cr-back-pass-btn" onclick="closeReadingBackPass()" style="display:none">← Back</button>
+            <button class="cr-nav-btn primary" id="cr-next-pass-btn" onclick="closeReadingNextPass()">NEXT →</button>
+          </div>
+
+          <div class="cr-model-panel" id="cr-model-panel">
+            <div class="cr-model-header">📋 MODEL ANNOTATION — compare to your own</div>
+            <div class="cr-model-body" id="cr-model-body"></div>
+            <button class="cr-nav-btn primary" id="cr-continue-after-model-btn" onclick="closeReadingContinueAfterModel()">CONTINUE →</button>
+          </div>
+
+          <div class="cr-results" id="cr-results">
+            <div class="skills-results-emoji">📚</div>
+            <div class="skills-results-score" id="cr-results-score">5 / 5 passages complete</div>
+            <div class="skills-results-msg" id="cr-results-msg">Nice work close reading this level.</div>
+            <div class="skills-results-btns">
+              <button class="skills-results-btn retry" onclick="closeReadingRetryLevel()">Try Again</button>
+              <button class="skills-results-btn next-level" id="cr-next-level-btn" onclick="closeReadingNextLevel()">Next Level →</button>
+              <button class="skills-results-btn menu" onclick="skillsBackToMenu()">Back to Menu</button>
+            </div>
+          </div>
+        </div>
+
       </div>
         </div><!-- /skills-content-area -->
 

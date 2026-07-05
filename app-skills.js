@@ -371,7 +371,8 @@ var skillsState = {
 
 var SKILLS_ACTIVITY_DATA = {
   cer: { name: "CLAIM, EVIDENCE & REASONING", levels: [SKILLS_CER_LEVEL1, SKILLS_CER_LEVEL2, SKILLS_CER_LEVEL3] },
-  vocab: { name: "ACADEMIC VOCABULARY IN CONTEXT", levels: [SKILLS_VOCAB_LEVEL1, SKILLS_VOCAB_LEVEL2, SKILLS_VOCAB_LEVEL3] }
+  vocab: { name: "ACADEMIC VOCABULARY IN CONTEXT", levels: [SKILLS_VOCAB_LEVEL1, SKILLS_VOCAB_LEVEL2, SKILLS_VOCAB_LEVEL3] },
+  closereading: { name: "CLOSE READING (AVID)", levels: [CLOSEREADING_LEVEL1, CLOSEREADING_LEVEL2, CLOSEREADING_LEVEL3] }
 };
 
 function skillsIsActivityUnlocked(activityId) {
@@ -416,6 +417,7 @@ function skillsBackToMenu() {
   document.getElementById('skills-practice-panel').classList.remove('show');
   document.getElementById('skills-results').classList.remove('show');
   document.getElementById('skills-apply-panel').classList.remove('show');
+  document.getElementById('skills-closereading-panel').classList.remove('show');
   applyItTagged = {};
   applyItSelected = null;
 }
@@ -455,6 +457,15 @@ function skillsLoadLevel(levelNum) {
   skillsState.level = levelNum;
   skillsState.startTime = Date.now();
   skillsBuildLevelTabs();
+
+  if (skillsState.activity === 'closereading') {
+    document.getElementById('skills-learn-panel').classList.remove('show');
+    document.getElementById('skills-guided-panel').classList.remove('show');
+    document.getElementById('skills-practice-panel').classList.remove('show');
+    closeReadingLoadLevel(levelNum);
+    return;
+  }
+  document.getElementById('skills-closereading-panel').classList.remove('show');
 
   var activity = SKILLS_ACTIVITY_DATA[skillsState.activity];
   var levelData = activity.levels[levelNum - 1];
@@ -925,5 +936,219 @@ function skillsSubmitScoreToSheet() {
   });
 }
 
+
+// ════════════════════════════════════════════════════════════════
+//  CLOSE READING (AVID) ENGINE
+// ════════════════════════════════════════════════════════════════
+// A passage is read three times, each pass adding one highlight
+// color (yellow=gist, blue=structure, pink=craft), cumulative on
+// the same text. After each pass the student compares their
+// highlighting + a short written response against a model
+// annotation, then moves on. After all 3 passes on a passage, the
+// student advances to the next passage (5 per level). Scoring
+// compares which chunks the student tagged against each passage's
+// model target chunks, and plugs into the same 70%-to-unlock and
+// Google Sheets pipeline used by CER/Vocab.
+
+var closeReadingState = {
+  levelData: null,
+  passageIdx: 0,
+  pass: 1,
+  maxPassReached: 1,
+  tagged: {},
+  notes: {},
+  passageScores: []
+};
+
+var CR_PASS_COLORS = { 1: 'yellow', 2: 'blue', 3: 'pink' };
+
+function closeReadingSetPanelVisible(showPassageUI) {
+  document.querySelector('#skills-closereading-panel .cr-passage-header').style.display = showPassageUI ? '' : 'none';
+  document.getElementById('cr-pass-tabs').style.display = showPassageUI ? '' : 'none';
+  document.getElementById('cr-pass-instruction').style.display = showPassageUI ? '' : 'none';
+  document.getElementById('cr-legend').style.display = showPassageUI ? '' : 'none';
+  document.getElementById('cr-passage-text').style.display = showPassageUI ? '' : 'none';
+  if (!showPassageUI) document.getElementById('cr-simplify-box').classList.remove('show');
+  document.querySelector('#skills-closereading-panel .cr-note-box').style.display = showPassageUI ? '' : 'none';
+  document.querySelector('#skills-closereading-panel .cr-nav-row').style.display = showPassageUI ? '' : 'none';
+}
+
+function closeReadingLoadLevel(levelNum) {
+  var activity = SKILLS_ACTIVITY_DATA['closereading'];
+  var levelData = activity.levels[levelNum - 1];
+  closeReadingState.levelData = levelData;
+  closeReadingState.passageIdx = 0;
+  closeReadingState.passageScores = [];
+  document.getElementById('skills-closereading-panel').classList.add('show');
+  document.getElementById('cr-results').classList.remove('show');
+  closeReadingLoadPassage(0);
+}
+
+function closeReadingLoadPassage(idx) {
+  var levelData = closeReadingState.levelData;
+  var passage = levelData.passages[idx];
+  closeReadingState.passageIdx = idx;
+  closeReadingState.tagged = {};
+  closeReadingState.notes = {};
+  closeReadingState.pass = 1;
+  closeReadingState.maxPassReached = 1;
+  closeReadingState.simplifyOn = false;
+
+  document.getElementById('cr-passage-counter').textContent = 'Passage ' + (idx + 1) + ' of ' + levelData.passages.length;
+  document.getElementById('cr-passage-title').textContent = passage.title;
+  document.getElementById('cr-passage-source').textContent = passage.source;
+  document.getElementById('cr-results').classList.remove('show');
+  document.getElementById('cr-model-panel').classList.remove('show');
+  document.getElementById('cr-simplify-box').classList.remove('show');
+  document.getElementById('cr-simplify-btn').classList.remove('active');
+  closeReadingSetPanelVisible(true);
+
+  closeReadingSetPass(1);
+}
+
+function closeReadingToggleSimplify() {
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  closeReadingState.simplifyOn = !closeReadingState.simplifyOn;
+  var box = document.getElementById('cr-simplify-box');
+  var btn = document.getElementById('cr-simplify-btn');
+  box.classList.toggle('show', closeReadingState.simplifyOn);
+  btn.classList.toggle('active', closeReadingState.simplifyOn);
+  if (closeReadingState.simplifyOn) {
+    document.getElementById('cr-simplify-body').textContent =
+      passage.simplify || 'No plain-English version available for this passage.';
+  }
+}
+
+function closeReadingSetPass(passNum) {
+  if (passNum > closeReadingState.maxPassReached) return;
+  closeReadingState.pass = passNum;
+  document.getElementById('cr-model-panel').classList.remove('show');
+  closeReadingSetPanelVisible(true);
+
+  for (var i = 1; i <= 3; i++) {
+    var tab = document.getElementById('cr-pass-tab-' + i);
+    tab.classList.toggle('active', i === passNum);
+    tab.classList.toggle('unlocked', i <= closeReadingState.maxPassReached);
+  }
+
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  var promptKey = 'pass' + passNum + 'Prompt';
+  var labelKey = 'pass' + passNum + 'NoteLabel';
+  document.getElementById('cr-pass-instruction').textContent = passage[promptKey] || '';
+  document.getElementById('cr-note-label').textContent = passage[labelKey] || 'Reflection';
+  document.getElementById('cr-note-input').value = closeReadingState.notes[passNum] || '';
+
+  document.getElementById('cr-back-pass-btn').style.display = passNum > 1 ? '' : 'none';
+  document.getElementById('cr-next-pass-btn').textContent = passNum < 3 ? 'NEXT →' : 'FINISH PASSAGE →';
+
+  closeReadingRenderPassageText();
+}
+
+function closeReadingRenderPassageText() {
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  var html = passage.chunks.map(function(chunkText, i) {
+    var color = closeReadingState.tagged[i];
+    var cls = 'cr-chunk' + (color ? ' cr-' + color : '');
+    return '<span class="' + cls + '" onclick="closeReadingToggleChunk(' + i + ')">' + chunkText + '</span> ';
+  }).join('');
+  document.getElementById('cr-passage-text').innerHTML = html;
+}
+
+function closeReadingToggleChunk(idx) {
+  var activeColor = CR_PASS_COLORS[closeReadingState.pass];
+  if (closeReadingState.tagged[idx] === activeColor) {
+    delete closeReadingState.tagged[idx];
+  } else {
+    closeReadingState.tagged[idx] = activeColor;
+  }
+  closeReadingRenderPassageText();
+}
+
+function closeReadingSaveNote(text) {
+  closeReadingState.notes[closeReadingState.pass] = text;
+}
+
+function closeReadingNextPass() {
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  var modelKey = 'pass' + closeReadingState.pass + 'Model';
+  var modelText = passage[modelKey];
+
+  closeReadingSetPanelVisible(false);
+  document.getElementById('cr-model-body').innerHTML = modelText || '<em>No model annotation for this pass.</em>';
+  document.getElementById('cr-model-panel').classList.add('show');
+}
+
+function closeReadingBackPass() {
+  closeReadingSetPass(closeReadingState.pass - 1);
+}
+
+function closeReadingContinueAfterModel() {
+  document.getElementById('cr-model-panel').classList.remove('show');
+  if (closeReadingState.pass < 3) {
+    closeReadingState.maxPassReached = Math.max(closeReadingState.maxPassReached, closeReadingState.pass + 1);
+    closeReadingSetPass(closeReadingState.pass + 1);
+  } else {
+    closeReadingFinishPassage();
+  }
+}
+
+function closeReadingFinishPassage() {
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  var correct = 0, total = 0;
+  ['yellow', 'blue', 'pink'].forEach(function(color) {
+    var key = 'model' + color.charAt(0).toUpperCase() + color.slice(1);
+    var targets = passage[key] || [];
+    targets.forEach(function(chunkIdx) {
+      total++;
+      if (closeReadingState.tagged[chunkIdx] === color) correct++;
+    });
+  });
+  closeReadingState.passageScores.push({ correct: correct, total: total });
+
+  var levelData = closeReadingState.levelData;
+  if (closeReadingState.passageIdx < levelData.passages.length - 1) {
+    closeReadingLoadPassage(closeReadingState.passageIdx + 1);
+  } else {
+    closeReadingShowResults();
+  }
+}
+
+function closeReadingShowResults() {
+  closeReadingSetPanelVisible(false);
+  document.getElementById('cr-model-panel').classList.remove('show');
+
+  var totalCorrect = closeReadingState.passageScores.reduce(function(s, p) { return s + p.correct; }, 0);
+  var totalPossible = closeReadingState.passageScores.reduce(function(s, p) { return s + p.total; }, 0);
+  var pct = totalPossible > 0 ? Math.round(totalCorrect / totalPossible * 100) : 100;
+  var passed = pct >= 70;
+
+  // Plug into the shared unlock + Google Sheets pipeline
+  skillsState.score = totalCorrect;
+  skillsState.questions = new Array(totalPossible);
+  skillsSaveProgress('closereading', skillsState.level, totalCorrect, totalPossible);
+
+  var numPassages = closeReadingState.levelData.passages.length;
+  document.getElementById('cr-results-score').textContent = numPassages + ' / ' + numPassages + ' passages complete (' + pct + '% annotation match)';
+  document.getElementById('cr-results-msg').textContent = passed
+    ? 'Great close reading! You unlocked the next level.'
+    : 'Good effort -- review the model annotations and try again to unlock the next level (need 70%+ match).';
+
+  var nextLevelBtn = document.getElementById('cr-next-level-btn');
+  var activity = SKILLS_ACTIVITY_DATA['closereading'];
+  var hasNextLevel = skillsState.level < activity.levels.length;
+  nextLevelBtn.style.display = (passed && hasNextLevel) ? '' : 'none';
+
+  skillsSubmitScoreToSheet();
+  skillsBuildLevelTabs();
+  document.getElementById('cr-results').classList.add('show');
+}
+
+function closeReadingRetryLevel() {
+  closeReadingLoadLevel(skillsState.level);
+}
+
+function closeReadingNextLevel() {
+  skillsLoadLevel(skillsState.level + 1);
+}
 
 
