@@ -296,20 +296,6 @@ var LIVING_DOCS = [
     }]
   },
   {
-    id: "fed76",
-    title: "Federalist No. 76",
-    year: 1788,
-    author: "Alexander Hamilton",
-    intro: "Hamilton defends the presidential appointment power and Senate confirmation process, arguing that a single responsible executive best ensures qualified nominations while the Senate checks corruption.",
-    sections: [{
-      title: "The Appointment Power",
-      clauses: [
-        { num: "S1", text: "The sole and undivided responsibility of one man will naturally beget a livelier sense of duty and a more exact regard to reputation.", plain: "Because the president alone is responsible for nominations, they have a strong personal incentive to choose qualified people -- their reputation is on the line.", standards: ["2.3","2.5"], cases: [], connections: "Foundation for the presidential nomination process. Connects to judicial nominations, senatorial courtesy, and Senate confirmation battles." },
-        { num: "S2", text: "The necessity of their concurrence would have a powerful, though, in general, a silent operation... it would be an excellent check upon a spirit of favoritism in the President.", plain: "Senate confirmation disciplines presidential nominations -- even the threat of rejection prevents cronyism.", standards: ["2.5","2.2"], cases: [], connections: "The Senate advice and consent role. Connects to filibuster of nominees, the nuclear option, and judicial confirmation battles." }
-      ]
-    }]
-  },
-  {
     id: "fed78",
     title: "Federalist No. 78",
     year: 1788,

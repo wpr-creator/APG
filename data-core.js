@@ -132,7 +132,6 @@ const REQ_DOCS = [
   { name: "Brutus No. 1", type: "Anti-Federalist", year: "1787" },
   { name: "Federalist No. 51", type: "Federalist Paper", year: "1788" },
   { name: "Federalist No. 70", type: "Federalist Paper", year: "1788" },
-  { name: "Federalist No. 76", type: "Federalist Paper", year: "1788" },
   { name: "Emancipation Proclamation", type: "Executive Order", year: "1863" },
   { name: "Federalist No. 39", type: "Federalist Paper", year: "1788" },
   { name: "The Gettysburg Address", type: "Speech", year: "1863" },
@@ -316,7 +315,7 @@ const DEFAULT_CONTENT = {
       ],
       "key_docs": [
         "Federalist No. 70",
-        "Federalist No. 76"
+        "Federalist No. 78"
       ]
     },
     {
