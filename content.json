@@ -386,12 +386,12 @@
         {
           "level": 1,
           "name": "MODERN DISCOURSE",
-          "unlocked": false
+          "unlocked": true
         },
         {
           "level": 2,
           "name": "LEGAL & POLITICAL TEXTS",
-          "unlocked": false
+          "unlocked": true
         },
         {
           "level": 3,
