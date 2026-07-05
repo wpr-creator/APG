@@ -75,66 +75,11 @@
   <div class="stars-stripe"></div>
   <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
   <nav>
-    <div class="nav-inner">
-      <a class="nav-link" href="/APG/">Home</a>
-      <div class="nav-group">
-        <div class="nav-group-label">Unit 1</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit1.html">Overview</a>
-          <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <div class="nav-group-label">Unit 2</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit2.html">Overview</a>
-          <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
-          <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <div class="nav-group-label">Unit 3</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit3.html">Overview</a>
-          <a class="nav-link" href="/APG/unit3-docs.html">Documents</a>
-          <a class="nav-link" href="/APG/unit3-cases.html">Cases</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <div class="nav-group-label">Unit 4</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit4.html">Overview</a>
-        </div>
-      </div>
-      <div class="nav-group  has-active">
-        <div class="nav-group-label">Unit 5</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/unit5.html">Overview</a>
-          <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <div class="nav-group-label">Review</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
-          <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
-          <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
-        </div>
-      </div>
-      <div class="nav-group">
-        <div class="nav-group-label">Tools</div>
-        <div class="nav-dropdown">
-          <a class="nav-link" href="/APG/#glossary">Glossary</a>
-          <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
-          <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
-          <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
-          <a class="nav-link" href="/APG/#stump">Stump the Class</a>
-          <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
-        </div>
-      </div>
-      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
-    </div>
+    <div class="nav-inner" id="app-nav"></div>
   </nav>
+  <script src="data-required.js"></script>
+  <script src="nav-render.js"></script>
+  <script>renderNav({ mountId: "app-nav", currentFile: "unit5.html" });</script>
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
     <a class="unit-jump-link" href="#cases">Cases</a>
