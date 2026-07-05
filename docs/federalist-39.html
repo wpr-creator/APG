@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Federalist No. 39 — Mr. Rogers AP Gov</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+  <link rel="stylesheet" href="../styles-base.css">
+  <link rel="stylesheet" href="../styles-pages.css">
+  <style>
+    .doc-page{max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:200px 1fr 220px;gap:24px;align-items:start;}
+    .doc-left{position:sticky;top:24px;} .doc-main{min-width:0;} .doc-rail{position:sticky;top:24px;}
+    .doc-nav-card,.rail-card{background:white;border-radius:12px;border:1px solid var(--doc-border);overflow:hidden;margin-bottom:12px;}
+    .doc-nav-head,.rail-card-head{padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;}
+    .doc-nav-link{display:block;padding:8px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid var(--doc-border);transition:all 0.12s;}
+    .doc-nav-link:last-child{border-bottom:none;} .doc-nav-link:hover{background:var(--doc-bg-light);color:var(--doc-dark);}
+    .doc-nav-link.active{border-left-color:var(--doc-accent);color:var(--doc-dark);background:var(--doc-bg-light);}
+    .doc-hero{background:var(--doc-hero-bg);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+    .doc-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--doc-accent);margin-bottom:8px;}
+    .doc-hero-title{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(22px,3vw,30px);font-weight:900;color:white;line-height:1.2;margin-bottom:6px;}
+    .doc-hero-cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:14px;}
+    .doc-hero-tags{display:flex;gap:6px;flex-wrap:wrap;}
+    .doc-tag{padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.75);}
+    .doc-tag-accent{background:rgba(255,255,255,0.15);color:white;}
+    .doc-context{background:white;border:1px solid var(--doc-border);border-radius:12px;padding:18px 22px;margin-bottom:20px;border-left:3px solid var(--doc-accent);}
+    .doc-context-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--doc-accent);margin-bottom:8px;}
+    .doc-context-text{font-size:14px;line-height:1.8;color:#374151;} .doc-context-text p{margin-bottom:10px;} .doc-context-text p:last-child{margin-bottom:0;}
+    .doc-section{margin-bottom:28px;scroll-margin-top:80px;}
+    .doc-section-title{font-family:'Playfair Display',serif;font-style:italic;font-size:18px;font-weight:700;color:var(--doc-dark);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--doc-border);}
+    .doc-row{display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:18px;align-items:start;}
+    .doc-text{font-size:15px;line-height:1.9;color:#1a1a1a;font-family:'Source Sans 3',sans-serif;}
+    .doc-text .hl{background:#fde68a;padding:1px 3px;border-radius:3px;font-weight:600;}
+    .doc-margin{background:white;border:1px solid var(--doc-border);border-radius:8px;padding:10px 12px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
+    .doc-margin-label{font-size:8px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--doc-accent);margin-bottom:5px;}
+    .doc-margin-text{font-size:11px;line-height:1.6;color:#374151;}
+    .doc-margin-tag{display:inline-block;margin-top:6px;font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;background:#f3f4f6;color:#374151;}
+    .doc-margin-tag.exam{background:var(--doc-dark);color:var(--doc-accent);}
+    .rail-row{padding:8px 14px;border-bottom:1px solid var(--doc-border);font-size:12px;color:#374151;line-height:1.5;}
+    .rail-row:last-child{border-bottom:none;} .rail-row strong{color:var(--doc-dark);font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
+    .rail-tip{background:var(--doc-dark);border-radius:12px;padding:14px 16px;margin-bottom:12px;}
+    .rail-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--doc-accent);margin-bottom:8px;}
+    .rail-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
+    .mistake-row{display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid var(--doc-border);font-size:12px;line-height:1.5;}
+    .mistake-row:last-child{border-bottom:none;} .mx{color:#ef4444;font-weight:800;flex-shrink:0;}
+    @media(max-width:900px){.doc-page{grid-template-columns:1fr;}.doc-left,.doc-rail{position:static;}.doc-row{grid-template-columns:1fr;}}
+    
+    :root{--doc-dark:#2c1810;--doc-accent:#b8952a;--doc-border:#d4b896;--doc-bg-light:#f5ead6;--doc-hero-bg:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);}
+    .doc-nav-head,.rail-card-head{background:#2c1810;color:rgba(184,149,42,0.8);}
+
+  </style>
+</head>
+<body class="unit-1">
+  <div class="stars-stripe"></div>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-link" href="/APG/">Home</a>
+      <div class="nav-group"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit1.html">Overview</a>
+        <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit2.html">Overview</a>
+        <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
+        <a class="nav-link" href="/APG/unit2-cases.html">Cases</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 3</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit3.html">Overview</a>
+        <a class="nav-link" href="/APG/unit3-docs.html">Documents</a>
+        <a class="nav-link" href="/APG/unit3-cases.html">Cases</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 4</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit4.html">Overview</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Unit 5</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/unit5.html">Overview</a>
+        <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Review</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
+        <a class="nav-link" href="/APG/#archive">FRQ Archive</a>
+        <a class="nav-link" href="/APG/#diagnostic">Diagnostic Quiz</a>
+      </div></div>
+      <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
+        <a class="nav-link" href="/APG/#glossary">Glossary</a>
+        <a class="nav-link" href="/APG/#amendments">Amendment Tracker</a>
+        <a class="nav-link" href="/APG/#cartoon">Cartoon Analyzer</a>
+        <a class="nav-link" href="/APG/#madison">What Would Madison Say?</a>
+        <a class="nav-link" href="/APG/#stump">Stump the Class</a>
+        <a class="nav-link" href="/APG/#exit">Exit Ticket</a>
+      </div></div>
+      <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
+    </div>
+  </nav>
+  <div class="doc-page">
+    <div class="doc-left">
+      <div class="doc-nav-card"><div class="doc-nav-head">ON THIS PAGE</div>
+        <a class="doc-nav-link" href="#republic">I. What Is a Republic?</a>
+        <a class="doc-nav-link" href="#federal-national">II. Federal or National?</a>
+        <a class="doc-nav-link" href="#amendment">III. The Amendment Process</a>
+      </div>
+    </div>
+    <div class="doc-main">
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Document · Federalist Papers · EK 1.2.B</div>
+        <div class="doc-hero-title">Federalist No. 39</div>
+        <div class="doc-hero-cite">James Madison · Publius · January 16, 1788</div>
+        <div class="doc-hero-tags"><span class="doc-tag">Unit 1</span><span class="doc-tag">Required Document</span><span class="doc-tag">Madison</span><span class="doc-tag">Federalism</span><span class="doc-tag">Compound Republic</span></div>
+      </div>
+      <div class="doc-context"><div class="doc-context-label">Historical Context — Read This First</div><div class="doc-context-text"><p>By January 1788 the Constitution had been drafted but not yet ratified. Nine states were needed; only three had signed on. Critics — led by Brutus in the New York press — were hammering the Constitution from two directions simultaneously: it was either too national (destroying state sovereignty) or too federal (just another failed league like the Articles of Confederation). Madison, writing as "Publius" in the New York press, needed to answer both criticisms at once.</p><p>Federalist 39 is his answer. He argues the Constitution fits no existing template — it is deliberately both federal and national, a compound republic that borrows the best features of each. Read this document as a rebuttal to Brutus No. 1 and as Madison's most precise constitutional taxonomy.</p></div></div>
+      <div id="republic" class="doc-section">
+        <div class="doc-section-title">I. What Is a Republic?</div>
+      <div class="doc-row">
+        <div class="doc-text">Madison begins by defining the term at stake: <span class="hl">"a government which derives all its powers directly or indirectly from the great body of the people, and is administered by persons holding their offices during pleasure, for a limited period, or during good behavior."</span> Any government meeting this definition is a republic — size and structural details are secondary.</div>
+        <div class="doc-margin"><div class="doc-margin-label">The Definition That Matters</div><div class="doc-margin-text">Madison is correcting Antifederalist critics who argued the Constitution created something other than a republic. By defining republic as popular sovereignty + limited terms, he shows the Constitution qualifies — and that Athens and Venice (often called republics) do not because they excluded most citizens.</div><span class="doc-margin-tag  exam">⭐ AP Tested</span></div>
+      </div>      <div class="doc-row">
+        <div class="doc-text">Madison surveys existing state governments and finds every one already meets his definition of a republic — mixed features, indirect elections, appointed officials. The new Constitution, he argues, follows the same pattern rather than departing from it. <span class="hl">The republican principle is "not less applicable to a large than to a small republic."</span></div>
+        <div class="doc-margin"><div class="doc-margin-label">State Precedent</div><div class="doc-margin-text">This is Madison's answer to Brutus No. 1 — Brutus argued a large republic couldn't work. Madison says it's already working at the state level and the logic extends nationally.</div></div>
+      </div>
+      </div>      <div id="federal-national" class="doc-section">
+        <div class="doc-section-title">II. Federal or National? Madison's Answer: Both</div>
+      <div class="doc-row">
+        <div class="doc-text"><span class="hl">"The Constitution is, in strictness, neither a national nor a federal Constitution, but a composition of both."</span> Madison identifies five dimensions: the foundation (federal — states ratify), the sources of power (partly federal, partly national), the Senate (federal — equal state representation), the House and presidency (national — population basis), and amendment (federal — supermajority of states required).</div>
+        <div class="doc-margin"><div class="doc-margin-label">The Compound Republic</div><div class="doc-margin-text">This is the core concept of Federalist 39. Madison deliberately refuses to call the new government purely 'national' (one people) or purely 'federal' (league of states). It's a deliberate hybrid — a compound republic. This framing was politically essential: it reassured states they weren't being abolished while also establishing national supremacy in its proper sphere.</div><span class="doc-margin-tag  exam">⭐ Key Concept</span></div>
+      </div>      <div class="doc-row">
+        <div class="doc-text">On the foundation: the Constitution is ratified by the people of each state — acting as states, not as one national people. <span class="hl">"It is to be the assent and ratification of the several States, derived from the supreme authority in each State — the authority of the people themselves."</span> This makes the founding act federal, not national.</div>
+        <div class="doc-margin"><div class="doc-margin-label">Ratification = Federal Act</div><div class="doc-margin-text">The Antifederalists feared the Constitution would swallow the states. Madison answers: the very act of ratification — done state by state, not by a national vote — is proof the states remain sovereign actors in this system.</div></div>
+      </div>      <div class="doc-row">
+        <div class="doc-text">On the scope of power: <span class="hl">"The difference between a federal and national government, as it relates to the operation of the government, is supposed to consist in this, that in the former the powers operate on the political bodies composing the confederacy... in the latter, on the individual citizens composing the nation."</span> The new government has both kinds of power — federal (operates through states) and national (operates directly on individuals).</div>
+        <div class="doc-margin"><div class="doc-margin-label">Who Does It Govern?</div><div class="doc-margin-text">This distinction between governing states vs. governing individuals is essential. The Articles of Confederation could only govern states — which is why it couldn't enforce anything. The new Constitution could reach individuals directly (federal courts, federal taxes) while still leaving states as meaningful units. Both/and, not either/or.</div><span class="doc-margin-tag  exam">⭐ AP Tested</span></div>
+      </div>
+      </div>      <div id="amendment" class="doc-section">
+        <div class="doc-section-title">III. The Amendment Process — Final Proof</div>
+      <div class="doc-row">
+        <div class="doc-text">Madison's last piece of evidence: <span class="hl">the amendment process requires ratification by three-fourths of the states — not a simple national majority, and not unanimity (as required under the Articles).</span> This is federal in character because the states as units must approve changes, but the unanimity requirement is dropped, making it more national than the Articles.</div>
+        <div class="doc-margin"><div class="doc-margin-label">Neither Purely Federal Nor National</div><div class="doc-margin-text">Under the Articles, any single state could block amendments — purely federal. A pure national government would amend by simple majority vote of citizens. The Constitution's three-fourths requirement is a deliberate middle point, reflecting the compound character of the whole document.</div><span class="doc-margin-tag  exam">⭐ AP Exam Frequent</span></div>
+      </div>
+      </div>
+    </div>
+    <div class="doc-rail">
+      <div class="rail-tip"><div class="rail-tip-label">⭐ AP EXAM TIP</div><div class="rail-tip-text">Federalist 39 is tested alongside Brutus No. 1 — know that Madison directly rebuts the Antifederalist fear that the Constitution creates a purely national government that destroys the states. The compound republic argument is the key concept: the Constitution is partly federal (states retain sovereignty, equal Senate, ratification by states, amendment by states) and partly national (House by population, direct operation on individuals). FRQs often ask you to identify evidence from Federalist 39 that the Constitution is NOT purely national.</div></div>
+      <div class="rail-card"><div class="rail-card-head">Quick Facts</div><div class="rail-row"><strong>Author</strong>James Madison (as 'Publius')</div><div class="rail-row"><strong>Published</strong>January 16, 1788</div><div class="rail-row"><strong>Series</strong>The Federalist Papers</div><div class="rail-row"><strong>AP Standard</strong>EK 1.2.B</div><div class="rail-row"><strong>Pairs With</strong>Brutus No. 1 · Federalist 51</div></div>
+      <div class="rail-card"><div class="rail-card-head">Common Mistakes</div><div class="mistake-row"><span class="mx">✗</span>Saying the Constitution is purely national — Madison explicitly argues it is a compound of both federal AND national features.</div><div class="mistake-row"><span class="mx">✗</span>Forgetting that the ratification process (state by state, not national popular vote) is itself evidence of the federal character.</div><div class="mistake-row"><span class="mx">✗</span>Confusing Federalist 39 (what kind of government) with Federalist 51 (how the government controls itself).</div></div>
+      <div class="rail-card"><div class="rail-card-head">Related</div><a href="/APG/docs/brutus-1.html" style="display:block;padding:8px 14px;font-size:12px;color:#2c1810;text-decoration:none;font-weight:600;border-bottom:1px solid #d4b896;">Brutus No. 1 (1787)<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">The counterargument Federalist 39 rebuts</span></a><a href="/APG/docs/federalist-51.html" style="display:block;padding:8px 14px;font-size:12px;color:#2c1810;text-decoration:none;font-weight:600;border-bottom:1px solid #d4b896;">Federalist No. 51 (1788)<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">Separation of powers and checks</span></a><a href="/APG/docs/federalist-10.html" style="display:block;padding:8px 14px;font-size:12px;color:#2c1810;text-decoration:none;font-weight:600;border-bottom:1px solid #d4b896;">Federalist No. 10 (1787)<span style="display:block;font-size:10px;font-weight:400;color:#9ca3af;">Factions and the large republic</span></a></div>
+    </div>
+  </div>
+  <footer><p>Mr. Rogers · AP Government &amp; Politics · O'Farrell High School · 2026–27</p></footer>
+  <script>
+    const navLinks=document.querySelectorAll('.doc-nav-link[href^="#"]');
+    const sections=Array.from(navLinks).map(l=>l.getAttribute('href').slice(1));
+    window.addEventListener('scroll',()=>{
+      let cur=sections[0];
+      sections.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-100)cur=id;});
+      navLinks.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));
+    });
+  </script>
+</body>
+</html>
