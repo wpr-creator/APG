@@ -699,25 +699,138 @@ var CLOSEREADING_LEVEL1 = {
 
 var CLOSEREADING_LEVEL2 = {
   passages: [
+    // ---- PASSAGE 1: REAL CONTENT — SCOTUS dissent (public domain) ----
     {
-      title: "Coming soon — Level 2 passages in progress",
-      source: "Check back after the next content session.",
-      simplify: "This level is still being built.",
-      chunks: ["Level 2 of Close Reading is under construction. Check back soon for real passages."],
-      pass1Prompt: "This level is still being built.",
-      pass1NoteLabel: "N/A",
-      pass1Model: "Coming soon.",
+      title: "Jackson's Dissent in SFFA v. UNC",
+      source: "Justice Ketanji Brown Jackson, dissenting opinion, Students for Fair Admissions v. University of North Carolina, 600 U.S. ___ (2023)",
+      simplify: "Jackson imagines two North Carolina college applicants, John and James, who are alike in almost every way — same roots, same love of their state, same family legacy they want to honor. The one difference: John would be the 7th generation in his family to graduate from UNC and is White; James would be the first in his family and is Black. Jackson uses this comparison to ask whether that racial difference should be allowed to factor into the admissions decision.",
+      chunks: [
+        "Imagine two college applicants from North Carolina, John and James.",
+        "Both trace their family's North Carolina roots to the year of UNC's founding in 1789.",
+        "Both love their State and want great things for its people.",
+        "Both want to honor their family's legacy by attending the State's flagship educational institution.",
+        "John, however, would be the seventh generation to graduate from UNC. He is White.",
+        "James would be the first; he is Black.",
+        "Does the race of these applicants properly play a role in UNC's holistic merits-based admissions process?"
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence that carries the main idea.",
+      pass1NoteLabel: "In one sentence, what is Jackson actually asking here?",
+      pass1Model: "Everything in this hypothetical builds toward one sentence: the central question Jackson poses about whether race should matter in the admissions decision. All the other details about John and James exist to make you feel the weight of that single question before you answer it.",
+      modelYellow: [6],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that set up the comparison before the key difference is revealed.",
+      pass2NoteLabel: "What does Jackson establish as shared between John and James before introducing the difference?",
+      pass2Model: "Jackson spends four sentences establishing what John and James have in common — same state roots dating to UNC's founding, the same love of their state, the same desire to honor family legacy by attending the flagship university. This structural buildup of similarity is deliberate: she wants you to see them as equals in every way that matters before she introduces the one difference the rest of the passage turns on.",
+      modelBlue: [0, 1, 2, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences where Jackson uses a deliberate rhetorical technique.",
+      pass3NoteLabel: "What rhetorical technique do you notice in these two sentences, and why is it effective?",
+      pass3Model: "Notice the parallel sentence structure Jackson uses: \"John...would be the seventh generation to graduate from UNC. He is White\" mirrored by \"James would be the first; he is Black.\" The identical grammatical pattern makes the racial contrast land harder — it's not just telling you they're different races, it's showing you the same sentence producing two very different outcomes depending on which race is plugged in.",
+      modelPink: [4, 5]
+    },
+
+    // ---- PASSAGE 2: REAL CONTENT — official presidential address (public domain government work) ----
+    {
+      title: "LBJ, \"We Shall Overcome\"",
+      source: "President Lyndon B. Johnson, address to a joint session of Congress, March 15, 1965. Published in Public Papers of the Presidents of the United States: Lyndon B. Johnson, 1965 (Washington, D.C.: Government Printing Office, 1966).",
+      simplify: "Johnson says the violence in Selma isn't just a local or Black issue — it's part of a much bigger national struggle. He argues that ending racial injustice is everyone's job, not just the job of the people directly affected by it, and closes by borrowing the title of the civil rights movement's own protest song as his final line.",
+      chunks: [
+        "What happened in Selma is part of a far larger movement which reaches into every section and State of America.",
+        "It is the effort of American Negroes to secure for themselves the full blessings of American life.",
+        "Their cause must be our cause too.",
+        "Because it is not just Negroes, but really it is all of us, who must overcome the crippling legacy of bigotry and injustice.",
+        "And we shall overcome."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main argument.",
+      pass1NoteLabel: "In one sentence, what is Johnson's core claim about whose responsibility this is?",
+      pass1Model: "The core claim is that this isn't a Black issue or a Southern issue — Johnson insists that ending racial injustice is everyone's responsibility (\"our cause too\"), and generalizes \"overcoming\" from a phrase used by civil rights activists into something \"all of us\" must do together.",
+      modelYellow: [2, 3],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that set up context before the main claim.",
+      pass2NoteLabel: "How does Johnson frame Selma before making his argument about shared responsibility?",
+      pass2Model: "Johnson opens by placing Selma within a bigger picture — not an isolated local event, but part of a national movement to secure \"the full blessings of American life.\" This context-setting move is structural: he's positioning what comes next (his argument that it's everyone's cause) as building logically from what Selma represents.",
+      modelBlue: [0, 1],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence with the most deliberate rhetorical choice.",
+      pass3NoteLabel: "Why is this final line such a significant rhetorical choice for a sitting president to make?",
+      pass3Model: "The final line — \"And we shall overcome\" — deliberately borrows the title and refrain of the civil rights movement's own anthem, \"We Shall Overcome.\" For a sitting president to adopt the movement's own language, in a formal address to Congress, was a striking and controversial rhetorical choice at the time — it signaled that he was aligning the federal government with the protesters' cause rather than treating them as outside agitators.",
+      modelPink: [4]
+    },
+
+    // ---- PASSAGE 3: TEACHER-SUPPLIED (copyrighted) ----
+    {
+      title: "Ta-Nehisi Coates Excerpt [PASTE TEXT]",
+      source: "TEACHER — HERE IS EXACTLY WHAT TO LOOK FOR: I'd recommend an excerpt from \"The Case for Reparations\" (The Atlantic, June 2014) — specifically a passage discussing redlining, the Contract Buyers League, or federal housing policy in Chicago. It's the most directly AP-Gov-relevant Coates piece (ties to federalism, civil rights policy, and government housing discrimination) and pairs naturally with the Murphy dissent and LBJ speech already in this level. Alternative: the opening pages of \"Between the World and Me\" (2015) if you'd prefer a more personal/memoir register closer to the Obama eulogy in Level 1. Either way: paste roughly 150-250 words (5-8 sentences), and note the exact page/section so the citation is accurate.",
+      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      chunks: [
+        "[PASTE PASSAGE TEXT HERE — split into 5-8 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
+      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
+      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes carry the main idea and list them in modelYellow below.",
       modelYellow: [],
-      pass2Prompt: "This level is still being built.",
-      pass2NoteLabel: "N/A",
-      pass2Model: "Coming soon.",
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure.",
+      pass2NoteLabel: "How is this passage organized?",
+      pass2Model: "TEACHER: identify the structural chunks and list their indexes in modelBlue below.",
       modelBlue: [],
-      pass3Prompt: "This level is still being built.",
-      pass3NoteLabel: "N/A",
-      pass3Model: "Coming soon.",
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK specific words or phrases with deliberate rhetorical craft.",
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why that word?",
+      pass3Model: "TEACHER: identify the craft-level chunks and list their indexes in modelPink below.",
       modelPink: []
+    },
+
+    // ---- PASSAGE 4: REAL CONTENT — SCOTUS dissent (public domain) ----
+    {
+      title: "Murphy's Dissent in Korematsu v. United States",
+      source: "Justice Frank Murphy, dissenting opinion, Korematsu v. United States, 323 U.S. 214 (1944)",
+      simplify: "Justice Murphy argues that excluding Japanese Americans from the West Coast during WWII was simply racism dressed up in legal language. He argues that since every American traces their family back to somewhere else, but everyone is still fully American, everyone deserves the same constitutional rights — including Japanese Americans, who were being denied theirs.",
+      chunks: [
+        "I dissent, therefore, from this legalization of racism.",
+        "Racial discrimination in any form and in any degree has no justifiable part whatever in our democratic way of life.",
+        "It is unattractive in any setting, but it is utterly revolting among a free people who have embraced the principles set forth in the Constitution of the United States.",
+        "All residents of this nation are kin in some way by blood or culture to a foreign land.",
+        "Yet they are primarily and necessarily a part of the new and distinct civilization of the United States.",
+        "They must, accordingly, be treated at all times as the heirs of the American experiment, and as entitled to all the rights and freedoms guaranteed by the Constitution."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry Murphy's central claim.",
+      pass1NoteLabel: "In one sentence, what is Murphy's core argument?",
+      pass1Model: "Murphy's central claim is stated as bluntly as possible: he's not just disagreeing with the ruling, he's calling it a \"legalization of racism,\" and asserting as an absolute principle that racial discrimination has zero justification in a democracy — no exceptions, \"in any form and in any degree.\"",
+      modelYellow: [0, 1],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that build a logical, step-by-step argument.",
+      pass2NoteLabel: "Walk through the logical steps Murphy takes to reach his conclusion.",
+      pass2Model: "Notice the logical structure Murphy builds here — almost like a syllogism: everyone in America traces their roots to somewhere else (premise), yet everyone is nonetheless fully part of American civilization (second premise), therefore everyone must be treated as equal heirs to the same constitutional rights (conclusion). This structure is doing real argumentative work: it's designed to make the exclusion of Japanese Americans specifically feel like a violation of a principle that would apply to literally every American.",
+      modelBlue: [3, 4, 5],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence with the most deliberate escalation in word choice.",
+      pass3NoteLabel: "Track the word choice in this sentence — how does the language escalate?",
+      pass3Model: "Watch the escalating word choice: \"unattractive\" is a mild, almost understated word — then Murphy immediately intensifies it to \"utterly revolting.\" This escalation mirrors the moral outrage building throughout the passage, and \"utterly revolting\" is about as strong as judicial language gets in a Supreme Court opinion.",
+      modelPink: [2]
+    },
+
+    // ---- PASSAGE 5: REAL CONTENT — generic federal legal template ----
+    {
+      title: "Federal Plea Agreement",
+      source: "Generic federal plea agreement structure, based on standard language required under Rule 11 of the Federal Rules of Criminal Procedure. \"John Smith\" is a placeholder name for classroom purposes; this is not a real case.",
+      simplify: "This document is the deal between a defendant and the federal government: the defendant agrees to plead guilty instead of going to trial, and in exchange, the government agrees to recommend a lighter sentence. The document also spells out exactly what rights the defendant is giving up, and warns that the judge doesn't have to accept the deal's sentencing recommendation.",
+      chunks: [
+        "UNITED STATES OF AMERICA v. JOHN SMITH — PLEA AGREEMENT (pursuant to Rule 11, Federal Rules of Criminal Procedure)",
+        "The defendant agrees to plead guilty to Count One of the Information, charging a violation of federal law.",
+        "By pleading guilty, the defendant knowingly and voluntarily waives the right to a trial by jury, the right to confront and cross-examine witnesses, and the right to remain silent at trial.",
+        "The defendant agrees to cooperate fully and truthfully with the government in any ongoing investigation, including providing testimony if requested.",
+        "In exchange for the defendant's guilty plea and cooperation, the government agrees to recommend a reduced sentence at sentencing.",
+        "The defendant understands that the sentencing judge is not bound by this agreement and may impose any sentence up to the statutory maximum.",
+        "The defendant waives the right to appeal the conviction and sentence, except on grounds of ineffective assistance of counsel or prosecutorial misconduct."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole document once without marking anything. Then go back and highlight YELLOW the sentences that carry the actual deal being made.",
+      pass1NoteLabel: "In one sentence, what is the core exchange this agreement describes?",
+      pass1Model: "The actual deal here is simple: the defendant agrees to plead guilty (rather than go to trial) in exchange for the government recommending a reduced sentence. Everything else in the document exists to spell out the details and limits of that basic exchange.",
+      modelYellow: [1, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that structurally bookend the document.",
+      pass2NoteLabel: "How does the document open and close, and why might it be organized that way?",
+      pass2Model: "The document is structurally bookended: it opens by establishing its legal authority (Rule 11 of the Federal Rules of Criminal Procedure) and who the parties are, and closes by defining the limits of what the defendant gave up — specifically, the right to appeal. Between these two anchors sits the substance of the deal itself.",
+      modelBlue: [0, 6],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences where the legal language is doing careful, protective work.",
+      pass3NoteLabel: "Pick one of these clauses. What is it protecting against, or what expectation is it managing?",
+      pass3Model: "Notice how carefully each clause manages expectations and protects the government: the rights-waiver clause spells out precisely what's being given up (jury trial, confrontation, silence) rather than using vague language; the cooperation clause requires \"full and truthful\" cooperation, not just any cooperation; and the sentencing clause explicitly warns that the judge isn't bound by the agreement — protecting the government from a claim that it promised something it couldn't actually guarantee.",
+      modelPink: [2, 3, 5]
     }
   ]
+
 };
 
 var CLOSEREADING_LEVEL3 = {
