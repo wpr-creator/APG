@@ -957,6 +957,7 @@ var closeReadingState = {
   maxPassReached: 1,
   tagged: {},
   notes: {},
+  chunkNotes: {},
   passageScores: []
 };
 
@@ -968,6 +969,7 @@ function closeReadingSetPanelVisible(showPassageUI) {
   document.getElementById('cr-pass-instruction').style.display = showPassageUI ? '' : 'none';
   document.getElementById('cr-legend').style.display = showPassageUI ? '' : 'none';
   document.getElementById('cr-passage-text').style.display = showPassageUI ? '' : 'none';
+  document.getElementById('cr-chunk-notes-panel').style.display = showPassageUI ? '' : 'none';
   if (!showPassageUI) document.getElementById('cr-simplify-box').classList.remove('show');
   document.querySelector('#skills-closereading-panel .cr-note-box').style.display = showPassageUI ? '' : 'none';
   document.querySelector('#skills-closereading-panel .cr-nav-row').style.display = showPassageUI ? '' : 'none';
@@ -990,6 +992,7 @@ function closeReadingLoadPassage(idx) {
   closeReadingState.passageIdx = idx;
   closeReadingState.tagged = {};
   closeReadingState.notes = {};
+  closeReadingState.chunkNotes = {};
   closeReadingState.pass = 1;
   closeReadingState.maxPassReached = 1;
   closeReadingState.simplifyOn = false;
@@ -1052,6 +1055,7 @@ function closeReadingRenderPassageText() {
     return '<span class="' + cls + '" onclick="closeReadingToggleChunk(' + i + ')">' + chunkText + '</span> ';
   }).join('');
   document.getElementById('cr-passage-text').innerHTML = html;
+  closeReadingRenderChunkNotesPanel();
 }
 
 function closeReadingToggleChunk(idx) {
@@ -1062,6 +1066,48 @@ function closeReadingToggleChunk(idx) {
     closeReadingState.tagged[idx] = activeColor;
   }
   closeReadingRenderPassageText();
+}
+
+// Renders one small note field per currently-tagged chunk, right below
+// the passage -- this is the actual AVID "margin note next to what you
+// highlighted" move. Notes are keyed by chunk index and persist across
+// passes (a chunk only ever holds one final color, so one note per
+// chunk is enough), but the panel only shows chunks tagged in the
+// CURRENT pass so students aren't overwhelmed by every prior pass's
+// tags while they're focused on the current one.
+function closeReadingRenderChunkNotesPanel() {
+  var passage = closeReadingState.levelData.passages[closeReadingState.passageIdx];
+  var activeColor = CR_PASS_COLORS[closeReadingState.pass];
+  var panel = document.getElementById('cr-chunk-notes-panel');
+  if (!panel) return;
+
+  var taggedThisPass = Object.keys(closeReadingState.tagged)
+    .map(Number)
+    .filter(function(idx) { return closeReadingState.tagged[idx] === activeColor; })
+    .sort(function(a, b) { return a - b; });
+
+  if (taggedThisPass.length === 0) {
+    panel.innerHTML = '';
+    panel.classList.remove('show');
+    return;
+  }
+
+  panel.classList.add('show');
+  panel.innerHTML =
+    '<div class="cr-chunk-notes-label">MARGIN NOTES — why did you tag each ' + activeColor + ' sentence?</div>' +
+    taggedThisPass.map(function(idx) {
+      var preview = passage.chunks[idx].length > 70 ? passage.chunks[idx].slice(0, 70) + '…' : passage.chunks[idx];
+      var savedNote = closeReadingState.chunkNotes[idx] || '';
+      return '<div class="cr-chunk-note-row">' +
+        '<div class="cr-chunk-note-preview"><span class="cr-swatch ' + activeColor + '"></span>"' + preview + '"</div>' +
+        '<textarea class="cr-chunk-note-input" rows="2" placeholder="Explain why this sentence belongs here..." ' +
+        'oninput="closeReadingSaveChunkNote(' + idx + ', this.value)">' + savedNote + '</textarea>' +
+      '</div>';
+    }).join('');
+}
+
+function closeReadingSaveChunkNote(idx, text) {
+  closeReadingState.chunkNotes[idx] = text;
 }
 
 function closeReadingSaveNote(text) {

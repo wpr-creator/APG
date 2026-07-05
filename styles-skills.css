@@ -738,6 +738,29 @@
     .cr-chunk.cr-blue { background: #bfdbfe; }
     .cr-chunk.cr-pink { background: #fbcfe8; }
 
+    .cr-chunk-notes-panel {
+      display: none; background: #fafafa; border-left: 3px solid var(--skill-teal);
+      border-radius: 0 10px 10px 0; padding: 12px 16px; margin-bottom: 18px;
+    }
+    .cr-chunk-notes-panel.show { display: block; }
+    .cr-chunk-notes-label {
+      font-size: 10px; font-weight: 800; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--skill-teal-dark); margin-bottom: 10px;
+    }
+    .cr-chunk-note-row { margin-bottom: 12px; }
+    .cr-chunk-note-row:last-child { margin-bottom: 0; }
+    .cr-chunk-note-preview {
+      font-size: 12px; font-style: italic; color: #555; margin-bottom: 4px;
+      display: flex; align-items: flex-start; gap: 6px;
+    }
+    .cr-chunk-note-preview .cr-swatch { flex-shrink: 0; margin-top: 3px; }
+    .cr-chunk-note-input {
+      width: 100%; border: 1.5px solid #ddd; border-radius: 8px; padding: 8px 12px;
+      font-family: 'Source Sans 3', sans-serif; font-size: 13px; color: #1a2e5a;
+      resize: vertical;
+    }
+    .cr-chunk-note-input:focus { outline: none; border-color: var(--skill-teal); }
+
     .cr-note-box { margin-bottom: 18px; }
     .cr-note-label {
       display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.06em;
