@@ -58,29 +58,12 @@
 <body class="unit-1">
   <div class="stars-stripe"></div>
   <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>O'Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
-  <nav><div class="nav-inner">
-    <a class="nav-link" href="/APG/">Home</a>
-    <div class="nav-group has-active"><div class="nav-group-label">Unit 1</div><div class="nav-dropdown">
-      <a class="nav-link" href="/APG/unit1.html">Overview</a>
-      <a class="nav-link" href="/APG/docs/articles-of-confederation.html">Articles of Confederation</a>
-      <a class="nav-link" href="/APG/docs/constitution.html">U.S. Constitution</a>
-      <a class="nav-link" href="/APG/docs/declaration-of-independence.html">Declaration of Independence</a>
-      <a class="nav-link" href="/APG/docs/federalist-10.html">Federalist No. 10</a>
-      <a class="nav-link active" href="/APG/docs/federalist-51.html">Federalist No. 51</a>
-      <a class="nav-link" href="/APG/docs/brutus-1.html">Brutus No. 1</a>
-    </div></div>
-    <div class="nav-group"><div class="nav-group-label">Unit 2</div><div class="nav-dropdown">
-      <a class="nav-link" href="/APG/unit2.html">Overview</a>
-      <a class="nav-link" href="/APG/docs/federalist-70.html">Federalist No. 70</a>
-      <a class="nav-link" href="/APG/docs/federalist-76.html">Federalist No. 76</a>
-      <a class="nav-link" href="/APG/docs/federalist-78.html">Federalist No. 78</a>
-    </div></div>
-    <div class="nav-group"><div class="nav-group-label">Tools</div><div class="nav-dropdown">
-      <a class="nav-link" href="/APG/#review">FRQ &amp; Review</a>
-      <a class="nav-link" href="/APG/#glossary">Glossary</a>
-    </div></div>
-    <a class="nav-link nav-link-foundations" href="/APG/#skills">Foundations</a>
-  </div></nav>
+  <nav>
+    <div class="nav-inner" id="app-nav"></div>
+  </nav>
+  <script src="../data-required.js"></script>
+  <script src="../nav-render.js"></script>
+  <script>renderNav({ mountId: "app-nav", currentFile: "docs/federalist-51.html" });</script>
 
   <div class="doc-page">
     <div class="doc-nav">
