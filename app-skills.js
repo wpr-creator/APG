@@ -759,6 +759,12 @@ function skillsStartApplyIt() {
   var applyData = levelData.applyIt;
   if (!applyData) return;
 
+  // Tag pair is configurable per activity so Apply It can be reused for
+  // skills other than fact/opinion (e.g. vocabulary correct/incorrect
+  // usage). Defaults preserve the original CER fact/opinion behavior.
+  var tagPos = applyData.tagPositive || { value: 'fact', label: 'TAG AS FACT' };
+  var tagNeg = applyData.tagNegative || { value: 'opinion', label: 'TAG AS OPINION' };
+
   applyItTagged = {};
   document.getElementById('skills-results').classList.remove('show');
   document.getElementById('skills-apply-panel').classList.add('show');
@@ -771,9 +777,9 @@ function skillsStartApplyIt() {
   document.getElementById('skills-apply-body').innerHTML =
     '<div class="skills-apply-intro">' + applyData.intro + '</div>' +
     '<div class="skills-apply-tag-btns">' +
-      '<button class="skills-apply-tag-btn fact-btn" onclick="applyTagSelected(\'fact\')">TAG AS FACT</button>' +
-      '<button class="skills-apply-tag-btn opinion-btn" onclick="applyTagSelected(\'opinion\')">TAG AS OPINION</button>' +
-      '<button class="skills-apply-tag-btn clear-btn" onclick="applyTagSelected(\'clear\')">CLEAR TAG</button>' +
+      '<button class="skills-apply-tag-btn tag-pos-btn" onclick="applyTagSelected(\'' + tagPos.value + '\',\'pos\')">' + tagPos.label + '</button>' +
+      '<button class="skills-apply-tag-btn tag-neg-btn" onclick="applyTagSelected(\'' + tagNeg.value + '\',\'neg\')">' + tagNeg.label + '</button>' +
+      '<button class="skills-apply-tag-btn clear-btn" onclick="applyTagSelected(\'clear\',\'clear\')">CLEAR TAG</button>' +
     '</div>' +
     '<div class="skills-apply-instructions">Click a sentence to select it, then click a tag button above. Selected sentence will highlight in yellow.</div>' +
     '<div class="skills-apply-passage" id="apply-passage">' + sentencesHtml + '</div>' +
@@ -790,7 +796,7 @@ function applySelectSentence(idx) {
   // Deselect previous
   if (applyItSelected !== null) {
     var prev = document.getElementById('apply-s-' + applyItSelected);
-    if (prev && !prev.classList.contains('tagged-fact') && !prev.classList.contains('tagged-opinion')) {
+    if (prev && !prev.classList.contains('tagged-pos') && !prev.classList.contains('tagged-neg')) {
       prev.style.background = '';
     } else if (prev) {
       prev.style.outline = '';
@@ -801,18 +807,18 @@ function applySelectSentence(idx) {
   if (el) el.style.outline = '3px solid var(--skill-purple)';
 }
 
-function applyTagSelected(tag) {
+function applyTagSelected(tag, polarity) {
   if (applyItSelected === null) return;
   var el = document.getElementById('apply-s-' + applyItSelected);
   if (!el) return;
 
-  el.classList.remove('tagged-fact', 'tagged-opinion');
+  el.classList.remove('tagged-pos', 'tagged-neg');
   el.style.outline = '';
 
   if (tag === 'clear') {
     delete applyItTagged[applyItSelected];
   } else {
-    el.classList.add('tagged-' + tag);
+    el.classList.add('tagged-' + polarity);
     applyItTagged[applyItSelected] = tag;
   }
   applyItSelected = null;

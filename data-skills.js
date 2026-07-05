@@ -289,7 +289,21 @@ var SKILLS_VOCAB_LEVEL1 = {
       answer: 1,
       explain: "The clue is 'putting it into effect the same day' — to IMPLEMENT means to put a plan or decision into action."
     }
-  ]
+  ],
+  applyIt: {
+    intro: "You've learned to use context clues to figure out word meanings. Now apply it. Below are 7 sentences, each using one of the words you just practiced. Click a sentence, then tag it as USED CORRECTLY (the word fits the context) or USED INCORRECTLY (the word doesn't match what the sentence is describing). When you're done, click Check My Work.",
+    tagPositive: { value: "correct", label: "USED CORRECTLY" },
+    tagNegative: { value: "incorrect", label: "USED INCORRECTLY" },
+    sentences: [
+      { text: "The senator decided to ABSTAIN from the vote, casting an enthusiastic yes and rallying others to join her.", answer: "incorrect", explain: "USED INCORRECTLY — ABSTAIN means to choose not to participate. 'Casting an enthusiastic yes and rallying others' is the opposite of abstaining." },
+      { text: "After months of gridlock, the two parties reached a COMPROMISE, with each side giving up part of what it wanted in the final bill.", answer: "correct", explain: "USED CORRECTLY — 'each side giving up part of what it wanted' is exactly what a compromise is." },
+      { text: "The new speed limit law was UNCONSTITUTIONAL because it was extremely unpopular with drivers in the state.", answer: "incorrect", explain: "USED INCORRECTLY — being unpopular doesn't make a law unconstitutional. UNCONSTITUTIONAL means it violates the Constitution, which has nothing to do with a law's popularity." },
+      { text: "The committee was BIPARTISAN, made up entirely of members from a single political party who agreed on every issue.", answer: "incorrect", explain: "USED INCORRECTLY — BIPARTISAN means involving both parties. A committee made up of only one party is the opposite of bipartisan." },
+      { text: "The amendment was finally RATIFIED after three-fourths of the states voted to approve it.", answer: "correct", explain: "USED CORRECTLY — being approved by three-fourths of the states is exactly what it means for an amendment to be ratified." },
+      { text: "The proposal was CONTROVERSIAL, with strong majorities in every poll showing near-total agreement and no public debate at all.", answer: "incorrect", explain: "USED INCORRECTLY — CONTROVERSIAL means causing strong disagreement. Near-total agreement and no debate describes something uncontroversial." },
+      { text: "Congress voted to ABOLISH the outdated rule, ending it completely after years of criticism.", answer: "correct", explain: "USED CORRECTLY — 'ending it completely' is precisely what it means to abolish something." }
+    ]
+  }
 };
 
 var SKILLS_VOCAB_LEVEL2 = {
@@ -408,7 +422,21 @@ var SKILLS_VOCAB_LEVEL2 = {
       answer: 1,
       explain: "The clue is 'funneling money through organizations not subject to contribution limits' — this is a way of AVOIDING the law without technically breaking it. To CIRCUMVENT means to find a way around a rule or obstacle."
     }
-  ]
+  ],
+  applyIt: {
+    intro: "Now apply these harder academic words to new sentences. Click a sentence, then tag it as USED CORRECTLY or USED INCORRECTLY based on whether the bolded word actually fits what the sentence describes.",
+    tagPositive: { value: "correct", label: "USED CORRECTLY" },
+    tagNegative: { value: "incorrect", label: "USED INCORRECTLY" },
+    sentences: [
+      { text: "The new immigration bill was COMPREHENSIVE, addressing only visa processing fees and leaving every other part of the system untouched.", answer: "incorrect", explain: "USED INCORRECTLY — COMPREHENSIVE means covering everything completely. Addressing only one narrow piece and leaving everything else untouched is the opposite." },
+      { text: "The judge ruled the search was outside the department's JURISDICTION, since the arrest happened in a city where those officers had no legal authority.", answer: "correct", explain: "USED CORRECTLY — having no legal authority in that city is exactly a jurisdiction problem." },
+      { text: "The law was RETROACTIVE, applying only to actions that would happen in future years and never touching anything from the past.", answer: "incorrect", explain: "USED INCORRECTLY — RETROACTIVE means applying backward to events that already happened. A law that applies 'only to the future' is the opposite of retroactive." },
+      { text: "Her testimony was full of AMBIGUOUS statements, each one so vague that senators on both sides interpreted it differently.", answer: "correct", explain: "USED CORRECTLY — being open to multiple interpretations is exactly what ambiguous means." },
+      { text: "The two witnesses gave CONTRADICTORY accounts that lined up perfectly, confirming each other's version of events in every detail.", answer: "incorrect", explain: "USED INCORRECTLY — CONTRADICTORY means conflicting or opposing. Accounts that 'lined up perfectly' and confirm each other are not contradictory." },
+      { text: "The relief package was meant to MITIGATE the damage from the flood, softening the worst effects even though it couldn't fix everything.", answer: "correct", explain: "USED CORRECTLY — softening the worst effects without fully fixing the problem is exactly what mitigate means." },
+      { text: "The senator's ELOQUENCE was obvious — his mumbled, disorganized remarks left the audience confused about what he was even trying to say.", answer: "incorrect", explain: "USED INCORRECTLY — ELOQUENCE means speaking powerfully and effectively. Mumbled, disorganized, and confusing remarks describe the opposite of eloquence." }
+    ]
+  }
 };
 
 var SKILLS_VOCAB_LEVEL3 = {
@@ -492,7 +520,22 @@ var SKILLS_VOCAB_LEVEL3 = {
       answer: 1,
       explain: "INHERENTLY means by its very nature — Warren is saying segregated schools are NOT just unequal in practice but are unequal at their core, by definition. The word 'therefore' after it shows this is a strong, absolute conclusion."
     }
-  ]
+  ],
+  applyIt: {
+    intro: "Apply these primary-source words to new sentences written in the same dense, formal style. Click a sentence, then tag it as USED CORRECTLY or USED INCORRECTLY based on whether the bolded word fits the meaning the sentence is building toward.",
+    tagPositive: { value: "correct", label: "USED CORRECTLY" },
+    tagNegative: { value: "incorrect", label: "USED INCORRECTLY" },
+    sentences: [
+      { text: "The Court held that an unjust statute COMPELS obedience from the minority while leaving the majority free to ignore it — a classic sign of an unjust law.", answer: "correct", explain: "USED CORRECTLY — this matches the exact pattern from the Letter from Birmingham Jail: an unjust law forces the minority to obey while the majority group isn't bound by it." },
+      { text: "The opinion noted that Congress INHERENTLY lacks authority over the courts, since that power was deliberately withheld by Article III.", answer: "correct", explain: "USED CORRECTLY — 'deliberately withheld' shows the lack of authority is fundamental and by design, which is exactly what inherently signals here." },
+      { text: "Federalist No. 78 explains that the judiciary controls neither the sword nor the PURSE, meaning it has no command over military force or public funds.", answer: "correct", explain: "USED CORRECTLY — 'no command over military force or public funds' is precisely what purse means in this famous pairing." },
+      { text: "The dissent argued the ruling was LEGITIMATE because it directly contradicted the text of the Constitution and ignored established precedent.", answer: "incorrect", explain: "USED INCORRECTLY — LEGITIMATE means valid and proper under the law. A ruling that contradicts the Constitution and ignores precedent would be described as illegitimate, not legitimate." },
+      { text: "The majority opinion stated EMPHATICALLY that the law was unconstitutional, using unusually forceful and unqualified language to make the point.", answer: "correct", explain: "USED CORRECTLY — 'unusually forceful and unqualified language' is exactly what emphatically describes." },
+      { text: "Madison warned that unchecked ambition in one branch would COUNTERACT the ambition of the others, causing all three branches to grow in power together with no resistance.", answer: "incorrect", explain: "USED INCORRECTLY — COUNTERACT means to work against and neutralize. Branches 'growing in power together with no resistance' describes the opposite of one ambition counteracting another." },
+      { text: "The Court found that the state's interest in regulating commerce was INTERFERING with federal law, creating a direct conflict the Supremacy Clause was designed to resolve.", answer: "correct", explain: "USED CORRECTLY — 'a direct conflict' between state and federal law is exactly what interfering describes here." },
+      { text: "The plaintiffs argued that the new policy would cause them to SHED additional legal protections, gaining several new rights they had not previously held.", answer: "incorrect", explain: "USED INCORRECTLY — SHED means to lose or give up. 'Gaining several new rights' is the opposite of shedding protections." }
+    ]
+  }
 };
 
 

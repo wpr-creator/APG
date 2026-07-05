@@ -442,10 +442,10 @@
       margin: 1px; transition: background 0.15s; position: relative;
     }
     .skills-apply-sentence:hover { background: #fef9c3; }
-    .skills-apply-sentence.tagged-fact {
+    .skills-apply-sentence.tagged-pos {
       background: #dcfce7; border-bottom: 3px solid #22c55e;
     }
-    .skills-apply-sentence.tagged-opinion {
+    .skills-apply-sentence.tagged-neg {
       background: #fee2e2; border-bottom: 3px solid #ef4444;
     }
     .skills-apply-instructions {
@@ -458,8 +458,8 @@
       padding: 8px 20px; border-radius: 99px; border: none;
       font-size: 13px; font-weight: 800; cursor: pointer;
     }
-    .skills-apply-tag-btn.fact-btn { background: #dcfce7; color: #166534; }
-    .skills-apply-tag-btn.opinion-btn { background: #fee2e2; color: #991b1b; }
+    .skills-apply-tag-btn.tag-pos-btn { background: #dcfce7; color: #166534; }
+    .skills-apply-tag-btn.tag-neg-btn { background: #fee2e2; color: #991b1b; }
     .skills-apply-tag-btn.clear-btn { background: #eee; color: #555; }
     .skills-apply-check-btn {
       padding: 12px 32px; border-radius: 99px;

@@ -85,13 +85,6 @@ const SCOTUS_CASES = [
     tip: "Contrast with Engel v. Vitale (Establishment) -- Yoder is a Free Exercise case where religion wins."
   },
   {
-    name: "Roe v. Wade", year: 1973, unit: 3,
-    issue: "Does the Constitution protect a woman's right to an abortion?",
-    ruling: "Yes (at the time). The right to privacy under the 14th Amendment extends to abortion decisions.",
-    sig: "Established a constitutional right to abortion (later overturned by Dobbs v. Jackson, 2022). Based on implied right to privacy.",
-    tip: "Know this was overturned in 2022 by Dobbs. The AP exam still includes it as a required case -- focus on the privacy/14th Amendment rationale."
-  },
-  {
     name: "Shaw v. Reno", year: 1993, unit: 5,
     issue: "Can states draw oddly shaped legislative districts solely to create majority-minority districts?",
     ruling: "Such districts can be challenged under the Equal Protection Clause if race is the predominant factor.",
@@ -336,7 +329,6 @@ const DEFAULT_CONTENT = {
         "Tinker v. Des Moines (1969)",
         "New York Times v. U.S. (1971)",
         "Wisconsin v. Yoder (1972)",
-        "Roe v. Wade (1973)",
         "McDonald v. Chicago (2010)",
         "Gideon v. Wainwright (1963)",
         "Miranda v. Arizona (1966)",

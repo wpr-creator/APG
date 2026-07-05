@@ -1474,7 +1474,6 @@ var CASE_META = {
   "Tinker v. Des Moines": { amends: ["1st Amendment"], clause: "Student Free Speech / Substantial Disruption Test", unit: 3 },
   "New York Times v. United States": { amends: ["1st Amendment"], clause: "Prior Restraint / Freedom of Press", unit: 3 },
   "Wisconsin v. Yoder":   { amends: ["1st Amendment", "Free Exercise Clause"], clause: "Religious Freedom vs. State Interest", unit: 3 },
-  "Roe v. Wade":          { amends: ["14th Amendment"], clause: "Right to Privacy / Due Process", unit: 3 },
   "Shaw v. Reno":         { amends: ["14th Amendment", "Equal Protection Clause"], clause: "Racial Gerrymandering", unit: 5 },
   "U.S. v. Lopez":        { amends: ["Article I", "Commerce Clause"], clause: "Limits on Congressional Commerce Power", unit: 2 },
   "McDonald v. City of Chicago": { amends: ["2nd Amendment", "14th Amendment"], clause: "Selective Incorporation / Right to Bear Arms", unit: 3 },
