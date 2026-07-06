@@ -1307,12 +1307,14 @@
         const main = document.createElement('span');
         main.textContent = event.text || '';
         text.appendChild(main);
-        if (event.ap_connection){
-          const connection = document.createElement('div');
-          connection.className = 'tdih-source';
-          connection.textContent = 'AP Gov connection: ' + event.ap_connection;
-          text.appendChild(connection);
-        }
+        const text = document.getElementById('tdih-text');
+if (text){
+  text.innerHTML = '';
+
+  const main = document.createElement('span');
+  main.textContent = event.text || '';
+  text.appendChild(main);
+}
       }
     }
     function chooseEvents(db){
