@@ -1263,5 +1263,103 @@
   <script src="app-skills.js"></script>
   <script src="data-extra.js"></script>
   <script src="index-app.js"></script>
+
+  <!-- U.S.-only This Day in Politics override: no paid API needed -->
+  <script>
+  (function(){
+    const FALLBACK_US_POLITICS_EVENTS = {"01-03": [{"year": 1959, "text": "Alaska was admitted as the 49th state, changing representation in Congress and the Electoral College.", "ap_connection": "Federalism; representation; state admission"}], "01-04": [{"year": 2007, "text": "Nancy Pelosi became the first woman to serve as Speaker of the House.", "ap_connection": "Congressional leadership; descriptive representation"}], "01-06": [{"year": 1941, "text": "President Franklin D. Roosevelt delivered the Four Freedoms speech to Congress.", "ap_connection": "Presidential agenda setting; civil liberties; foreign policy"}, {"year": 2021, "text": "Congress reconvened after the January 6 attack and certified the Electoral College results.", "ap_connection": "Electoral College; peaceful transfer of power; Congress"}], "01-10": [{"year": 1776, "text": "Thomas Paine published Common Sense, arguing for American independence and popular sovereignty.", "ap_connection": "Popular sovereignty; political participation; founding ideals"}], "01-15": [{"year": 1929, "text": "Martin Luther King Jr. was born; his leadership later helped push federal civil rights action.", "ap_connection": "Civil rights movement; social movements; federal legislation"}], "01-20": [{"year": 1937, "text": "The first presidential inauguration under the 20th Amendment was held, moving Inauguration Day from March to January.", "ap_connection": "Constitutional amendments; presidency; lame-duck period"}], "01-22": [{"year": 1973, "text": "The Supreme Court decided Roe v. Wade, recognizing a constitutional right to abortion under privacy doctrine.", "ap_connection": "Civil liberties; privacy; substantive due process"}], "01-24": [{"year": 1964, "text": "The 24th Amendment was ratified, banning poll taxes in federal elections.", "ap_connection": "Voting rights; amendments; political participation"}], "01-30": [{"year": 1882, "text": "Franklin D. Roosevelt was born; his presidency reshaped expectations of federal power during the New Deal.", "ap_connection": "Presidency; bureaucracy; federal power"}], "02-01": [{"year": 1960, "text": "Four students began the Greensboro sit-ins, a major civil rights protest against segregation.", "ap_connection": "Civil rights; linkage institutions; social movements"}], "02-03": [{"year": 1870, "text": "The 15th Amendment was ratified, prohibiting voting discrimination based on race, color, or previous condition of servitude.", "ap_connection": "Voting rights; Reconstruction amendments; political participation"}, {"year": 1913, "text": "The 16th Amendment was ratified, authorizing Congress to collect a federal income tax.", "ap_connection": "Federal power; taxation; constitutional amendments"}], "02-08": [{"year": 1910, "text": "The Boy Scouts of America was incorporated, later becoming part of civic life and civil society debates.", "ap_connection": "Civil society; civic participation"}], "02-12": [{"year": 1809, "text": "Abraham Lincoln was born; his presidency tested executive power, federalism, and constitutional union.", "ap_connection": "Presidency; federalism; civil liberties"}], "02-19": [{"year": 1942, "text": "President Franklin D. Roosevelt signed Executive Order 9066, authorizing Japanese American internment during World War II.", "ap_connection": "Civil liberties; executive power; Korematsu"}], "02-24": [{"year": 1803, "text": "The Supreme Court decided Marbury v. Madison, establishing judicial review.", "ap_connection": "Judicial review; Supreme Court; checks and balances"}], "02-27": [{"year": 1951, "text": "The 22nd Amendment was ratified, limiting presidents to two elected terms.", "ap_connection": "Presidency; constitutional amendments; checks on power"}], "03-01": [{"year": 1781, "text": "The Articles of Confederation went into effect, creating the first national government of the United States.", "ap_connection": "Articles of Confederation; federalism; weaknesses of national government"}], "03-04": [{"year": 1789, "text": "The Constitution took effect as the framework for the new federal government.", "ap_connection": "Constitution; separation of powers; federalism"}], "03-06": [{"year": 1857, "text": "The Supreme Court decided Dred Scott v. Sandford, denying citizenship to enslaved and formerly enslaved Black people.", "ap_connection": "Civil rights; Supreme Court; constitutional conflict"}], "03-12": [{"year": 1933, "text": "Franklin D. Roosevelt gave his first fireside chat, using radio to build public support for banking reforms.", "ap_connection": "Presidential communication; public opinion; media"}], "03-15": [{"year": 1965, "text": "President Lyndon B. Johnson addressed Congress after Selma and called for voting rights legislation.", "ap_connection": "Civil rights; presidency; agenda setting"}], "03-18": [{"year": 1963, "text": "The Supreme Court decided Gideon v. Wainwright, requiring states to provide attorneys for defendants who cannot afford one in felony cases.", "ap_connection": "Due process; selective incorporation; rights of the accused"}], "03-22": [{"year": 1972, "text": "Congress sent the Equal Rights Amendment to the states for ratification, though it did not become part of the Constitution.", "ap_connection": "Amendment process; civil rights; federalism"}], "03-26": [{"year": 1962, "text": "The Supreme Court decided Baker v. Carr, opening the door to federal court review of legislative districting.", "ap_connection": "Redistricting; equal protection; judicial power"}], "04-02": [{"year": 1917, "text": "President Woodrow Wilson asked Congress for a declaration of war against Germany.", "ap_connection": "War powers; presidency; Congress"}], "04-04": [{"year": 1968, "text": "Martin Luther King Jr. was assassinated, intensifying national debate over civil rights, protest, and federal action.", "ap_connection": "Civil rights; social movements; public policy"}], "04-09": [{"year": 1866, "text": "Congress passed the Civil Rights Act of 1866 over President Andrew Johnson's veto.", "ap_connection": "Congressional power; civil rights; Reconstruction"}], "04-13": [{"year": 1743, "text": "Thomas Jefferson was born; his ideas shaped the Declaration of Independence and debates over limited government.", "ap_connection": "Declaration of Independence; natural rights; limited government"}], "04-17": [{"year": 1905, "text": "The Supreme Court decided Lochner v. New York, limiting some economic regulations under liberty-of-contract reasoning.", "ap_connection": "Judicial review; economic liberty; due process"}], "04-19": [{"year": 1775, "text": "The Battles of Lexington and Concord began armed conflict between colonists and British authority.", "ap_connection": "Revolutionary origins; consent of the governed"}], "04-30": [{"year": 1789, "text": "George Washington took the first presidential oath of office in New York City.", "ap_connection": "Presidency; constitutional norms; executive branch"}], "05-04": [{"year": 1961, "text": "The Freedom Rides began, challenging segregation in interstate bus travel.", "ap_connection": "Civil rights; interstate commerce; federal enforcement"}], "05-17": [{"year": 1954, "text": "The Supreme Court decided Brown v. Board of Education, ruling school segregation unconstitutional.", "ap_connection": "Equal protection; civil rights; Supreme Court"}], "05-18": [{"year": 1896, "text": "The Supreme Court decided Plessy v. Ferguson, approving 'separate but equal' segregation.", "ap_connection": "Equal protection; civil rights; precedent"}], "05-25": [{"year": 1787, "text": "The Constitutional Convention opened in Philadelphia.", "ap_connection": "Constitutional Convention; compromises; founding"}], "06-02": [{"year": 1924, "text": "The Indian Citizenship Act granted U.S. citizenship to Native Americans born in the United States.", "ap_connection": "Citizenship; civil rights; federalism"}], "06-08": [{"year": 1789, "text": "James Madison introduced proposed amendments that would become the Bill of Rights.", "ap_connection": "Bill of Rights; civil liberties; Federalist/Anti-Federalist debate"}], "06-13": [{"year": 1966, "text": "The Supreme Court decided Miranda v. Arizona, requiring warnings before custodial interrogation.", "ap_connection": "Rights of the accused; due process; selective incorporation"}], "06-15": [{"year": 1804, "text": "The 12th Amendment was ratified, changing the Electoral College process for president and vice president.", "ap_connection": "Electoral College; amendments; elections"}], "06-19": [{"year": 1865, "text": "Union troops announced emancipation in Galveston, Texas, an event later commemorated as Juneteenth.", "ap_connection": "Civil rights; federalism; Reconstruction"}], "06-23": [{"year": 1972, "text": "Title IX was enacted, banning sex discrimination in federally funded education programs.", "ap_connection": "Civil rights; federal policy; equal protection"}], "06-25": [{"year": 1962, "text": "The Supreme Court decided Engel v. Vitale, ruling school-sponsored prayer unconstitutional.", "ap_connection": "Establishment Clause; civil liberties; selective incorporation"}], "06-26": [{"year": 2015, "text": "The Supreme Court decided Obergefell v. Hodges, requiring states to license and recognize same-sex marriages.", "ap_connection": "Equal protection; due process; civil rights"}], "07-02": [{"year": 1964, "text": "President Lyndon B. Johnson signed the Civil Rights Act of 1964.", "ap_connection": "Civil rights; Congress; federal enforcement"}], "07-04": [{"year": 1776, "text": "The Second Continental Congress adopted the Declaration of Independence.", "ap_connection": "Natural rights; popular sovereignty; founding ideals"}], "07-06": [{"year": 1854, "text": "An early Republican Party convention met in Jackson, Michigan, reflecting growing conflict over slavery and the future of national politics.", "ap_connection": "Political parties; realignment; sectional conflict"}], "07-09": [{"year": 1868, "text": "The 14th Amendment was ratified, defining citizenship and protecting due process and equal protection.", "ap_connection": "Civil rights; due process; equal protection"}], "07-16": [{"year": 1790, "text": "Congress approved the Residence Act, establishing the future permanent capital on the Potomac River.", "ap_connection": "Congress; federalism; national institutions"}], "07-26": [{"year": 1948, "text": "President Harry Truman ordered the desegregation of the U.S. armed forces.", "ap_connection": "Executive orders; civil rights; presidency"}], "07-30": [{"year": 1965, "text": "President Lyndon B. Johnson signed Medicare and Medicaid into law.", "ap_connection": "Social welfare policy; Congress; federal bureaucracy"}], "08-02": [{"year": 1923, "text": "Calvin Coolidge became president after the death of Warren G. Harding.", "ap_connection": "Presidential succession; executive branch"}], "08-06": [{"year": 1965, "text": "President Lyndon B. Johnson signed the Voting Rights Act of 1965.", "ap_connection": "Voting rights; civil rights; federalism"}], "08-09": [{"year": 1974, "text": "Richard Nixon resigned the presidency, and Gerald Ford became president.", "ap_connection": "Presidency; checks and balances; impeachment pressure"}], "08-18": [{"year": 1920, "text": "The 19th Amendment was ratified, prohibiting voting discrimination based on sex.", "ap_connection": "Suffrage; voting rights; amendments"}], "08-24": [{"year": 1814, "text": "British forces burned Washington, D.C., during the War of 1812.", "ap_connection": "National government; war powers; federal institutions"}], "08-28": [{"year": 1963, "text": "The March on Washington brought civil rights activists to the capital and featured Martin Luther King Jr.'s 'I Have a Dream' speech.", "ap_connection": "Civil rights; protest; linkage institutions"}], "09-02": [{"year": 1789, "text": "Congress created the Department of the Treasury.", "ap_connection": "Bureaucracy; Congress; executive departments"}], "09-05": [{"year": 1774, "text": "The First Continental Congress convened in Philadelphia.", "ap_connection": "Colonial resistance; representative government; founding"}], "09-17": [{"year": 1787, "text": "Delegates signed the U.S. Constitution at the Philadelphia Convention.", "ap_connection": "Constitution; separation of powers; federalism"}], "09-24": [{"year": 1789, "text": "The Judiciary Act of 1789 established the basic structure of the federal court system.", "ap_connection": "Federal courts; Congress; judicial branch"}], "09-25": [{"year": 1789, "text": "Congress proposed the amendments that became the Bill of Rights.", "ap_connection": "Civil liberties; amendment process; Anti-Federalist concerns"}], "10-03": [{"year": 1789, "text": "George Washington issued the first presidential Thanksgiving proclamation.", "ap_connection": "Presidency; civic culture; executive communication"}], "10-12": [{"year": 2000, "text": "The USS Cole attack later shaped debates over presidential war powers and national security policy.", "ap_connection": "Foreign policy; executive power; national security"}], "10-15": [{"year": 1991, "text": "The Senate confirmed Clarence Thomas to the Supreme Court after highly contested hearings.", "ap_connection": "Judicial appointments; Senate confirmation; public opinion"}], "10-19": [{"year": 1781, "text": "British surrender at Yorktown effectively ended major fighting in the American Revolution.", "ap_connection": "Founding era; sovereignty; national independence"}], "10-26": [{"year": 2001, "text": "The USA PATRIOT Act was signed, expanding federal surveillance and law-enforcement powers after September 11.", "ap_connection": "Civil liberties; national security; Congress"}], "11-04": [{"year": 2008, "text": "Barack Obama was elected president, becoming the first Black president of the United States.", "ap_connection": "Elections; political participation; representation"}], "11-07": [{"year": 1916, "text": "Jeannette Rankin became the first woman elected to Congress.", "ap_connection": "Congress; representation; political participation"}], "11-08": [{"year": 1960, "text": "John F. Kennedy was elected president in one of the closest elections in U.S. history.", "ap_connection": "Elections; media; public opinion"}], "11-09": [{"year": 1989, "text": "The fall of the Berlin Wall reshaped U.S. foreign policy debates at the end of the Cold War.", "ap_connection": "Foreign policy; presidency; national security"}], "11-19": [{"year": 1863, "text": "Abraham Lincoln delivered the Gettysburg Address, redefining the Civil War around equality and democratic government.", "ap_connection": "Founding ideals; popular sovereignty; civil rights"}], "11-22": [{"year": 1963, "text": "President John F. Kennedy was assassinated, and Lyndon B. Johnson became president.", "ap_connection": "Presidential succession; executive branch; public trust"}], "12-01": [{"year": 1955, "text": "Rosa Parks was arrested in Montgomery, Alabama, helping spark the Montgomery Bus Boycott.", "ap_connection": "Civil rights; social movements; equal protection"}], "12-05": [{"year": 1933, "text": "The 21st Amendment was ratified, repealing Prohibition.", "ap_connection": "Amendments; federalism; public policy"}], "12-07": [{"year": 1941, "text": "Japan attacked Pearl Harbor, leading Congress to declare war the next day.", "ap_connection": "War powers; Congress; presidency"}], "12-10": [{"year": 1869, "text": "Wyoming Territory granted women the right to vote, decades before the 19th Amendment.", "ap_connection": "Suffrage; federalism; voting rights"}], "12-15": [{"year": 1791, "text": "The Bill of Rights was ratified, protecting key civil liberties against the national government.", "ap_connection": "Bill of Rights; civil liberties; amendments"}], "12-18": [{"year": 1865, "text": "The 13th Amendment was ratified, abolishing slavery in the United States.", "ap_connection": "Civil rights; Reconstruction amendments; federal power"}], "12-19": [{"year": 1998, "text": "The House of Representatives impeached President Bill Clinton.", "ap_connection": "Impeachment; checks and balances; Congress"}]};
+    const EVENT_FILE = 'us-politics-events.json';
+    let tdihEvents = [];
+    let tdihIndex = 0;
+
+    function mmdd(date){
+      return String(date.getMonth()+1).padStart(2,'0') + '-' + String(date.getDate()).padStart(2,'0');
+    }
+    function allEvents(db){
+      return Object.entries(db).flatMap(([date, list]) => (list || []).map(event => ({...event, date})));
+    }
+    function deterministicIndex(seed, length){
+      if (!length) return 0;
+      let n = 0;
+      for (let i=0; i<seed.length; i++) n = (n * 31 + seed.charCodeAt(i)) >>> 0;
+      return n % length;
+    }
+    function labelForDate(date){
+      return date.toLocaleDateString(undefined, { month:'short', day:'numeric' });
+    }
+    function setText(id, value){
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    }
+    function renderTdih(){
+      const today = new Date();
+      setText('tdih-date-badge', labelForDate(today));
+      if (!tdihEvents.length){
+        setText('tdih-year', 'Today');
+        setText('tdih-text', 'No U.S. politics event is available yet. Add more entries to us-politics-events.json.');
+        return;
+      }
+      const event = tdihEvents[tdihIndex % tdihEvents.length];
+      setText('tdih-year', event.year ? String(event.year) : 'Civic Moment');
+      const text = document.getElementById('tdih-text');
+      if (text){
+        text.innerHTML = '';
+        const main = document.createElement('span');
+        main.textContent = event.text || '';
+        text.appendChild(main);
+        if (event.ap_connection){
+          const connection = document.createElement('div');
+          connection.className = 'tdih-source';
+          connection.textContent = 'AP Gov connection: ' + event.ap_connection;
+          text.appendChild(connection);
+        }
+      }
+    }
+    function chooseEvents(db){
+      const today = new Date();
+      const key = mmdd(today);
+      const exact = db[key] || [];
+      if (exact.length){
+        tdihEvents = exact;
+        tdihIndex = deterministicIndex(String(today.getFullYear()) + key, exact.length);
+        return;
+      }
+      const pool = allEvents(db);
+      tdihEvents = pool;
+      tdihIndex = deterministicIndex(today.toISOString().slice(0,10), pool.length);
+    }
+    async function initUsPoliticsTdih(){
+      let db = FALLBACK_US_POLITICS_EVENTS;
+      try{
+        const res = await fetch(EVENT_FILE, { cache:'no-store' });
+        if (res.ok) db = await res.json();
+      }catch(e){
+        console.warn('Using built-in U.S. politics events fallback.', e);
+      }
+      chooseEvents(db || FALLBACK_US_POLITICS_EVENTS);
+      renderTdih();
+      const prev = document.getElementById('tdih-prev');
+      const next = document.getElementById('tdih-next');
+      const discuss = document.getElementById('tdih-discuss');
+      if (prev) prev.onclick = () => { tdihIndex = (tdihIndex - 1 + tdihEvents.length) % tdihEvents.length; renderTdih(); };
+      if (next) next.onclick = () => { tdihIndex = (tdihIndex + 1) % tdihEvents.length; renderTdih(); };
+      if (discuss) discuss.onclick = () => {
+        const event = tdihEvents[tdihIndex % tdihEvents.length];
+        const question = `Discussion starter: How does this event connect to power, rights, or participation in American government?\n\n${event.year || ''} — ${event.text || ''}`;
+        const home = document.getElementById('exit-question-home');
+        const page = document.getElementById('exit-question-page');
+        if (home) home.textContent = question;
+        if (page) page.textContent = question;
+      };
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initUsPoliticsTdih);
+    } else {
+      initUsPoliticsTdih();
+    }
+    window.addEventListener('load', () => setTimeout(initUsPoliticsTdih, 250));
+  })();
+  </script>
+
 </body>
 </html>
