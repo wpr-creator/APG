@@ -558,26 +558,31 @@ var SKILLS_VOCAB_LEVEL3 = {
 
 var CLOSEREADING_LEVEL1 = {
   passages: [
-    // ---- PASSAGE 1: TEACHER-SUPPLIED (copyrighted) ----
+    // ---- PASSAGE 1: REAL CONTENT — official presidential address (public domain) ----
     {
-      title: "Eulogy for Rep. John Lewis [PASTE TEXT]",
-      source: "Barack Obama, eulogy for Rep. John Lewis, Ebenezer Baptist Church, July 30, 2020 — TEACHER: this text is under copyright; paste the actual eulogy text into the chunks array below, broken into 5-10 short pieces.",
-      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      title: "Reagan's Challenger Address",
+      source: "President Ronald Reagan, Address to the Nation on the Explosion of the Space Shuttle Challenger, January 28, 1986. Published in Public Papers of the Presidents of the United States (Ronald Reagan Presidential Library archive).",
+      simplify: "After the Challenger space shuttle exploded, Reagan speaks directly to the schoolchildren who watched it happen live. He tells them that painful things sometimes happen even when people are doing something brave and worthwhile, and that giving up isn't the answer. He closes with a famous line borrowed from a poem, describing the astronauts as having 'slipped the surly bonds of earth to touch the face of God.'",
       chunks: [
-        "[PASTE PASSAGE TEXT HERE — split into 5-10 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+        "And I want to say something to the schoolchildren of America who were watching the live coverage of the shuttle's takeoff.",
+        "I know it is hard to understand, but sometimes painful things like this happen.",
+        "It's all part of the process of exploration and discovery. It's all part of taking a chance and expanding man's horizons.",
+        "The future doesn't belong to the fainthearted; it belongs to the brave.",
+        "The Challenger crew was pulling us into the future, and we'll continue to follow them.",
+        "We will never forget them, nor the last time we saw them, this morning, as they prepared for their journey and waved goodbye and \"slipped the surly bonds of earth\" to \"touch the face of God.\""
       ],
       pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
-      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
-      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes (starting at 0) carry the main idea and list them in modelYellow below. Write 2-3 sentences here explaining why.",
-      modelYellow: [],
+      pass1NoteLabel: "In one sentence, what is Reagan's core message to the children?",
+      pass1Model: "Reagan's core reassurance to the children is that painful things sometimes happen even in worthwhile pursuits, and that the future belongs to \"the brave,\" not those who give up trying. This frames tragedy as a normal (if painful) part of exploration, not a reason to stop.",
+      modelYellow: [1, 3],
       pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure — how the speaker moves from one idea to the next.",
-      pass2NoteLabel: "How is this passage organized? What comes first, and what does it build to?",
-      pass2Model: "TEACHER: identify the structural chunks (transitions, turning points) and list their indexes in modelBlue below.",
-      modelBlue: [],
+      pass2NoteLabel: "How does Reagan shift his audience over the course of this passage?",
+      pass2Model: "Reagan structures this moment by first explicitly shifting his address to a new audience (schoolchildren specifically, not the nation broadly), then closing by shifting back — from talking to children about the future to talking about the crew pulling \"us\" (everyone) into that future. The passage is bookended by these audience shifts.",
+      modelBlue: [0, 4],
       pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the specific words or phrases where the speaker made a deliberate, powerful language choice.",
-      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why do you think the speaker chose that exact word?",
-      pass3Model: "TEACHER: identify the craft-level word/phrase chunks and list their indexes in modelPink below.",
-      modelPink: []
+      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why do you think Reagan chose it?",
+      pass3Model: "Notice the repeated \"It's all part of...\" construction — this repetition normalizes tragedy as an expected, survivable part of a larger process, rather than a devastating rupture. And the closing line borrows directly from the poem \"High Flight\" by John Gillespie Magee Jr. — a deliberate literary allusion that elevates the astronauts' deaths into something almost mythic, using someone else's exact, memorized words rather than his own to make the moment feel timeless.",
+      modelPink: [2, 5]
     },
 
     // ---- PASSAGE 2: REAL CONTENT — public congressional testimony ----
@@ -662,26 +667,33 @@ var CLOSEREADING_LEVEL1 = {
       modelPink: [5, 6]
     },
 
-    // ---- PASSAGE 5: TEACHER-SUPPLIED (copyright status unclear — treat like placeholder) ----
+    // ---- PASSAGE 5: REAL CONTENT — official presidential address (public domain) ----
     {
-      title: "Jan. 6 Speech — Constitutional Section [PASTE TEXT]",
-      source: "TEACHER: paste the specific excerpt you want here, along with an accurate citation (speaker, date, venue). This passage's copyright status is unclear, so it's left for you to supply directly.",
-      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      title: "Bush's Address to Congress After 9/11",
+      source: "President George W. Bush, Address Before a Joint Session of Congress on the United States Response to the Terrorist Attacks of September 11, September 20, 2001. Published in Public Papers of the Presidents of the United States (govinfo.gov).",
+      simplify: "Nine days after 9/11, Bush tells Congress that even though people are calling this an 'age of terror,' he refuses to accept that label. He says America itself gets to decide what this era will be called, and insists it will be an 'age of liberty' instead — closing with the blunt line 'Freedom and fear are at war.'",
       chunks: [
-        "[PASTE PASSAGE TEXT HERE — split into 5-10 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+        "After all that has just passed — all the lives taken, and all the possibilities and hopes that died with them — it is natural to wonder if America's future is one of fear.",
+        "Some speak of an age of terror.",
+        "I know there are struggles ahead, and dangers to face.",
+        "But this country will define our times, not be defined by them.",
+        "As long as the United States of America is determined and strong, this will not be an age of terror; this will be an age of liberty, here and across the world.",
+        "Great harm has been done to us. We have suffered great loss.",
+        "And in our grief and anger we have found our mission and our moment.",
+        "Freedom and fear are at war."
       ],
-      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
-      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
-      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes carry the main idea and list them in modelYellow below.",
-      modelYellow: [],
-      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure.",
-      pass2NoteLabel: "How is this passage organized?",
-      pass2Model: "TEACHER: identify the structural chunks and list their indexes in modelBlue below.",
-      modelBlue: [],
-      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK specific words or phrases with deliberate rhetorical craft.",
-      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why that word?",
-      pass3Model: "TEACHER: identify the craft-level chunks and list their indexes in modelPink below.",
-      modelPink: []
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry Bush's central claim.",
+      pass1NoteLabel: "In one sentence, what is Bush's core argument about how this era should be defined?",
+      pass1Model: "Bush's central move is reframing: rather than accept the label \"age of terror,\" he insists the country itself gets to define its era, and declares — as a statement of will rather than fact — that this will be \"an age of liberty\" instead. This is an argument about narrative control as much as policy.",
+      modelYellow: [3, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that set up the fear and uncertainty before Bush pivots against it.",
+      pass2NoteLabel: "How does Bush build toward his reframing — what does he acknowledge first?",
+      pass2Model: "Notice how Bush builds toward his reframing by first acknowledging the fear and uncertainty directly — naming the \"age of terror\" framing that others were already using, and admitting real dangers lie ahead — before pivoting against it. He doesn't dismiss the fear; he validates it first, which makes his subsequent rejection of that framing more persuasive.",
+      modelBlue: [0, 1, 2],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences with the most deliberate rhetorical craft.",
+      pass3NoteLabel: "What effect does the sentence length and rhythm create here?",
+      pass3Model: "The passage builds through a series of short, blunt declarative sentences — \"Great harm has been done to us. We have suffered great loss.\" — before landing on the four-word sentence that closes the passage: \"Freedom and fear are at war.\" The brevity and parallel structure of these final sentences creates a rhythm that builds toward that closing line, turning an abstract policy stance into something that sounds almost like verse.",
+      modelPink: [5, 6, 7]
     }
   ]
 };
@@ -753,26 +765,31 @@ var CLOSEREADING_LEVEL2 = {
       modelPink: [4]
     },
 
-    // ---- PASSAGE 3: TEACHER-SUPPLIED (copyrighted) ----
+    // ---- PASSAGE 3: REAL CONTENT — SCOTUS opinion (public domain) ----
     {
-      title: "Ta-Nehisi Coates Excerpt [PASTE TEXT]",
-      source: "TEACHER — HERE IS EXACTLY WHAT TO LOOK FOR: I'd recommend an excerpt from \"The Case for Reparations\" (The Atlantic, June 2014) — specifically a passage discussing redlining, the Contract Buyers League, or federal housing policy in Chicago. It's the most directly AP-Gov-relevant Coates piece (ties to federalism, civil rights policy, and government housing discrimination) and pairs naturally with the Murphy dissent and LBJ speech already in this level. Alternative: the opening pages of \"Between the World and Me\" (2015) if you'd prefer a more personal/memoir register closer to the Obama eulogy in Level 1. Either way: paste roughly 150-250 words (5-8 sentences), and note the exact page/section so the citation is accurate.",
-      simplify: "TEACHER: once you've pasted the real text, write a 2-4 sentence plain-English summary here for students who need extra support.",
+      title: "Shelley v. Kraemer",
+      source: "Chief Justice Fred Vinson, opinion of the Court, Shelley v. Kraemer, 334 U.S. 1 (1948)",
+      simplify: "Black families bought homes with racist rules attached to the property saying only white people could live there. The Supreme Court says the government can't just claim it's \"staying out of it\" — when courts actually enforce those racist rules, the government itself becomes responsible for the discrimination, and that violates the Fourteenth Amendment.",
       chunks: [
-        "[PASTE PASSAGE TEXT HERE — split into 5-8 short chunks. Each array entry becomes one clickable, taggable span on the page.]"
+        "These are not cases, as has been suggested, in which the States have merely abstained from action, leaving private individuals free to impose such discriminations as they see fit.",
+        "Rather, these are cases in which the States have made available to such individuals the full coercive power of government to deny to petitioners, on the grounds of race or color, the enjoyment of property rights in premises which petitioners are willing and financially able to acquire and which the grantors are willing to sell.",
+        "The difference between judicial enforcement and nonenforcement of the restrictive covenants is the difference to petitioners between being denied rights of property available to other members of the community and being accorded full enjoyment of those rights on an equal footing.",
+        "The rights created by the first section of the Fourteenth Amendment are, by its terms, guaranteed to the individual.",
+        "The rights established are personal rights.",
+        "It is, therefore, no answer to these petitioners to say that the courts may also be induced to deny white persons rights of ownership and occupancy on grounds of race or color."
       ],
-      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the main idea or the most important facts.",
-      pass1NoteLabel: "In one sentence, what is this passage mainly about?",
-      pass1Model: "TEACHER: after pasting the text, identify which chunk indexes carry the main idea and list them in modelYellow below.",
-      modelYellow: [],
-      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the parts that reveal the passage's structure.",
-      pass2NoteLabel: "How is this passage organized?",
-      pass2Model: "TEACHER: identify the structural chunks and list their indexes in modelBlue below.",
-      modelBlue: [],
-      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK specific words or phrases with deliberate rhetorical craft.",
-      pass3NoteLabel: "Pick one word or phrase you tagged pink. Why that word?",
-      pass3Model: "TEACHER: identify the craft-level chunks and list their indexes in modelPink below.",
-      modelPink: []
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that carry the Court's key holding.",
+      pass1NoteLabel: "In one sentence, what does the Court actually decide here?",
+      pass1Model: "The Court's key holding is here: it's not that the state simply stayed out of the way (state inaction), but that courts actively used the government's coercive power to enforce racial exclusion — and the practical result is that some residents get full property rights while others, denied that enforcement, don't.",
+      modelYellow: [1, 2],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that show the Court's argumentative structure.",
+      pass2NoteLabel: "How does the Court set up its argument, and where does it pivot to a new supporting idea?",
+      pass2Model: "Notice the \"not X, rather Y\" structure that opens the passage — the Court explicitly rejects one framing (states just standing aside) before asserting the real one (states actively enabling discrimination). Later, the Court pivots to a new supporting idea: that Fourteenth Amendment rights belong to individuals personally, not groups — setting up the argument that follows.",
+      modelBlue: [0, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences doing the most deliberate rhetorical work.",
+      pass3NoteLabel: "What effect does the short sentence have here? What is the final sentence doing?",
+      pass3Model: "After the long, technical sentence about coercive power, the Court drops in a short, blunt sentence: \"The rights established are personal rights.\" The brevity after a dense sentence gives it emphasis — it reads almost like a thesis statement dropped into the middle of the argument. And the final sentence directly anticipates and knocks down a counterargument (that covenants against white people could also be enforced), which is a common move in judicial opinions: naming the other side's best argument before dismantling it.",
+      modelPink: [4, 5]
     },
 
     // ---- PASSAGE 4: REAL CONTENT — SCOTUS dissent (public domain) ----
