@@ -351,12 +351,12 @@
         {
           "level": 2,
           "name": "CLAIM VS. EVIDENCE",
-          "unlocked": false
+          "unlocked": true
         },
         {
           "level": 3,
           "name": "CLAIM, EVIDENCE & REASONING",
-          "unlocked": false
+          "unlocked": true
         }
       ]
     },
@@ -366,17 +366,17 @@
         {
           "level": 1,
           "name": "EVERYDAY ACADEMIC WORDS",
-          "unlocked": false
+          "unlocked": true
         },
         {
           "level": 2,
           "name": "AP GOV ACADEMIC WORDS",
-          "unlocked": false
+          "unlocked": true
         },
         {
           "level": 3,
           "name": "PRIMARY SOURCE VOCABULARY",
-          "unlocked": false
+          "unlocked": true
         }
       ]
     },
@@ -396,7 +396,7 @@
         {
           "level": 3,
           "name": "PRIMARY SOURCES",
-          "unlocked": false
+          "unlocked": true
         }
       ]
     }
