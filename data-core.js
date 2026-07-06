@@ -133,67 +133,11 @@ const REQ_DOCS = [
 ];
 
 // ══════════════════════════════════════════════════════════
-//  DATA: THIS DAY IN GOV HISTORY (curated fallbacks, date-keyed)
-//  Format: "M/D": [ { year, text }, ... ]
-// ══════════════════════════════════════════════════════════
-const GOV_HISTORY = {
-  "1/1":  [{ year: "1863", text: "President Lincoln issues the Emancipation Proclamation, declaring enslaved people in Confederate states to be free." }],
-  "1/4":  [{ year: "1965", text: "President Lyndon B. Johnson outlines his 'Great Society' domestic program in his State of the Union address." }],
-  "1/8":  [{ year: "1918", text: "President Woodrow Wilson presents his Fourteen Points to Congress, his vision for post-WWI peace including the League of Nations." }],
-  "1/20": [{ year: "1961", text: "John F. Kennedy is inaugurated, delivering his famous address: 'Ask not what your country can do for you--ask what you can do for your country.'" }],
-  "2/3":  [{ year: "1870", text: "The 15th Amendment is ratified, prohibiting denial of the vote based on race, color, or previous condition of servitude." }],
-  "2/6":  [{ year: "1933", text: "The 20th Amendment is ratified, moving the presidential inauguration date from March 4 to January 20." }],
-  "2/24": [{ year: "1803", text: "Chief Justice John Marshall delivers the Marbury v. Madison opinion, establishing the doctrine of judicial review." }],
-  "3/4":  [{ year: "1933", text: "Franklin D. Roosevelt is inaugurated during the Great Depression, declaring 'The only thing we have to fear is fear itself.'" }],
-  "3/5":  [{ year: "1770", text: "The Boston Massacre occurs, becoming a catalyst for colonial opposition to British rule." }],
-  "3/6":  [{ year: "1857", text: "The Supreme Court issues Dred Scott v. Sandford, ruling that enslaved people are property, not citizens." }],
-  "3/25": [{ year: "1965", text: "Martin Luther King Jr. leads the Selma-to-Montgomery voting rights march, a key event leading to the Voting Rights Act of 1965." }],
-  "4/9":  [{ year: "1865", text: "Confederate General Robert E. Lee surrenders at Appomattox Court House, effectively ending the Civil War." }],
-  "4/12": [{ year: "1861", text: "Confederate forces fire on Fort Sumter, South Carolina, beginning the Civil War." }],
-  "4/14": [{ year: "1865", text: "President Abraham Lincoln is shot at Ford's Theatre; he dies the following morning." }],
-  "4/19": [{ year: "1775", text: "Battles of Lexington and Concord -- 'the shot heard round the world' -- begin the American Revolutionary War." }],
-  "5/17": [{ year: "1954", text: "The Supreme Court unanimously rules in Brown v. Board of Education that racial segregation in public schools is unconstitutional." }],
-  "5/18": [{ year: "1896", text: "The Supreme Court decides Plessy v. Ferguson, establishing the 'separate but equal' doctrine that would stand for 58 years." }],
-  "5/25": [{ year: "1787", text: "The Constitutional Convention opens in Philadelphia with delegates from 12 states -- the drafting of the U.S. Constitution begins." }],
-  "6/2":  [{ year: "1924", text: "President Coolidge signs the Indian Citizenship Act, granting U.S. citizenship to all Native Americans born in the country." }],
-  "6/5":  [{ year: "1968", text: "Senator Robert F. Kennedy is assassinated in Los Angeles after winning the California Democratic primary." }],
-  "6/13": [{ year: "1966", text: "The Supreme Court rules in Miranda v. Arizona that suspects must be informed of their rights before police interrogation." }],
-  "6/15": [{ year: "1215", text: "King John of England seals the Magna Carta -- the foundational document for constitutional limits on government power, later influencing the Founders." }],
-  "6/17": [{ year: "1972", text: "Five men are arrested breaking into the Democratic National Committee headquarters at the Watergate complex, beginning the Watergate scandal." }],
-  "6/19": [{ year: "1865", text: "Juneteenth: Union soldiers arrive in Galveston, Texas, announcing the end of slavery -- two months after the Civil War ended." }],
-  "6/20": [{ year: "1788", text: "New Hampshire becomes the 9th state to ratify the Constitution, the minimum needed to put it into effect." }],
-  "6/21": [{ year: "1788", text: "The U.S. Constitution officially goes into effect after New Hampshire's ratification the prior day." }],
-  "6/26": [{ year: "2015", text: "The Supreme Court rules in Obergefell v. Hodges that the Constitution guarantees a right to same-sex marriage nationwide." }],
-  "7/2":  [{ year: "1964", text: "President Lyndon B. Johnson signs the Civil Rights Act of 1964, outlawing discrimination based on race, color, religion, sex, or national origin." }],
-  "7/4":  [{ year: "1776", text: "The Continental Congress formally adopts the Declaration of Independence, asserting that 'all men are created equal.'" }],
-  "7/9":  [{ year: "1868", text: "The 14th Amendment is ratified, granting citizenship to former enslaved people and guaranteeing equal protection and due process." }],
-  "7/26": [{ year: "1948", text: "President Truman signs Executive Order 9981, desegregating the United States Armed Forces." }],
-  "8/6":  [{ year: "1965", text: "President Johnson signs the Voting Rights Act of 1965, prohibiting discriminatory voting practices that had disenfranchised Black Americans." }],
-  "8/9":  [{ year: "1974", text: "President Richard Nixon resigns from office following the Watergate scandal, the only president to do so." }],
-  "8/18": [{ year: "1920", text: "The 19th Amendment is ratified, granting women the right to vote after a decades-long suffrage movement." }],
-  "8/26": [{ year: "1920", text: "Women officially gained the right to vote as Secretary of State Bainbridge Colby certified the 19th Amendment." }],
-  "8/28": [{ year: "1963", text: "Martin Luther King Jr. delivers his 'I Have a Dream' speech at the March on Washington, calling for civil rights and racial equality." }],
-  "9/4":  [{ year: "1957", text: "Arkansas Governor Orval Faubus calls out the National Guard to prevent Black students from entering Little Rock Central High School." }],
-  "9/9":  [{ year: "1776", text: "The Continental Congress officially renames the country from 'United Colonies' to 'United States.'" }],
-  "9/17": [{ year: "1787", text: "Delegates to the Constitutional Convention sign the final draft of the U.S. Constitution in Philadelphia." }],
-  "9/22": [{ year: "1862", text: "President Lincoln issues the preliminary Emancipation Proclamation, announcing his intention to free enslaved people in rebel states." }],
-  "10/2": [{ year: "1967", text: "Thurgood Marshall is sworn in as the first African American Supreme Court Justice." }],
-  "10/7": [{ year: "1777", text: "American forces defeat British troops at the Battle of Saratoga -- a turning point that brings France into the Revolutionary War." }],
-  "10/26":[{ year: "2001", text: "President Bush signs the USA PATRIOT Act into law, expanding government surveillance powers after the September 11 attacks." }],
-  "11/2": [{ year: "1920", text: "Warren G. Harding wins the first presidential election in which women could vote nationally following the 19th Amendment." }],
-  "11/8": [{ year: "1960", text: "John F. Kennedy defeats Richard Nixon in one of the closest presidential elections in U.S. history." }],
-  "11/19":[{ year: "1863", text: "President Lincoln delivers the Gettysburg Address, reframing the Civil War as a fight for democratic equality." }],
-  "12/7": [{ year: "1941", text: "Japan attacks Pearl Harbor; President Roosevelt calls it 'a date which will live in infamy' and Congress declares war." }],
-  "12/10":[{ year: "1948", text: "The United Nations adopts the Universal Declaration of Human Rights, drafted with significant U.S. involvement." }],
-  "12/15":[{ year: "1791", text: "The Bill of Rights -- the first 10 amendments to the Constitution -- is ratified, protecting individual liberties from government overreach." }]
-};
-
-// ══════════════════════════════════════════════════════════
 //  STATE
 // ══════════════════════════════════════════════════════════
 let contentData = null;
-let tdihEvents = [];
-let tdihIndex = 0;
+// TDIH ("This Day in Politics") state now lives entirely in the
+// local-database script at the bottom of index.html.
 let vocabIndex = 0;
 let caseFilter = 'all';
 
@@ -546,9 +490,11 @@ async function init() {
   try { updateDates(); } catch(e) { console.error('Date render failed', e); }
   try { buildStaticSections(); } catch(e) { console.error('Static section render failed', e); }
   try { await loadContent(); } catch(e) { console.error('Content render failed', e); }
-  loadHistory().catch(() => {
-    // TDIH failed silently -- fallback already handled inside loadHistory
-  });
+  // TDIH ("This Day in Politics") is now handled entirely by the
+  // U.S.-only local-database script at the bottom of index.html --
+  // the old Wikipedia-API-based version that used to live here was
+  // removed because both were racing to control the same #tdih-*
+  // elements, which is why the wrong content sometimes won on refresh.
 }
 
 function updateDates() {
@@ -772,90 +718,16 @@ function buildVocab() {
 }
 
 // ══════════════════════════════════════════════════════════
-//  THIS DAY IN HISTORY
+//  THIS DAY IN HISTORY -- REMOVED (see note in init() above).
+//  This used to fetch from history.muffinlabs.com (a Wikipedia
+//  mirror) and bind its own tdih-prev/next/discuss click handlers.
+//  It ran alongside the newer local-database version at the bottom
+//  of index.html, and the two would race to render #tdih-year/
+//  #tdih-text on every page load -- whichever fetch resolved last
+//  won, which is why the "old" content sometimes appeared even
+//  after the local database was added. Only the index.html version
+//  remains now.
 // ══════════════════════════════════════════════════════════
-async function loadHistory() {
-  const now = new Date();
-  const m = now.getMonth() + 1;
-  const d = now.getDate();
-  const key = m + '/' + d;
-
-  const GOV_KEYWORDS = [
-    'congress', 'senate', 'house of representatives', 'president', 'constitution',
-    'amendment', 'supreme court', 'court', 'law', 'act', 'bill', 'signed',
-    'ratified', 'election', 'vote', 'declaration', 'independence', 'rights',
-    'civil', 'government', 'federal', 'republic', 'democracy', 'treaty',
-    'inaugural', 'white house', 'justice', 'ruling', 'landmark', 'congress',
-    'legislature', 'veto', 'impeach', 'suffrage', 'segregation', 'slavery'
-  ];
-
-  // First try Wikipedia's On This Day API
-  try {
-    const controller = new AbortController();
-    const tId = setTimeout(() => controller.abort(), 6000);
-    const res = await fetch(`https://history.muffinlabs.com/date/${m}/${d}`, { signal: controller.signal });
-    clearTimeout(tId);
-    const data = await res.json();
-    const events = data.data.Events;
-
-    const scored = events.map(e => {
-      const text = e.text.toLowerCase();
-      const score = GOV_KEYWORDS.reduce((acc, kw) => acc + (text.includes(kw) ? 1 : 0), 0);
-      return { year: e.year, text: e.text, score };
-    });
-
-    scored.sort((a, b) => b.score - a.score);
-    // Take top 5 government-relevant events
-    tdihEvents = scored.slice(0, 5).filter(e => e.score > 0);
-
-    if (tdihEvents.length === 0 && GOV_HISTORY[key]) {
-      tdihEvents = GOV_HISTORY[key];
-    } else if (tdihEvents.length === 0) {
-      tdihEvents = [{ year: '--', text: 'No notable American government events found for today.' }];
-    }
-  } catch (err) {
-    // Fall back to our curated data
-    tdihEvents = GOV_HISTORY[key] || [
-      { year: '--', text: 'Historical data unavailable. Check your connection.' }
-    ];
-  }
-
-  tdihIndex = 0;
-  renderTdih();
-}
-
-function renderTdih() {
-  if (!tdihEvents.length) return;
-  const e = tdihEvents[tdihIndex];
-  document.getElementById('tdih-year').textContent = e.year ? 'On This Day in ' + e.year : 'On This Day';
-  document.getElementById('tdih-text').textContent = e.text;
-
-  // Prev/next visibility
-  document.getElementById('tdih-prev').disabled = tdihIndex === 0;
-  document.getElementById('tdih-next').disabled = tdihIndex === tdihEvents.length - 1;
-  document.getElementById('tdih-prev').style.opacity = tdihIndex === 0 ? '0.35' : '1';
-  document.getElementById('tdih-next').style.opacity = tdihIndex === tdihEvents.length - 1 ? '0.35' : '1';
-}
-
-document.getElementById('tdih-prev').addEventListener('click', () => {
-  if (tdihIndex > 0) { tdihIndex--; renderTdih(); }
-});
-document.getElementById('tdih-next').addEventListener('click', () => {
-  if (tdihIndex < tdihEvents.length - 1) { tdihIndex++; renderTdih(); }
-});
-document.getElementById('tdih-discuss').addEventListener('click', () => {
-  if (!tdihEvents.length) return;
-  const e = tdihEvents[tdihIndex];
-  const text = `Discussion starter: In ${e.year}, ${e.text} -- How does this event connect to what we're studying in AP Gov?`;
-  // Copy to clipboard
-  navigator.clipboard.writeText(text).then(() => {
-    const btn = document.getElementById('tdih-discuss');
-    btn.textContent = '✓ Copied!';
-    setTimeout(() => btn.textContent = 'Use as Discussion Starter', 2000);
-  }).catch(() => {
-    alert(text);
-  });
-});
 
 // ══════════════════════════════════════════════════════════
 //  UNITS TAB
