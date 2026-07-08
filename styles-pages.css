@@ -578,35 +578,35 @@
 /* ── UNIT 5: Political Participation — Ballot Black & White ── */
 .unit-5 {
   background: var(--unit-bg);
-  --unit-bg:       #faf8f3;
+  --unit-bg:       #ffffff;
   --unit-dark:     #1a1a1a;
   --unit-mid:      #2b2b2b;
   --unit-accent:   #1a1a1a;
   --unit-accent2:  #9a2323;
-  --unit-light:    #faf8f3;
-  --unit-border:   #d4d0c5;
+  --unit-light:    #ffffff;
+  --unit-border:   #d4d4d4;
   --unit-hero-bg:  #1a1a1a;
   --unit-tag-bg:   rgba(26,26,26,0.08);
   --unit-tag-color: #1a1a1a;
 }
-.unit-5 .unit-jumpbar { background: #faf8f3; border-color: #d4d0c5; border-bottom-width: 3px; border-bottom-color: #1a1a1a; }
+.unit-5 .unit-jumpbar { background: #ffffff; border-color: #d4d4d4; border-bottom-width: 3px; border-bottom-color: #1a1a1a; }
 .unit-5 .unit-jump-link.active { color: #1a1a1a; border-bottom-color: #9a2323; }
 .unit-5 .concept-row-num { background: #1a1a1a; }
-.unit-5 .concept-row-header:hover { background: #f0ede3; }
+.unit-5 .concept-row-header:hover { background: #f0f0f0; }
 .unit-5 .case-row-year { background: #1a1a1a; }
 .unit-5 .case-row:hover { border-color: #1a1a1a; }
 .unit-5 .amend-pill-num { background: #1a1a1a; }
-.unit-5 .amend-pill { border-color: #d4d0c5; background: #f0ede3; }
+.unit-5 .amend-pill { border-color: #d4d4d4; background: #f0f0f0; }
 .unit-5 .unit-sidebar-head { background: #1a1a1a; }
-.unit-5 .unit-sidebar-link.active { color: #1a1a1a; border-left-color: #9a2323; background: #f0ede3; }
-.unit-5 .unit-sidebar-link:hover { background: #f0ede3; }
+.unit-5 .unit-sidebar-link.active { color: #1a1a1a; border-left-color: #9a2323; background: #f0f0f0; }
+.unit-5 .unit-sidebar-link:hover { background: #f0f0f0; }
 .unit-5 .exam-guide { background: #1a1a1a; }
 .unit-5 .exam-guide-tab.active { color: #d19999; border-bottom-color: #9a2323; }
 .unit-5 .rail-card-head { background: #1a1a1a; }
 .unit-5 .rail-exam-tip { background: #1a1a1a; }
 .unit-5 .case-hero { background: var(--unit-hero-bg); }
 .unit-5 .doc-bento-top { background: var(--unit-hero-bg); }
-.unit-5 .frq-row-type.ca { background: #f0ede3; color: #1a1a1a; }
+.unit-5 .frq-row-type.ca { background: #f0f0f0; color: #1a1a1a; }
 .unit-5 .frq-row-type.ae { background: #1a1a1a; color: white; }
 
 /* ── UNIT HERO OVERRIDES ── */

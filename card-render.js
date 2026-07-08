@@ -36,11 +36,11 @@ const UNIT_THEMES = {
   },
   2: {
     headingFont: "'Oswald', sans-serif", headingWeight: 600, headingStyle: "normal", headingTransform: "uppercase",
-    heroBg: "#f7f5f0",
+    heroBg: "#f5f5f4",
     eyebrowColor: "#8a6d1f",
     heroTitleColor: "#2d2d30",
-    cardBg: "white", cardBorder: "#ded9c7", cardHoverBorder: "#2d2d30",
-    headerBg: "#f7f5f0", headerBorderBottom: "3px solid #c8a951",
+    cardBg: "white", cardBorder: "#d8d8d8", cardHoverBorder: "#2d2d30",
+    headerBg: "#f5f5f4", headerBorderBottom: "3px solid #c8a951",
     cardTitleColor: "#2d2d30", cardMetaColor: "#8a6d1f",
     cardBodyColor: "#3a3a3a", linkColor: "#8a6d1f",
     caseBadgeBg: "#2d2d30", caseBadgeDate: "#c8a951", caseTitleColor: "#2d2d30"
@@ -71,10 +71,10 @@ const UNIT_THEMES = {
     headingFont: "'IBM Plex Mono', monospace", headingWeight: 700, headingStyle: "normal", headingTransform: "uppercase",
     heroBg: "#1a1a1a",
     eyebrowColor: "#9a2323",
-    heroTitleColor: "#faf8f3",
-    cardBg: "#faf8f3", cardBorder: "#d4d0c5", cardHoverBorder: "#1a1a1a",
+    heroTitleColor: "#ffffff",
+    cardBg: "#ffffff", cardBorder: "#d4d4d4", cardHoverBorder: "#1a1a1a",
     headerBg: "#1a1a1a",
-    cardTitleColor: "#faf8f3", cardMetaColor: "#c98888",
+    cardTitleColor: "#ffffff", cardMetaColor: "#c98888",
     cardBodyColor: "#2b2b2b", linkColor: "#9a2323",
     caseBadgeBg: "#1a1a1a", caseBadgeDate: "#c98888", caseTitleColor: "#1a1a1a"
   }

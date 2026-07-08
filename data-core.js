@@ -932,11 +932,21 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
   });
 });
 
-// Ensure home tab shows on load
-TAB_IDS.forEach(id => {
-  const el = document.getElementById('tab-' + id);
-  if (el && id !== 'home') el.style.display = 'none';
-});
+// Show the tab matching the URL hash on load (e.g. a unit page linking to
+// "/APG/#review" should actually open the Review tab, not just land on
+// Home and silently ignore the hash). Falls back to Home if the hash is
+// missing, empty, or doesn't match a real tab.
+(function () {
+  var hashTab = window.location.hash.replace('#', '');
+  var validTab = TAB_IDS.includes(hashTab) ? hashTab : 'home';
+  TAB_IDS.forEach(id => {
+    const el = document.getElementById('tab-' + id);
+    if (el) el.style.display = (id === validTab) ? '' : 'none';
+  });
+  if (validTab !== 'home') {
+    switchToTab(validTab);
+  }
+})();
 
 // ══════════════════════════════════════════════════════════
 //  SPIN ANIMATION (submit button)
