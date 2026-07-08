@@ -13,17 +13,10 @@
     /* ── HERO BANNER (columny, white marble) ── */
     .unit2-hero {
       position: relative; overflow: hidden;
-      background: #f7f5f0;
+      background: #f5f5f4;
       border-top: 4px solid #c8a951;
       border-bottom: 4px solid #c8a951;
       padding: 40px 1.5rem 28px;
-    }
-    .unit2-hero-img {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; object-position: center 35%; opacity: 0.22;
-    }
-    .unit2-hero-overlay {
-      position: absolute; inset: 0; background: rgba(247,245,240,0.55);
     }
     .unit2-hero-columns {
       position: absolute; inset: 0; display: flex; justify-content: space-evenly;
@@ -61,7 +54,7 @@
     }
     .unit2-hero-stat {
       display: flex; flex-direction: column; align-items: center;
-      padding: 0 32px; border-left: 1px solid #ded9c7;
+      padding: 0 32px; border-left: 1px solid #d8d8d8;
     }
     .unit2-hero-stat:first-child { border-left: none; }
     .unit2-hero-stat-num {
@@ -71,17 +64,12 @@
       font-family: 'Source Sans 3', sans-serif; font-size: 10px; letter-spacing: 0.06em;
       text-transform: uppercase; color: #6b6b6b; margin-top: 4px;
     }
-    .unit2-hero-credit {
-      position: relative; z-index: 2; text-align: center; margin-top: 18px;
-      font-family: 'Source Sans 3', sans-serif; font-size: 10px; color: #999;
-    }
     @media (max-width: 640px) {
       .unit2-hero-stat { padding: 0 16px; }
       .unit2-hero-columns span:nth-child(even) { display: none; }
     }
 
     /* ── UNIT 2: DC MARBLE IDENTITY ── */
-    body { background: #f4f5f7; }
 
     .unit-jumpbar {
       position: sticky; top: 0; z-index: 90;
@@ -210,7 +198,7 @@
     }
     .doc-bento-card:hover { border-color: #2d2d30; box-shadow: 0 4px 16px rgba(45,45,48,0.1); }
     .doc-bento-top {
-      background: #f7f5f0; border-bottom: 3px solid #c8a951;
+      background: #f5f5f4; border-bottom: 3px solid #c8a951;
       padding: 20px 20px 16px;
     }
     .doc-bento-icon { font-size: 26px; margin-bottom: 8px; display: block; }
@@ -327,8 +315,6 @@
 
   <!-- HERO BANNER -->
   <div class="unit2-hero">
-    <img class="unit2-hero-img" src="images/unit2-hero.jpg" alt="Supreme Court Building colonnade" onerror="this.style.display='none'">
-    <div class="unit2-hero-overlay"></div>
     <div class="unit2-hero-columns">
       <span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
@@ -348,7 +334,6 @@
       <div class="unit2-hero-stat"><span class="unit2-hero-stat-num">3</span><span class="unit2-hero-stat-label">Required Cases</span></div>
       <div class="unit2-hero-stat"><span class="unit2-hero-stat-num">3</span><span class="unit2-hero-stat-label">Branches</span></div>
     </div>
-    <div class="unit2-hero-credit">United States Supreme Court Building, Washington, D.C. · Public Domain</div>
   </div>
 
   <!-- JUMP BAR -->

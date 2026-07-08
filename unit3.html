@@ -10,21 +10,13 @@
   <link rel="stylesheet" href="styles-pages.css">
   <link rel="stylesheet" href="styles-skills.css">
   <style>
-    /* ── HERO BANNER (stark, black & white) ── */
+    /* ── HERO BANNER (stark, black & white, no image) ── */
     .unit3-hero {
-      position: relative; overflow: hidden; min-height: 320px;
-      display: flex; align-items: flex-end;
       background: #0a0a0a;
-    }
-    .unit3-hero-img {
-      position: absolute; inset: 0; width: 100%; height: 100%;
-      object-fit: cover; object-position: center 30%; filter: grayscale(1) contrast(1.1);
-    }
-    .unit3-hero-overlay {
-      position: absolute; inset: 0; background: rgba(10,10,10,0.72);
+      padding: 40px 2rem 32px;
     }
     .unit3-hero-content {
-      position: relative; z-index: 2; padding: 48px 2rem 32px; max-width: 720px;
+      max-width: 720px;
     }
     .unit3-hero-eyebrow {
       font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700;
@@ -46,13 +38,6 @@
       text-transform: uppercase; letter-spacing: 0.08em;
       background: rgba(255,255,255,0.1); color: white;
       border: 1px solid rgba(255,255,255,0.25);
-    }
-    .unit3-hero-credit {
-      position: absolute; z-index: 2; bottom: 8px; right: 14px;
-      font-family: 'Source Sans 3', sans-serif; font-size: 10px; color: rgba(255,255,255,0.5);
-    }
-    @media (max-width: 640px) {
-      .unit3-hero { min-height: 260px; }
     }
 
     /* ── UNIT PAGE REDESIGN ── */
@@ -368,8 +353,6 @@
 
   <!-- HERO BANNER -->
   <div class="unit3-hero">
-    <img class="unit3-hero-img" src="images/unit3-hero.jpg" alt="March on Washington for Jobs and Freedom, August 1963" onerror="this.style.display='none'">
-    <div class="unit3-hero-overlay"></div>
     <div class="unit3-hero-content">
       <div class="unit3-hero-eyebrow">AP Government &amp; Politics · 13–18% of Exam</div>
       <h1 class="unit3-hero-title">Civil Liberties &amp; Civil Rights</h1>
@@ -381,7 +364,6 @@
         <span class="unit3-hero-tag">4th · 5th · 6th</span>
       </div>
     </div>
-    <div class="unit3-hero-credit">March on Washington for Jobs and Freedom, August 28, 1963 — National Archives · Public Domain</div>
   </div>
 
   <!-- JUMP BAR -->
