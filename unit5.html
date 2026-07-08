@@ -4,68 +4,103 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 5: Political Participation — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-pages.css">
   <style>
+    /* ── HERO BANNER (plain ballot-document style) ── */
+    .unit5-hero {
+      position: relative;
+      background: #faf8f3;
+      border: 2px solid #1a1a1a;
+      border-radius: 4px;
+      margin: 20px 1.5rem 0;
+      max-width: 900px;
+    }
+    .unit5-hero-topline {
+      display: flex; justify-content: space-between;
+      padding: 8px 20px;
+      border-bottom: 1px dashed #1a1a1a;
+      font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600;
+      letter-spacing: 0.06em; color: #4a4a4a;
+    }
+    .unit5-hero-content { padding: 28px 24px 24px; }
+    .unit5-hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase; color: #9a2323; margin-bottom: 10px;
+    }
+    .unit5-hero-title {
+      font-family: 'IBM Plex Mono', monospace; font-weight: 700; text-transform: uppercase;
+      font-size: clamp(24px, 3.8vw, 36px); line-height: 1.15; color: #1a1a1a; margin-bottom: 14px;
+    }
+    .unit5-hero-sub {
+      font-family: 'Source Sans 3', sans-serif; font-size: 14px; line-height: 1.6;
+      color: #4a4a4a; max-width: 620px; margin-bottom: 18px;
+    }
+    .unit5-hero-tags { display: flex; gap: 14px; flex-wrap: wrap; }
+    .unit5-hero-tag {
+      font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 500;
+      color: #1a1a1a;
+    }
+
     body { background:#f0f7f0; }
-    .unit-jumpbar { position:sticky;top:0;z-index:90;background:#f0fdf4;border-bottom:3px solid #14532d;padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none; }
-    .unit-jump-link { padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#166534;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.15s; }
-    .unit-jump-link:hover { color:#14532d; }
-    .unit-jump-link.active { color:#14532d;border-bottom-color:#16a34a; }
+    .unit-jumpbar { position:sticky;top:0;z-index:90;background:#faf8f3;border-bottom:3px solid #1a1a1a;padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none; }
+    .unit-jump-link { padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#2b2b2b;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .unit-jump-link:hover { color:#1a1a1a; }
+    .unit-jump-link.active { color:#1a1a1a;border-bottom-color:#16a34a; }
     .unit-layout { display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start;max-width:1140px;margin:0 auto;padding:24px 1.5rem 60px; }
     .unit-sidebar { position:sticky;top:48px; }
-    .unit-sidebar-section { background:white;border-radius:12px;border:1px solid #bbf7d0;overflow:hidden;margin-bottom:12px; }
-    .unit-sidebar-head { background:#14532d;padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(134,239,172,0.8); }
-    .unit-sidebar-link { display:block;padding:9px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #bbf7d0;transition:all 0.12s; }
+    .unit-sidebar-section { background:white;border-radius:12px;border:1px solid #d4d0c5;overflow:hidden;margin-bottom:12px; }
+    .unit-sidebar-head { background:#1a1a1a;padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(154,35,35,0.8); }
+    .unit-sidebar-link { display:block;padding:9px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #d4d0c5;transition:all 0.12s; }
     .unit-sidebar-link:last-child { border-bottom:none; }
-    .unit-sidebar-link:hover { color:#14532d;background:#f0fdf4; }
+    .unit-sidebar-link:hover { color:#1a1a1a;background:#faf8f3; }
     .unit-sidebar-link .sidebar-year { display:block;font-size:10px;font-weight:500;color:#6b7280;margin-top:1px;font-family:'JetBrains Mono',monospace; }
     .unit-main { min-width:0; }
     .unit-section { margin-bottom:40px;scroll-margin-top:52px; }
     .unit-section-header { display:flex;align-items:baseline;gap:12px;margin-bottom:16px; }
-    .unit-section-title { font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#14532d; }
-    .unit-section-rule { flex:1;height:2px;background:#bbf7d0; }
+    .unit-section-title { font-size:11px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a; }
+    .unit-section-rule { flex:1;height:2px;background:#d4d0c5; }
     .unit-section-count { font-size:10px;font-weight:700;color:#6b7280; }
     .concepts-list { display:flex;flex-direction:column;gap:10px; }
-    .concept-row { background:white;border-radius:10px;border:1px solid #bbf7d0;overflow:hidden; }
+    .concept-row { background:white;border-radius:10px;border:1px solid #d4d0c5;overflow:hidden; }
     .concept-row-header { display:flex;align-items:center;gap:12px;padding:12px 16px;cursor:pointer;transition:background 0.12s; }
-    .concept-row-header:hover { background:#f0fdf4; }
-    .concept-row-num { width:28px;height:28px;border-radius:50%;background:#14532d;color:#86efac;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
-    .concept-row-title { font-size:14px;font-weight:800;color:#14532d;flex:1; }
-    .concept-row-toggle { font-size:18px;color:#bbf7d0;transition:transform 0.2s; }
+    .concept-row-header:hover { background:#faf8f3; }
+    .concept-row-num { width:28px;height:28px;border-radius:50%;background:#1a1a1a;color:#c98888;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0; }
+    .concept-row-title { font-size:14px;font-weight:800;color:#1a1a1a;flex:1; }
+    .concept-row-toggle { font-size:18px;color:#d4d0c5;transition:transform 0.2s; }
     .concept-row.open .concept-row-toggle { transform:rotate(180deg); }
     .concept-row-body { display:none;padding:0 16px 16px 56px;font-size:14px;line-height:1.8;color:#374151; }
     .concept-row.open .concept-row-body { display:block; }
     .cases-list { display:flex;flex-direction:column;gap:8px; }
-    .case-row { display:grid;grid-template-columns:80px 1fr auto;background:white;border-radius:10px;border:1px solid #bbf7d0;overflow:hidden;text-decoration:none;transition:border-color 0.15s,box-shadow 0.15s; }
-    .case-row:hover { border-color:#14532d;box-shadow:0 2px 12px rgba(20,83,45,0.12); }
-    .case-row-year { background:#14532d;padding:16px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#86efac;text-align:center; }
-    .case-row-amend { font-size:8px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(134,239,172,0.5);margin-top:4px;line-height:1.3; }
+    .case-row { display:grid;grid-template-columns:80px 1fr auto;background:white;border-radius:10px;border:1px solid #d4d0c5;overflow:hidden;text-decoration:none;transition:border-color 0.15s,box-shadow 0.15s; }
+    .case-row:hover { border-color:#1a1a1a;box-shadow:0 2px 12px rgba(26,26,26,0.12); }
+    .case-row-year { background:#1a1a1a;padding:16px 12px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:500;color:#c98888;text-align:center; }
+    .case-row-amend { font-size:8px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(154,35,35,0.5);margin-top:4px;line-height:1.3; }
     .case-row-body { padding:14px 16px;min-width:0; }
-    .case-row-name { font-size:14px;font-weight:800;color:#14532d;margin-bottom:4px; }
+    .case-row-name { font-size:14px;font-weight:800;color:#1a1a1a;margin-bottom:4px; }
     .case-row-question { font-size:12px;color:#6b7280;line-height:1.5;font-style:italic; }
     .case-row-ruling { font-size:12px;color:#374151;line-height:1.6;margin-top:6px; }
-    .case-row-arrow { padding:0 16px;display:flex;align-items:center;font-size:18px;color:#bbf7d0;border-left:1px solid #bbf7d0; }
+    .case-row-arrow { padding:0 16px;display:flex;align-items:center;font-size:18px;color:#d4d0c5;border-left:1px solid #d4d0c5; }
     .case-row:hover .case-row-arrow { color:#16a34a; }
-    .exam-guide { background:#14532d;border-radius:14px;overflow:hidden; }
-    .exam-guide-tabs { display:flex;border-bottom:1px solid rgba(134,239,172,0.2); }
-    .exam-guide-tab { padding:12px 20px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(134,239,172,0.4);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s; }
-    .exam-guide-tab.active { color:#86efac;border-bottom-color:#86efac; }
+    .exam-guide { background:#1a1a1a;border-radius:14px;overflow:hidden; }
+    .exam-guide-tabs { display:flex;border-bottom:1px solid rgba(154,35,35,0.2); }
+    .exam-guide-tab { padding:12px 20px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(154,35,35,0.4);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s; }
+    .exam-guide-tab.active { color:#c98888;border-bottom-color:#c98888; }
     .exam-guide-panel { display:none;padding:20px 24px; }
     .exam-guide-panel.active { display:block; }
     .exam-guide-panel li { font-size:13px;line-height:1.9;color:rgba(255,255,255,0.78);padding:4px 0;border-bottom:1px solid rgba(255,255,255,0.06); }
     .exam-guide-panel li:last-child { border-bottom:none; }
     .exam-guide-bigpicture { font-size:14px;line-height:1.9;color:rgba(255,255,255,0.78); }
     .frq-list { display:flex;flex-direction:column;gap:8px; }
-    .frq-row { background:white;border-radius:10px;border:1px solid #bbf7d0;padding:14px 16px;display:flex;gap:16px;align-items:flex-start; }
+    .frq-row { background:white;border-radius:10px;border:1px solid #d4d0c5;padding:14px 16px;display:flex;gap:16px;align-items:flex-start; }
     .frq-row-type { flex-shrink:0;padding:6px 10px;border-radius:6px;font-size:9px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;text-align:center;min-width:56px; }
-    .frq-row-type.ca { background:#dcfce7;color:#14532d; }
+    .frq-row-type.ca { background:#f0ede3;color:#1a1a1a; }
     .frq-row-type.sc { background:#fce7f3;color:#9d174d; }
-    .frq-row-type.ae { background:#14532d;color:#86efac; }
+    .frq-row-type.ae { background:#1a1a1a;color:#c98888; }
     .frq-row-body { flex:1; }
-    .frq-row-title { font-size:14px;font-weight:800;color:#14532d;margin-bottom:4px; }
+    .frq-row-title { font-size:14px;font-weight:800;color:#1a1a1a;margin-bottom:4px; }
     .frq-row-preview { font-size:12px;color:#374151;line-height:1.6; }
     .frq-row-link { display:block;margin-top:8px;font-size:11px;font-weight:700;color:#16a34a;text-decoration:none; }
     @media(max-width:860px){ .unit-layout{grid-template-columns:1fr;} .unit-sidebar{position:static;} }
@@ -80,25 +115,30 @@
   <script src="data-required.js"></script>
   <script src="nav-render.js"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "unit5.html" });</script>
+  <!-- HERO BANNER -->
+  <div class="unit5-hero">
+    <div class="unit5-hero-topline">
+      <span>OFFICIAL BALLOT — UNIT 5</span>
+      <span>PRECINCT NO. 05-2026</span>
+    </div>
+    <div class="unit5-hero-content">
+      <div class="unit5-hero-eyebrow">AP Government &amp; Politics · 20–27% of Exam · Largest Unit</div>
+      <h1 class="unit5-hero-title">Political Participation</h1>
+      <p class="unit5-hero-sub">Voting, campaigns, political parties, interest groups, and media — the mechanisms through which citizens try to influence government. This is the largest unit by exam weight and the one most connected to students' lives right now.</p>
+      <div class="unit5-hero-tags">
+        <span class="unit5-hero-tag">☐ Unit 5</span>
+        <span class="unit5-hero-tag">☐ Voting &amp; Elections</span>
+        <span class="unit5-hero-tag">☐ Political Parties</span>
+        <span class="unit5-hero-tag">☐ Media &amp; Money</span>
+      </div>
+    </div>
+  </div>
+
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
     <a class="unit-jump-link" href="#cases">Cases</a>
     <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
     <a class="unit-jump-link" href="#frq">FRQ Practice</a>
-  </div>
-  <div style="background:linear-gradient(135deg,#14532d 0%,#166534 60%,#14532d 100%);padding:28px 1.5rem 32px;">
-    <div style="max-width:1140px;margin:0 auto;">
-      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#86efac;margin-bottom:8px;">AP Government &amp; Politics · 20–27% of Exam</div>
-      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 5: Political Participation</div>
-      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">Voting, campaigns, political parties, interest groups, and media — the mechanisms through which citizens try to influence government. This is the largest unit by exam weight and the one most connected to students' lives right now.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Unit 5</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(255,255,255,0.08);color:white;">20–27% of Exam · Largest Unit</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Voting &amp; Elections</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Political Parties</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(134,239,172,0.15);color:#86efac;">Media &amp; Money</span>
-      </div>
-    </div>
   </div>
   <div class="unit-layout">
     <div class="unit-sidebar">
@@ -195,7 +235,7 @@
             </ul>
           </div>
           <div class="exam-guide-panel" id="ep-bigpicture">
-            <div class="exam-guide-bigpicture">Unit 5 is the most politically immediate unit — it's about the machinery of democracy that your students will interact with when they turn 18. Voting, campaigns, parties, money, media — these are the channels through which the public (theoretically) controls government. But the picture that emerges from Unit 5 is complicated: low turnout, unlimited campaign money, partisan gerrymandering, algorithmic media bubbles. Understanding these mechanisms — and their flaws — is essential preparation for citizenship. <strong style="color:#86efac;">Know the system well enough to know why it sometimes doesn't work the way it's supposed to.</strong></div>
+            <div class="exam-guide-bigpicture">Unit 5 is the most politically immediate unit — it's about the machinery of democracy that your students will interact with when they turn 18. Voting, campaigns, parties, money, media — these are the channels through which the public (theoretically) controls government. But the picture that emerges from Unit 5 is complicated: low turnout, unlimited campaign money, partisan gerrymandering, algorithmic media bubbles. Understanding these mechanisms — and their flaws — is essential preparation for citizenship. <strong style="color:#c98888;">Know the system well enough to know why it sometimes doesn't work the way it's supposed to.</strong></div>
           </div>
         </div>
       </div>
