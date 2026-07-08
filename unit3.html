@@ -4,18 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 3: Civil Liberties & Civil Rights — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-pages.css">
   <link rel="stylesheet" href="styles-skills.css">
   <style>
+    /* ── HERO BANNER (stark, black & white) ── */
+    .unit3-hero {
+      position: relative; overflow: hidden; min-height: 320px;
+      display: flex; align-items: flex-end;
+      background: #0a0a0a;
+    }
+    .unit3-hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%; filter: grayscale(1) contrast(1.1);
+    }
+    .unit3-hero-overlay {
+      position: absolute; inset: 0; background: rgba(10,10,10,0.72);
+    }
+    .unit3-hero-content {
+      position: relative; z-index: 2; padding: 48px 2rem 32px; max-width: 720px;
+    }
+    .unit3-hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #b3b3b3; margin-bottom: 10px;
+    }
+    .unit3-hero-title {
+      font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase;
+      letter-spacing: 0.01em;
+      font-size: clamp(32px, 5.2vw, 54px); line-height: 1.05; color: white; margin-bottom: 14px;
+    }
+    .unit3-hero-sub {
+      font-family: 'Source Sans 3', sans-serif; font-size: 15px; line-height: 1.6;
+      color: rgba(255,255,255,0.75); max-width: 580px; margin-bottom: 20px;
+    }
+    .unit3-hero-sub em { color: white; font-style: normal; font-weight: 600; }
+    .unit3-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .unit3-hero-tag {
+      padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: rgba(255,255,255,0.1); color: white;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .unit3-hero-credit {
+      position: absolute; z-index: 2; bottom: 8px; right: 14px;
+      font-family: 'Source Sans 3', sans-serif; font-size: 10px; color: rgba(255,255,255,0.5);
+    }
+    @media (max-width: 640px) {
+      .unit3-hero { min-height: 260px; }
+    }
+
     /* ── UNIT PAGE REDESIGN ── */
 
     /* Jump nav bar */
     .unit-jumpbar {
       position: sticky; top: 0; z-index: 90;
-      background: white; border-bottom: 2px solid var(--cream-dark);
+      background: white; border-bottom: 2px solid #d4d4d4;
       padding: 0 1.5rem;
       display: flex; gap: 0; overflow-x: auto;
       scrollbar-width: none;
@@ -27,8 +72,8 @@
       color: var(--gray-400); text-decoration: none; white-space: nowrap;
       border-bottom: 3px solid transparent; transition: all 0.15s;
     }
-    .unit-jump-link:hover { color: var(--navy); }
-    .unit-jump-link.active { color: var(--crimson); border-bottom-color: var(--crimson); }
+    .unit-jump-link:hover { color: #0a0a0a; }
+    .unit-jump-link.active { color: #0a0a0a; border-bottom-color: #0a0a0a; }
 
     /* Two-column layout with sticky sidebar */
     .unit-layout {
@@ -45,11 +90,11 @@
     }
     .unit-sidebar-section {
       background: white; border-radius: 12px;
-      border: 1px solid var(--cream-dark);
+      border: 1px solid #d4d4d4;
       overflow: hidden; margin-bottom: 12px;
     }
     .unit-sidebar-head {
-      background: var(--navy); padding: 10px 14px;
+      background: #0a0a0a; padding: 10px 14px;
       font-size: 9px; font-weight: 800; letter-spacing: 0.14em;
       text-transform: uppercase; color: rgba(255,255,255,0.6);
     }
@@ -57,12 +102,12 @@
       display: block; padding: 9px 14px;
       font-size: 12px; font-weight: 600; color: var(--gray-600);
       text-decoration: none; border-left: 3px solid transparent;
-      border-bottom: 1px solid var(--cream-dark); transition: all 0.12s;
+      border-bottom: 1px solid #d4d4d4; transition: all 0.12s;
     }
     .unit-sidebar-link:last-child { border-bottom: none; }
-    .unit-sidebar-link:hover { color: var(--navy); background: var(--cream); }
+    .unit-sidebar-link:hover { color: #0a0a0a; background: #f5f5f5; }
     .unit-sidebar-link.active {
-      color: var(--crimson); border-left-color: var(--crimson);
+      color: #0a0a0a; border-left-color: #0a0a0a;
       background: #fff5f5;
     }
     .unit-sidebar-link .sidebar-year {
@@ -85,10 +130,10 @@
     .unit-section-title {
       font-family: 'Source Sans 3', sans-serif;
       font-size: 11px; font-weight: 800; letter-spacing: 0.16em;
-      text-transform: uppercase; color: var(--navy);
+      text-transform: uppercase; color: #0a0a0a;
     }
     .unit-section-rule {
-      flex: 1; height: 2px; background: var(--cream-dark);
+      flex: 1; height: 2px; background: #d4d4d4;
     }
     .unit-section-count {
       font-size: 10px; font-weight: 700; color: var(--gray-400);
@@ -98,7 +143,7 @@
     .concepts-list { display: flex; flex-direction: column; gap: 10px; }
     .concept-row {
       background: white; border-radius: 10px;
-      border: 1px solid var(--cream-dark);
+      border: 1px solid #d4d4d4;
       overflow: hidden;
     }
     .concept-row-header {
@@ -106,16 +151,16 @@
       padding: 12px 16px; cursor: pointer;
       transition: background 0.12s;
     }
-    .concept-row-header:hover { background: var(--cream); }
+    .concept-row-header:hover { background: #f5f5f5; }
     .concept-row-num {
       width: 28px; height: 28px; border-radius: 50%;
-      background: var(--navy); color: white;
+      background: #0a0a0a; color: white;
       font-size: 12px; font-weight: 800;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
     .concept-row-title {
-      font-size: 14px; font-weight: 800; color: var(--navy); flex: 1;
+      font-size: 14px; font-weight: 800; color: #0a0a0a; flex: 1;
     }
     .concept-row-toggle {
       font-size: 18px; color: var(--gray-300); transition: transform 0.2s;
@@ -134,20 +179,20 @@
       grid-template-columns: 80px 1fr auto;
       gap: 0;
       background: white; border-radius: 10px;
-      border: 1px solid var(--cream-dark);
+      border: 1px solid #d4d4d4;
       overflow: hidden; text-decoration: none;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
     .case-row:hover {
-      border-color: var(--navy);
+      border-color: #0a0a0a;
       box-shadow: 0 2px 12px rgba(26,46,90,0.1);
     }
     .case-row-year {
-      background: var(--navy-dark); padding: 16px 12px;
+      background: #0a0a0a; padding: 16px 12px;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 13px; font-weight: 500; color: var(--gold);
+      font-size: 13px; font-weight: 500; color: #0a0a0a;
       text-align: center; flex-shrink: 0;
     }
     .case-row-amend {
@@ -157,7 +202,7 @@
     }
     .case-row-body { padding: 14px 16px; min-width: 0; }
     .case-row-name {
-      font-size: 14px; font-weight: 800; color: var(--navy);
+      font-size: 14px; font-weight: 800; color: #0a0a0a;
       margin-bottom: 4px;
     }
     .case-row-question {
@@ -171,9 +216,9 @@
     .case-row-arrow {
       padding: 0 16px; display: flex; align-items: center;
       font-size: 18px; color: var(--gray-300);
-      border-left: 1px solid var(--cream-dark);
+      border-left: 1px solid #d4d4d4;
     }
-    .case-row:hover .case-row-arrow { color: var(--crimson); }
+    .case-row:hover .case-row-arrow { color: #0a0a0a; }
 
     /* ── DOCUMENTS ── bento-style side by side */
     .docs-bento {
@@ -181,22 +226,22 @@
     }
     .doc-bento-card {
       background: white; border-radius: 12px;
-      border: 1px solid var(--cream-dark); overflow: hidden;
+      border: 1px solid #d4d4d4; overflow: hidden;
       text-decoration: none; display: flex; flex-direction: column;
       transition: border-color 0.15s, box-shadow 0.15s;
     }
     .doc-bento-card:hover {
-      border-color: var(--navy);
+      border-color: #0a0a0a;
       box-shadow: 0 4px 16px rgba(26,46,90,0.1);
     }
     .doc-bento-top {
-      background: linear-gradient(120deg, var(--navy-dark) 0%, var(--navy) 100%);
+      background: #0a0a0a;
       padding: 20px 20px 16px;
     }
     .doc-bento-icon { font-size: 28px; margin-bottom: 8px; display: block; }
     .doc-bento-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 17px; font-weight: 700; color: white;
+      font-family: 'Anton', sans-serif; text-transform: uppercase;
+      font-size: 16px; font-weight: 400; color: white;
       line-height: 1.2; margin-bottom: 4px;
     }
     .doc-bento-meta {
@@ -208,8 +253,8 @@
       font-size: 12px; line-height: 1.7; color: var(--gray-600);
     }
     .doc-bento-footer {
-      padding: 10px 16px; border-top: 1px solid var(--cream-dark);
-      font-size: 11px; font-weight: 700; color: var(--crimson);
+      padding: 10px 16px; border-top: 1px solid #d4d4d4;
+      font-size: 11px; font-weight: 700; color: #0a0a0a;
     }
 
     /* ── AMENDMENTS ── two-column pill grid */
@@ -218,18 +263,18 @@
     }
     .amend-pill {
       background: white; border-radius: 10px;
-      border: 1px solid var(--cream-dark); padding: 12px 14px;
+      border: 1px solid #d4d4d4; padding: 12px 14px;
       display: flex; gap: 12px; align-items: flex-start;
     }
     .amend-pill-num {
-      background: var(--navy); color: white;
+      background: #0a0a0a; color: white;
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px; font-weight: 700;
       padding: 3px 8px; border-radius: 4px;
       flex-shrink: 0; margin-top: 1px;
     }
     .amend-pill-title {
-      font-size: 12px; font-weight: 800; color: var(--navy);
+      font-size: 12px; font-weight: 800; color: #0a0a0a;
       margin-bottom: 3px; text-transform: uppercase;
       letter-spacing: 0.04em;
     }
@@ -239,7 +284,7 @@
 
     /* ── AP EXAM GUIDE ── distinct dark section */
     .exam-guide {
-      background: var(--navy-dark); border-radius: 14px;
+      background: #0a0a0a; border-radius: 14px;
       overflow: hidden;
     }
     .exam-guide-tabs {
@@ -251,7 +296,7 @@
       color: rgba(255,255,255,0.4); cursor: pointer;
       border-bottom: 3px solid transparent; transition: all 0.15s;
     }
-    .exam-guide-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+    .exam-guide-tab.active { color: #0a0a0a; border-bottom-color: #0a0a0a; }
     .exam-guide-panel { display: none; padding: 20px 24px; }
     .exam-guide-panel.active { display: block; }
     .exam-guide-panel li {
@@ -267,7 +312,7 @@
     .frq-list { display: flex; flex-direction: column; gap: 8px; }
     .frq-row {
       background: white; border-radius: 10px;
-      border: 1px solid var(--cream-dark); padding: 14px 16px;
+      border: 1px solid #d4d4d4; padding: 14px 16px;
       display: flex; gap: 16px; align-items: flex-start;
     }
     .frq-row-type {
@@ -280,11 +325,11 @@
     .frq-row-type.sc { background: #fce7f3; color: #9d174d; }
     .frq-row-type.ae { background: #dcfce7; color: #166534; }
     .frq-row-body { flex: 1; }
-    .frq-row-title { font-size: 14px; font-weight: 800; color: var(--navy); margin-bottom: 4px; }
+    .frq-row-title { font-size: 14px; font-weight: 800; color: #0a0a0a; margin-bottom: 4px; }
     .frq-row-preview { font-size: 12px; color: var(--gray-600); line-height: 1.6; }
     .frq-row-link {
       display: block; margin-top: 8px;
-      font-size: 11px; font-weight: 700; color: var(--crimson);
+      font-size: 11px; font-weight: 700; color: #0a0a0a;
       text-decoration: none;
     }
 
@@ -321,6 +366,24 @@
   <script src="nav-render.js"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "unit3.html" });</script>
 
+  <!-- HERO BANNER -->
+  <div class="unit3-hero">
+    <img class="unit3-hero-img" src="images/unit3-hero.jpg" alt="March on Washington for Jobs and Freedom, August 1963" onerror="this.style.display='none'">
+    <div class="unit3-hero-overlay"></div>
+    <div class="unit3-hero-content">
+      <div class="unit3-hero-eyebrow">AP Government &amp; Politics · 13–18% of Exam</div>
+      <h1 class="unit3-hero-title">Civil Liberties &amp; Civil Rights</h1>
+      <p class="unit3-hero-sub">Where does the government's power end and your rights begin? Civil liberties protect individuals <em>from</em> government. Civil rights protect individuals <em>from discrimination</em>. The 14th Amendment is the engine that drives this entire unit.</p>
+      <div class="unit3-hero-tags">
+        <span class="unit3-hero-tag">Unit 3</span>
+        <span class="unit3-hero-tag">1st Amendment</span>
+        <span class="unit3-hero-tag">14th Amendment</span>
+        <span class="unit3-hero-tag">4th · 5th · 6th</span>
+      </div>
+    </div>
+    <div class="unit3-hero-credit">March on Washington for Jobs and Freedom, August 28, 1963 — National Archives · Public Domain</div>
+  </div>
+
   <!-- JUMP BAR -->
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
@@ -329,22 +392,6 @@
     <a class="unit-jump-link" href="#amendments">Amendments</a>
     <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
     <a class="unit-jump-link" href="#frq">FRQ Practice</a>
-  </div>
-
-  <!-- HERO (full width, above layout) -->
-  <div class="unit-hero-inner" style="padding:28px 1.5rem 32px;max-width:100%;">
-    <div style="max-width:1140px;margin:0 auto;">
-      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;">AP Government & Politics · 13–18% of Exam</div>
-      <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,42px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 3: Civil Liberties &amp;<br>Civil Rights</div>
-      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:600px;margin-bottom:18px;">Where does the government's power end and your rights begin? Civil liberties protect individuals <em>from</em> government. Civil rights protect individuals <em>from discrimination</em>. The 14th Amendment is the engine that drives this entire unit.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(255,255,255,0.1);color:white;">Unit 3</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,146,42,0.2);color:var(--gold);">13–18% of AP Exam</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(178,34,52,0.3);color:#fca5a5;">1st Amendment</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(178,34,52,0.3);color:#fca5a5;">14th Amendment</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(178,34,52,0.3);color:#fca5a5;">4th · 5th · 6th</span>
-      </div>
-    </div>
   </div>
 
   <div class="unit-layout">
@@ -645,10 +692,10 @@
             </div>
           </div>
 
-          <div class="amend-pill" style="border-color:var(--crimson);border-width:2px;">
-            <div class="amend-pill-num" style="background:var(--crimson);">14th</div>
+          <div class="amend-pill" style="border-color:#0a0a0a;border-width:2px;">
+            <div class="amend-pill-num" style="background:#0a0a0a;">14th</div>
             <div>
-              <div class="amend-pill-title" style="color:var(--crimson);">Citizenship, Due Process, Equal Protection ★</div>
+              <div class="amend-pill-title" style="color:#0a0a0a;">Citizenship, Due Process, Equal Protection ★</div>
               <div class="amend-pill-text">The engine of Unit 3. Every selective incorporation case runs through its Due Process Clause. Brown v. Board used its Equal Protection Clause. Know this amendment cold.</div>
             </div>
           </div>
@@ -689,7 +736,7 @@
             </ul>
           </div>
           <div class="exam-guide-panel" id="ep-bigpicture">
-            <div class="exam-guide-bigpicture">Unit 3 is about the ongoing negotiation between individual freedom and government authority. Every case involves a conflict: the government wants to do something (censor the press, search a house, maintain segregated schools) and an individual claims a constitutional right prevents it. The Court's answer almost always depends on which level of scrutiny applies and whether the government has a sufficiently important interest to justify the restriction. <strong style="color:var(--gold);">Learn the framework, not just the outcomes.</strong></div>
+            <div class="exam-guide-bigpicture">Unit 3 is about the ongoing negotiation between individual freedom and government authority. Every case involves a conflict: the government wants to do something (censor the press, search a house, maintain segregated schools) and an individual claims a constitutional right prevents it. The Court's answer almost always depends on which level of scrutiny applies and whether the government has a sufficiently important interest to justify the restriction. <strong style="color:#0a0a0a;">Learn the framework, not just the outcomes.</strong></div>
           </div>
         </div>
       </div>
