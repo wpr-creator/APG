@@ -4,24 +4,24 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
   <title>Brown v. Board of Education (1954) — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
   <link rel="stylesheet" href="../styles-base.css">
   <link rel="stylesheet" href="../styles-pages.css">
   <style>    body{background:#fafafa;}
     .case-page{max-width:1100px;margin:0 auto;padding:24px 1.5rem 60px;display:grid;grid-template-columns:1fr 260px;gap:28px;align-items:start;}
     .case-content{min-width:0;} .case-rail{position:sticky;top:24px;}
-    .case-hero{background:linear-gradient(135deg,#0a0a0a 0%,#1f1f1f 100%);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
-    .case-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#b22234;margin-bottom:8px;}
-    .case-hero-title{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);font-weight:900;color:white;line-height:1.2;margin-bottom:6px;}
+    .case-hero{background:#0a0a0a;border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+    .case-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#999999;margin-bottom:8px;}
+    .case-hero-title{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:clamp(20px,3vw,28px);font-weight:400;color:white;line-height:1.2;margin-bottom:6px;}
     .case-hero-cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:14px;}
     .case-hero-tags{display:flex;gap:6px;flex-wrap:wrap;}
     .case-tag{padding:3px 10px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.06em;}
-    .case-tag-unit{background:rgba(178,34,52,0.25);color:#fca5a5;}
+    .case-tag-unit{background:rgba(178,34,52,0.25);color:#d4d4d4;}
     .case-tag-amend{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);}
-    .case-tag-tested{background:rgba(178,34,52,0.2);color:#fca5a5;}
+    .case-tag-tested{background:rgba(178,34,52,0.2);color:#d4d4d4;}
     .case-block{background:white;border-radius:12px;border:1px solid #e0e0e0;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(0,0,0,0.05);}
-    .case-block-label{display:flex;align-items:center;gap:10px;padding:10px 16px;background:#f5f5f5;border-bottom:1px solid #e0e0e0;border-left:3px solid #b22234;font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#0a0a0a;}
+    .case-block-label{display:flex;align-items:center;gap:10px;padding:10px 16px;background:#f5f5f5;border-bottom:1px solid #e0e0e0;border-left:3px solid #999999;font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#0a0a0a;}
     .case-block-label-icon{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
     .icon-bg{background:#f3f4f6;} .icon-q{background:#fce7f3;} .icon-r{background:#dcfce7;}
     .icon-t{background:#fef3cd;} .icon-d{background:#fee2e2;} .icon-l{background:#e0f2fe;}
@@ -33,9 +33,9 @@
     .verdict-yes{background:#dcfce7;color:#166534;} .verdict-no{background:#fee2e2;color:#991b1b;}
     .case-vote-line{font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;margin-bottom:10px;}
     .case-ruling-text{font-size:14px;line-height:1.75;color:#374151;}
-    .case-ruling-quote{font-size:14px;font-style:italic;color:#0a0a0a;border-left:3px solid #b22234;padding:8px 14px;margin:12px 0;background:#f5f5f5;border-radius:0 8px 8px 0;line-height:1.6;}
+    .case-ruling-quote{font-size:14px;font-style:italic;color:#0a0a0a;border-left:3px solid #999999;padding:8px 14px;margin:12px 0;background:#f5f5f5;border-radius:0 8px 8px 0;line-height:1.6;}
     .case-test-box{background:#0a0a0a;border-radius:10px;padding:14px 16px;}
-    .case-test-name{font-size:13px;font-weight:800;color:#fca5a5;margin-bottom:6px;}
+    .case-test-name{font-size:13px;font-weight:800;color:#d4d4d4;margin-bottom:6px;}
     .case-test-rule{font-size:13px;color:rgba(255,255,255,0.85);line-height:1.65;}
     .case-dissent-box{background:#fffbeb;border:1px solid #f59e0b;border-radius:10px;padding:14px 16px;}
     .case-dissent-who{font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#92400e;margin-bottom:6px;}
@@ -50,7 +50,7 @@
     .rail-row:last-child{border-bottom:none;}
     .rail-row strong{color:#0a0a0a;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
     .rail-exam-tip{background:#0a0a0a;border-radius:12px;padding:14px 16px;margin-bottom:12px;}
-    .rail-exam-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#fca5a5;margin-bottom:8px;}
+    .rail-exam-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#d4d4d4;margin-bottom:8px;}
     .rail-exam-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
     .rail-mistake{display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid #e0e0e0;font-size:12px;line-height:1.5;}
     .rail-mistake:last-child{border-bottom:none;}
