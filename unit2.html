@@ -4,18 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 2: Interactions Among Branches — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-pages.css">
   <link rel="stylesheet" href="styles-skills.css">
   <style>
+    /* ── HERO BANNER (columny, white marble) ── */
+    .unit2-hero {
+      position: relative; overflow: hidden;
+      background: #f7f5f0;
+      border-top: 4px solid #c8a951;
+      border-bottom: 4px solid #c8a951;
+      padding: 40px 1.5rem 28px;
+    }
+    .unit2-hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 35%; opacity: 0.22;
+    }
+    .unit2-hero-overlay {
+      position: absolute; inset: 0; background: rgba(247,245,240,0.55);
+    }
+    .unit2-hero-columns {
+      position: absolute; inset: 0; display: flex; justify-content: space-evenly;
+      pointer-events: none;
+    }
+    .unit2-hero-columns span {
+      width: 1px; height: 100%; background: rgba(200,169,81,0.18);
+    }
+    .unit2-hero-content {
+      position: relative; z-index: 2; max-width: 720px; margin: 0 auto; text-align: center;
+    }
+    .unit2-hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #8a6d1f; margin-bottom: 10px;
+    }
+    .unit2-hero-title {
+      font-family: 'Oswald', sans-serif; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: clamp(30px, 4.6vw, 46px); line-height: 1.12; color: #2d2d30; margin-bottom: 14px;
+    }
+    .unit2-hero-sub {
+      font-family: 'Source Sans 3', sans-serif; font-size: 15px; line-height: 1.6;
+      color: #4a4a4a; max-width: 560px; margin: 0 auto 18px;
+    }
+    .unit2-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-bottom: 8px; }
+    .unit2-hero-tag {
+      padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: rgba(200,169,81,0.15); color: #8a6d1f;
+      border: 1px solid rgba(200,169,81,0.35);
+    }
+    .unit2-hero-stats {
+      position: relative; z-index: 2; display: flex; justify-content: center; gap: 0;
+      margin-top: 26px;
+    }
+    .unit2-hero-stat {
+      display: flex; flex-direction: column; align-items: center;
+      padding: 0 32px; border-left: 1px solid #ded9c7;
+    }
+    .unit2-hero-stat:first-child { border-left: none; }
+    .unit2-hero-stat-num {
+      font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 28px; color: #8a6d1f; line-height: 1;
+    }
+    .unit2-hero-stat-label {
+      font-family: 'Source Sans 3', sans-serif; font-size: 10px; letter-spacing: 0.06em;
+      text-transform: uppercase; color: #6b6b6b; margin-top: 4px;
+    }
+    .unit2-hero-credit {
+      position: relative; z-index: 2; text-align: center; margin-top: 18px;
+      font-family: 'Source Sans 3', sans-serif; font-size: 10px; color: #999;
+    }
+    @media (max-width: 640px) {
+      .unit2-hero-stat { padding: 0 16px; }
+      .unit2-hero-columns span:nth-child(even) { display: none; }
+    }
+
     /* ── UNIT 2: DC MARBLE IDENTITY ── */
     body { background: #f4f5f7; }
 
     .unit-jumpbar {
       position: sticky; top: 0; z-index: 90;
-      background: white; border-bottom: 3px solid #1a1a2e;
+      background: white; border-bottom: 3px solid #2d2d30;
       padding: 0 1.5rem;
       display: flex; gap: 0; overflow-x: auto; scrollbar-width: none;
     }
@@ -26,8 +96,8 @@
       color: #64748b; text-decoration: none; white-space: nowrap;
       border-bottom: 3px solid transparent; transition: all 0.15s;
     }
-    .unit-jump-link:hover { color: #1a1a2e; }
-    .unit-jump-link.active { color: #1a1a2e; border-bottom-color: #c8a951; }
+    .unit-jump-link:hover { color: #2d2d30; }
+    .unit-jump-link.active { color: #2d2d30; border-bottom-color: #c8a951; }
 
     .unit-layout {
       display: grid; grid-template-columns: 220px 1fr;
@@ -42,7 +112,7 @@
       box-shadow: 0 1px 4px rgba(26,26,46,0.06);
     }
     .unit-sidebar-head {
-      background: #1a1a2e; padding: 10px 14px;
+      background: #2d2d30; padding: 10px 14px;
       font-size: 9px; font-weight: 800; letter-spacing: 0.14em;
       text-transform: uppercase; color: rgba(200,169,81,0.7);
     }
@@ -53,8 +123,8 @@
       border-bottom: 1px solid #e5e7eb; transition: all 0.12s;
     }
     .unit-sidebar-link:last-child { border-bottom: none; }
-    .unit-sidebar-link:hover { color: #1a1a2e; background: #f8f9fa; }
-    .unit-sidebar-link.active { color: #1a1a2e; border-left-color: #c8a951; background: #f8f9fa; }
+    .unit-sidebar-link:hover { color: #2d2d30; background: #f8f9fa; }
+    .unit-sidebar-link.active { color: #2d2d30; border-left-color: #c8a951; background: #f8f9fa; }
     .unit-sidebar-link .sidebar-year {
       display: block; font-size: 10px; font-weight: 500;
       color: #9ca3af; margin-top: 1px;
@@ -68,7 +138,7 @@
     .unit-section-title {
       font-family: 'Source Sans 3', sans-serif;
       font-size: 11px; font-weight: 800; letter-spacing: 0.16em;
-      text-transform: uppercase; color: #1a1a2e;
+      text-transform: uppercase; color: #2d2d30;
     }
     .unit-section-rule { flex: 1; height: 2px; background: #e5e7eb; }
     .unit-section-count { font-size: 10px; font-weight: 700; color: #9ca3af; }
@@ -87,11 +157,11 @@
     .concept-row-header:hover { background: #f8f9fa; }
     .concept-row-num {
       width: 28px; height: 28px; border-radius: 50%;
-      background: #1a1a2e; color: #c8a951;
+      background: #2d2d30; color: #c8a951;
       font-size: 12px; font-weight: 800;
       display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .concept-row-title { font-size: 14px; font-weight: 800; color: #1a1a2e; flex: 1; }
+    .concept-row-title { font-size: 14px; font-weight: 800; color: #2d2d30; flex: 1; }
     .concept-row-toggle { font-size: 18px; color: #d1d5db; transition: transform 0.2s; }
     .concept-row.open .concept-row-toggle { transform: rotate(180deg); }
     .concept-row-body {
@@ -109,9 +179,9 @@
       text-decoration: none; transition: border-color 0.15s, box-shadow 0.15s;
       box-shadow: 0 1px 3px rgba(26,26,46,0.05);
     }
-    .case-row:hover { border-color: #1a1a2e; box-shadow: 0 4px 16px rgba(26,26,46,0.12); }
+    .case-row:hover { border-color: #2d2d30; box-shadow: 0 4px 16px rgba(26,26,46,0.12); }
     .case-row-year {
-      background: #1a1a2e; padding: 16px 12px;
+      background: #2d2d30; padding: 16px 12px;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       font-family: 'JetBrains Mono', monospace;
@@ -123,7 +193,7 @@
       margin-top: 4px; line-height: 1.3;
     }
     .case-row-body { padding: 14px 16px; min-width: 0; }
-    .case-row-name { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+    .case-row-name { font-size: 14px; font-weight: 800; color: #2d2d30; margin-bottom: 4px; }
     .case-row-question { font-size: 12px; color: #64748b; line-height: 1.5; font-style: italic; }
     .case-row-ruling { font-size: 12px; color: #374151; line-height: 1.6; margin-top: 6px; }
     .case-row-arrow { padding: 0 16px; display: flex; align-items: center; font-size: 18px; color: #d1d5db; border-left: 1px solid #e5e7eb; }
@@ -138,23 +208,23 @@
       transition: border-color 0.15s, box-shadow 0.15s;
       box-shadow: 0 1px 3px rgba(26,26,46,0.05);
     }
-    .doc-bento-card:hover { border-color: #1a1a2e; box-shadow: 0 4px 16px rgba(26,26,46,0.1); }
+    .doc-bento-card:hover { border-color: #2d2d30; box-shadow: 0 4px 16px rgba(45,45,48,0.1); }
     .doc-bento-top {
-      background: linear-gradient(120deg, #1a1a2e 0%, #374151 100%);
+      background: #f7f5f0; border-bottom: 3px solid #c8a951;
       padding: 20px 20px 16px;
     }
     .doc-bento-icon { font-size: 26px; margin-bottom: 8px; display: block; }
     .doc-bento-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 14px; font-weight: 700; color: white;
+      font-family: 'Oswald', sans-serif; text-transform: uppercase;
+      font-size: 14px; font-weight: 600; color: #2d2d30;
       line-height: 1.2; margin-bottom: 4px;
     }
-    .doc-bento-meta { font-size: 10px; color: rgba(200,169,81,0.65); font-family: 'JetBrains Mono', monospace; }
+    .doc-bento-meta { font-size: 10px; color: #8a6d1f; font-family: 'JetBrains Mono', monospace; }
     .doc-bento-body { padding: 12px 14px; flex: 1; font-size: 12px; line-height: 1.7; color: #374151; }
     .doc-bento-footer { padding: 8px 14px; border-top: 1px solid #e5e7eb; font-size: 11px; font-weight: 700; color: #c8a951; }
 
     /* Exam guide */
-    .exam-guide { background: #1a1a2e; border-radius: 14px; overflow: hidden; }
+    .exam-guide { background: #2d2d30; border-radius: 14px; overflow: hidden; }
     .exam-guide-tabs { display: flex; border-bottom: 1px solid rgba(200,169,81,0.15); }
     .exam-guide-tab {
       padding: 12px 20px; font-size: 11px; font-weight: 800;
@@ -187,7 +257,7 @@
       font-size: 10px; font-weight: 800; letter-spacing: 0.12em;
       text-transform: uppercase; color: white;
     }
-    .branch-card-head.leg { background: #1a1a2e; }
+    .branch-card-head.leg { background: #2d2d30; }
     .branch-card-head.exec { background: #374151; }
     .branch-card-head.jud { background: #4b5563; }
     .branch-card-body { padding: 12px 14px; }
@@ -218,9 +288,9 @@
     }
     .frq-row-type.ca { background: #dbeafe; color: #1e3a8a; }
     .frq-row-type.sc { background: #e0e7ff; color: #3730a3; }
-    .frq-row-type.ae { background: #1a1a2e; color: #c8a951; }
+    .frq-row-type.ae { background: #2d2d30; color: #c8a951; }
     .frq-row-body { flex: 1; }
-    .frq-row-title { font-size: 14px; font-weight: 800; color: #1a1a2e; margin-bottom: 4px; }
+    .frq-row-title { font-size: 14px; font-weight: 800; color: #2d2d30; margin-bottom: 4px; }
     .frq-row-preview { font-size: 12px; color: #374151; line-height: 1.6; }
     .frq-row-link { display: block; margin-top: 8px; font-size: 11px; font-weight: 700; color: #c8a951; text-decoration: none; }
 
@@ -255,6 +325,32 @@
   <script src="nav-render.js"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "unit2.html" });</script>
 
+  <!-- HERO BANNER -->
+  <div class="unit2-hero">
+    <img class="unit2-hero-img" src="images/unit2-hero.jpg" alt="Supreme Court Building colonnade" onerror="this.style.display='none'">
+    <div class="unit2-hero-overlay"></div>
+    <div class="unit2-hero-columns">
+      <span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <div class="unit2-hero-content">
+      <div class="unit2-hero-eyebrow">AP Government &amp; Politics · 15–22% of Exam</div>
+      <h1 class="unit2-hero-title">Interactions Among Branches</h1>
+      <p class="unit2-hero-sub">Three branches. One Constitution. Constant tension. Congress makes the laws, the President executes them, the courts interpret them — and each branch has tools to block the other two.</p>
+      <div class="unit2-hero-tags">
+        <span class="unit2-hero-tag">Unit 2</span>
+        <span class="unit2-hero-tag">Separation of Powers</span>
+        <span class="unit2-hero-tag">Checks &amp; Balances</span>
+        <span class="unit2-hero-tag">Judicial Review</span>
+      </div>
+    </div>
+    <div class="unit2-hero-stats">
+      <div class="unit2-hero-stat"><span class="unit2-hero-stat-num">2</span><span class="unit2-hero-stat-label">Required Documents</span></div>
+      <div class="unit2-hero-stat"><span class="unit2-hero-stat-num">3</span><span class="unit2-hero-stat-label">Required Cases</span></div>
+      <div class="unit2-hero-stat"><span class="unit2-hero-stat-num">3</span><span class="unit2-hero-stat-label">Branches</span></div>
+    </div>
+    <div class="unit2-hero-credit">United States Supreme Court Building, Washington, D.C. · Public Domain</div>
+  </div>
+
   <!-- JUMP BAR -->
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
@@ -263,22 +359,6 @@
     <a class="unit-jump-link" href="#documents">Documents</a>
     <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
     <a class="unit-jump-link" href="#frq">FRQ Practice</a>
-  </div>
-
-  <!-- HERO -->
-  <div style="background:linear-gradient(135deg,#1a1a2e 0%,#374151 60%,#1a1a2e 100%);padding:28px 1.5rem 32px;">
-    <div style="max-width:1140px;margin:0 auto;">
-      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#c8a951;margin-bottom:8px;">AP Government & Politics · 15–22% of Exam</div>
-      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 2: Interactions Among<br>Branches of Government</div>
-      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">Three branches. One Constitution. Constant tension. Congress makes the laws, the President executes them, the courts interpret them — and each branch has tools to block the other two. Understanding how these institutions check each other is the core of Unit 2.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.2);color:#c8a951;">Unit 2</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(255,255,255,0.08);color:white;">15–22% of AP Exam</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Separation of Powers</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Checks &amp; Balances</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(200,169,81,0.15);color:#c8a951;">Judicial Review</span>
-      </div>
-    </div>
   </div>
 
   <div class="unit-layout">
@@ -438,7 +518,7 @@
         </div>
 
         <!-- Checks flow -->
-        <div style="background:#1a1a2e;border-radius:12px;padding:18px 22px;">
+        <div style="background:#2d2d30;border-radius:12px;padding:18px 22px;">
           <div style="font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#c8a951;margin-bottom:12px;">How Each Branch Checks the Others</div>
           <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;">
             <div>
