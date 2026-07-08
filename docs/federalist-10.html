@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Federalist No. 10 — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="../styles-base.css">
   <link rel="stylesheet" href="../styles-pages.css">
@@ -42,15 +42,27 @@
 
     /* Hero */
     .doc-hero {
-      background: linear-gradient(135deg, #2c1810 0%, #5c3d2e 100%);
+      background: #2c1810;
       border-radius: 14px; padding: 24px 28px; margin-bottom: 20px;
+    }
+    .doc-hero-with-portrait {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+    }
+    .doc-hero-text { flex: 1; min-width: 0; }
+    .doc-hero-portrait {
+      width: 96px; height: 120px; object-fit: cover; border-radius: 8px;
+      border: 2px solid rgba(184,149,42,0.4); flex-shrink: 0;
+    }
+    @media (max-width: 560px) {
+      .doc-hero-with-portrait { flex-direction: column; align-items: flex-start; }
+      .doc-hero-portrait { width: 84px; height: 105px; }
     }
     .doc-hero-eyebrow {
       font-size: 10px; font-weight: 800; letter-spacing: 0.16em;
       text-transform: uppercase; color: #b8952a; margin-bottom: 8px;
     }
     .doc-hero-title {
-      font-family: 'Playfair Display', serif; font-style: italic;
+      font-family: 'Archivo', sans-serif; font-style: normal; text-transform: uppercase;
       font-size: clamp(22px, 3vw, 32px); font-weight: 900;
       color: #f5ead6; line-height: 1.2; margin-bottom: 6px;
     }
@@ -91,19 +103,39 @@
     /* Section block */
     .doc-section { margin-bottom: 28px; }
     .doc-section-title {
-      font-family: 'Playfair Display', serif; font-style: italic;
-      font-size: 18px; font-weight: 700; color: #2c1810;
+      font-family: 'Archivo', sans-serif; font-style: normal; text-transform: uppercase;
+      font-size: 16px; font-weight: 700; color: #2c1810;
       margin-bottom: 14px; padding-bottom: 8px;
       border-bottom: 2px solid #d4b896;
     }
 
     /* Text + margin annotation layout */
+    .doc-pullquote {
+      margin: 28px 0; padding: 32px 36px;
+      background: #2c1810; border-radius: 14px;
+      position: relative;
+    }
+    .doc-pullquote::before {
+      content: '"'; position: absolute; top: -6px; left: 20px;
+      font-family: 'Archivo', sans-serif; font-size: 90px; font-weight: 900;
+      color: rgba(184,149,42,0.25); line-height: 1;
+    }
+    .doc-pullquote p {
+      font-family: 'Archivo', sans-serif; font-style: normal; font-weight: 700;
+      font-size: clamp(24px, 3.4vw, 34px); line-height: 1.35; color: #f5ead6;
+      position: relative; z-index: 1; margin-bottom: 10px;
+    }
+    .doc-pullquote cite {
+      font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-style: normal;
+      font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; color: #b8952a;
+    }
+
     .doc-passage-row {
-      display: grid; grid-template-columns: 1fr 180px;
+      display: grid; grid-template-columns: 1fr 230px;
       gap: 16px; margin-bottom: 20px; align-items: start;
     }
     .doc-passage-text {
-      font-size: 15px; line-height: 1.9; color: #2c1810;
+      font-size: 14px; line-height: 1.85; color: #2c1810;
       font-family: 'Source Sans 3', sans-serif;
     }
     .doc-passage-text .hl {
@@ -111,16 +143,16 @@
     }
     .doc-margin {
       background: #fdf6e8; border: 1px solid #d4b896;
-      border-radius: 8px; padding: 10px 12px;
+      border-radius: 8px; padding: 12px 14px;
     }
     .doc-margin-label {
-      font-size: 8px; font-weight: 800; letter-spacing: 0.1em;
-      text-transform: uppercase; color: #b8952a; margin-bottom: 5px;
+      font-size: 10px; font-weight: 800; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #b8952a; margin-bottom: 6px;
     }
-    .doc-margin-text { font-size: 11px; line-height: 1.6; color: #5c3d2e; }
+    .doc-margin-text { font-size: 15px; line-height: 1.55; font-weight: 500; color: #2c1810; }
     .doc-margin-tag {
-      display: inline-block; margin-top: 6px;
-      font-size: 9px; font-weight: 700; padding: 2px 7px;
+      display: inline-block; margin-top: 8px;
+      font-size: 10px; font-weight: 700; padding: 3px 8px;
       border-radius: 4px; background: #f5ead6; color: #8b6914;
     }
     .doc-margin-tag.exam { background: #2c1810; color: #b8952a; }
@@ -210,15 +242,18 @@
     <!-- MAIN -->
     <div class="doc-main">
 
-      <div class="doc-hero">
-        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.6.A</div>
-        <div class="doc-hero-title">Federalist No. 10</div>
-        <div class="doc-hero-cite">James Madison · The Federalist Papers · November 22, 1787</div>
-        <div class="doc-hero-tags">
-          <span class="doc-tag doc-tag-unit">Unit 1</span>
-          <span class="doc-tag doc-tag-req">Required Document</span>
-          <span class="doc-tag doc-tag-unit">⭐ Most Tested</span>
+      <div class="doc-hero doc-hero-with-portrait">
+        <div class="doc-hero-text">
+          <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.6.A</div>
+          <div class="doc-hero-title">Federalist No. 10</div>
+          <div class="doc-hero-cite">James Madison · The Federalist Papers · November 22, 1787</div>
+          <div class="doc-hero-tags">
+            <span class="doc-tag doc-tag-unit">Unit 1</span>
+            <span class="doc-tag doc-tag-req">Required Document</span>
+            <span class="doc-tag doc-tag-unit">⭐ Most Tested</span>
+          </div>
         </div>
+        <img class="doc-hero-portrait" src="../images/madison-portrait.jpg" alt="James Madison, official portrait" onerror="this.style.display='none'">
       </div>
 
       <div id="context" class="doc-context">
@@ -310,6 +345,11 @@
           </div>
         </div>
 
+        <blockquote class="doc-pullquote">
+          <p>"Liberty is to faction what air is to fire, an aliment without which it instantly expires."</p>
+          <cite>— Federalist No. 10</cite>
+        </blockquote>
+
       </div>
 
       <!-- SECTION 3: THE REPUBLIC SOLUTION -->
@@ -365,6 +405,11 @@
             <span class="doc-margin-tag">Anti-Federalist Response</span>
           </div>
         </div>
+
+        <blockquote class="doc-pullquote">
+          <p>"Extend the sphere, and you take in a greater variety of parties and interests."</p>
+          <cite>— Federalist No. 10</cite>
+        </blockquote>
 
       </div>
 
