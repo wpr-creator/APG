@@ -1,16 +1,15 @@
 // ═══════════════════════════════════════════════════════════════════
 // CARD RENDERER — builds doc/case landing page grids + hero from data
 // ═══════════════════════════════════════════════════════════════════
-// STATUS: Step 4. Depends on data-required.js being loaded first.
-// Colors below are copied exactly from the live unit1-docs / unit2-docs
-// / unit3-docs / unit2-cases / unit3-cases / unit5-cases pages so the
-// visual result matches what's already live.
+// STATUS: Colors and fonts here mirror styles-pages.css and the
+// per-unit visual identity system exactly. If you change a unit's
+// palette or heading font in styles-pages.css, update the matching
+// entry below too -- these are deliberately kept separate since this
+// file generates inline styles (can't read CSS custom properties).
 //
 // Per teacher direction: the old subtitle line ("X required documents
 // · Select one to read with full annotations") is dropped. The hero
-// now shows just the unit eyebrow + page title. The count is still
-// implicitly correct since the grid always reflects REQUIRED_DOCS /
-// REQUIRED_CASES exactly.
+// shows just the unit eyebrow + page title.
 //
 // USAGE (once wired into a page):
 //   <div id="hero"></div>
@@ -26,43 +25,58 @@
 
 const UNIT_THEMES = {
   1: {
-    heroGradient: "linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%)",
+    headingFont: "'Archivo', sans-serif", headingWeight: 900, headingStyle: "normal", headingTransform: "uppercase",
+    heroBg: "#2c1810",
     eyebrowColor: "#b8952a",
     heroTitleColor: "#f5ead6",
     cardBg: "#fdf6e8", cardBorder: "#d4b896", cardHoverBorder: "#2c1810",
-    headerGradient: "linear-gradient(120deg,#2c1810,#5c3d2e)",
+    headerBg: "#2c1810",
     cardTitleColor: "#f5ead6", cardMetaColor: "rgba(184,149,42,0.7)",
     cardBodyColor: "#5c3d2e", linkColor: "#b8952a"
   },
   2: {
-    heroGradient: "linear-gradient(135deg,#1a1a2e 0%,#374151 100%)",
-    eyebrowColor: "#c8a951",
-    heroTitleColor: "white",
-    cardBg: "white", cardBorder: "#e5e7eb", cardHoverBorder: "#1a1a2e",
-    headerGradient: "linear-gradient(120deg,#1a1a2e,#374151)",
-    cardTitleColor: "white", cardMetaColor: "#c8a951",
-    cardBodyColor: "#374151", linkColor: "#c8a951",
-    caseBadgeBg: "#1a1a2e", caseBadgeDate: "#c8a951", caseTitleColor: "#1a1a2e"
+    headingFont: "'Oswald', sans-serif", headingWeight: 600, headingStyle: "normal", headingTransform: "uppercase",
+    heroBg: "#f7f5f0",
+    eyebrowColor: "#8a6d1f",
+    heroTitleColor: "#2d2d30",
+    cardBg: "white", cardBorder: "#ded9c7", cardHoverBorder: "#2d2d30",
+    headerBg: "#f7f5f0", headerBorderBottom: "3px solid #c8a951",
+    cardTitleColor: "#2d2d30", cardMetaColor: "#8a6d1f",
+    cardBodyColor: "#3a3a3a", linkColor: "#8a6d1f",
+    caseBadgeBg: "#2d2d30", caseBadgeDate: "#c8a951", caseTitleColor: "#2d2d30"
   },
   3: {
-    heroGradient: "linear-gradient(135deg,#0a0a0a 0%,#1f1f1f 100%)",
-    eyebrowColor: "#b22234",
+    headingFont: "'Anton', sans-serif", headingWeight: 400, headingStyle: "normal", headingTransform: "uppercase",
+    heroBg: "#0a0a0a",
+    eyebrowColor: "#999999",
     heroTitleColor: "white",
-    cardBg: "white", cardBorder: "#e0e0e0", cardHoverBorder: "#0a0a0a",
-    headerGradient: "linear-gradient(120deg,#0a0a0a,#1f1f1f)",
-    cardTitleColor: "white", cardMetaColor: "#b22234",
-    cardBodyColor: "#374151", linkColor: "#b22234",
-    caseBadgeBg: "#0a0a0a", caseBadgeDate: "#b22234", caseTitleColor: "#0a0a0a"
+    cardBg: "white", cardBorder: "#d4d4d4", cardHoverBorder: "#0a0a0a",
+    headerBg: "#0a0a0a",
+    cardTitleColor: "white", cardMetaColor: "#999999",
+    cardBodyColor: "#374151", linkColor: "#0a0a0a",
+    caseBadgeBg: "#0a0a0a", caseBadgeDate: "#999999", caseTitleColor: "#0a0a0a"
+  },
+  4: {
+    headingFont: "'Barlow Condensed', sans-serif", headingWeight: 700, headingStyle: "normal", headingTransform: "uppercase",
+    heroBg: "#1e3a8a",
+    eyebrowColor: "#fca5a5",
+    heroTitleColor: "white",
+    cardBg: "white", cardBorder: "#d1d5db", cardHoverBorder: "#1e3a8a",
+    headerBg: "#1e3a8a", headerBorderBottom: "3px solid #b91c1c",
+    cardTitleColor: "white", cardMetaColor: "#fca5a5",
+    cardBodyColor: "#374151", linkColor: "#b91c1c",
+    caseBadgeBg: "#1e3a8a", caseBadgeDate: "#fca5a5", caseTitleColor: "#1e3a8a"
   },
   5: {
-    heroGradient: "linear-gradient(135deg,#14532d 0%,#166534 100%)",
-    eyebrowColor: "#86efac",
-    heroTitleColor: "white",
-    cardBg: "white", cardBorder: "#bbf7d0", cardHoverBorder: "#14532d",
-    headerGradient: "linear-gradient(120deg,#14532d,#166534)",
-    cardTitleColor: "white", cardMetaColor: "#86efac",
-    cardBodyColor: "#374151", linkColor: "#16a34a",
-    caseBadgeBg: "#14532d", caseBadgeDate: "#16a34a", caseTitleColor: "#14532d"
+    headingFont: "'IBM Plex Mono', monospace", headingWeight: 700, headingStyle: "normal", headingTransform: "uppercase",
+    heroBg: "#1a1a1a",
+    eyebrowColor: "#9a2323",
+    heroTitleColor: "#faf8f3",
+    cardBg: "#faf8f3", cardBorder: "#d4d0c5", cardHoverBorder: "#1a1a1a",
+    headerBg: "#1a1a1a",
+    cardTitleColor: "#faf8f3", cardMetaColor: "#c98888",
+    cardBodyColor: "#2b2b2b", linkColor: "#9a2323",
+    caseBadgeBg: "#1a1a1a", caseBadgeDate: "#c98888", caseTitleColor: "#1a1a1a"
   }
 };
 
@@ -73,12 +87,12 @@ function renderDocsPage(opts) {
 
   const heroEl = document.getElementById(heroId);
   if (heroEl) {
-    heroEl.style.background = theme.heroGradient;
+    heroEl.style.background = theme.heroBg;
     heroEl.style.padding = "24px 1.5rem 28px";
     heroEl.innerHTML = `
       <div style="max-width:1100px;margin:0 auto;">
         <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:${theme.eyebrowColor};margin-bottom:6px;">${eyebrow}</div>
-        <div style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:${theme.heroTitleColor};font-style:italic;">${pageTitle || "Foundational Documents"}</div>
+        <div style="font-family:${theme.headingFont};font-size:clamp(24px,3vw,36px);font-weight:${theme.headingWeight};font-style:${theme.headingStyle};text-transform:${theme.headingTransform};color:${theme.heroTitleColor};">${pageTitle || "Foundational Documents"}</div>
       </div>`;
   }
 
@@ -91,9 +105,9 @@ function renderDocsPage(opts) {
       ${docs.map(d => `
       <a href="/APG/${d.file}" style="text-decoration:none;">
         <div style="background:${theme.cardBg};border:1px solid ${theme.cardBorder};border-radius:12px;overflow:hidden;transition:box-shadow 0.15s,border-color 0.15s;" onmouseover="this.style.borderColor='${theme.cardHoverBorder}';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.borderColor='${theme.cardBorder}';this.style.boxShadow='none'">
-          <div style="background:${theme.headerGradient};padding:18px 20px;">
+          <div style="background:${theme.headerBg};${theme.headerBorderBottom ? 'border-bottom:' + theme.headerBorderBottom + ';' : ''}padding:18px 20px;">
             <div style="font-size:26px;margin-bottom:6px;">${d.icon}</div>
-            <div style="font-family:'Playfair Display',serif;font-size:16px;font-weight:700;color:${theme.cardTitleColor};margin-bottom:3px;">${d.title}</div>
+            <div style="font-family:${theme.headingFont};font-size:15px;font-weight:${theme.headingWeight};text-transform:${theme.headingTransform};color:${theme.cardTitleColor};margin-bottom:3px;">${d.title}</div>
             <div style="font-size:10px;color:${theme.cardMetaColor};font-family:'JetBrains Mono',monospace;">${d.author} · ${d.year}${d.tag ? " · " + d.tag : ""}</div>
           </div>
           <div style="padding:14px 16px;">
@@ -113,12 +127,12 @@ function renderCasesPage(opts) {
 
   const heroEl = document.getElementById(heroId);
   if (heroEl) {
-    heroEl.style.background = theme.heroGradient;
+    heroEl.style.background = theme.heroBg;
     heroEl.style.padding = "24px 1.5rem 28px";
     heroEl.innerHTML = `
       <div style="max-width:1100px;margin:0 auto;">
         <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:${theme.eyebrowColor};margin-bottom:6px;">${eyebrow}</div>
-        <div style="font-family:'Playfair Display',serif;font-size:clamp(24px,3vw,36px);font-weight:900;color:${theme.heroTitleColor};font-style:italic;">${pageTitle || "Required SCOTUS Cases"}</div>
+        <div style="font-family:${theme.headingFont};font-size:clamp(24px,3vw,36px);font-weight:${theme.headingWeight};font-style:${theme.headingStyle};text-transform:${theme.headingTransform};color:${theme.heroTitleColor};">${pageTitle || "Required SCOTUS Cases"}</div>
       </div>`;
   }
 
@@ -133,10 +147,10 @@ function renderCasesPage(opts) {
         <div style="background:${theme.cardBg};border:1px solid ${theme.cardBorder};border-radius:12px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:grid;grid-template-columns:72px 1fr;transition:box-shadow 0.15s,border-color 0.15s;" onmouseover="this.style.borderColor='${theme.cardHoverBorder}';this.style.boxShadow='0 4px 16px rgba(0,0,0,0.12)'" onmouseout="this.style.borderColor='${theme.cardBorder}';this.style.boxShadow='0 1px 4px rgba(0,0,0,0.06)'">
           <div style="background:${theme.caseBadgeBg};padding:14px 10px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
             <div style="font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;color:${theme.caseBadgeDate};">${c.year}</div>
-            <div style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:4px;line-height:1.3;">${c.tag}</div>
+            <div style="font-size:8px;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-top:4px;line-height:1.3;">${c.tag}</div>
           </div>
           <div style="padding:13px 15px;">
-            <div style="font-size:13px;font-weight:800;color:${theme.caseTitleColor};margin-bottom:3px;">${c.title}</div>
+            <div style="font-family:${theme.headingFont};font-size:14px;font-weight:${theme.headingWeight};text-transform:${theme.headingTransform};color:${theme.caseTitleColor};margin-bottom:3px;">${c.title}</div>
             <div style="font-size:11px;color:#6b7280;font-style:italic;line-height:1.5;margin-bottom:5px;">${c.question}</div>
             <div style="font-size:11px;color:#374151;line-height:1.6;">${c.holding}</div>
           </div>

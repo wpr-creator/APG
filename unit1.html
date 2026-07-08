@@ -4,12 +4,88 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 1: Foundations of American Democracy — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;900&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-pages.css">
   <link rel="stylesheet" href="styles-skills.css">
   <style>
+    /* ── LEAD QUOTE (full-width, right after hero) ── */
+    .unit-lead-quote {
+      background: #fdf6e8; border-bottom: 1px solid #d4b896;
+      padding: 44px 1.5rem;
+    }
+    .unit-lead-quote-inner {
+      max-width: 780px; margin: 0 auto; text-align: center; position: relative;
+    }
+    .unit-lead-quote-inner::before {
+      content: '"'; display: block;
+      font-family: 'Archivo', sans-serif; font-size: 90px; font-weight: 900;
+      color: #d4b896; line-height: 1; margin-bottom: -20px;
+    }
+    .unit-lead-quote-inner p {
+      font-family: 'Archivo', sans-serif; font-style: normal; font-weight: 700;
+      font-size: clamp(24px, 3.6vw, 36px); line-height: 1.3; color: #2c1810; margin-bottom: 14px;
+    }
+    .unit-lead-quote-inner cite {
+      font-family: 'Source Sans 3', sans-serif; font-size: 13px; font-style: normal;
+      font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: #8b6914;
+    }
+
+    /* ── HERO BANNER ── */
+    .unit-hero {
+      position: relative; overflow: hidden; min-height: 320px;
+      display: flex; align-items: flex-end;
+      background: #2c1810;
+    }
+    .unit-hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 30%;
+    }
+    .unit-hero-overlay {
+      position: absolute; inset: 0;
+      background: rgba(44,24,16,0.72);
+    }
+    .unit-hero-content {
+      position: relative; z-index: 2; padding: 48px 2rem 32px; max-width: 720px;
+    }
+    .unit-hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: #d4a94a; margin-bottom: 10px;
+    }
+    .unit-hero-title {
+      font-family: 'Archivo', sans-serif; font-weight: 900; font-style: normal;
+      text-transform: uppercase; letter-spacing: 0.01em;
+      font-size: clamp(28px, 4.5vw, 44px); line-height: 1.12; color: #f5ead6; margin-bottom: 14px;
+    }
+    .unit-hero-sub {
+      font-family: 'Source Sans 3', sans-serif; font-size: 15px; line-height: 1.6;
+      color: rgba(245,234,214,0.82); max-width: 560px; margin-bottom: 16px;
+    }
+    .unit-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+    .unit-hero-tag {
+      padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: rgba(184,149,42,0.18); color: #d4a94a;
+    }
+    .unit-hero-stats { display: flex; gap: 28px; }
+    .unit-hero-stat { display: flex; flex-direction: column; }
+    .unit-hero-stat-num {
+      font-family: 'Archivo', sans-serif; font-weight: 900; font-size: 30px; color: #d4a94a; line-height: 1;
+    }
+    .unit-hero-stat-label {
+      font-family: 'Source Sans 3', sans-serif; font-size: 11px; letter-spacing: 0.06em;
+      text-transform: uppercase; color: rgba(245,234,214,0.65); margin-top: 4px;
+    }
+    .unit-hero-credit {
+      position: absolute; z-index: 2; bottom: 8px; right: 14px;
+      font-family: 'Source Sans 3', sans-serif; font-size: 10px; color: rgba(245,234,214,0.55);
+    }
+    @media (max-width: 640px) {
+      .unit-hero { min-height: 260px; }
+      .unit-hero-stats { gap: 18px; }
+    }
+
     /* ── UNIT PAGE LAYOUT (shared structure) ── */
     .unit-jumpbar {
       position: sticky; top: 0; z-index: 90;
@@ -134,13 +210,13 @@
     }
     .doc-bento-card:hover { border-color: #2c1810; box-shadow: 0 4px 16px rgba(44,24,16,0.12); }
     .doc-bento-top {
-      background: linear-gradient(120deg, #2c1810 0%, #5c3d2e 100%);
+      background: #2c1810;
       padding: 20px 20px 16px;
     }
     .doc-bento-icon { font-size: 28px; margin-bottom: 8px; display: block; }
     .doc-bento-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 15px; font-weight: 700; color: #f5ead6;
+      font-family: 'Archivo', sans-serif; text-transform: uppercase;
+      font-size: 14px; font-weight: 700; color: #f5ead6;
       line-height: 1.2; margin-bottom: 4px;
     }
     .doc-bento-meta { font-size: 10px; color: rgba(184,149,42,0.7); font-family: 'JetBrains Mono', monospace; }
@@ -230,6 +306,36 @@
   <script src="nav-render.js"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "unit1.html" });</script>
 
+  <!-- HERO BANNER -->
+  <div class="unit-hero">
+    <img class="unit-hero-img" src="images/unit1-hero.jpg" alt="Declaration of Independence, John Trumbull (1818)" onerror="this.style.display='none'">
+    <div class="unit-hero-overlay"></div>
+    <div class="unit-hero-content">
+      <div class="unit-hero-eyebrow">AP Government &amp; Politics · 15–22% of Exam</div>
+      <h1 class="unit-hero-title">Foundations of American Democracy</h1>
+      <p class="unit-hero-sub">The Founders argued about power — how much government should have, who should hold it, and what happens when it's abused. Every document in this unit is either a warning about tyranny or a design for preventing it. They were all writing for their lives.</p>
+      <div class="unit-hero-tags">
+        <span class="unit-hero-tag">Unit 1</span>
+        <span class="unit-hero-tag">Federalism</span>
+        <span class="unit-hero-tag">Separation of Powers</span>
+        <span class="unit-hero-tag">Checks &amp; Balances</span>
+      </div>
+      <div class="unit-hero-stats">
+        <div class="unit-hero-stat"><span class="unit-hero-stat-num">8</span><span class="unit-hero-stat-label">Required Documents</span></div>
+        <div class="unit-hero-stat"><span class="unit-hero-stat-num">7</span><span class="unit-hero-stat-label">Core Concepts</span></div>
+      </div>
+    </div>
+    <div class="unit-hero-credit">John Trumbull, <em>Declaration of Independence</em> (1818) — U.S. Capitol Rotunda · Public Domain</div>
+  </div>
+
+  <!-- LEAD QUOTE -->
+  <div class="unit-lead-quote">
+    <div class="unit-lead-quote-inner">
+      <p>"If men were angels, no government would be necessary."</p>
+      <cite>— James Madison, Federalist No. 51</cite>
+    </div>
+  </div>
+
   <!-- JUMP BAR -->
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
@@ -237,22 +343,6 @@
     <a class="unit-jump-link" href="#amendments">Amendments</a>
     <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
     <a class="unit-jump-link" href="#frq">FRQ Practice</a>
-  </div>
-
-  <!-- HERO -->
-  <div style="background:linear-gradient(135deg,#2c1810 0%,#5c3d2e 100%);padding:28px 1.5rem 32px;">
-    <div style="max-width:1140px;margin:0 auto;">
-      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#b8952a;margin-bottom:8px;">AP Government & Politics · 15–22% of Exam</div>
-      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:#f5ead6;line-height:1.1;margin-bottom:10px;font-style:italic;">Unit 1: Foundations of<br>American Democracy</div>
-      <div style="font-size:14px;color:rgba(245,234,214,0.65);line-height:1.7;max-width:620px;margin-bottom:18px;">The Founders argued about power — how much government should have, who should hold it, and what happens when it's abused. Every document in this unit is either a warning about tyranny or a design for preventing it. They were all writing for their lives.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.2);color:#b8952a;">Unit 1</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(245,234,214,0.1);color:#f5ead6;">15–22% of AP Exam</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Federalism</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Separation of Powers</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;background:rgba(184,149,42,0.15);color:#b8952a;">Checks &amp; Balances</span>
-      </div>
-    </div>
   </div>
 
   <div class="unit-layout">
