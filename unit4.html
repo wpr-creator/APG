@@ -4,11 +4,57 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Unit 4: Political Ideologies &amp; Beliefs — Mr. Rogers AP Gov</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Source+Sans+3:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="styles-base.css">
   <link rel="stylesheet" href="styles-pages.css">
   <style>
+    /* ── HERO BANNER (plain white card, blue/red text accents only) ── */
+    .unit4-hero {
+      position: relative;
+      background: white;
+      border: 2px solid #1e3a8a;
+      border-radius: 14px;
+      padding: 36px 2rem;
+      margin: 20px 1.5rem 0;
+    }
+    .unit4-hero-content {
+      max-width: 720px;
+    }
+    .unit4-hero-eyebrow {
+      font-family: 'Source Sans 3', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase; color: #666; margin-bottom: 10px;
+    }
+    .unit4-hero-title {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.01em;
+      font-size: clamp(30px, 4.6vw, 46px); line-height: 1.08; color: #1e3a8a; margin-bottom: 14px;
+    }
+    .unit4-hero-title .accent { color: #b91c1c; }
+    .unit4-hero-sub {
+      font-family: 'Source Sans 3', sans-serif; font-size: 15px; line-height: 1.6;
+      color: #4a4a4a; max-width: 580px; margin-bottom: 20px;
+    }
+    .unit4-spectrum {
+      display: flex; align-items: center; gap: 10px; margin-bottom: 20px; max-width: 420px;
+    }
+    .unit4-spectrum-label {
+      font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 12px;
+      letter-spacing: 0.06em; color: #4a4a4a; white-space: nowrap;
+    }
+    .unit4-spectrum-bar { flex: 1; display: flex; height: 6px; border-radius: 3px; overflow: hidden; }
+    .unit4-spectrum-bar div:nth-child(1) { flex: 1; background: #1e3a8a; }
+    .unit4-spectrum-bar div:nth-child(2) { flex: 1; background: #5b5ba8; }
+    .unit4-spectrum-bar div:nth-child(3) { flex: 1; background: #8a5a8a; }
+    .unit4-spectrum-bar div:nth-child(4) { flex: 1; background: #a84545; }
+    .unit4-spectrum-bar div:nth-child(5) { flex: 1; background: #b91c1c; }
+    .unit4-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .unit4-hero-tag {
+      padding: 4px 12px; border-radius: 99px; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      background: #f3f4f6; color: #4a4a4a;
+    }
+
     body { background:#f8f8fc; }
     .unit-jumpbar { position:sticky;top:0;z-index:90;background:white;border-bottom:3px solid #1e3a8a;padding:0 1.5rem;display:flex;gap:0;overflow-x:auto;scrollbar-width:none; }
     .unit-jump-link { padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:#64748b;text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;transition:all 0.15s; }
@@ -17,7 +63,7 @@
     .unit-layout { display:grid;grid-template-columns:220px 1fr;gap:28px;align-items:start;max-width:1140px;margin:0 auto;padding:24px 1.5rem 60px; }
     .unit-sidebar { position:sticky;top:48px; }
     .unit-sidebar-section { background:white;border-radius:12px;border:1px solid #e0e0f0;overflow:hidden;margin-bottom:12px; }
-    .unit-sidebar-head { background:linear-gradient(90deg,#b91c1c,#1e3a8a);padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.7); }
+    .unit-sidebar-head { background:linear-gradient(90deg,#b91c1c 0%,#b91c1c 50%,#1e3a8a 50%,#1e3a8a 100%);padding:10px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:white; }
     .unit-sidebar-link { display:block;padding:9px 14px;font-size:12px;font-weight:600;color:#374151;text-decoration:none;border-left:3px solid transparent;border-bottom:1px solid #e0e0f0;transition:all 0.12s; }
     .unit-sidebar-link:last-child { border-bottom:none; }
     .unit-sidebar-link:hover { color:#1e3a8a;background:#f8f8fc; }
@@ -37,7 +83,7 @@
     .concept-row.open .concept-row-toggle { transform:rotate(180deg); }
     .concept-row-body { display:none;padding:0 16px 16px 56px;font-size:14px;line-height:1.8;color:#374151; }
     .concept-row.open .concept-row-body { display:block; }
-    .exam-guide { background:linear-gradient(135deg,#1a0a0a 0%,#0a0a1a 100%);border-radius:14px;overflow:hidden; }
+    .exam-guide { background:#1e293b;border-radius:14px;overflow:hidden; }
     .exam-guide-tabs { display:flex;border-bottom:1px solid rgba(255,255,255,0.1); }
     .exam-guide-tab { padding:12px 20px;font-size:11px;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);cursor:pointer;border-bottom:3px solid transparent;transition:all 0.15s; }
     .exam-guide-tab.active { color:#93c5fd;border-bottom-color:#93c5fd; }
@@ -68,23 +114,32 @@
   <script src="data-required.js"></script>
   <script src="nav-render.js"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "unit4.html" });</script>
+  <!-- HERO BANNER -->
+  <div class="unit4-hero">
+    <div class="unit4-hero-content">
+      <div class="unit4-hero-eyebrow">AP Government &amp; Politics · 10–15% of Exam</div>
+      <h1 class="unit4-hero-title">American <span class="accent">Political Ideologies</span> &amp; Beliefs</h1>
+      <p class="unit4-hero-sub">How do Americans think about politics? What makes someone liberal or conservative — and how do those labels actually map onto real policy positions? Unit 4 is about the spectrum, the polling, the demographics, and the gap between what people believe and what they tell pollsters.</p>
+      <div class="unit4-spectrum">
+        <span class="unit4-spectrum-label">LIBERAL</span>
+        <div class="unit4-spectrum-bar">
+          <div></div><div></div><div></div><div></div><div></div>
+        </div>
+        <span class="unit4-spectrum-label">CONSERVATIVE</span>
+      </div>
+      <div class="unit4-hero-tags">
+        <span class="unit4-hero-tag">Unit 4</span>
+        <span class="unit4-hero-tag">No Required Cases</span>
+        <span class="unit4-hero-tag">No Required Documents</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUMP BAR -->
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
     <a class="unit-jump-link" href="#examguide">AP Exam Guide</a>
     <a class="unit-jump-link" href="#frq">FRQ Practice</a>
-  </div>
-  <div style="background:linear-gradient(135deg,#b91c1c 0%,#7c0c0c 35%,#0c1a5c 65%,#1e3a8a 100%);padding:28px 1.5rem 32px;">
-    <div style="max-width:1140px;margin:0 auto;">
-      <div style="font-size:10px;font-weight:800;letter-spacing:0.18em;text-transform:uppercase;color:#93c5fd;margin-bottom:8px;">AP Government &amp; Politics · 10–15% of Exam</div>
-      <div style="font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;line-height:1.1;margin-bottom:10px;">Unit 4: American Political<br>Ideologies &amp; Beliefs</div>
-      <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.7;max-width:620px;margin-bottom:18px;">How do Americans think about politics? What makes someone liberal or conservative — and how do those labels actually map onto real policy positions? Unit 4 is about the spectrum, the polling, the demographics, and the gap between what people believe and what they tell pollsters.</div>
-      <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(147,197,253,0.15);color:#93c5fd;">Unit 4</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(255,255,255,0.08);color:white;">10–15% of Exam</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(185,28,28,0.3);color:#fca5a5;">No Required Cases</span>
-        <span style="padding:4px 12px;border-radius:99px;font-size:10px;font-weight:700;text-transform:uppercase;background:rgba(30,58,138,0.3);color:#93c5fd;">No Required Docs</span>
-      </div>
-    </div>
   </div>
   <div class="unit-layout">
     <div class="unit-sidebar">
