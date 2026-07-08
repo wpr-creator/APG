@@ -937,7 +937,7 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
 // Home and silently ignore the hash). Falls back to Home if the hash is
 // missing, empty, or doesn't match a real tab.
 (function () {
-  var hashTab = window.location.hash.replace('#', '');
+  var hashTab = window.location.hash.replace('#', '').split('&')[0];
   var validTab = TAB_IDS.includes(hashTab) ? hashTab : 'home';
   TAB_IDS.forEach(id => {
     const el = document.getElementById('tab-' + id);

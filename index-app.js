@@ -1195,6 +1195,12 @@
     frqLaunchPrompt(FRQ_PROMPTS.indexOf(pool[idx]));
   }
 
+  function frqLaunchPromptById(id) {
+    var idx = FRQ_PROMPTS.findIndex(function(p) { return p.id === id; });
+    if (idx === -1) { console.error('FRQ prompt id not found:', id); return; }
+    frqLaunchPrompt(idx);
+  }
+
   function frqLaunchPrompt(idx) {
     var p = FRQ_PROMPTS[idx];
     frqPracticeState.currentPrompt = p;
@@ -1589,4 +1595,18 @@
   } else {
     bootSite();
   }
+
+  // Deep-link straight into a specific FRQ prompt's timer view, e.g. a
+  // unit page linking to "/APG/#review&frq=u1-marijuana" should skip the
+  // prompt picker entirely and launch that exact prompt. The tab itself
+  // (Review) is already opened by the hash router in data-core.js; this
+  // just handles the FRQ-specific part once this file (and FRQ_PROMPTS)
+  // has actually loaded.
+  (function () {
+    var hash = window.location.hash;
+    var match = hash.match(/[#&]frq=([a-z0-9-]+)/i);
+    if (match) {
+      setTimeout(function () { frqLaunchPromptById(match[1]); }, 150);
+    }
+  })();
 

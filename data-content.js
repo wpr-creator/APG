@@ -987,6 +987,192 @@ In your essay, you must:
 • Support your argument with a logical line of reasoning
 
 Consider addressing: Schenck v. United States, Tinker v. Des Moines, New York Times v. United States, the clear and present danger test, social media platforms, national security, and the Marketplace of Ideas theory.`
+  },
+
+  // ── UNIT PAGE PROMPTS (deep-linked from each unit's FRQ Practice section) ──
+  {
+    id: 'u1-marijuana', type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+    unit: 1, unitLabel: 'Unit 1 · Foundations', title: 'Federalism and State Marijuana Laws', chart: null,
+    prompt: `Several states have legalized recreational marijuana while it remains illegal under federal law.
+
+A. Using the concept of federalism and the Supremacy Clause, explain the constitutional tension this creates.
+
+B. Explain ONE way the federal government has responded to this tension (for example, its enforcement priorities or funding decisions).
+
+C. Explain ONE way states have pushed back against federal marijuana policy, and how this reflects the broader relationship between national and state power.`
+  },
+  {
+    id: 'u1-mcculloch-brutus', type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+    unit: 1, unitLabel: 'Unit 1 · Foundations', title: 'Implied Powers & the Necessary and Proper Clause', chart: null,
+    prompt: `In McCulloch v. Maryland (1819), the Supreme Court upheld Congress's power to charter a national bank even though that power is not explicitly listed in the Constitution. Chief Justice Marshall held that the Necessary and Proper Clause grants Congress broad implied powers, and that states cannot tax a legitimate federal institution.
+
+Brutus No. 1 (1787), written before the Constitution was ratified, warned that the Necessary and Proper Clause and the Supremacy Clause would give the federal government virtually unlimited power to override the states.
+
+A. Describe the constitutional question at issue in McCulloch v. Maryland.
+
+B. Explain the reasoning the Court used to reach its holding in McCulloch v. Maryland.
+
+C. Explain ONE similarity and ONE difference between the concerns Brutus raised about federal power and the outcome in McCulloch v. Maryland.
+
+D. Using the reasoning in both texts, explain whether you think the fears Brutus expressed have proven justified in the two centuries since.`
+  },
+  {
+    id: 'u1-federalism-argument', type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+    unit: 1, unitLabel: 'Unit 1 · Foundations', title: 'Does Federalism Still Work?', chart: null,
+    prompt: `Develop an argument that responds to the following question: Does the constitutional system of federalism effectively balance national power with state autonomy in the twenty-first century?
+
+Use at least ONE piece of evidence from the U.S. Constitution, Federalist No. 51, or Brutus No. 1.
+Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics.
+Respond to an opposing or alternative perspective to your argument.
+Support your argument with a logical line of reasoning.
+
+Consider addressing: the Supremacy Clause, the Tenth Amendment, unfunded mandates, dual vs. cooperative federalism, and state responses to federal marijuana or immigration policy.`
+  },
+
+  {
+    id: 'u2-executive-orders', type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+    unit: 2, unitLabel: 'Unit 2 · Branches', title: 'Executive Orders and Congressional Response', chart: null,
+    prompt: `The President issues an executive order directing federal agencies to halt enforcement of a federal immigration law passed by Congress. Congressional leaders argue this violates the Take Care Clause.
+
+A. Using the concepts of separation of powers and checks and balances, explain ONE constitutional tool Congress has available to respond to this executive order.
+
+B. Explain ONE limit that already exists on a president's use of executive orders, independent of any congressional response.
+
+C. Explain how this scenario illustrates the ongoing tension between executive discretion and legislative authority in American government.`
+  },
+  {
+    id: 'u2-mcculloch-lopez', type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+    unit: 2, unitLabel: 'Unit 2 · Branches', title: 'McCulloch v. Maryland and Federal Power', chart: null,
+    prompt: `In McCulloch v. Maryland (1819), the Supreme Court held that Congress has implied powers beyond those explicitly listed in the Constitution, and that states cannot tax federal institutions. In United States v. Lopez (1995), the Court ruled that Congress exceeded its authority under the Commerce Clause by passing the Gun-Free School Zones Act.
+
+A. Describe the constitutional reasoning the Court used in McCulloch v. Maryland to uphold Congress's power.
+
+B. Describe the constitutional reasoning the Court used in United States v. Lopez to limit Congress's power.
+
+C. Explain ONE way these two decisions are consistent with each other, and ONE way they appear to be in tension.
+
+D. Explain what these two cases together suggest about how the Supreme Court determines the boundaries of federal power.`
+  },
+  {
+    id: 'u2-presidency-argument', type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+    unit: 2, unitLabel: 'Unit 2 · Branches', title: 'Is the Presidency Too Powerful?', chart: null,
+    prompt: `Develop an argument that responds to the following question: Has the growth of informal presidential power undermined the constitutional system of checks and balances?
+
+Use at least ONE piece of evidence from Federalist No. 70, the U.S. Constitution, or Marbury v. Madison.
+Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics.
+Respond to an opposing or alternative perspective to your argument.
+Support your argument with a logical line of reasoning.
+
+Consider addressing: executive orders, signing statements, executive privilege, the unitary executive theory, and Congress's tools for checking presidential power.`
+  },
+
+  {
+    id: 'u3-student-speech-online', type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+    unit: 3, unitLabel: 'Unit 3 · Civil Liberties', title: 'Student Speech Online', chart: null,
+    prompt: `A student posts a video mocking the principal, filmed from home on a weekend, and is suspended by the school. She argues the suspension violates her First Amendment rights since the speech occurred off campus.
+
+A. Using Tinker v. Des Moines and the "substantial disruption" standard, explain the constitutional question raised by this scenario.
+
+B. Explain ONE argument the school could make that the video is not protected speech in this context.
+
+C. Explain ONE argument the student could make that the school's authority does not extend to off-campus weekend speech.`
+  },
+  {
+    id: 'u3-gideon-betts', type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+    unit: 3, unitLabel: 'Unit 3 · Civil Liberties', title: 'Selective Incorporation & Right to Counsel', chart: null,
+    prompt: `In Gideon v. Wainwright (1963), the Court unanimously held that the Sixth Amendment right to counsel is a fundamental right that must be provided by states to defendants who cannot afford an attorney. In Betts v. Brady (1942), the Court had earlier held that the right to counsel was not a fundamental right required of states in non-capital cases.
+
+A. Explain the constitutional reasoning the Court used in Betts v. Brady to reach its holding.
+
+B. Explain the constitutional reasoning the Court used in Gideon v. Wainwright to overturn that precedent.
+
+C. Explain how the doctrine of selective incorporation, applied through the Fourteenth Amendment, connects these two cases.
+
+D. Explain ONE consequence of the Gideon ruling for the American criminal justice system today.`
+  },
+  {
+    id: 'u3-civil-disobedience', type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+    unit: 3, unitLabel: 'Unit 3 · Civil Liberties', title: 'Civil Disobedience and Constitutional Rights', chart: null,
+    prompt: `Develop an argument that responds to the following question: Does civil disobedience strengthen or undermine constitutional democracy?
+
+Use at least ONE piece of evidence from the Letter from Birmingham Jail, the First Amendment, or Brown v. Board of Education.
+Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics.
+Respond to an opposing or alternative perspective to your argument.
+Support your argument with a logical line of reasoning.
+
+Consider addressing: the distinction between just and unjust laws, the role of nonviolent protest, and the relationship between civil disobedience and the rule of law.`
+  },
+
+  {
+    id: 'u4-poll-immigration', type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+    unit: 4, unitLabel: 'Unit 4 · Ideologies', title: 'Interpreting a Poll on Immigration', chart: null,
+    prompt: `A poll reports that 62% of Americans support a path to citizenship for undocumented immigrants, with a margin of error of plus-or-minus 4%. The poll sampled 800 adults by calling landline phone numbers between 9 AM and 5 PM on weekdays.
+
+A. Identify TWO methodological problems with how this poll was conducted.
+
+B. Explain how EACH problem you identified could affect the accuracy of the poll's results.
+
+C. Explain ONE change to the poll's methodology that would improve the reliability of its findings.`
+  },
+  {
+    id: 'u4-demographics-voting', type: 1, typeName: 'Quantitative Analysis', pts: 4, minutes: 15,
+    unit: 4, unitLabel: 'Unit 4 · Ideologies', title: 'Demographics and Voting Patterns', chart: null,
+    prompt: `Presidential vote choice by education level shifted between 2016 and 2024: college-educated voters moved further toward the Democratic Party in both elections, while voters without a four-year degree moved further toward the Republican Party.
+
+A. Describe the pattern in voting behavior by education level described above.
+
+B. Explain ONE reason for the shift among college-educated voters toward the Democratic Party.
+
+C. Explain ONE reason why this shift might not continue in future elections.`
+  },
+  {
+    id: 'u4-polarization-argument', type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+    unit: 4, unitLabel: 'Unit 4 · Ideologies', title: 'Is Political Polarization a Threat to Democracy?', chart: null,
+    prompt: `Develop an argument that responds to the following question: Does increasing partisan polarization threaten the effective functioning of American democracy?
+
+Use at least ONE piece of evidence from your knowledge of political ideologies, public opinion, or linkage institutions.
+Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics.
+Respond to an opposing or alternative perspective to your argument.
+Support your argument with a logical line of reasoning.
+
+Consider addressing: partisan sorting, media fragmentation, gerrymandering, primary elections, and legislative gridlock.`
+  },
+
+  {
+    id: 'u5-super-pacs', type: 0, typeName: 'Concept Application', pts: 3, minutes: 10,
+    unit: 5, unitLabel: 'Unit 5 · Participation', title: 'Super PACs and Campaign Finance', chart: null,
+    prompt: `Following Citizens United v. FEC (2010), a Super PAC supporting a Senate candidate runs $5 million in television ads without coordinating with the campaign. The candidate's opponent argues this spending should be restricted like a direct campaign contribution.
+
+A. Using the concept of independent expenditures and the ruling in Citizens United v. FEC, explain whether the Super PAC's spending is constitutionally protected.
+
+B. Explain ONE argument in favor of treating independent expenditures differently from direct campaign contributions.
+
+C. Explain ONE criticism of allowing unlimited independent expenditures in American elections.`
+  },
+  {
+    id: 'u5-baker-shaw', type: 2, typeName: 'SCOTUS Comparison', pts: 4, minutes: 15,
+    unit: 5, unitLabel: 'Unit 5 · Participation', title: 'Baker v. Carr and Shaw v. Reno', chart: null,
+    prompt: `In Baker v. Carr (1962), the Supreme Court held that federal courts have jurisdiction to review legislative apportionment claims under the Equal Protection Clause. In Shaw v. Reno (1993), the Court held that a majority-minority congressional district drawn in North Carolina was subject to strict scrutiny under the same clause.
+
+A. Explain the constitutional basis for the Court's ruling in Baker v. Carr.
+
+B. Explain the constitutional basis for the Court's ruling in Shaw v. Reno.
+
+C. Explain ONE way these two cases are consistent with each other in how they apply the Equal Protection Clause to redistricting.
+
+D. Explain ONE tension between the goals of Baker v. Carr (ensuring fair representation) and the holding in Shaw v. Reno (limiting race-based districting).`
+  },
+  {
+    id: 'u5-money-democracy', type: 3, typeName: 'Argumentative Essay', pts: 6, minutes: 25,
+    unit: 5, unitLabel: 'Unit 5 · Participation', title: 'Does Money Corrupt Democracy?', chart: null,
+    prompt: `Develop an argument that responds to the following question: Does the role of money in American political campaigns undermine democratic participation?
+
+Use at least ONE piece of evidence from Citizens United v. FEC, the concept of linkage institutions, or your knowledge of campaign finance law.
+Use at least ONE additional piece of evidence from your knowledge of AP U.S. Government and Politics.
+Respond to an opposing or alternative perspective to your argument.
+Support your argument with a logical line of reasoning.
+
+Consider addressing: PACs and Super PACs, disclosure requirements, the "money as speech" doctrine, and disparities in campaign spending between candidates.`
   }
 ];
 
