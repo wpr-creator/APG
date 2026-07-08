@@ -32,7 +32,7 @@
     }
 
     .skills-hero {
-      background: linear-gradient(120deg, var(--skill-teal) 0%, var(--skill-teal-dark) 100%);
+      background: var(--skill-teal-dark);
       border-radius: 18px; padding: 28px 32px; margin-bottom: 24px;
       position: relative; overflow: hidden;
     }
@@ -420,7 +420,7 @@
     }
     .skills-apply-panel.show { display: block; }
     .skills-apply-header {
-      background: linear-gradient(120deg, var(--skill-teal) 0%, var(--skill-teal-dark) 100%);
+      background: var(--skill-teal-dark);
       padding: 16px 24px; display: flex; align-items: center; gap: 10px;
     }
     .skills-apply-header-text {
