@@ -37,20 +37,19 @@ const NAV_STATIC_TABS = [
     label: "Review",
     items: [
       { label: "FRQ Guide & Cases", href: "#review" },
-      { label: "FRQ Practice", href: "#frqpractice" },
       { label: "FRQ Archive", href: "#archive" },
-      { label: "Diagnostic Quiz", href: "#diagnostic" }
+      { label: "Glossary", href: "#glossary" },
+      { label: "Amendment Tracker", href: "#amendments" }
     ]
   },
   {
-    label: "Tools",
+    label: "Practice",
     items: [
-      { label: "Glossary", href: "#glossary" },
-      { label: "Amendment Tracker", href: "#amendments" },
-      { label: "Cartoon Analyzer", href: "#cartoon" },
-      { label: "What Would Madison Say?", href: "#madison" },
+      { label: "FRQ Practice", href: "#frqpractice" },
+      { label: "Diagnostic Quiz", href: "#diagnostic" },
+      { label: "Cartoon Analyzer", href: "#cartoons" },
       { label: "Stump the Class", href: "#stump" },
-      { label: "Exit Ticket", href: "#exit" }
+      { label: "What Would Madison Say?", href: "#madison" }
     ]
   }
 ];
@@ -121,6 +120,7 @@ ${items}
       </div>\n`;
   });
 
+  html += `      <a class="nav-link" href="${basePath}#exit">Exit Ticket</a>\n`;
   html += `      <a class="nav-link nav-link-foundations" href="${basePath}#skills">Foundations</a>\n`;
 
   return html;
