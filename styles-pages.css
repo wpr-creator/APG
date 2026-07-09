@@ -476,7 +476,7 @@
 .unit-1 .unit-sidebar-link:hover { background: #fdf6e8; }
 .unit-1 .exam-guide { background: #2c1810; }
 .unit-1 .exam-guide-tab.active { color: #b8952a; border-bottom-color: #b8952a; }
-.unit-1 .frq-row-type.ca { background: #fdf6e8; color: #2c1810; }
+.unit-1 .frq-row-type.ca { background: #b8952a; color: #f5ead6; }
 .unit-1 .doc-bento-top { background: #2c1810; }
 .unit-1 body { background: #f5ead6; }
 
@@ -606,7 +606,8 @@
 .unit-5 .rail-exam-tip { background: #1a1a1a; }
 .unit-5 .case-hero { background: var(--unit-hero-bg); }
 .unit-5 .doc-bento-top { background: var(--unit-hero-bg); }
-.unit-5 .frq-row-type.ca { background: #f0f0f0; color: #1a1a1a; }
+.unit-5 .frq-row-type.ca { background: #e0e0e0; color: #1a1a1a; }
+.unit-5 .frq-row-type.sc { background: #6b6b6b; color: white; }
 .unit-5 .frq-row-type.ae { background: #1a1a1a; color: white; }
 
 /* ── UNIT HERO OVERRIDES ── */

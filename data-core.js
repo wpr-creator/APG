@@ -877,7 +877,7 @@ function closeCaseModal() {
 // ══════════════════════════════════════════════════════════
 //  NAV TABS
 // ══════════════════════════════════════════════════════════
-const TAB_IDS = ['home', 'units', 'review', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'madison', 'skills', 'exit'];
+const TAB_IDS = ['home', 'units', 'review', 'frqpractice', 'glossary', 'docs', 'diagnostic', 'stump', 'amendments', 'cases', 'archive', 'cartoons', 'madison', 'skills', 'exit'];
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target, unitNum) {

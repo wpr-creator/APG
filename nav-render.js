@@ -36,7 +36,8 @@ const NAV_STATIC_TABS = [
   {
     label: "Review",
     items: [
-      { label: "FRQ & Review", href: "#review" },
+      { label: "FRQ Guide & Cases", href: "#review" },
+      { label: "FRQ Practice", href: "#frqpractice" },
       { label: "FRQ Archive", href: "#archive" },
       { label: "Diagnostic Quiz", href: "#diagnostic" }
     ]
