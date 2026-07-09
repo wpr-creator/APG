@@ -173,6 +173,115 @@ var SKILLS_CER_LEVEL3 = {
 //  SKILL BUILDERS — ACADEMIC VOCABULARY IN CONTEXT
 // ════════════════════════════════════════════════════════════════
 
+// ══════════════════════════════════════════════════════════════
+// VOCAB LEVEL 0 — true floor level. Everyday words (not academic
+// government terms), short simple sentences, obvious context clues.
+// This exists because a meaningful share of students arrive reading
+// below grade level -- this level isolates the raw "use the sentence
+// around a word to guess its meaning" skill before Level 1 asks them
+// to do that with harder academic vocabulary. This is positioned
+// FIRST in the levels array (see SKILLS_ACTIVITY_DATA below), so it
+// displays as "LEVEL 1" in the UI -- the variable name stays
+// SKILLS_VOCAB_LEVEL0 for clarity in this file, but everything that
+// used to be "Level 1/2/3" is now displayed one number higher.
+// ══════════════════════════════════════════════════════════════
+var SKILLS_VOCAB_LEVEL0 = {
+  learnTitle: "USING CLUES IN A SENTENCE",
+  learnBig: "You don't have to know every word. The sentence around it can tell you.",
+  learnSub: "When you see a word you don't know, don't stop reading. Look at the words right before and after it — they almost always give you a hint about what it means. This is the very first step to becoming a stronger reader.",
+  goodExample: "The dog was LOYAL, always staying by her owner's side and never running away.",
+  goodLabel: "CONTEXT CLUE: 'always staying by her owner's side and never running away' tells you LOYAL means faithful and devoted",
+  badExample: "The dog was LOYAL.",
+  badLabel: "NO CONTEXT: without more of the sentence, you'd have to guess what LOYAL means",
+  guidedPassage: "The mayor wanted to IMPROVE the park, so she added new benches, fresh paint, and bright new lights.",
+  guidedAnswer: "Look at what comes after IMPROVE: 'added new benches, fresh paint, and bright new lights.' These are all good changes that make the park nicer. IMPROVE means to make something better.",
+  questions: [
+    {
+      text: "The class picked a LEADER, and everyone listened to her and followed her directions.",
+      word: "LEADER",
+      choices: ["a person who guides others", "a person who hides", "a person who is late", "a person who watches TV"],
+      answer: 0,
+      explain: "The clue is 'everyone listened to her and followed her directions' — a LEADER is a person who guides or is in charge of others."
+    },
+    {
+      text: "The teacher was FAIR, giving every student the same amount of time to answer.",
+      word: "FAIR",
+      choices: ["unfair", "equal and just", "angry", "slow"],
+      answer: 1,
+      explain: "The clue is 'giving every student the same amount' — FAIR means equal and just treatment for everyone."
+    },
+    {
+      text: "The guard's job was to PROTECT the building, keeping it safe from anyone who wanted to break in.",
+      word: "PROTECT",
+      choices: ["keep safe", "destroy", "paint", "sell"],
+      answer: 0,
+      explain: "The clue is 'keeping it safe from anyone who wanted to break in' — PROTECT means to keep something or someone safe."
+    },
+    {
+      text: "The park is PUBLIC, so anyone in the city is allowed to visit and use it.",
+      word: "PUBLIC",
+      choices: ["private and locked", "open to everyone", "very expensive", "closed forever"],
+      answer: 1,
+      explain: "The clue is 'anyone in the city is allowed to visit' — PUBLIC means open and available to everyone, not just a few people."
+    },
+    {
+      text: "Taking out the trash was Jake's DUTY, a job he had to do every single week.",
+      word: "DUTY",
+      choices: ["a job you must do", "a fun game", "a vacation", "a type of food"],
+      answer: 0,
+      explain: "The clue is 'a job he had to do' — a DUTY is a responsibility or task someone is required to do."
+    },
+    {
+      text: "Both friends AGREE about the movie — they both think it was the best one this year.",
+      word: "AGREE",
+      choices: ["disagree", "have the same opinion", "forget", "argue"],
+      answer: 1,
+      explain: "The clue is 'they both think it was the best' — to AGREE means to share the same opinion as someone else."
+    },
+    {
+      text: "After the cage door opened, the bird had FREEDOM to fly wherever it wanted.",
+      word: "FREEDOM",
+      choices: ["being trapped", "being tired", "the ability to act without being controlled", "being hungry"],
+      answer: 2,
+      explain: "The clue is 'fly wherever it wanted' — FREEDOM means being able to act, move, or choose without being controlled by something else."
+    },
+    {
+      text: "As a CITIZEN of the town, Maria was allowed to vote in the local election.",
+      word: "CITIZEN",
+      choices: ["a visitor passing through", "an official member of a place who has rights there", "a stranger", "a store"],
+      answer: 1,
+      explain: "The clue is 'allowed to vote in the local election' — a CITIZEN is an official member of a country or place who has rights there, like voting."
+    },
+    {
+      text: "The king had so much POWER that he could make new laws all by himself.",
+      word: "POWER",
+      choices: ["weakness", "the ability to control or decide things", "sadness", "a small amount of money"],
+      answer: 1,
+      explain: "The clue is 'could make new laws all by himself' — POWER is the ability to control or decide what happens."
+    },
+    {
+      text: "The GROUP of five students worked together on the same project.",
+      word: "GROUP",
+      choices: ["a single person alone", "a number of people together", "an empty room", "a type of food"],
+      answer: 1,
+      explain: "The clue is 'five students worked together' — a GROUP is a number of people or things gathered together."
+    }
+  ],
+  applyIt: {
+    intro: "Now try it yourself. Below are sentences using the words you just practiced. Click a sentence, then tag it as USED CORRECTLY or USED INCORRECTLY based on whether the word actually fits what the sentence describes.",
+    tagPositive: { value: "correct", label: "USED CORRECTLY" },
+    tagNegative: { value: "incorrect", label: "USED INCORRECTLY" },
+    sentences: [
+      { text: "The LEADER of the team sat silently in the back and let everyone else make all the decisions.", answer: "incorrect", explain: "USED INCORRECTLY — a LEADER guides and directs others. Sitting silently and letting everyone else decide is the opposite of leading." },
+      { text: "The rules were FAIR because every player got the exact same number of turns.", answer: "correct", explain: "USED CORRECTLY — 'the exact same number of turns' is exactly what fair means: equal treatment for everyone." },
+      { text: "The lifeguard's job was to PROTECT swimmers by watching the water and helping anyone in danger.", answer: "correct", explain: "USED CORRECTLY — 'watching the water and helping anyone in danger' is exactly what it means to protect someone." },
+      { text: "The library is PUBLIC, but only three specific families are allowed to enter it.", answer: "incorrect", explain: "USED INCORRECTLY — PUBLIC means open to everyone. Only allowing three specific families in is the opposite of public." },
+      { text: "Watering the plants every morning was Sam's DUTY, a job he did faithfully every single day.", answer: "correct", explain: "USED CORRECTLY — a task someone does faithfully because it's required is exactly what a duty is." },
+      { text: "The two sisters could not AGREE on anything, arguing about every small decision.", answer: "incorrect", explain: "USED INCORRECTLY — AGREE means to share the same opinion. Arguing about everything is the opposite of agreeing." }
+    ]
+  }
+};
+
 var SKILLS_VOCAB_LEVEL1 = {
   learnTitle: "READING CONTEXT CLUES",
   learnBig: "You don't need a dictionary. The sentence tells you.",

@@ -365,16 +365,21 @@
       "levels": [
         {
           "level": 1,
-          "name": "EVERYDAY ACADEMIC WORDS",
+          "name": "FOUNDATIONS — CONTEXT CLUES",
           "unlocked": true
         },
         {
           "level": 2,
-          "name": "AP GOV ACADEMIC WORDS",
+          "name": "EVERYDAY ACADEMIC WORDS",
           "unlocked": true
         },
         {
           "level": 3,
+          "name": "AP GOV ACADEMIC WORDS",
+          "unlocked": true
+        },
+        {
+          "level": 4,
           "name": "PRIMARY SOURCE VOCABULARY",
           "unlocked": true
         }
