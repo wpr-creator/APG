@@ -665,6 +665,147 @@ var SKILLS_VOCAB_LEVEL3 = {
 // is filled in — no code changes needed.
 // ══════════════════════════════════════════════════════════════
 
+// ══════════════════════════════════════════════════════════════
+// CLOSE READING LEVEL 0 — true floor level. Short passages (5-6
+// sentences), plain everyday language, still government-themed but
+// far simpler than Level 1's real primary sources. The 3-pass
+// structure stays the same (yellow/blue/pink, same engine), but each
+// pass targets pure literal skills instead of analysis: find the
+// main event, find a specific stated fact, find a feeling or
+// order-word — the "explicit detail retrieval" skill that sits below
+// even basic-level reading, before Level 1 asks students to judge
+// WHY a sentence matters. Positioned first in the levels array (see
+// SKILLS_ACTIVITY_DATA), so it displays as "LEVEL 1" in the UI, same
+// convention as the Vocabulary Level 0 addition.
+// ══════════════════════════════════════════════════════════════
+var CLOSEREADING_LEVEL0 = {
+  passages: [
+    {
+      title: "A New School Lunch Bill",
+      source: "Example passage (simplified, for practice)",
+      simplify: "A senator's bill about free school breakfast passed the Senate after a committee vote and two days of debate.",
+      chunks: [
+        "A senator wrote a new bill about school lunches.",
+        "She wanted every public school to offer a free breakfast.",
+        "The bill went to a committee first.",
+        "The committee voted yes, 8 to 3.",
+        "Then the whole Senate debated the bill for two days.",
+        "In the end, the Senate passed the bill by a vote of 61 to 39."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence that tells you the MAIN thing that happens in this passage.",
+      pass1NoteLabel: "In your own words, what is this passage mainly about?",
+      pass1Model: "The main thing happening is that a senator wrote a bill to give every public school a free breakfast. Everything else in the passage is about what happened to that bill next.",
+      modelYellow: [0, 1],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence(s) with a SPECIFIC FACT — a number, date, or exact detail stated directly in the text.",
+      pass2NoteLabel: "What specific number or fact did you find?",
+      pass2Model: "Two sentences give exact numbers: the committee vote was 8 to 3, and the final Senate vote was 61 to 39. These are facts stated directly — you don't have to guess or figure them out.",
+      modelBlue: [3, 5],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence(s) that show the ORDER events happened in — look for words like first or then.",
+      pass3NoteLabel: "What word helped you see the order of events?",
+      pass3Model: "\"First\" tells you the bill went to committee before anything else happened. \"Then\" tells you the Senate debate came after that. Words like these are signposts that tell you what order things happened in.",
+      modelPink: [2, 4]
+    },
+    {
+      title: "Lowering the Voting Age",
+      source: "Example passage (simplified, for practice)",
+      simplify: "The voting age used to be 21. People thought this was unfair to young men fighting in the Vietnam War, so in 1971 the 26th Amendment lowered the voting age to 18.",
+      chunks: [
+        "For a long time, Americans had to be 21 years old to vote.",
+        "Many young men fought in the Vietnam War even though they could not vote yet.",
+        "People said this was not fair.",
+        "In 1971, the country passed the 26th Amendment.",
+        "This amendment lowered the voting age to 18 for every state."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence(s) that tell you the MAIN thing that happens in this passage.",
+      pass1NoteLabel: "In your own words, what is this passage mainly about?",
+      pass1Model: "The main thing that happens is that the voting age gets lowered to 18. The 26th Amendment is what actually changed the rule — that's the key event of the whole passage.",
+      modelYellow: [3, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence with a SPECIFIC FACT — a number or date stated directly in the text.",
+      pass2NoteLabel: "What specific number or date did you find?",
+      pass2Model: "The passage states directly that the voting age used to be 21. That's a specific, exact fact you can point to in the text.",
+      modelBlue: [0],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence(s) that tell you HOW people felt about something.",
+      pass3NoteLabel: "How did the highlighted sentence show a feeling?",
+      pass3Model: "The passage explains that young men were fighting in a war without being able to vote, and then says directly that people felt this \"was not fair.\" That's the passage telling you how people felt, not just what happened.",
+      modelPink: [1, 2]
+    },
+    {
+      title: "A New Mayor for Springfield",
+      source: "Example passage (simplified, for practice)",
+      simplify: "Springfield elected a new mayor, Maria Torres, who promised to fix roads and build a park, and residents were excited about her plans.",
+      chunks: [
+        "Every city has a mayor.",
+        "The mayor is the leader of the city government.",
+        "Voters in Springfield elected a new mayor last November.",
+        "Her name is Maria Torres.",
+        "She promised to fix the roads and build a new park.",
+        "Many residents were excited about her plans."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence(s) that tell you the MAIN thing that happens in this passage.",
+      pass1NoteLabel: "In your own words, what is this passage mainly about?",
+      pass1Model: "The main idea is about the mayor's job and her plans: she is the leader of the city government, and she promised to fix roads and build a park. Those two sentences carry the real content of the passage.",
+      modelYellow: [1, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence(s) with a SPECIFIC FACT — a name, place, or date stated directly.",
+      pass2NoteLabel: "What specific name, place, or date did you find?",
+      pass2Model: "Two exact facts are stated directly: the election happened in Springfield last November, and the new mayor's name is Maria Torres.",
+      modelBlue: [2, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence that tells you HOW people felt.",
+      pass3NoteLabel: "How did the highlighted sentence show a feeling?",
+      pass3Model: "The last sentence tells you directly that residents were \"excited\" about her plans — that's the passage stating a feeling, not something you have to guess.",
+      modelPink: [5]
+    },
+    {
+      title: "Alex and the School Newspaper",
+      source: "Example passage (simplified, for practice)",
+      simplify: "Alex wrote an article criticizing his school's cafeteria food, and his teacher confirmed this was protected under free speech, which made Alex feel relieved and proud.",
+      chunks: [
+        "The First Amendment gives Americans the right to free speech.",
+        "This means people can share their opinions without the government stopping them.",
+        "A student named Alex wanted to write an article criticizing his school's cafeteria food.",
+        "His teacher said this was allowed under free speech.",
+        "Alex felt relieved and proud of his article."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence(s) that tell you the MAIN thing this passage explains.",
+      pass1NoteLabel: "In your own words, what does free speech mean based on this passage?",
+      pass1Model: "The main idea is explained right at the start: free speech means people can share their opinions without the government stopping them. Everything after that is an example of this rule in action.",
+      modelYellow: [0, 1],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence(s) with a SPECIFIC FACT or example — a name or exact detail stated directly.",
+      pass2NoteLabel: "What specific example did the passage give?",
+      pass2Model: "The passage gives one specific, named example: a student named Alex wrote an article criticizing his school's cafeteria food, and his teacher confirmed this was allowed.",
+      modelBlue: [2, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence that tells you HOW Alex felt.",
+      pass3NoteLabel: "How did the highlighted sentence show a feeling?",
+      pass3Model: "The last sentence states directly that Alex felt \"relieved and proud\" — two specific feeling words the passage gives you, not something you have to infer on your own.",
+      modelPink: [4]
+    },
+    {
+      title: "Mr. Chen's Jury Duty",
+      source: "Example passage (simplified, for practice)",
+      simplify: "Mr. Chen was called for jury duty, felt nervous at first, and felt confident by the end of the trial after the jury decided the case.",
+      chunks: [
+        "When someone is chosen for jury duty, they must go to court.",
+        "A jury listens to both sides of a case.",
+        "Then the jury decides if a person is guilty or not guilty.",
+        "Mr. Chen was called for jury duty last week.",
+        "At first, he felt nervous about the responsibility.",
+        "By the end of the trial, he felt confident in the jury's decision."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentence(s) that tell you the MAIN thing a jury does.",
+      pass1NoteLabel: "In your own words, what is a jury's job?",
+      pass1Model: "The main idea is a jury's job: it listens to both sides of a case, then decides if a person is guilty or not guilty. Those two sentences explain what the passage is really about.",
+      modelYellow: [1, 2],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence with a SPECIFIC FACT — a name or time stated directly.",
+      pass2NoteLabel: "What specific name or time did you find?",
+      pass2Model: "The passage states directly that Mr. Chen was called for jury duty last week — an exact name and an exact time frame.",
+      modelBlue: [3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence(s) that show HOW Mr. Chen's feelings changed.",
+      pass3NoteLabel: "How did Mr. Chen's feelings change from the start to the end?",
+      pass3Model: "His feelings change over the course of the passage: \"at first\" he felt nervous, but \"by the end\" he felt confident. Noticing words like \"at first\" and \"by the end\" helps you see that a feeling changed, not just what the feeling was.",
+      modelPink: [4, 5]
+    }
+  ]
+};
+
 var CLOSEREADING_LEVEL1 = {
   passages: [
     // ---- PASSAGE 1: REAL CONTENT — official presidential address (public domain) ----

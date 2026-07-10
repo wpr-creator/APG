@@ -881,6 +881,25 @@ const TAB_IDS = ['home', 'units', 'review', 'frqpractice', 'glossary', 'docs', '
 
 // ── Nav tab switcher (handles flat tabs + dropdown tabs) ──
 function switchToTab(target, unitNum) {
+  // Keep the URL in sync with whatever tab is showing, so refreshing the
+  // page (or bookmarking it) lands back on the same tab instead of
+  // always reverting to Home. Uses replaceState (not location.hash=)
+  // so this doesn't spam the browser's back-button history on every
+  // click, and doesn't trigger the #term= glossary hashchange listener.
+  //
+  // Only touches the hash when actually SWITCHING tabs -- if the
+  // current hash's tab portion already matches target (e.g. this call
+  // came from the initial hash-router confirming a deep link like
+  // "#frqpractice&frq=u1-marijuana"), leave the hash untouched so any
+  // extra "&frq=..." suffix survives for index-app.js's deep-link
+  // reader, which runs after this and needs it still intact.
+  var currentHashTab = window.location.hash.replace('#', '').split('&')[0];
+  if (currentHashTab !== target) {
+    var newHash = (target === 'home') ? '' : ('#' + target);
+    var url = window.location.pathname + window.location.search + newHash;
+    history.replaceState(null, '', url);
+  }
+
   // Remove active from all nav tabs
   document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
   document.querySelectorAll('.nav-group').forEach(g => g.classList.remove('has-active'));

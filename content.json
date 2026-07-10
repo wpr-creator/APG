@@ -390,16 +390,21 @@
       "levels": [
         {
           "level": 1,
-          "name": "MODERN DISCOURSE",
+          "name": "FOUNDATIONS — LITERAL RETRIEVAL",
           "unlocked": true
         },
         {
           "level": 2,
-          "name": "LEGAL & POLITICAL TEXTS",
+          "name": "MODERN DISCOURSE",
           "unlocked": true
         },
         {
           "level": 3,
+          "name": "LEGAL & POLITICAL TEXTS",
+          "unlocked": true
+        },
+        {
+          "level": 4,
           "name": "PRIMARY SOURCES",
           "unlocked": true
         }
