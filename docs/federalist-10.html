@@ -45,18 +45,6 @@
       background: #2c1810;
       border-radius: 14px; padding: 24px 28px; margin-bottom: 20px;
     }
-    .doc-hero-with-portrait {
-      display: flex; align-items: center; justify-content: space-between; gap: 20px;
-    }
-    .doc-hero-text { flex: 1; min-width: 0; }
-    .doc-hero-portrait {
-      width: 96px; height: 120px; object-fit: cover; border-radius: 8px;
-      border: 2px solid rgba(184,149,42,0.4); flex-shrink: 0;
-    }
-    @media (max-width: 560px) {
-      .doc-hero-with-portrait { flex-direction: column; align-items: flex-start; }
-      .doc-hero-portrait { width: 84px; height: 105px; }
-    }
     .doc-hero-eyebrow {
       font-size: 10px; font-weight: 800; letter-spacing: 0.16em;
       text-transform: uppercase; color: #b8952a; margin-bottom: 8px;
@@ -242,18 +230,15 @@
     <!-- MAIN -->
     <div class="doc-main">
 
-      <div class="doc-hero doc-hero-with-portrait">
-        <div class="doc-hero-text">
-          <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.6.A</div>
-          <div class="doc-hero-title">Federalist No. 10</div>
-          <div class="doc-hero-cite">James Madison · The Federalist Papers · November 22, 1787</div>
-          <div class="doc-hero-tags">
-            <span class="doc-tag doc-tag-unit">Unit 1</span>
-            <span class="doc-tag doc-tag-req">Required Document</span>
-            <span class="doc-tag doc-tag-unit">⭐ Most Tested</span>
-          </div>
+      <div class="doc-hero">
+        <div class="doc-hero-eyebrow">Unit 1 · Required Foundational Document · EK 1.6.A</div>
+        <div class="doc-hero-title">Federalist No. 10</div>
+        <div class="doc-hero-cite">James Madison · The Federalist Papers · November 22, 1787</div>
+        <div class="doc-hero-tags">
+          <span class="doc-tag doc-tag-unit">Unit 1</span>
+          <span class="doc-tag doc-tag-req">Required Document</span>
+          <span class="doc-tag doc-tag-unit">⭐ Most Tested</span>
         </div>
-        <img class="doc-hero-portrait" src="../images/madison-portrait.jpg" alt="James Madison, official portrait" onerror="this.style.display='none'">
       </div>
 
       <div id="context" class="doc-context">
