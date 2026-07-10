@@ -1102,23 +1102,137 @@ var CLOSEREADING_LEVEL2 = {
 
 var CLOSEREADING_LEVEL3 = {
   passages: [
+    // ---- PASSAGE 1: REAL CONTENT — SCOTUS majority opinion (public domain) ----
     {
-      title: "Coming soon — Level 3 passages in progress",
-      source: "Check back after the next content session.",
-      simplify: "This level is still being built.",
-      chunks: ["Level 3 of Close Reading is under construction. Check back soon for real passages."],
-      pass1Prompt: "This level is still being built.",
-      pass1NoteLabel: "N/A",
-      pass1Model: "Coming soon.",
-      modelYellow: [],
-      pass2Prompt: "This level is still being built.",
-      pass2NoteLabel: "N/A",
-      pass2Model: "Coming soon.",
-      modelBlue: [],
-      pass3Prompt: "This level is still being built.",
-      pass3NoteLabel: "N/A",
-      pass3Model: "Coming soon.",
-      modelPink: []
+      title: "Korematsu v. United States — Majority Opinion",
+      source: "Justice Hugo Black, majority opinion, Korematsu v. United States, 323 U.S. 214 (1944)",
+      simplify: "The Court says any law that targets one racial group is automatically suspicious and must pass the toughest legal test — but it can still be allowed if there's a genuine emergency need, though never just because of racism. The Court then argues Korematsu wasn't excluded from the West Coast because of hostility toward his race, but because military leaders feared invasion.",
+      chunks: [
+        "It should be noted, to begin with, that all legal restrictions which curtail the civil rights of a single racial group are immediately suspect.",
+        "That is not to say that all such restrictions are unconstitutional.",
+        "It is to say that courts must subject them to the most rigid scrutiny.",
+        "Pressing public necessity may sometimes justify the existence of such restrictions; racial antagonism never can.",
+        "Korematsu was not excluded from the Military Area because of hostility to him or his race.",
+        "He was excluded because we are at war with the Japanese Empire, because the properly constituted military authorities feared an invasion of our West Coast."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that state the Court's core legal standard.",
+      pass1NoteLabel: "In one sentence, what test does the Court say racial restrictions must pass?",
+      pass1Model: "The core standard is set in the first and fourth sentences: restrictions targeting a racial group are automatically suspect and must survive the toughest judicial test, but that test can theoretically be passed by \"pressing public necessity\" — never by \"racial antagonism.\" This is the famous strict scrutiny standard, stated here for the first time in Supreme Court history.",
+      modelYellow: [0, 3],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence where the Court immediately qualifies or limits the claim it just made.",
+      pass2NoteLabel: "How does the Court narrow its own opening statement?",
+      pass2Model: "Notice how Black immediately qualifies his opening claim: right after saying racial restrictions are \"immediately suspect,\" he clarifies that this does NOT mean they're automatically unconstitutional — only that courts must scrutinize them heavily. State a strong principle, then immediately narrow it before it can be misread — that's a common move in judicial writing.",
+      modelBlue: [1, 2],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences where the Court applies its general standard to Korematsu's specific case.",
+      pass3NoteLabel: "What specific justification does the Court give for excluding Korematsu?",
+      pass3Model: "After establishing the abstract legal test, Black pivots to apply it to Korematsu specifically — and notice the word choice: he insists Korematsu wasn't excluded because of \"hostility to him or his race,\" but because of a specific military judgment about invasion risk. That distinction between motive and justification is the entire crux of why the dissents rejected the majority's reasoning.",
+      modelPink: [4, 5]
+    },
+
+    // ---- PASSAGE 2: REAL CONTENT — SCOTUS concurrence (public domain) ----
+    {
+      title: "Jackson's Concurrence in Youngstown v. Sawyer",
+      source: "Justice Robert H. Jackson, concurring opinion, Youngstown Sheet & Tube Co. v. Sawyer, 343 U.S. 579 (1952)",
+      simplify: "Jackson lays out a framework still used today: presidential power is strongest when Congress backs the president, uncertain (a \"zone of twilight\") when Congress says nothing, and weakest when the president acts against Congress's wishes. He used this to conclude Truman's seizure of the steel mills fell into the weakest category.",
+      chunks: [
+        "In his concurring opinion in the Steel Seizure Case, Justice Robert Jackson set out a framework for evaluating presidential power that courts still use today.",
+        "When the President acts pursuant to an express or implied authorization of Congress, his authority is at its maximum, for it includes all that he possesses in his own right plus all that Congress can delegate.",
+        "When the President acts in absence of either a congressional grant or denial of authority, he can only rely upon his own independent powers, but there is a zone of twilight in which he and Congress may have concurrent authority, or in which its distribution is uncertain.",
+        "When the President takes measures incompatible with the expressed or implied will of Congress, his power is at its lowest ebb, for then he can rely only upon his own constitutional powers minus any constitutional powers of Congress over the matter.",
+        "Jackson applied this framework to conclude that President Truman's seizure of the steel mills fell into the third and weakest category, since Congress had already established a different process for handling labor disputes like this one."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that tell you what this framework is for and how it gets used.",
+      pass1NoteLabel: "In one sentence, what is Jackson's three-part framework used to decide?",
+      pass1Model: "This passage exists to set up a tool: the intro tells you Jackson created a framework still used today, and the final sentence shows the framework being applied to reach a real conclusion — Truman's seizure fell into the weakest category. Everything between is the framework itself.",
+      modelYellow: [0, 4],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the two sentences that describe the clearest, most opposite ends of Jackson's spectrum.",
+      pass2NoteLabel: "How are these two sentences structured to mirror each other?",
+      pass2Model: "Jackson structures presidential power as a spectrum with two clear endpoints: when Congress explicitly backs the President (maximum power) and when Congress explicitly opposes the President (weakest power, \"lowest ebb\"). These two sentences use parallel construction — both open with \"When the President...\" and both explain why the power level follows logically from Congress's position.",
+      modelBlue: [1, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence with the most deliberately vivid, non-legal language.",
+      pass3NoteLabel: "What image or metaphor stands out, and why might Jackson have chosen it?",
+      pass3Model: "The middle category is the one Jackson had to invent language for, since there's no simple label for \"Congress hasn't said anything.\" Notice the specific phrase he chose: \"zone of twilight\" — not a legal term at all, but a vivid metaphor suggesting something between clear day and clear night. That deliberate imprecision reflects the actual uncertainty of this middle category, where the outcome depends on circumstances rather than clear rules.",
+      modelPink: [2]
+    },
+
+    // ---- PASSAGE 3: REAL CONTENT — declassified government document (public domain) ----
+    {
+      title: "The Pentagon Papers — Early U.S. Policy in Asia",
+      source: "United States – Vietnam Relations, 1945–1967: A Study Prepared by the Department of Defense (\"The Pentagon Papers\"), Section I.A., U.S. Policy 1940-50",
+      simplify: "The Pentagon Papers were a secret government history of U.S. involvement in Vietnam, leaked to the press in 1971. One section quotes a 1949 law in which Congress said it wanted to help \"free countries\" in Asia organize for mutual cooperation, tying the plan to the United Nations Charter and framing it as protecting rights and security.",
+      chunks: [
+        "The Pentagon Papers were a secret government history of U.S. involvement in Vietnam, later leaked to the press in 1971.",
+        "One section of the study describes the reasoning behind a 1949 law that created America's first military assistance program in the Far East.",
+        "Congress, in the opening paragraphs of that law, expressed itself as favoring the creation by the free countries and the free peoples of the Far East of a joint organization, consistent with the Charter of the United Nations.",
+        "to establish a program of self-help and mutual cooperation designed to develop their economic and social well-being,",
+        "to safeguard basic rights and liberties,",
+        "and to protect their security and independence."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that tell you what document this is and what this section covers.",
+      pass1NoteLabel: "In one sentence, what does this section of the Pentagon Papers describe?",
+      pass1Model: "This passage first tells you what the Pentagon Papers are (a secret government history of Vietnam policy, later leaked) and what this specific section covers: the reasoning behind a 1949 law creating America's first military assistance program in the Far East. Everything after that is the actual language of that reasoning.",
+      modelYellow: [0, 1],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the three phrases that form a parallel list within the same sentence.",
+      pass2NoteLabel: "What three goals does the parallel list describe?",
+      pass2Model: "Notice the three-part parallel structure embedded in the middle of this single sentence: \"to develop... to safeguard... to protect...\" Each phrase starts the same grammatical way (an infinitive verb) and lists a different goal. This kind of list of three parallel items is a common device in formal government writing — it makes a broad, vague goal sound like a precise, three-part plan.",
+      modelBlue: [3, 4, 5],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence with the most careful, hedged legal language.",
+      pass3NoteLabel: "What word or phrase shows Congress being deliberately cautious?",
+      pass3Model: "Read the specific formal language carefully: \"expressed itself as favoring the creation... consistent with the Charter of the United Nations.\" This is deliberately cautious, hedged language — Congress didn't commit to CREATING the organization, just to \"favoring\" its creation, and carefully tied it to an existing international framework rather than inventing new unilateral authority. This kind of careful hedging is typical of how governments write commitments that sound firm but leave room to maneuver.",
+      modelPink: [2]
+    },
+
+    // ---- PASSAGE 4: REAL CONTENT — SCOTUS dissent (public domain) ----
+    {
+      title: "Marshall's Dissent in Regents of UC v. Bakke",
+      source: "Justice Thurgood Marshall, separate opinion, Regents of the University of California v. Bakke, 438 U.S. 265 (1978)",
+      simplify: "Marshall argues no individual Black American should have to prove they personally suffered discrimination, because racism has been so pervasive in American history that no one escaped its impact. He says this experience was different in kind, not just degree, from other groups' experiences.",
+      chunks: [
+        "Today's judgment ignores the fact that for several hundred years Negroes have been discriminated against not as individuals, but rather solely because of the color of their skins.",
+        "It is unnecessary in 20th-century America to have individual Negroes demonstrate that they have been victims of racial discrimination.",
+        "The racism of our society has been so pervasive that none, regardless of wealth or position, has managed to escape its impact.",
+        "The experience of Negroes in America has been different in kind, not just in degree, from that of other ethnic groups.",
+        "It is not merely the history of slavery alone, but also that a whole people were marked as inferior by the law.",
+        "And that mark has endured."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that state Marshall's central claim.",
+      pass1NoteLabel: "In one sentence, why does Marshall say individual proof of discrimination is unnecessary?",
+      pass1Model: "Marshall's central claim is that no individual Black American should have to PROVE they personally experienced discrimination, because the racism of American society has been so total and pervasive that literally no one has escaped its impact, \"regardless of wealth or position.\" That's his core argument for why race-conscious remedies are justified.",
+      modelYellow: [1, 2],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentences that build historical context before Marshall makes his key comparative claim.",
+      pass2NoteLabel: "What comparison does Marshall draw between Black Americans' experience and other groups' experiences?",
+      pass2Model: "Notice how Marshall builds his case: he first establishes historical context (discrimination based purely on skin color, not individual conduct), then makes a specific comparative claim — that this experience is different \"in kind, not just in degree\" from other ethnic groups' experiences. That distinction matters: he's not just saying Black Americans had it worse, he's saying the type of discrimination was categorically different.",
+      modelBlue: [0, 3],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentence(s) where Marshall shifts to short, blunt sentences after longer ones.",
+      pass3NoteLabel: "What effect does the sudden shift to short sentences create?",
+      pass3Model: "After several longer, complex sentences, Marshall shifts to a short, blunt five-word sentence: \"And that mark has endured.\" The dramatic shortening after longer sentences creates emphasis — it reads almost like a verdict being delivered, landing harder because of how compressed it is compared to everything before it.",
+      modelPink: [4, 5]
+    },
+
+    // ---- PASSAGE 5: REAL CONTENT — public domain speech (Douglass died 1895) ----
+    {
+      title: "Douglass, \"What to the Slave is the Fourth of July?\"",
+      source: "Frederick Douglass, address to the Rochester Ladies' Anti-Slavery Society, Rochester, New York, July 5, 1852",
+      simplify: "Douglass asks what the Fourth of July means to an enslaved person, then answers his own question: it's a painful reminder of injustice, not a celebration. He lists America's proudest ideas — liberty, greatness — and calls each one a sham for someone still enslaved, closing by insisting the holiday belongs to his free audience, not to him.",
+      chunks: [
+        "What, to the American slave, is your Fourth of July?",
+        "I answer: a day that reveals to him, more than all other days in the year, the gross injustice and cruelty to which he is a constant victim.",
+        "To him, your celebration is a sham; your boasted liberty, an unholy license; your national greatness, swelling vanity.",
+        "This Fourth of July is yours, not mine.",
+        "You may rejoice, I must mourn."
+      ],
+      pass1Prompt: "FIRST READ: Read the whole passage once without marking anything. Then go back and highlight YELLOW the sentences that state Douglass's central question and answer.",
+      pass1NoteLabel: "In one sentence, what does Douglass say the Fourth of July means to an enslaved person?",
+      pass1Model: "Douglass opens with a rhetorical question — one he already knows the answer to — and then answers it himself immediately: for the enslaved, July 4th isn't a celebration, it's a reminder of injustice. That question-and-immediate-answer structure is the engine of the whole passage.",
+      modelYellow: [0, 1],
+      pass2Prompt: "SECOND READ: Read again. Highlight BLUE the sentence that contains a list of three parallel accusations.",
+      pass2NoteLabel: "What are the three things Douglass redefines, and what pattern do they follow?",
+      pass2Model: "Notice the triple structure inside a single sentence: \"your celebration is a sham; your boasted liberty, an unholy license; your national greatness, swelling vanity.\" Three parallel accusations, each following the same pattern — a thing Americans are proud of, redefined as something ugly. This rapid-fire repetition builds momentum and makes the accusation feel relentless rather than like a single complaint.",
+      modelBlue: [2],
+      pass3Prompt: "THIRD READ: Read a third time. Highlight PINK the sentences built around a sharp \"you\" versus \"I\" contrast.",
+      pass3NoteLabel: "How do these sentences use pronouns to draw a line between Douglass and his audience?",
+      pass3Model: "The final two sentences are built entirely around the contrast between \"you\" and \"I\" (or \"yours\" and \"mine\"). \"This Fourth of July is yours, not mine\" and \"You may rejoice, I must mourn\" both use short, direct pronouns to draw the sharpest possible line between his audience's experience and his own — refusing to let them imagine he shares their celebration even a little.",
+      modelPink: [3, 4]
     }
   ]
 };
