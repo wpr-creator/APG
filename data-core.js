@@ -690,9 +690,30 @@ function setupSubmitButtons() {
 // ══════════════════════════════════════════════════════════
 //  VOCAB OF THE DAY
 // ══════════════════════════════════════════════════════════
+// Previously this pulled only from contentData.vocab_of_day, a
+// hand-curated 30-term subset editable in the admin panel. That was
+// a far smaller pool than the real glossary (~459 terms across all
+// 5 units), so students rarely saw most of the site's actual
+// vocabulary. This now flattens the full GLOSSARY_UNITS structure
+// and rotates through everything.
+let FULL_GLOSSARY_FLAT = null;
+function getFullGlossaryFlat() {
+  if (FULL_GLOSSARY_FLAT) return FULL_GLOSSARY_FLAT;
+  const flat = [];
+  GLOSSARY_UNITS.forEach(unit => {
+    Object.values(unit.groups).forEach(entries => {
+      entries.forEach(entry => {
+        flat.push({ term: entry[0], definition: entry[1] });
+      });
+    });
+  });
+  FULL_GLOSSARY_FLAT = flat;
+  return flat;
+}
+
 function buildVocab() {
-  if (!contentData || !contentData.vocab_of_day) return;
-  const vocab = contentData.vocab_of_day;
+  const vocab = getFullGlossaryFlat();
+  if (!vocab.length) return;
 
   // Start on the day-of-year index so it feels "different" each day
   const doy = Math.floor((new Date() - new Date(new Date().getFullYear(), 0, 0)) / 86400000);
