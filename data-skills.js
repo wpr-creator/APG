@@ -104,6 +104,61 @@ var SKILLS_CER_LEVEL2 = {
   badLabel: "CLAIM — the argument or point being made",
   guidedPassage: "Claim: \"The filibuster makes the Senate dysfunctional.\" Evidence: \"In 2022, over 90% of bills introduced in the Senate never received a floor vote.\"",
   guidedAnswer: "The first sentence is the CLAIM -- it's the argument being made about the filibuster. The second sentence is the EVIDENCE -- it's a specific, checkable statistic used to support that argument.",
+  guidedExamples: [
+    {
+      sentence: "The Senate confirmation process for judges has become too partisan.",
+      answer: "claim",
+      thinking: "Step 1: Is this something we can look up and verify with a specific number or fact? NO -- \"too partisan\" is a judgment call. Step 2: This is the writer's argument about how the process HAS become, not a checkable statistic. Step 3: Could reasonable people disagree? YES -- some would say it's always been this way, others would disagree entirely. This is a CLAIM.",
+      verdict: "CLAIM"
+    },
+    {
+      sentence: "In the past decade, the average number of days between a judicial nomination and a Senate confirmation vote has more than doubled.",
+      answer: "evidence",
+      thinking: "Step 1: Does this give a specific, checkable data point? YES -- a measurable change over a specific time period. Step 2: This isn't an argument by itself -- it's a fact that could be used to SUPPORT an argument about judicial confirmations. Step 3: This is EVIDENCE.",
+      verdict: "EVIDENCE"
+    },
+    {
+      sentence: "Term limits for Supreme Court Justices would improve the Court's legitimacy.",
+      answer: "claim",
+      thinking: "Step 1: Can we prove this will happen? NO -- this is a prediction about a hypothetical outcome. Step 2: \"Would improve\" signals a stance the writer is taking, not a fact. Step 3: People strongly disagree about whether this is true. This is a CLAIM.",
+      verdict: "CLAIM"
+    },
+    {
+      sentence: "A 2023 Pew Research poll found that 66% of Americans support setting an 18-year term limit for Supreme Court Justices.",
+      answer: "evidence",
+      thinking: "Step 1: This gives a specific source (Pew Research), a specific year, and a specific percentage. Step 2: This is a checkable, citable data point -- not an argument by itself. Step 3: This is EVIDENCE that could support a claim about term limits.",
+      verdict: "EVIDENCE"
+    },
+    {
+      sentence: "Campaign finance laws fail to prevent wealthy donors from having outsized political influence.",
+      answer: "claim",
+      thinking: "Step 1: Is \"outsized influence\" something we can directly measure and prove on its own? NO -- it's an interpretation of how influence works. Step 2: This is the writer's argument about how the system fails. Step 3: This is a CLAIM, even though it could be supported by real numbers about campaign donations.",
+      verdict: "CLAIM"
+    }
+  ],
+  warning: {
+    title: "WATCH OUT FOR THESE TRAPS",
+    points: [
+      "TRAP 1: A sentence with a number isn't automatically evidence. \"Nearly all Americans agree Congress is broken\" has a number word (\"nearly all\") but it's still a claim -- there's no specific, checkable statistic here.",
+      "TRAP 2: Evidence doesn't have to come from a poll or study. A specific historical event, court ruling, or vote count can also be evidence, as long as it's a checkable fact rather than an argument.",
+      "TRAP 3: A claim can still be true. Calling something a \"claim\" isn't saying it's wrong -- it just means it's the writer's argument, which requires evidence to support it, rather than being self-proving.",
+      "TRAP 4: Watch for evidence hidden inside a claim. \"The clearly disastrous 2013 shutdown cost the economy billions\" mixes a real fact (the shutdown happened and had a cost) with a loaded claim word (\"disastrous\") -- read carefully to separate the two."
+    ]
+  },
+  applyIt: {
+    intro: "You've learned the skill. Now use it on a real paragraph. Below is a short paragraph about voter ID laws. Click each sentence, then tag it as CLAIM or EVIDENCE. When you're done tagging all 7 sentences, click Check My Work.",
+    tagPositive: { value: "claim", label: "TAG AS CLAIM" },
+    tagNegative: { value: "evidence", label: "TAG AS EVIDENCE" },
+    sentences: [
+      { text: "Voter ID laws make elections more secure.", answer: "claim", explain: "This is a CLAIM -- \"more secure\" is a judgment about the law's effect, not a specific checkable fact." },
+      { text: "As of 2024, 36 states have laws requesting or requiring voters to show identification at the polls.", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable number of states." },
+      { text: "A 2021 study by the Brennan Center found no evidence of widespread voter impersonation fraud in U.S. elections.", answer: "evidence", explain: "This is EVIDENCE -- a specific, citable study and finding." },
+      { text: "Strict voter ID requirements disproportionately burden elderly, low-income, and minority voters.", answer: "claim", explain: "This is a CLAIM -- it's an argument about who is affected and how, which would need evidence to support it." },
+      { text: "In Texas, a 2016 federal court ruling found the state's voter ID law had a discriminatory effect on Black and Latino voters.", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable court ruling." },
+      { text: "States should be allowed to set their own election security standards without federal interference.", answer: "claim", explain: "This is a CLAIM -- \"should be allowed\" signals a position on federalism, not a provable fact." },
+      { text: "Every democracy needs some baseline of trust in its election system to function.", answer: "claim", explain: "This is a CLAIM -- it's a general assertion about what democracies need, not a specific checkable fact." }
+    ]
+  },
   questions: [
     { text: "\"Social media has too much influence on elections.\"", answer: "claim", explain: "This is a CLAIM -- it's an argument or position being put forward, not a specific proof." },
     { text: "\"In the 2020 election, campaigns spent over $1 billion on social media ads.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable statistic that could be used to support a claim." },
@@ -114,7 +169,22 @@ var SKILLS_CER_LEVEL2 = {
     { text: "\"The Supreme Court has become too political.\"", answer: "claim", explain: "This is a CLAIM -- 'too political' is the writer's argument." },
     { text: "\"A 2023 poll found that 58% of Americans believe the Court is influenced by politics rather than law.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, citable data point." },
     { text: "\"Lobbying gives wealthy interest groups outsized power in Congress.\"", answer: "claim", explain: "This is a CLAIM -- it's the argument being made about lobbying's effect." },
-    { text: "\"In 2022, over $4 billion was spent on federal lobbying.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable dollar figure." }
+    { text: "\"In 2022, over $4 billion was spent on federal lobbying.\"", answer: "evidence", explain: "This is EVIDENCE -- it's a specific, checkable dollar figure." },
+    { text: "\"The Senate filibuster protects minority party interests.\"", answer: "claim", explain: "This is a CLAIM -- 'protects' and 'interests' reflect the writer's interpretation, not a provable fact." },
+    { text: "\"In 2021, a bill with 50 votes in favor still failed to pass because it needed 60 to overcome a filibuster.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable vote count and procedural outcome." },
+    { text: "\"Presidential debates favor candidates with more media experience.\"", answer: "claim", explain: "This is a CLAIM -- 'favor' is an interpretation of how debates function, not a specific checkable fact." },
+    { text: "\"The 2020 presidential debates drew over 73 million television viewers for the first debate alone.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable viewership number." },
+    { text: "\"The Freedom of Information Act allows citizens too much access to sensitive government records.\"", answer: "claim", explain: "This is a CLAIM -- 'too much access' is a judgment about the law's scope." },
+    { text: "\"Since 1967, the Freedom of Information Act has required federal agencies to disclose records upon request, with some exceptions.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable description of what the law requires." },
+    { text: "\"Third-party candidates have no realistic chance of winning the presidency.\"", answer: "claim", explain: "This is a CLAIM -- 'no realistic chance' is a prediction and judgment, not a provable fact by itself." },
+    { text: "\"No third-party or independent candidate has won a presidential election since the Republican Party's founding in 1854.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable historical fact." },
+    { text: "\"Political action committees exert too much control over congressional voting.\"", answer: "claim", explain: "This is a CLAIM -- 'too much control' is a judgment about influence, not a specific measurement." },
+    { text: "\"In the 2022 election cycle, PACs contributed more than $500 million to congressional candidates.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable dollar figure." },
+    { text: "\"Term limits for members of Congress would reduce corruption.\"", answer: "claim", explain: "This is a CLAIM -- it's a prediction about a hypothetical policy's effect." },
+    { text: "\"Currently, there are no federal term limits for members of the House or Senate.\"", answer: "evidence", explain: "This is EVIDENCE -- a specific, checkable fact about current law." },
+    { text: "\"The Senate's structure gives disproportionate power to small states.\"", answer: "claim", explain: "This is a CLAIM -- 'disproportionate' is an interpretation, even though it's based on real numbers." },
+    { text: "\"Wyoming, with about 580,000 residents, has the same number of senators as California, with about 39 million residents.\"", answer: "evidence", explain: "This is EVIDENCE -- specific, checkable population and representation figures." },
+    { text: "\"Federal judges should be elected rather than appointed.\"", answer: "claim", explain: "This is a CLAIM -- 'should be' always signals an argument about what ought to happen, not a fact." }
   ]
 };
 
@@ -128,6 +198,60 @@ var SKILLS_CER_LEVEL3 = {
   badLabel: "MISSING REASONING — no explanation of WHY 38% matters or proves anything",
   guidedPassage: "Claim: \"The Senate filibuster gives the minority party too much power.\" Evidence: \"In 2021, a bill with 59 votes still failed to pass because it needed 60 to overcome a filibuster.\" Reasoning: \"This shows that even when a clear majority of senators support a bill, a smaller minority can block it entirely -- meaning the will of most senators, and the constituents they represent, can be overridden by a small group.\"",
   guidedAnswer: "Notice how the REASONING doesn't just repeat the evidence -- it explains the broader significance. It connects the specific fact (59 votes still failing) back to the claim (the filibuster gives too much power to the minority) by explaining the mechanism: a majority's will being blocked by a minority.",
+  guidedExamples: [
+    {
+      sentence: "Claim: \"Voter ID laws reduce voter turnout.\" Evidence: \"A 2014 study found that strict photo ID laws reduced turnout by about 2 percentage points among registered voters in affected states.\" Reasoning: \"This shows that even a small percentage drop can be significant, because it demonstrates that ID laws create a real, measurable barrier to voting for some registered voters, particularly affecting close elections where a small number of votes decides the outcome.\"",
+      answer: "strong",
+      thinking: "Step 1: Does the reasoning just restate the evidence, or does it explain WHY the 2-point drop matters? It explains why -- connecting a small percentage to real-world consequences in close elections. Step 2: Does it explain the mechanism connecting evidence to claim? YES -- it shows HOW a small barrier translates into a real problem. This is STRONG REASONING.",
+      verdict: "STRONG REASONING"
+    },
+    {
+      sentence: "Claim: \"The Electoral College distorts presidential campaigns.\" Evidence: \"In 2020, presidential candidates held the vast majority of campaign events in fewer than 10 'swing states.'\" Reasoning: \"This is bad because campaigns should be fair.\"",
+      answer: "weak",
+      thinking: "Step 1: Does the reasoning explain WHY concentrating events in swing states connects to 'distorting' campaigns? NO -- it just asserts a value judgment ('should be fair') without explaining the mechanism. Step 2: A strong version would explain HOW ignoring most states changes what issues get discussed or which voters get attention. This is WEAK REASONING -- it repeats an opinion instead of connecting evidence to claim.",
+      verdict: "WEAK REASONING"
+    },
+    {
+      sentence: "Claim: \"Judicial review gives the Supreme Court significant power over policy.\" Evidence: \"In Brown v. Board of Education (1954), the Court struck down state laws requiring school segregation, overturning decades of precedent.\" Reasoning: \"This shows that the Court's power to declare state laws unconstitutional means unelected justices, not elected legislatures, can reverse long-standing policy across the entire country -- illustrating why judicial review is considered one of the most powerful checks in the constitutional system.\"",
+      answer: "strong",
+      thinking: "Step 1: Does the reasoning explain WHY Brown matters for the claim about judicial power? YES -- it connects the specific case to the broader mechanism of unelected justices overturning policy nationwide. Step 2: Does it go beyond just restating the evidence? YES -- it draws out the significance. This is STRONG REASONING.",
+      verdict: "STRONG REASONING"
+    },
+    {
+      sentence: "Claim: \"Interest groups play an important role in American politics.\" Evidence: \"The NRA and the Sierra Club are both examples of interest groups.\" Reasoning: \"These groups show that interest groups exist in American politics.\"",
+      answer: "weak",
+      thinking: "Step 1: Does the reasoning explain WHY these groups matter, or just restate that they exist? It just restates existence -- it never explains WHAT interest groups actually do or why that role is 'important.' Step 2: A strong version would explain a specific function, like lobbying, mobilizing voters, or shaping legislation. This is WEAK REASONING -- it circles back to the claim without adding any new insight.",
+      verdict: "WEAK REASONING"
+    },
+    {
+      sentence: "Claim: \"Divided government makes passing major legislation more difficult.\" Evidence: \"During the 113th Congress (2013-2015), with a Democratic Senate and Republican House, fewer than 300 bills became law -- one of the lowest totals in decades.\" Reasoning: \"This shows that when control of Congress is split between parties, each chamber can block the other's priorities, making it harder to reach the compromises needed for a bill to pass both chambers and reach the president's desk.\"",
+      answer: "strong",
+      thinking: "Step 1: Does the reasoning explain the mechanism connecting divided government to fewer laws? YES -- it explains HOW split control creates blocking power. Step 2: Does it go beyond simply repeating the low bill count? YES -- it explains why that number would be expected under these conditions. This is STRONG REASONING.",
+      verdict: "STRONG REASONING"
+    }
+  ],
+  warning: {
+    title: "WATCH OUT FOR THESE TRAPS",
+    points: [
+      "TRAP 1: Reasoning that just repeats the evidence in different words isn't real reasoning. \"Spending rose to $600 million, which is a lot of money\" doesn't explain WHY that increase matters -- it just restates the number with a value judgment attached.",
+      "TRAP 2: Reasoning that only states an opinion, without connecting it to the specific evidence, is weak. \"This is unfair\" or \"this is a problem\" doesn't explain the mechanism linking the evidence to the claim.",
+      "TRAP 3: Longer isn't automatically stronger. A short sentence that clearly explains the connection between evidence and claim beats a long sentence full of extra detail that never actually explains why the evidence matters.",
+      "TRAP 4: Strong reasoning usually answers \"so what?\" or \"how do we know?\" If you can ask \"so what?\" after reading the reasoning and it doesn't already answer that question, the reasoning isn't finished yet."
+    ]
+  },
+  applyIt: {
+    intro: "You've learned to tell strong reasoning from weak reasoning. Now apply it to several real examples. Each item below is a complete claim-evidence-reasoning argument. Click each one, then tag it as STRONG REASONING or WEAK REASONING based on whether the reasoning actually explains WHY the evidence supports the claim.",
+    tagPositive: { value: "strong", label: "STRONG REASONING" },
+    tagNegative: { value: "weak", label: "WEAK REASONING" },
+    sentences: [
+      { text: "Claim: \"Congressional oversight serves as an important check on the executive branch.\" Evidence: \"In 2019, the House Intelligence Committee subpoenaed White House officials as part of an investigation into executive actions.\" Reasoning: \"This shows that Congress can compel executive branch officials to provide information and testimony even when the President objects, demonstrating that legislative oversight can operate independently of executive cooperation.\"", answer: "strong", explain: "STRONG -- the reasoning explains the mechanism (compelling testimony despite objection) and connects it directly to the broader claim about oversight as an independent check." },
+      { text: "Claim: \"Political polarization has increased in recent decades.\" Evidence: \"A 2022 Pew Research study found that the ideological gap between Democrats and Republicans has widened significantly since the 1990s.\" Reasoning: \"This proves that Americans are more divided than ever before.\"", answer: "weak", explain: "WEAK -- the reasoning overstates the evidence ('more divided than ever before' isn't what the study measured) rather than explaining the specific mechanism connecting a widening ideological gap to the claim." },
+      { text: "Claim: \"The 24-hour news cycle has changed how presidents communicate with the public.\" Evidence: \"Modern presidents post directly to social media platforms multiple times per day, bypassing traditional press briefings.\" Reasoning: \"This shows that presidents can now shape public opinion in real time without relying on journalists to filter or contextualize their message, changing the relationship between the executive branch and the public.\"", answer: "strong", explain: "STRONG -- the reasoning explains exactly how bypassing journalists changes the presidential-public relationship, directly connecting evidence to claim." },
+      { text: "Claim: \"Federalism creates policy differences between states.\" Evidence: \"Minimum wage requirements vary significantly from state to state.\" Reasoning: \"This is a good example of federalism.\"", answer: "weak", explain: "WEAK -- the reasoning just labels the evidence as an example of the claim without explaining WHY minimum wage variation is a meaningful consequence of federalism." },
+      { text: "Claim: \"Political action committees influence which candidates receive media attention.\" Evidence: \"Candidates backed by well-funded PACs received significantly more television advertising airtime in the 2022 midterms than candidates without major PAC support.\" Reasoning: \"This shows that financial backing can shape voter exposure to a candidate before votes are even cast, meaning PAC support may influence elections by controlling visibility rather than persuading voters directly on the merits.\"", answer: "strong", explain: "STRONG -- the reasoning explains the specific mechanism (controlling visibility, not persuasion) connecting PAC funding to electoral influence." },
+      { text: "Claim: \"Supreme Court confirmation hearings have become more contentious.\" Evidence: \"Recent confirmation votes have been closer along party lines than confirmation votes several decades ago.\" Reasoning: \"This shows that hearings are contentious now.\"", answer: "weak", explain: "WEAK -- the reasoning just restates the claim in slightly different words instead of explaining what closer party-line votes actually reveal about WHY hearings have grown contentious." }
+    ]
+  },
   questions: [
     {
       text: "Claim: \"Citizens United increased the influence of money in politics.\" Evidence: \"Following the 2010 ruling, Super PAC spending rose from $0 to over $600 million in the next election cycle.\" Which sentence below is the BEST reasoning connecting this evidence to the claim?",
@@ -164,6 +288,78 @@ var SKILLS_CER_LEVEL3 = {
       ],
       answer: 1,
       explain: "The second option explains WHY the drop in bipartisan votes matters -- it connects the trend to reduced willingness to compromise, directly supporting the claim. The first is just a structural fact about Congress."
+    },
+    {
+      text: "Claim: \"The 22nd Amendment limits presidential power.\" Evidence: \"Since its ratification in 1951, no president has served more than two elected terms.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "This shows that the constitutional limit has been consistently followed since its adoption, demonstrating that presidents are bound by a fixed structural check on how long they can hold executive power, regardless of popularity.",
+        "The 22nd Amendment was ratified after World War II."
+      ],
+      answer: 0,
+      explain: "The first option explains WHY the historical pattern matters -- it connects consistent compliance to the broader claim about structural limits on power. The second is just a date, unrelated to the argument."
+    },
+    {
+      text: "Claim: \"Media consolidation limits the diversity of viewpoints Americans encounter.\" Evidence: \"By 2020, a small number of media conglomerates owned the majority of major television, radio, and newspaper outlets in the United States.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "Television, radio, and newspapers are all types of media.",
+        "This shows that a small number of corporate decision-makers can influence what stories reach large portions of the public, meaning fewer independent editorial perspectives shape the news Americans see across different outlets."
+      ],
+      answer: 1,
+      explain: "The second option explains the mechanism -- how ownership concentration translates into fewer independent perspectives -- directly supporting the claim. The first is just a definition."
+    },
+    {
+      text: "Claim: \"Amicus curiae briefs allow outside groups to influence Supreme Court decisions.\" Evidence: \"In major cases like Obergefell v. Hodges, dozens of interest groups filed amicus briefs presenting arguments and research to the Court.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "This shows that groups without formal standing in a case can still shape the information and arguments justices consider, giving organized interests a channel to influence the Court's reasoning even though they aren't parties to the lawsuit.",
+        "Obergefell v. Hodges was decided by the Supreme Court."
+      ],
+      answer: 0,
+      explain: "The first option explains HOW amicus briefs create influence -- by shaping the information justices see -- directly connecting the evidence to the claim. The second just restates that a case exists."
+    },
+    {
+      text: "Claim: \"Divided government leads to increased use of executive orders.\" Evidence: \"Presidents facing a Congress controlled by the opposing party have issued executive orders at higher rates than presidents with unified control.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "Executive orders are directives issued by the President.",
+        "This shows that when presidents cannot get legislation through an opposing Congress, they turn to unilateral executive action instead, using orders as a workaround for legislative gridlock rather than working through the normal lawmaking process."
+      ],
+      answer: 1,
+      explain: "The second option explains the mechanism connecting divided government to more executive orders -- presidents substituting unilateral action for blocked legislation. The first is just a definition."
+    },
+    {
+      text: "Claim: \"Increased early voting has made voting more accessible.\" Evidence: \"In the 2020 election, over 100 million ballots were cast before Election Day, a record high.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "This shows that expanding the time window to vote allowed a historic number of Americans to cast ballots on a schedule that worked for them, rather than being limited to a single day, suggesting that flexibility increases participation.",
+        "Election Day occurs in November."
+      ],
+      answer: 0,
+      explain: "The first option explains WHY the record turnout matters -- connecting flexible timing to increased participation. The second is unrelated background information."
+    },
+    {
+      text: "Claim: \"Congressional committees play a powerful role in shaping legislation.\" Evidence: \"The vast majority of bills introduced in Congress never make it out of committee.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "Congress has many different committees.",
+        "This shows that committees act as gatekeepers who can prevent a bill from ever reaching a floor vote, meaning a small group of committee members can effectively kill legislation that never gets a chance to be debated or voted on by the full chamber."
+      ],
+      answer: 1,
+      explain: "The second option explains the gatekeeping mechanism -- how committees block bills from advancing -- directly supporting the claim about committee power. The first is just a generic fact."
+    },
+    {
+      text: "Claim: \"Social media has changed how political campaigns reach voters.\" Evidence: \"Campaign spending on digital and social media advertising has grown substantially in every election cycle since 2008.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "This shows that campaigns are increasingly investing resources in reaching voters directly through platforms they already use daily, rather than relying solely on television or print media, changing how and where political messaging reaches the public.",
+        "Social media includes platforms like Facebook, Twitter, and Instagram."
+      ],
+      answer: 0,
+      explain: "The first option connects the spending trend to a broader shift in campaign strategy, explaining why the growth matters. The second is just a definition of social media."
+    },
+    {
+      text: "Claim: \"The bureaucracy has significant discretion in how it implements federal law.\" Evidence: \"Congress often passes laws using broad language, leaving federal agencies to write detailed regulations that determine how the law actually works in practice.\" Which sentence is the BEST reasoning?",
+      choices: [
+        "Federal agencies are part of the executive branch.",
+        "This shows that Congress frequently delegates the specific details of policy to unelected agency officials, meaning the bureaucracy effectively shapes how laws function even though agencies were not the ones who voted the law into existence."
+      ],
+      answer: 1,
+      explain: "The second option explains the delegation mechanism -- how broad congressional language becomes specific bureaucratic rules -- directly supporting the claim about bureaucratic discretion. The first is just a structural fact."
     }
   ]
 };

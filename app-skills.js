@@ -191,9 +191,12 @@ function skillsRenderGuidedExamplesWithAttempt(levelData) {
     return '<div class="skills-guided-dot' + (di === i ? ' active' : '') + '"></div>';
   }).join('');
 
-  var labels = ex.answer === 'fact'
-    ? ['FACT', 'OPINION']
-    : (ex.answer === 'claim' ? ['CLAIM', 'EVIDENCE'] : ['FACT', 'OPINION']);
+  var GUIDED_LABEL_PAIRS = {
+    fact: ['FACT', 'OPINION'],
+    claim: ['CLAIM', 'EVIDENCE'],
+    strong: ['STRONG REASONING', 'WEAK REASONING']
+  };
+  var labels = GUIDED_LABEL_PAIRS[ex.answer] || ['FACT', 'OPINION'];
 
   var attemptHtml =
     '<div class="skills-guided-attempt" id="guided-attempt-row">' +
