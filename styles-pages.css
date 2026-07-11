@@ -142,7 +142,7 @@
   display: flex; align-items: center; justify-content: space-between;
 }
 .case-preview-name {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 15px; font-weight: 700; color: white;
 }
 .case-preview-year {
@@ -383,7 +383,7 @@
   margin-bottom: 32px;
 }
 .doc-section-title {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Source Sans 3', sans-serif;
   font-size: 18px; font-weight: 700; color: var(--navy);
   margin-bottom: 6px; padding-bottom: 8px;
   border-bottom: 2px solid var(--crimson);
