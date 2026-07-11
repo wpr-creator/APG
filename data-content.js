@@ -1182,7 +1182,7 @@ var frqPracticeState = {
   timerInterval: null,
   timeLeft: 0,
   running: false,
-  activeType: 'all'
+  activeType: 'All'
 };
 
 // ── Build the prompt selector ──

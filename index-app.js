@@ -1349,9 +1349,9 @@
     w.print();
   }
 
-  // Wire up FRQ practice when review tab opens
+  // Wire up FRQ practice when the FRQ Practice tab opens
   var frqPracticeBuilt = false;
-  const reviewTab=document.querySelector('.nav-tab[data-tab="review"]');if(reviewTab)reviewTab.addEventListener('click', function() {
+  const frqPracticeTab=document.querySelector('.nav-tab[data-tab="frqpractice"]');if(frqPracticeTab)frqPracticeTab.addEventListener('click', function() {
     if (!frqPracticeBuilt) {
       setTimeout(function() { buildFrqPracticeUI(); }, 50);
       frqPracticeBuilt = true;
@@ -1548,8 +1548,8 @@
 
   function archivePractice(idx) {
     var q = FRQ_ARCHIVE[idx];
-    // Switch to review tab and pre-load this prompt in the practice area
-    switchToTab('review');
+    // Switch to the FRQ Practice tab and pre-load this prompt in the practice area
+    switchToTab('frqpractice');
     // Build a temporary prompt object from archive entry
     setTimeout(function() {
       if (!frqPracticeBuilt) { buildFrqPracticeUI(); frqPracticeBuilt = true; }
@@ -1597,16 +1597,31 @@
   }
 
   // Deep-link straight into a specific FRQ prompt's timer view, e.g. a
-  // unit page linking to "/APG/#review&frq=u1-marijuana" should skip the
-  // prompt picker entirely and launch that exact prompt. The tab itself
-  // (Review) is already opened by the hash router in data-core.js; this
+  // unit page linking to "/APG/#frqpractice&frq=u1-marijuana" should skip
+  // the prompt picker entirely and launch that exact prompt. The tab
+  // itself is already opened by the hash router in data-core.js; this
   // just handles the FRQ-specific part once this file (and FRQ_PROMPTS)
   // has actually loaded.
+  //
+  // Also handles landing directly on the FRQ Practice tab with NO
+  // specific prompt (e.g. a unit page's nav link to plain
+  // "/APG/#frqpractice", or a bookmark/refresh) -- the picker UI is
+  // normally only built by a click listener on the nav tab, which never
+  // fires when the page loads with the hash already present. Without
+  // this, the picker showed up completely empty (no filter buttons, no
+  // prompt list) any time someone arrived without physically clicking
+  // the tab first.
   (function () {
     var hash = window.location.hash;
+    var tab = hash.replace('#', '').split('&')[0];
     var match = hash.match(/[#&]frq=([a-z0-9-]+)/i);
-    if (match) {
-      setTimeout(function () { frqLaunchPromptById(match[1]); }, 150);
+    if (tab === 'frqpractice') {
+      if (!frqPracticeBuilt) {
+        setTimeout(function () { buildFrqPracticeUI(); frqPracticeBuilt = true; }, 150);
+      }
+      if (match) {
+        setTimeout(function () { frqLaunchPromptById(match[1]); }, 200);
+      }
     }
   })();
 
