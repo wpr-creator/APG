@@ -454,6 +454,9 @@
 /* ── UNIT 1: Foundations — Aged Parchment & Ink ── */
 .unit-1 {
   background: var(--unit-bg);
+  --unit-heading-font: 'Archivo', sans-serif;
+  --unit-heading-weight: 900;
+  --unit-heading-transform: uppercase;
   --unit-bg:       #f5ead6;
   --unit-dark:     #2c1810;
   --unit-mid:      #5c3d2e;
@@ -483,6 +486,9 @@
 /* ── UNIT 2: Branches — White Marble & Gold ── */
 .unit-2 {
   background: var(--unit-bg);
+  --unit-heading-font: 'Oswald', sans-serif;
+  --unit-heading-weight: 600;
+  --unit-heading-transform: uppercase;
   --unit-bg:       #f5f5f4;
   --unit-dark:     #2d2d30;
   --unit-mid:      #6b6b6b;
@@ -514,6 +520,9 @@
 /* ── UNIT 3: Civil Liberties & Rights — White, Grey, Black ── */
 .unit-3 {
   background: var(--unit-bg);
+  --unit-heading-font: 'Anton', sans-serif;
+  --unit-heading-weight: 400;
+  --unit-heading-transform: uppercase;
   --unit-bg:       #ffffff;
   --unit-dark:     #0a0a0a;
   --unit-mid:      #4a4a4a;
@@ -549,6 +558,9 @@
 /* ── UNIT 4: Institutions & Elections — Stark Blue/Red/White ── */
 .unit-4 {
   background: var(--unit-bg);
+  --unit-heading-font: 'Barlow Condensed', sans-serif;
+  --unit-heading-weight: 700;
+  --unit-heading-transform: uppercase;
   --unit-bg:       #ffffff;
   --unit-dark:     #1e3a8a;
   --unit-mid:      #b91c1c;
@@ -578,6 +590,9 @@
 /* ── UNIT 5: Political Participation — Ballot Black & White ── */
 .unit-5 {
   background: var(--unit-bg);
+  --unit-heading-font: 'IBM Plex Mono', monospace;
+  --unit-heading-weight: 700;
+  --unit-heading-transform: uppercase;
   --unit-bg:       #ffffff;
   --unit-dark:     #1a1a1a;
   --unit-mid:      #2b2b2b;
@@ -609,6 +624,22 @@
 .unit-5 .frq-row-type.ca { background: #e0e0e0; color: #1a1a1a; }
 .unit-5 .frq-row-type.sc { background: #6b6b6b; color: white; }
 .unit-5 .frq-row-type.ae { background: #1a1a1a; color: white; }
+
+/* ── SHARED HEADING FONT CONTROL ──
+   Single source of truth for which font each unit's document/case/
+   card titles use. Reads --unit-heading-font/-weight/-transform from
+   whichever .unit-N class wraps the page (set above). Previously,
+   changing a unit's heading font meant editing this exact declaration
+   inside every single doc/case page's own <style> block -- this rule
+   is why that repeated pain point existed. Individual pages can still
+   override color/font-size locally; only the FONT ITSELF is now
+   centralized here. */
+.doc-hero-title, .case-hero-title, .doc-section-title, .doc-bento-title {
+  font-family: var(--unit-heading-font, 'Archivo', sans-serif);
+  font-weight: var(--unit-heading-weight, 700);
+  text-transform: var(--unit-heading-transform, uppercase);
+  font-style: normal;
+}
 
 /* ── UNIT HERO OVERRIDES ── */
 .unit-1 .unit-hero-inner,
