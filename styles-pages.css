@@ -68,8 +68,7 @@
   text-transform: uppercase; color: #b3b3b3; margin-bottom: 8px;
 }
 .page-hero-title {
-  font-family: 'Anton', sans-serif; text-transform: uppercase;
-  font-size: 34px; font-weight: 400; color: white;
+  font-size: 34px; color: white;
   line-height: 1.15; margin-bottom: 10px;
 }
 .page-hero-sub {
@@ -383,8 +382,7 @@
   margin-bottom: 32px;
 }
 .doc-section-title {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 18px; font-weight: 700; color: var(--navy);
+  font-size: 18px; color: var(--navy);
   margin-bottom: 6px; padding-bottom: 8px;
   border-bottom: 2px solid var(--crimson);
 }
@@ -634,7 +632,7 @@
    is why that repeated pain point existed. Individual pages can still
    override color/font-size locally; only the FONT ITSELF is now
    centralized here. */
-.doc-hero-title, .case-hero-title, .doc-section-title, .doc-bento-title {
+.doc-hero-title, .case-hero-title, .doc-section-title, .doc-bento-title, .page-hero-title {
   font-family: var(--unit-heading-font, 'Archivo', sans-serif);
   font-weight: var(--unit-heading-weight, 700);
   text-transform: var(--unit-heading-transform, uppercase);
