@@ -106,7 +106,7 @@ const REQUIRED_DOCS = [
     navLabel: "Wealth of Nations",
     author: "Adam Smith",
     year: "1776",
-    unit: 1,
+    unit: 4,
     icon: "💰",
     file: "docs/wealth-of-nations.html",
     blurb: "The \"invisible hand,\" free markets, and self-interest as the engine of prosperity. The economic philosophy underpinning the Framers' vision of limited government."
