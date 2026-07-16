@@ -6,13 +6,11 @@
 // unit*-docs.html / unit*-cases.html card grids, data-core.js
 // key_docs/key_cases arrays, and content.json key_docs/key_cases.
 //
-// STATUS: Step 1 only — this is the extracted data, built from what's
-// currently live on the site. Nothing else has been wired to read
-// from this yet. Nothing on the live site changes until nav-render.js
-// and the card renderer (step 2) are built and one page is swapped
-// over and tested.
+// This is the canonical extracted data, built from what's
+// currently live on the site. Shared navigation and the generated document and
+// case landing pages read these arrays directly.
 //
-// HOW TO ADD/REMOVE A REQUIRED DOC OR CASE (once wired in):
+// HOW TO ADD/REMOVE A REQUIRED DOC OR CASE:
 // Edit ONE entry below. It will then automatically appear/disappear
 // in: every page's nav dropdown, the relevant unit's landing page
 // card grid, the landing page's "X required documents" count, and

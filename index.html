@@ -63,6 +63,7 @@
         <div class="nav-group-label">Unit 4</div>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit4.html">Overview</a>
+          <a class="nav-link" href="/APG/unit4-docs.html">Documents</a>
         </div>
       </div>
 
@@ -1335,6 +1336,9 @@
       tdihIndex = deterministicIndex(today.toISOString().slice(0,10), pool.length);
     }
     async function initUsPoliticsTdih(){
+      // The external year-round calendar engine supersedes this embedded
+      // fallback when it is available.
+      if (window.APGCalendar) return;
       let db = FALLBACK_US_POLITICS_EVENTS;
       try{
         const res = await fetch(EVENT_FILE, { cache:'no-store' });
@@ -1366,6 +1370,7 @@
     window.addEventListener('load', () => setTimeout(initUsPoliticsTdih, 250));
   })();
   </script>
+  <script src="calendar-engine.js"></script>
 
 </body>
 </html>
