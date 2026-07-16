@@ -59,6 +59,27 @@ function validateLocalReferences() {
   });
 }
 
+function validateSocialMetadata() {
+  const html = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const required = [
+    'name="description"',
+    'rel="canonical"',
+    'property="og:title"',
+    'property="og:description"',
+    'property="og:url"',
+    'property="og:image"',
+    'name="twitter:card"',
+    'name="twitter:image"'
+  ];
+  required.forEach(function (fragment) {
+    if (!html.includes(fragment)) errors.push('Missing social metadata: ' + fragment);
+  });
+  const socialImage = path.join(root, 'images', 'ap-government-social-card.png');
+  if (!fs.existsSync(socialImage) || fs.statSync(socialImage).size === 0) {
+    errors.push('Missing social-sharing image: images/ap-government-social-card.png');
+  }
+}
+
 function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -106,6 +127,7 @@ walk(root);
 validateJavaScript();
 validateJson();
 validateLocalReferences();
+validateSocialMetadata();
 validateCalendarData();
 
 if (errors.length) {
