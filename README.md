@@ -6,8 +6,9 @@
 ## THE SHORT VERSION
 
 **Daily updates** → type `dev` on the site → Admin Panel → Publish to GitHub
-**Adding SCOTUS cases / glossary terms** → edit `index.html` in VS Code
-**Everything else** → fully automatic
+**Required documents and cases** → edit `data-required.js`
+**Glossary and core case data** → edit `data-core.js`
+**Practice content** → edit the appropriate `data-content.js`, `data-extra.js`, or `data-skills.js` bank
 
 ---
 
@@ -42,7 +43,7 @@
 
 ### 🏠 Home
 - Hero banner — current unit and week
-- This Day in Politics — Wikipedia API, fully automatic
+- This Day in Politics — curated local events plus a year-round, source-linked Wikimedia feed; AP glossary fallback guarantees daily content
 - Vocab of the Day — rotates daily
 - Recent Materials, Upcoming, Quick Links
 - Exit Ticket — submits to Google Sheets
@@ -59,7 +60,7 @@
 - FRQ Practice Timer — correct countdown per type, scoring checklist
 
 ### 📖 Glossary
-- 392 terms, 5 units, 23 topic groups, AP standard tags
+- 461 glossary rows (446 unique terms), 5 units, 23 topic groups, AP standard tags
 - Browse mode — search by term/definition/group
 - Flashcard mode — Got It / Still Learning, persists in browser storage
 - Hover tooltips — any `data-term="term name"` element shows definition
@@ -68,7 +69,7 @@
 ### 📜 Living Documents *(new)*
 - All required foundational documents with interactive clause-by-clause annotations
 - Click any clause to expand — see plain English explanation, AP standard tags, linked SCOTUS cases, and AP exam connections
-- Documents included: Declaration of Independence, Federalist 10, Federalist 51, Brutus No. 1, Gettysburg Address, Emancipation Proclamation
+- Ten interactive document experiences, alongside 13 standalone required-document pages
 - Clicking a case tag opens the SCOTUS modal directly
 
 ### 🎯 Diagnostic Quiz *(new)*
@@ -94,10 +95,12 @@
 
 ---
 
-## LESS FREQUENT UPDATES — `index.html`
+## LESS FREQUENT CONTENT UPDATES
 
 ### Adding a SCOTUS Case
-Find `const SCOTUS_CASES = [` and add:
+Add the canonical standalone-page entry to `REQUIRED_CASES` in `data-required.js`. If the case should also appear in interactive review tools, add its learning content to `SCOTUS_CASES` in `data-core.js` and its metadata to `CASE_META` in `data-content.js`.
+
+The interactive case object uses this shape:
 ```javascript
 {
   name: "Dobbs v. Jackson",
@@ -115,22 +118,22 @@ Unit numbers: 1=Foundations · 2=Branches · 3=Civil Liberties · 4=Ideology · 
 The case appears in: Review tab (SCOTUS grid), SCOTUS Quiz, Stump the Class, and Glossary modal auto-links.
 
 ### Adding a Required Document
-Find `const REQ_DOCS = [` and add:
+Add its canonical navigation and page metadata to `REQUIRED_DOCS` in `data-required.js`. Add interactive review metadata to `REQ_DOCS` in `data-core.js` when needed.
 ```javascript
 { name: "Federalist No. 84", type: "Federalist Paper", year: "1788" },
 ```
 
 ### Adding a Living Document annotation
-Find `var LIVING_DOCS = [` and add a new document object following the existing pattern. Each document has `sections` containing `clauses` with `text`, `plain`, `standards`, `cases`, and `connections` fields.
+Find `var LIVING_DOCS = [` in `data-content.js` and add a new document object following the existing pattern. Each document has `sections` containing `clauses` with `text`, `plain`, `standards`, `cases`, and `connections` fields.
 
 ### Adding Glossary Terms
-Find the relevant unit in `const GLOSSARY_UNITS = [` and add to the correct group:
+Find the relevant unit in `const GLOSSARY_UNITS = [` in `data-core.js` and add to the correct group:
 ```javascript
 ['Your Term', 'The definition.', ['1.2']],
 ```
 
 ### Adding Diagnostic Questions
-Find `var DIAG_QUESTIONS = [` and add:
+Find `var DIAG_QUESTIONS = [` in `data-content.js` and add:
 ```javascript
 { q: 'Question text?', opts: ['Option A', 'Option B', 'Option C', 'Option D'], ans: 1, unit: 2, topic: 'Topic Name' },
 ```
@@ -152,10 +155,25 @@ Apps Script URL: `https://script.google.com/a/macros/ofarrellschool.org/s/AKfycb
 
 ```
 APG/
-├── index.html              ← full site
-├── content.json            ← weekly data (edit via Admin Panel)
-├── exit-ticket-script.gs   ← Google Apps Script backup
-└── README.md               ← this file
+├── index.html                 ← main tabbed application shell
+├── calendar-engine.js         ← year-round daily politics engine
+├── content.json               ← weekly data edited through the Admin Panel
+├── data-core.js               ← glossary, core cases, units, and app behavior
+├── data-content.js            ← Living Docs, diagnostics, FRQs, and cartoons
+├── data-extra.js              ← amendments, FRQ archive, and Madison activities
+├── data-required.js           ← canonical required-document and case metadata
+├── data-skills.js             ← Foundations learning content
+├── index-app.js               ← glossary, admin, FRQ, and review interactions
+├── app-skills.js              ← Foundations learning engine and score submission
+├── nav-render.js              ← shared standalone-page navigation
+├── card-render.js             ← generated document and case landing cards
+├── unit1.html … unit5.html    ← unit overview pages
+├── docs/                      ← 13 annotated foundational-document pages
+├── cases/                     ← 14 annotated Supreme Court case pages
+├── images/                    ← political-cartoon activity assets
+├── us-politics-events.json    ← teacher-curated daily-event layer
+├── exit-ticket-script.gs      ← Google Apps Script collector and archiver
+└── styles-*.css               ← shared, page, and Foundations styles
 ```
 
 ---
@@ -171,6 +189,7 @@ APG/
 ---
 
 ## TIPS
+- **Validate before publishing** — run `node scripts/validate-site.js` to check JavaScript, JSON, local links, and calendar data
 - **Daily exit ticket** — Admin Panel → Weekly → change question → Publish (30 seconds)
 - **Add students in September** — Admin Panel → Roster → add names → Publish
 - **Stump the Class** — open on the projector, hit Start Round, read the issue aloud

@@ -32,7 +32,29 @@
       --radius: 10px;
       --radius-sm: 6px;
       --radius-lg: 14px;
-    }
+}
+
+/* Source and AP-course context for the year-round politics calendar. */
+.tdih-meta,
+.tdih-source {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.tdih-meta {
+  color: var(--gray-600);
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.tdih-source {
+  width: fit-content;
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -2689,4 +2711,3 @@
       .madison-sides { grid-template-columns: 1fr; }
       .madison-hero { flex-direction: column; text-align: center; }
     }
-

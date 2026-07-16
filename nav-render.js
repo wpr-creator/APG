@@ -1,10 +1,9 @@
 // ═══════════════════════════════════════════════════════════════════
 // NAV RENDERER — builds the top nav from data instead of copy-paste
 // ═══════════════════════════════════════════════════════════════════
-// STATUS: Step 2. Depends on data-required.js being loaded first
-// (needs REQUIRED_DOCS and REQUIRED_CASES). Not wired into any page
-// yet — this is still just the renderer, ready to be dropped into one
-// test page next.
+// Depends on data-required.js being loaded first (needs REQUIRED_DOCS and
+// REQUIRED_CASES). This renderer is used by the standalone unit, document,
+// and case pages.
 //
 // STANDARD CHOSEN: "Simple" nav — each unit dropdown shows only
 // Overview / Documents / Cases (whichever exist for that unit), never
@@ -55,9 +54,8 @@ const NAV_STATIC_TABS = [
 ];
 
 // Which units get an Overview link and what unit numbers exist.
-// Unit 4 has no required docs/cases (confirmed by REQUIRED_DOCS /
-// REQUIRED_CASES having zero unit:4 entries) but still gets an
-// Overview page, so it's listed explicitly here rather than derived.
+// Every unit has an overview page. Documents and cases are derived from the
+// canonical required-content arrays, including The Wealth of Nations in Unit 4.
 const NAV_UNIT_NUMBERS = [1, 2, 3, 4, 5];
 
 function _navUnitHasDocs(unitNum) {
