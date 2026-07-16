@@ -63,6 +63,18 @@ function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
   const validKey = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
+  const expectedKeys = [];
+  const cursor = new Date(2024, 0, 1);
+  while (cursor.getFullYear() === 2024) {
+    expectedKeys.push(String(cursor.getMonth() + 1).padStart(2, '0') + '-' + String(cursor.getDate()).padStart(2, '0'));
+    cursor.setDate(cursor.getDate() + 1);
+  }
+  expectedKeys.forEach(function (key) {
+    if (!Object.prototype.hasOwnProperty.call(database, key)) errors.push('Missing calendar date: ' + key);
+  });
+  if (Object.keys(database).length !== 366) {
+    errors.push('Calendar must contain exactly 366 date keys; found ' + Object.keys(database).length);
+  }
   Object.entries(database).forEach(function ([key, events]) {
     if (!validKey.test(key)) errors.push('Invalid calendar key: ' + key);
     const parts = key.split('-').map(Number);
@@ -74,13 +86,20 @@ function validateCalendarData() {
       errors.push('Calendar date has no events: ' + key);
       return;
     }
+    if (!events.some(function (event) { return event.kind !== 'civic-focus'; })) {
+      errors.push('Calendar date has no historical event: ' + key);
+    }
     events.forEach(function (event, index) {
-      if (!event.year || !event.text || !event.ap_connection) {
+      if ((event.kind !== 'civic-focus' && !event.year) || !event.text || !event.ap_connection ||
+          !event.unit || !event.category || !event.source_label || !event.source_url) {
         errors.push('Incomplete calendar event: ' + key + '[' + index + ']');
       }
+      if (![1, 2, 3, 4, 5].includes(event.unit)) errors.push('Invalid AP unit: ' + key + '[' + index + ']');
+      if (!['event', 'birth', 'death', 'civic-focus'].includes(event.kind)) errors.push('Invalid event kind: ' + key + '[' + index + ']');
     });
   });
-  console.log('Curated calendar dates:', Object.keys(database).length, '(remaining dates use the filtered live feed or glossary fallback)');
+  const entries = Object.values(database).flat();
+  console.log('Local politics calendar:', Object.keys(database).length + ' dates,', entries.length + ' entries');
 }
 
 walk(root);
