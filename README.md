@@ -43,7 +43,7 @@
 
 ### 🏠 Home
 - Hero banner — current unit and week
-- This Day in Politics — curated local events plus a year-round, source-linked Wikimedia feed; AP glossary fallback guarantees daily content
+- This Day in Politics — a fully local 366-day database with 958 source-linked U.S. government and politics entries
 - Vocab of the Day — rotates daily
 - Recent Materials, Upcoming, Quick Links
 - Exit Ticket — submits to Google Sheets
@@ -156,7 +156,7 @@ Apps Script URL: `https://script.google.com/a/macros/ofarrellschool.org/s/AKfycb
 ```
 APG/
 ├── index.html                 ← main tabbed application shell
-├── calendar-engine.js         ← year-round daily politics engine
+├── calendar-engine.js         ← local year-round daily politics renderer
 ├── content.json               ← weekly data edited through the Admin Panel
 ├── data-core.js               ← glossary, core cases, units, and app behavior
 ├── data-content.js            ← Living Docs, diagnostics, FRQs, and cartoons
@@ -171,7 +171,8 @@ APG/
 ├── docs/                      ← 13 annotated foundational-document pages
 ├── cases/                     ← 14 annotated Supreme Court case pages
 ├── images/                    ← political-cartoon activity assets
-├── us-politics-events.json    ← teacher-curated daily-event layer
+├── us-politics-events.json    ← complete 366-day U.S. politics database
+├── scripts/                    ← calendar builder and site validator
 ├── exit-ticket-script.gs      ← Google Apps Script collector and archiver
 └── styles-*.css               ← shared, page, and Foundations styles
 ```
@@ -190,6 +191,7 @@ APG/
 
 ## TIPS
 - **Validate before publishing** — run `node scripts/validate-site.js` to check JavaScript, JSON, local links, and calendar data
+- **Rebuild the politics database** — run `node scripts/build-politics-calendar.js`; external feeds are used only during this maintenance step, never by the live site
 - **Daily exit ticket** — Admin Panel → Weekly → change question → Publish (30 seconds)
 - **Add students in September** — Admin Panel → Roster → add names → Publish
 - **Stump the Class** — open on the projector, hit Start Round, read the issue aloud
