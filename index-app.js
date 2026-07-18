@@ -551,20 +551,38 @@
   var frqRunning = false;
   var frqSelectedType = null;
 
+  var adminReturnFocus = null;
+
   function openAdmin() {
     if (!contentData) { adminToast('Content not loaded yet — wait a moment and try again.'); return; }
+    adminReturnFocus = document.activeElement;
     adminLoadData();
-    document.getElementById('admin-overlay').classList.add('open');
+    var overlay = document.getElementById('admin-overlay');
+    overlay.classList.add('open');
+    overlay.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
+    setTimeout(function() {
+      var closeButton = document.querySelector('.admin-close-btn');
+      if (closeButton) closeButton.focus();
+    }, 0);
   }
 
   function closeAdmin() {
-    document.getElementById('admin-overlay').classList.remove('open');
+    var overlay = document.getElementById('admin-overlay');
+    overlay.classList.remove('open');
+    overlay.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+    if (adminReturnFocus && typeof adminReturnFocus.focus === 'function') adminReturnFocus.focus();
   }
 
   document.getElementById('admin-overlay').addEventListener('click', function(e) {
     if (e.target === this) closeAdmin();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && document.getElementById('admin-overlay').classList.contains('open')) {
+      closeAdmin();
+    }
   });
 
   function adminTab(name, el) {
@@ -1624,4 +1642,3 @@
       }
     }
   })();
-
