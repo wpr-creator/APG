@@ -6,6 +6,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const { isDirectlyPolitical } = require('./calendar-relevance');
 
 const root = path.resolve(__dirname, '..');
 const outputFile = path.join(root, 'us-politics-events.json');
@@ -191,7 +192,7 @@ async function buildDay(key) {
     });
   }
   addCandidates(['events']);
-  const local = (existing[key] || []).map(normalizeExisting);
+  const local = (existing[key] || []).map(normalizeExisting).filter(isDirectlyPolitical);
   if (!candidates.length && !local.length) {
     const people = await Promise.all([
       fetchCategory(key, 'births'),
@@ -202,7 +203,8 @@ async function buildDay(key) {
     addCandidates(['births', 'deaths']);
   }
   candidates.sort(function (a, b) { return b.relevance - a.relevance || (b.item.year || 0) - (a.item.year || 0); });
-  const remote = candidates.map(function (candidate) { return normalizeRemote(candidate.item, candidate.kind); });
+  const remote = candidates.map(function (candidate) { return normalizeRemote(candidate.item, candidate.kind); })
+    .filter(isDirectlyPolitical);
 
   local.forEach(function (event) {
     const match = remote.find(function (candidate) { return similar(event, candidate); });

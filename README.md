@@ -43,7 +43,7 @@
 
 ### 🏠 Home
 - Hero banner — current unit and week
-- This Day in Politics — a fully local 366-day database with 958 source-linked U.S. government and politics entries
+- This Day in Politics — a fully local 366-day database with 382 curated historical entries plus 124 AP Government civic-focus dates
 - Vocab of the Day — rotates daily
 - Recent Materials, Upcoming, Quick Links
 - Exit Ticket — submits to Google Sheets
@@ -192,6 +192,7 @@ APG/
 ## TIPS
 - **Validate before publishing** — run `node scripts/validate-site.js` to check JavaScript, JSON, local links, and calendar data
 - **Rebuild the politics database** — run `node scripts/build-politics-calendar.js`; external feeds are used only during this maintenance step, never by the live site
+- **Refine calendar relevance** — run `node scripts/refine-politics-calendar.js` after importing or editing calendar entries; weak military/history entries are removed and empty dates receive an AP Government civic focus
 - **Daily exit ticket** — Admin Panel → Weekly → change question → Publish (30 seconds)
 - **Add students in September** — Admin Panel → Roster → add names → Publish
 - **Stump the Class** — open on the projector, hit Start Round, read the issue aloud

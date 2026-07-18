@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+const { isDirectlyPolitical } = require('./calendar-relevance');
 
 const root = path.resolve(__dirname, '..');
 const files = [];
@@ -107,9 +108,6 @@ function validateCalendarData() {
       errors.push('Calendar date has no events: ' + key);
       return;
     }
-    if (!events.some(function (event) { return event.kind !== 'civic-focus'; })) {
-      errors.push('Calendar date has no historical event: ' + key);
-    }
     events.forEach(function (event, index) {
       if ((event.kind !== 'civic-focus' && !event.year) || !event.text || !event.ap_connection ||
           !event.unit || !event.category || !event.source_label || !event.source_url) {
@@ -117,6 +115,7 @@ function validateCalendarData() {
       }
       if (![1, 2, 3, 4, 5].includes(event.unit)) errors.push('Invalid AP unit: ' + key + '[' + index + ']');
       if (!['event', 'birth', 'death', 'civic-focus'].includes(event.kind)) errors.push('Invalid event kind: ' + key + '[' + index + ']');
+      if (!isDirectlyPolitical(event)) errors.push('Weak calendar relevance: ' + key + '[' + index + ']');
     });
   });
   const entries = Object.values(database).flat();
