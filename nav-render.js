@@ -68,14 +68,15 @@ function _navUnitHasCases(unitNum) {
 function _navLink(href, label, currentFile, basePath) {
   const fullHref = basePath + href;
   const isActive = currentFile && href.replace(/^\//, "") === currentFile.replace(/^\//, "");
-  return `<a class="nav-link${isActive ? " active" : ""}" href="${fullHref}">${label}</a>`;
+  return `<a class="nav-link${isActive ? " active" : ""}" href="${fullHref}"${isActive ? ' aria-current="page"' : ""}>${label}</a>`;
 }
 
 function buildNavHTML(opts) {
   const currentFile = (opts && opts.currentFile) || "";
   const basePath = (opts && opts.basePath) || "/APG/";
 
-  let html = `<a class="nav-link${currentFile === "index.html" || currentFile === "" ? " active" : ""}" href="${basePath}">Home</a>\n`;
+  const homeActive = currentFile === "index.html" || currentFile === "";
+  let html = `<a class="nav-link${homeActive ? " active" : ""}" href="${basePath}"${homeActive ? ' aria-current="page"' : ""}>Home</a>\n`;
 
   NAV_UNIT_NUMBERS.forEach(unitNum => {
     const overviewFile = `unit${unitNum}.html`;
@@ -99,7 +100,7 @@ function buildNavHTML(opts) {
     if (hasCases) links += "\n          " + _navLink(casesFile, "Cases", currentFile, basePath);
 
     html += `      <div class="nav-group${belongsToThisUnit ? " has-active" : ""}">
-        <div class="nav-group-label">Unit ${unitNum}</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit ${unitNum}</button>
         <div class="nav-dropdown">
           ${links}
         </div>
@@ -111,7 +112,7 @@ function buildNavHTML(opts) {
       .map(item => `        <a class="nav-link" href="${basePath}${item.href}">${item.label}</a>`)
       .join("\n");
     html += `      <div class="nav-group">
-        <div class="nav-group-label">${tab.label}</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">${tab.label}</button>
         <div class="nav-dropdown">
 ${items}
         </div>
@@ -131,8 +132,94 @@ function renderNav(opts) {
     console.error(`renderNav: no element with id="${mountId}" found`);
     return;
   }
+  const nav = el.closest('nav');
+  if (nav) nav.setAttribute('aria-label', 'Course navigation');
+
   el.className = "nav-inner";
+  el.id = el.id || 'course-nav-items';
   el.innerHTML = buildNavHTML(opts);
+
+  if (nav && !nav.querySelector('.nav-menu-toggle')) {
+    const toggle = document.createElement('button');
+    toggle.className = 'nav-menu-toggle';
+    toggle.type = 'button';
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.setAttribute('aria-controls', el.id);
+    toggle.innerHTML = '<i class="ti ti-menu-2" aria-hidden="true"></i><span>Menu</span>';
+    nav.insertBefore(toggle, el);
+  }
+
+  addStandaloneSkipLink();
+  wireStandaloneNavigation(nav, el);
+}
+
+function addStandaloneSkipLink() {
+  if (document.querySelector('.skip-link')) return;
+  const target = document.querySelector('main, .unit-hero, .doc-page, .case-page, .page-main, .docs-bento, .unit-main, #hero');
+  if (!target) {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', addStandaloneSkipLink, { once: true });
+    }
+    return;
+  }
+  target.id = target.id || 'main-content';
+  target.setAttribute('tabindex', '-1');
+  const skip = document.createElement('a');
+  skip.className = 'skip-link';
+  skip.href = '#' + target.id;
+  skip.textContent = 'Skip to main content';
+  document.body.insertBefore(skip, document.body.firstChild);
+}
+
+function wireStandaloneNavigation(nav, items) {
+  if (!nav || nav.dataset.navigationReady === 'true') return;
+  nav.dataset.navigationReady = 'true';
+  const toggle = nav.querySelector('.nav-menu-toggle');
+
+  function closeGroups(except) {
+    items.querySelectorAll('.nav-group').forEach(function (group) {
+      if (group === except) return;
+      group.classList.remove('open');
+      const label = group.querySelector('.nav-group-label');
+      if (label) label.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  function closeMenu() {
+    nav.classList.remove('menu-open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    closeGroups();
+  }
+
+  if (toggle) {
+    toggle.addEventListener('click', function () {
+      const willOpen = !nav.classList.contains('menu-open');
+      closeMenu();
+      nav.classList.toggle('menu-open', willOpen);
+      toggle.setAttribute('aria-expanded', String(willOpen));
+    });
+  }
+
+  items.querySelectorAll('.nav-group-label').forEach(function (label) {
+    label.addEventListener('click', function () {
+      const group = label.closest('.nav-group');
+      const willOpen = !group.classList.contains('open');
+      closeGroups(group);
+      group.classList.toggle('open', willOpen);
+      label.setAttribute('aria-expanded', String(willOpen));
+    });
+  });
+
+  items.querySelectorAll('.nav-link').forEach(function (link) {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (!nav.contains(event.target)) closeGroups();
+  });
+  document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') closeMenu();
+  });
 }
 
 // Console self-check: confirms which units will show a Documents
