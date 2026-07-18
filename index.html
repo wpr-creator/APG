@@ -29,6 +29,8 @@
 </head>
 <body>
 
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
   <div class="stars-stripe"></div>
 
   <header>
@@ -46,13 +48,17 @@
     </div>
   </header>
 
-  <nav>
-    <div class="nav-inner">
+  <nav aria-label="Course navigation">
+    <button class="nav-menu-toggle" type="button" aria-expanded="false" aria-controls="course-nav-items">
+      <i class="ti ti-menu-2" aria-hidden="true"></i>
+      <span>Menu</span>
+    </button>
+    <div class="nav-inner" id="course-nav-items">
 
-      <div class="nav-tab active" data-tab="home">Home</div>
+      <button class="nav-tab active" type="button" data-tab="home">Home</button>
 
       <div class="nav-group">
-        <div class="nav-group-label">Unit 1</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit 1</button>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit1.html">Overview</a>
           <a class="nav-link" href="/APG/unit1-docs.html">Documents</a>
@@ -60,7 +66,7 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Unit 2</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit 2</button>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit2.html">Overview</a>
           <a class="nav-link" href="/APG/unit2-docs.html">Documents</a>
@@ -69,7 +75,7 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Unit 3</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit 3</button>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit3.html">Overview</a>
           <a class="nav-link" href="/APG/unit3-docs.html">Documents</a>
@@ -78,7 +84,7 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Unit 4</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit 4</button>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit4.html">Overview</a>
           <a class="nav-link" href="/APG/unit4-docs.html">Documents</a>
@@ -86,7 +92,7 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Unit 5</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit 5</button>
         <div class="nav-dropdown">
           <a class="nav-link" href="/APG/unit5.html">Overview</a>
           <a class="nav-link" href="/APG/unit5-cases.html">Cases</a>
@@ -94,34 +100,34 @@
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Review</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Review</button>
         <div class="nav-dropdown">
-          <div class="nav-tab" data-tab="review">FRQ Guide &amp; Cases</div>
-          <div class="nav-tab" data-tab="archive">FRQ Archive</div>
-          <div class="nav-tab" data-tab="glossary">Glossary</div>
-          <div class="nav-tab" data-tab="amendments">Amendment Tracker</div>
+          <button class="nav-tab" type="button" data-tab="review">FRQ Guide &amp; Cases</button>
+          <button class="nav-tab" type="button" data-tab="archive">FRQ Archive</button>
+          <button class="nav-tab" type="button" data-tab="glossary">Glossary</button>
+          <button class="nav-tab" type="button" data-tab="amendments">Amendment Tracker</button>
         </div>
       </div>
 
       <div class="nav-group">
-        <div class="nav-group-label">Practice</div>
+        <button class="nav-group-label" type="button" aria-expanded="false">Practice</button>
         <div class="nav-dropdown">
-          <div class="nav-tab" data-tab="frqpractice">FRQ Practice</div>
-          <div class="nav-tab" data-tab="diagnostic">Diagnostic Quiz</div>
-          <div class="nav-tab" data-tab="cartoons">Cartoon Analyzer</div>
-          <div class="nav-tab" data-tab="stump">Stump the Class</div>
-          <div class="nav-tab" data-tab="madison">What Would Madison Say?</div>
+          <button class="nav-tab" type="button" data-tab="frqpractice">FRQ Practice</button>
+          <button class="nav-tab" type="button" data-tab="diagnostic">Diagnostic Quiz</button>
+          <button class="nav-tab" type="button" data-tab="cartoons">Cartoon Analyzer</button>
+          <button class="nav-tab" type="button" data-tab="stump">Stump the Class</button>
+          <button class="nav-tab" type="button" data-tab="madison">What Would Madison Say?</button>
         </div>
       </div>
 
-      <div class="nav-tab" data-tab="exit">Exit Ticket</div>
+      <button class="nav-tab" type="button" data-tab="exit">Exit Ticket</button>
 
-      <div class="nav-tab nav-tab-skills" data-tab="skills">Foundations</div>
+      <button class="nav-tab nav-tab-skills" type="button" data-tab="skills">Foundations</button>
 
     </div>
   </nav>
 
-  <main>
+  <main id="main-content" tabindex="-1">
 
     <!-- ═══════════════════ HOME TAB ═══════════════════ -->
     <div id="tab-home">
@@ -520,29 +526,30 @@
         <div class="diag-start-card" id="diag-start">
           <div class="diag-start-icon">🎯</div>
           <div class="diag-start-title">AP Gov Diagnostic Quiz</div>
-          <div class="diag-start-sub">20 questions across all 5 units. See exactly which standards you know and where to focus your studying.</div>
-          <div class="diag-unit-pills" id="diag-unit-pills">
-            <div class="diag-unit-pill selected" data-unit="all" onclick="diagToggleUnit(this)">All Units</div>
-            <div class="diag-unit-pill" data-unit="1" onclick="diagToggleUnit(this)">Unit 1</div>
-            <div class="diag-unit-pill" data-unit="2" onclick="diagToggleUnit(this)">Unit 2</div>
-            <div class="diag-unit-pill" data-unit="3" onclick="diagToggleUnit(this)">Unit 3</div>
-            <div class="diag-unit-pill" data-unit="4" onclick="diagToggleUnit(this)">Unit 4</div>
-            <div class="diag-unit-pill" data-unit="5" onclick="diagToggleUnit(this)">Unit 5</div>
+          <div class="diag-start-sub">Choose one or more units. You’ll get every available question from those units, up to 20 total, followed by specific study recommendations.</div>
+          <div class="diag-unit-pills" id="diag-unit-pills" aria-label="Choose diagnostic units">
+            <button class="diag-unit-pill selected" type="button" data-unit="all" aria-pressed="true" onclick="diagToggleUnit(this)">All Units</button>
+            <button class="diag-unit-pill" type="button" data-unit="1" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 1</button>
+            <button class="diag-unit-pill" type="button" data-unit="2" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 2</button>
+            <button class="diag-unit-pill" type="button" data-unit="3" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 3</button>
+            <button class="diag-unit-pill" type="button" data-unit="4" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 4</button>
+            <button class="diag-unit-pill" type="button" data-unit="5" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 5</button>
           </div>
+          <div class="diag-selection-summary" id="diag-selection-summary" aria-live="polite">20 questions · all 5 units</div>
           <button class="diag-start-btn" onclick="startDiagnostic()">Start Diagnostic →</button>
         </div>
         <div class="diag-q-card" id="diag-q-card">
-          <div class="diag-progress-bar"><div class="diag-progress-fill" id="diag-progress-fill"></div></div>
+          <div class="diag-progress-bar" id="diag-progress-bar" role="progressbar" aria-label="Diagnostic progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div class="diag-progress-fill" id="diag-progress-fill"></div></div>
           <div class="diag-q-header">
             <div class="diag-q-meta" id="diag-q-meta">Question 1 of 20</div>
             <div class="diag-q-unit-tag" id="diag-q-unit-tag">Unit 1</div>
           </div>
-          <div class="diag-question" id="diag-question"></div>
+          <div class="diag-question" id="diag-question" tabindex="-1"></div>
           <div class="diag-options" id="diag-options"></div>
-          <div class="diag-feedback" id="diag-feedback"></div>
+          <div class="diag-feedback" id="diag-feedback" role="status" aria-live="polite"></div>
           <button class="diag-next-btn" id="diag-next-btn" onclick="diagNext()">Next Question →</button>
         </div>
-        <div class="diag-results" id="diag-results">
+        <div class="diag-results" id="diag-results" tabindex="-1" aria-live="polite">
           <div class="diag-results-hero">
             <div class="diag-score-big" id="diag-score-big">16/20</div>
             <div class="diag-score-label">questions correct</div>
@@ -1100,7 +1107,7 @@
   </footer>
 
   <!-- ═══════════════ CASE DETAIL MODAL ═══════════════ -->
-  <div class="case-modal" id="case-modal" role="dialog" aria-modal="true" aria-label="Case details">
+  <div class="case-modal" id="case-modal" role="dialog" aria-modal="true" aria-label="Case details" hidden>
     <div class="case-modal-inner">
       <div class="case-modal-header">
         <div>
@@ -1169,17 +1176,17 @@
   <!-- ═══════════════════════════════════════════════════════
        ADMIN PANEL — type "dev" anywhere on page to open
   ═══════════════════════════════════════════════════════ -->
-  <div id="admin-overlay">
-    <div id="admin-panel">
+  <div id="admin-overlay" aria-hidden="true">
+    <div id="admin-panel" role="dialog" aria-modal="true" aria-labelledby="admin-panel-title">
       <div class="admin-header">
         <div class="admin-header-left">
           <div class="admin-logo"><i class="ti ti-settings"></i></div>
           <div>
-            <div class="admin-title">Site Admin Panel</div>
+            <div class="admin-title" id="admin-panel-title">Site Admin Panel</div>
             <div class="admin-subtitle">Mr. Rogers · AP Gov · Type "dev" to open/close</div>
           </div>
         </div>
-        <button class="admin-close-btn" onclick="closeAdmin()">✕</button>
+        <button class="admin-close-btn" type="button" aria-label="Close admin panel" onclick="closeAdmin()">✕</button>
       </div>
 
       <div class="admin-tabs">
@@ -1285,7 +1292,7 @@
     </div>
   </div>
 
-  <div class="admin-toast" id="admin-toast"></div>
+  <div class="admin-toast" id="admin-toast" role="status" aria-live="polite"></div>
 
 
   <script src="data-core.js"></script>

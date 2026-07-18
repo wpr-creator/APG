@@ -579,8 +579,8 @@ async function loadContent() {
       <span class="upcoming-title">${u.title}</span>
       <span class="upcoming-row-right">
         <span class="upcoming-date">${u.date}</span>
-        <a class="upcoming-cal-btn" href="${calUrl}" target="_blank" rel="noopener" title="Add to Google Calendar" onclick="event.stopPropagation()">
-          <i class="ti ti-calendar-plus"></i>
+        <a class="upcoming-cal-btn" href="${calUrl}" target="_blank" rel="noopener" title="Add to Google Calendar" aria-label="Add ${u.title} to Google Calendar" onclick="event.stopPropagation()">
+          <i class="ti ti-calendar-plus" aria-hidden="true"></i>
         </a>
       </span>
     </div>`;
@@ -871,9 +871,12 @@ function buildCasesGrid(filter) {
   });
 }
 
+var caseModalReturnFocus = null;
+
 function openCaseModal(name) {
   const c = SCOTUS_CASES.find(x => x.name === name);
   if (!c) return;
+  caseModalReturnFocus = document.activeElement;
   document.getElementById('modal-case-name').textContent = c.name + ' (' + c.year + ')';
   document.getElementById('modal-unit-tag').textContent = 'Unit ' + c.unit;
   document.getElementById('modal-year').textContent = c.year;
@@ -881,8 +884,11 @@ function openCaseModal(name) {
   document.getElementById('modal-ruling').innerHTML = '<strong>' + c.ruling + '</strong>';
   document.getElementById('modal-sig').textContent = c.sig;
   document.getElementById('modal-tip').textContent = '★ ' + c.tip;
-  document.getElementById('case-modal').classList.add('open');
+  var modal = document.getElementById('case-modal');
+  modal.hidden = false;
+  modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  document.getElementById('modal-close').focus();
 }
 
 document.getElementById('modal-close').addEventListener('click', closeCaseModal);
@@ -892,8 +898,12 @@ document.getElementById('case-modal').addEventListener('click', e => {
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCaseModal(); });
 
 function closeCaseModal() {
-  document.getElementById('case-modal').classList.remove('open');
+  var modal = document.getElementById('case-modal');
+  if (!modal.classList.contains('open')) return;
+  modal.classList.remove('open');
+  modal.hidden = true;
   document.body.style.overflow = '';
+  if (caseModalReturnFocus && typeof caseModalReturnFocus.focus === 'function') caseModalReturnFocus.focus();
 }
 
 // ══════════════════════════════════════════════════════════
@@ -923,7 +933,10 @@ function switchToTab(target, unitNum) {
   }
 
   // Remove active from all nav tabs
-  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(function(t) {
+    t.classList.remove('active');
+    t.removeAttribute('aria-current');
+  });
   document.querySelectorAll('.nav-group').forEach(g => g.classList.remove('has-active'));
 
   // Find and activate the right tab element
@@ -937,6 +950,7 @@ function switchToTab(target, unitNum) {
   }
   if (activeTab) {
     activeTab.classList.add('active');
+    activeTab.setAttribute('aria-current', 'page');
     var group = activeTab.closest('.nav-group');
     if (group) group.classList.add('has-active');
   }
@@ -949,6 +963,8 @@ function switchToTab(target, unitNum) {
       el.classList.toggle('active', id === target);
     }
   });
+
+  closeCourseNavigation();
 
   // If switching to units tab with a specific unit, scroll to that unit
   if (target === 'units' && unitNum) {
@@ -966,6 +982,59 @@ function switchToTab(target, unitNum) {
     }, 50);
   }
 }
+
+function closeCourseNavigation() {
+  var nav = document.querySelector('nav[aria-label="Course navigation"]');
+  var menuToggle = document.querySelector('.nav-menu-toggle');
+  if (nav) nav.classList.remove('menu-open');
+  if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+  document.querySelectorAll('.nav-group').forEach(function(group) {
+    group.classList.remove('open');
+    var label = group.querySelector('.nav-group-label');
+    if (label) label.setAttribute('aria-expanded', 'false');
+  });
+}
+
+var courseNav = document.querySelector('nav[aria-label="Course navigation"]');
+var courseMenuToggle = document.querySelector('.nav-menu-toggle');
+if (courseNav && courseMenuToggle) {
+  courseMenuToggle.addEventListener('click', function() {
+    var willOpen = !courseNav.classList.contains('menu-open');
+    closeCourseNavigation();
+    courseNav.classList.toggle('menu-open', willOpen);
+    courseMenuToggle.setAttribute('aria-expanded', String(willOpen));
+  });
+}
+
+document.querySelectorAll('.nav-group-label').forEach(function(label) {
+  label.addEventListener('click', function() {
+    var group = label.closest('.nav-group');
+    var willOpen = !group.classList.contains('open');
+    document.querySelectorAll('.nav-group').forEach(function(other) {
+      if (other !== group) {
+        other.classList.remove('open');
+        var otherLabel = other.querySelector('.nav-group-label');
+        if (otherLabel) otherLabel.setAttribute('aria-expanded', 'false');
+      }
+    });
+    group.classList.toggle('open', willOpen);
+    label.setAttribute('aria-expanded', String(willOpen));
+  });
+});
+
+document.addEventListener('click', function(event) {
+  if (courseNav && !courseNav.contains(event.target)) {
+    document.querySelectorAll('.nav-group.open').forEach(function(group) {
+      group.classList.remove('open');
+      var label = group.querySelector('.nav-group-label');
+      if (label) label.setAttribute('aria-expanded', 'false');
+    });
+  }
+});
+
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') closeCourseNavigation();
+});
 
 document.querySelectorAll('.nav-tab').forEach(tab => {
   tab.addEventListener('click', () => {
@@ -986,6 +1055,9 @@ document.querySelectorAll('.nav-tab').forEach(tab => {
   });
   if (validTab !== 'home') {
     switchToTab(validTab);
+  } else {
+    var homeTab = document.querySelector('.nav-tab[data-tab="home"]');
+    if (homeTab) homeTab.setAttribute('aria-current', 'page');
   }
 })();
 
@@ -1695,5 +1767,3 @@ var frqTimerBuilt = false;
     if (keyBuffer === SECRET) { openAdmin(); keyBuffer = ''; }
   });
 })();
-
-
