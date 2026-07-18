@@ -526,29 +526,30 @@
         <div class="diag-start-card" id="diag-start">
           <div class="diag-start-icon">🎯</div>
           <div class="diag-start-title">AP Gov Diagnostic Quiz</div>
-          <div class="diag-start-sub">20 questions across all 5 units. See exactly which standards you know and where to focus your studying.</div>
-          <div class="diag-unit-pills" id="diag-unit-pills">
-            <div class="diag-unit-pill selected" data-unit="all" onclick="diagToggleUnit(this)">All Units</div>
-            <div class="diag-unit-pill" data-unit="1" onclick="diagToggleUnit(this)">Unit 1</div>
-            <div class="diag-unit-pill" data-unit="2" onclick="diagToggleUnit(this)">Unit 2</div>
-            <div class="diag-unit-pill" data-unit="3" onclick="diagToggleUnit(this)">Unit 3</div>
-            <div class="diag-unit-pill" data-unit="4" onclick="diagToggleUnit(this)">Unit 4</div>
-            <div class="diag-unit-pill" data-unit="5" onclick="diagToggleUnit(this)">Unit 5</div>
+          <div class="diag-start-sub">Choose one or more units. You’ll get every available question from those units, up to 20 total, followed by specific study recommendations.</div>
+          <div class="diag-unit-pills" id="diag-unit-pills" aria-label="Choose diagnostic units">
+            <button class="diag-unit-pill selected" type="button" data-unit="all" aria-pressed="true" onclick="diagToggleUnit(this)">All Units</button>
+            <button class="diag-unit-pill" type="button" data-unit="1" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 1</button>
+            <button class="diag-unit-pill" type="button" data-unit="2" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 2</button>
+            <button class="diag-unit-pill" type="button" data-unit="3" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 3</button>
+            <button class="diag-unit-pill" type="button" data-unit="4" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 4</button>
+            <button class="diag-unit-pill" type="button" data-unit="5" aria-pressed="false" onclick="diagToggleUnit(this)">Unit 5</button>
           </div>
+          <div class="diag-selection-summary" id="diag-selection-summary" aria-live="polite">20 questions · all 5 units</div>
           <button class="diag-start-btn" onclick="startDiagnostic()">Start Diagnostic →</button>
         </div>
         <div class="diag-q-card" id="diag-q-card">
-          <div class="diag-progress-bar"><div class="diag-progress-fill" id="diag-progress-fill"></div></div>
+          <div class="diag-progress-bar" id="diag-progress-bar" role="progressbar" aria-label="Diagnostic progress" aria-valuemin="0" aria-valuemax="20" aria-valuenow="0"><div class="diag-progress-fill" id="diag-progress-fill"></div></div>
           <div class="diag-q-header">
             <div class="diag-q-meta" id="diag-q-meta">Question 1 of 20</div>
             <div class="diag-q-unit-tag" id="diag-q-unit-tag">Unit 1</div>
           </div>
-          <div class="diag-question" id="diag-question"></div>
+          <div class="diag-question" id="diag-question" tabindex="-1"></div>
           <div class="diag-options" id="diag-options"></div>
-          <div class="diag-feedback" id="diag-feedback"></div>
+          <div class="diag-feedback" id="diag-feedback" role="status" aria-live="polite"></div>
           <button class="diag-next-btn" id="diag-next-btn" onclick="diagNext()">Next Question →</button>
         </div>
-        <div class="diag-results" id="diag-results">
+        <div class="diag-results" id="diag-results" tabindex="-1" aria-live="polite">
           <div class="diag-results-hero">
             <div class="diag-score-big" id="diag-score-big">16/20</div>
             <div class="diag-score-label">questions correct</div>

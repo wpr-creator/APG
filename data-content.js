@@ -353,7 +353,27 @@ var DIAG_QUESTIONS = [
   { q: 'Brutus No. 1 opposed ratification of the Constitution primarily because:', opts: ['It created a weak national government', 'The national government would become too powerful and consume the states', 'The Bill of Rights was not strong enough', 'Congress had too little power over the President'], ans: 1, unit: 1, topic: 'Anti-Federalist Arguments' }
 ];
 
-var diagState = { questions: [], index: 0, score: 0, unitScores: {}, answered: false, selectedUnits: ['all'] };
+var diagState = { questions: [], index: 0, score: 0, unitScores: {}, missedTopics: {}, answered: false, selectedUnits: ['all'] };
+
+function diagSelectedPool() {
+  return diagState.selectedUnits.includes('all')
+    ? DIAG_QUESTIONS
+    : DIAG_QUESTIONS.filter(function(q) { return diagState.selectedUnits.includes(String(q.unit)); });
+}
+
+function diagUpdateSelectionSummary() {
+  document.querySelectorAll('.diag-unit-pill').forEach(function(pill) {
+    pill.setAttribute('aria-pressed', String(pill.classList.contains('selected')));
+  });
+  var pool = diagSelectedPool();
+  var summary = document.getElementById('diag-selection-summary');
+  if (!summary) return;
+  var count = Math.min(20, pool.length);
+  var unitText = diagState.selectedUnits.includes('all')
+    ? 'all 5 units'
+    : diagState.selectedUnits.length + ' selected unit' + (diagState.selectedUnits.length === 1 ? '' : 's');
+  summary.textContent = count + ' question' + (count === 1 ? '' : 's') + ' · ' + unitText;
+}
 
 function diagToggleUnit(el) {
   var unit = el.dataset.unit;
@@ -379,14 +399,12 @@ function diagToggleUnit(el) {
       if (allPill) allPill.classList.add('selected');
     }
   }
+  diagUpdateSelectionSummary();
 }
 
 function startDiagnostic() {
-  var pool = diagState.selectedUnits.includes('all')
-    ? DIAG_QUESTIONS
-    : DIAG_QUESTIONS.filter(function(q) { return diagState.selectedUnits.includes(String(q.unit)); });
-
-  if (pool.length < 5) { alert('Please select at least one unit with enough questions.'); return; }
+  var pool = diagSelectedPool();
+  if (!pool.length) return;
 
   // Shuffle and take up to 20
   var shuffled = pool.slice();
@@ -398,6 +416,7 @@ function startDiagnostic() {
   diagState.index = 0;
   diagState.score = 0;
   diagState.unitScores = {};
+  diagState.missedTopics = {};
   diagState.answered = false;
 
   document.getElementById('diag-start').style.display = 'none';
@@ -409,8 +428,12 @@ function startDiagnostic() {
 function diagShowQuestion() {
   var q = diagState.questions[diagState.index];
   var total = diagState.questions.length;
-  var pct = (diagState.index / total * 100).toFixed(0);
+  var pct = ((diagState.index + 1) / total * 100).toFixed(0);
   document.getElementById('diag-progress-fill').style.width = pct + '%';
+  var progress = document.getElementById('diag-progress-bar');
+  progress.setAttribute('aria-valuemax', String(total));
+  progress.setAttribute('aria-valuenow', String(diagState.index + 1));
+  progress.setAttribute('aria-valuetext', 'Question ' + (diagState.index + 1) + ' of ' + total);
   document.getElementById('diag-q-meta').textContent = 'Question ' + (diagState.index + 1) + ' of ' + total;
   document.getElementById('diag-q-unit-tag').textContent = 'Unit ' + q.unit + ' · ' + q.topic;
   document.getElementById('diag-question').textContent = q.q;
@@ -418,7 +441,7 @@ function diagShowQuestion() {
 
   var optionsEl = document.getElementById('diag-options');
   optionsEl.innerHTML = q.opts.map(function(opt, i) {
-    return '<button class="diag-option" onclick="diagAnswer(this,' + i + ')">' + opt + '</button>';
+    return '<button class="diag-option" type="button" onclick="diagAnswer(this,' + i + ')"><span class="diag-option-letter" aria-hidden="true">' + String.fromCharCode(65 + i) + '</span><span>' + opt + '</span></button>';
   }).join('');
 
   var fb = document.getElementById('diag-feedback');
@@ -427,6 +450,7 @@ function diagShowQuestion() {
   var nextBtn = document.getElementById('diag-next-btn');
   nextBtn.className = 'diag-next-btn';
   nextBtn.textContent = diagState.index < diagState.questions.length - 1 ? 'Next Question →' : 'See Results →';
+  document.getElementById('diag-question').focus();
 }
 
 function diagAnswer(btn, chosen) {
@@ -440,6 +464,7 @@ function diagAnswer(btn, chosen) {
   if (!diagState.unitScores[unit]) diagState.unitScores[unit] = { correct: 0, total: 0 };
   diagState.unitScores[unit].total++;
   if (correct) diagState.unitScores[unit].correct++;
+  if (!correct) diagState.missedTopics[q.topic] = (diagState.missedTopics[q.topic] || 0) + 1;
 
   document.querySelectorAll('.diag-option').forEach(function(b, i) {
     b.disabled = true;
@@ -453,10 +478,13 @@ function diagAnswer(btn, chosen) {
     ? '✓ Correct! ' + q.topic
     : '✗ The correct answer is: ' + q.opts[q.ans] + ' (' + q.topic + ')';
 
-  document.getElementById('diag-next-btn').className = 'diag-next-btn show';
+  var nextButton = document.getElementById('diag-next-btn');
+  nextButton.className = 'diag-next-btn show';
+  nextButton.focus();
 }
 
 function diagNext() {
+  if (!diagState.answered) return;
   diagState.index++;
   if (diagState.index >= diagState.questions.length) {
     diagShowResults();
@@ -490,40 +518,44 @@ function diagShowResults() {
     var upct = Math.round(s.correct / s.total * 100);
     var color = upct >= 80 ? '#22c55e' : upct >= 60 ? '#f59e0b' : '#ef4444';
     if (upct < 70) weakUnits.push('Unit ' + u + ' (' + upct + '%)');
-    rows += '<div class="diag-unit-row">' +
+    rows += '<div class="diag-unit-row" aria-label="Unit ' + u + ': ' + s.correct + ' of ' + s.total + ' correct, ' + upct + ' percent">' +
       '<div class="diag-unit-name">Unit ' + u + '</div>' +
-      '<div class="diag-unit-bar"><div class="diag-unit-fill" style="width:' + upct + '%;background:' + color + '"></div></div>' +
-      '<div class="diag-unit-pct" style="color:' + color + '">' + upct + '%</div>' +
+      '<div class="diag-unit-bar" aria-hidden="true"><div class="diag-unit-fill" style="width:' + upct + '%;background:' + color + '"></div></div>' +
+      '<div class="diag-unit-pct" style="color:' + color + '">' + s.correct + '/' + s.total + ' · ' + upct + '%</div>' +
       '</div>';
   });
   document.getElementById('diag-breakdown-rows').innerHTML = rows || '<p style="color:var(--gray-400);font-size:13px;">Take more questions to see unit breakdown.</p>';
 
   var focusBox = document.getElementById('diag-focus-box');
   var focusList = document.getElementById('diag-focus-list');
-  if (weakUnits.length > 0) {
-    focusList.textContent = 'Focus on: ' + weakUnits.join(', ') + ' -- use the Glossary flashcards and review the Living Documents for these units.';
+  var missedTopics = Object.keys(diagState.missedTopics).sort(function(a, b) {
+    return diagState.missedTopics[b] - diagState.missedTopics[a] || a.localeCompare(b);
+  });
+  if (missedTopics.length > 0) {
+    focusList.innerHTML = '<strong>Review these topics:</strong> ' + missedTopics.join(' · ') +
+      (weakUnits.length ? '<br><strong>Weak units:</strong> ' + weakUnits.join(', ') : '') +
+      '<br>Use the Glossary flashcards and Living Documents to review.';
     focusBox.style.display = '';
   } else {
     focusBox.style.display = 'none';
   }
+  results.focus();
 }
 
 function resetDiagnostic() {
   document.getElementById('diag-results').classList.remove('show');
   document.getElementById('diag-q-card').classList.remove('show');
   document.getElementById('diag-start').style.display = '';
+  diagUpdateSelectionSummary();
+  document.querySelector('.diag-start-btn').focus();
 }
 
 function diagGoToGlossary() {
-  document.querySelectorAll('.nav-tab').forEach(function(t) { t.classList.remove('active'); });
-  var glossTab = document.querySelector('.nav-tab[data-tab="glossary"]');
-  if (glossTab) glossTab.classList.add('active');
-  TAB_IDS.forEach(function(id) {
-    var el = document.getElementById('tab-' + id);
-    if (el) { el.style.display = (id === 'glossary') ? '' : 'none'; el.classList.toggle('active', id === 'glossary'); }
-  });
-  buildGlossary && buildGlossary();
+  switchToTab('glossary');
+  if (typeof buildGlossary === 'function') buildGlossary();
 }
+
+diagUpdateSelectionSummary();
 
 // ══════════════════════════════════════════════════════════
 //  STUMP THE CLASS ENGINE
@@ -1779,4 +1811,3 @@ const casesTab=document.querySelector('.nav-tab[data-tab="cases"]');if(casesTab)
 // ════════════════════════════════════════════════════════════════
 //  SKILL BUILDERS — Claim, Evidence & Reasoning (CER) Trainer
 // ════════════════════════════════════════════════════════════════
-
