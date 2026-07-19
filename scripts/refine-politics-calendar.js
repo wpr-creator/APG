@@ -3,6 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 const { isDirectlyPolitical } = require('./calendar-relevance');
+const { curatedEvents } = require('./calendar-curated-events');
 
 const root = path.resolve(__dirname, '..');
 const databaseFile = path.join(root, 'us-politics-events.json');
@@ -50,7 +51,7 @@ let fallbackDates = 0;
 const refined = {};
 
 Object.keys(database).sort().forEach(function (key) {
-  const original = database[key] || [];
+  const original = curatedEvents[key] || database[key] || [];
   const kept = original.filter(isDirectlyPolitical);
   removed += original.length - kept.length;
   if (!kept.length) {

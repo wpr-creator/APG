@@ -7,6 +7,7 @@
 const fs = require('fs');
 const path = require('path');
 const { isDirectlyPolitical } = require('./calendar-relevance');
+const { curatedEvents } = require('./calendar-curated-events');
 
 const root = path.resolve(__dirname, '..');
 const outputFile = path.join(root, 'us-politics-events.json');
@@ -36,9 +37,10 @@ const civicFocus = [
   ['Political Accountability', 'Elections, oversight, courts, and public scrutiny allow officials to be held responsible.', 'Unit 5', 'Political participation']
 ];
 
-const strongUsPattern = /\b(united states|u\.s\.|washington, d\.c\.|white house|supreme court of the united states|u\.s\. state|american civil war|american revolutionary war|thirteen colonies|continental congress|federal reserve)\b/i;
+const strongUsPattern = /\bunited states\b|\bu\.s\.(?=\s|$)|\bwashington, d\.c\.|\bwhite house\b|\bsupreme court of the united states\b|\bu\.s\. state\b|\bamerican civil war\b|\bamerican revolutionary war\b|\bthirteen colonies\b|\bcontinental congress\b|\bfederal reserve\b/i;
 const usPlacePattern = /\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|west virginia|wisconsin|wyoming|the pentagon)\b/i;
 const americanPoliticalPattern = /\bAmerican\b.*\b(president|vice president|politic|government|governor|senator|representative|congress|supreme court|justice|constitution|amendment|election|voting|suffrage|civil rights|cabinet|secretary of state|attorney general)\b|\b(president|vice president|politic|government|governor|senator|representative|congress|supreme court|justice|constitution|amendment|election|voting|suffrage|civil rights|cabinet|secretary of state|attorney general)\b.*\bAmerican\b/i;
+const namedUsPresidentPattern = /\b(?:president|vice president) (?:george washington|john adams|thomas jefferson|james madison|james monroe|john quincy adams|andrew jackson|martin van buren|william henry harrison|john tyler|james k\. polk|zachary taylor|millard fillmore|franklin pierce|james buchanan|abraham lincoln|andrew johnson|ulysses s\. grant|rutherford b\. hayes|james a\. garfield|chester a\. arthur|grover cleveland|benjamin harrison|william mckinley|theodore roosevelt|william howard taft|woodrow wilson|warren g\. harding|calvin coolidge|herbert hoover|franklin d\. roosevelt|harry s\. truman|dwight d\. eisenhower|john f\. kennedy|lyndon b\. johnson|richard nixon|gerald ford|jimmy carter|ronald reagan|george h\. w\. bush|bill clinton|george w\. bush|barack obama|donald trump|joe biden)\b/i;
 const governmentPattern = /\b(presiden\w*|politic\w*|governor|government|congress|senat\w*|representative|court|justice|constitution\w*|amendment|election|vote|voting|suffrage|civil rights|civil liberties|federal|law|legislation|statute|treaty|cabinet|department|statehood|territory|independence|impeach\w*|ratif\w*|executive order|terror\w*|national security|military|war|fbi|cia|pentagon)\b/i;
 const placeGovernmentPattern = /\b(politic\w*|governor|government|congress|senat\w*|representative|constitution\w*|amendment|election|vote|voting|suffrage|civil rights|federal|legislation|statute|treaty|statehood|terror\w*|national security|fbi|cia|pentagon)\b/i;
 const publicFigurePattern = /\b(president of the united states|u\.s\. president|vice president|senator|representative|governor|supreme court|justice|politician|civil rights|activist|first lady|cabinet|secretary of|attorney general|speaker of the house)\b/i;
@@ -61,7 +63,7 @@ function pageText(item) {
 function score(item, kind) {
   const direct = item.text || '';
   const combined = direct + ' ' + pageText(item);
-  const clearlyAmerican = strongUsPattern.test(direct) || americanPoliticalPattern.test(direct) ||
+  const clearlyAmerican = strongUsPattern.test(direct) || americanPoliticalPattern.test(direct) || namedUsPresidentPattern.test(direct) ||
     (usPlacePattern.test(direct) && placeGovernmentPattern.test(direct)) ||
     /\b(united states declaration of independence|american declaration of independence|articles of confederation|federalist papers|reconstruction amendments)\b/i.test(direct);
   if (!clearlyAmerican || !governmentPattern.test(combined)) return -1;
@@ -181,6 +183,12 @@ async function fetchCategory(key, category, attempt) {
 }
 
 async function buildDay(key) {
+  if (curatedEvents[key]) return curatedEvents[key].map(normalizeExisting);
+  const existingDay = existing[key] || [];
+  const establishedHistory = existingDay.map(normalizeExisting).filter(function (event) {
+    return event.kind !== 'civic-focus' && isDirectlyPolitical(event);
+  });
+  if (establishedHistory.length) return establishedHistory;
   const data = { events: await fetchCategory(key, 'events') };
   const candidates = [];
   function addCandidates(kinds) {
@@ -192,7 +200,7 @@ async function buildDay(key) {
     });
   }
   addCandidates(['events']);
-  const local = (existing[key] || []).map(normalizeExisting).filter(isDirectlyPolitical);
+  const local = [];
   if (!candidates.length && !local.length) {
     const people = await Promise.all([
       fetchCategory(key, 'births'),

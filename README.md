@@ -43,7 +43,7 @@
 
 ### 🏠 Home
 - Hero banner — current unit and week
-- This Day in Politics — a fully local 366-day database with 382 curated historical entries plus 124 AP Government civic-focus dates
+- This Day in Politics — a fully local 366-day database with 451 curated historical entries plus 63 AP Government civic-focus dates still queued for archival research
 - Vocab of the Day — rotates daily
 - Recent Materials, Upcoming, Quick Links
 - Exit Ticket — submits to Google Sheets
