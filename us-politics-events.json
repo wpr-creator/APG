@@ -103,26 +103,36 @@
   ],
   "01-07": [
     {
-      "year": null,
-      "text": "Civic focus: Executive Orders — Presidents direct executive-branch operations without passing a new statute.",
-      "ap_connection": "Unit 2; Presidency",
+      "year": 1999,
+      "text": "The Senate trial in the impeachment of U.S. President Bill Clinton begins.",
+      "ap_connection": "Congress; representation; national policymaking",
       "unit": 2,
-      "category": "Presidency",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Impeachment_of_Bill_Clinton",
+      "kind": "event"
+    },
+    {
+      "year": 1980,
+      "text": "U.S. President Jimmy Carter authorizes legislation giving $1.5 billion in loans to bail out the Chrysler Corporation.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Jimmy_Carter",
+      "kind": "event"
     }
   ],
   "01-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
-      "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1867,
+      "text": "African American men are granted the right to vote in Washington, D.C.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/African_American",
+      "kind": "event"
     }
   ],
   "01-09": [
@@ -185,14 +195,24 @@
   ],
   "01-13": [
     {
-      "year": null,
-      "text": "Civic focus: Public Opinion — The public’s political attitudes influence elections and policymaking.",
-      "ap_connection": "Unit 4; Public opinion",
-      "unit": 4,
-      "category": "Public opinion",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1990,
+      "text": "Douglas Wilder becomes the first elected African American governor as he takes office in Richmond, Virginia.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Douglas_Wilder",
+      "kind": "event"
+    },
+    {
+      "year": 1847,
+      "text": "The Treaty of Cahuenga ends the Mexican-American War in California.",
+      "ap_connection": "National security; executive power; civil liberties",
+      "unit": 2,
+      "category": "National security",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Treaty_of_Cahuenga",
+      "kind": "event"
     }
   ],
   "01-14": [
@@ -253,14 +273,14 @@
   ],
   "01-17": [
     {
-      "year": null,
-      "text": "Civic focus: Campaign Finance — Rules governing political money shape electoral competition and political speech.",
-      "ap_connection": "Unit 5; Elections",
-      "unit": 5,
-      "category": "Elections",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1961,
+      "text": "U.S. President Dwight D. Eisenhower delivers a televised farewell address to the nation three days before leaving office, in which he warns against the accumulation of power by the \"military-industrial complex\" as well as the dangers of massive spending, especially deficit spending.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Dwight_D._Eisenhower",
+      "kind": "event"
     }
   ],
   "01-18": [
@@ -399,26 +419,26 @@
   ],
   "01-25": [
     {
-      "year": null,
-      "text": "Civic focus: Judicial Review — Courts may invalidate government actions that conflict with the Constitution.",
-      "ap_connection": "Unit 2; Judicial branch",
+      "year": 1961,
+      "text": "In Washington, D.C., President John F. Kennedy delivers the first live presidential television news conference.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Judicial branch",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/John_F._Kennedy",
+      "kind": "event"
     }
   ],
   "01-26": [
     {
-      "year": null,
-      "text": "Civic focus: Congressional Oversight — Congress monitors executive agencies and implementation of federal law.",
-      "ap_connection": "Unit 2; Congress",
+      "year": 1915,
+      "text": "The Rocky Mountain National Park is established by an act of the U.S. Congress.",
+      "ap_connection": "Congress; representation; national policymaking",
       "unit": 2,
       "category": "Congress",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Rocky_Mountain_National_Park",
+      "kind": "event"
     }
   ],
   "01-27": [
@@ -769,14 +789,14 @@
   ],
   "02-14": [
     {
-      "year": null,
-      "text": "Civic focus: Linkage Institutions — Parties, elections, interest groups, and media connect people to government.",
-      "ap_connection": "Unit 5; Political participation",
-      "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1903,
+      "text": "The United States Department of Commerce and Labor is established (later split into the Department of Commerce and the Department of Labor).",
+      "ap_connection": "Federal bureaucracy; implementation; administrative power",
+      "unit": 2,
+      "category": "Bureaucracy",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/United_States_Department_of_Commerce",
+      "kind": "event"
     }
   ],
   "02-15": [
@@ -873,14 +893,14 @@
   ],
   "02-21": [
     {
-      "year": null,
-      "text": "Civic focus: Rule of Law — Public officials and citizens are bound by the law.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1972,
+      "text": "United States President Richard Nixon visits the People's Republic of China to normalize Sino-American relations.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Richard_Nixon",
+      "kind": "event"
     }
   ],
   "02-22": [
@@ -963,14 +983,24 @@
   ],
   "02-26": [
     {
-      "year": null,
-      "text": "Civic focus: Congressional Oversight — Congress monitors executive agencies and implementation of federal law.",
-      "ap_connection": "Unit 2; Congress",
+      "year": 1929,
+      "text": "President Calvin Coolidge signs an executive order establishing the 96,000 acre Grand Teton National Park in Wyoming.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Calvin_Coolidge",
+      "kind": "event"
+    },
+    {
+      "year": 1919,
+      "text": "President Woodrow Wilson signs an act of Congress establishing the Grand Canyon National Park.",
+      "ap_connection": "Congress; representation; national policymaking",
       "unit": 2,
       "category": "Congress",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Woodrow_Wilson",
+      "kind": "event"
     }
   ],
   "02-27": [
@@ -1007,14 +1037,14 @@
   ],
   "02-28": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1867,
+      "text": "Seventy years of Holy See-United States relations are ended by a Congressional ban on federal funding of diplomatic envoys to the Vatican and are not restored until January 10, 1984.",
+      "ap_connection": "Congress; representation; national policymaking",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Holy_See%E2%80%93United_States_relations",
+      "kind": "event"
     }
   ],
   "02-29": [
@@ -1043,14 +1073,34 @@
   ],
   "03-02": [
     {
-      "year": null,
-      "text": "Civic focus: Federalism — Power is divided between national and state governments.",
-      "ap_connection": "Unit 1; Federalism",
-      "unit": 1,
-      "category": "Federalism",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1877,
+      "text": "U.S. presidential election, 1876: Just two days before inauguration, the U.S. Congress declares Rutherford B. Hayes the winner of the election even though Samuel J. Tilden had won the popular vote on November 7, 1876.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/U.S._presidential_election,_1876",
+      "kind": "event"
+    },
+    {
+      "year": 1867,
+      "text": "The U.S. Congress passes the first Reconstruction Act.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Reconstruction_Act",
+      "kind": "event"
+    },
+    {
+      "year": 1807,
+      "text": "The U.S. Congress passes the Act Prohibiting Importation of Slaves, disallowing the importation of new slaves into the country.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/United_States_Congress",
+      "kind": "event"
     }
   ],
   "03-03": [
@@ -1099,14 +1149,14 @@
   ],
   "03-05": [
     {
-      "year": null,
-      "text": "Civic focus: Judicial Review — Courts may invalidate government actions that conflict with the Constitution.",
-      "ap_connection": "Unit 2; Judicial branch",
+      "year": 1933,
+      "text": "Great Depression: President Franklin D. Roosevelt declares a \"bank holiday\", closing all U.S. banks and freezing all financial transactions.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Judicial branch",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Great_Depression",
+      "kind": "event"
     }
   ],
   "03-06": [
@@ -1385,14 +1435,14 @@
   ],
   "03-23": [
     {
-      "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1977,
+      "text": "The first of The Nixon Interviews (12 will be recorded over four weeks) are videotaped with British journalist David Frost interviewing former United States President Richard Nixon about the Watergate scandal and the Nixon tapes.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/The_Nixon_Interviews",
+      "kind": "event"
     }
   ],
   "03-24": [
@@ -1433,14 +1483,14 @@
   ],
   "03-27": [
     {
-      "year": null,
-      "text": "Civic focus: Executive Orders — Presidents direct executive-branch operations without passing a new statute.",
-      "ap_connection": "Unit 2; Presidency",
-      "unit": 2,
-      "category": "Presidency",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1866,
+      "text": "President Andrew Johnson vetoes the Civil Rights Act of 1866. His veto is overridden by Congress and the bill passes into law on April 9.",
+      "ap_connection": "Civil rights; equal protection; federal action",
+      "unit": 3,
+      "category": "Civil rights",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Andrew_Johnson",
+      "kind": "event"
     }
   ],
   "03-28": [
@@ -1493,14 +1543,14 @@
   ],
   "04-01": [
     {
-      "year": null,
-      "text": "Civic focus: Rule of Law — Public officials and citizens are bound by the law.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1970,
+      "text": "President Richard Nixon signs the Public Health Cigarette Smoking Act into law, requiring the Surgeon General's warnings on tobacco products and banning cigarette advertising on television and radio in the United States, effective 1 January 1971.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Richard_Nixon",
+      "kind": "event"
     }
   ],
   "04-02": [
@@ -1527,14 +1577,14 @@
   ],
   "04-03": [
     {
-      "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1948,
+      "text": "United States President Harry S. Truman signs the Marshall Plan, authorizing $5 billion in aid for 16 countries.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Harry_S._Truman",
+      "kind": "event"
     }
   ],
   "04-04": [
@@ -1551,14 +1601,14 @@
   ],
   "04-05": [
     {
-      "year": null,
-      "text": "Civic focus: Judicial Review — Courts may invalidate government actions that conflict with the Constitution.",
-      "ap_connection": "Unit 2; Judicial branch",
+      "year": 1933,
+      "text": "U.S. President Franklin D. Roosevelt signs two executive orders: 6101 to establish the Civilian Conservation Corps, and 6102 \"forbidding the Hoarding of Gold Coin, Gold Bullion, and Gold Certificates\" by U.S. citizens.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Judicial branch",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Franklin_D._Roosevelt",
+      "kind": "event"
     }
   ],
   "04-06": [
@@ -1661,26 +1711,26 @@
   ],
   "04-10": [
     {
-      "year": null,
-      "text": "Civic focus: Due Process — Government must use fair procedures before depriving a person of life, liberty, or property.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1816,
+      "text": "The Federal government of the United States approves the creation of the Second Bank of the United States.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Federal_government_of_the_United_States",
+      "kind": "event"
     }
   ],
   "04-11": [
     {
-      "year": null,
-      "text": "Civic focus: Equal Protection — States must provide equal protection of the laws.",
-      "ap_connection": "Unit 3; Civil rights",
+      "year": 1968,
+      "text": "President Lyndon B. Johnson signs the Civil Rights Act of 1968, prohibiting discrimination in the sale, rental, and financing of housing.",
+      "ap_connection": "Civil rights; equal protection; federal action",
       "unit": 3,
       "category": "Civil rights",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Lyndon_B._Johnson",
+      "kind": "event"
     }
   ],
   "04-12": [
@@ -1858,7 +1908,7 @@
   "04-23": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -1881,14 +1931,14 @@
   ],
   "04-25": [
     {
-      "year": null,
-      "text": "Civic focus: Judicial Review — Courts may invalidate government actions that conflict with the Constitution.",
-      "ap_connection": "Unit 2; Judicial branch",
+      "year": 1938,
+      "text": "U.S. Supreme Court delivers its opinion in Erie Railroad Co. v. Tompkins and overturns a century of federal common law.",
+      "ap_connection": "Supreme Court; judicial power; constitutional interpretation",
       "unit": 2,
       "category": "Judicial branch",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/U.S._Supreme_Court",
+      "kind": "event"
     }
   ],
   "04-26": [
@@ -1939,26 +1989,36 @@
   ],
   "04-29": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1974,
+      "text": "Watergate scandal: United States President Richard Nixon announces the release of edited transcripts of White House tape recordings relating to the scandal.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Watergate_scandal",
+      "kind": "event"
     }
   ],
   "04-30": [
     {
-      "year": null,
-      "text": "Civic focus: Due Process — Government must use fair procedures before depriving a person of life, liberty, or property.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1789,
+      "text": "On the balcony of Federal Hall on Wall Street in New York City, George Washington takes the oath of office to become the first elected President of the United States.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Federal_Hall",
+      "kind": "event"
+    },
+    {
+      "year": 1885,
+      "text": "Governor of New York David B. Hill signs legislation creating the Niagara Reservation, New York's first state park, ensuring that Niagara Falls will not be devoted solely to industrial and commercial use.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Governor_of_New_York",
+      "kind": "event"
     }
   ],
   "05-01": [
@@ -1975,14 +2035,14 @@
   ],
   "05-02": [
     {
-      "year": null,
-      "text": "Civic focus: Federalism — Power is divided between national and state governments.",
-      "ap_connection": "Unit 1; Federalism",
-      "unit": 1,
-      "category": "Federalism",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 2000,
+      "text": "President Bill Clinton announces that accurate GPS access would no longer be restricted to the United States military.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Bill_Clinton",
+      "kind": "event"
     }
   ],
   "05-03": [
@@ -2067,14 +2127,14 @@
   ],
   "05-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1972,
+      "text": "Vietnam War: U.S. President Richard Nixon announces his order to place mines in major North Vietnamese ports in order to stem the flow of weapons and other goods to that nation.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Vietnam_War",
+      "kind": "event"
     }
   ],
   "05-09": [
@@ -2127,14 +2187,14 @@
   ],
   "05-13": [
     {
-      "year": null,
-      "text": "Civic focus: Public Opinion — The public’s political attitudes influence elections and policymaking.",
-      "ap_connection": "Unit 4; Public opinion",
-      "unit": 4,
-      "category": "Public opinion",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1980,
+      "text": "An F3 tornado hits Kalamazoo County, Michigan. President Jimmy Carter declares it a federal disaster area.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Fujita_scale",
+      "kind": "event"
     }
   ],
   "05-14": [
@@ -2427,14 +2487,14 @@
   ],
   "05-28": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1830,
+      "text": "U.S. President Andrew Jackson signs the Indian Removal Act which relocates Native Americans.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/President_of_the_United_States",
+      "kind": "event"
     }
   ],
   "05-29": [
@@ -2463,14 +2523,14 @@
   ],
   "05-31": [
     {
-      "year": null,
-      "text": "Civic focus: Equal Protection — States must provide equal protection of the laws.",
-      "ap_connection": "Unit 3; Civil rights",
-      "unit": 3,
-      "category": "Civil rights",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1790,
+      "text": "The United States enacts its first copyright statute, the Copyright Act of 1790.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Copyright_law_of_the_United_States",
+      "kind": "event"
     }
   ],
   "06-01": [
@@ -2487,14 +2547,14 @@
   ],
   "06-02": [
     {
-      "year": null,
-      "text": "Civic focus: Federalism — Power is divided between national and state governments.",
-      "ap_connection": "Unit 1; Federalism",
-      "unit": 1,
-      "category": "Federalism",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1924,
+      "text": "U.S. President Calvin Coolidge signs the Indian Citizenship Act into law, granting citizenship to all Native Americans born within the territorial limits of the United States.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Calvin_Coolidge",
+      "kind": "event"
     }
   ],
   "06-03": [
@@ -2601,14 +2661,14 @@
   ],
   "06-09": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1968,
+      "text": "U.S. President Lyndon B. Johnson declares a national day of mourning following the assassination of Senator Robert F. Kennedy.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Lyndon_B._Johnson",
+      "kind": "event"
     }
   ],
   "06-10": [
@@ -2937,14 +2997,14 @@
   ],
   "06-27": [
     {
-      "year": null,
-      "text": "Civic focus: Executive Orders — Presidents direct executive-branch operations without passing a new statute.",
-      "ap_connection": "Unit 2; Presidency",
+      "year": 1974,
+      "text": "U.S. president Richard Nixon visits the Soviet Union.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
       "category": "Presidency",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/President_of_the_United_States",
+      "kind": "event"
     }
   ],
   "06-28": [
@@ -3173,14 +3233,14 @@
   ],
   "07-10": [
     {
-      "year": null,
-      "text": "Civic focus: Due Process — Government must use fair procedures before depriving a person of life, liberty, or property.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1832,
+      "text": "U.S. President Andrew Jackson vetoes a bill that would re-charter the Second Bank of the United States.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Andrew_Jackson",
+      "kind": "event"
     }
   ],
   "07-11": [
@@ -3221,14 +3281,14 @@
   ],
   "07-14": [
     {
-      "year": null,
-      "text": "Civic focus: Linkage Institutions — Parties, elections, interest groups, and media connect people to government.",
-      "ap_connection": "Unit 5; Political participation",
+      "year": 1798,
+      "text": "The Sedition Act becomes law in the United States making it a federal crime to write, publish, or utter false or malicious statements about the United States government.",
+      "ap_connection": "American political development; institutions; public policy",
       "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Alien_and_Sedition_Acts",
+      "kind": "event"
     }
   ],
   "07-15": [
@@ -3269,26 +3329,26 @@
   ],
   "07-18": [
     {
-      "year": null,
-      "text": "Civic focus: Agenda Setting — Political institutions and media influence which issues receive public attention.",
-      "ap_connection": "Unit 5; Media",
-      "unit": 5,
-      "category": "Media",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1947,
+      "text": "President Harry S. Truman signs the Presidential Succession Act of 1947, placing the Speaker of the House and the president pro tempore of the Senate next in line after the vice president.",
+      "ap_connection": "Unit 2; presidential succession; continuity of government; Congress and the presidency",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "U.S. Statutes at Large (61 Stat. 380)",
+      "source_url": "https://www.govinfo.gov/content/pkg/STATUTE-61/pdf/STATUTE-61-Pg380.pdf",
+      "kind": "event"
     }
   ],
   "07-19": [
     {
-      "year": null,
-      "text": "Civic focus: Political Accountability — Elections, oversight, courts, and public scrutiny allow officials to be held responsible.",
-      "ap_connection": "Unit 5; Political participation",
+      "year": 1701,
+      "text": "Representatives of the Iroquois Confederacy sign the Nanfan Treaty, ceding a large territory north of the Ohio River to England.",
+      "ap_connection": "American political development; institutions; public policy",
       "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Iroquois",
+      "kind": "event"
     }
   ],
   "07-20": [
@@ -3330,7 +3390,7 @@
   "07-23": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -3397,14 +3457,14 @@
   ],
   "07-27": [
     {
-      "year": null,
-      "text": "Civic focus: Executive Orders — Presidents direct executive-branch operations without passing a new statute.",
-      "ap_connection": "Unit 2; Presidency",
+      "year": 1789,
+      "text": "The first U.S. federal government agency, the Department of Foreign Affairs, is established (it will be later renamed Department of State).",
+      "ap_connection": "Federal bureaucracy; implementation; administrative power",
       "unit": 2,
-      "category": "Presidency",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Bureaucracy",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Federal_government_of_the_United_States",
+      "kind": "event"
     }
   ],
   "07-28": [
@@ -3601,26 +3661,36 @@
   ],
   "08-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1974,
+      "text": "President Richard Nixon, in a nationwide television address, announces his resignation from the office of the President of the United States effective noon the next day.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Richard_Nixon",
+      "kind": "event"
     }
   ],
   "08-09": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1842,
+      "text": "The Webster-Ashburton Treaty is signed, establishing the United States-Canada border east of the Rocky Mountains.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Webster%E2%80%93Ashburton_Treaty",
+      "kind": "event"
+    },
+    {
+      "year": 1814,
+      "text": "Indian Wars: The Creek sign the Treaty of Fort Jackson, giving up huge parts of Alabama and Georgia.",
+      "ap_connection": "National security; executive power; civil liberties",
+      "unit": 2,
+      "category": "National security",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Indian_Wars",
+      "kind": "event"
     }
   ],
   "08-10": [
@@ -3739,14 +3809,14 @@
   ],
   "08-17": [
     {
-      "year": null,
-      "text": "Civic focus: Campaign Finance — Rules governing political money shape electoral competition and political speech.",
-      "ap_connection": "Unit 5; Elections",
-      "unit": 5,
-      "category": "Elections",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1998,
+      "text": "Lewinsky scandal: US President Bill Clinton admits in taped testimony that he had an \"improper physical relationship\" with White House intern Monica Lewinsky; later that same day he admits before the nation that he \"misled people\" about the relationship.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Lewinsky_scandal",
+      "kind": "event"
     }
   ],
   "08-18": [
@@ -3785,14 +3855,14 @@
   ],
   "08-20": [
     {
-      "year": null,
-      "text": "Civic focus: Popular Sovereignty — Government authority comes from the people.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1866,
+      "text": "President Andrew Johnson formally declares the American Civil War over.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/President_of_the_United_States",
+      "kind": "event"
     }
   ],
   "08-21": [
@@ -3822,7 +3892,7 @@
   "08-23": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -3833,14 +3903,14 @@
   ],
   "08-24": [
     {
-      "year": null,
-      "text": "Civic focus: Checks and Balances — Each branch has tools to limit the power of the others.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1816,
+      "text": "The Treaty of St. Louis is signed in St. Louis, Missouri.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Treaty_of_St._Louis_(1816)",
+      "kind": "event"
     }
   ],
   "08-25": [
@@ -3903,14 +3973,14 @@
   ],
   "08-29": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1758,
+      "text": "The Treaty of Easton establishes the first American Indian reservation, at Indian Mills, New Jersey, for the Lenape.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Treaty_of_Easton",
+      "kind": "event"
     }
   ],
   "08-30": [
@@ -4019,14 +4089,14 @@
   ],
   "09-06": [
     {
-      "year": null,
-      "text": "Civic focus: Congressional Oversight — Congress monitors executive agencies and implementation of federal law.",
-      "ap_connection": "Unit 2; Congress",
-      "unit": 2,
-      "category": "Congress",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1870,
+      "text": "Louisa Ann Swain of Laramie, Wyoming becomes the first woman in the United States to cast a vote legally after 1807.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Louisa_Ann_Swain",
+      "kind": "event"
     }
   ],
   "09-07": [
@@ -4043,14 +4113,14 @@
   ],
   "09-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1974,
+      "text": "Watergate scandal: US President Gerald Ford pardons former President Richard Nixon for any crimes Nixon may have committed while in office.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Watergate_scandal",
+      "kind": "event"
     }
   ],
   "09-09": [
@@ -4254,7 +4324,7 @@
   "09-23": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -4265,14 +4335,14 @@
   ],
   "09-24": [
     {
-      "year": null,
-      "text": "Civic focus: Checks and Balances — Each branch has tools to limit the power of the others.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1789,
+      "text": "The United States Congress passes the Judiciary Act which creates the office of the United States Attorney General and the federal judiciary system, and orders the composition of the Supreme Court of the United States.",
+      "ap_connection": "Supreme Court; judicial power; constitutional interpretation",
+      "unit": 2,
+      "category": "Judicial branch",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/United_States_Congress",
+      "kind": "event"
     }
   ],
   "09-25": [
@@ -4299,14 +4369,14 @@
   ],
   "09-26": [
     {
-      "year": null,
-      "text": "Civic focus: Congressional Oversight — Congress monitors executive agencies and implementation of federal law.",
-      "ap_connection": "Unit 2; Congress",
-      "unit": 2,
-      "category": "Congress",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1789,
+      "text": "Thomas Jefferson is appointed the first United States Secretary of State, John Jay is appointed the first Chief Justice of the United States, Samuel Osgood is appointed the first United States Postmaster General, and Edmund Randolph is appointed the first United States Attorney General.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Thomas_Jefferson",
+      "kind": "event"
     }
   ],
   "09-27": [
@@ -4389,14 +4459,14 @@
   ],
   "10-01": [
     {
-      "year": null,
-      "text": "Civic focus: Rule of Law — Public officials and citizens are bound by the law.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1800,
+      "text": "Spain cedes Louisiana to France via the Third Treaty of San Ildefonso.",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Spain",
+      "kind": "event"
     }
   ],
   "10-02": [
@@ -4424,7 +4494,7 @@
   "10-03": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -4483,14 +4553,14 @@
   ],
   "10-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 2001,
+      "text": "U.S. President George W. Bush announces the establishment of the Office of Homeland Security.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/George_W._Bush",
+      "kind": "event"
     }
   ],
   "10-09": [
@@ -4531,14 +4601,14 @@
   ],
   "10-12": [
     {
-      "year": null,
-      "text": "Civic focus: Political Socialization — Families, schools, peers, and media shape political beliefs.",
-      "ap_connection": "Unit 4; Political beliefs",
-      "unit": 4,
-      "category": "Political beliefs",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1967,
+      "text": "Vietnam War: US Secretary of State Dean Rusk states during a news conference that proposals by the U.S. Congress for peace initiatives are futile because of North Vietnam's opposition.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Vietnam_War",
+      "kind": "event"
     }
   ],
   "10-13": [
@@ -4555,14 +4625,14 @@
   ],
   "10-14": [
     {
-      "year": null,
-      "text": "Civic focus: Linkage Institutions — Parties, elections, interest groups, and media connect people to government.",
-      "ap_connection": "Unit 5; Political participation",
-      "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1656,
+      "text": "Massachusetts enacts the first punitive legislation against the Religious Society of Friends (Quakers). The marriage of church-and-state in Puritanism makes them regard the Quakers as spiritually apostate and politically subversive.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Massachusetts",
+      "kind": "event"
     }
   ],
   "10-15": [
@@ -4615,14 +4685,14 @@
   ],
   "10-19": [
     {
-      "year": null,
-      "text": "Civic focus: Political Accountability — Elections, oversight, courts, and public scrutiny allow officials to be held responsible.",
-      "ap_connection": "Unit 5; Political participation",
-      "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1973,
+      "text": "President Richard Nixon rejects an Appeals Court decision that he turn over the Watergate tapes.",
+      "ap_connection": "Supreme Court; judicial power; constitutional interpretation",
+      "unit": 2,
+      "category": "Judicial branch",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Richard_Nixon",
+      "kind": "event"
     }
   ],
   "10-20": [
@@ -4651,14 +4721,14 @@
   ],
   "10-22": [
     {
-      "year": null,
-      "text": "Civic focus: Federalism — Power is divided between national and state governments.",
-      "ap_connection": "Unit 1; Federalism",
-      "unit": 1,
-      "category": "Federalism",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1962,
+      "text": "Cuban Missile Crisis: US President John F. Kennedy, after internal counsel from Dwight D. Eisenhower, announces that American reconnaissance planes have discovered Soviet nuclear weapons in Cuba, and that he has ordered a naval \"quarantine\" of the Communist nation.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Cuban_Missile_Crisis",
+      "kind": "event"
     }
   ],
   "10-23": [
@@ -4723,26 +4793,26 @@
   ],
   "10-28": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
-      "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1636,
+      "text": "A vote of the Great and General Court of the Massachusetts Bay Colony establishes the first college in what would become the United States, today known as Harvard University.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Great_and_General_Court",
+      "kind": "event"
     }
   ],
   "10-29": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 2004,
+      "text": "The Arabic-language news network Al Jazeera broadcasts an excerpt from a 2004 Osama bin Laden video in which the terrorist leader first admits direct responsibility for the September 11, 2001 attacks and references the 2004 U.S. presidential election.",
+      "ap_connection": "Elections; political participation; linkage institutions",
+      "unit": 5,
+      "category": "Elections",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Al_Jazeera",
+      "kind": "event"
     }
   ],
   "10-30": [
@@ -4759,26 +4829,26 @@
   ],
   "10-31": [
     {
-      "year": null,
-      "text": "Civic focus: Equal Protection — States must provide equal protection of the laws.",
-      "ap_connection": "Unit 3; Civil rights",
-      "unit": 3,
-      "category": "Civil rights",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1968,
+      "text": "Vietnam War October surprise: Citing progress with the Paris peace talks, US President Lyndon B. Johnson announces to the nation that he has ordered a complete cessation of \"all air, naval, and artillery bombardment of North Vietnam\" effective November 1.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Vietnam_War",
+      "kind": "event"
     }
   ],
   "11-01": [
     {
-      "year": null,
-      "text": "Civic focus: Rule of Law — Public officials and citizens are bound by the law.",
-      "ap_connection": "Unit 1; Constitutional foundations",
-      "unit": 1,
-      "category": "Constitutional foundations",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1897,
+      "text": "The first Library of Congress building opens its doors to the public; the library had previously been housed in the Congressional Reading Room in the U.S. Capitol.",
+      "ap_connection": "Congress; representation; national policymaking",
+      "unit": 2,
+      "category": "Congress",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Library_of_Congress",
+      "kind": "event"
     }
   ],
   "11-02": [
@@ -4969,14 +5039,14 @@
   ],
   "11-10": [
     {
-      "year": null,
-      "text": "Civic focus: Due Process — Government must use fair procedures before depriving a person of life, liberty, or property.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1766,
+      "text": "The last colonial governor of New Jersey, William Franklin, signs the charter of Queen's College (later renamed Rutgers University).",
+      "ap_connection": "American political development; institutions; public policy",
+      "unit": 5,
+      "category": "Political development",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/New_Jersey",
+      "kind": "event"
     }
   ],
   "11-11": [
@@ -4993,14 +5063,14 @@
   ],
   "11-12": [
     {
-      "year": null,
-      "text": "Civic focus: Political Socialization — Families, schools, peers, and media shape political beliefs.",
-      "ap_connection": "Unit 4; Political beliefs",
-      "unit": 4,
-      "category": "Political beliefs",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1979,
+      "text": "Iran hostage crisis: In response to the hostage situation in Tehran, US President Jimmy Carter orders a halt to all petroleum imports into the United States from Iran.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Iran_hostage_crisis",
+      "kind": "event"
     }
   ],
   "11-13": [
@@ -5186,7 +5256,7 @@
   "11-23": [
     {
       "year": null,
-      "text": "Civic focus: Separation of Powers — Government power is divided among legislative, executive, and judicial branches.",
+      "text": "Civic focus: Separation of Powers — Legislative, executive, and judicial powers are assigned to different branches.",
       "ap_connection": "Unit 1; Constitutional foundations",
       "unit": 1,
       "category": "Constitutional foundations",
@@ -5267,14 +5337,14 @@
   ],
   "11-29": [
     {
-      "year": null,
-      "text": "Civic focus: Selective Incorporation — Most Bill of Rights protections apply to states through the Fourteenth Amendment.",
-      "ap_connection": "Unit 3; Civil liberties",
-      "unit": 3,
-      "category": "Civil liberties",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1967,
+      "text": "Vietnam War: U.S. Secretary of Defense Robert McNamara announces his resignation.",
+      "ap_connection": "National security; executive power; civil liberties",
+      "unit": 2,
+      "category": "National security",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Vietnam_War",
+      "kind": "event"
     }
   ],
   "11-30": [
@@ -5435,14 +5505,24 @@
   ],
   "12-08": [
     {
-      "year": null,
-      "text": "Civic focus: Bureaucratic Discretion — Agencies make choices about how laws and regulations are implemented.",
-      "ap_connection": "Unit 2; Bureaucracy",
+      "year": 1953,
+      "text": "U.S. President Dwight D. Eisenhower delivers his \"Atoms for Peace\" speech, which leads to an American program to supply equipment and information on nuclear power to schools, hospitals, and research institutions around the world.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Bureaucracy",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Dwight_D._Eisenhower",
+      "kind": "event"
+    },
+    {
+      "year": 1941,
+      "text": "World War II: U.S. President Franklin D. Roosevelt declares December 7 to be \"a date which will live in infamy\", after which the U.S. declares war on Japan.",
+      "ap_connection": "Presidency; executive power; agenda setting",
+      "unit": 2,
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/World_War_II",
+      "kind": "event"
     }
   ],
   "12-09": [
@@ -5561,14 +5641,14 @@
   ],
   "12-16": [
     {
-      "year": null,
-      "text": "Civic focus: Interest Groups — Organized groups seek to influence public policy without directly controlling government.",
-      "ap_connection": "Unit 5; Political participation",
-      "unit": 5,
-      "category": "Political participation",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "year": 1965,
+      "text": "Vietnam War: General William Westmoreland sends U.S. Secretary of Defense Robert McNamara a request for 243,000 more men by the end of 1966.",
+      "ap_connection": "National security; executive power; civil liberties",
+      "unit": 2,
+      "category": "National security",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Vietnam_War",
+      "kind": "event"
     }
   ],
   "12-17": [
@@ -5711,14 +5791,14 @@
   ],
   "12-26": [
     {
-      "year": null,
-      "text": "Civic focus: Congressional Oversight — Congress monitors executive agencies and implementation of federal law.",
-      "ap_connection": "Unit 2; Congress",
+      "year": 1941,
+      "text": "U.S. President Franklin D. Roosevelt signs a bill establishing the fourth Thursday in November as Thanksgiving Day in the United States.",
+      "ap_connection": "Presidency; executive power; agenda setting",
       "unit": 2,
-      "category": "Congress",
-      "source_label": "AP Government course glossary",
-      "source_url": "/APG/#glossary",
-      "kind": "civic-focus"
+      "category": "Presidency",
+      "source_label": "Wikipedia",
+      "source_url": "https://wikipedia.org/wiki/Franklin_D._Roosevelt",
+      "kind": "event"
     }
   ],
   "12-27": [

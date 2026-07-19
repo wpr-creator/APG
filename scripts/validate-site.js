@@ -4,6 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
 const { isDirectlyPolitical } = require('./calendar-relevance');
+const { curatedEvents } = require('./calendar-curated-events');
 
 const root = path.resolve(__dirname, '..');
 const files = [];
@@ -97,6 +98,11 @@ function validateCalendarData() {
   if (Object.keys(database).length !== 366) {
     errors.push('Calendar must contain exactly 366 date keys; found ' + Object.keys(database).length);
   }
+  Object.entries(curatedEvents).forEach(function ([key, events]) {
+    if (JSON.stringify(database[key]) !== JSON.stringify(events)) {
+      errors.push('Curated calendar event is missing or changed: ' + key);
+    }
+  });
   Object.entries(database).forEach(function ([key, events]) {
     if (!validKey.test(key)) errors.push('Invalid calendar key: ' + key);
     const parts = key.split('-').map(Number);
