@@ -13,7 +13,7 @@ const conflictGovernmentActionPattern = /\b(congress (?:declared war|authorized|
 
 function isDirectlyPolitical(event) {
   if (!event || !event.text) return false;
-  if (event.kind === 'civic-focus') return true;
+  if (event.kind === 'civic-focus') return false;
   if (event.kind === 'birth' || event.kind === 'death') return false;
 
   const text = String(event.text);

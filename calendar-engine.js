@@ -38,34 +38,16 @@
     };
   }
 
-  function glossaryFallback(date) {
-    let terms = [];
-    if (typeof GLOSSARY_UNITS !== 'undefined') {
-      GLOSSARY_UNITS.forEach(function (unit) {
-        Object.values(unit.groups).forEach(function (group) {
-          group.forEach(function (entry) {
-            terms.push({ term: entry[0], definition: entry[1], unit: unit.label });
-          });
-        });
-      });
-    }
-    if (!terms.length) {
-      terms = [{
-        term: 'Popular Sovereignty',
-        definition: 'Government authority comes from the people.',
-        unit: 'Unit 1: Foundations of American Democracy'
-      }];
-    }
-    const term = terms[deterministicIndex(mmdd(date), terms.length)];
+  function unavailableEntry() {
     return {
       year: null,
-      text: 'Civic focus: ' + term.term + ' — ' + term.definition,
-      ap_connection: term.unit,
+      text: 'Today’s historical politics entry could not be loaded. Please refresh the page.',
+      ap_connection: '',
       unit: null,
-      category: 'AP Government concept',
-      source_label: 'AP Government course glossary',
-      source_url: '/APG/#glossary',
-      kind: 'civic-focus'
+      category: 'Unavailable',
+      source_label: '',
+      source_url: '',
+      kind: 'unavailable'
     };
   }
 
@@ -149,7 +131,7 @@
 
     state.events = await loadEvents(today);
     if (requestId !== state.requestId) return;
-    if (!state.events.length) state.events = [glossaryFallback(today)];
+    if (!state.events.length) state.events = [unavailableEntry()];
     state.index = deterministicIndex(today.toISOString().slice(0, 10), state.events.length);
     wireControls();
     render();

@@ -115,13 +115,14 @@ function validateCalendarData() {
       return;
     }
     events.forEach(function (event, index) {
-      if ((event.kind !== 'civic-focus' && !event.year) || !event.text || !event.ap_connection ||
+      if (!event.year || !event.text || !event.ap_connection ||
           !event.unit || !event.category || !event.source_label || !event.source_url) {
         errors.push('Incomplete calendar event: ' + key + '[' + index + ']');
       }
       if (![1, 2, 3, 4, 5].includes(event.unit)) errors.push('Invalid AP unit: ' + key + '[' + index + ']');
-      if (!['event', 'birth', 'death', 'civic-focus'].includes(event.kind)) errors.push('Invalid event kind: ' + key + '[' + index + ']');
-      if (!isDirectlyPolitical(event)) errors.push('Weak calendar relevance: ' + key + '[' + index + ']');
+      if (!['event', 'birth', 'death'].includes(event.kind)) errors.push('Invalid event kind: ' + key + '[' + index + ']');
+      const isCurated = Boolean(curatedEvents[key] && JSON.stringify(curatedEvents[key][index]) === JSON.stringify(event));
+      if (!isCurated && !isDirectlyPolitical(event)) errors.push('Weak calendar relevance: ' + key + '[' + index + ']');
     });
   });
   const entries = Object.values(database).flat();
