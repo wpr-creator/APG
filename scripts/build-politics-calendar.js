@@ -14,29 +14,6 @@ const outputFile = path.join(root, 'us-politics-events.json');
 const existing = JSON.parse(fs.readFileSync(outputFile, 'utf8'));
 const endpoint = 'https://byabbe.se/on-this-day/';
 
-const civicFocus = [
-  ['Popular Sovereignty', 'Government authority comes from the people.', 'Unit 1', 'Constitutional foundations'],
-  ['Rule of Law', 'Public officials and citizens are bound by the law.', 'Unit 1', 'Constitutional foundations'],
-  ['Federalism', 'Power is divided between national and state governments.', 'Unit 1', 'Federalism'],
-  ['Separation of Powers', 'Legislative, executive, and judicial powers are assigned to different branches.', 'Unit 1', 'Constitutional foundations'],
-  ['Checks and Balances', 'Each branch has tools to limit the power of the others.', 'Unit 1', 'Constitutional foundations'],
-  ['Judicial Review', 'Courts may invalidate government actions that conflict with the Constitution.', 'Unit 2', 'Judicial branch'],
-  ['Congressional Oversight', 'Congress monitors executive agencies and implementation of federal law.', 'Unit 2', 'Congress'],
-  ['Executive Orders', 'Presidents direct executive-branch operations without passing a new statute.', 'Unit 2', 'Presidency'],
-  ['Bureaucratic Discretion', 'Agencies make choices about how laws and regulations are implemented.', 'Unit 2', 'Bureaucracy'],
-  ['Selective Incorporation', 'Most Bill of Rights protections apply to states through the Fourteenth Amendment.', 'Unit 3', 'Civil liberties'],
-  ['Due Process', 'Government must use fair procedures before depriving a person of life, liberty, or property.', 'Unit 3', 'Civil liberties'],
-  ['Equal Protection', 'States must provide equal protection of the laws.', 'Unit 3', 'Civil rights'],
-  ['Political Socialization', 'Families, schools, peers, and media shape political beliefs.', 'Unit 4', 'Political beliefs'],
-  ['Public Opinion', 'The public’s political attitudes influence elections and policymaking.', 'Unit 4', 'Public opinion'],
-  ['Linkage Institutions', 'Parties, elections, interest groups, and media connect people to government.', 'Unit 5', 'Political participation'],
-  ['Voter Turnout', 'Rules, resources, mobilization, and political interest affect participation.', 'Unit 5', 'Elections'],
-  ['Interest Groups', 'Organized groups seek to influence public policy without directly controlling government.', 'Unit 5', 'Political participation'],
-  ['Campaign Finance', 'Rules governing political money shape electoral competition and political speech.', 'Unit 5', 'Elections'],
-  ['Agenda Setting', 'Political institutions and media influence which issues receive public attention.', 'Unit 5', 'Media'],
-  ['Political Accountability', 'Elections, oversight, courts, and public scrutiny allow officials to be held responsible.', 'Unit 5', 'Political participation']
-];
-
 const strongUsPattern = /\bunited states\b|\bu\.s\.(?=\s|$)|\bwashington, d\.c\.|\bwhite house\b|\bsupreme court of the united states\b|\bu\.s\. state\b|\bamerican civil war\b|\bamerican revolutionary war\b|\bthirteen colonies\b|\bcontinental congress\b|\bfederal reserve\b/i;
 const usPlacePattern = /\b(alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|west virginia|wisconsin|wyoming|the pentagon)\b/i;
 const americanPoliticalPattern = /\bAmerican\b.*\b(president|vice president|politic|government|governor|senator|representative|congress|supreme court|justice|constitution|amendment|election|voting|suffrage|civil rights|cabinet|secretary of state|attorney general)\b|\b(president|vice president|politic|government|governor|senator|representative|congress|supreme court|justice|constitution|amendment|election|voting|suffrage|civil rights|cabinet|secretary of state|attorney general)\b.*\bAmerican\b/i;
@@ -139,21 +116,6 @@ function similar(a, b) {
   return overlap >= 3 && overlap / Math.max(1, Math.min(left.size, right.size)) >= 0.35;
 }
 
-function civicEntry(key) {
-  const numeric = Number(key.replace('-', ''));
-  const focus = civicFocus[numeric % civicFocus.length];
-  return {
-    year: null,
-    text: 'Civic focus: ' + focus[0] + ' — ' + focus[1],
-    ap_connection: focus[2] + '; ' + focus[3],
-    unit: Number(focus[2].replace('Unit ', '')),
-    category: focus[3],
-    source_label: 'AP Government course glossary',
-    source_url: '/APG/#glossary',
-    kind: 'civic-focus'
-  };
-}
-
 async function fetchCategory(key, category, attempt) {
   try {
     const response = await fetch(endpoint + apiDate(key, category), { headers: { 'User-Agent': 'APG-calendar-builder/1.0' } });
@@ -227,7 +189,7 @@ async function buildDay(key) {
     if (selected.length >= 3) return;
     if (!selected.some(function (current) { return similar(current, event); })) selected.push(event);
   });
-  if (!selected.length) selected.push(civicEntry(key));
+  if (!selected.length) throw new Error('No researched historical politics event found for ' + key);
   return selected;
 }
 
@@ -257,8 +219,7 @@ async function main() {
   fs.writeFileSync(outputFile, JSON.stringify(ordered, null, 2) + '\n');
 
   const entries = Object.values(ordered).flat();
-  const civic = entries.filter(function (event) { return event.kind === 'civic-focus'; }).length;
-  console.log('Wrote ' + entries.length + ' entries across ' + keys.length + ' dates (' + civic + ' civic-focus fallbacks).');
+  console.log('Wrote ' + entries.length + ' historical entries across ' + keys.length + ' dates.');
 }
 
 main().catch(function (error) {
