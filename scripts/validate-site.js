@@ -82,6 +82,49 @@ function validateSocialMetadata() {
   }
 }
 
+function validateSharedCourseExperience() {
+  const requiredFiles = [
+    'styles-gov-theme.css',
+    'unit0.html',
+    'agenda.html',
+    'agenda.js',
+    'presidential-library.html',
+    'presidential-library.js',
+    'presidential-yearbook.html',
+    'civic-selfie.html',
+    'extensions.html',
+    'assets/presidents/president-facts.json',
+    'assets/assignments/civic-selfie-example.png',
+    'assets/assignments/presidential-yearbook-color-example.png',
+    'assets/assignments/presidential-yearbook-word-example.png'
+  ];
+  requiredFiles.forEach(function (file) {
+    if (!fs.existsSync(path.join(root, file))) errors.push('Missing shared GOV/APG experience: ' + file);
+  });
+
+  const unitZero = fs.readFileSync(path.join(root, 'unit0.html'), 'utf8');
+  [
+    'Already in Session',
+    'Read the Fine Print',
+    'Pack Your Field Guides',
+    'Portrait Day',
+    'Show Your Work',
+    'Complete The Presidential Yearbook',
+    'Complete the Civics Field Test and Unit 0 synthesis'
+  ].forEach(function (content) {
+    if (!unitZero.includes(content)) errors.push('Unit 0 shared content changed or missing: ' + content);
+  });
+
+  const rootPages = files.filter(function (file) {
+    return file.endsWith('.html') && path.dirname(file) === root;
+  });
+  rootPages.forEach(function (file) {
+    if (!fs.readFileSync(file, 'utf8').includes('styles-gov-theme.css')) {
+      errors.push('Root page is missing the shared visual theme: ' + relative(file));
+    }
+  });
+}
+
 function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -134,6 +177,7 @@ validateJavaScript();
 validateJson();
 validateLocalReferences();
 validateSocialMetadata();
+validateSharedCourseExperience();
 validateCalendarData();
 
 if (errors.length) {

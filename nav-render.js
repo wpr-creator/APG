@@ -33,6 +33,15 @@
 
 const NAV_STATIC_TABS = [
   {
+    label: "Start",
+    items: [
+      { label: "Unit 0 · First Bell", href: "unit0.html" },
+      { label: "Agenda", href: "agenda.html" },
+      { label: "Presidential Library", href: "presidential-library.html" },
+      { label: "Extensions", href: "extensions.html" }
+    ]
+  },
+  {
     label: "Review",
     items: [
       { label: "FRQ Guide & Cases", href: "#review" },
