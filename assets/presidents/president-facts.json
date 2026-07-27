@@ -1,0 +1,1552 @@
+{
+  "note": "Student-ready key facts for the Portrait Day design activity. Action lists include major achievements, consequential choices, and important controversies when needed for historical accuracy.",
+  "generated": "2026-07-25T14:13:19.033Z",
+  "count": 45,
+  "presidents": [
+    {
+      "name": "George Washington",
+      "order": "1",
+      "yearsInOffice": "1789–1797",
+      "portrait": "assets/presidents/george-washington.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "No college degree; trained as a surveyor",
+      "careerBeforePresidency": "Surveyor, Soldier, Planter",
+      "keyAccomplishments": [
+        "Created the presidential Cabinet, the president’s group of top advisers",
+        "Set the two-term example that later presidents followed",
+        "Kept the nation out of war between European powers"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The basis of our political systems is the right of the people to make and to alter their constitutions of government.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/farewell-address",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The Constitution which at any time exists, till changed by an explicit and authentic act of the whole people, is sacredly obligatory upon all.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/farewell-address",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": {
+        "text": "Washington stepped down after two terms. The Twenty-Second Amendment later made a two-election limit part of the Constitution.",
+        "sourceLabel": "NATIONAL ARCHIVES",
+        "sourceUrl": "https://www.archives.gov/founding-docs/amendments-11-27"
+      },
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/george-washington/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Gilbert_Stuart_Williamstown_Portrait_of_George_Washington.jpg"
+      }
+    },
+    {
+      "name": "John Adams",
+      "order": "2",
+      "yearsInOffice": "1797–1801",
+      "portrait": "assets/presidents/john-adams.jpg",
+      "birthplace": "Massachusetts",
+      "religion": "Unitarian (Christian)",
+      "education": "Harvard College",
+      "careerBeforePresidency": "Teacher, Lawyer",
+      "keyAccomplishments": [
+        "Strengthened the Navy",
+        "Avoided full war with France",
+        "Signed the controversial Alien and Sedition Acts"
+      ],
+      "importantQuotes": [
+        {
+          "text": "A government of laws, and not of men.",
+          "sourceUrl": "https://malegislature.gov/Laws/Constitution",
+          "sourceLabel": "MASSACHUSETTS CONSTITUTION"
+        },
+        {
+          "text": "May none but honest and wise men ever rule under this roof.",
+          "sourceUrl": "https://founders.archives.gov/documents/Adams/04-14-02-0198",
+          "sourceLabel": "FOUNDERS ONLINE"
+        }
+      ],
+      "presentDayConnection": {
+        "text": "PAST → PRESENT (AS OF JULY 2026): President Trump invoked the Alien Enemies Act—one of four laws known together as the Alien and Sedition Acts. Courts have considered how that 1798 wartime law may be used today.",
+        "sourceLabel": "READ THE 2025 PROCLAMATION",
+        "sourceUrl": "https://www.whitehouse.gov/presidential-actions/2025/03/invocation-of-the-alien-enemies-act-regarding-the-invasion-of-the-united-states-by-tren-de-aragua/",
+        "secondSourceLabel": "READ THE 2025 SUPREME COURT ORDER",
+        "secondSourceUrl": "https://www.supremecourt.gov/opinions/24pdf/24a931_2c83.pdf"
+      },
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/john-adams/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:John_Adams_A18236.jpg"
+      }
+    },
+    {
+      "name": "Thomas Jefferson",
+      "order": "3",
+      "yearsInOffice": "1801–1809",
+      "portrait": "assets/presidents/thomas-jefferson.jpg",
+      "birthplace": "Virginia",
+      "religion": "No official church; influenced by Deism and Unitarian Christianity",
+      "education": "College of William and Mary",
+      "careerBeforePresidency": "Lawyer, Planter",
+      "keyAccomplishments": [
+        "Completed the Louisiana Purchase",
+        "Sponsored the Lewis and Clark expedition",
+        "Used the controversial Embargo Act"
+      ],
+      "importantQuotes": [
+        {
+          "text": "We hold these truths to be self-evident, that all men are created equal.",
+          "sourceUrl": "https://www.archives.gov/founding-docs/declaration-transcript",
+          "sourceLabel": "NATIONAL ARCHIVES"
+        },
+        {
+          "text": "Governments are instituted among Men, deriving their just powers from the consent of the governed.",
+          "sourceUrl": "https://www.archives.gov/founding-docs/declaration-transcript",
+          "sourceLabel": "NATIONAL ARCHIVES"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/thomas-jefferson/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Official_Presidential_portrait_of_Thomas_Jefferson_(by_Rembrandt_Peale,_1800)(cropped).jpg"
+      }
+    },
+    {
+      "name": "James Madison",
+      "order": "4",
+      "yearsInOffice": "1809–1817",
+      "portrait": "assets/presidents/james-madison.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "College of New Jersey, now Princeton",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Led the country during the War of 1812",
+        "Supported rebuilding national money and banking system",
+        "Approved the Second Bank of the United States"
+      ],
+      "importantQuotes": [
+        {
+          "text": "If men were angels, no government would be necessary.",
+          "sourceUrl": "https://guides.loc.gov/federalist-papers/text-51-60#s-lg-box-wrapper-25493427",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        },
+        {
+          "text": "Justice is the end of government. It is the end of civil society.",
+          "sourceUrl": "https://guides.loc.gov/federalist-papers/text-51-60#s-lg-box-wrapper-25493427",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-madison/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:James_Madison.jpg"
+      }
+    },
+    {
+      "name": "James Monroe",
+      "order": "5",
+      "yearsInOffice": "1817–1825",
+      "portrait": "assets/presidents/james-monroe.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "College of William and Mary; studied law under Jefferson",
+      "careerBeforePresidency": "Lawyer, Soldier",
+      "keyAccomplishments": [
+        "Issued the Monroe Doctrine",
+        "Signed the Missouri Compromise",
+        "Oversaw the acquisition of Florida"
+      ],
+      "importantQuotes": [
+        {
+          "text": "National honor is national property of the highest value.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-23",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Let us by all wise and constitutional measures promote intelligence among the people as the best means of preserving our liberties.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-23",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-monroe/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:James_Monroe_by_Gilbert_Stuart_c1817.jpg"
+      }
+    },
+    {
+      "name": "John Quincy Adams",
+      "order": "6",
+      "yearsInOffice": "1825–1829",
+      "portrait": "assets/presidents/john-quincy-adams.jpg",
+      "birthplace": "Massachusetts",
+      "religion": "Unitarian (Christian)",
+      "education": "Harvard College",
+      "careerBeforePresidency": "Lawyer, Senator, Diplomat",
+      "keyAccomplishments": [
+        "Promoted roads, canals, science, and education",
+        "Supported a national observatory",
+        "Faced strong congressional opposition"
+      ],
+      "importantQuotes": [
+        {
+          "text": "But she goes not abroad, in search of monsters to destroy.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-secretary-state-john-quincy-adams-the-occasion-reading-the-declaration",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "She is the well-wisher to the freedom and independence of all.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-secretary-state-john-quincy-adams-the-occasion-reading-the-declaration",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/john-quincy-adams/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:John_Q._Adams-edit.jpg"
+      }
+    },
+    {
+      "name": "Andrew Jackson",
+      "order": "7",
+      "yearsInOffice": "1829–1837",
+      "portrait": "assets/presidents/andrew-jackson.jpg",
+      "birthplace": "South Carolina (claimed; the exact state is disputed)",
+      "religion": "Presbyterian (Christian)",
+      "education": "Limited formal schooling; studied law",
+      "careerBeforePresidency": "Lawyer, Soldier",
+      "keyAccomplishments": [
+        "Expanded presidential power",
+        "Vetoed the national bank",
+        "Enforced the destructive Indian Removal policy"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our Federal Union: It must be preserved.",
+          "sourceUrl": "https://millercenter.org/president/jackson/domestic-affairs",
+          "sourceLabel": "MILLER CENTER"
+        },
+        {
+          "text": "That this was intended to be a government of limited and specific, and not general, powers must be admitted by all.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/first-annual-message-3",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/andrew-jackson/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Andrew_jackson_head.jpg"
+      }
+    },
+    {
+      "name": "Martin Van Buren",
+      "order": "8",
+      "yearsInOffice": "1837–1841",
+      "portrait": "assets/presidents/martin-van-buren.jpg",
+      "birthplace": "New York",
+      "religion": "Dutch Reformed (Christian)",
+      "education": "Local schools; legal apprenticeship",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Created the Independent Treasury",
+        "Defended party organization",
+        "Struggled with the Panic of 1837"
+      ],
+      "importantQuotes": [
+        {
+          "text": "I bring with me a settled purpose to maintain the institutions of my country.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-28",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Conscious of but one desire, faithfully to serve my country, I throw myself without fear on its justice and its kindness.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-28",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/martin-van-buren/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Martin_Van_Buren_by_Mathew_Brady_c1855-58_sepia_original_restored.jpg"
+      }
+    },
+    {
+      "name": "William Henry Harrison",
+      "order": "9",
+      "yearsInOffice": "1841",
+      "portrait": "assets/presidents/william-henry-harrison.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "Hampden-Sydney College and medical study at Pennsylvania; no degree",
+      "careerBeforePresidency": "Army officer, territorial governor, and U.S. senator",
+      "keyAccomplishments": [
+        "Delivered the longest inaugural address",
+        "Served only 31 days",
+        "His death tested rules for replacing a president"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The only legitimate right to govern is an express grant of power from the governed.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-29",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The Constitution of the United States is the instrument containing this grant of power to the several departments composing the Government.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-29",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/william-henry-harrison/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:William_Henry_Harrison_by_James_Reid_Lambdin,_1835.jpg"
+      }
+    },
+    {
+      "name": "John Tyler",
+      "order": "10",
+      "yearsInOffice": "1841–1845",
+      "portrait": "assets/presidents/john-tyler.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "College of William and Mary",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Established that the vice president fully becomes president",
+        "Supported adding Texas to the United States",
+        "Broke with his own Whig Party"
+      ],
+      "importantQuotes": [
+        {
+          "text": "This same occurrence has subjected the wisdom and sufficiency of our institutions to a new test.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "I shall place in the intelligence and patriotism of the people my only sure reliance.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/john-tyler/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:WHOportTyler.jpg"
+      }
+    },
+    {
+      "name": "James K. Polk",
+      "order": "11",
+      "yearsInOffice": "1845–1849",
+      "portrait": "assets/presidents/james-k-polk.jpg",
+      "birthplace": "North Carolina",
+      "religion": "Presbyterian (Christian)",
+      "education": "University of North Carolina",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Settled the Oregon boundary",
+        "Expanded U.S. territory after the Mexican-American War",
+        "Created an independent treasury"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The Constitution itself...will be the chart by which I shall be directed.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-30",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The Government of the United States is one of delegated and limited powers.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-30",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-knox-polk/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:JamesKnoxPolk.jpg"
+      }
+    },
+    {
+      "name": "Zachary Taylor",
+      "order": "12",
+      "yearsInOffice": "1849–1850",
+      "portrait": "assets/presidents/zachary-taylor.jpg",
+      "birthplace": "Virginia",
+      "religion": "Episcopalian (Christian)",
+      "education": "Limited formal schooling; career military training",
+      "careerBeforePresidency": "Soldier",
+      "keyAccomplishments": [
+        "Opposed expanding slavery into western territories",
+        "Threatened force against secession",
+        "Died after 16 months"
+      ],
+      "importantQuotes": [
+        {
+          "text": "In the discharge of these duties my guide will be the Constitution.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-31",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "To exhaust every resort of honorable diplomacy before appealing to arms.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-31",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/zachary-taylor/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Zachary_Taylor_2.jpg"
+      }
+    },
+    {
+      "name": "Millard Fillmore",
+      "order": "13",
+      "yearsInOffice": "1850–1853",
+      "portrait": "assets/presidents/millard-fillmore.jpg",
+      "birthplace": "New York",
+      "religion": "Unitarian (Christian)",
+      "education": "Limited formal schooling; legal apprenticeship",
+      "careerBeforePresidency": "Woolcarder, Lawyer",
+      "keyAccomplishments": [
+        "Signed the Compromise of 1850",
+        "Enforced the Fugitive Slave Act",
+        "Sent the expedition that opened relations with Japan"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The Constitution has made it the duty of the President to take care that the laws be faithfully executed.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/first-annual-message-7",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "In a government like ours, all laws are passed by a majority of the representatives of the people.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/first-annual-message-7",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/millard-fillmore/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Millard_Fillmore.jpg"
+      }
+    },
+    {
+      "name": "Franklin Pierce",
+      "order": "14",
+      "yearsInOffice": "1853–1857",
+      "portrait": "assets/presidents/franklin-pierce.jpg",
+      "birthplace": "New Hampshire",
+      "religion": "Episcopalian (Christian)",
+      "education": "Bowdoin College",
+      "careerBeforePresidency": "Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Signed the Gadsden Purchase",
+        "Signed the Kansas-Nebraska Act",
+        "Saw violent conflict between the North and South intensify"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The dangers of a concentration of all power in the general government of a confederacy so vast as ours are too obvious to be disregarded.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-32",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Beautiful as our fabric is, no earthly power or wisdom could ever reunite its broken fragments.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-32",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/franklin-pierce/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Franklin_Pierce.jpg"
+      }
+    },
+    {
+      "name": "James Buchanan",
+      "order": "15",
+      "yearsInOffice": "1857–1861",
+      "portrait": "assets/presidents/james-buchanan.jpg",
+      "birthplace": "Pennsylvania",
+      "religion": "Presbyterian (Christian)",
+      "education": "Dickinson College",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Supported the proslavery Lecompton Constitution",
+        "Failed to stop the crisis over states leaving the United States",
+        "Remained in office as seven states left the United States"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our own country could alone have exhibited so grand and striking a spectacle of the capacity of man for self-government.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-33",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "May we not, then, hope that the long agitation on this subject is approaching its end?",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-33",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-buchanan/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:James_Buchanan_(cropped).jpg"
+      }
+    },
+    {
+      "name": "Abraham Lincoln",
+      "order": "16",
+      "yearsInOffice": "1861–1865",
+      "portrait": "assets/presidents/abraham-lincoln.jpg",
+      "birthplace": "Kentucky",
+      "religion": "No official church membership",
+      "education": "About one year of formal schooling; self-educated in law",
+      "careerBeforePresidency": "Farmer, Lawyer",
+      "keyAccomplishments": [
+        "Preserved the Union",
+        "Issued the Emancipation Proclamation",
+        "Advanced the Thirteenth Amendment"
+      ],
+      "importantQuotes": [
+        {
+          "text": "A house divided against itself cannot stand.",
+          "sourceUrl": "https://www.loc.gov/exhibits/lincoln/ext/al0030.html",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        },
+        {
+          "text": "With malice toward none, with charity for all.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-35",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/abraham-lincoln/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Abraham_Lincoln_O-77_matte_collodion_print.jpg"
+      }
+    },
+    {
+      "name": "Andrew Johnson",
+      "order": "17",
+      "yearsInOffice": "1865–1869",
+      "portrait": "assets/presidents/andrew-johnson.jpg",
+      "birthplace": "North Carolina",
+      "religion": "No official church membership",
+      "education": "No formal schooling; self-educated",
+      "careerBeforePresidency": "Tailor, Public Official",
+      "keyAccomplishments": [
+        "Completed the Alaska purchase",
+        "Clashed with Congress over Reconstruction",
+        "Became the first impeached president"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The message or declaration must be made by the acts as they transpire.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states-0",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Duties have been mine; consequences are God's.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states-0",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/andrew-johnson/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:President_Andrew_Johnson.jpg"
+      }
+    },
+    {
+      "name": "Ulysses S. Grant",
+      "order": "18",
+      "yearsInOffice": "1869–1877",
+      "portrait": "assets/presidents/ulysses-s-grant.jpg",
+      "birthplace": "Ohio",
+      "religion": "Methodist (Christian)",
+      "education": "United States Military Academy at West Point",
+      "careerBeforePresidency": "Army officer and commanding general of the U.S. Army",
+      "keyAccomplishments": [
+        "Enforced civil rights during Reconstruction, the effort to rebuild after the Civil War",
+        "Suppressed the Ku Klux Klan",
+        "Signed the law creating Yellowstone"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Let us have peace.",
+          "sourceUrl": "https://www.loc.gov/resource/rbpe.20802000/?st=text",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        },
+        {
+          "text": "The question of suffrage is one which is likely to agitate the public so long as a portion of the citizens of the nation are excluded from its privileges.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/second-inaugural-address-1",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/ulysses-s-grant/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Ulysses_S._Grant_1870-1880.jpg"
+      }
+    },
+    {
+      "name": "Rutherford B. Hayes",
+      "order": "19",
+      "yearsInOffice": "1877–1881",
+      "portrait": "assets/presidents/rutherford-b-hayes.jpg",
+      "birthplace": "Ohio",
+      "religion": "Methodist (Christian)",
+      "education": "Kenyon College and Harvard Law School",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Promoted civil-service reform, or government hiring based on skill",
+        "Withdrew federal troops from the South",
+        "Tried to reconcile postwar divisions"
+      ],
+      "importantQuotes": [
+        {
+          "text": "He serves his party best who serves the country best.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-38",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The permanent pacification of the country upon such principles and by such measures as will secure the complete protection of all its citizens.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-38",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/rutherford-b-hayes/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:President_Rutherford_Hayes_1870_-_1880_Restored.jpg"
+      }
+    },
+    {
+      "name": "James A. Garfield",
+      "order": "20",
+      "yearsInOffice": "1881",
+      "portrait": "assets/presidents/james-a-garfield.jpg",
+      "birthplace": "Ohio",
+      "religion": "Disciples of Christ (Christian)",
+      "education": "Williams College",
+      "careerBeforePresidency": "Teacher, Soldier, Public Official",
+      "keyAccomplishments": [
+        "Challenged the patronage system of giving government jobs to political supporters",
+        "Defended federal education and civil rights",
+        "Was assassinated months after taking office"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The Constitution guarantees absolute religious freedom.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-40",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The elevation of the Negro race from slavery to the full rights of citizenship is the most important political change we have known since the adoption of the Constitution.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-40",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-abram-garfield/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:James_Abram_Garfield,_photo_portrait_seated.jpg"
+      }
+    },
+    {
+      "name": "Chester A. Arthur",
+      "order": "21",
+      "yearsInOffice": "1881–1885",
+      "portrait": "assets/presidents/chester-a-arthur.jpg",
+      "birthplace": "Vermont",
+      "religion": "Episcopalian (Christian)",
+      "education": "Union College; studied law",
+      "careerBeforePresidency": "Teacher, Lawyer",
+      "keyAccomplishments": [
+        "Signed the Pendleton Civil Service Act",
+        "Modernized the Navy",
+        "Signed the Chinese Exclusion Act"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The wisdom of our fathers, foreseeing even the most dire possibilities, made sure that the Government should never be imperiled because of the uncertainty of human life.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states-1",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Men may die, but the fabrics of our free institutions remain unshaken.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-upon-assuming-the-office-president-the-united-states-1",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/chester-alan-arthur/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Chester_A._Arthur_by_Abraham_Bogardus.jpg"
+      }
+    },
+    {
+      "name": "Grover Cleveland",
+      "order": "22 and 24",
+      "yearsInOffice": "1885–1889; 1893–1897",
+      "portrait": "assets/presidents/grover-cleveland.jpg",
+      "birthplace": "New Jersey",
+      "religion": "Presbyterian (Christian)",
+      "education": "No college degree; studied law",
+      "careerBeforePresidency": "Teacher, Lawyer",
+      "keyAccomplishments": [
+        "Served two nonconsecutive terms",
+        "Expanded federal regulation of railroads",
+        "Used the veto more than earlier presidents"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Public office is a public trust.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/message-accepting-the-resignation-secretary-the-treasury-daniel-manning",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "He mocks the people who proposes that the Government shall protect the rich and that they in turn will care for the laboring poor.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/veto-the-texas-seed-bill",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/grover-cleveland/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Grover_Cleveland_-_NARA_-_518139_(cropped).jpg"
+      }
+    },
+    {
+      "name": "Benjamin Harrison",
+      "order": "23",
+      "yearsInOffice": "1889–1893",
+      "portrait": "assets/presidents/benjamin-harrison.jpg",
+      "birthplace": "Ohio",
+      "religion": "Presbyterian (Christian)",
+      "education": "Miami University; studied law",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Signed the Sherman Antitrust Act",
+        "Admitted six new states",
+        "Expanded protected national forests"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The oath taken in the presence of the people becomes a mutual covenant.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-41",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The whole body of the people covenant with me and with each other to-day to support and defend the Constitution and the Union of the States.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-41",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/benjamin-harrison/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Benjamin_Harrison,_head_and_shoulders_bw_photo,_1896.jpg"
+      }
+    },
+    {
+      "name": "William McKinley",
+      "order": "25",
+      "yearsInOffice": "1897–1901",
+      "portrait": "assets/presidents/william-mckinley.jpg",
+      "birthplace": "Ohio",
+      "religion": "Methodist (Christian)",
+      "education": "Allegheny College and Albany Law School; no degree",
+      "careerBeforePresidency": "Teacher, Lawyer",
+      "keyAccomplishments": [
+        "Led the nation in the Spanish-American War",
+        "Signed the Gold Standard Act",
+        "Oversaw overseas expansion"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our differences are policies; our agreements, principles.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-43",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The people themselves, not their servants, can safely reverse their own deliberate judgment.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-43",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/william-mckinley/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:William_mckinley.jpg"
+      }
+    },
+    {
+      "name": "Theodore Roosevelt",
+      "order": "26",
+      "yearsInOffice": "1901–1909",
+      "portrait": "assets/presidents/theodore-roosevelt.jpg",
+      "birthplace": "New York",
+      "religion": "Dutch Reformed (Christian)",
+      "education": "Harvard College; attended Columbia Law School",
+      "careerBeforePresidency": "Writer, Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Broke up powerful business monopolies",
+        "Expanded conservation and national parks",
+        "Advanced construction of the Panama Canal"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The first requisite of a good citizen in this Republic of ours is that he shall be able and willing to pull his weight.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/remarks-new-york-city-the-occasion-the-unveiling-the-bust-philip-sheridan",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Speak softly and carry a big stick; you will go far.",
+          "sourceUrl": "https://www.loc.gov/pictures/item/2011649384/",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/theodore-roosevelt/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Theodore_Roosevelt_by_the_Pach_Bros.jpg"
+      }
+    },
+    {
+      "name": "William Howard Taft",
+      "order": "27",
+      "yearsInOffice": "1909–1913",
+      "portrait": "assets/presidents/william-howard-taft.jpg",
+      "birthplace": "Ohio",
+      "religion": "Unitarian (Christian)",
+      "education": "Yale College and Cincinnati Law School",
+      "careerBeforePresidency": "Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Filed major antitrust, or anti-monopoly cases",
+        "Supported the income-tax amendment",
+        "Later became chief justice"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our international policy is always to promote peace.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-44",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The welfare of the farmer is vital to that of the whole country.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/executive-order-1146-establishing-the-country-life-commission",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/william-howard-taft/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Cabinet_card_of_William_Howard_Taft_by_Pach_Brothers_-_Cropped_to_image.jpg"
+      }
+    },
+    {
+      "name": "Woodrow Wilson",
+      "order": "28",
+      "yearsInOffice": "1913–1921",
+      "portrait": "assets/presidents/woodrow-wilson.jpg",
+      "birthplace": "Virginia",
+      "religion": "Presbyterian (Christian)",
+      "education": "Princeton University and Johns Hopkins University; attended Virginia Law",
+      "careerBeforePresidency": "Lawyer, Professor, College Administrator, Public Official",
+      "keyAccomplishments": [
+        "Created the Federal Reserve, the nation’s central banking system",
+        "Led the nation during World War I",
+        "Promoted the League of Nations while separating federal workers by race"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Justice, and only justice, shall always be our motto.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-47",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The firm basis of government is justice, not pity.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-47",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/woodrow-wilson/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Thomas_Woodrow_Wilson,_Harris_%26_Ewing_bw_photo_portrait,_1919.jpg"
+      }
+    },
+    {
+      "name": "Warren G. Harding",
+      "order": "29",
+      "yearsInOffice": "1921–1923",
+      "portrait": "assets/presidents/warren-g-harding.jpg",
+      "birthplace": "Ohio",
+      "religion": "Baptist (Christian)",
+      "education": "Ohio Central College",
+      "careerBeforePresidency": "Editor-Publisher",
+      "keyAccomplishments": [
+        "Created the federal Budget Bureau",
+        "Supported treaties that limited weapons after World War I",
+        "His administration was damaged by major scandals"
+      ],
+      "importantQuotes": [
+        {
+          "text": "America's present need is not heroics, but healing; not nostrums, but normalcy; not revolution, but restoration.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-home-market-club-boston-massachusetts",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "I accept my part with single-mindedness of purpose and humility of spirit.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-48",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/warren-g-harding/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Warren_G_Harding_portrait_as_senator_June_1920.jpg"
+      }
+    },
+    {
+      "name": "Calvin Coolidge",
+      "order": "30",
+      "yearsInOffice": "1923–1929",
+      "portrait": "assets/presidents/calvin-coolidge.jpg",
+      "birthplace": "Vermont",
+      "religion": "Congregationalist (Christian)",
+      "education": "Amherst College; studied law",
+      "careerBeforePresidency": "Lawyer",
+      "keyAccomplishments": [
+        "Signed major tax reductions",
+        "Supported the Kellogg-Briand Pact",
+        "Signed restrictive immigration legislation"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The chief business of the American people is business.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-the-american-society-newspaper-editors-washington-dc",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The government of a country never gets ahead of the religion of a country.",
+          "sourceUrl": "https://www.loc.gov/resource/coolidge.1925.0001/?sp=1",
+          "sourceLabel": "LIBRARY OF CONGRESS"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/calvin-coolidge/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:President_Calvin_Coolidge,_1924_portrait_photograph_(3x4_cropped).jpeg"
+      }
+    },
+    {
+      "name": "Herbert Hoover",
+      "order": "31",
+      "yearsInOffice": "1929–1933",
+      "portrait": "assets/presidents/herbert-hoover.jpg",
+      "birthplace": "Iowa",
+      "religion": "Quaker (Christian)",
+      "education": "Stanford University",
+      "careerBeforePresidency": "Engineer",
+      "keyAccomplishments": [
+        "Expanded public works during the Depression",
+        "Created the Reconstruction Finance Corporation",
+        "Failed to stop the economic collapse"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Absolute freedom of the press to discuss public questions is a foundation stone of American liberty.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/statement-the-freedom-the-press",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "We in America today are nearer to the final triumph over poverty than ever before in the history of any land.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/address-accepting-the-republican-presidential-nomination",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/herbert-clark-hoover/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:President_Hoover_portrait.jpg"
+      }
+    },
+    {
+      "name": "Franklin D. Roosevelt",
+      "order": "32",
+      "yearsInOffice": "1933–1945",
+      "portrait": "assets/presidents/franklin-d-roosevelt.jpg",
+      "birthplace": "New York",
+      "religion": "Episcopalian (Christian)",
+      "education": "Harvard College; attended Columbia Law School",
+      "careerBeforePresidency": "Public Official, Lawyer",
+      "keyAccomplishments": [
+        "Created New Deal relief and reform programs",
+        "Led the nation through most of World War II",
+        "Ordered the incarceration of Japanese Americans"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The only thing we have to fear is fear itself.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-8",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The measure of the restoration lies in the extent to which we apply social values more noble than mere monetary profit.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-8",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": {
+        "text": "Roosevelt’s order incarcerating Japanese Americans remains a warning about civil liberties during a crisis. In 2018, the Supreme Court said Korematsu was gravely wrong.",
+        "sourceLabel": "SUPREME COURT",
+        "sourceUrl": "https://www.supremecourt.gov/opinions/17pdf/17-965_h315.pdf"
+      },
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/franklin-d-roosevelt/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Vincenzo_Laviosa_-_Franklin_D._Roosevelt_-_Google_Art_Project.jpg"
+      }
+    },
+    {
+      "name": "Harry S. Truman",
+      "order": "33",
+      "yearsInOffice": "1945–1953",
+      "portrait": "assets/presidents/harry-s-truman.jpg",
+      "birthplace": "Missouri",
+      "religion": "Baptist (Christian)",
+      "education": "High school; attended business and law courses without a degree",
+      "careerBeforePresidency": "Farmer, Businessman, Public Official",
+      "keyAccomplishments": [
+        "Approved the Marshall Plan and NATO",
+        "Desegregated the armed forces",
+        "Authorized atomic bombs against Japan"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The buck stops here.",
+          "sourceUrl": "https://www.trumanlibrary.gov/education/trivia/buck-stops-here-sign",
+          "sourceLabel": "TRUMAN LIBRARY"
+        },
+        {
+          "text": "Democracy is based on the conviction that man has the moral and intellectual capacity, as well as the inalienable right, to govern himself with reason and justice.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-4",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/harry-s-truman/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:TRUMAN_58-766-06_(cropped).jpg"
+      }
+    },
+    {
+      "name": "Dwight D. Eisenhower",
+      "order": "34",
+      "yearsInOffice": "1953–1961",
+      "portrait": "assets/presidents/dwight-d-eisenhower.jpg",
+      "birthplace": "Texas",
+      "religion": "Presbyterian (Christian)",
+      "education": "United States Military Academy at West Point",
+      "careerBeforePresidency": "Soldier",
+      "keyAccomplishments": [
+        "Created the Interstate Highway System, the national network of major highways",
+        "Enforced school desegregation in Little Rock",
+        "Warned about the close relationship between the military, government, and defense companies"
+      ],
+      "importantQuotes": [
+        {
+          "text": "In the councils of government, we must guard against the acquisition of unwarranted influence, whether sought or unsought, by the military-industrial complex.",
+          "sourceUrl": "https://www.eisenhowerlibrary.gov/eisenhowers/quotes",
+          "sourceLabel": "EISENHOWER LIBRARY"
+        },
+        {
+          "text": "The potential for the disastrous rise of misplaced power exists and will persist.",
+          "sourceUrl": "https://www.eisenhowerlibrary.gov/eisenhowers/quotes",
+          "sourceLabel": "EISENHOWER LIBRARY"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/dwight-d-eisenhower/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Dwight_D._Eisenhower,_official_photo_portrait,_May_29,_1959.jpg"
+      }
+    },
+    {
+      "name": "John F. Kennedy",
+      "order": "35",
+      "yearsInOffice": "1961–1963",
+      "portrait": "assets/presidents/john-f-kennedy.jpg",
+      "birthplace": "Massachusetts",
+      "religion": "Roman Catholic (Christian)",
+      "education": "Harvard College",
+      "careerBeforePresidency": "Writer, Navy Officer, Journalist, Public Official",
+      "keyAccomplishments": [
+        "Created the Peace Corps",
+        "Managed the Cuban Missile Crisis",
+        "Committed the nation to a Moon landing"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Ask not what your country can do for you—ask what you can do for your country.",
+          "sourceUrl": "https://www.jfklibrary.org/node/11526",
+          "sourceLabel": "JFK LIBRARY"
+        },
+        {
+          "text": "We choose to go to the Moon in this decade and do the other things, not because they are easy, but because they are hard.",
+          "sourceUrl": "https://www.jfklibrary.org/archives/other-resources/john-f-kennedy-speeches/rice-university-19620912",
+          "sourceLabel": "JFK LIBRARY"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/john-fitzgerald-kennedy/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:John_F._Kennedy,_White_House_color_photo_portrait.jpg"
+      }
+    },
+    {
+      "name": "Lyndon B. Johnson",
+      "order": "36",
+      "yearsInOffice": "1963–1969",
+      "portrait": "assets/presidents/lyndon-b-johnson.jpg",
+      "birthplace": "Texas",
+      "religion": "Disciples of Christ (Christian)",
+      "education": "Southwest Texas State Teachers College",
+      "careerBeforePresidency": "Teacher, Public Official",
+      "keyAccomplishments": [
+        "Signed the Civil Rights and Voting Rights Acts",
+        "Created Medicare and Medicaid",
+        "Escalated the Vietnam War"
+      ],
+      "importantQuotes": [
+        {
+          "text": "We shall overcome.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/special-message-the-congress-the-american-promise",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The vote is the most powerful instrument ever devised by man for breaking down injustice.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/remarks-the-signing-the-voting-rights-act",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/lyndon-b-johnson/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Lyndon_B._Johnson,_photo_portrait,_leaning_on_chair,_color_cropped.jpg"
+      }
+    },
+    {
+      "name": "Richard Nixon",
+      "order": "37",
+      "yearsInOffice": "1969–1974",
+      "portrait": "assets/presidents/richard-nixon.jpg",
+      "birthplace": "California",
+      "religion": "Quaker (Christian)",
+      "education": "Whittier College and Duke Law School",
+      "careerBeforePresidency": "Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Opened relations with China",
+        "Created the Environmental Protection Agency",
+        "Resigned because of Watergate"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The greatest honor history can bestow is the title of peacemaker.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-1",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "We cannot learn from one another until we stop shouting at one another.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-1",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/richard-m-nixon/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Richard_Nixon_presidential_portrait.jpg"
+      }
+    },
+    {
+      "name": "Gerald Ford",
+      "order": "38",
+      "yearsInOffice": "1974–1977",
+      "portrait": "assets/presidents/gerald-ford.jpg",
+      "birthplace": "Nebraska",
+      "religion": "Episcopalian (Christian)",
+      "education": "University of Michigan and Yale Law School",
+      "careerBeforePresidency": "Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Helped stabilize government after Watergate",
+        "Signed the Helsinki Accords",
+        "Pardoned Richard Nixon"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our long national nightmare is over.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/remarks-taking-the-oath-office",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Our Constitution works; our great Republic is a government of laws and not of men.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/remarks-taking-the-oath-office",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/gerald-r-ford/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Gerald_Ford_presidential_portrait_(cropped).jpg"
+      }
+    },
+    {
+      "name": "Jimmy Carter",
+      "order": "39",
+      "yearsInOffice": "1977–1981",
+      "portrait": "assets/presidents/jimmy-carter.jpg",
+      "birthplace": "Georgia",
+      "religion": "Baptist (Christian)",
+      "education": "United States Naval Academy",
+      "careerBeforePresidency": "Farmer, Navy Officer, Public Official, Professor",
+      "keyAccomplishments": [
+        "Brokered the Camp David Accords",
+        "Signed the Panama Canal treaties",
+        "Made human rights central to foreign policy"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our Government must at the same time be both competent and compassionate.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-0",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "The powerful must not persecute the weak, and human dignity must be enhanced.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-0",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/james-earl-carter/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:JimmyCarterPortrait2.jpg"
+      }
+    },
+    {
+      "name": "Ronald Reagan",
+      "order": "40",
+      "yearsInOffice": "1981–1989",
+      "portrait": "assets/presidents/ronald-reagan.jpg",
+      "birthplace": "Illinois",
+      "religion": "Presbyterian (Christian)",
+      "education": "Eureka College",
+      "careerBeforePresidency": "Actor, Public Official",
+      "keyAccomplishments": [
+        "Signed major tax reductions",
+        "Increased military spending",
+        "Negotiated arms reductions with the Soviet Union"
+      ],
+      "importantQuotes": [
+        {
+          "text": "In this present crisis, government is not the solution to our problem; government is the problem.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-11",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "Government can and must provide opportunity, not smother it.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-11",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/ronald-w-reagan/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Ronald_Reagan_1981_presidential_portrait.jpg"
+      }
+    },
+    {
+      "name": "George H. W. Bush",
+      "order": "41",
+      "yearsInOffice": "1989–1993",
+      "portrait": "assets/presidents/george-h-w-bush.jpg",
+      "birthplace": "Massachusetts",
+      "religion": "Episcopalian (Christian)",
+      "education": "Yale University",
+      "careerBeforePresidency": "Navy Pilot, Businessman, Public Official",
+      "keyAccomplishments": [
+        "Led the coalition in the Gulf War",
+        "Signed the Americans with Disabilities Act",
+        "Managed the end of the Cold War"
+      ],
+      "importantQuotes": [
+        {
+          "text": "There is but one just use of power, and it is to serve people.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "A new breeze is blowing, and a world refreshed by freedom seems reborn.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/george-h-w-bush/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:George_H._W._Bush_presidential_portrait_(cropped).jpg"
+      }
+    },
+    {
+      "name": "Bill Clinton",
+      "order": "42",
+      "yearsInOffice": "1993–2001",
+      "portrait": "assets/presidents/bill-clinton.jpg",
+      "birthplace": "Arkansas",
+      "religion": "Baptist (Christian)",
+      "education": "Georgetown University, Oxford University, and Yale Law School",
+      "careerBeforePresidency": "Lawyer, Professor, Public Official",
+      "keyAccomplishments": [
+        "Presided over economic growth and budget surpluses",
+        "Signed NAFTA and welfare reform",
+        "Was impeached by the House but not removed by the Senate"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Our democracy must be not only the envy of the world but the engine of our own renewal.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "There is nothing wrong with America that cannot be cured by what is right with America.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-51",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/william-j-clinton/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Bill_Clinton.jpg"
+      }
+    },
+    {
+      "name": "George W. Bush",
+      "order": "43",
+      "yearsInOffice": "2001–2009",
+      "portrait": "assets/presidents/george-w-bush.jpg",
+      "birthplace": "Connecticut",
+      "religion": "Methodist (Christian)",
+      "education": "Yale University and Harvard Business School",
+      "careerBeforePresidency": "Businessman, Public Official",
+      "keyAccomplishments": [
+        "Led the response to the September 11 attacks",
+        "Launched wars in Afghanistan and Iraq",
+        "Created PEPFAR and expanded Medicare"
+      ],
+      "importantQuotes": [
+        {
+          "text": "Freedom itself was attacked this morning by a faceless coward, and freedom will be defended.",
+          "sourceUrl": "https://georgewbush-whitehouse.archives.gov/news/releases/2001/09/20010911.html",
+          "sourceLabel": "WHITE HOUSE ARCHIVE"
+        },
+        {
+          "text": "America has never been united by blood or birth or soil. We are bound by ideals that move us beyond our backgrounds.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-52",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/george-w-bush/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:George-W-Bush.jpeg"
+      }
+    },
+    {
+      "name": "Barack Obama",
+      "order": "44",
+      "yearsInOffice": "2009–2017",
+      "portrait": "assets/presidents/barack-obama.jpg",
+      "birthplace": "Hawaii",
+      "religion": "Protestant (Christian)",
+      "education": "Occidental College, Columbia University, and Harvard Law School",
+      "careerBeforePresidency": "Lawyer, Public Official",
+      "keyAccomplishments": [
+        "Signed the Affordable Care Act",
+        "Led recovery from the Great Recession",
+        "Signed financial-reform legislation"
+      ],
+      "importantQuotes": [
+        {
+          "text": "On this day, we gather because we have chosen hope over fear, unity of purpose over conflict and discord.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "We reject as false the choice between our safety and our ideals.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-5",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/barack-obama/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg"
+      }
+    },
+    {
+      "name": "Donald Trump",
+      "order": "45 and 47",
+      "yearsInOffice": "2017–2021; 2025–present",
+      "portrait": "assets/presidents/donald-trump.jpg",
+      "birthplace": "New York",
+      "religion": "Nondenominational Christian; formerly Presbyterian (Christian)",
+      "education": "Fordham University and University of Pennsylvania",
+      "careerBeforePresidency": "Real Estate Businessman and Reality TV Personality",
+      "keyAccomplishments": [
+        "Signed major tax reductions",
+        "Appointed three Supreme Court justices",
+        "Brokered the Abraham Accords",
+        "Second term remains ongoing"
+      ],
+      "importantQuotes": [
+        {
+          "text": "The forgotten men and women of our country will be forgotten no longer.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "What truly matters is not which party controls our government, but whether our government is controlled by the people.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-14",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/donald-j-trump/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025)_(cropped)(2).jpg"
+      }
+    },
+    {
+      "name": "Joe Biden",
+      "order": "46",
+      "yearsInOffice": "2021–2025",
+      "portrait": "assets/presidents/joe-biden.jpg",
+      "birthplace": "Pennsylvania",
+      "religion": "Roman Catholic (Christian)",
+      "education": "University of Delaware and Syracuse University College of Law",
+      "careerBeforePresidency": "Lawyer, Senator, Vice President",
+      "keyAccomplishments": [
+        "Signed major infrastructure and climate legislation",
+        "Signed the CHIPS and Science Act",
+        "Led U.S. support for Ukraine"
+      ],
+      "importantQuotes": [
+        {
+          "text": "This is America’s day. This is democracy’s day.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+          "sourceLabel": "PRIMARY SOURCE"
+        },
+        {
+          "text": "We must end this uncivil war that pits red against blue.",
+          "sourceUrl": "https://www.presidency.ucsb.edu/documents/inaugural-address-53",
+          "sourceLabel": "PRIMARY SOURCE"
+        }
+      ],
+      "presentDayConnection": null,
+      "sources": {
+        "biographyAndQuote": "https://ourwhitehouse.org/joseph-r-biden/",
+        "lifeBeforePresidency": "https://millercenter.org/president",
+        "religiousAffiliation": "https://www.pewresearch.org/religion/2009/01/15/the-religious-affiliations-of-us-presidents/",
+        "portrait": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg"
+      }
+    }
+  ]
+}
