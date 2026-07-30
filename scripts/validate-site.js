@@ -119,9 +119,41 @@ function validateSharedCourseExperience() {
     return file.endsWith('.html') && path.dirname(file) === root;
   });
   rootPages.forEach(function (file) {
-    if (!fs.readFileSync(file, 'utf8').includes('styles-gov-theme.css')) {
+    const html = fs.readFileSync(file, 'utf8');
+    const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
+    if (!isNewShell && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
+  });
+
+  const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  [
+    'data-view-link="home"',
+    'data-view-link="agenda"',
+    'data-view-link="units"',
+    'data-view-link="foundations"',
+    'data-view-link="words"',
+    'data-view-link="skills"',
+    'https://classroom.google.com/c/ODcxMDM2NTk5NjI1',
+    '<code>wxe36xms</code>'
+  ].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
+  });
+
+  const courseData = fs.readFileSync(path.join(root, 'course-data.js'), 'utf8');
+  const apUnits = courseData.match(/id: "gov-[0-5]"/g) || [];
+  if (apUnits.length !== 6) errors.push('APG shell must contain Unit 0 and AP Units 1–5.');
+  [
+    '0.1 — Already in Session',
+    '0.2 — Read the Fine Print',
+    '0.3 — Pack Your Field Guides',
+    '0.4 — Portrait Day',
+    '0.5 — Show Your Work',
+    'Complete the signed syllabus, Self-Guided Tour, and Civic Selfie',
+    'Complete The Presidential Yearbook',
+    'Complete the Civics Field Test and Unit 0 synthesis'
+  ].forEach(function (content) {
+    if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
   });
 }
 

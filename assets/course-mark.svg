@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">AP United States Government course mark</title>
+  <desc id="desc">A simplified warm white civic building with three columns on a muted navy field.</desc>
+  <rect width="64" height="64" rx="12" fill="#182838"/>
+  <path d="M10 22 32 9l22 13H10Z" fill="#fffdf8"/>
+  <path d="M13 25h38v5H13zm4 8h6v17h-6zm12 0h6v17h-6zm12 0h6v17h-6zM10 53h44v4H10z" fill="#dce5eb"/>
+  <rect x="10" y="57" width="44" height="3" fill="#9f5555"/>
+</svg>
