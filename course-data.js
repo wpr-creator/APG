@@ -9,7 +9,8 @@ window.COURSE_DATA = {
         ["0.2 — Read the Fine Print", "How will this class work?", "Course launch", "Review the syllabus and classroom expectations, then learn how to navigate course resources.", "Complete the signed syllabus, Self-Guided Tour, and Civic Selfie"],
         ["0.3 — Pack Your Field Guides", "What do I already believe and know about government?", "Course launch", "Complete the PEW Political Typology, reflect on the result, review the course outline, and check essential government knowledge.", "Complete Between the Lines and begin the Civics Field Guide"],
         ["0.4 — Portrait Day", "What can presidents reveal about American government?", "Prepares for Gov 12.4.4", "Explore the presidency through research, art, and a shared classroom display.", "Complete The Presidential Yearbook"],
-        ["0.5 — Show Your Work", "What have I learned so far?", "Course launch", "Complete the civics assessment, bring together what you learned in Unit 0, and finish outstanding work.", "Complete the Civics Field Test and Unit 0 synthesis"]
+        ["0.5 — Show Your Work", "What do I already know—and what tools will help me grow?", "Course baseline", "Complete the civics assessment and organize the AP course tools you will use throughout the year.", "Complete the Civics Field Test and AP Addendum"],
+        ["0.6 — Prove Your Case", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Complete the AP course baseline, then use a short political source to make a claim supported by specific evidence.", "Complete the AP Addendum Test and Evidence in Action"]
       ],
       resources: [
         { id: "classroom", lesson: "0.1 — ALREADY IN SESSION", title: "JOIN GOOGLE CLASSROOM", url: "https://classroom.google.com/c/ODcxMDM2NTk5NjI1" },
@@ -23,7 +24,9 @@ window.COURSE_DATA = {
         { id: "presidential-yearbook", lesson: "0.4 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.4 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "0.5 — SHOW YOUR WORK", title: "CIVICS FIELD TEST", url: "" },
-        { id: "unit-0-synthesis", lesson: "0.5 — SHOW YOUR WORK", title: "UNIT 0 SYNTHESIS", url: "" }
+        { id: "ap-addendum", lesson: "0.5 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "" },
+        { id: "ap-addendum-test", lesson: "0.6 — PROVE YOUR CASE", title: "AP ADDENDUM TEST", url: "" },
+        { id: "evidence-in-action", lesson: "0.6 — PROVE YOUR CASE", title: "EVIDENCE IN ACTION", url: "" }
       ]
     },
     {
