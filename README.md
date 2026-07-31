@@ -42,7 +42,7 @@ The existing standalone unit, document, case, review, and practice files remain 
 
 ## Course settings
 
-- Google Classroom: `https://classroom.google.com/c/ODcxMDM2NTk5NjI1`
+- Google Classroom: `https://classroom.google.com/` (join code: `wxe36xms`)
 - Join code: `wxe36xms`
 - Initial current unit: `gov-0`
 - Initial release: Unit 0 open; AP Units 1–5 locked

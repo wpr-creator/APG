@@ -13,8 +13,8 @@ window.COURSE_DATA = {
         ["0.6 — Prove Your Case", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Complete the AP course baseline, then use a short political source to make a claim supported by specific evidence.", "Complete the AP Addendum Test and Evidence in Action"]
       ],
       resources: [
-        { id: "classroom", lesson: "0.1 — ALREADY IN SESSION", title: "JOIN GOOGLE CLASSROOM", url: "https://classroom.google.com/c/ODcxMDM2NTk5NjI1" },
-        { id: "course-site", lesson: "0.1 — ALREADY IN SESSION", title: "COURSE WEBSITE", url: "#home" },
+        { id: "classroom", lesson: "0.1 — ALREADY IN SESSION", title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/" },
+        { id: "course-site", lesson: "0.1 — ALREADY IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
         { id: "syllabus", lesson: "0.2 — READ THE FINE PRINT", title: "CLASS SYLLABUS", url: "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing" },
         { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit" },
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },

@@ -115,7 +115,8 @@ function validateSharedCourseExperience() {
     'Complete the Civics Field Test and AP Addendum',
     'Complete the AP Addendum Test and Evidence in Action',
     'https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit',
-    'https://classroom.google.com/c/ODcxMDM2NTk5NjI1',
+    'https://classroom.google.com/',
+    'Join Google Classroom · Code: wxe36xms',
     'Bookmark Course Website',
     'const chromebook = /CrOS/i.test(device);',
     'Press ${shortcut}${deviceNote} to add it to your browser bookmarks.'
@@ -142,7 +143,7 @@ function validateSharedCourseExperience() {
     'data-view-link="foundations"',
     'data-view-link="words"',
     'data-view-link="skills"',
-    'https://classroom.google.com/c/ODcxMDM2NTk5NjI1',
+    'https://classroom.google.com/',
     '<code>wxe36xms</code>'
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
@@ -204,6 +205,12 @@ function validateSharedCourseExperience() {
     'EVIDENCE IN ACTION'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
+  });
+  [
+    'title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/"',
+    'title: "BOOKMARK COURSE WEBSITE"'
+  ].forEach(function (content) {
+    if (!courseData.includes(content)) errors.push('Primary Unit 0 launch link changed or missing: ' + content);
   });
 }
 
