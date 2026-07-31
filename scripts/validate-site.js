@@ -116,6 +116,7 @@ function validateSharedCourseExperience() {
     'Complete the AP Addendum Test and Evidence in Action',
     'https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit',
     'https://classroom.google.com/c/ODcxMDM2NTk5NjI1',
+    'Bookmark Course Website',
     'const chromebook = /CrOS/i.test(device);',
     'Press ${shortcut}${deviceNote} to add it to your browser bookmarks.'
   ].forEach(function (content) {
@@ -152,6 +153,30 @@ function validateSharedCourseExperience() {
   if (homepage.includes('AP GOVERNMENT WORDS, PLAIN LANGUAGE') || homepage.includes('Short definitions. One clear example.')) {
     errors.push('APG glossary contains retired promotional phrasing.');
   }
+  const studentInterface = [
+    'index.html',
+    'app.js',
+    'presidential-library.html',
+    'extensions.html',
+    'unit1.html',
+    'unit2.html',
+    'unit3.html',
+    'unit4.html',
+    'unit5.html'
+  ].map(function (file) { return fs.readFileSync(path.join(root, file), 'utf8'); }).join('\n');
+  [
+    'SHORT EXCERPTS · PLAIN LANGUAGE · ONE QUESTION',
+    'START WITH THIS UNIT OR VIEW ALL 27.',
+    'FORTY-FIVE PEOPLE. ONE OFFICE. THEIR CHOICES STILL ECHO.',
+    'START HERE. TRY IT. USE IT.',
+    'USE ANYTIME',
+    'GO FURTHER',
+    'THREE BRANCHES. ONE CONSTITUTION. CONSTANT TENSION.'
+  ].forEach(function (phrase) {
+    if (studentInterface.toUpperCase().includes(phrase)) {
+      errors.push('Student interface contains retired promotional phrasing: ' + phrase);
+    }
+  });
 
   const courseData = fs.readFileSync(path.join(root, 'course-data.js'), 'utf8');
   const glossaryData = fs.readFileSync(path.join(root, 'glossary-data.js'), 'utf8');
