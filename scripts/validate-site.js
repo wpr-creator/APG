@@ -212,6 +212,13 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 launch link changed or missing: ' + content);
   });
+  const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  [
+    'window.location.hash = "home";',
+    'Press ${shortcut}${deviceNote} to bookmark this course website.'
+  ].forEach(function (content) {
+    if (!appCode.includes(content)) errors.push('Bookmark workflow changed or missing: ' + content);
+  });
 }
 
 function validateCalendarData() {
