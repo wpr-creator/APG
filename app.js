@@ -579,11 +579,11 @@
     title.id = "foundation-dialog-title";
     title.textContent = documentData.title.toUpperCase();
     const blocks = [
-      ["THE BIG IDEA", documentData.bigIdea],
-      ["READ THIS SHORT EXCERPT", `“${documentData.excerpt}”`],
-      ["IN PLAIN LANGUAGE", documentData.plain],
-      ["WHY IT MATTERS", documentData.why],
-      ["TRY ONE QUESTION", documentData.question]
+      ["SUMMARY", documentData.bigIdea],
+      ["EXCERPT", `“${documentData.excerpt}”`],
+      ["EXPLANATION", documentData.plain],
+      ["COURSE CONNECTION", documentData.why],
+      ["QUESTION", documentData.question]
     ];
     content.append(eyebrow, title);
     blocks.forEach(([labelText, bodyText]) => {
@@ -689,7 +689,7 @@
         const button = document.createElement("button");
         button.type = "button";
         button.disabled = levelNumber > unlockedThrough;
-        button.textContent = button.disabled ? `◇ LEVEL ${levelNumber} · LOCKED` : `${levelNumber === 1 ? "START HERE" : levelNumber === 2 ? "TRY IT" : "USE IT"} · ${level.title}`;
+        button.textContent = button.disabled ? `◇ LEVEL ${levelNumber} · LOCKED` : `LEVEL ${levelNumber} · ${level.title}`;
         if (!button.disabled) button.addEventListener("click", () => openSkill(skill, index));
         levels.appendChild(button);
       });

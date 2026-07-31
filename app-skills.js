@@ -217,7 +217,7 @@ function skillsRenderGuidedExamplesWithAttempt(levelData) {
 
   document.getElementById('skills-guided-body').innerHTML =
     '<div class="skills-guided-step show">' +
-      '<div class="skills-guided-step-counter">EXAMPLE ' + (i+1) + ' OF ' + total + ' — TRY IT FIRST</div>' +
+      '<div class="skills-guided-step-counter">EXAMPLE ' + (i+1) + ' OF ' + total + '</div>' +
       '<div class="skills-guided-passage">' + ex.sentence + '</div>' +
       attemptHtml +
       '<div class="skills-guided-thinking" id="guided-thinking" style="display:none">' +
@@ -561,7 +561,7 @@ function skillsShowGuided() {
     document.getElementById('skills-guided-body').innerHTML =
       '<div class="skills-guided-passage">' + levelData.guidedPassage + '</div>' +
       '<div class="skills-guided-answer">' +
-        '<div class="skills-guided-answer-label">HERE\'S THE THINKING</div>' +
+        '<div class="skills-guided-answer-label">EXPLANATION</div>' +
         '<div class="skills-guided-answer-text">' + levelData.guidedAnswer + '</div>' +
       '</div>' +
       '<button class="skills-continue-btn" onclick="skillsStartPractice()">READY — MY TURN</button>';
@@ -1199,5 +1199,4 @@ function closeReadingRetryLevel() {
 function closeReadingNextLevel() {
   skillsLoadLevel(skillsState.level + 1);
 }
-
 
