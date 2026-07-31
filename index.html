@@ -25,6 +25,7 @@
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20260730-apg">
   <script src="course-data.js?v=20260730-apg" defer></script>
+  <script src="glossary-data.js?v=20260731" defer></script>
   <script src="foundations-data.js" defer></script>
   <script src="constitution-explorer-data.js" defer></script>
   <script src="rights-referee-data.js" defer></script>
@@ -197,16 +198,14 @@
     <section class="view" id="words" data-view="words" hidden>
       <a class="back-button" href="#home"><span aria-hidden="true">←</span> HOME</a>
       <div class="page-intro">
-        <p class="eyebrow">COURSE GLOSSARY</p>
-        <h1>AP GOVERNMENT WORDS, PLAIN LANGUAGE.</h1>
-        <p>Short definitions. One clear example.</p>
+        <h1>AP GOVERNMENT GLOSSARY</h1>
       </div>
       <div class="glossary-tools">
         <label for="glossary-search">SEARCH THE GLOSSARY</label>
         <input id="glossary-search" type="search" inputmode="search" autocomplete="off" placeholder="TRY: RIGHTS, COURTS, OR POWER">
         <div class="glossary-filters" id="glossary-filters" aria-label="Filter glossary terms">
-          <button type="button" aria-pressed="true" data-glossary-filter="current">CURRENT UNIT</button>
-          <button type="button" aria-pressed="false" data-glossary-filter="all">ALL TERMS</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="current">CURRENT UNIT</button>
+          <button type="button" aria-pressed="true" data-glossary-filter="all">ALL TERMS</button>
         </div>
         <p id="glossary-status" class="glossary-status" role="status"></p>
       </div>
@@ -370,10 +369,10 @@
   <div class="word-dialog" id="word-dialog" role="dialog" aria-modal="true" aria-labelledby="dialog-term" hidden>
     <div class="dialog-card">
       <button class="dialog-close" type="button" aria-label="Close definition">×</button>
-      <p class="eyebrow">Visual word</p>
+      <p class="eyebrow">Glossary</p>
       <h2 id="dialog-term"></h2>
       <p id="dialog-definition"></p>
-      <div class="example-box"><strong>Picture it</strong><p id="dialog-example"></p></div>
+      <div class="example-box"><strong>Course connection</strong><p id="dialog-example"></p></div>
     </div>
   </div>
 

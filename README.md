@@ -32,7 +32,8 @@ The editor’s GitHub token remains in that browser only. Never commit a token t
 - `index.html` — GOV-style APG application shell
 - `styles.css` — shared visual system and responsive layouts
 - `app.js` — routing, rendering, teacher editor, agenda, and interactive tools
-- `course-data.js` — Unit 0, AP Units 1–5, lesson maps, resources, and visual glossary
+- `course-data.js` — Unit 0, AP Units 1–5, lesson maps, resources, and starter glossary terms
+- `glossary-data.js` — Full AP Government glossary library
 - `foundations-data.js` — foundational documents, amendments, debates, and skill builders
 - `site-content.json` — current unit, locks, agenda, upcoming work, and resource availability
 - `us-politics-events.json` — complete 366-day source-linked U.S. political-history calendar
