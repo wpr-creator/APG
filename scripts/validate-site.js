@@ -118,6 +118,7 @@ function validateSharedCourseExperience() {
     'https://classroom.google.com/',
     'Join Google Classroom · Code: wxe36xms',
     'Bookmark Course Website',
+    'AP Classroom Check-In · 1A: VYJN37 · 2B: 9RN33E',
     'const chromebook = /CrOS/i.test(device);',
     'Press ${shortcut}${deviceNote} to add it to your browser bookmarks.'
   ].forEach(function (content) {
@@ -197,6 +198,7 @@ function validateSharedCourseExperience() {
     '0.4 — Portrait Day',
     '0.5 — Show Your Work',
     '0.6 — Prove Your Case',
+    'Join Google Classroom, bookmark the course website, and join AP Classroom',
     'Complete the signed syllabus, Self-Guided Tour, and Civic Selfie',
     'Complete The Presidential Yearbook',
     'AP ADDENDUM',
@@ -208,7 +210,8 @@ function validateSharedCourseExperience() {
   });
   [
     'title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/"',
-    'title: "BOOKMARK COURSE WEBSITE"'
+    'title: "BOOKMARK COURSE WEBSITE"',
+    'title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/"'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 launch link changed or missing: ' + content);
   });
@@ -219,6 +222,16 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Bookmark workflow changed or missing: ' + content);
   });
+
+  const rosterSources = [
+    fs.readFileSync(path.join(root, 'content.json'), 'utf8'),
+    fs.readFileSync(path.join(root, 'data-core.js'), 'utf8'),
+    fs.readFileSync(path.join(root, 'exit-ticket-script.gs'), 'utf8')
+  ].join('\n');
+  ['Period 1A', 'Period 2B'].forEach(function (period) {
+    if (!rosterSources.includes(period)) errors.push('Course period changed or missing: ' + period);
+  });
+  if (/Period 2A/.test(rosterSources)) errors.push('Retired Period 2A remains in roster or exit-ticket configuration.');
 }
 
 function validateCalendarData() {

@@ -21,6 +21,7 @@
   "assignmentUnlocks": {
     "classroom": true,
     "course-site": true,
+    "ap-classroom": true,
     "syllabus": false,
     "self-guided-tour": false,
     "civic-selfie": false,
@@ -59,6 +60,7 @@
   "assignmentUrls": {
     "classroom": "https://classroom.google.com/",
     "course-site": "#home",
+    "ap-classroom": "https://myap.collegeboard.org/",
     "syllabus": "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing",
     "self-guided-tour": "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit",
     "civic-selfie": "civic-selfie.html",

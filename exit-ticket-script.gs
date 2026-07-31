@@ -1,13 +1,13 @@
 // ════════════════════════════════════════════════════════════════
 //  MR. ROGERS — EXIT TICKET COLLECTOR + AUTO-ARCHIVE
-//  AP Government & Politics — Periods 2A and 2B
+//  AP Government & Politics — Periods 1A and 2B
 //  O'Farrell High School · 2026–27
 // ════════════════════════════════════════════════════════════════
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/16TcskHZ3QmcLsToZuyfCWnd24t5WtB4duTsX8x1tiqg/edit';
 
 const TABS = {
-  '2A':  'Period 2A',
+  '1A':  'Period 1A',
   '2B':  'Period 2B',
   'all': 'All Responses'
 };
@@ -138,7 +138,7 @@ function writeSkillTab(ss, row) {
 
 // ════════════════════════════════════════════════════════════════
 //  weeklyArchive — runs every Sunday night
-//  Moves all rows from Period 2A, Period 2B, All Responses
+//  Moves all rows from Period 1A, Period 2B, All Responses
 //  into Archive tabs labeled by week (e.g. "Archive — Sep 8–12")
 //
 //  TO SET UP THE TRIGGER:
@@ -165,7 +165,7 @@ function weeklyArchive() {
     '\u2013' + friday.getDate();
   const archiveName = ARCHIVE_PREFIX + weekLabel;
 
-  const tabsToArchive = [TABS['2A'], TABS['2B'], TABS['all']];
+  const tabsToArchive = [TABS['1A'], TABS['2B'], TABS['all']];
   let totalMoved = 0;
 
   tabsToArchive.forEach(function(tabName) {
@@ -236,7 +236,7 @@ function testSubmission() {
     postData: {
       contents: JSON.stringify({
         date:     new Date().toLocaleDateString('en-US'),
-        period:   '2A',
+        period:   '1A',
         name:     'Test Student, Sample',
         question: 'What is judicial review?',
         response: 'The power of the Supreme Court to declare laws unconstitutional.',

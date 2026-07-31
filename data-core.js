@@ -148,8 +148,8 @@ const DEFAULT_CONTENT = {
   "week": "Week of June 23",
   "periods": [
     {
-      "id": "2A",
-      "label": "Period 2A",
+      "id": "1A",
+      "label": "Period 1A",
       "students": []
     },
     {
