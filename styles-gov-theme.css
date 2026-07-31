@@ -216,7 +216,7 @@ dialog input, dialog textarea { width: 100%; padding: .8rem; border: 2px solid v
   padding: 1.5rem 1.5rem 5rem;
 }
 .course-page-intro {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
   padding: clamp(2rem, 6vw, 4.5rem);
   color: var(--gov-white);
   background: var(--gov-navy-dark);
@@ -241,6 +241,7 @@ dialog input, dialog textarea { width: 100%; padding: .8rem; border: 2px solid v
   .header-text h1 { font-size: .9rem; }
   .hero h2 { font-size: clamp(2.15rem, 12vw, 3.5rem); }
   .course-page-shell { padding-inline: 1rem; }
+  .course-page-intro { margin-bottom: 2rem; }
   .launch-grid, .extension-grid, .president-grid { grid-template-columns: 1fr; }
   .agenda-shell { padding-inline: 0; }
   .agenda-layout { min-height: auto; grid-template-columns: 1fr; }
