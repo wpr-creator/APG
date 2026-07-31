@@ -149,9 +149,13 @@ function validateSharedCourseExperience() {
     '0.3 — Pack Your Field Guides',
     '0.4 — Portrait Day',
     '0.5 — Show Your Work',
+    '0.6 — Prove Your Case',
     'Complete the signed syllabus, Self-Guided Tour, and Civic Selfie',
     'Complete The Presidential Yearbook',
-    'Complete the Civics Field Test and Unit 0 synthesis'
+    'AP ADDENDUM',
+    'AP ADDENDUM TEST',
+    'CIVICS FIELD TEST',
+    'EVIDENCE IN ACTION'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
   });
