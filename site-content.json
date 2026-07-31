@@ -21,40 +21,40 @@
   "assignmentUnlocks": {
     "classroom": true,
     "course-site": true,
-    "syllabus": true,
-    "self-guided-tour": true,
-    "civic-selfie": true,
-    "pew-typology": true,
-    "typology-reflection": true,
+    "syllabus": false,
+    "self-guided-tour": false,
+    "civic-selfie": false,
+    "pew-typology": false,
+    "typology-reflection": false,
     "civics-field-guide": false,
-    "presidential-yearbook": true,
-    "presidential-library": true,
+    "presidential-yearbook": false,
+    "presidential-library": false,
     "civics-field-test": false,
     "ap-addendum": false,
     "ap-addendum-test": false,
     "evidence-in-action": false,
+    "ap-u1-overview": true,
+    "ap-u1-documents": true,
     "founding-power": true,
     "federalism-map": true,
     "constitution-explorer": true,
     "madison-vs-brutus": true,
-    "california-ballot-2026": true,
+    "ap-u2-overview": true,
+    "ap-u2-documents": true,
+    "ap-u2-cases": true,
     "bill-journey": true,
     "presidential-power": true,
-    "rights-referee": true
-    ,"ap-u1-overview": true
-    ,"ap-u1-documents": true
-    ,"ap-u2-overview": true
-    ,"ap-u2-documents": true
-    ,"ap-u2-cases": true
-    ,"presidential-library-u2": true
-    ,"ap-u3-overview": true
-    ,"ap-u3-documents": true
-    ,"ap-u3-cases": true
-    ,"ap-u4-overview": true
-    ,"ap-u4-documents": true
-    ,"ap-polling": true
-    ,"ap-u5-overview": true
-    ,"ap-u5-cases": true
+    "presidential-library-u2": true,
+    "ap-u3-overview": true,
+    "ap-u3-documents": true,
+    "ap-u3-cases": true,
+    "rights-referee": true,
+    "ap-u4-overview": true,
+    "ap-u4-documents": true,
+    "ap-polling": true,
+    "ap-u5-overview": true,
+    "ap-u5-cases": true,
+    "california-ballot-2026": true
   },
   "assignmentUrls": {
     "classroom": "https://classroom.google.com/",
@@ -71,28 +71,28 @@
     "ap-addendum": "",
     "ap-addendum-test": "",
     "evidence-in-action": "",
+    "ap-u1-overview": "unit1.html",
+    "ap-u1-documents": "unit1-docs.html",
     "founding-power": "#founding-power",
     "federalism-map": "#federalism-map",
     "constitution-explorer": "#constitution-explorer",
     "madison-vs-brutus": "#madison",
-    "california-ballot-2026": "#election-2026",
-    "bill-journey": "#bill-journey",
-    "presidential-power": "#presidential-power",
-    "rights-referee": "#rights-referee",
-    "ap-u1-overview": "unit1.html",
-    "ap-u1-documents": "unit1-docs.html",
     "ap-u2-overview": "unit2.html",
     "ap-u2-documents": "unit2-docs.html",
     "ap-u2-cases": "unit2-cases.html",
+    "bill-journey": "#bill-journey",
+    "presidential-power": "#presidential-power",
     "presidential-library-u2": "#presidents",
     "ap-u3-overview": "unit3.html",
     "ap-u3-documents": "unit3-docs.html",
     "ap-u3-cases": "unit3-cases.html",
+    "rights-referee": "#rights-referee",
     "ap-u4-overview": "unit4.html",
     "ap-u4-documents": "unit4-docs.html",
     "ap-polling": "#skills",
     "ap-u5-overview": "unit5.html",
-    "ap-u5-cases": "unit5-cases.html"
+    "ap-u5-cases": "unit5-cases.html",
+    "california-ballot-2026": "#election-2026"
   },
   "foundationUnlocks": {
     "source": 3,
