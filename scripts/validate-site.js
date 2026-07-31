@@ -84,6 +84,7 @@ function validateSocialMetadata() {
 
 function validateSharedCourseExperience() {
   const requiredFiles = [
+    'glossary-data.js',
     'styles-gov-theme.css',
     'unit0.html',
     'agenda.html',
@@ -139,8 +140,22 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
+  if (!homepage.includes('<h1>AP GOVERNMENT GLOSSARY</h1>')) {
+    errors.push('APG glossary heading is missing.');
+  }
+  if (homepage.includes('AP GOVERNMENT WORDS, PLAIN LANGUAGE') || homepage.includes('Short definitions. One clear example.')) {
+    errors.push('APG glossary contains retired promotional phrasing.');
+  }
 
   const courseData = fs.readFileSync(path.join(root, 'course-data.js'), 'utf8');
+  const glossaryData = fs.readFileSync(path.join(root, 'glossary-data.js'), 'utf8');
+  const glossaryUnits = JSON.parse(glossaryData.slice(glossaryData.indexOf('['), glossaryData.lastIndexOf(']') + 1));
+  const glossaryEntryCount = glossaryUnits.reduce(function (total, unit) {
+    return total + Object.values(unit.groups).reduce(function (unitTotal, terms) {
+      return unitTotal + terms.length;
+    }, 0);
+  }, 0);
+  if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
   const apUnits = courseData.match(/id: "gov-[0-5]"/g) || [];
   if (apUnits.length !== 6) errors.push('APG shell must contain Unit 0 and AP Units 1–5.');
   [

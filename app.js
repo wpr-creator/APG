@@ -1,6 +1,7 @@
 (function () {
   "use strict";
   const data = window.COURSE_DATA;
+  const glossaryUnits = window.APG_GLOSSARY_UNITS || [];
   const foundations = window.FOUNDATIONS_DATA;
   const explorerSituations = window.CONSTITUTION_EXPLORER_DATA;
   const rightsCases = window.RIGHTS_REFEREE_DATA;
@@ -27,7 +28,7 @@
   let historyIndex = 0;
   let devKeys = "";
   let amendmentFilter = "current";
-  let glossaryFilter = "current";
+  let glossaryFilter = "all";
   let glossaryQuery = "";
   let presidentFacts = [];
   let presidentQuery = "";
@@ -37,6 +38,37 @@
   let billJourneyState = { proposal: null, stageIndex: 0, history: [], amended: false, outcome: null };
   let federalismLocationId = "school";
   const federalismVisited = new Set();
+  const glossaryEntries = new Map();
+
+  function addGlossaryEntry(term, symbol, definition, reference, unitIds) {
+    const key = term.trim().toLowerCase();
+    const existing = glossaryEntries.get(key);
+    if (existing) {
+      unitIds.forEach(unitId => existing.units.add(unitId));
+      reference.split(" · ").filter(Boolean).forEach(item => existing.references.add(item));
+      return;
+    }
+    glossaryEntries.set(key, {
+      term,
+      symbol: symbol || term.trim().charAt(0).toUpperCase(),
+      definition,
+      units: new Set(unitIds),
+      references: new Set(reference.split(" · ").filter(Boolean))
+    });
+  }
+
+  (data.words || []).forEach(word => {
+    addGlossaryEntry(word[0], word[1], word[2], word[3], [word[4]]);
+  });
+  glossaryUnits.forEach((unit, unitIndex) => {
+    Object.values(unit.groups || {}).flat().forEach(entry => {
+      const topics = (entry[2] || []).map(topic => `Topic ${topic}`).join(" · ");
+      addGlossaryEntry(entry[0], "", entry[1], topics, [`gov-${unitIndex + 1}`]);
+    });
+  });
+  const glossaryWords = Array.from(glossaryEntries.values())
+    .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units)])
+    .sort((left, right) => left[0].localeCompare(right[0]));
 
   function showView(name) {
     const isUnit = data.units.some(unit => unit.id === name);
@@ -258,8 +290,8 @@
 
   function renderWords() {
     wordGrid.replaceChildren();
-    const matches = data.words.filter(word => {
-      const inUnit = glossaryFilter === "all" || word[4] === currentUnitId;
+    const matches = glossaryWords.filter(word => {
+      const inUnit = glossaryFilter === "all" || word[4].includes(currentUnitId);
       const text = `${word[0]} ${word[2]} ${word[3]}`.toLowerCase();
       return inUnit && text.includes(glossaryQuery);
     });
@@ -1703,7 +1735,7 @@
       siteContent.assignmentUrls = siteContent.assignmentUrls || {};
       siteContent.unitUnlocks = siteContent.unitUnlocks || {};
       if (data.units.some(unit => unit.id === siteContent.currentUnit)) currentUnitId = siteContent.currentUnit;
-      if (!data.words.some(word => word[4] === currentUnitId)) glossaryFilter = "all";
+      if (!glossaryWords.some(word => word[4].includes(currentUnitId))) glossaryFilter = "all";
     } catch (error) {
       console.warn("Using default course content.", error);
     }
