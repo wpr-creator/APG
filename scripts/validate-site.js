@@ -110,8 +110,14 @@ function validateSharedCourseExperience() {
     'Pack Your Field Guides',
     'Portrait Day',
     'Show Your Work',
+    'Prove Your Case',
     'Complete The Presidential Yearbook',
-    'Complete the Civics Field Test and Unit 0 synthesis'
+    'Complete the Civics Field Test and AP Addendum',
+    'Complete the AP Addendum Test and Evidence in Action',
+    'https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit',
+    'https://classroom.google.com/c/ODcxMDM2NTk5NjI1',
+    'const chromebook = /CrOS/i.test(device);',
+    'Press ${shortcut}${deviceNote} to add it to your browser bookmarks.'
   ].forEach(function (content) {
     if (!unitZero.includes(content)) errors.push('Unit 0 shared content changed or missing: ' + content);
   });
