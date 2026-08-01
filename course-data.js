@@ -5,7 +5,7 @@ window.COURSE_DATA = {
       question: "Who makes the rules—and what changes when we start paying attention?",
       standards: "Course launch",
       lessons: [
-        ["0.1 — Already in Session", "Why does government already matter?", "Course launch", "Compare government and politics, connect both to everyday life, and get connected to the course.", "Join Google Classroom, bookmark the course website, and join AP Classroom"],
+        ["0.1 — Class Is in Session", "Why does government already matter?", "Course launch", "Compare government and politics, connect both to everyday life, and get connected to the course.", "Join Google Classroom, bookmark the course website, and join AP Classroom"],
         ["0.2 — Read the Fine Print", "How will this class work?", "Course launch", "Review the syllabus and classroom expectations, then learn how to navigate course resources.", "Complete the signed syllabus, Self-Guided Tour, and Civic Selfie"],
         ["0.3 — Pack Your Field Guides", "What do I already believe and know about government?", "Course launch", "Complete the PEW Political Typology, reflect on the result, review the course outline, and check essential government knowledge.", "Complete Between the Lines and begin the Civics Field Guide"],
         ["0.4 — Portrait Day", "What can presidents reveal about American government?", "Prepares for Gov 12.4.4", "Explore the presidency through research, art, and a shared classroom display.", "Complete The Presidential Yearbook"],
@@ -13,9 +13,9 @@ window.COURSE_DATA = {
         ["0.6 — Prove Your Case", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Complete the AP course baseline, then use a short political source to make a claim supported by specific evidence.", "Complete the AP Addendum Test and Evidence in Action"]
       ],
       resources: [
-        { id: "classroom", lesson: "0.1 — ALREADY IN SESSION", title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/" },
-        { id: "course-site", lesson: "0.1 — ALREADY IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
-        { id: "ap-classroom", lesson: "0.1 — ALREADY IN SESSION", title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/" },
+        { id: "classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/" },
+        { id: "course-site", lesson: "0.1 — CLASS IS IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
+        { id: "ap-classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/" },
         { id: "syllabus", lesson: "0.2 — READ THE FINE PRINT", title: "CLASS SYLLABUS", url: "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing" },
         { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit" },
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },
