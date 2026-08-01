@@ -105,24 +105,11 @@ function validateSharedCourseExperience() {
 
   const unitZero = fs.readFileSync(path.join(root, 'unit0.html'), 'utf8');
   [
-    'Already in Session',
-    'Read the Fine Print',
-    'Pack Your Field Guides',
-    'Portrait Day',
-    'Show Your Work',
-    'Prove Your Case',
-    'Complete The Presidential Yearbook',
-    'Complete the Civics Field Test and AP Addendum',
-    'Complete the AP Addendum Test and Evidence in Action',
-    'https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit',
-    'https://classroom.google.com/',
-    'Join Google Classroom · Code: wxe36xms',
-    'Bookmark Course Website',
-    'AP Classroom Check-In · 1A: VYJN37 · 2B: 9RN33E',
-    'const chromebook = /CrOS/i.test(device);',
-    'Press ${shortcut}${deviceNote} to add it to your browser bookmarks.'
+    'content="0; url=./#gov-0"',
+    'href="https://wpr-creator.github.io/APG/#gov-0"',
+    'window.location.replace("./#gov-0");'
   ].forEach(function (content) {
-    if (!unitZero.includes(content)) errors.push('Unit 0 shared content changed or missing: ' + content);
+    if (!unitZero.includes(content)) errors.push('Legacy Unit 0 redirect changed or missing: ' + content);
   });
 
   const rootPages = files.filter(function (file) {
@@ -131,13 +118,16 @@ function validateSharedCourseExperience() {
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
     const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
-    if (!isNewShell && !html.includes('styles-gov-theme.css')) {
+    const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
+    if (!isNewShell && !isUnitZeroRedirect && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
+    'styles.css?v=20260801-unit0-progress',
+    'app.js?v=20260801-unit0-progress',
     'data-view-link="home"',
     'data-view-link="agenda"',
     'data-view-link="units"',
@@ -218,10 +208,21 @@ function validateSharedCourseExperience() {
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
-    'Press ${shortcut}${deviceNote} to bookmark this course website.'
+    'Press ${shortcut}${deviceNote} to bookmark this course website.',
+    'const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";',
+    'createUnitZeroCheck(resource, unlocked)',
+    'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
   ].forEach(function (content) {
-    if (!appCode.includes(content)) errors.push('Bookmark workflow changed or missing: ' + content);
+    if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
+  const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
+  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]'].forEach(function (selector) {
+    if (!primaryStyles.includes(selector)) errors.push('Unit 0 completion styling changed or missing: ' + selector);
+  });
+  const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
+  if (!navCode.includes('{ label: "Unit 0 · First Bell", href: "index.html#gov-0" }')) {
+    errors.push('Shared navigation does not point to the canonical Unit 0 view.');
+  }
 
   const rosterSources = [
     fs.readFileSync(path.join(root, 'content.json'), 'utf8'),
