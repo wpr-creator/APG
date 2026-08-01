@@ -35,7 +35,7 @@ const NAV_STATIC_TABS = [
   {
     label: "Start",
     items: [
-      { label: "Unit 0 · First Bell", href: "unit0.html" },
+      { label: "Unit 0 · First Bell", href: "index.html#gov-0" },
       { label: "Agenda", href: "agenda.html" },
       { label: "Presidential Library", href: "presidential-library.html" },
       { label: "Extensions", href: "extensions.html" }
