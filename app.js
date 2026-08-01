@@ -146,6 +146,11 @@
       location.hash = "units";
       return;
     }
+    if (routeName === "presidents") {
+      showView("foundations");
+      switchFoundationTab("presidents");
+      return;
+    }
     showView(valid ? routeName : "home");
   }
 

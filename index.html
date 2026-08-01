@@ -182,13 +182,10 @@
         <h1>FOUNDATIONS</h1>
         <p>Read a key document, find an amendment, or explore the presidency.</p>
       </div>
-      <a class="foundation-feature" href="#presidents">
-        <span>PRESIDENTIAL LIBRARY</span>
-        <strong>U.S. PRESIDENTS, ELECTIONS, AND MAJOR EVENTS <span aria-hidden="true">→</span></strong>
-      </a>
       <div class="foundation-tabs" role="tablist" aria-label="Foundations tools">
         <button type="button" role="tab" aria-selected="true" aria-controls="foundation-documents" data-foundation-tab="documents">DOCUMENTS</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="foundation-amendments" data-foundation-tab="amendments">AMENDMENTS</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="foundation-presidents" data-foundation-tab="presidents">PRESIDENTIAL LIBRARY</button>
       </div>
 
       <section class="foundation-panel" id="foundation-documents" role="tabpanel">
@@ -200,6 +197,16 @@
         <div class="tool-heading"><div><h2>AMENDMENTS</h2></div></div>
         <div class="amendment-filters" id="amendment-filters" aria-label="Filter amendments"></div>
         <div class="amendment-grid" id="amendment-grid"></div>
+      </section>
+
+      <section class="foundation-panel" id="foundation-presidents" role="tabpanel" hidden>
+        <div class="tool-heading"><div><h2>PRESIDENTIAL LIBRARY</h2></div></div>
+        <div class="president-tools">
+          <label for="president-search">FIND A PRESIDENT</label>
+          <input id="president-search" type="search" autocomplete="off" placeholder="TYPE A NAME">
+          <p id="president-status" role="status"></p>
+        </div>
+        <div class="president-grid" id="president-grid"></div>
       </section>
 
     </section>
@@ -333,20 +340,6 @@
           <article class="federalism-detail" id="federalism-detail" aria-live="polite"></article>
         </div>
       </section>
-    </section>
-
-    <section class="view" id="presidents" data-view="presidents" hidden>
-      <a class="back-button" href="#gov-0"><span aria-hidden="true">←</span> FIRST BELL</a>
-      <div class="page-intro">
-        <h1>PRESIDENTIAL LIBRARY</h1>
-        <p>Profiles of U.S. presidents, elections, and major events from each administration.</p>
-      </div>
-      <div class="president-tools">
-        <label for="president-search">FIND A PRESIDENT</label>
-        <input id="president-search" type="search" autocomplete="off" placeholder="TYPE A NAME">
-        <p id="president-status" role="status"></p>
-      </div>
-      <div class="president-grid" id="president-grid"></div>
     </section>
 
     <section class="view" id="help" data-view="help" hidden>

@@ -186,7 +186,7 @@ function validateSharedCourseExperience() {
   const apUnits = courseData.match(/id: "gov-[0-5]"/g) || [];
   if (apUnits.length !== 6) errors.push('APG shell must contain Unit 0 and AP Units 1–5.');
   [
-    '0.1 — Already in Session',
+    '0.1 — Class Is in Session',
     '0.2 — Read the Fine Print',
     '0.3 — Pack Your Field Guides',
     '0.4 — Portrait Day',
