@@ -126,7 +126,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260801-unit0-progress',
+    'styles.css?v=20260801-course-links',
     'app.js?v=20260801-unit0-progress',
     'data-view-link="home"',
     'data-view-link="agenda"',
@@ -135,7 +135,11 @@ function validateSharedCourseExperience() {
     'data-view-link="words"',
     'data-view-link="skills"',
     'https://classroom.google.com/',
-    '<code>wxe36xms</code>'
+    '<code>wxe36xms</code>',
+    'href="https://myap.collegeboard.org/"',
+    '<h2>AP CLASSROOM</h2>',
+    '<code>VYJN37</code>',
+    '<code>9RN33E</code>'
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
