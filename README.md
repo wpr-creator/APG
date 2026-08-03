@@ -40,6 +40,9 @@ The editor’s GitHub token remains in that browser only. Never commit a token t
 
 The existing standalone unit, document, case, review, and practice files remain in the repository so their established URLs and AP content continue to work.
 
+See `docs/ARCHITECTURE.md` for the canonical/legacy file map, compatibility
+routes, and safe teacher-publishing guidance.
+
 ## Course settings
 
 - Google Classroom: `https://classroom.google.com/` (join code: `wxe36xms`)
@@ -60,6 +63,9 @@ node scripts/validate-site.js
 The validator checks JavaScript, JSON, local references, social metadata, the GOV-style APG shell, protected Unit 0 content, shared assets, and the full politics calendar.
 
 The expected calendar result is 366 dates and 514 source-linked entries.
+
+GitHub Actions runs this validation automatically on pull requests and pushes
+to `main`.
 
 ## Publishing
 
