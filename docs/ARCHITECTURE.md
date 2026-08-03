@@ -40,6 +40,14 @@ Files including `index-app.js`, `data-core.js`, `data-content.js`,
 are not the implementation of the current `index.html` shell. Confirm which
 HTML page loads a legacy file before modifying or removing it.
 
+These files were reference-audited on August 3, 2026. The JavaScript data files
+remain loaded by `ap-tools.html`, and the legacy stylesheets remain shared by
+the unit, document, case, agenda, extension, and presidential-library pages.
+They therefore cannot be removed without first migrating those supported
+routes. A future retirement should migrate one page family at a time, update
+its references, run validation, and verify the published legacy URLs before
+deleting shared files.
+
 Likewise, `content.json` supports older standalone experiences;
 `site-content.json` is the current shell's editable course-state file.
 
@@ -59,4 +67,5 @@ changes should still be made on a branch and reviewed in a pull request.
 Run `node scripts/validate-site.js` before publishing code changes. GitHub
 Actions runs the same validator for every pull request and every push to
 `main`. The validator checks JavaScript and JSON syntax, local references,
-required shell content, compatibility redirects, and calendar integrity.
+required shell content, compatibility redirects, calendar integrity, basic
+HTML accessibility, duplicate IDs, macOS metadata, and large-image budgets.
