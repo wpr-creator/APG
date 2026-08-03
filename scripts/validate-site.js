@@ -228,6 +228,22 @@ function validateSharedCourseExperience() {
     errors.push('Shared navigation does not point to the canonical Unit 0 view.');
   }
 
+  const canonicalCases = fs.readdirSync(path.join(root, 'cases'))
+    .filter(function (file) { return file.endsWith('.html'); });
+  canonicalCases.forEach(function (file) {
+    const redirectPath = path.join(root, file);
+    if (!fs.existsSync(redirectPath)) {
+      errors.push('Missing root compatibility redirect for case: ' + file);
+      return;
+    }
+    const redirect = fs.readFileSync(redirectPath, 'utf8');
+    const canonicalUrl = '/APG/cases/' + file;
+    if (!redirect.includes('rel="canonical" href="' + canonicalUrl + '"') ||
+        !redirect.includes('url=' + canonicalUrl)) {
+      errors.push('Case compatibility route does not redirect to its canonical page: ' + file);
+    }
+  });
+
   const rosterSources = [
     fs.readFileSync(path.join(root, 'content.json'), 'utf8'),
     fs.readFileSync(path.join(root, 'data-core.js'), 'utf8'),

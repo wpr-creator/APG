@@ -1281,13 +1281,13 @@
           <label style="font-size:11px;font-weight:700;letter-spacing:0.08em;color:var(--gray-500);white-space:nowrap;">GITHUB TOKEN</label>
           <input id="ad-github-token" type="password" class="admin-input"
             style="flex:1;min-width:200px;font-family:monospace;font-size:12px;"
-            placeholder="ghp_xxxx — paste once, saved in browser" />
+            placeholder="Fine-grained token — paste once, saved in browser" />
           <span style="font-size:10px;color:var(--gray-400);">
-            <a href="https://github.com/settings/tokens/new?scopes=repo&description=AP+Gov+Site" target="_blank"
-              style="color:var(--navy);">Generate token ↗</a>
+            <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener"
+              style="color:var(--navy);">Create repository-only token ↗</a>
           </span>
         </div>
-        <div class="admin-footer-left">Publish pushes directly to GitHub. Download saves a file to drag in manually.</div>
+        <div class="admin-footer-left">Use only Contents: read/write access for APG. Remove the token on shared devices. Publish pushes directly to GitHub; Download saves a file to upload manually.</div>
         <div class="admin-footer-btns">
           <button class="admin-dl-btn secondary" onclick="adminPreview()">
             <i class="ti ti-eye"></i> Preview

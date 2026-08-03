@@ -2081,7 +2081,7 @@
       const currentResponse = await fetch(`${GITHUB_CONTENT_URL}?ref=main`, { headers, cache: "no-store" });
       if (!currentResponse.ok) {
         if (currentResponse.status === 401) throw new Error("TOKEN NOT ACCEPTED. CHECK OR REPLACE THE SAVED TOKEN.");
-        if (currentResponse.status === 403) throw new Error("TOKEN NEEDS CONTENTS: READ AND WRITE ACCESS TO THE GOV REPOSITORY.");
+        if (currentResponse.status === 403) throw new Error("TOKEN NEEDS CONTENTS: READ AND WRITE ACCESS TO THE APG REPOSITORY.");
         throw new Error(`GITHUB COULD NOT READ THE SETTINGS FILE (${currentResponse.status}).`);
       }
       const currentFile = await currentResponse.json();
@@ -2099,7 +2099,7 @@
       });
       if (!updateResponse.ok) {
         if (updateResponse.status === 401) throw new Error("TOKEN NOT ACCEPTED. CHECK OR REPLACE THE SAVED TOKEN.");
-        if (updateResponse.status === 403) throw new Error("TOKEN NEEDS CONTENTS: READ AND WRITE ACCESS TO THE GOV REPOSITORY.");
+        if (updateResponse.status === 403) throw new Error("TOKEN NEEDS CONTENTS: READ AND WRITE ACCESS TO THE APG REPOSITORY.");
         if (updateResponse.status === 409) throw new Error("THE SETTINGS CHANGED ON GITHUB. RESET TO LIVE, REOPEN DEV MODE, AND TRY AGAIN.");
         throw new Error(`GITHUB COULD NOT PUBLISH THE SETTINGS (${updateResponse.status}).`);
       }
