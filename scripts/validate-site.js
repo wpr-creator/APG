@@ -82,6 +82,58 @@ function validateSocialMetadata() {
   }
 }
 
+function validateAccessibilityAndHygiene() {
+  files.filter(function (file) { return file.endsWith('.html'); }).forEach(function (file) {
+    const html = fs.readFileSync(file, 'utf8');
+    const name = relative(file);
+    const isRedirect = /http-equiv=["']refresh/i.test(html);
+
+    if (!/<html[^>]*\slang=["'][^"']+["']/i.test(html)) {
+      errors.push('HTML page is missing a language declaration: ' + name);
+    }
+    if (!/<title>[^<]+<\/title>/i.test(html)) {
+      errors.push('HTML page is missing a title: ' + name);
+    }
+    if (!isRedirect && !/<meta[^>]*name=["']viewport["']/i.test(html)) {
+      errors.push('HTML page is missing responsive viewport metadata: ' + name);
+    }
+
+    const imagesWithoutAlt = Array.from(html.matchAll(/<img\b[^>]*>/gi))
+      .map(function (match) { return match[0]; })
+      .filter(function (tag) { return !/\salt=["'][^"']*["']/i.test(tag); });
+    if (imagesWithoutAlt.length) {
+      errors.push('HTML page contains images without alt attributes: ' + name);
+    }
+
+    const ids = Array.from(html.matchAll(/\sid=["']([^"']+)["']/gi))
+      .map(function (match) { return match[1]; });
+    const duplicateIds = Array.from(new Set(ids.filter(function (id, index) {
+      return ids.indexOf(id) !== index;
+    })));
+    if (duplicateIds.length) {
+      errors.push('HTML page contains duplicate IDs: ' + name + ' — ' + duplicateIds.join(', '));
+    }
+  });
+
+  files.forEach(function (file) {
+    if (path.basename(file) === '.DS_Store') {
+      errors.push('Stray macOS metadata file: ' + relative(file));
+    }
+  });
+
+  const assetBudgets = {
+    'images/ap-government-social-card.png': 1000000,
+    'assets/assignments/presidential-yearbook-color-example.png': 1900000,
+    'assets/assignments/presidential-yearbook-word-example.png': 1650000
+  };
+  Object.entries(assetBudgets).forEach(function ([name, maximum]) {
+    const file = path.join(root, name);
+    if (fs.existsSync(file) && fs.statSync(file).size > maximum) {
+      errors.push('Image exceeds its performance budget: ' + name + ' — ' + fs.statSync(file).size + ' bytes');
+    }
+  });
+}
+
 function validateSharedCourseExperience() {
   const requiredFiles = [
     'glossary-data.js',
@@ -307,6 +359,7 @@ validateJavaScript();
 validateJson();
 validateLocalReferences();
 validateSocialMetadata();
+validateAccessibilityAndHygiene();
 validateSharedCourseExperience();
 validateCalendarData();
 
