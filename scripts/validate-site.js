@@ -257,10 +257,15 @@ function validateSharedCourseExperience() {
   [
     'title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/"',
     'title: "BOOKMARK COURSE WEBSITE"',
+    'title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0"',
     'title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/"'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 launch link changed or missing: ' + content);
   });
+  const siteContent = fs.readFileSync(path.join(root, 'site-content.json'), 'utf8');
+  if (!siteContent.includes('"self-guided-tour": "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0"')) {
+    errors.push('Published Self-Guided Tour URL changed or missing.');
+  }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
