@@ -179,7 +179,8 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260801-course-links',
-    'app.js?v=20260801-unit0-progress',
+    'data-required.js?v=20260805-foundations-cases',
+    'app.js?v=20260805-tour-fixes',
     'data-view-link="home"',
     'data-view-link="agenda"',
     'data-view-link="units"',
@@ -198,6 +199,13 @@ function validateSharedCourseExperience() {
   if (!homepage.includes('<h1>AP GOVERNMENT GLOSSARY</h1>')) {
     errors.push('APG glossary heading is missing.');
   }
+  [
+    'data-foundation-tab="cases"',
+    'id="foundation-cases"',
+    'id="foundation-case-grid"'
+  ].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Foundations case library is missing: ' + content);
+  });
   if (homepage.includes('AP GOVERNMENT WORDS, PLAIN LANGUAGE') || homepage.includes('Short definitions. One clear example.')) {
     errors.push('APG glossary contains retired promotional phrasing.');
   }
@@ -283,6 +291,18 @@ function validateSharedCourseExperience() {
   const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
   if (!navCode.includes('{ label: "Unit 0 · First Bell", href: "index.html#gov-0" }')) {
     errors.push('Shared navigation does not point to the canonical Unit 0 view.');
+  }
+  if (!navCode.includes('5: "Political Participation"')) {
+    errors.push('Unit 5 navigation marker does not identify Political Participation.');
+  }
+  const foundationData = fs.readFileSync(path.join(root, 'foundations-data.js'), 'utf8');
+  if (!foundationData.includes('Life, Liberty and the pursuit of Happiness') ||
+      !foundationData.includes('Life, Liberty, and the pursuit of Happiness')) {
+    errors.push('Declaration guide must name all three unalienable rights.');
+  }
+  const requiredData = fs.readFileSync(path.join(root, 'data-required.js'), 'utf8');
+  if (!requiredData.includes('window.REQUIRED_CASES = REQUIRED_CASES;')) {
+    errors.push('Required Supreme Court cases are not exposed to Foundations.');
   }
 
   const canonicalCases = fs.readdirSync(path.join(root, 'cases'))

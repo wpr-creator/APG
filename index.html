@@ -34,7 +34,8 @@
   <script src="bill-journey-data.js?v=20260730-apg" defer></script>
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
-  <script src="app.js?v=20260801-unit0-progress" defer></script>
+  <script src="data-required.js?v=20260805-foundations-cases" defer></script>
+  <script src="app.js?v=20260805-tour-fixes" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the course</a>
@@ -180,10 +181,11 @@
       <a class="back-button" href="#home"><span aria-hidden="true">←</span> HOME</a>
       <div class="page-intro foundations-intro">
         <h1>FOUNDATIONS</h1>
-        <p>Read a key document, find an amendment, or explore the presidency.</p>
+        <p>Read a key document, open a required Supreme Court case, find an amendment, or explore the presidency.</p>
       </div>
       <div class="foundation-tabs" role="tablist" aria-label="Foundations tools">
         <button type="button" role="tab" aria-selected="true" aria-controls="foundation-documents" data-foundation-tab="documents">DOCUMENTS</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="foundation-cases" data-foundation-tab="cases">REQUIRED CASES</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="foundation-amendments" data-foundation-tab="amendments">AMENDMENTS</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="foundation-presidents" data-foundation-tab="presidents">PRESIDENTIAL LIBRARY</button>
       </div>
@@ -191,6 +193,11 @@
       <section class="foundation-panel" id="foundation-documents" role="tabpanel">
         <div class="tool-heading"><div><h2>FOUNDATIONAL DOCUMENTS</h2></div></div>
         <div class="document-grid" id="document-grid"></div>
+      </section>
+
+      <section class="foundation-panel" id="foundation-cases" role="tabpanel" hidden>
+        <div class="tool-heading"><div><h2>REQUIRED SUPREME COURT CASES</h2></div></div>
+        <div class="case-foundation-grid" id="foundation-case-grid"></div>
       </section>
 
       <section class="foundation-panel" id="foundation-amendments" role="tabpanel" hidden>

@@ -4,8 +4,8 @@ window.FOUNDATIONS_DATA = {
       id: "declaration", title: "Declaration of Independence", author: "Thomas Jefferson", year: "1776",
       standards: "AP Topic 1.1", units: ["gov-1"],
       bigIdea: "Government has legitimate power when it protects rights and receives permission from the people.",
-      excerpt: "We hold these truths to be self-evident, that all men are created equal… [and] are endowed… with certain unalienable Rights.",
-      plain: "People possess rights before government exists. Government receives its authority from the people.",
+      excerpt: "We hold these truths to be self-evident, that all men are created equal… [and] are endowed… with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",
+      plain: "People possess three named unalienable rights—Life, Liberty, and the pursuit of Happiness—before government exists. Government receives its authority from the people.",
       why: "It explains why government exists and where its power should come from.",
       question: "What should people be able to do when government repeatedly violates their rights?"
     },

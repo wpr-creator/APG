@@ -637,6 +637,27 @@
     });
   }
 
+  function renderRequiredCases() {
+    const grid = document.getElementById("foundation-case-grid");
+    grid.replaceChildren();
+    (window.REQUIRED_CASES || []).forEach(caseData => {
+      const card = document.createElement("article");
+      card.className = "case-foundation-card";
+      const meta = document.createElement("p");
+      meta.className = "document-meta";
+      meta.textContent = `UNIT ${caseData.unit} · ${caseData.year} · ${caseData.tag}`;
+      const title = document.createElement("h3");
+      title.textContent = caseData.title.toUpperCase();
+      const question = document.createElement("p");
+      question.textContent = caseData.question;
+      const link = document.createElement("a");
+      link.href = caseData.file;
+      link.textContent = "OPEN CASE GUIDE →";
+      card.append(meta, title, question, link);
+      grid.appendChild(card);
+    });
+  }
+
   function openDocument(documentData, source) {
     lastFocused = source;
     const content = document.getElementById("foundation-dialog-content");
@@ -2208,6 +2229,7 @@
 
   renderWords();
   renderDocuments();
+  renderRequiredCases();
   renderMadison();
   renderExplorer();
   renderRightsReferee();

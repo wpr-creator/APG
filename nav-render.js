@@ -66,6 +66,13 @@ const NAV_STATIC_TABS = [
 // Every unit has an overview page. Documents and cases are derived from the
 // canonical required-content arrays, including The Wealth of Nations in Unit 4.
 const NAV_UNIT_NUMBERS = [1, 2, 3, 4, 5];
+const NAV_UNIT_TITLES = {
+  1: "Foundations of American Democracy",
+  2: "Interactions Among Branches",
+  3: "Civil Liberties and Civil Rights",
+  4: "Political Ideologies and Beliefs",
+  5: "Political Participation"
+};
 
 function _navUnitHasDocs(unitNum) {
   return REQUIRED_DOCS.some(d => d.unit === unitNum);
@@ -109,7 +116,7 @@ function buildNavHTML(opts) {
     if (hasCases) links += "\n          " + _navLink(casesFile, "Cases", currentFile, basePath);
 
     html += `      <div class="nav-group${belongsToThisUnit ? " has-active" : ""}">
-        <button class="nav-group-label" type="button" aria-expanded="false">Unit ${unitNum}</button>
+        <button class="nav-group-label" type="button" aria-expanded="false">Unit ${unitNum} · ${NAV_UNIT_TITLES[unitNum]}</button>
         <div class="nav-dropdown">
           ${links}
         </div>

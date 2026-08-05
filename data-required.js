@@ -310,6 +310,11 @@ const REQUIRED_CASES = [
   }
 ];
 
+// Expose the canonical collections to the current single-page shell as well as
+// the standalone pages that consume the lexical constants above.
+window.REQUIRED_DOCS = REQUIRED_DOCS;
+window.REQUIRED_CASES = REQUIRED_CASES;
+
 // Quick self-check helper — run in browser console after loading this
 // file to confirm every doc/case count matches what the handoff doc says.
 function _auditRequiredContent() {
