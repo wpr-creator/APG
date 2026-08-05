@@ -17,7 +17,7 @@ window.COURSE_DATA = {
         { id: "course-site", lesson: "0.1 — CLASS IS IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
         { id: "ap-classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/" },
         { id: "syllabus", lesson: "0.2 — READ THE FINE PRINT", title: "CLASS SYLLABUS", url: "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing" },
-        { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit" },
+        { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0" },
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
