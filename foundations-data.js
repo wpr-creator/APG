@@ -19,7 +19,7 @@ window.FOUNDATIONS_DATA = {
       question: "What is one problem a government cannot solve if it cannot raise money or enforce its decisions?"
     },
     {
-      id: "constitution", title: "United States Constitution", author: "Constitutional Convention", year: "1787",
+      id: "constitution", title: "United States Constitution", author: "Constitutional Convention", year: "1787", file: "docs/constitution.html",
       standards: "AP Units 1–3", units: ["gov-1", "gov-2", "gov-3"],
       bigIdea: "The Constitution creates government power, divides it, and places limits on it.",
       excerpt: "We the People of the United States… do ordain and establish this Constitution.",

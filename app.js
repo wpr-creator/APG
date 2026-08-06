@@ -686,6 +686,12 @@
       block.append(label, body);
       content.appendChild(block);
     });
+    if (documentData.file) {
+      const fullGuide = document.createElement("a");
+      fullGuide.href = documentData.file;
+      fullGuide.textContent = "OPEN FULL DOCUMENT GUIDE →";
+      content.appendChild(fullGuide);
+    }
     foundationDialog.hidden = false;
     document.body.style.overflow = "hidden";
     foundationDialog.querySelector(".foundation-dialog-close").focus();

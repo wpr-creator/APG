@@ -21,7 +21,7 @@ window.COURSE_DATA = {
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
-        { id: "civics-field-guide", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "CIVICS FIELD GUIDE", url: "" },
+        { id: "civics-field-guide", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "CIVICS FIELD GUIDE RESOURCES", note: "CONSTITUTION · BRANCHES · AMENDMENTS", url: "#foundations" },
         { id: "presidential-yearbook", lesson: "0.4 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.4 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "0.5 — SHOW YOUR WORK", title: "CIVICS FIELD TEST", url: "" },
@@ -124,6 +124,11 @@ window.COURSE_DATA = {
     }
   ],
   words: [
+    ["Civics", "C", "The study of citizens’ rights and responsibilities and how people participate in government and public life.", "Voting, contacting officials, and serving on a jury are forms of civic participation.", "gov-0"],
+    ["Government", "G", "The institutions and officials with authority to make, enforce, and interpret laws for a community.", "Congress, the president, and the federal courts are parts of the United States government.", "gov-0"],
+    ["Politics", "P", "The process through which people compete, cooperate, and make decisions about government power and public policy.", "An election is political because voters choose who will exercise government power.", "gov-0"],
+    ["Political ideology", "I", "A consistent set of beliefs about government, politics, and public policy.", "An ideology helps explain what a person thinks government should and should not do.", "gov-0"],
+    ["Political spectrum", "↔", "A way of arranging political beliefs, often from liberal to moderate to conservative.", "The spectrum is a useful guide, but a person’s views may not fit neatly in one place.", "gov-0"],
     ["Natural rights", "N", "Rights every person has simply because they are human.", "The Declaration identifies life and liberty as natural rights.", "gov-1"],
     ["Popular sovereignty", "P", "The people are the source of government power.", "Elections allow citizens to grant or withdraw political authority.", "gov-1"],
     ["Republicanism", "R", "People govern through elected representatives.", "Voters choose members of Congress to make national policy.", "gov-1"],
@@ -146,7 +151,6 @@ window.COURSE_DATA = {
     ["Political socialization", "◎", "The process through which people develop political beliefs.", "Families and major events can shape political identity.", "gov-4"],
     ["Public opinion", "◉", "The distribution of political attitudes among the public.", "A scientific poll estimates support for a policy.", "gov-4"],
     ["Margin of error", "±", "The expected range around a polling estimate.", "A result of 50 percent plus or minus three points is not exact.", "gov-4"],
-    ["Political ideology", "I", "A consistent set of beliefs about government and policy.", "Liberal and conservative ideologies differ over regulation.", "gov-4"],
     ["Fiscal policy", "$", "Government decisions about taxation and spending.", "Congress increases infrastructure spending during a recession.", "gov-4"],
     ["Linkage institution", "↔", "A structure that connects people with government.", "Parties, elections, interest groups, and media are linkage institutions.", "gov-5"],
     ["Political party", "P", "An organization seeking to control government by winning elections.", "A party recruits candidates and organizes voters.", "gov-5"],
