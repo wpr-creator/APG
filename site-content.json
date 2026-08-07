@@ -66,7 +66,7 @@
     "civic-selfie": "civic-selfie.html",
     "pew-typology": "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77",
     "typology-reflection": "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog",
-    "civics-field-guide": "#foundations",
+    "civics-field-guide": "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0",
     "presidential-yearbook": "presidential-yearbook.html",
     "presidential-library": "#presidents",
     "civics-field-test": "",
@@ -95,6 +95,9 @@
     "ap-u5-overview": "unit5.html",
     "ap-u5-cases": "unit5-cases.html",
     "california-ballot-2026": "#election-2026"
+  },
+  "assignmentUnlockAt": {
+    "presidential-yearbook": "2026-08-10T09:00:00-07:00"
   },
   "foundationUnlocks": {
     "source": 3,

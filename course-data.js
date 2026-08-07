@@ -21,7 +21,7 @@ window.COURSE_DATA = {
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
-        { id: "civics-field-guide", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "CIVICS FIELD GUIDE RESOURCES", note: "CONSTITUTION · BRANCHES · AMENDMENTS", url: "#foundations" },
+        { id: "civics-field-guide", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0" },
         { id: "presidential-yearbook", lesson: "0.4 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.4 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "0.5 — SHOW YOUR WORK", title: "CIVICS FIELD TEST", url: "" },

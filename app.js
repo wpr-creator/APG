@@ -18,13 +18,13 @@
   const dialog = document.getElementById("word-dialog");
   const foundationDialog = document.getElementById("foundation-dialog");
   const adminOverlay = document.getElementById("admin-overlay");
-  const CONTENT_STORAGE_KEY = "pad-site-content-v2";
+  const CONTENT_STORAGE_KEY = "apg-site-content-v1";
   const GITHUB_TOKEN_STORAGE_KEY = "pad-github-token-v1";
   const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";
   const GITHUB_CONTENT_URL = "https://api.github.com/repos/wpr-creator/APG/contents/site-content.json";
   let currentUnitId = "gov-0";
   let lastFocused = null;
-  let siteContent = { currentUnit: "gov-0", unitUnlocks: {}, exitQuestion: "", upcoming: [], classroomUrl: "", agendaTitle: "AGENDA", agendaText: "COMING SOON.", assignmentUnlocks: {}, assignmentUrls: {} };
+  let siteContent = { currentUnit: "gov-0", unitUnlocks: {}, exitQuestion: "", upcoming: [], classroomUrl: "", agendaTitle: "AGENDA", agendaText: "COMING SOON.", assignmentUnlocks: {}, assignmentUrls: {}, assignmentUnlockAt: {} };
   let historyEvents = [];
   let historyIndex = 0;
   let devKeys = "";
@@ -33,6 +33,26 @@
   let glossaryQuery = "";
   let presidentFacts = [];
   let presidentQuery = "";
+  let scheduledUnlockTimer = null;
+
+  function assignmentIsUnlocked(resourceId) {
+    if (siteContent.assignmentUnlocks?.[resourceId]) return true;
+    const unlockAt = Date.parse(siteContent.assignmentUnlockAt?.[resourceId] || "");
+    return Number.isFinite(unlockAt) && Date.now() >= unlockAt;
+  }
+
+  function scheduleAssignmentRefresh() {
+    window.clearTimeout(scheduledUnlockTimer);
+    const nextUnlock = Object.values(siteContent.assignmentUnlockAt || {})
+      .map(value => Date.parse(value))
+      .filter(value => Number.isFinite(value) && value > Date.now())
+      .sort((left, right) => left - right)[0];
+    if (!nextUnlock) return;
+    scheduledUnlockTimer = window.setTimeout(() => {
+      renderUnits();
+      scheduleAssignmentRefresh();
+    }, Math.min(nextUnlock - Date.now() + 250, 2147483647));
+  }
 
   function loadUnitZeroCompletion() {
     try {
@@ -297,7 +317,7 @@
         resourceGrid.className = "unit-resource-grid";
         lessonResources.forEach(resource => {
           const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
-          const unlocked = Boolean(resourceUrl && siteContent.assignmentUnlocks?.[resource.id]);
+          const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
           const card = document.createElement(unlocked ? "a" : "div");
           card.className = "unit-resource";
           if (unlocked) {
@@ -1829,6 +1849,7 @@
       siteContent.foundationUnlocks = siteContent.foundationUnlocks || { source: 3, argument: 3, language: 3 };
       siteContent.assignmentUnlocks = siteContent.assignmentUnlocks || {};
       siteContent.assignmentUrls = siteContent.assignmentUrls || {};
+      siteContent.assignmentUnlockAt = siteContent.assignmentUnlockAt || {};
       siteContent.unitUnlocks = siteContent.unitUnlocks || {};
       if (data.units.some(unit => unit.id === siteContent.currentUnit)) currentUnitId = siteContent.currentUnit;
       if (!glossaryWords.some(word => word[4].includes(currentUnitId))) glossaryFilter = "all";
@@ -1841,6 +1862,7 @@
     document.getElementById("current-action").href = `#${current.id}`;
     document.getElementById("current-action").firstChild.textContent = `OPEN ${current.number.toUpperCase()} `;
     renderSiteContent();
+    scheduleAssignmentRefresh();
     renderAgendaDate();
     renderUnits();
     renderWords();
@@ -1982,7 +2004,7 @@
       checkbox.type = "checkbox";
       checkbox.dataset.assignmentUnlock = resource.id;
       const currentUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
-      checkbox.checked = Boolean(currentUrl && siteContent.assignmentUnlocks?.[resource.id]);
+      checkbox.checked = Boolean(currentUrl && assignmentIsUnlocked(resource.id));
       const labelText = document.createElement("span");
       labelText.textContent = resource.title;
       const urlInput = document.createElement("input");
@@ -2058,6 +2080,7 @@
       agendaText: document.getElementById("admin-agenda-text").value.trim(),
       assignmentUnlocks,
       assignmentUrls,
+      assignmentUnlockAt: { ...(siteContent.assignmentUnlockAt || {}) },
       foundationUnlocks
     };
   }
