@@ -274,11 +274,19 @@ function validateSharedCourseExperience() {
   if (!siteContent.includes('"self-guided-tour": "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0"')) {
     errors.push('Published Self-Guided Tour URL changed or missing.');
   }
+  if (!siteContent.includes('"civics-field-guide": "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0"')) {
+    errors.push('Published Civics Field Guide URL changed or missing.');
+  }
+  if (!siteContent.includes('"presidential-yearbook": "2026-08-10T09:00:00-07:00"')) {
+    errors.push('Portrait Day must remain scheduled for August 10, 2026 at 9:00 AM Pacific.');
+  }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
     'Press ${shortcut}${deviceNote} to bookmark this course website.',
     'const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";',
+    'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
+    'assignmentIsUnlocked(resource.id)',
     'createUnitZeroCheck(resource, unlocked)',
     'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
   ].forEach(function (content) {
