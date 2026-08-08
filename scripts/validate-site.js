@@ -179,9 +179,9 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260808-home-layout',
+    'styles.css?v=20260808-history-cleanup',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260808-home-election',
+    'app.js?v=20260808-history-cleanup',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -198,6 +198,12 @@ function validateSharedCourseExperience() {
   });
   if (homepage.includes('data-view-link="agenda"') || homepage.includes('href="#agenda"')) {
     errors.push('Agenda must remain disabled in the primary student navigation.');
+  }
+  if (homepage.includes('href="#help"') || homepage.includes('data-view="help"')) {
+    errors.push('Retired assignment-help content must not return to the student site.');
+  }
+  if (homepage.includes('history-connection') || fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('plainHistoryConnection')) {
+    errors.push('This Day in Politics must not render the retired connection tags.');
   }
   ['MIDTERM ELECTION TRACKER', 'href="#election-2026"', 'id="election-count"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Home election tracker is missing: ' + content);
