@@ -249,16 +249,18 @@ function validateSharedCourseExperience() {
     '0.1 — Class Is in Session',
     '0.2 — Read the Fine Print',
     '0.3 — Pack Your Field Guides',
-    '0.4 — Portrait Day',
-    '0.5 — Show Your Work',
-    '0.6 — Prove Your Case',
+    '0.4 — Government Takes the Stage',
+    '0.5 — Portrait Day',
+    '0.6 — Show Your Work',
+    '0.7 — Prove The Case',
     'Join Google Classroom, bookmark the course website, and join AP Classroom',
     'Complete the signed syllabus, Self-Guided Tour, and Civic Selfie',
     'Complete The Presidential Yearbook',
     'AP ADDENDUM',
     'AP ADDENDUM TEST',
     'CIVICS FIELD TEST',
-    'EVIDENCE IN ACTION'
+    'EVIDENCE IN ACTION',
+    'MR. SMITH GOES TO WASHINGTON REFLECTION'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
   });
