@@ -145,11 +145,11 @@
 
   function route() {
     const routeName = location.hash.slice(1) || "home";
-    if (routeName === "agenda") {
+    if (["agenda", "help"].includes(routeName)) {
       location.hash = "home";
       return;
     }
-    const valid = ["home", "units", "foundations", "words", "skills", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents", "help"].includes(routeName) || data.units.some(unit => unit.id === routeName);
+    const valid = ["home", "units", "foundations", "words", "skills", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents"].includes(routeName) || data.units.some(unit => unit.id === routeName);
     if (routeName === "founding-power" && unitState(data.units.find(unit => unit.id === "gov-1")) === "locked") {
       location.hash = "units";
       return;
@@ -1879,8 +1879,6 @@
     }
     document.getElementById("history-year").textContent = String(event.year || "CIVIC MOMENT");
     document.getElementById("history-text").textContent = event.text || "";
-    const historyConnection = plainHistoryConnection(event.ap_connection || "");
-    document.getElementById("history-connection").textContent = historyConnection ? `WHY IT MATTERS: ${historyConnection}` : "";
     const source = document.getElementById("history-source");
     if (event.source_url) {
       source.href = event.source_url;
@@ -1889,32 +1887,6 @@
     } else {
       source.hidden = true;
     }
-  }
-
-  function plainHistoryConnection(connection) {
-    const replacements = new Map([
-      ["constitutional foundations", "the Constitution"],
-      ["founding ideals", "ideas behind American government"],
-      ["national policymaking", "how national policy is made"],
-      ["agenda setting", "choosing which issues government acts on"],
-      ["linkage institutions", "groups that connect people and government"],
-      ["federal bureaucracy", "federal agencies"],
-      ["implementation", "putting policy into action"],
-      ["administrative power", "power of government agencies"],
-      ["american political development", "how American government changed"],
-      ["institutions", "government institutions"],
-      ["selective incorporation", "applying Bill of Rights protections to states"],
-      ["continuity of government", "keeping government working during a crisis"],
-      ["collective action", "people working together"],
-      ["political culture", "public beliefs about government"],
-      ["suffrage", "voting rights"]
-    ]);
-    return connection
-      .split(";")
-      .map(item => item.trim())
-      .filter(item => item && !/^Unit \d+$/i.test(item))
-      .map(item => replacements.get(item.toLowerCase()) || item)
-      .join(" · ");
   }
 
   async function loadHistory() {
