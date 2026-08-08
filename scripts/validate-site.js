@@ -179,7 +179,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260808-home-election',
+    'styles.css?v=20260808-home-layout',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260808-home-election',
     'data-view-link="home"',
@@ -190,7 +190,7 @@ function validateSharedCourseExperience() {
     'https://classroom.google.com/',
     '<code>wxe36xms</code>',
     'href="https://myap.collegeboard.org/"',
-    '<h2>AP CLASSROOM</h2>',
+    '<h3>AP CLASSROOM</h3>',
     '<code>VYJN37</code>',
     '<code>9RN33E</code>'
   ].forEach(function (content) {
