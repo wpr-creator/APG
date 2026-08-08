@@ -171,18 +171,18 @@ function validateSharedCourseExperience() {
     const html = fs.readFileSync(file, 'utf8');
     const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
-    if (!isNewShell && !isUnitZeroRedirect && !html.includes('styles-gov-theme.css')) {
+    const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260801-course-links',
+    'styles.css?v=20260808-home-election',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260805-tour-fixes',
+    'app.js?v=20260808-home-election',
     'data-view-link="home"',
-    'data-view-link="agenda"',
     'data-view-link="units"',
     'data-view-link="foundations"',
     'data-view-link="words"',
@@ -196,6 +196,18 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
+  if (homepage.includes('data-view-link="agenda"') || homepage.includes('href="#agenda"')) {
+    errors.push('Agenda must remain disabled in the primary student navigation.');
+  }
+  ['MIDTERM ELECTION TRACKER', 'href="#election-2026"', 'id="election-count"'].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Home election tracker is missing: ' + content);
+  });
+  const agendaRedirect = fs.readFileSync(path.join(root, 'agenda.html'), 'utf8');
+  ['content="0; url=./#home"', 'window.location.replace("./#home");'].forEach(function (content) {
+    if (!agendaRedirect.includes(content)) errors.push('Disabled Agenda redirect changed or missing: ' + content);
+  });
+  const sharedNav = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
+  if (sharedNav.includes('{ label: "Agenda"')) errors.push('Agenda must remain disabled in shared navigation.');
   if (!homepage.includes('<h1>AP GOVERNMENT GLOSSARY</h1>')) {
     errors.push('APG glossary heading is missing.');
   }

@@ -145,7 +145,11 @@
 
   function route() {
     const routeName = location.hash.slice(1) || "home";
-    const valid = ["home", "agenda", "units", "foundations", "words", "skills", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents", "help"].includes(routeName) || data.units.some(unit => unit.id === routeName);
+    if (routeName === "agenda") {
+      location.hash = "home";
+      return;
+    }
+    const valid = ["home", "units", "foundations", "words", "skills", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents", "help"].includes(routeName) || data.units.some(unit => unit.id === routeName);
     if (routeName === "founding-power" && unitState(data.units.find(unit => unit.id === "gov-1")) === "locked") {
       location.hash = "units";
       return;
@@ -155,10 +159,6 @@
       return;
     }
     if (routeName === "rights-referee" && unitState(data.units.find(unit => unit.id === "gov-3")) === "locked") {
-      location.hash = "units";
-      return;
-    }
-    if (routeName === "election-2026" && unitState(data.units.find(unit => unit.id === "gov-5")) === "locked") {
       location.hash = "units";
       return;
     }
@@ -1737,7 +1737,6 @@
     classroom.href = siteContent.classroomUrl || "https://classroom.google.com/";
     const agendaTitle = (siteContent.agendaTitle || "AGENDA").trim();
     document.getElementById("agenda-page-title").textContent = agendaTitle;
-    document.getElementById("agenda-nav-link").textContent = agendaTitle;
     document.getElementById("agenda-page-text").textContent = siteContent.agendaText || "";
     const list = document.getElementById("upcoming-list");
     list.replaceChildren();

@@ -88,6 +88,14 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .card-heading h2 { margin: 0; font-size: 1.35rem; }
 .date-badge { padding: .35rem .6rem; color: var(--white); background: var(--black); font-size: .72rem; letter-spacing: .08em; }
 .history-card { grid-column: 1 / -1; }
+.election-tracker-card { grid-column: 1 / -1; padding: 0; overflow: hidden; }
+.election-tracker-card .card-heading { padding: 1.5rem; }
+.election-tracker-layout { display: grid; grid-template-columns: minmax(280px, .72fr) minmax(0, 1.28fr); }
+.election-tracker-card .election-countdown { border-top: 0; }
+.election-tracker-copy { padding: clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: center; }
+.election-tracker-copy h3 { margin: 0 0 .8rem; font-size: clamp(1.45rem, 3vw, 2.35rem); line-height: 1.05; }
+.election-tracker-copy > p:not(.eyebrow) { max-width: 650px; margin: 0 0 1.4rem; color: var(--muted); font-weight: 650; }
+.election-tracker-copy .primary-action { width: min(100%, 390px); }
 .history-body { min-height: 160px; padding: 1.5rem 0; display: grid; grid-template-columns: 190px 1fr; gap: 1.5rem; align-items: start; }
 .history-year { color: var(--stone-dark); font-size: clamp(2.5rem, 6vw, 5rem); line-height: 1; font-weight: 950; }
 .history-body p { margin: 0 0 .8rem; max-width: 850px; font-size: 1.05rem; font-weight: 650; }
@@ -673,6 +681,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .lesson { grid-template-columns: 46px 1fr; }
   .standard-tag { grid-column: 2; width: max-content; }
   .home-dashboard { grid-template-columns: 1fr; }
+  .election-tracker-layout { grid-template-columns: 1fr; }
   .agenda-layout { min-height: auto; grid-template-columns: 1fr; }
   .agenda-date-panel { border-left: 0; border-top: 10px solid var(--slate); }
   .agenda-today { min-height: 330px; }
