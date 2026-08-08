@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="Mr. Rogers AP Government and Politics at O'Farrell High School.">
   <title>AP United States Government and Politics</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260808-home-election">
+  <link rel="stylesheet" href="styles.css?v=20260808-home-layout">
   <script src="course-data.js?v=20260730-apg" defer></script>
   <script src="glossary-data.js?v=20260731" defer></script>
   <script src="foundations-data.js" defer></script>
@@ -103,6 +103,11 @@
           </div>
         </article>
 
+        <article class="dashboard-card upcoming-card">
+          <div class="card-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>UPCOMING ASSIGNMENTS</h2></div></div>
+          <div id="upcoming-list" class="upcoming-list"></div>
+        </article>
+
         <article class="dashboard-card election-tracker-card">
           <div class="card-heading">
             <div><p class="eyebrow">NOVEMBER 3, 2026</p><h2>MIDTERM ELECTION TRACKER</h2></div>
@@ -125,25 +130,24 @@
           </div>
         </article>
 
-        <article class="dashboard-card upcoming-card">
-          <div class="card-heading"><div><p class="eyebrow">PLAN AHEAD</p><h2>UPCOMING ASSIGNMENTS</h2></div></div>
-          <div id="upcoming-list" class="upcoming-list"></div>
-        </article>
-
-        <article class="dashboard-card classroom-card">
-          <div class="classroom-mark" aria-hidden="true">G</div>
-          <div><p class="eyebrow">COURSE LINK</p><h2>GOOGLE CLASSROOM</h2><p>OPEN CLASS MATERIALS, ANNOUNCEMENTS, AND ASSIGNMENTS.</p></div>
-          <a class="primary-action" id="classroom-link" href="https://classroom.google.com/" target="_blank" rel="noopener">OPEN CLASSROOM <span aria-hidden="true">↗</span></a>
-          <p class="classroom-code"><span>JOIN CODE</span><code>wxe36xms</code></p>
-        </article>
-
-        <article class="dashboard-card classroom-card ap-classroom-card">
-          <div class="classroom-mark" aria-hidden="true">AP</div>
-          <div><p class="eyebrow">COURSE LINK</p><h2>AP CLASSROOM</h2><p>JOIN YOUR COLLEGE BOARD CLASS SECTION.</p></div>
-          <a class="primary-action" href="https://myap.collegeboard.org/" target="_blank" rel="noopener">OPEN MY AP <span aria-hidden="true">↗</span></a>
-          <div class="classroom-code-list" aria-label="AP Classroom join codes">
-            <p class="classroom-code"><span>1A JOIN CODE</span><code>VYJN37</code></p>
-            <p class="classroom-code"><span>2B JOIN CODE</span><code>9RN33E</code></p>
+        <article class="dashboard-card course-links-card">
+          <div class="card-heading"><div><p class="eyebrow">GET CONNECTED</p><h2>COURSE LINKS</h2></div></div>
+          <div class="course-link-list">
+            <section class="compact-course-link">
+              <div class="classroom-mark" aria-hidden="true">G</div>
+              <div><h3>GOOGLE CLASSROOM</h3></div>
+              <a id="classroom-link" href="https://classroom.google.com/" target="_blank" rel="noopener">OPEN <span aria-hidden="true">↗</span></a>
+              <p class="compact-code"><span>JOIN CODE</span><code>wxe36xms</code></p>
+            </section>
+            <section class="compact-course-link">
+              <div class="classroom-mark" aria-hidden="true">AP</div>
+              <div><h3>AP CLASSROOM</h3></div>
+              <a href="https://myap.collegeboard.org/" target="_blank" rel="noopener">OPEN <span aria-hidden="true">↗</span></a>
+              <div class="compact-code-list" aria-label="AP Classroom join codes">
+                <p class="compact-code"><span>1A</span><code>VYJN37</code></p>
+                <p class="compact-code"><span>2B</span><code>9RN33E</code></p>
+              </div>
+            </section>
           </div>
         </article>
 
