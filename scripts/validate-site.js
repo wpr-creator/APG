@@ -336,6 +336,28 @@ function validateSharedCourseExperience() {
   if (!requiredData.includes('window.REQUIRED_CASES = REQUIRED_CASES;')) {
     errors.push('Required Supreme Court cases are not exposed to Foundations.');
   }
+  if (!requiredData.includes('file: "docs/bill-of-rights.html"') ||
+      !fs.existsSync(path.join(root, 'docs', 'bill-of-rights.html'))) {
+    errors.push('The AP Addendum foundational-document list must include a dedicated Bill of Rights guide.');
+  }
+  if (!navCode.includes('addAddendumSummary') || !navCode.includes('AP ADDENDUM SUMMARY')) {
+    errors.push('Required documents and cases must receive the shared AP Addendum Summary panel.');
+  }
+  const REQUIRED_SUMMARY_FILES = [
+    ...fs.readdirSync(path.join(root, 'docs')).filter(function (file) { return file.endsWith('.html') && file !== 'ARCHITECTURE.html'; }).map(function (file) { return path.join(root, 'docs', file); }),
+    ...fs.readdirSync(path.join(root, 'cases')).filter(function (file) { return file.endsWith('.html'); }).map(function (file) { return path.join(root, 'cases', file); })
+  ];
+  REQUIRED_SUMMARY_FILES.forEach(function (file) {
+    const page = fs.readFileSync(file, 'utf8');
+    if (!page.includes('data-required.js') || !page.includes('nav-render.js')) {
+      errors.push('Required guide cannot load its AP Addendum Summary: ' + relative(file));
+    }
+  });
+  if (files.some(function (file) {
+    return file !== __filename && fs.readFileSync(file).includes('12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg');
+  })) {
+    errors.push('The private AP Addendum source link must not be present in the published repository.');
+  }
 
   const canonicalCases = fs.readdirSync(path.join(root, 'cases'))
     .filter(function (file) { return file.endsWith('.html'); });

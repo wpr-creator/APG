@@ -52,6 +52,17 @@ const REQUIRED_DOCS = [
     blurb: "Required portions only: Preamble, Articles I–III, Supremacy Clause, N&P Clause, key amendments. Every clause that generated a landmark case."
   },
   {
+    id: "bill-of-rights",
+    title: "Bill of Rights",
+    navLabel: "Bill of Rights",
+    author: "James Madison / First Congress",
+    year: "1791",
+    unit: 1,
+    icon: "🛡️",
+    file: "docs/bill-of-rights.html",
+    blurb: "The first ten amendments protect individual liberties and reserve undelegated powers to the states or the people. They answered Anti-Federalist fears of federal overreach and later became the foundation for selective incorporation through the Fourteenth Amendment."
+  },
+  {
     id: "fed10",
     title: "Federalist No. 10",
     navLabel: "Federalist No. 10",
@@ -319,7 +330,7 @@ window.REQUIRED_CASES = REQUIRED_CASES;
 // file to confirm every doc/case count matches what the handoff doc says.
 function _auditRequiredContent() {
   console.log("Docs by unit:", REQUIRED_DOCS.reduce((a, d) => (a[d.unit] = (a[d.unit] || 0) + 1, a), {}));
-  console.log("Total docs:", REQUIRED_DOCS.length, "(expect 13)");
+  console.log("Total docs:", REQUIRED_DOCS.length, "(expect 14)");
   console.log("Cases by unit:", REQUIRED_CASES.reduce((a, c) => (a[c.unit] = (a[c.unit] || 0) + 1, a), {}));
   console.log("Total cases:", REQUIRED_CASES.length, "(expect 14)");
 }

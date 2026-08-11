@@ -1,7 +1,7 @@
 window.FOUNDATIONS_DATA = {
   documents: [
     {
-      id: "declaration", title: "Declaration of Independence", author: "Thomas Jefferson", year: "1776",
+      id: "declaration", title: "Declaration of Independence", author: "Thomas Jefferson", year: "1776", file: "docs/declaration-of-independence.html",
       standards: "AP Topic 1.1", units: ["gov-1"],
       bigIdea: "Government has legitimate power when it protects rights and receives permission from the people.",
       excerpt: "We hold these truths to be self-evident, that all men are created equal… [and] are endowed… with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",
@@ -10,7 +10,7 @@ window.FOUNDATIONS_DATA = {
       question: "What should people be able to do when government repeatedly violates their rights?"
     },
     {
-      id: "articles", title: "Articles of Confederation", author: "Continental Congress", year: "1781",
+      id: "articles", title: "Articles of Confederation", author: "Continental Congress", year: "1781", file: "docs/articles-of-confederation.html",
       standards: "AP Topic 1.4", units: ["gov-1"],
       bigIdea: "America’s first national government protected state power but could not solve major national problems.",
       excerpt: "Each state retains its sovereignty, freedom, and independence.",
@@ -28,7 +28,7 @@ window.FOUNDATIONS_DATA = {
       question: "Why might a democracy intentionally make important decisions difficult?"
     },
     {
-      id: "fed10", title: "Federalist No. 10", author: "James Madison", year: "1787",
+      id: "fed10", title: "Federalist No. 10", author: "James Madison", year: "1787", file: "docs/federalist-10.html",
       standards: "AP Topics 1.3; 5.6", units: ["gov-1", "gov-5"],
       bigIdea: "Factions are unavoidable, so a large republic should prevent any one faction from dominating.",
       excerpt: "The causes of faction cannot be removed… relief is only to be sought in the means of controlling its effects.",
@@ -37,7 +37,7 @@ window.FOUNDATIONS_DATA = {
       question: "Does having many competing groups protect democracy or make governing harder?"
     },
     {
-      id: "fed51", title: "Federalist No. 51", author: "James Madison", year: "1788",
+      id: "fed51", title: "Federalist No. 51", author: "James Madison", year: "1788", file: "docs/federalist-51.html",
       standards: "AP Topics 1.6; 2.15", units: ["gov-1", "gov-2"],
       bigIdea: "Government must control the people and also control itself.",
       excerpt: "Ambition must be made to counteract ambition… If men were angels, no government would be necessary.",
@@ -46,7 +46,7 @@ window.FOUNDATIONS_DATA = {
       question: "Which is more dangerous: government that is too weak or government that cannot be checked?"
     },
     {
-      id: "brutus1", title: "Brutus No. 1", author: "Anti-Federalist writer", year: "1787",
+      id: "brutus1", title: "Brutus No. 1", author: "Anti-Federalist writer", year: "1787", file: "docs/brutus-1.html",
       standards: "AP Topics 1.4; 1.7", units: ["gov-1"],
       bigIdea: "A powerful national government may eventually overwhelm the states and threaten liberty.",
       excerpt: "The government then, so far as it extends, is a complete one, and not a confederation.",
@@ -55,7 +55,16 @@ window.FOUNDATIONS_DATA = {
       question: "What warning from Brutus still matters in federal-state conflicts today?"
     },
     {
-      id: "fed70", title: "Federalist No. 70", author: "Alexander Hamilton", year: "1788",
+      id: "fed39", title: "Federalist No. 39", author: "James Madison", year: "1788", file: "docs/federalist-39.html",
+      standards: "AP Topic 1.7", units: ["gov-1"],
+      bigIdea: "The Constitution creates a republic that is partly national and partly federal.",
+      excerpt: "The proposed Constitution… is, in strictness, neither a national nor a federal Constitution, but a composition of both.",
+      plain: "Some features act on the people as one nation, while others preserve the states as separate political communities.",
+      why: "It explains the compound structure of American federalism and how national and state authority coexist.",
+      question: "Which parts of the constitutional system are national, and which are federal?"
+    },
+    {
+      id: "fed70", title: "Federalist No. 70", author: "Alexander Hamilton", year: "1788", file: "docs/federalist-70.html",
       standards: "AP Topic 2.6", units: ["gov-2"],
       bigIdea: "An effective executive requires unity, energy, and clear accountability.",
       excerpt: "Energy in the executive is a leading character in the definition of good government.",
@@ -64,7 +73,7 @@ window.FOUNDATIONS_DATA = {
       question: "When does decisive presidential action become executive overreach?"
     },
     {
-      id: "fed78", title: "Federalist No. 78", author: "Alexander Hamilton", year: "1788",
+      id: "fed78", title: "Federalist No. 78", author: "Alexander Hamilton", year: "1788", file: "docs/federalist-78.html",
       standards: "AP Topics 2.8–2.11", units: ["gov-2"],
       bigIdea: "Independent courts protect the Constitution even when their decisions are unpopular.",
       excerpt: "The judiciary… has no influence over either the sword or the purse… merely judgment.",
@@ -73,8 +82,8 @@ window.FOUNDATIONS_DATA = {
       question: "Why should judges be protected from elections and short-term political pressure?"
     },
     {
-      id: "bill-rights", title: "Bill of Rights", author: "James Madison and the First Congress", year: "1791",
-      standards: "AP Unit 3", units: ["gov-3"],
+      id: "bill-rights", title: "Bill of Rights", author: "James Madison and the First Congress", year: "1791", file: "docs/bill-of-rights.html",
+      standards: "AP Units 1 and 3", units: ["gov-1", "gov-3"],
       bigIdea: "Written guarantees identify freedoms and legal protections government must respect.",
       excerpt: "Congress shall make no law… abridging the freedom of speech, or of the press…",
       plain: "Government power stops where protected freedoms and fair legal procedures begin.",
@@ -82,7 +91,34 @@ window.FOUNDATIONS_DATA = {
       question: "When may public safety justify limiting an individual freedom?"
     },
     {
-      id: "birmingham", title: "Letter from Birmingham Jail", author: "Martin Luther King Jr.", year: "1963",
+      id: "wealth", title: "The Wealth of Nations", author: "Adam Smith", year: "1776", file: "docs/wealth-of-nations.html",
+      standards: "AP Topic 4.1", units: ["gov-4"],
+      bigIdea: "Competition and self-interest can coordinate economic activity through markets with limited government direction.",
+      excerpt: "By pursuing his own interest he frequently promotes that of the society more effectually than when he really intends to promote it.",
+      plain: "The invisible hand describes how individual choices and competition can produce broader economic benefits.",
+      why: "It supplies the intellectual foundation for free-market beliefs, limited economic regulation, and debates over government's role in the economy.",
+      question: "When do markets serve the public interest, and when should government intervene?"
+    },
+    {
+      id: "emancipation", title: "Emancipation Proclamation", author: "Abraham Lincoln", year: "1863", file: "docs/emancipation-proclamation.html",
+      standards: "AP Topic 3.12", units: ["gov-3"],
+      bigIdea: "Lincoln used commander-in-chief power to declare enslaved people free in areas still rebelling against the United States.",
+      excerpt: "All persons held as slaves within said designated States… are, and henceforward shall be free.",
+      plain: "The proclamation was a wartime executive action limited to Confederate territory; it did not itself abolish slavery everywhere.",
+      why: "It demonstrates both the reach and the limits of presidential power and helped lead to permanent abolition through the Thirteenth Amendment.",
+      question: "Why did ending slavery permanently require a constitutional amendment?"
+    },
+    {
+      id: "gettysburg", title: "The Gettysburg Address", author: "Abraham Lincoln", year: "1863", file: "docs/gettysburg-address.html",
+      standards: "AP Topic 1.1", units: ["gov-1", "gov-3"],
+      bigIdea: "The Civil War tested whether a nation founded on liberty, equality, popular government, and national union could survive.",
+      excerpt: "Government of the people, by the people, for the people, shall not perish from the earth.",
+      plain: "Lincoln reframed the war as a struggle to fulfill the Declaration's promise of equality through a new birth of freedom.",
+      why: "It connects popular sovereignty and equality to the preservation of the Union and the expansion of civil rights.",
+      question: "How did Lincoln redefine the purpose of the Civil War?"
+    },
+    {
+      id: "birmingham", title: "Letter from Birmingham Jail", author: "Martin Luther King Jr.", year: "1963", file: "docs/letter-birmingham-jail.html",
       standards: "AP Topics 3.11–3.13; 5.1", units: ["gov-3", "gov-5"],
       bigIdea: "Citizens may have a moral responsibility to challenge unjust laws through disciplined nonviolent action.",
       excerpt: "One has not only a legal but a moral responsibility to obey just laws. Conversely, one has a moral responsibility to disobey unjust laws.",
