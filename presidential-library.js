@@ -4,6 +4,11 @@
   const search = document.querySelector("#president-search");
   let presidents = [];
 
+  const expandPresidencies = items => items
+    .flatMap(item => (item.presidencies || [{ order: item.order, yearsInOffice: item.yearsInOffice }])
+      .map(term => ({ ...item, order: term.order, yearsInOffice: term.yearsInOffice })))
+    .sort((a, b) => Number(a.order) - Number(b.order));
+
   const addText = (parent, tag, text, className = "") => {
     const node = document.createElement(tag);
     if (className) node.className = className;
@@ -75,7 +80,7 @@
       if (!response.ok) throw new Error("President data unavailable");
       return response.json();
     })
-    .then(payload => { presidents = payload.presidents || []; render(); })
+    .then(payload => { presidents = expandPresidencies(payload.presidents || []); render(); })
     .catch(() => { status.textContent = "PRESIDENT FACT CARDS ARE TEMPORARILY UNAVAILABLE."; });
   search.addEventListener("input", render);
 })();

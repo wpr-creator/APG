@@ -627,7 +627,10 @@
       const response = await fetch("assets/presidents/president-facts.json");
       if (!response.ok) throw new Error("President facts unavailable");
       const payload = await response.json();
-      presidentFacts = payload.presidents || [];
+      presidentFacts = (payload.presidents || [])
+        .flatMap(president => (president.presidencies || [{ order: president.order, yearsInOffice: president.yearsInOffice }])
+          .map(term => ({ ...president, order: term.order, yearsInOffice: term.yearsInOffice })))
+        .sort((a, b) => Number(a.order) - Number(b.order));
       renderPresidents();
     } catch (error) {
       document.getElementById("president-status").textContent = "PRESIDENT FACT CARDS ARE TEMPORARILY UNAVAILABLE.";

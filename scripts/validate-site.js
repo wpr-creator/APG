@@ -43,6 +43,27 @@ function validateJson() {
   });
 }
 
+function validatePresidentialTerms() {
+  const data = JSON.parse(fs.readFileSync(path.join(root, 'assets', 'presidents', 'president-facts.json'), 'utf8'));
+  const byName = Object.fromEntries(data.presidents.map(function (president) { return [president.name, president]; }));
+  const expected = {
+    'Grover Cleveland': [['22', '1885–1889'], ['24', '1893–1897']],
+    'Donald Trump': [['45', '2017–2021'], ['47', '2025–present']]
+  };
+  Object.entries(expected).forEach(function ([name, terms]) {
+    const actual = (byName[name] && byName[name].presidencies || []).map(function (term) {
+      return [term.order, term.yearsInOffice];
+    });
+    if (JSON.stringify(actual) !== JSON.stringify(terms)) {
+      errors.push(name + ' must render one correctly numbered card for each nonconsecutive term.');
+    }
+  });
+  const renderedCardCount = data.presidents.reduce(function (count, president) {
+    return count + (president.presidencies ? president.presidencies.length : 1);
+  }, 0);
+  if (renderedCardCount !== 47) errors.push('Presidential Library must render all 47 numbered presidencies.');
+}
+
 function validateLocalReferences() {
   const attributePattern = /(?:href|src)=["']([^"']+)["']/gi;
   files.filter(function (file) { return file.endsWith('.html'); }).forEach(function (file) {
@@ -436,6 +457,7 @@ function validateCalendarData() {
 walk(root);
 validateJavaScript();
 validateJson();
+validatePresidentialTerms();
 validateLocalReferences();
 validateSocialMetadata();
 validateAccessibilityAndHygiene();
