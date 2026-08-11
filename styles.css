@@ -106,6 +106,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .history-controls button { min-height: 44px; padding: .65rem .85rem; border: 1px solid var(--black); background: var(--white); cursor: pointer; font-size: .75rem; font-weight: 900; }
 .history-controls button:hover { color: var(--white); background: var(--black); }
 .upcoming-list { display: grid; }
+.upcoming-unit-link { min-height: 44px; padding: .55rem .7rem; display: inline-flex; align-items: center; color: var(--white); background: var(--black); text-decoration: none; font-size: .7rem; font-weight: 900; white-space: nowrap; }
 .upcoming-row { padding: 1rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); }
 .upcoming-row:last-child { border-bottom: 0; }
 .upcoming-row strong { text-transform: uppercase; }

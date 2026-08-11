@@ -11,8 +11,16 @@
   "exitQuestion": "",
   "upcoming": [
     {
-      "title": "COURSE MATERIALS COMING SOON",
-      "date": "AUGUST"
+      "title": "CIVICS FIELD GUIDE + MR. SMITH EXTENSION",
+      "date": "UNIT 0 · 0.4"
+    },
+    {
+      "title": "THE PRESIDENTIAL YEARBOOK",
+      "date": "UNIT 0 · 0.5"
+    },
+    {
+      "title": "CIVICS FIELD GUIDE TEST",
+      "date": "UNIT 0 · 0.6"
     }
   ],
   "classroomUrl": "https://classroom.google.com/",
@@ -28,10 +36,10 @@
     "pew-typology": true,
     "typology-reflection": true,
     "civics-field-guide": true,
-    "mr-smith-reflection": false,
-    "presidential-yearbook": false,
+    "mr-smith-extension": true,
+    "presidential-yearbook": true,
     "presidential-library": true,
-    "civics-field-test": false,
+    "civics-field-test": true,
     "ap-addendum": false,
     "ap-addendum-test": false,
     "evidence-in-action": false,
@@ -68,10 +76,10 @@
     "pew-typology": "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77",
     "typology-reflection": "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog",
     "civics-field-guide": "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0",
-    "mr-smith-reflection": "",
+    "mr-smith-extension": "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor",
     "presidential-yearbook": "presidential-yearbook.html",
     "presidential-library": "#presidents",
-    "civics-field-test": "",
+    "civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog",
     "ap-addendum": "",
     "ap-addendum-test": "",
     "evidence-in-action": "",
@@ -98,9 +106,7 @@
     "ap-u5-cases": "unit5-cases.html",
     "california-ballot-2026": "#election-2026"
   },
-  "assignmentUnlockAt": {
-    "presidential-yearbook": "2026-08-10T09:00:00-07:00"
-  },
+  "assignmentUnlockAt": {},
   "foundationUnlocks": {
     "source": 3,
     "argument": 3,

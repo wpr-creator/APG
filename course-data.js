@@ -8,9 +8,9 @@ window.COURSE_DATA = {
         ["0.1 — Class Is in Session", "Why does government already matter?", "Course launch", "Compare government and politics, connect both to everyday life, and get connected to the course.", "Join Google Classroom, bookmark the course website, and join AP Classroom"],
         ["0.2 — Read the Fine Print", "How will this class work?", "Course launch", "Review the syllabus and classroom expectations, then learn how to navigate course resources.", "Complete the signed syllabus, Self-Guided Tour, and Civic Selfie"],
         ["0.3 — Pack Your Field Guides", "What do I already believe and know about government?", "Course launch", "Complete the PEW Political Typology, reflect on the result, and review the course outline.", "Complete Between the Lines"],
-        ["0.4 — Government Takes the Stage", "How does American government look when it moves from the page to the screen?", "Course launch", "Complete the Civics Field Guide, then connect civic ideas to institutions, power, and participation through Mr. Smith Goes to Washington.", "Complete the Civics Field Guide and Mr. Smith Goes to Washington Reflection"],
+        ["0.4 — Government Takes the Stage", "How does American government look when it moves from the page to the screen?", "Course launch", "Complete the Civics Field Guide, then connect civic ideas to institutions, power, and participation through Mr. Smith Goes to Washington.", "Complete the Civics Field Guide and Mr. Smith Goes to Washington Extension"],
         ["0.5 — Portrait Day", "What can presidents reveal about American government?", "Prepares for Gov 12.4.4", "Explore the presidency through research, art, and a shared classroom display.", "Complete The Presidential Yearbook"],
-        ["0.6 — Show Your Work", "What do I already know—and what tools will help me grow?", "Course baseline", "Complete the civics assessment and organize the AP course tools you will use throughout the year.", "Complete the Civics Field Test and AP Addendum"],
+        ["0.6 — Show Your Work", "What do I already know—and what tools will help me grow?", "Course baseline", "Complete the civics assessment and organize the AP course tools you will use throughout the year.", "Complete the Civics Field Guide Test and AP Addendum"],
         ["0.7 — Prove The Case", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Complete the AP course baseline, then use a short political source to make a claim supported by specific evidence.", "Complete the AP Addendum Test and Evidence in Action"]
       ],
       resources: [
@@ -23,10 +23,10 @@ window.COURSE_DATA = {
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
         { id: "civics-field-guide", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0" },
-        { id: "mr-smith-reflection", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "MR. SMITH GOES TO WASHINGTON REFLECTION", url: "" },
+        { id: "mr-smith-extension", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "MR. SMITH GOES TO WASHINGTON EXTENSION", url: "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor" },
         { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
-        { id: "civics-field-test", lesson: "0.6 — SHOW YOUR WORK", title: "CIVICS FIELD TEST", url: "" },
+        { id: "civics-field-test", lesson: "0.6 — SHOW YOUR WORK", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog" },
         { id: "ap-addendum", lesson: "0.6 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "" },
         { id: "ap-addendum-test", lesson: "0.7 — PROVE THE CASE", title: "AP ADDENDUM TEST", url: "" },
         { id: "evidence-in-action", lesson: "0.7 — PROVE THE CASE", title: "EVIDENCE IN ACTION", url: "" }

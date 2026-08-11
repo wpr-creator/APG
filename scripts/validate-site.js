@@ -179,7 +179,8 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260808-history-cleanup',
+    'styles.css?v=20260811-unit0-links',
+    'course-data.js?v=20260811-unit0-links',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260808-history-cleanup',
     'data-view-link="home"',
@@ -276,9 +277,9 @@ function validateSharedCourseExperience() {
     'Complete The Presidential Yearbook',
     'AP ADDENDUM',
     'AP ADDENDUM TEST',
-    'CIVICS FIELD TEST',
+    'CIVICS FIELD GUIDE TEST',
     'EVIDENCE IN ACTION',
-    'MR. SMITH GOES TO WASHINGTON REFLECTION'
+    'MR. SMITH GOES TO WASHINGTON EXTENSION'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
   });
@@ -297,8 +298,11 @@ function validateSharedCourseExperience() {
   if (!siteContent.includes('"civics-field-guide": "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0"')) {
     errors.push('Published Civics Field Guide URL changed or missing.');
   }
-  if (!siteContent.includes('"presidential-yearbook": "2026-08-10T09:00:00-07:00"')) {
-    errors.push('Portrait Day must remain scheduled for August 10, 2026 at 9:00 AM Pacific.');
+  if (!siteContent.includes('"mr-smith-extension": "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor"')) {
+    errors.push('Published Mr. Smith Goes to Washington Extension URL changed or missing.');
+  }
+  if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog"')) {
+    errors.push('Published Civics Field Guide Test URL changed or missing.');
   }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
