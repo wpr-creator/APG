@@ -731,6 +731,10 @@
       "name": "Grover Cleveland",
       "order": "22 and 24",
       "yearsInOffice": "1885–1889; 1893–1897",
+      "presidencies": [
+        { "order": "22", "yearsInOffice": "1885–1889" },
+        { "order": "24", "yearsInOffice": "1893–1897" }
+      ],
       "portrait": "assets/presidents/grover-cleveland.jpg",
       "birthplace": "New Jersey",
       "religion": "Presbyterian (Christian)",
@@ -1483,6 +1487,10 @@
       "name": "Donald Trump",
       "order": "45 and 47",
       "yearsInOffice": "2017–2021; 2025–present",
+      "presidencies": [
+        { "order": "45", "yearsInOffice": "2017–2021" },
+        { "order": "47", "yearsInOffice": "2025–present" }
+      ],
       "portrait": "assets/presidents/donald-trump.jpg",
       "birthplace": "New York",
       "religion": "Nondenominational Christian; formerly Presbyterian (Christian)",
