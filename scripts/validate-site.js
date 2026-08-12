@@ -406,6 +406,7 @@ function validateSharedCourseExperience() {
     'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
     'assignmentIsUnlocked(resource.id)',
     'createUnitZeroCheck(resource, unlocked)',
+    'if (unit.id === "gov-0") resourceGroupEntries.reverse();',
     'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);

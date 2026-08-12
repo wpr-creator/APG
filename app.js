@@ -308,7 +308,9 @@
         if (!resourceGroups.has(lesson)) resourceGroups.set(lesson, []);
         resourceGroups.get(lesson).push(resource);
       });
-      resourceGroups.forEach((lessonResources, lesson) => {
+      const resourceGroupEntries = Array.from(resourceGroups.entries());
+      if (unit.id === "gov-0") resourceGroupEntries.reverse();
+      resourceGroupEntries.forEach(([lesson, lessonResources]) => {
         const group = document.createElement("section");
         group.className = "unit-resource-group";
         const lessonTitle = document.createElement("h2");
