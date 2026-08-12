@@ -27,7 +27,7 @@ window.COURSE_DATA = {
         { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "0.6 — SHOW YOUR WORK", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog" },
-        { id: "ap-addendum", lesson: "0.6 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "" },
+        { id: "ap-addendum", lesson: "0.6 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "0.7 — PROVE THE CASE", title: "AP ADDENDUM TEST", url: "" },
         { id: "evidence-in-action", lesson: "0.7 — PROVE THE CASE", title: "EVIDENCE IN ACTION", url: "" }
       ]

@@ -11,16 +11,12 @@
   "exitQuestion": "",
   "upcoming": [
     {
-      "title": "CIVICS FIELD GUIDE + MR. SMITH EXTENSION",
-      "date": "UNIT 0 · 0.4"
-    },
-    {
-      "title": "THE PRESIDENTIAL YEARBOOK",
-      "date": "UNIT 0 · 0.5"
-    },
-    {
       "title": "CIVICS FIELD GUIDE TEST",
       "date": "UNIT 0 · 0.6"
+    },
+    {
+      "title": "AP ADDENDUM TEST",
+      "date": "UNIT 0 · 0.7"
     }
   ],
   "classroomUrl": "https://classroom.google.com/",
@@ -40,7 +36,7 @@
     "presidential-yearbook": true,
     "presidential-library": true,
     "civics-field-test": true,
-    "ap-addendum": false,
+    "ap-addendum": true,
     "ap-addendum-test": false,
     "evidence-in-action": false,
     "ap-u1-overview": true,
@@ -80,7 +76,7 @@
     "presidential-yearbook": "presidential-yearbook.html",
     "presidential-library": "#presidents",
     "civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog",
-    "ap-addendum": "",
+    "ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0",
     "ap-addendum-test": "",
     "evidence-in-action": "",
     "ap-u1-overview": "unit1.html",
