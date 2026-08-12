@@ -408,6 +408,12 @@ function validateSharedCourseExperience() {
       courseData.includes('0.7 —')) {
     errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
   }
+  const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
+  if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
+      parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||
+      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== true) {
+    errors.push('AP Addendum Test must be published and unlocked with its assigned Google Form URL.');
+  }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
