@@ -64,6 +64,66 @@ function validatePresidentialTerms() {
   if (renderedCardCount !== 47) errors.push('Presidential Library must render all 47 numbered presidencies.');
 }
 
+function validatePresidentialYearbookAssignments() {
+  const dataFile = path.join(root, 'presidential-yearbook-assignments.js');
+  const revealFile = path.join(root, 'presidential-yearbook-reveal.js');
+  const pageFile = path.join(root, 'presidential-yearbook.html');
+  if (!fs.existsSync(dataFile) || !fs.existsSync(revealFile)) {
+    errors.push('Presidential Yearbook reveal data or display logic is missing.');
+    return;
+  }
+  const dataCode = fs.readFileSync(dataFile, 'utf8');
+  const revealCode = fs.readFileSync(revealFile, 'utf8');
+  const page = fs.readFileSync(pageFile, 'utf8');
+  if (/Math\.random\s*\(/.test(dataCode + revealCode + page)) {
+    errors.push('Presidential Yearbook assignments must never be randomized in the browser.');
+  }
+  if (!page.includes('PRESIDENTIAL REVEAL') || !page.includes('REVEAL MY PRESIDENT') ||
+      !page.includes('presidential-yearbook-assignments.js') || !page.includes('presidential-yearbook-reveal.js')) {
+    errors.push('Presidential Yearbook reveal interface is incomplete.');
+  }
+  if (page.includes('<strong>ASSIGNED PRESIDENTS</strong>') || page.includes('<span>COMING SOON</span>')) {
+    errors.push('Presidential Yearbook placeholder is still present.');
+  }
+  const vm = require('vm');
+  const sandbox = { window: {} };
+  vm.runInNewContext(dataCode, sandbox);
+  const assignments = sandbox.window.PRESIDENTIAL_YEARBOOK_ASSIGNMENTS;
+  if (!Array.isArray(assignments) || assignments.length !== 79) {
+    errors.push('Presidential Yearbook must contain exactly 79 finalized AP assignments.');
+    return;
+  }
+  const requiredFields = ['period', 'student', 'presidentNumber', 'president', 'term', 'libraryUrl', 'status'];
+  assignments.forEach(function (assignment, index) {
+    requiredFields.forEach(function (field) {
+      if (assignment[field] === undefined || assignment[field] === null || assignment[field] === '') {
+        errors.push('Incomplete Presidential Yearbook assignment at record ' + (index + 1) + ': ' + field);
+      }
+    });
+    if (!['1A', '2B'].includes(assignment.period)) {
+      errors.push('Non-AP class period in Presidential Yearbook assignments: ' + assignment.period);
+    }
+    if (assignment.libraryUrl !== 'https://wpr-creator.github.io/APG/presidential-library.html') {
+      errors.push('Non-AP Presidential Library link for ' + assignment.student);
+    }
+  });
+  const keys = assignments.map(function (assignment) { return assignment.period + '|' + assignment.student; });
+  if (new Set(keys).size !== assignments.length) errors.push('Duplicate AP student assignment record detected.');
+  const counts = assignments.reduce(function (totals, assignment) {
+    totals[assignment.period] = (totals[assignment.period] || 0) + 1;
+    return totals;
+  }, {});
+  if (counts['1A'] !== 39 || counts['2B'] !== 40) errors.push('AP assignment class counts do not match the finalized workbook.');
+  ['1A', '2B'].forEach(function (period) {
+    const numbers = assignments.filter(function (assignment) { return assignment.period === period; })
+      .map(function (assignment) { return assignment.presidentNumber; });
+    if (new Set(numbers).size !== numbers.length) errors.push('Duplicate president number within AP period ' + period);
+    [22, 24, 45, 47].forEach(function (number) {
+      if (!numbers.includes(number)) errors.push('AP period ' + period + ' is missing separate presidency #' + number);
+    });
+  });
+}
+
 function validateLocalReferences() {
   const attributePattern = /(?:href|src)=["']([^"']+)["']/gi;
   files.filter(function (file) { return file.endsWith('.html'); }).forEach(function (file) {
@@ -458,6 +518,7 @@ walk(root);
 validateJavaScript();
 validateJson();
 validatePresidentialTerms();
+validatePresidentialYearbookAssignments();
 validateLocalReferences();
 validateSocialMetadata();
 validateAccessibilityAndHygiene();
