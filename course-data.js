@@ -10,8 +10,7 @@ window.COURSE_DATA = {
         ["0.3 — Pack Your Field Guides", "What do I already believe and know about government?", "Course launch", "Complete the PEW Political Typology, reflect on the result, and review the course outline.", "Complete Between the Lines"],
         ["0.4 — Government Takes the Stage", "How does American government look when it moves from the page to the screen?", "Course launch", "Complete the Civics Field Guide, then connect civic ideas to institutions, power, and participation through Mr. Smith Goes to Washington.", "Complete the Civics Field Guide and Mr. Smith Goes to Washington Extension"],
         ["0.5 — Portrait Day", "What can presidents reveal about American government?", "Prepares for Gov 12.4.4", "Explore the presidency through research, art, and a shared classroom display.", "Complete The Presidential Yearbook"],
-        ["0.6 — Show Your Work", "What do I already know—and what tools will help me grow?", "Course baseline", "Complete the civics assessment and organize the AP course tools you will use throughout the year.", "Complete the Civics Field Guide Test and AP Addendum"],
-        ["0.7 — Prove The Case", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Complete the AP course baseline, then use a short political source to make a claim supported by specific evidence.", "Complete the AP Addendum Test and Evidence in Action"]
+        ["0.6 — The Court Is in Session", "How do AP Government students turn evidence into an argument?", "AP skills baseline", "Organize the AP course tools you will use throughout the year, then make a claim supported by specific evidence.", "Complete the AP Appendum Study Guide and Prove Your Case"]
       ],
       resources: [
         { id: "classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/" },
@@ -27,9 +26,9 @@ window.COURSE_DATA = {
         { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog" },
-        { id: "ap-addendum", lesson: "0.6 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
+        { id: "ap-addendum", lesson: "0.6 — THE COURT IS IN SESSION", title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "" },
-        { id: "evidence-in-action", lesson: "0.7 — PROVE THE CASE", title: "EVIDENCE IN ACTION", url: "" }
+        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "" }
       ]
     },
     {

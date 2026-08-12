@@ -351,15 +351,14 @@ function validateSharedCourseExperience() {
     '0.3 — Pack Your Field Guides',
     '0.4 — Government Takes the Stage',
     '0.5 — Portrait Day',
-    '0.6 — Show Your Work',
-    '0.7 — Prove The Case',
+    '0.6 — The Court Is in Session',
     'Join Google Classroom, bookmark the course website, and join AP Classroom',
     'Complete the signed syllabus, Self-Guided Tour, and Civic Selfie',
     'Complete The Presidential Yearbook',
-    'AP ADDENDUM',
+    'AP APPENDUM STUDY GUIDE',
     'AP ADDENDUM TEST',
     'CIVICS FIELD GUIDE TEST',
-    'EVIDENCE IN ACTION',
+    'PROVE YOUR CASE',
     'MR. SMITH GOES TO WASHINGTON EXTENSION'
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Primary Unit 0 content changed or missing: ' + content);
@@ -385,7 +384,7 @@ function validateSharedCourseExperience() {
   if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog"')) {
     errors.push('Published Civics Field Guide Test URL changed or missing.');
   }
-  if (!courseData.includes('title: "AP ADDENDUM", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
+  if (!courseData.includes('title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
       !siteContent.includes('"ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
       !siteContent.includes('"ap-addendum": true')) {
     errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
@@ -393,7 +392,7 @@ function validateSharedCourseExperience() {
   const parsedSiteContent = JSON.parse(siteContent);
   const expectedUpcoming = [
     { title: 'CIVICS FIELD GUIDE TEST', date: 'UNIT 0 · 0.6' },
-    { title: 'AP ADDENDUM TEST', date: 'UNIT 0 · 0.7' }
+    { title: 'AP ADDENDUM TEST', date: 'UNIT 0 · 0.6' }
   ];
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
     errors.push('Upcoming Assignments must contain only the two separate Unit 0 tests.');
@@ -405,6 +404,10 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!courseData.includes(content)) errors.push('Unit 0 assessment grouping changed or missing: ' + content);
   });
+  if (!courseData.includes('id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE"') ||
+      courseData.includes('0.7 —')) {
+    errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
+  }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
