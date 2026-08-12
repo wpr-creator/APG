@@ -398,6 +398,13 @@ function validateSharedCourseExperience() {
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
     errors.push('Upcoming Assignments must contain only the two separate Unit 0 tests.');
   }
+  [
+    'id: "mr-smith-extension", lesson: "ASSESSMENTS"',
+    'id: "civics-field-test", lesson: "ASSESSMENTS"',
+    'id: "ap-addendum-test", lesson: "ASSESSMENTS"'
+  ].forEach(function (content) {
+    if (!courseData.includes(content)) errors.push('Unit 0 assessment grouping changed or missing: ' + content);
+  });
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
@@ -406,7 +413,7 @@ function validateSharedCourseExperience() {
     'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
     'assignmentIsUnlocked(resource.id)',
     'createUnitZeroCheck(resource, unlocked)',
-    'if (unit.id === "gov-0") resourceGroupEntries.reverse();',
+    'if (lessonA === "ASSESSMENTS") return -1;',
     'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);

@@ -23,12 +23,12 @@ window.COURSE_DATA = {
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
         { id: "civics-field-guide", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0" },
-        { id: "mr-smith-extension", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "MR. SMITH GOES TO WASHINGTON EXTENSION", url: "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor" },
+        { id: "mr-smith-extension", lesson: "ASSESSMENTS", title: "MR. SMITH GOES TO WASHINGTON EXTENSION", url: "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor" },
         { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
-        { id: "civics-field-test", lesson: "0.6 — SHOW YOUR WORK", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog" },
+        { id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog" },
         { id: "ap-addendum", lesson: "0.6 — SHOW YOUR WORK", title: "AP ADDENDUM", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
-        { id: "ap-addendum-test", lesson: "0.7 — PROVE THE CASE", title: "AP ADDENDUM TEST", url: "" },
+        { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "" },
         { id: "evidence-in-action", lesson: "0.7 — PROVE THE CASE", title: "EVIDENCE IN ACTION", url: "" }
       ]
     },
