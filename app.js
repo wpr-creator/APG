@@ -309,7 +309,13 @@
         resourceGroups.get(lesson).push(resource);
       });
       const resourceGroupEntries = Array.from(resourceGroups.entries());
-      if (unit.id === "gov-0") resourceGroupEntries.reverse();
+      if (unit.id === "gov-0") {
+        resourceGroupEntries.sort(([lessonA], [lessonB]) => {
+          if (lessonA === "ASSESSMENTS") return -1;
+          if (lessonB === "ASSESSMENTS") return 1;
+          return lessonB.localeCompare(lessonA, undefined, { numeric: true });
+        });
+      }
       resourceGroupEntries.forEach(([lesson, lessonResources]) => {
         const group = document.createElement("section");
         group.className = "unit-resource-group";
