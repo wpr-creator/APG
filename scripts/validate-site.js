@@ -413,6 +413,7 @@ function validateSharedCourseExperience() {
     'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
     'assignmentIsUnlocked(resource.id)',
     'createUnitZeroCheck(resource, unlocked)',
+    'group.classList.add("unit-resource-group-assessments")',
     'if (lessonA === "ASSESSMENTS") return -1;',
     'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
   ].forEach(function (content) {

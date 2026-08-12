@@ -319,6 +319,7 @@
       resourceGroupEntries.forEach(([lesson, lessonResources]) => {
         const group = document.createElement("section");
         group.className = "unit-resource-group";
+        if (lesson === "ASSESSMENTS") group.classList.add("unit-resource-group-assessments");
         const lessonTitle = document.createElement("h2");
         lessonTitle.textContent = lesson;
         const resourceGrid = document.createElement("div");
