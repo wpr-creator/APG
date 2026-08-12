@@ -385,6 +385,19 @@ function validateSharedCourseExperience() {
   if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog"')) {
     errors.push('Published Civics Field Guide Test URL changed or missing.');
   }
+  if (!courseData.includes('title: "AP ADDENDUM", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
+      !siteContent.includes('"ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
+      !siteContent.includes('"ap-addendum": true')) {
+    errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
+  }
+  const parsedSiteContent = JSON.parse(siteContent);
+  const expectedUpcoming = [
+    { title: 'CIVICS FIELD GUIDE TEST', date: 'UNIT 0 · 0.6' },
+    { title: 'AP ADDENDUM TEST', date: 'UNIT 0 · 0.7' }
+  ];
+  if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
+    errors.push('Upcoming Assignments must contain only the two separate Unit 0 tests.');
+  }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
@@ -434,12 +447,6 @@ function validateSharedCourseExperience() {
       errors.push('Required guide cannot load its AP Addendum Summary: ' + relative(file));
     }
   });
-  if (files.some(function (file) {
-    return file !== __filename && fs.readFileSync(file).includes('12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg');
-  })) {
-    errors.push('The private AP Addendum source link must not be present in the published repository.');
-  }
-
   const canonicalCases = fs.readdirSync(path.join(root, 'cases'))
     .filter(function (file) { return file.endsWith('.html'); });
   canonicalCases.forEach(function (file) {
