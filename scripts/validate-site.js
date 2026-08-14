@@ -445,6 +445,12 @@ function validateSharedCourseExperience() {
   if (navCode.includes('NAV_STATIC_TABS') || navCode.includes('nav-group-label')) {
     errors.push('Retired standalone navigation dropdowns must not return.');
   }
+  const unversionedNavPages = files.filter(function (file) {
+    return file.endsWith('.html') && /src="(?:\.\.\/)?nav-render\.js"/.test(fs.readFileSync(file, 'utf8'));
+  });
+  if (unversionedNavPages.length) {
+    errors.push('Standalone pages must cache-bust shared navigation updates: ' + unversionedNavPages.map(relative).join(', '));
+  }
   const foundationData = fs.readFileSync(path.join(root, 'foundations-data.js'), 'utf8');
   if (!foundationData.includes('Life, Liberty and the pursuit of Happiness') ||
       !foundationData.includes('Life, Liberty, and the pursuit of Happiness')) {
