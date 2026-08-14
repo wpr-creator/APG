@@ -455,6 +455,9 @@ function validateSharedCourseExperience() {
   if (!navCode.includes('addAddendumSummary') || !navCode.includes('AP ADDENDUM SUMMARY')) {
     errors.push('Required documents and cases must receive the shared AP Addendum Summary panel.');
   }
+  if (!navCode.includes("document.querySelector(doc ? '.doc-hero, .page-hero' : '.case-hero')")) {
+    errors.push('AP Addendum summaries must support both document hero layouts.');
+  }
   const REQUIRED_SUMMARY_FILES = [
     ...fs.readdirSync(path.join(root, 'docs')).filter(function (file) { return file.endsWith('.html') && file !== 'ARCHITECTURE.html'; }).map(function (file) { return path.join(root, 'docs', file); }),
     ...fs.readdirSync(path.join(root, 'cases')).filter(function (file) { return file.endsWith('.html'); }).map(function (file) { return path.join(root, 'cases', file); })
