@@ -433,11 +433,17 @@ function validateSharedCourseExperience() {
     if (!primaryStyles.includes(selector)) errors.push('Unit 0 completion styling changed or missing: ' + selector);
   });
   const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
-  if (!navCode.includes('{ label: "Unit 0 · First Bell", href: "index.html#gov-0" }')) {
-    errors.push('Shared navigation does not point to the canonical Unit 0 view.');
-  }
-  if (!navCode.includes('5: "Political Participation"')) {
-    errors.push('Unit 5 navigation marker does not identify Political Participation.');
+  [
+    '["Home", "#home"]',
+    '["Units", "#units"]',
+    '["Foundations", "#foundations"]',
+    '["Glossary", "#words"]',
+    '["Skill Builders", "#skills"]'
+  ].forEach(function (content) {
+    if (!navCode.includes(content)) errors.push('Shared navigation does not match the primary site menu: ' + content);
+  });
+  if (navCode.includes('NAV_STATIC_TABS') || navCode.includes('nav-group-label')) {
+    errors.push('Retired standalone navigation dropdowns must not return.');
   }
   const foundationData = fs.readFileSync(path.join(root, 'foundations-data.js'), 'utf8');
   if (!foundationData.includes('Life, Liberty and the pursuit of Happiness') ||
