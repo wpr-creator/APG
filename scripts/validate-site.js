@@ -381,7 +381,8 @@ function validateSharedCourseExperience() {
   if (!siteContent.includes('"mr-smith-extension": "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor"')) {
     errors.push('Published Mr. Smith Goes to Washington Extension URL changed or missing.');
   }
-  if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSchtFHBKW3g1YxP38--uD3CmlffQFeL0ci-fd18Bfhr9vJQqA/viewform?usp=dialog"')) {
+  if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor"') ||
+      !courseData.includes('id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor"')) {
     errors.push('Published Civics Field Guide Test URL changed or missing.');
   }
   if (!courseData.includes('title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
