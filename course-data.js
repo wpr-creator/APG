@@ -28,7 +28,7 @@ window.COURSE_DATA = {
         { id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor" },
         { id: "ap-addendum", lesson: "0.6 — THE COURT IS IN SESSION", title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog" },
-        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "" }
+        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html" }
       ]
     },
     {

@@ -425,6 +425,36 @@ function validateSharedCourseExperience() {
       courseData.includes('0.7 —')) {
     errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
   }
+  const proveCaseFiles = [
+    'prove-your-case.html',
+    'prove-your-case/case-data.js',
+    'prove-your-case/case.css',
+    'prove-your-case/case.js',
+    'prove-your-case/miranda-v-arizona.html',
+    'prove-your-case/riley-v-california.html',
+    'prove-your-case/mahanoy-v-bl.html',
+    'prove-your-case/carpenter-v-united-states.html',
+    'prove-your-case/board-v-earls.html',
+    'prove-your-case/miller-v-alabama.html'
+  ];
+  proveCaseFiles.forEach(function (relativePath) {
+    if (!fs.existsSync(path.join(root, relativePath))) errors.push('Missing Prove Your Case file: ' + relativePath);
+  });
+  ['miranda', 'riley', 'mahanoy', 'carpenter', 'earls', 'miller'].forEach(function (caseId) {
+    if (parsedSiteContent.proveCaseUnlocks?.[caseId] !== false) errors.push('Prove Your Case ruling must remain locked: ' + caseId);
+    if (!fs.existsSync(path.join(root, 'assets/prove-your-case', caseId + '.svg'))) errors.push('Missing Prove Your Case artwork: ' + caseId);
+  });
+  if (!courseData.includes('id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html"') ||
+      parsedSiteContent.assignmentUrls['evidence-in-action'] !== 'prove-your-case.html' ||
+      parsedSiteContent.assignmentUnlocks['evidence-in-action'] !== false) {
+    errors.push('Prove Your Case must point to its APG activity and remain locked.');
+  }
+  const proveCaseCode = proveCaseFiles.map(function (relativePath) {
+    return fs.existsSync(path.join(root, relativePath)) ? fs.readFileSync(path.join(root, relativePath), 'utf8') : '';
+  }).join('\n');
+  if (proveCaseCode.includes('#unit-gov-0') || proveCaseCode.includes('pad-site-content-v2') || proveCaseCode.includes('/GOV/')) {
+    errors.push('Prove Your Case contains a leftover GOV-site route or settings key.');
+  }
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
   if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
       parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||

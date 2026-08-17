@@ -78,7 +78,7 @@
     "civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor",
     "ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0",
     "ap-addendum-test": "https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog",
-    "evidence-in-action": "",
+    "evidence-in-action": "prove-your-case.html",
     "ap-u1-overview": "unit1.html",
     "ap-u1-documents": "unit1-docs.html",
     "founding-power": "#founding-power",
@@ -103,6 +103,14 @@
     "california-ballot-2026": "#election-2026"
   },
   "assignmentUnlockAt": {},
+  "proveCaseUnlocks": {
+    "miranda": false,
+    "riley": false,
+    "mahanoy": false,
+    "carpenter": false,
+    "earls": false,
+    "miller": false
+  },
   "foundationUnlocks": {
     "source": 3,
     "argument": 3,
