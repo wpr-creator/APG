@@ -411,8 +411,10 @@ function validateSharedCourseExperience() {
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
   if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
       parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||
-      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== true) {
-    errors.push('AP Addendum Test must be published and unlocked with its assigned Google Form URL.');
+      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== false ||
+      parsedSiteContent.assignmentUnlocks['civics-field-test'] !== true ||
+      parsedSiteContent.assignmentUnlocks['mr-smith-extension'] !== true) {
+    errors.push('Only the Civics Field Guide Test and Mr. Smith Extension should be open; the AP Addendum Test must remain locked with its saved URL.');
   }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
