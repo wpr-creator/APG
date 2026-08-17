@@ -397,6 +397,22 @@ function validateSharedCourseExperience() {
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
     errors.push('Upcoming Assignments must contain only the two separate Unit 0 tests.');
   }
+  const expectedUnitUnlocks = { 'gov-0': true, 'gov-1': false, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
+  if (JSON.stringify(parsedSiteContent.unitUnlocks) !== JSON.stringify(expectedUnitUnlocks)) {
+    errors.push('Only Unit 0 should be open at this point in the course.');
+  }
+  [
+    'ap-u1-overview', 'ap-u1-documents',
+    'ap-u2-overview', 'ap-u2-documents', 'ap-u2-cases', 'bill-journey', 'presidential-power', 'presidential-library-u2',
+    'ap-u3-overview', 'ap-u3-documents', 'ap-u3-cases', 'rights-referee',
+    'ap-u4-overview', 'ap-u4-documents', 'ap-polling',
+    'ap-u5-overview', 'ap-u5-cases'
+  ].forEach(function (resourceId) {
+    if (parsedSiteContent.assignmentUnlocks[resourceId] !== false) errors.push('Later-course resource must remain locked: ' + resourceId);
+  });
+  if (parsedSiteContent.assignmentUnlocks['california-ballot-2026'] !== true) {
+    errors.push('The 2026 California election tracker must remain open.');
+  }
   [
     'id: "mr-smith-extension", lesson: "ASSESSMENTS"',
     'id: "civics-field-test", lesson: "ASSESSMENTS"',
