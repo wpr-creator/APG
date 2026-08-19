@@ -192,7 +192,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-sources { margin: 0 0 2rem; padding: clamp(1rem, 3vw, 1.5rem); background: var(--stone); border: 1px solid var(--line); }
 .unit-sources .section-heading { margin-bottom: 1rem; }
 .unit-source-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .75rem; }
-.unit-source { min-height: 92px; padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: .35rem; text-align: left; color: var(--black); background: var(--white); border: 1px solid var(--stone-dark); border-top: 5px solid var(--black); cursor: pointer; }
+.unit-source { min-height: 92px; padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: .35rem; text-align: left; text-decoration: none; color: var(--black); background: var(--white); border: 1px solid var(--stone-dark); border-top: 5px solid var(--black); cursor: pointer; }
 .unit-source:hover { background: var(--paper); }
 .unit-source strong { font-size: .88rem; }
 .unit-source span { color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .04em; }
@@ -202,6 +202,30 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-resource-group-assessments .unit-resource:not(.placeholder) { background: var(--slate); }
 .unit-resource-group-assessments .unit-resource:not(.placeholder):hover { background: #854545; }
 .unit-resource-group-assessments .unit-zero-check { border-color: var(--slate); }
+.lesson-support { margin: 0 0 .8rem; overflow: hidden; color: var(--black); background: var(--white); border: 2px solid var(--black); border-radius: 4px; }
+.lesson-support-overview { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); background: var(--black); color: var(--white); }
+.lesson-support-overview > div { padding: 1rem; }
+.lesson-support-overview > div + div { border-left: 1px solid #555; }
+.lesson-support-overview strong, .lesson-vocabulary > strong { display: block; margin-bottom: .35rem; font-size: .7rem; font-weight: 950; letter-spacing: .09em; }
+.lesson-support-overview p { margin: 0; color: var(--white); font-weight: 700; line-height: 1.45; }
+.lesson-vocabulary { padding: .9rem 1rem; background: var(--stone); border-bottom: 1px solid var(--stone-dark); }
+.lesson-vocabulary-links { display: flex; flex-wrap: wrap; gap: .45rem; }
+.lesson-vocabulary-link { min-height: 44px; padding: .45rem .7rem; color: var(--black); background: var(--white); border: 2px solid var(--black); border-radius: 999px; cursor: pointer; font: 850 .75rem Arial, sans-serif; }
+.lesson-vocabulary-link:hover { color: var(--white); background: var(--black); }
+.lesson-vocabulary-link:focus-visible { outline: 4px solid var(--slate); outline-offset: 2px; }
+.lesson-support-work { display: grid; grid-template-columns: 1.35fr .65fr; gap: 1rem; padding: 1rem; }
+.lesson-support-work h3 { margin: 0 0 .6rem; font-size: .82rem; letter-spacing: .04em; }
+.lesson-support-work ol { margin: 0; padding-left: 1.5rem; }
+.lesson-support-work li { padding-left: .25rem; font-weight: 650; line-height: 1.45; }
+.lesson-support-work li + li { margin-top: .45rem; }
+.lesson-support-finish { padding: 1rem; background: var(--paper); border-left: 6px solid var(--slate); }
+.lesson-support-finish p { margin: 0; font-weight: 700; line-height: 1.45; }
+.lesson-support-finish .lesson-support-due { margin-top: .8rem; font-size: .78rem; }
+.lesson-support-help { border-top: 2px solid var(--black); }
+.lesson-support-help summary { min-height: 48px; padding: .8rem 1rem; cursor: pointer; font-weight: 950; }
+.lesson-support-help ul { margin: 0; padding: 0 2.5rem 1rem; }
+.lesson-support-help li { line-height: 1.45; }
+.lesson-essential-question::before, .lesson-target::before { display: block; margin: .7rem 0 .2rem; color: var(--muted); content: attr(data-label); font-size: .64rem; font-weight: 950; letter-spacing: .08em; }
 .unit-resource-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
 .unit-resource { min-height: 92px; padding: 1rem; display: flex; flex-direction: column; justify-content: center; gap: .3rem; color: var(--white); background: var(--black); border-radius: 4px; text-decoration: none; }
 .unit-resource:hover { background: var(--charcoal); }
@@ -320,11 +344,15 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .tool-heading > p { max-width: 300px; margin: 0; color: var(--muted); text-align: right; font-size: .74rem; font-weight: 850; letter-spacing: .06em; }
 .document-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .document-card { min-height: 280px; padding: 1.3rem; display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--stone-dark); border-top: 7px solid var(--black); }
+.document-card-link { color: var(--black); text-decoration: none; }
+.document-card-link:hover { background: var(--paper); box-shadow: 5px 5px 0 var(--black); transform: translate(-2px, -2px); }
+.document-card-link:focus-visible { outline: 4px solid var(--slate); outline-offset: 3px; }
 .document-meta { margin: 0; color: var(--muted); font-size: .72rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
 .document-card h3 { margin: .7rem 0; font-size: 1.35rem; }
 .document-card > p:not(.document-meta) { margin: 0 0 1rem; color: var(--muted); font-weight: 650; }
 .document-card .standard-tag { width: max-content; margin-top: auto; }
 .document-card button { min-height: 46px; margin-top: 1rem; border: 0; color: var(--white); background: var(--black); cursor: pointer; font-size: .76rem; font-weight: 950; }
+.document-card-action { min-height: 46px; margin-top: auto; padding: .8rem; display: flex; align-items: center; justify-content: center; color: var(--white); background: var(--black); font-size: .76rem; font-weight: 950; }
 .case-foundation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .case-foundation-card { min-height: 250px; padding: 1.3rem; display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--stone-dark); border-top: 7px solid var(--slate); }
 .case-foundation-card h3 { margin: .7rem 0; font-size: 1.35rem; }
@@ -684,6 +712,8 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .semester-cards, .unit-grid, .word-grid, .president-grid { grid-template-columns: 1fr; }
   .semester-card { grid-template-columns: auto 1fr; }
   .unit-resource-grid, .unit-source-grid { grid-template-columns: 1fr; }
+  .lesson-support-overview, .lesson-support-work { grid-template-columns: 1fr; }
+  .lesson-support-overview > div + div { border-left: 0; border-top: 1px solid #555; }
   .unit-zero-resource-item { grid-template-columns: 82px minmax(0, 1fr); }
   .unit-zero-check { width: 82px; min-height: 92px; font-size: 4.2rem; }
   .lesson-card { grid-template-columns: 46px minmax(0, 1fr); }
