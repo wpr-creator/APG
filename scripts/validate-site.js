@@ -260,10 +260,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260811-unit0-links',
-    'course-data.js?v=20260811-unit0-links',
+    'styles.css?v=20260819-document-reader',
+    'course-data.js?v=20260819-lesson-supports',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260808-history-cleanup',
+    'app.js?v=20260819-document-reader',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -477,8 +477,31 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
+  [
+    'function createLessonSupport(support)',
+    'function createGlossaryLink(term)',
+    'LEARNING TARGET',
+    'ESSENTIAL QUESTION',
+    'WORDS YOU NEED HERE',
+    'DO THIS IN ORDER',
+    'WHAT YOU TURN IN',
+    'NEED HELP GETTING STARTED?'
+  ].forEach(function (content) {
+    if (!appCode.includes(content)) errors.push('Reusable AP lesson support changed or missing: ' + content);
+  });
+  [
+    '"ASSESSMENTS": {',
+    '"0.6 — THE COURT IS IN SESSION": {',
+    '"0.5 — PORTRAIT DAY": {',
+    '"0.4 — GOVERNMENT TAKES THE STAGE": {',
+    '"0.3 — PACK YOUR FIELD GUIDES": {',
+    '"0.2 — READ THE FINE PRINT": {',
+    '"0.1 — CLASS IS IN SESSION": {'
+  ].forEach(function (lesson) {
+    if (!courseData.includes(lesson)) errors.push('Unit 0 lesson guide changed or missing: ' + lesson);
+  });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]'].forEach(function (selector) {
+  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]', '.lesson-support', '.lesson-vocabulary-link', '.lesson-support-help'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Unit 0 completion styling changed or missing: ' + selector);
   });
   const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
@@ -529,6 +552,24 @@ function validateSharedCourseExperience() {
       errors.push('Required guide cannot load its AP Addendum Summary: ' + relative(file));
     }
   });
+  const documentReaderStyles = fs.readFileSync(path.join(root, 'styles-document-reader.css'), 'utf8');
+  fs.readdirSync(path.join(root, 'docs')).filter(function (file) {
+    return file.endsWith('.html') && file !== 'ARCHITECTURE.html';
+  }).forEach(function (file) {
+    const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
+    const readerLink = 'styles-document-reader.css?v=20260819-student-reader';
+    if (!page.includes(readerLink) || page.indexOf(readerLink) > page.indexOf('</head>')) {
+      errors.push('Document does not load the student reader inside its head: docs/' + file);
+    }
+  });
+  ['.doc-passage-text', '.doc-paragraph-text', '.doc-margin', '.doc-annotation', '.highlight-key', '.doc-nav', '.doc-rail'].forEach(function (selector) {
+    if (!documentReaderStyles.includes(selector)) errors.push('Student document-reader style changed or missing: ' + selector);
+  });
+  if (!appCode.includes('card.href = documentData.file') ||
+      !appCode.includes('link.href = documentData.file') ||
+      appCode.includes('button.addEventListener("click", () => openDocument(documentData, button))')) {
+    errors.push('Foundational document cards must open the full reading page directly.');
+  }
   const canonicalCases = fs.readdirSync(path.join(root, 'cases'))
     .filter(function (file) { return file.endsWith('.html'); });
   canonicalCases.forEach(function (file) {
@@ -554,6 +595,29 @@ function validateSharedCourseExperience() {
     if (!rosterSources.includes(period)) errors.push('Course period changed or missing: ' + period);
   });
   if (/Period 2A/.test(rosterSources)) errors.push('Retired Period 2A remains in roster or exit-ticket configuration.');
+  const publishedContent = JSON.parse(fs.readFileSync(path.join(root, 'content.json'), 'utf8'));
+  const rosterByPeriod = Object.fromEntries(publishedContent.periods.map(function (period) {
+    return [period.id, period.students];
+  }));
+  if (rosterByPeriod['1A']?.length !== 40 || rosterByPeriod['2B']?.length !== 39) {
+    errors.push('Final AP rosters must contain 40 students in 1A and 39 students in 2B.');
+  }
+  Object.entries(rosterByPeriod).forEach(function ([period, students]) {
+    if (students.length !== new Set(students).size) errors.push('Duplicate student in Period ' + period + ' roster.');
+    if (students.some(function (name) { return name !== name.trim() || !name.includes(','); })) {
+      errors.push('Malformed student name in Period ' + period + ' roster.');
+    }
+  });
+  const dataCore = fs.readFileSync(path.join(root, 'data-core.js'), 'utf8');
+  const fallbackMatch = dataCore.match(/const DEFAULT_CONTENT = (\{[\s\S]*?\n\});/);
+  if (!fallbackMatch) {
+    errors.push('Could not read the fallback roster in data-core.js.');
+  } else {
+    const fallbackContent = JSON.parse(fallbackMatch[1]);
+    if (JSON.stringify(fallbackContent.periods) !== JSON.stringify(publishedContent.periods)) {
+      errors.push('Published and fallback AP rosters are out of sync.');
+    }
+  }
 }
 
 function validateCalendarData() {

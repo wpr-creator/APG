@@ -1,0 +1,368 @@
+/*
+ * Student-first foundational document reader.
+ * Loaded after each document's legacy page styles so every guide shares one
+ * calm reading surface without rewriting the historically annotated content.
+ */
+body {
+  background: #f4f0e7 !important;
+}
+
+.doc-page {
+  width: min(1180px, calc(100% - 2rem)) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: clamp(1rem, 3vw, 2.25rem) 0 4rem !important;
+  display: block !important;
+}
+
+.doc-nav,
+.doc-rail,
+.doc-left,
+.doc-sidebar,
+.doc-hero-eyebrow,
+.doc-hero-tags,
+.page-hero-eyebrow,
+.page-hero-tags,
+#ap {
+  display: none !important;
+}
+
+.doc-main {
+  min-width: 0;
+}
+
+.page-main {
+  width: min(1180px, calc(100% - 2rem)) !important;
+  max-width: 1180px !important;
+  margin: 0 auto !important;
+  padding: clamp(1rem, 3vw, 2.25rem) 0 4rem !important;
+}
+
+.doc-layout {
+  display: block !important;
+}
+
+.doc-hero {
+  margin: 0 0 1.25rem !important;
+  padding: clamp(1.5rem, 4vw, 2.75rem) !important;
+  border-radius: 4px !important;
+  border-bottom: 10px solid #9a2323 !important;
+}
+
+.page-hero {
+  margin: 0 0 1.25rem !important;
+  padding: clamp(1.5rem, 4vw, 2.75rem) !important;
+  background: #181716 !important;
+  border-radius: 4px !important;
+  border-bottom: 10px solid #9a2323 !important;
+}
+
+.page-hero-title {
+  margin: 0 0 .6rem !important;
+  color: #fff !important;
+  font-size: clamp(2.15rem, 6vw, 4.5rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+}
+
+.page-hero-sub {
+  color: #eee !important;
+  font-size: clamp(.85rem, 1.7vw, 1rem) !important;
+  line-height: 1.5 !important;
+}
+
+.doc-hero-title {
+  margin: 0 0 .6rem !important;
+  font-size: clamp(2.15rem, 6vw, 4.5rem) !important;
+  line-height: .98 !important;
+  letter-spacing: -.035em !important;
+}
+
+.doc-hero-cite {
+  margin: 0 !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: clamp(.85rem, 1.7vw, 1rem) !important;
+  line-height: 1.5 !important;
+  opacity: .9;
+}
+
+.doc-context {
+  margin: 0 0 1.5rem !important;
+  padding: clamp(1.1rem, 3vw, 1.65rem) !important;
+  background: #fff !important;
+  border: 1px solid #c8c2b5 !important;
+  border-left: 8px solid #9a2323 !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+
+.doc-context-box {
+  margin: 0 0 1.5rem !important;
+  padding: clamp(1.1rem, 3vw, 1.65rem) !important;
+  background: #fff !important;
+  border: 1px solid #c8c2b5 !important;
+  border-left: 8px solid #9a2323 !important;
+  border-radius: 3px !important;
+}
+
+.doc-context-label {
+  margin-bottom: .65rem !important;
+  color: #7e1d24 !important;
+  font-size: .76rem !important;
+  letter-spacing: .09em !important;
+}
+
+.doc-context-text,
+.doc-context-text p {
+  color: #252321 !important;
+  font-size: 1rem !important;
+  line-height: 1.7 !important;
+}
+
+.doc-section {
+  margin: 0 0 2rem !important;
+  padding: clamp(1.1rem, 3vw, 2rem) !important;
+  background: #fff !important;
+  border: 1px solid #d1ccc2 !important;
+}
+
+.doc-section-title {
+  margin: 0 0 1.35rem !important;
+  padding: 0 0 .7rem !important;
+  color: #181716 !important;
+  border-bottom: 4px solid #181716 !important;
+  font-size: clamp(1.25rem, 3vw, 1.7rem) !important;
+  line-height: 1.2 !important;
+}
+
+.doc-passage-row,
+.doc-row,
+.doc-paragraph {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(230px, 300px) !important;
+  gap: clamp(1rem, 3vw, 2rem) !important;
+  align-items: start !important;
+  margin: 0 !important;
+  padding: 1.6rem 0 !important;
+  border-bottom: 1px solid #d8d4ca !important;
+}
+
+.doc-passage-row:first-of-type,
+.doc-row:first-of-type,
+.doc-paragraph:first-of-type {
+  padding-top: .4rem !important;
+}
+
+.doc-passage-row:last-child,
+.doc-row:last-child,
+.doc-paragraph:last-child {
+  padding-bottom: .4rem !important;
+  border-bottom: 0 !important;
+}
+
+.doc-passage-text,
+.doc-text,
+.doc-paragraph-text {
+  color: #171615 !important;
+  font-family: Georgia, "Times New Roman", serif !important;
+  font-size: clamp(1.22rem, 1.9vw, 1.48rem) !important;
+  line-height: 1.85 !important;
+  letter-spacing: .005em !important;
+}
+
+.doc-passage-text .hl,
+.doc-text .hl,
+.hl,
+.highlight-key {
+  padding: .08em .18em !important;
+  color: #111 !important;
+  background: #ffe48a !important;
+  border-bottom: 3px solid #b37600 !important;
+  border-radius: 2px !important;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  font-weight: 700 !important;
+}
+
+.doc-margin {
+  position: relative;
+  padding: 1rem 1.05rem !important;
+  color: #24211d !important;
+  background: #fff8df !important;
+  border: 0 !important;
+  border-left: 7px solid #9a2323 !important;
+  border-radius: 2px !important;
+  box-shadow: 5px 5px 0 #d7c9a4 !important;
+}
+
+.doc-annotation {
+  position: relative !important;
+  padding: 1rem 1.05rem !important;
+  color: #24211d !important;
+  background: #fff8df !important;
+  border: 0 !important;
+  border-left: 7px solid #9a2323 !important;
+  border-radius: 2px !important;
+  box-shadow: 5px 5px 0 #d7c9a4 !important;
+}
+
+.doc-annotation-toggle {
+  display: none !important;
+}
+
+.doc-annotation-body {
+  display: block !important;
+}
+
+.doc-annotation-row + .doc-annotation-row {
+  margin-top: .8rem;
+  padding-top: .8rem;
+  border-top: 1px solid #d7c9a4;
+}
+
+.doc-annotation-label {
+  margin-bottom: .3rem !important;
+  color: #7e1d24 !important;
+  font-size: .72rem !important;
+  font-weight: 900 !important;
+  letter-spacing: .1em !important;
+  text-transform: uppercase;
+}
+
+.doc-annotation-text {
+  color: #2c2925 !important;
+  font-size: .96rem !important;
+  line-height: 1.55 !important;
+}
+
+.doc-annotation-tags {
+  margin-top: .7rem !important;
+}
+
+.doc-annotation-tag {
+  color: #5d4510 !important;
+  background: #f2e3b7 !important;
+}
+
+.doc-margin::before {
+  position: absolute;
+  top: 1.15rem;
+  left: -1.15rem;
+  width: 1rem;
+  border-top: 3px solid #9a2323;
+  content: "";
+}
+
+.doc-margin-label {
+  margin-bottom: .5rem !important;
+  color: #7e1d24 !important;
+  font-size: .72rem !important;
+  letter-spacing: .1em !important;
+}
+
+.doc-margin-text {
+  color: #2c2925 !important;
+  font-size: .96rem !important;
+  line-height: 1.55 !important;
+}
+
+.doc-margin-tag {
+  margin-top: .7rem !important;
+  padding: .25rem .5rem !important;
+  color: #5d4510 !important;
+  background: #f2e3b7 !important;
+  font-size: .7rem !important;
+}
+
+.doc-margin-tag.exam {
+  color: #fff !important;
+  background: #30302e !important;
+}
+
+.doc-omit {
+  margin: 0 0 1rem !important;
+  padding: .9rem 1rem !important;
+  color: #4a4236 !important;
+  background: #f4f0e7 !important;
+  border-left: 5px solid #9a2323 !important;
+  border-radius: 0 !important;
+  font-size: .92rem !important;
+  line-height: 1.55 !important;
+}
+
+.doc-section-omit {
+  margin: 0 0 1rem !important;
+  padding: .9rem 1rem !important;
+  color: #4a4236 !important;
+  background: #f4f0e7 !important;
+  border-left: 5px solid #9a2323 !important;
+  font-size: .92rem !important;
+  line-height: 1.55 !important;
+}
+
+.amendment {
+  padding: 1.15rem 1.3rem !important;
+  background: #fff !important;
+  border: 1px solid #d1ccc2 !important;
+  border-left: 7px solid #9a2323 !important;
+  border-radius: 2px !important;
+}
+
+.amendment p {
+  color: #24211d !important;
+  font-size: 1.08rem !important;
+  line-height: 1.65 !important;
+}
+
+@media (max-width: 760px) {
+  .doc-page {
+    width: min(100% - 1rem, 1180px) !important;
+  }
+
+  .doc-passage-row,
+  .doc-row,
+  .doc-paragraph {
+    grid-template-columns: 1fr !important;
+    padding: 1.25rem 0 !important;
+  }
+
+  .doc-margin::before {
+    display: none;
+  }
+
+  .doc-margin {
+    margin-left: .35rem;
+  }
+
+  .doc-passage-text,
+  .doc-text {
+    font-size: 1.18rem !important;
+    line-height: 1.75 !important;
+  }
+}
+
+@media print {
+  header,
+  nav,
+  footer,
+  .stars-stripe {
+    display: none !important;
+  }
+
+  body,
+  .doc-page,
+  .doc-section,
+  .doc-context {
+    background: #fff !important;
+  }
+
+  .doc-page {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .doc-margin {
+    box-shadow: none !important;
+    border: 1px solid #777 !important;
+  }
+}
