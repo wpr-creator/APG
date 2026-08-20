@@ -42,6 +42,9 @@
 .worksheet-row p{margin:0;font-size:1.08rem;line-height:1.55}
 .worksheet-copy{padding:.8rem;background:var(--paper);border-left:6px solid var(--ink);font-weight:800}
 #worksheet-terms{margin:.4rem 0 0}
+.worksheet-story-flow{grid-template-columns:1fr;margin-top:1rem}
+.worksheet-direction{margin:1rem 0 .35rem;font-size:.76rem;font-weight:900;letter-spacing:.08em}
+.extra-help-heading{margin:1.2rem 0 .7rem;padding-top:1rem;border-top:2px solid var(--ink);font-size:.82rem;letter-spacing:.08em}
 .ruling-map{display:grid;gap:.65rem;margin:1rem 0;padding:1rem;background:var(--paper);border:2px solid var(--ink)}
 .ruling-map p{margin:0}
 .ruling-map strong{display:block;color:var(--red);font-size:.75rem;letter-spacing:.06em}

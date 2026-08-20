@@ -465,10 +465,10 @@ function validateSharedCourseExperience() {
   const proveCaseData = fs.readFileSync(path.join(root, 'prove-your-case/case-data.js'), 'utf8');
   const proveCaseApp = fs.readFileSync(path.join(root, 'prove-your-case/case.js'), 'utf8');
   if ((proveCaseData.match(/worksheet:\{actor:/g) || []).length !== 6 ||
-      !proveCaseApp.includes('COPY THESE ANSWERS TO SITE STEP 1') ||
-      !proveCaseApp.includes('COPY THIS COMPLETE QUESTION TO SITE STEP 2') ||
-      !proveCaseApp.includes('USE THESE FOR SITE STEP 3') ||
-      !proveCaseApp.includes('WORKSHEET MAP FOR SITE STEP 4')) {
+      !proveCaseApp.includes('1A · WHO TOOK THE GOVERNMENT ACTION?') ||
+      !proveCaseApp.includes('COPY THIS COMPLETE QUESTION INTO SITE STEP 2:') ||
+      !proveCaseApp.includes('FOLLOW SITE STEP 3 IN THIS ORDER') ||
+      !proveCaseApp.includes('FOLLOW SITE STEP 4 IN THIS ORDER')) {
     errors.push('Every Prove Your Case file must include explicit, worksheet-aligned guidance for Steps 1–4.');
   }
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
