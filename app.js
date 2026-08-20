@@ -211,86 +211,6 @@
     });
   }
 
-  function createGlossaryLink(term) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.className = "lesson-vocabulary-link";
-    button.textContent = term;
-    button.addEventListener("click", () => {
-      glossaryQuery = term.toLowerCase();
-      glossaryFilter = "all";
-      const search = document.getElementById("glossary-search");
-      if (search) search.value = term;
-      renderWords();
-      location.hash = "words";
-    });
-    return button;
-  }
-
-  function createLessonSupport(support) {
-    const panel = document.createElement("section");
-    panel.className = "lesson-support";
-    panel.setAttribute("aria-label", "Lesson guide");
-
-    const overview = document.createElement("div");
-    overview.className = "lesson-support-overview";
-    const target = document.createElement("div");
-    target.innerHTML = "<strong>LEARNING TARGET</strong>";
-    target.append(document.createElement("p"));
-    target.lastElementChild.textContent = support.target;
-    const question = document.createElement("div");
-    question.innerHTML = "<strong>ESSENTIAL QUESTION</strong>";
-    question.append(document.createElement("p"));
-    question.lastElementChild.textContent = support.question;
-    overview.append(target, question);
-
-    const vocabulary = document.createElement("div");
-    vocabulary.className = "lesson-vocabulary";
-    const vocabularyLabel = document.createElement("strong");
-    vocabularyLabel.textContent = "WORDS YOU NEED HERE";
-    const vocabularyLinks = document.createElement("div");
-    vocabularyLinks.className = "lesson-vocabulary-links";
-    support.vocabulary.forEach(term => vocabularyLinks.appendChild(createGlossaryLink(term)));
-    vocabulary.append(vocabularyLabel, vocabularyLinks);
-
-    const work = document.createElement("div");
-    work.className = "lesson-support-work";
-    const steps = document.createElement("section");
-    const stepsTitle = document.createElement("h3");
-    stepsTitle.textContent = "DO THIS IN ORDER";
-    const stepList = document.createElement("ol");
-    support.steps.forEach(step => {
-      const item = document.createElement("li");
-      item.textContent = step;
-      stepList.appendChild(item);
-    });
-    steps.append(stepsTitle, stepList);
-    const finish = document.createElement("section");
-    finish.className = "lesson-support-finish";
-    finish.innerHTML = "<h3>WHAT YOU TURN IN</h3>";
-    const product = document.createElement("p");
-    product.textContent = support.product;
-    const due = document.createElement("p");
-    due.className = "lesson-support-due";
-    due.innerHTML = "<strong>DUE DATE</strong>";
-    due.append(document.createTextNode(" · " + support.due));
-    finish.append(product, due);
-    work.append(steps, finish);
-
-    const help = document.createElement("details");
-    help.className = "lesson-support-help";
-    const helpSummary = document.createElement("summary");
-    helpSummary.textContent = "NEED HELP GETTING STARTED?";
-    const helpList = document.createElement("ul");
-    support.help.forEach(itemText => {
-      const item = document.createElement("li");
-      item.textContent = itemText;
-      helpList.appendChild(item);
-    });
-    help.append(helpSummary, helpList);
-    panel.append(overview, vocabulary, work, help);
-    return panel;
-  }
 
   function renderUnitDetail(id) {
     const unit = data.units.find(item => item.id === id);
@@ -368,11 +288,7 @@
       const summary = document.createElement("p");
       summary.textContent = lesson[3];
       const action = document.createElement("small");
-      question.className = "lesson-essential-question";
-      question.dataset.label = "ESSENTIAL QUESTION";
-      summary.className = "lesson-target";
-      summary.dataset.label = "LEARNING TARGET";
-      action.textContent = `REQUIRED PRODUCT · ${lesson[4]}`;
+      action.textContent = `SHOW YOU KNOW IT · ${lesson[4]}`;
       copy.append(title, question, summary, action);
       const standard = document.createElement("span");
       standard.className = "lesson-standard";
@@ -459,10 +375,7 @@
             resourceGrid.appendChild(card);
           }
         });
-        group.append(lessonTitle);
-        const support = unit.lessonSupports?.[lesson];
-        if (support) group.appendChild(createLessonSupport(support));
-        group.appendChild(resourceGrid);
+        group.append(lessonTitle, resourceGrid);
         resources.append(group);
       });
     }

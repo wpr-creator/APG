@@ -29,72 +29,7 @@ window.COURSE_DATA = {
         { id: "ap-addendum", lesson: "0.6 — THE COURT IS IN SESSION", title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog" },
         { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html" }
-      ],
-      lessonSupports: {
-        "ASSESSMENTS": {
-          target: "Show what you understand about the Unit 0 foundations without changing the expectations of each assessment.",
-          question: "Which ideas and evidence from Unit 0 can you apply independently?",
-          vocabulary: ["Civics", "Government", "Politics", "Political ideology"],
-          steps: ["Open only the assessment assigned by Mr. Rogers.", "Read every direction before answering.", "Complete and review each required response.", "Submit the form and confirm that it was recorded."],
-          product: "A submitted form for each assigned assessment.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["Review the matching Unit 0 study guide before beginning.", "Use the site glossary to review a term, but do not look up an answer while testing.", "Ask Mr. Rogers to clarify directions without explaining the answer."]
-        },
-        "0.6 — THE COURT IS IN SESSION": {
-          target: "Use accurate course evidence to make and defend an AP Government claim.",
-          question: "How do AP Government students turn evidence into an argument?",
-          vocabulary: ["Claim", "Evidence", "Reasoning", "Judicial review", "Precedent"],
-          steps: ["Complete the AP Appendum Study Guide with the site’s document and case summaries.", "Open Prove Your Case when Mr. Rogers unlocks it.", "Identify the facts and constitutional language that matter.", "Choose a ruling and defend it with specific evidence."],
-          product: "A completed study guide and a defensible constitutional ruling on the class worksheet.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["Open the AP Addendum Summary at the top of each assigned document or case.", "Use the optional argument-help section only after attempting your own claim.", "Check that every claim names the evidence that supports it."]
-        },
-        "0.5 — PORTRAIT DAY": {
-          target: "Use reliable presidential research to communicate the significance of one presidency.",
-          question: "What can one president reveal about American government?",
-          vocabulary: ["Executive Branch", "Formal Powers", "Informal Powers", "Checks and Balances"],
-          steps: ["Open the Presidential Yearbook assignment.", "Confirm your assigned president.", "Research with the AP Presidential Library and approved sources.", "Create the required portrait and written entries.", "Review the checklist before turning in your work."],
-          product: "One completed Presidential Yearbook entry ready for the shared classroom display.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["Use the examples on the assignment page to check format and level of detail.", "Separate verified facts from your interpretation.", "Ask for source help before using an unverified website."]
-        },
-        "0.4 — GOVERNMENT TAKES THE STAGE": {
-          target: "Connect civic ideas to institutions, power, and political participation.",
-          question: "How does American government look when it moves from the page to the screen?",
-          vocabulary: ["Civics", "Government", "Politics", "Political Participation"],
-          steps: ["Open the Civics Field Guide worksheet.", "Use the site to complete each labeled section.", "Record evidence and definitions in your own words.", "Complete the Mr. Smith extension when assigned.", "Review unanswered sections before submitting."],
-          product: "A completed Civics Field Guide and Mr. Smith Goes to Washington Extension.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["Start with the Foundations and Glossary sections of this site.", "Use the AP Addendum Summary boxes to locate main ideas quickly.", "Return to the exact worksheet section you are completing before opening another resource."]
-        },
-        "0.3 — PACK YOUR FIELD GUIDES": {
-          target: "Describe your current political outlook and distinguish belief from evidence.",
-          question: "What do I already believe and know about government?",
-          vocabulary: ["Political ideology", "Political spectrum", "Politics"],
-          steps: ["Complete the Pew Political Typology.", "Read the description of your result.", "Open Between the Lines.", "Respond with specific examples and submit your reflection."],
-          product: "A submitted Between the Lines reflection.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["A typology result describes patterns; it does not define you.", "Explain where you agree and disagree instead of searching for a perfect label.", "Use the glossary if ideology and political spectrum feel interchangeable."]
-        },
-        "0.2 — READ THE FINE PRINT": {
-          target: "Explain how the class works and independently locate its core resources.",
-          question: "How will this class work?",
-          vocabulary: ["Civics", "Government", "Politics"],
-          steps: ["Read the class syllabus.", "Complete the Self-Guided Tour using this site.", "Finish the Civic Selfie.", "Check that the signed syllabus and required responses are ready to submit."],
-          product: "A signed syllabus, completed Self-Guided Tour, and Civic Selfie.",
-          due: "Use the deadline posted in Google Classroom.",
-          help: ["Keep the tour open in one tab and the course site in another.", "Follow the tour in order so every answer has a matching site location.", "Use the site navigation labels exactly as written in your response."]
-        },
-        "0.1 — CLASS IS IN SESSION": {
-          target: "Connect to every course platform and explain the difference between government and politics.",
-          question: "Why does government already matter?",
-          vocabulary: ["Civics", "Government", "Politics"],
-          steps: ["Join the correct Google Classroom.", "Bookmark this AP Government site.", "Join AP Classroom with the code for your period.", "Confirm that all three resources open on your device."],
-          product: "Working access to Google Classroom, the course site, and AP Classroom.",
-          due: "Complete during the course-launch window.",
-          help: ["Use the class-period code shown on the AP Classroom card.", "If a platform opens the wrong account, sign out and use your school account.", "Tell Mr. Rogers which step failed and what message appeared."]
-        }
-      }
+      ]
     },
     {
       id: "gov-1", number: "Unit 1", title: "Foundations of American Democracy",

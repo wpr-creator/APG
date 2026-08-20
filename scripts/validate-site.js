@@ -260,10 +260,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260819-document-reader',
-    'course-data.js?v=20260819-lesson-supports',
+    'styles.css?v=20260820-concise-units',
+    'course-data.js?v=20260820-concise-units',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260819-document-reader',
+    'app.js?v=20260820-concise-units',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -484,33 +484,13 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
-  [
-    'function createLessonSupport(support)',
-    'function createGlossaryLink(term)',
-    'LEARNING TARGET',
-    'ESSENTIAL QUESTION',
-    'WORDS YOU NEED HERE',
-    'DO THIS IN ORDER',
-    'WHAT YOU TURN IN',
-    'NEED HELP GETTING STARTED?'
-  ].forEach(function (content) {
-    if (!appCode.includes(content)) errors.push('Reusable AP lesson support changed or missing: ' + content);
-  });
-  [
-    '"ASSESSMENTS": {',
-    '"0.6 — THE COURT IS IN SESSION": {',
-    '"0.5 — PORTRAIT DAY": {',
-    '"0.4 — GOVERNMENT TAKES THE STAGE": {',
-    '"0.3 — PACK YOUR FIELD GUIDES": {',
-    '"0.2 — READ THE FINE PRINT": {',
-    '"0.1 — CLASS IS IN SESSION": {'
-  ].forEach(function (lesson) {
-    if (!courseData.includes(lesson)) errors.push('Unit 0 lesson guide changed or missing: ' + lesson);
-  });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]', '.lesson-support', '.lesson-vocabulary-link', '.lesson-support-help'].forEach(function (selector) {
+  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Unit 0 completion styling changed or missing: ' + selector);
   });
+  if (courseData.includes('lessonSupports:') || appCode.includes('createLessonSupport') || primaryStyles.includes('.lesson-support')) {
+    errors.push('Unit pages must remain concise and must not render the retired lesson-support panels.');
+  }
   const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
   [
     '["Home", "#home"]',
