@@ -3,6 +3,46 @@
   const item = window.PROVE_CASES.find(entry => entry.id === id);
   if (!item) return;
   const $ = selector => document.querySelector(selector);
+  function addTaskCue(stageSelector, instruction) {
+    const heading = document.querySelector(`${stageSelector} h2`);
+    if (!heading) return;
+    const cue = document.createElement("p");
+    cue.className = "task-cue";
+    const label = document.createElement("strong");
+    label.textContent = "WORKSHEET GUIDE: ";
+    cue.append(label, instruction);
+    heading.after(cue);
+  }
+  function makeActorLine() {
+    const line = document.createElement("p");
+    line.className = "actor-line";
+    const label = document.createElement("strong"); label.textContent = "GOVERNMENT ACTOR";
+    const answer = document.createElement("span"); answer.textContent = item.worksheet.actor;
+    line.append(label, answer);
+    return line;
+  }
+  function makeRightsCheck() {
+    const section = document.createElement("section");
+    section.className = "rights-check";
+    const heading = document.createElement("h3"); heading.textContent = "TWO ACTIONS. ONE RIGHTS QUESTION.";
+    const intro = document.createElement("p"); intro.textContent = "First understand what the person did. Then judge what the government did.";
+    const grid = document.createElement("div"); grid.className = "rights-check-grid";
+    const person = document.createElement("article");
+    const personHeading = document.createElement("h4"); personHeading.textContent = item.id === "mahanoy" || item.id === "earls" ? "THE STUDENT'S ACTION" : "THE PERSON'S ACTION";
+    const personText = document.createElement("p"); personText.textContent = item.worksheet.personAction;
+    person.append(personHeading, personText);
+    const government = document.createElement("article");
+    const governmentHeading = document.createElement("h4"); governmentHeading.textContent = item.id === "mahanoy" || item.id === "earls" ? "THE PUBLIC SCHOOL'S ACTION" : "THE GOVERNMENT'S ACTION";
+    const governmentText = document.createElement("p"); governmentText.textContent = item.worksheet.action;
+    government.append(governmentHeading, governmentText);
+    grid.append(person, government);
+    const focus = document.createElement("p"); focus.className = "rights-focus";
+    const focusLabel = document.createElement("strong"); focusLabel.textContent = "THE RIGHTS QUESTION: ";
+    focus.append(focusLabel, item.worksheet.question);
+    const reminder = document.createElement("p"); reminder.className = "rights-reminder"; reminder.textContent = "A person can do something wrong and still have constitutional rights. Finding a rights violation does not automatically mean the person is innocent or immediately goes free.";
+    section.append(heading, intro, grid, focus, reminder);
+    return section;
+  }
   document.title = `${item.name} · Prove Your Case`;
   $("#case-topic").textContent = item.topic;
   $("#case-name").textContent = item.name;
@@ -10,53 +50,17 @@
   $("#case-image").src = item.image;
   $("#case-image").alt = item.alt;
   $("#case-question").textContent = item.worksheet.question;
-  const answerBox = (title, rows) => {
-    const box = document.createElement("aside"); box.className = "worksheet-answer";
-    const heading = document.createElement("h3"); heading.textContent = title;
-    box.append(heading);
-    rows.forEach(([label, id, copyClass = ""]) => {
-      const row = document.createElement("div"); row.className = "worksheet-row";
-      const strong = document.createElement("strong"); strong.textContent = label;
-      const content = document.createElement(id === "worksheet-terms" ? "ul" : "p"); content.id = id;
-      if (copyClass) content.className = copyClass;
-      row.append(strong, content); box.append(row);
-    });
-    return box;
-  };
-  const storyGrid = $("#story-step .two-col");
-  const factsPanel = storyGrid.querySelector(".panel.dark");
-  storyGrid.querySelector(".step").textContent = "1B · WHAT HAPPENED?";
-  factsPanel.querySelector(".step").textContent = "1D · THREE FACTS THAT MATTER";
-  factsPanel.remove();
-  storyGrid.classList.add("worksheet-story-flow");
-  storyGrid.before(answerBox("1A · WHO TOOK THE GOVERNMENT ACTION?", [["WRITE THIS","worksheet-actor","worksheet-copy"]]));
-  storyGrid.after(answerBox("1C · WHAT DID THE GOVERNMENT DO?", [["WRITE THIS","worksheet-action","worksheet-copy"]]), factsPanel);
-  const questionDirection = document.createElement("p"); questionDirection.className = "worksheet-direction";
-  questionDirection.textContent = "COPY THIS COMPLETE QUESTION INTO SITE STEP 2:";
-  $("#job-title").before(questionDirection);
-  const constitutionGuide = answerBox("FOLLOW SITE STEP 3 IN THIS ORDER", [["1 · AMENDMENT","worksheet-amendment"],["2 · COPY THE MOST IMPORTANT WORDS","worksheet-words","worksheet-copy"],["3 · WHAT THOSE WORDS MEAN","worksheet-meaning"],["4 · TWO LEGAL WORDS TO USE","worksheet-terms"]]);
-  $("#constitution").before(constitutionGuide);
-  const extraConstitutionHelp = document.createElement("h3"); extraConstitutionHelp.className = "extra-help-heading";
-  extraConstitutionHelp.textContent = "MORE EXPLANATION IF YOU NEED IT";
-  $("#constitution").before(extraConstitutionHelp);
-  const rulingMap = document.createElement("div"); rulingMap.className = "ruling-map";
-  rulingMap.innerHTML = "<h3>FOLLOW SITE STEP 4 IN THIS ORDER</h3><p><strong>1 · MY RULING IS…</strong>State which choice you made and answer the complete Step 2 question.</p><p><strong>2 · FACTS 1 + 2</strong>Choose two specific facts from Facts That Matter that support your choice.</p><p><strong>3 · THE AMENDMENT SAYS OR MEANS…</strong>Use the amendment words and plain-language explanation from Step 3.</p><p><strong>4 · THIS RULE FITS BECAUSE…</strong>Explain how your two facts connect to the amendment.</p><p><strong>5 · THE OTHER SIDE / MY RESPONSE</strong>Use the optional argument ideas only if you need help identifying the strongest opposing point.</p>";
-  $("#choice-status").after(rulingMap);
-  rulingMap.after($(".my-rule"));
-  $("#worksheet-actor").textContent = item.worksheet.actor;
-  $("#worksheet-action").textContent = item.worksheet.action;
-  $("#worksheet-amendment").textContent = item.constitution.map(part => part.label).join(" + ");
-  $("#worksheet-words").textContent = item.constitution.map(part => part.text).join(" ");
-  $("#worksheet-meaning").textContent = item.constitution.map(part => part.explain).join(" ");
   const list = (target, values) => values.forEach(value => { const li = document.createElement("li"); li.textContent = value; $(target).append(li); });
-  list("#case-story", item.story); list("#case-notice", item.notice); list("#side-a", item.sideA.points); list("#side-b", item.sideB.points); list("#case-prompts", item.prompts);
+  list("#case-story", item.story); list("#case-notice", item.notice); list("#side-a", item.sideA.points); list("#side-b", item.sideB.points);
   $("#side-a-title").textContent = item.sideA.title; $("#side-b-title").textContent = item.sideB.title;
   item.constitution.forEach(part => {
     const section = document.createElement("section"); section.className = "constitution-part";
     const heading = document.createElement("h3"); heading.textContent = part.label;
+    const quoteLabel = document.createElement("h4"); quoteLabel.textContent = "COPY THESE IMPORTANT WORDS";
     const quote = document.createElement("blockquote"); quote.textContent = part.text;
+    const explainLabel = document.createElement("h4"); explainLabel.textContent = "WHAT THE WORDS MEAN";
     const explain = document.createElement("p"); explain.textContent = part.explain;
-    section.append(heading, quote, explain); $("#constitution").append(section);
+    section.append(heading, quoteLabel, quote, explainLabel, explain); $("#constitution").append(section);
   });
   $("#toolbox-rule").textContent = item.toolbox.rule;
   $("#toolbox-decide").textContent = item.toolbox.decide;
@@ -66,13 +70,35 @@
     const definition = document.createElement("dd"); definition.textContent = meaning;
     $("#toolbox-terms").append(name, definition);
   });
-  item.worksheet.terms.forEach(term => {
-    const definition = item.toolbox.terms.find(([name]) => name === term)?.[1] || "";
+  addTaskCue("#story-step", "Follow the worksheet from top to bottom. Copy the government actor, read what happened, copy the government action, and choose three facts.");
+  addTaskCue("#question-step", "Copy this complete question onto your worksheet.");
+  addTaskCue("#constitution-step", "Use this order: amendment, important words, meaning, then two legal words.");
+  addTaskCue("#ruling-step", "Follow the worksheet in order. Choose your ruling before building your reasons.");
+  const storyCue = document.querySelector("#story-step .task-cue");
+  storyCue.after(makeActorLine());
+  $("#case-story").after(makeRightsCheck());
+  document.querySelector("#story-step .panel h2").textContent = "WHAT HAPPENED?";
+  document.querySelector("#story-step .panel.dark h2").textContent = "THREE FACTS THAT MATTER";
+  const termsBox = document.querySelector(".terms-box");
+  document.querySelector(".toolbox").prepend(termsBox);
+  termsBox.querySelector("h3").textContent = "CHOOSE TWO LEGAL WORDS";
+  const prompts = [
+    ["USE THE FACTS", "Choose two facts from THREE FACTS THAT MATTER. Explain how each fact supports your ruling."],
+    ["USE THE CONSTITUTION", `Finish the sentence: The ${item.amendments.replace("TH", "th").replace("ST", "st").replace("ND", "nd").replace("RD", "rd")} says or means…`],
+    ["CONNECT THE FACTS AND THE CONSTITUTION", "Explain why the constitutional rule fits the facts of this case."],
+    ["CONSIDER THE OTHER SIDE", "State the strongest reason someone might disagree with your ruling."],
+    ["MY RESPONSE", "Explain why your ruling is still stronger."]
+  ];
+  prompts.forEach(([labelText, text]) => {
     const li = document.createElement("li");
-    const strong = document.createElement("strong"); strong.textContent = term;
-    li.append(strong, document.createTextNode(` — ${definition}`));
-    $("#worksheet-terms").append(li);
+    const label = document.createElement("strong"); label.textContent = labelText;
+    const copy = document.createElement("span"); copy.textContent = text;
+    li.append(label, copy); $("#case-prompts").append(li);
   });
+  document.querySelector("#case-prompts").previousElementSibling.textContent = "BUILD YOUR OPINION";
+  $("#ruling-step").append(document.querySelector(".my-rule"));
+  const rulingNote = document.querySelector("#ruling-step > p:not(.step):not(.task-cue)");
+  if (rulingNote) rulingNote.textContent = "Use the buttons for your quick choice. Write your evidence on the worksheet.";
   const choiceKey = `prove-case-choice-${id}`;
   let choice = localStorage.getItem(choiceKey) || "";
   const choiceStatus = $("#choice-status");
@@ -106,6 +132,14 @@
     $("#decision-reason").textContent = item.ruling.reason;
     $("#decision-nuance").textContent = item.ruling.nuance;
     $("#decision-source").href = item.ruling.source;
+    const aftermath = document.createElement("section");
+    aftermath.className = "aftermath";
+    const aftermathHeading = document.createElement("h3"); aftermathHeading.textContent = "WHAT HAPPENED NEXT?";
+    const aftermathStatus = document.createElement("span"); aftermathStatus.className = "aftermath-status"; aftermathStatus.textContent = item.aftermath.status;
+    const aftermathText = document.createElement("p"); aftermathText.textContent = item.aftermath.text;
+    const aftermathSource = document.createElement("a"); aftermathSource.href = item.aftermath.source; aftermathSource.target = "_blank"; aftermathSource.rel = "noopener"; aftermathSource.textContent = "CHECK THE FOLLOW-UP SOURCE ↗";
+    aftermath.append(aftermathHeading, aftermathStatus, aftermathText, aftermathSource);
+    $("#decision-source").before(aftermath);
     renderComparison();
   }
   renderChoice(); loadUnlock();
