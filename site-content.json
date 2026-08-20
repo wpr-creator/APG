@@ -38,7 +38,7 @@
     "civics-field-test": true,
     "ap-addendum": true,
     "ap-addendum-test": false,
-    "evidence-in-action": false,
+    "evidence-in-action": true,
     "ap-u1-overview": false,
     "ap-u1-documents": false,
     "founding-power": false,
