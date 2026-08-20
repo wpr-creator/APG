@@ -37,7 +37,7 @@
     "presidential-library": true,
     "civics-field-test": true,
     "ap-addendum": true,
-    "ap-addendum-test": false,
+    "ap-addendum-test": true,
     "evidence-in-action": true,
     "ap-u1-overview": false,
     "ap-u1-documents": false,

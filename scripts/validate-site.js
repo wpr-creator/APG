@@ -455,29 +455,31 @@ function validateSharedCourseExperience() {
   if (proveCaseCode.includes('#unit-gov-0') || proveCaseCode.includes('pad-site-content-v2') || proveCaseCode.includes('/GOV/')) {
     errors.push('Prove Your Case contains a leftover GOV-site route or settings key.');
   }
-  if (!fs.existsSync(path.join(root, 'prove-your-case/overview.css')) ||
-      !proveCaseCode.includes('20260820-student-ready') ||
-      !proveCaseCode.includes('<span>COMPARE</span>') ||
-      !proveCaseCode.includes('WORK EACH CASE IN ORDER') ||
-      !proveCaseCode.includes('WHAT YOU TURN IN')) {
-    errors.push('Prove Your Case student-reading supports changed or are missing.');
+  if (!proveCaseCode.includes('20260820-apg-port') ||
+      !proveCaseCode.includes('YOUR FOUR STEPS') ||
+      !proveCaseCode.includes('TWO ACTIONS. ONE RIGHTS QUESTION.') ||
+      !proveCaseCode.includes('A person can do something wrong and still have constitutional rights.') ||
+      !proveCaseCode.includes('WHAT HAPPENED NEXT?')) {
+    errors.push('The simplified GOV Prove Your Case structure changed or is missing from APG.');
   }
   const proveCaseData = fs.readFileSync(path.join(root, 'prove-your-case/case-data.js'), 'utf8');
   const proveCaseApp = fs.readFileSync(path.join(root, 'prove-your-case/case.js'), 'utf8');
-  if ((proveCaseData.match(/worksheet:\{actor:/g) || []).length !== 6 ||
-      !proveCaseApp.includes('1A · WHO TOOK THE GOVERNMENT ACTION?') ||
-      !proveCaseApp.includes('COPY THIS COMPLETE QUESTION INTO SITE STEP 2:') ||
-      !proveCaseApp.includes('FOLLOW SITE STEP 3 IN THIS ORDER') ||
-      !proveCaseApp.includes('FOLLOW SITE STEP 4 IN THIS ORDER')) {
+  if ((proveCaseData.match(/worksheet:\s*\{?actor:/g) || []).length !== 6 ||
+      (proveCaseData.match(/personAction:/g) || []).length !== 6 ||
+      (proveCaseData.match(/aftermath:/g) || []).length !== 6 ||
+      !proveCaseApp.includes('WORKSHEET GUIDE: ') ||
+      !proveCaseApp.includes('GOVERNMENT ACTOR') ||
+      !proveCaseApp.includes('CHOOSE TWO LEGAL WORDS') ||
+      !proveCaseApp.includes('BUILD YOUR OPINION')) {
     errors.push('Every Prove Your Case file must include explicit, worksheet-aligned guidance for Steps 1–4.');
   }
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
   if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
       parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||
-      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== false ||
+      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== true ||
       parsedSiteContent.assignmentUnlocks['civics-field-test'] !== true ||
       parsedSiteContent.assignmentUnlocks['mr-smith-extension'] !== true) {
-    errors.push('Only the Civics Field Guide Test and Mr. Smith Extension should be open; the AP Addendum Test must remain locked with its saved URL.');
+    errors.push('The Civics Field Guide Test, Mr. Smith Extension, and AP Addendum Test must be open with their saved URLs.');
   }
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
