@@ -1,0 +1,71 @@
+.assignment-brief {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  margin-bottom: 1.25rem;
+  color: var(--white);
+  background: var(--ink);
+  border: 3px solid var(--ink);
+}
+
+.assignment-brief > div {
+  padding: 1rem;
+  background: var(--ink);
+}
+
+.assignment-brief strong,
+.workflow-label {
+  display: block;
+  margin-bottom: .35rem;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.assignment-brief p {
+  margin: 0;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.case-workflow {
+  margin: .75rem 0 1.15rem;
+  padding-left: 1.7rem;
+  counter-reset: case-step;
+}
+
+.case-workflow li {
+  margin: 0;
+  padding: .2rem 0 .8rem .35rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.case-workflow li + li {
+  margin-top: .15rem;
+}
+
+.ruling-note {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: .9rem 1rem;
+  color: var(--ink);
+  background: var(--white);
+  border-left: 7px solid var(--red);
+  font-weight: 700;
+}
+
+.case-card p {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 680px) {
+  .assignment-brief {
+    grid-template-columns: 1fr;
+  }
+
+}

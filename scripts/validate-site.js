@@ -446,14 +446,21 @@ function validateSharedCourseExperience() {
   });
   if (!courseData.includes('id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html"') ||
       parsedSiteContent.assignmentUrls['evidence-in-action'] !== 'prove-your-case.html' ||
-      parsedSiteContent.assignmentUnlocks['evidence-in-action'] !== false) {
-    errors.push('Prove Your Case must point to its APG activity and remain locked.');
+      parsedSiteContent.assignmentUnlocks['evidence-in-action'] !== true) {
+    errors.push('Prove Your Case must point to its APG activity and remain open.');
   }
   const proveCaseCode = proveCaseFiles.map(function (relativePath) {
     return fs.existsSync(path.join(root, relativePath)) ? fs.readFileSync(path.join(root, relativePath), 'utf8') : '';
   }).join('\n');
   if (proveCaseCode.includes('#unit-gov-0') || proveCaseCode.includes('pad-site-content-v2') || proveCaseCode.includes('/GOV/')) {
     errors.push('Prove Your Case contains a leftover GOV-site route or settings key.');
+  }
+  if (!fs.existsSync(path.join(root, 'prove-your-case/overview.css')) ||
+      !proveCaseCode.includes('20260820-student-ready') ||
+      !proveCaseCode.includes('<span>COMPARE</span>') ||
+      !proveCaseCode.includes('WORK EACH CASE IN ORDER') ||
+      !proveCaseCode.includes('WHAT YOU TURN IN')) {
+    errors.push('Prove Your Case student-reading supports changed or are missing.');
   }
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
   if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
