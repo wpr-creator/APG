@@ -462,6 +462,15 @@ function validateSharedCourseExperience() {
       !proveCaseCode.includes('WHAT YOU TURN IN')) {
     errors.push('Prove Your Case student-reading supports changed or are missing.');
   }
+  const proveCaseData = fs.readFileSync(path.join(root, 'prove-your-case/case-data.js'), 'utf8');
+  const proveCaseApp = fs.readFileSync(path.join(root, 'prove-your-case/case.js'), 'utf8');
+  if ((proveCaseData.match(/worksheet:\{actor:/g) || []).length !== 6 ||
+      !proveCaseApp.includes('COPY THESE ANSWERS TO SITE STEP 1') ||
+      !proveCaseApp.includes('COPY THIS COMPLETE QUESTION TO SITE STEP 2') ||
+      !proveCaseApp.includes('USE THESE FOR SITE STEP 3') ||
+      !proveCaseApp.includes('WORKSHEET MAP FOR SITE STEP 4')) {
+    errors.push('Every Prove Your Case file must include explicit, worksheet-aligned guidance for Steps 1–4.');
+  }
   const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
   if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
       parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||

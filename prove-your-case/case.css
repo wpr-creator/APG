@@ -35,6 +35,17 @@
   letter-spacing: .05em;
 }
 
+.worksheet-answer{margin:1rem 0 0;padding:1rem;color:var(--ink);background:#fff;border:3px solid var(--red)}
+.worksheet-answer h3{margin:0 0 .75rem;color:var(--red);font-size:.82rem;letter-spacing:.08em}
+.worksheet-row{margin:.65rem 0 0}
+.worksheet-row strong{display:block;margin-bottom:.15rem;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase}
+.worksheet-row p{margin:0;font-size:1.08rem;line-height:1.55}
+.worksheet-copy{padding:.8rem;background:var(--paper);border-left:6px solid var(--ink);font-weight:800}
+#worksheet-terms{margin:.4rem 0 0}
+.ruling-map{display:grid;gap:.65rem;margin:1rem 0;padding:1rem;background:var(--paper);border:2px solid var(--ink)}
+.ruling-map p{margin:0}
+.ruling-map strong{display:block;color:var(--red);font-size:.75rem;letter-spacing:.06em}
+
 @media(max-width:720px){
   #case-story,
   #case-notice,
@@ -48,4 +59,3 @@
     font-size: 1.05rem;
   }
 }
-

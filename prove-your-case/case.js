@@ -10,6 +10,31 @@
   $("#case-image").src = item.image;
   $("#case-image").alt = item.alt;
   $("#case-question").textContent = item.question;
+  const answerBox = (title, rows) => {
+    const box = document.createElement("aside"); box.className = "worksheet-answer";
+    const heading = document.createElement("h3"); heading.textContent = title;
+    box.append(heading);
+    rows.forEach(([label, id, copyClass = ""]) => {
+      const row = document.createElement("div"); row.className = "worksheet-row";
+      const strong = document.createElement("strong"); strong.textContent = label;
+      const content = document.createElement(id === "worksheet-terms" ? "ul" : "p"); content.id = id;
+      if (copyClass) content.className = copyClass;
+      row.append(strong, content); box.append(row);
+    });
+    return box;
+  };
+  $("#story-step").append(answerBox("COPY THESE ANSWERS TO SITE STEP 1", [["WHO TOOK THE GOVERNMENT ACTION?","worksheet-actor"],["WHAT DID THE GOVERNMENT DO?","worksheet-action"]]));
+  $("#question-step").append(answerBox("COPY THIS COMPLETE QUESTION TO SITE STEP 2", [["DOES THE CONSTITUTION ALLOW THE GOVERNMENT TO…","worksheet-question","worksheet-copy"]]));
+  $("#constitution-step").append(answerBox("USE THESE FOR SITE STEP 3", [["AMENDMENT","worksheet-amendment"],["COPY THE MOST IMPORTANT WORDS","worksheet-words","worksheet-copy"],["WHAT THOSE WORDS MEAN","worksheet-meaning"],["TWO LEGAL WORDS TO USE","worksheet-terms"]]));
+  const rulingMap = document.createElement("div"); rulingMap.className = "ruling-map";
+  rulingMap.innerHTML = "<h3>WORKSHEET MAP FOR SITE STEP 4</h3><p><strong>MY RULING IS…</strong>State which choice you made and answer the complete Step 2 question.</p><p><strong>FACTS 1 + 2</strong>Choose two specific facts from Facts That Matter that support your choice.</p><p><strong>THE AMENDMENT SAYS OR MEANS…</strong>Use the amendment words and plain-language explanation from Step 3.</p><p><strong>THIS RULE FITS BECAUSE…</strong>Explain how your two facts connect to the amendment.</p><p><strong>THE OTHER SIDE / MY RESPONSE</strong>Use the optional argument ideas only if you need help identifying the strongest opposing point.</p><p><strong>CREATE A FAIR RULE</strong>Complete both blanks: what government may do, and the condition that must be met first.</p>";
+  $("#case-prompts").before(rulingMap);
+  $("#worksheet-actor").textContent = item.worksheet.actor;
+  $("#worksheet-action").textContent = item.worksheet.action;
+  $("#worksheet-question").textContent = item.worksheet.question;
+  $("#worksheet-amendment").textContent = item.constitution.map(part => part.label).join(" + ");
+  $("#worksheet-words").textContent = item.constitution.map(part => part.text).join(" ");
+  $("#worksheet-meaning").textContent = item.constitution.map(part => part.explain).join(" ");
   const list = (target, values) => values.forEach(value => { const li = document.createElement("li"); li.textContent = value; $(target).append(li); });
   list("#case-story", item.story); list("#case-notice", item.notice); list("#side-a", item.sideA.points); list("#side-b", item.sideB.points); list("#case-prompts", item.prompts);
   $("#side-a-title").textContent = item.sideA.title; $("#side-b-title").textContent = item.sideB.title;
@@ -27,6 +52,13 @@
     const name = document.createElement("dt"); name.textContent = term;
     const definition = document.createElement("dd"); definition.textContent = meaning;
     $("#toolbox-terms").append(name, definition);
+  });
+  item.worksheet.terms.forEach(term => {
+    const definition = item.toolbox.terms.find(([name]) => name === term)?.[1] || "";
+    const li = document.createElement("li");
+    const strong = document.createElement("strong"); strong.textContent = term;
+    li.append(strong, document.createTextNode(` — ${definition}`));
+    $("#worksheet-terms").append(li);
   });
   const choiceKey = `prove-case-choice-${id}`;
   let choice = localStorage.getItem(choiceKey) || "";
@@ -65,5 +97,3 @@
   }
   renderChoice(); loadUnlock();
 })();
-
-
