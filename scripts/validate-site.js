@@ -261,7 +261,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260820-concise-units',
-    'course-data.js?v=20260820-concise-units',
+    'course-data.js?v=20260823-core-ideals',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260820-concise-units',
     'data-view-link="home"',
@@ -343,6 +343,17 @@ function validateSharedCourseExperience() {
     }, 0);
   }, 0);
   if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
+  [
+    '["Natural rights", "N", "Rights every person has simply because they are human, including life and liberty."',
+    '["Social contract", "S", "People accept government authority in exchange for order and protection of their rights."',
+    '["Popular sovereignty", "P", "The people are the source of government power."',
+    '["Limited government", "L", "Government power is restricted by law and cannot be absolute."',
+    '["Consent of the governed", "✓", "Government may rule only because the people authorize it."',
+    '["Republicanism", "R", "People govern through elected representatives."',
+    '["Equality", "=", "No person is naturally born with the right to rule another."'
+  ].forEach(function (entry) {
+    if (!courseData.includes(entry)) errors.push('Core AP ideal changed or missing from the student glossary: ' + entry);
+  });
   const apUnits = courseData.match(/id: "gov-[0-5]"/g) || [];
   if (apUnits.length !== 6) errors.push('APG shell must contain Unit 0 and AP Units 1–5.');
   [
