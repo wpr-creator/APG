@@ -350,7 +350,7 @@
     }
 
     container.appendChild(header);
-    if (unit.id !== "gov-0" && sourceGrid.children.length) container.append(unitSources);
+    if (!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length) container.append(unitSources);
     if (unit.resources?.length) container.append(resources);
   }
 
