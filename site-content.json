@@ -1,8 +1,8 @@
 {
-  "currentUnit": "gov-0",
+  "currentUnit": "gov-1",
   "unitUnlocks": {
     "gov-0": true,
-    "gov-1": false,
+    "gov-1": true,
     "gov-2": false,
     "gov-3": false,
     "gov-4": false,
@@ -11,12 +11,16 @@
   "exitQuestion": "",
   "upcoming": [
     {
-      "title": "CIVICS FIELD GUIDE TEST",
-      "date": "UNIT 0 · 0.6"
+      "title": "1.01 GUIDED NOTES",
+      "date": "UNIT 1 · 1.01"
     },
     {
-      "title": "AP ADDENDUM TEST",
-      "date": "UNIT 0 · 0.6"
+      "title": "DECLARATION ANNOTATION",
+      "date": "UNIT 1 · 1.01"
+    },
+    {
+      "title": "GETTYSBURG REDUX",
+      "date": "UNIT 1 · 1.01"
     }
   ],
   "classroomUrl": "https://classroom.google.com/",
@@ -39,8 +43,14 @@
     "ap-addendum": true,
     "ap-addendum-test": true,
     "evidence-in-action": true,
-    "ap-u1-overview": false,
-    "ap-u1-documents": false,
+    "u1-101-declaration": true,
+    "u1-101-preamble": true,
+    "u1-101-gettysburg": true,
+    "u1-101-declaration-annotation": true,
+    "u1-101-gettysburg-redux": false,
+    "u1-101-guided-notes": true,
+    "ap-u1-overview": true,
+    "ap-u1-documents": true,
     "founding-power": false,
     "federalism-map": false,
     "constitution-explorer": false,
@@ -79,6 +89,12 @@
     "ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0",
     "ap-addendum-test": "https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog",
     "evidence-in-action": "prove-your-case.html",
+    "u1-101-declaration": "docs/declaration-of-independence.html",
+    "u1-101-preamble": "docs/constitution-preamble.html",
+    "u1-101-gettysburg": "docs/gettysburg-address.html",
+    "u1-101-declaration-annotation": "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0",
+    "u1-101-gettysburg-redux": "",
+    "u1-101-guided-notes": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0",
     "ap-u1-overview": "unit1.html",
     "ap-u1-documents": "unit1-docs.html",
     "founding-power": "#founding-power",

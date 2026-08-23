@@ -261,7 +261,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260820-concise-units',
-    'course-data.js?v=20260823-core-ideals',
+    'course-data.js?v=20260823-unit1-launch',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260820-concise-units',
     'data-view-link="home"',
@@ -403,18 +403,18 @@ function validateSharedCourseExperience() {
   }
   const parsedSiteContent = JSON.parse(siteContent);
   const expectedUpcoming = [
-    { title: 'CIVICS FIELD GUIDE TEST', date: 'UNIT 0 · 0.6' },
-    { title: 'AP ADDENDUM TEST', date: 'UNIT 0 · 0.6' }
+    { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
+    { title: 'DECLARATION ANNOTATION', date: 'UNIT 1 · 1.01' },
+    { title: 'GETTYSBURG REDUX', date: 'UNIT 1 · 1.01' }
   ];
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
-    errors.push('Upcoming Assignments must contain only the two separate Unit 0 tests.');
+    errors.push('Upcoming Assignments must reflect the three Unit 1.01 assignments.');
   }
-  const expectedUnitUnlocks = { 'gov-0': true, 'gov-1': false, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
+  const expectedUnitUnlocks = { 'gov-0': true, 'gov-1': true, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
   if (JSON.stringify(parsedSiteContent.unitUnlocks) !== JSON.stringify(expectedUnitUnlocks)) {
-    errors.push('Only Unit 0 should be open at this point in the course.');
+    errors.push('Unit 1 must be current and open while later units remain locked.');
   }
   [
-    'ap-u1-overview', 'ap-u1-documents',
     'ap-u2-overview', 'ap-u2-documents', 'ap-u2-cases', 'bill-journey', 'presidential-power', 'presidential-library-u2',
     'ap-u3-overview', 'ap-u3-documents', 'ap-u3-cases', 'rights-referee',
     'ap-u4-overview', 'ap-u4-documents', 'ap-polling',
@@ -422,6 +422,31 @@ function validateSharedCourseExperience() {
   ].forEach(function (resourceId) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== false) errors.push('Later-course resource must remain locked: ' + resourceId);
   });
+  if (parsedSiteContent.currentUnit !== 'gov-1' ||
+      parsedSiteContent.assignmentUnlocks['ap-u1-overview'] !== true ||
+      parsedSiteContent.assignmentUnlocks['ap-u1-documents'] !== true) {
+    errors.push('Unit 1 must be the current homepage unit with its overview and document hub open.');
+  }
+  const unit101Resources = {
+    'u1-101-declaration': 'docs/declaration-of-independence.html',
+    'u1-101-preamble': 'docs/constitution-preamble.html',
+    'u1-101-gettysburg': 'docs/gettysburg-address.html',
+    'u1-101-declaration-annotation': 'https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0',
+    'u1-101-guided-notes': 'https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0'
+  };
+  Object.entries(unit101Resources).forEach(function ([resourceId, url]) {
+    if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
+      errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
+    }
+  });
+  if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== false ||
+      parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== '') {
+    errors.push('Gettysburg Redux must remain a Coming Soon card until its URL is supplied.');
+  }
+  if (!fs.existsSync(path.join(root, 'docs/constitution-preamble.html')) ||
+      !fs.readFileSync(path.join(root, 'docs/constitution-preamble.html'), 'utf8').includes('We the People')) {
+    errors.push('The dedicated Constitution Preamble reading page is missing.');
+  }
   if (parsedSiteContent.assignmentUnlocks['california-ballot-2026'] !== true) {
     errors.push('The 2026 California election tracker must remain open.');
   }
