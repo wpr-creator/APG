@@ -33,7 +33,7 @@ window.COURSE_DATA = {
     },
     {
       id: "gov-1", number: "Unit 1", title: "Foundations of American Democracy",
-      question: "How did the founders design a government strong enough to act but limited enough to protect liberty?",
+      question: "How can a government be powerful enough to govern but limited enough to preserve democracy?",
       standards: "AP Unit Weight · 15–22%",
       lessons: [
         ["Principles of American Democracy", "Where does legitimate power come from?", "AP Topic 1.1", "Connect natural rights, popular sovereignty, republicanism, and the social contract.", "Use a founding principle to explain a government action"],
