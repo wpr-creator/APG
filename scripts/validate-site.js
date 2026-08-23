@@ -261,7 +261,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260823-unit1-lessons-only',
+    'course-data.js?v=20260823-unit1-eq',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260823-unit1-lesson-only',
     'data-view-link="home"',
@@ -424,6 +424,9 @@ function validateSharedCourseExperience() {
   });
   if (parsedSiteContent.currentUnit !== 'gov-1') {
     errors.push('Unit 1 must be the current homepage unit.');
+  }
+  if (!courseData.includes('question: "How can a government be powerful enough to govern but limited enough to preserve democracy?"')) {
+    errors.push('Unit 1 essential question is missing or incorrect.');
   }
   ['ap-u1-overview', 'ap-u1-documents', 'founding-power', 'federalism-map', 'constitution-explorer', 'madison-vs-brutus'].forEach(function (resourceId) {
     if (courseData.includes(`id: "${resourceId}"`) ||
