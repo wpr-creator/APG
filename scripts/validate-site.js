@@ -261,7 +261,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260823-unit1-launch',
+    'course-data.js?v=20260823-unit1-lessons-only',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260823-resource-colors',
     'data-view-link="home"',
@@ -422,11 +422,16 @@ function validateSharedCourseExperience() {
   ].forEach(function (resourceId) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== false) errors.push('Later-course resource must remain locked: ' + resourceId);
   });
-  if (parsedSiteContent.currentUnit !== 'gov-1' ||
-      parsedSiteContent.assignmentUnlocks['ap-u1-overview'] !== true ||
-      parsedSiteContent.assignmentUnlocks['ap-u1-documents'] !== true) {
-    errors.push('Unit 1 must be the current homepage unit with its overview and document hub open.');
+  if (parsedSiteContent.currentUnit !== 'gov-1') {
+    errors.push('Unit 1 must be the current homepage unit.');
   }
+  ['ap-u1-overview', 'ap-u1-documents', 'founding-power', 'federalism-map', 'constitution-explorer', 'madison-vs-brutus'].forEach(function (resourceId) {
+    if (courseData.includes(`id: "${resourceId}"`) ||
+        Object.hasOwn(parsedSiteContent.assignmentUnlocks, resourceId) ||
+        Object.hasOwn(parsedSiteContent.assignmentUrls, resourceId)) {
+      errors.push('Retired broad Unit 1 card must remain removed: ' + resourceId);
+    }
+  });
   const unit101Resources = {
     'u1-101-declaration': 'docs/declaration-of-independence.html',
     'u1-101-preamble': 'docs/constitution-preamble.html',
