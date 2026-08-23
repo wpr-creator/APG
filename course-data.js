@@ -48,13 +48,7 @@ window.COURSE_DATA = {
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
         { id: "u1-101-declaration-annotation", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION ANNOTATION", note: "ASSIGNMENT", url: "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0" },
         { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "" },
-        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0" },
-        { id: "ap-u1-overview", lesson: "UNIT 1 COURSE HUB", title: "UNIT 1 OVERVIEW", url: "unit1.html" },
-        { id: "ap-u1-documents", lesson: "FOUNDATIONAL DOCUMENTS", title: "UNIT 1 DOCUMENTS", url: "unit1-docs.html" },
-        { id: "founding-power", lesson: "UNIT 1 EXTENSION", title: "WHERE DOES POWER COME FROM?", url: "#founding-power" },
-        { id: "federalism-map", lesson: "UNIT 1 EXTENSION", title: "THE FEDERALISM MAP", url: "#federalism-map" },
-        { id: "constitution-explorer", lesson: "UNIT 1 EXTENSION", title: "CONSTITUTION EXPLORER", url: "#constitution-explorer" },
-        { id: "madison-vs-brutus", lesson: "UNIT 1 EXTENSION", title: "MADISON VS. BRUTUS", url: "#madison" }
+        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0" }
       ]
     },
     {
