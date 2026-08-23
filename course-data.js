@@ -43,6 +43,12 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
+        { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
+        { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
+        { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
+        { id: "u1-101-declaration-annotation", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION ANNOTATION", note: "ASSIGNMENT", url: "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0" },
+        { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "" },
+        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0" },
         { id: "ap-u1-overview", lesson: "UNIT 1 COURSE HUB", title: "UNIT 1 OVERVIEW", url: "unit1.html" },
         { id: "ap-u1-documents", lesson: "FOUNDATIONAL DOCUMENTS", title: "UNIT 1 DOCUMENTS", url: "unit1-docs.html" },
         { id: "founding-power", lesson: "UNIT 1 EXTENSION", title: "WHERE DOES POWER COME FROM?", url: "#founding-power" },
