@@ -263,7 +263,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260823-resource-colors',
     'course-data.js?v=20260823-unit1-lessons-only',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260823-resource-colors',
+    'app.js?v=20260823-unit1-lesson-only',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -542,6 +542,9 @@ function validateSharedCourseExperience() {
   });
   if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
     errors.push('Unit pages must not render the retired Road Ahead lessons section.');
+  }
+  if (!appCode.includes('!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length')) {
+    errors.push('Unit 1 must hide the broad Unit Sources block and show lesson resources only.');
   }
   if (courseData.includes('lessonSupports:') || appCode.includes('createLessonSupport') || primaryStyles.includes('.lesson-support')) {
     errors.push('Unit pages must remain concise and must not render the retired lesson-support panels.');
