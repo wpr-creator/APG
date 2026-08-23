@@ -260,10 +260,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260820-concise-units',
+    'styles.css?v=20260823-resource-colors',
     'course-data.js?v=20260823-unit1-launch',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260820-concise-units',
+    'app.js?v=20260823-resource-colors',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
