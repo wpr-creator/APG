@@ -524,7 +524,7 @@ function validateSharedCourseExperience() {
     'const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";',
     'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
     'assignmentIsUnlocked(resource.id)',
-    'createUnitZeroCheck(resource, unlocked)',
+    'createCompletionStar(resource, unlocked)',
     'group.classList.add("unit-resource-group-assessments")',
     'if (lessonA === "ASSESSMENTS") return -1;',
     'localStorage.setItem(UNIT_ZERO_COMPLETION_KEY'
@@ -532,9 +532,12 @@ function validateSharedCourseExperience() {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-zero-resource-item', '.unit-zero-check', '.unit-zero-check[aria-pressed="true"]'].forEach(function (selector) {
-    if (!primaryStyles.includes(selector)) errors.push('Unit 0 completion styling changed or missing: ' + selector);
+  ['.unit-resource-item', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
+    if (!primaryStyles.includes(selector)) errors.push('Resource card styling changed or missing: ' + selector);
   });
+  if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
+    errors.push('Unit pages must not render the retired Road Ahead lessons section.');
+  }
   if (courseData.includes('lessonSupports:') || appCode.includes('createLessonSupport') || primaryStyles.includes('.lesson-support')) {
     errors.push('Unit pages must remain concise and must not render the retired lesson-support panels.');
   }

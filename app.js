@@ -70,21 +70,21 @@
     }
   }
 
-  function createUnitZeroCheck(resource, unlocked) {
+  function createCompletionStar(resource, unlocked) {
     const completion = loadUnitZeroCompletion();
     const check = document.createElement("button");
     check.type = "button";
-    check.className = "unit-zero-check";
+    check.className = "unit-completion-star";
     check.disabled = !unlocked;
     check.setAttribute("aria-label", `${completion[resource.id] ? "Mark incomplete" : "Mark complete"}: ${resource.title}`);
     check.setAttribute("aria-pressed", String(Boolean(completion[resource.id])));
-    check.textContent = completion[resource.id] ? "✓" : "";
+    check.textContent = completion[resource.id] ? "★" : "☆";
     check.addEventListener("click", () => {
       const nextCompletion = loadUnitZeroCompletion();
       nextCompletion[resource.id] = !nextCompletion[resource.id];
       saveUnitZeroCompletion(nextCompletion);
       const checked = Boolean(nextCompletion[resource.id]);
-      check.textContent = checked ? "✓" : "";
+      check.textContent = checked ? "★" : "☆";
       check.setAttribute("aria-pressed", String(checked));
       check.setAttribute("aria-label", `${checked ? "Mark incomplete" : "Mark complete"}: ${resource.title}`);
     });
@@ -266,38 +266,6 @@
     }
     unitSources.append(sourceHeading, sourceGrid);
 
-    const lessons = document.createElement("section");
-    lessons.className = "unit-lessons";
-    lessons.setAttribute("aria-label", "Lessons in this unit");
-    const lessonHeading = document.createElement("div");
-    lessonHeading.className = "section-heading";
-    lessonHeading.innerHTML = "<div><p class=\"eyebrow\">THE ROAD AHEAD</p><h2>LESSONS</h2></div>";
-    const lessonList = document.createElement("div");
-    lessonList.className = "lesson-list";
-    (unit.lessons || []).forEach((lesson, index) => {
-      const article = document.createElement("article");
-      article.className = "lesson-card";
-      const number = document.createElement("span");
-      number.className = "lesson-number";
-      number.textContent = String(index + 1).padStart(2, "0");
-      const copy = document.createElement("div");
-      const title = document.createElement("h3");
-      title.textContent = lesson[0].toUpperCase();
-      const question = document.createElement("strong");
-      question.textContent = lesson[1];
-      const summary = document.createElement("p");
-      summary.textContent = lesson[3];
-      const action = document.createElement("small");
-      action.textContent = `SHOW YOU KNOW IT · ${lesson[4]}`;
-      copy.append(title, question, summary, action);
-      const standard = document.createElement("span");
-      standard.className = "lesson-standard";
-      standard.textContent = lesson[2];
-      article.append(number, copy, standard);
-      lessonList.append(article);
-    });
-    lessons.append(lessonHeading, lessonList);
-
     const resources = document.createElement("section");
     resources.className = "unit-resources";
     resources.setAttribute("aria-label", "Assignments by lesson");
@@ -329,6 +297,11 @@
           const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
           const card = document.createElement(unlocked ? "a" : "div");
           card.className = "unit-resource";
+          const resourceType = (resource.note || "").toUpperCase();
+          if (lesson === "ASSESSMENTS") card.classList.add("unit-resource-assessment");
+          else if (resourceType.includes("GUIDED NOTES")) card.classList.add("unit-resource-guided-notes");
+          else if (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT")) card.classList.add("unit-resource-assignment");
+          else if (resourceType.includes("READ")) card.classList.add("unit-resource-reading");
           if (unlocked) {
             card.href = resourceUrl;
             if (!resourceUrl.startsWith("#")) {
@@ -366,14 +339,10 @@
             resourceStatus.textContent = "COMING SOON";
             card.append(resourceStatus);
           }
-          if (unit.id === "gov-0") {
-            const item = document.createElement("div");
-            item.className = "unit-zero-resource-item";
-            item.append(createUnitZeroCheck(resource, unlocked), card);
-            resourceGrid.appendChild(item);
-          } else {
-            resourceGrid.appendChild(card);
-          }
+          const item = document.createElement("div");
+          item.className = "unit-resource-item";
+          item.append(createCompletionStar(resource, unlocked), card);
+          resourceGrid.appendChild(item);
         });
         group.append(lessonTitle, resourceGrid);
         resources.append(group);
@@ -382,7 +351,6 @@
 
     container.appendChild(header);
     if (unit.id !== "gov-0" && sourceGrid.children.length) container.append(unitSources);
-    if (unit.id !== "gov-0" && unit.lessons?.length) container.append(lessons);
     if (unit.resources?.length) container.append(resources);
   }
 
