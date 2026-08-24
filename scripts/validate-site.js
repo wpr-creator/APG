@@ -253,7 +253,8 @@ function validateSharedCourseExperience() {
     const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !html.includes('styles-gov-theme.css')) {
+    const isDemocracyFiltered = relative(file) === 'democracy-filtered.html' && html.includes('democracy-filtered.css');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -261,7 +262,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260824-guided-notes',
+    'course-data.js?v=20260824-democracy-filtered',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260823-unit1-lesson-only',
     'data-view-link="home"',
@@ -447,6 +448,25 @@ function validateSharedCourseExperience() {
       errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
     }
   });
+  if (!courseData.includes('id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED"') ||
+      parsedSiteContent.assignmentUnlocks['u1-102-democracy-filtered'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-102-democracy-filtered'] !== 'democracy-filtered.html') {
+    errors.push('Unit 1.02 Democracy, Filtered must be open from the Unit 1 page.');
+  }
+  const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
+  [
+    'How does representative democracy decide whose voices matter?',
+    'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
+    'assets/democracy-filtered/brutus-advocate.jpg',
+    'assets/democracy-filtered/madison-advocate.jpg',
+    'assets/democracy-filtered/hamilton-advocate.jpg'
+  ].forEach(function (content) {
+    if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered lesson is missing: ' + content);
+  });
+  const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
+  if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()')) {
+    errors.push('Democracy, Filtered must save progress locally and print its Voice Passport.');
+  }
   if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== false ||
       parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== '') {
     errors.push('Gettysburg Redux must remain a Coming Soon card until its URL is supplied.');
