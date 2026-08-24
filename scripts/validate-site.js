@@ -587,7 +587,7 @@ function validateSharedCourseExperience() {
   if (!navCode.includes('addAddendumSummary') || !navCode.includes('AP ADDENDUM SUMMARY')) {
     errors.push('Required documents and cases must receive the shared AP Addendum Summary panel.');
   }
-  if (!navCode.includes("document.querySelector(doc ? '.doc-hero, .page-hero' : '.case-hero')")) {
+  if (!navCode.includes("document.querySelector(doc ? '.doc-hero, .page-hero, .document-hero' : '.case-hero')")) {
     errors.push('AP Addendum summaries must support both document hero layouts.');
   }
   const REQUIRED_SUMMARY_FILES = [
@@ -605,9 +605,23 @@ function validateSharedCourseExperience() {
     return file.endsWith('.html') && file !== 'ARCHITECTURE.html';
   }).forEach(function (file) {
     const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
-    const readerLink = 'styles-document-reader.css?v=20260819-student-reader';
+    const newReaderFiles = ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'];
+    const readerLink = newReaderFiles.includes(file)
+      ? 'document-reader.css?v=20260823-apg-reader'
+      : 'styles-document-reader.css?v=20260819-student-reader';
     if (!page.includes(readerLink) || page.indexOf(readerLink) > page.indexOf('</head>')) {
       errors.push('Document does not load the student reader inside its head: docs/' + file);
+    }
+  });
+  const newDocumentReaderStyles = fs.readFileSync(path.join(root, 'docs', 'document-reader.css'), 'utf8');
+  ['.course-shell', '.document-hero', '.passage', '.original', '.support', '.highlight', '.addendum-summary'].forEach(function (selector) {
+    if (!newDocumentReaderStyles.includes(selector)) errors.push('New Unit 1 reader style changed or missing: ' + selector);
+  });
+  ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'].forEach(function (file) {
+    const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
+    if (!page.includes('class="course-shell"') || !page.includes('AP UNITED STATES GOVERNMENT') ||
+        !page.includes('AP ADDENDUM SUMMARY') && !page.includes('addAddendumSummary(')) {
+      errors.push('Unit 1 reader is missing its AP-wide shell or concise summary: docs/' + file);
     }
   });
   ['.doc-passage-text', '.doc-paragraph-text', '.doc-margin', '.doc-annotation', '.highlight-key', '.doc-nav', '.doc-rail'].forEach(function (selector) {
