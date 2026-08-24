@@ -261,7 +261,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260823-unit1-eq',
+    'course-data.js?v=20260824-guided-notes',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260823-unit1-lesson-only',
     'data-view-link="home"',
@@ -440,7 +440,7 @@ function validateSharedCourseExperience() {
     'u1-101-preamble': 'docs/constitution-preamble.html',
     'u1-101-gettysburg': 'docs/gettysburg-address.html',
     'u1-101-declaration-annotation': 'https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0',
-    'u1-101-guided-notes': 'https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?tab=t.0'
+    'u1-101-guided-notes': 'https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing'
   };
   Object.entries(unit101Resources).forEach(function ([resourceId, url]) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
