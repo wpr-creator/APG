@@ -70,7 +70,7 @@ function addAddendumSummary(currentFile) {
 
   const doc = REQUIRED_DOCS.find(function (item) { return item.file === currentFile; });
   const courtCase = REQUIRED_CASES.find(function (item) { return item.file === currentFile; });
-  const hero = document.querySelector(doc ? '.doc-hero, .page-hero' : '.case-hero');
+  const hero = document.querySelector(doc ? '.doc-hero, .page-hero, .document-hero' : '.case-hero');
   if (!hero || (!doc && !courtCase)) return;
 
   const section = document.createElement('section');
