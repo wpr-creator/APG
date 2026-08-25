@@ -460,7 +460,8 @@ function validateSharedCourseExperience() {
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
-    'assets/democracy-filtered/hamilton-advocate.jpg'
+    'assets/democracy-filtered/hamilton-advocate.jpg',
+    'assets/democracy-filtered/social-media-congress.jpg'
   ].forEach(function (content) {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered lesson is missing: ' + content);
   });
