@@ -262,7 +262,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260824-democracy-filtered',
+    'course-data.js?v=20260825-democracy-glossary',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260823-unit1-lesson-only',
     'data-view-link="home"',
@@ -346,12 +346,19 @@ function validateSharedCourseExperience() {
   if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
   [
     '["Natural rights", "N", "Rights every person has simply because they are human, including life and liberty."',
-    '["Social contract", "S", "People accept government authority in exchange for order and protection of their rights."',
+    '["Social contract", "S", "People agree to give government authority in exchange for order and protection of their rights."',
     '["Popular sovereignty", "P", "The people are the source of government power."',
     '["Limited government", "L", "Government power is restricted by law and cannot be absolute."',
     '["Consent of the governed", "✓", "Government may rule only because the people authorize it."',
-    '["Republicanism", "R", "People govern through elected representatives."',
-    '["Equality", "=", "No person is naturally born with the right to rule another."'
+    '["Republicanism", "R", "People govern through elected representatives. Representation means those officials speak and act for people who cannot all make national policy directly."',
+    '["Equality", "=", "People have equal political rights. No person is naturally entitled to rule others."',
+    '["Participatory democracy", "P", "A model emphasizing broad and direct citizen involvement in political decisions."',
+    '["Pluralist democracy", "P", "A model in which organized groups compete to influence public policy."',
+    '["Elite democracy", "E", "A model in which elected leaders and influential minorities exercise substantial policy influence."',
+    '["Representative democracy", "R", "A system in which citizens elect officials to make public decisions."',
+    '["Political participation", "P", "Actions citizens take to influence government."',
+    '["Faction", "F", "A group united by a shared interest that may conflict with the rights or interests of others."',
+    '["Institutional filter", "I", "A constitutional structure that separates public preferences from immediate policy decisions."'
   ].forEach(function (entry) {
     if (!courseData.includes(entry)) errors.push('Core AP ideal changed or missing from the student glossary: ' + entry);
   });
