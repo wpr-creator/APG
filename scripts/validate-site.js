@@ -456,6 +456,7 @@ function validateSharedCourseExperience() {
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
     'How does representative democracy decide whose voices matter?',
+    'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
