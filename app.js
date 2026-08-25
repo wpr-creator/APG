@@ -336,7 +336,7 @@
           }
           if (!unlocked) {
             const resourceStatus = document.createElement("span");
-            resourceStatus.textContent = "COMING SOON";
+            resourceStatus.textContent = resource.status || "COMING SOON";
             card.append(resourceStatus);
           }
           const item = document.createElement("div");

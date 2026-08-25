@@ -262,9 +262,9 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260823-resource-colors',
-    'course-data.js?v=20260825-democracy-glossary',
+    'course-data.js?v=20260825-assessments-closed',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260823-unit1-lesson-only',
+    'app.js?v=20260825-assessments-closed',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -396,13 +396,6 @@ function validateSharedCourseExperience() {
   }
   if (!siteContent.includes('"civics-field-guide": "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0"')) {
     errors.push('Published Civics Field Guide URL changed or missing.');
-  }
-  if (!siteContent.includes('"mr-smith-extension": "https://docs.google.com/forms/d/e/1FAIpQLSfEvttJqyYGUOLTLTgbdpf4Uzxm4h7OUafD6nk2GZwo5HANiA/viewform?usp=publish-editor"')) {
-    errors.push('Published Mr. Smith Goes to Washington Extension URL changed or missing.');
-  }
-  if (!siteContent.includes('"civics-field-test": "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor"') ||
-      !courseData.includes('id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", url: "https://docs.google.com/forms/d/e/1FAIpQLSdX98tuYpjFju4prqoBvXgU56r_HYqeG_r7c3rbGLseW3aQrw/viewform?usp=publish-editor"')) {
-    errors.push('Published Civics Field Guide Test URL changed or missing.');
   }
   if (!courseData.includes('title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
       !siteContent.includes('"ap-addendum": "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0"') ||
@@ -551,14 +544,15 @@ function validateSharedCourseExperience() {
       !proveCaseApp.includes('BUILD YOUR OPINION')) {
     errors.push('Every Prove Your Case file must include explicit, worksheet-aligned guidance for Steps 1–4.');
   }
-  const addendumTestUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfJ4uOo6iPijooTbqX7LsC2fwPZygIy6XBqk0vGPB6kEH15ag/viewform?usp=dialog';
-  if (!courseData.includes('id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", url: "' + addendumTestUrl + '"') ||
-      parsedSiteContent.assignmentUrls['ap-addendum-test'] !== addendumTestUrl ||
-      parsedSiteContent.assignmentUnlocks['ap-addendum-test'] !== true ||
-      parsedSiteContent.assignmentUnlocks['civics-field-test'] !== true ||
-      parsedSiteContent.assignmentUnlocks['mr-smith-extension'] !== true) {
-    errors.push('The Civics Field Guide Test, Mr. Smith Extension, and AP Addendum Test must be open with their saved URLs.');
-  }
+  ['mr-smith-extension', 'civics-field-test', 'ap-addendum-test'].forEach(function (resourceId) {
+    if (parsedSiteContent.assignmentUrls[resourceId] !== '' ||
+        parsedSiteContent.assignmentUnlocks[resourceId] !== false ||
+        !courseData.includes(`id: "${resourceId}", lesson: "ASSESSMENTS"`) ||
+        !courseData.includes(`id: "${resourceId}", lesson: "ASSESSMENTS", title:`) ||
+        !courseData.match(new RegExp(`id: "${resourceId}"[^\\n]+status: "SEE MR\\. ROGERS"[^\\n]+url: ""`))) {
+      errors.push('Unit 0 assessment must have no link and must direct students to see Mr. Rogers: ' + resourceId);
+    }
+  });
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
     'window.location.hash = "home";',
