@@ -110,12 +110,12 @@
   },
   "assignmentUnlockAt": {},
   "proveCaseUnlocks": {
-    "miranda": false,
-    "riley": false,
-    "mahanoy": false,
-    "carpenter": false,
-    "earls": false,
-    "miller": false
+    "miranda": true,
+    "riley": true,
+    "mahanoy": true,
+    "carpenter": true,
+    "earls": true,
+    "miller": true
   },
   "foundationUnlocks": {
     "source": 3,

@@ -505,7 +505,7 @@ function validateSharedCourseExperience() {
     if (!fs.existsSync(path.join(root, relativePath))) errors.push('Missing Prove Your Case file: ' + relativePath);
   });
   ['miranda', 'riley', 'mahanoy', 'carpenter', 'earls', 'miller'].forEach(function (caseId) {
-    if (parsedSiteContent.proveCaseUnlocks?.[caseId] !== false) errors.push('Prove Your Case ruling must remain locked: ' + caseId);
+    if (parsedSiteContent.proveCaseUnlocks?.[caseId] !== true) errors.push('Prove Your Case ruling must remain open: ' + caseId);
     if (!fs.existsSync(path.join(root, 'assets/prove-your-case', caseId + '.svg'))) errors.push('Missing Prove Your Case artwork: ' + caseId);
   });
   if (!courseData.includes('id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html"') ||
