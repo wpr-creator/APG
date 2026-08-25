@@ -457,7 +457,7 @@ function validateSharedCourseExperience() {
   [
     'How does representative democracy decide whose voices matter?',
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
-    'WHY THESE THREE?', 'POSSIBLY ROBERT YATES',
+    'WHY THESE THREE?', 'POSSIBLY ROBERT YATES', 'IN PLAIN LANGUAGE',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
@@ -469,6 +469,10 @@ function validateSharedCourseExperience() {
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
   if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()')) {
     errors.push('Democracy, Filtered must save progress locally and print its Voice Passport.');
+  }
+  const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
+  if (!democracyStyles.includes('[hidden]{display:none!important}')) {
+    errors.push('Democracy, Filtered must display only the selected model panel.');
   }
   if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== false ||
       parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== '') {
