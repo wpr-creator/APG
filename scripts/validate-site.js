@@ -457,7 +457,7 @@ function validateSharedCourseExperience() {
   [
     'How does representative democracy decide whose voices matter?',
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
-    'WHAT IS A FILTER?', 'POSSIBLY ROBERT YATES',
+    'WHY THESE THREE?', 'POSSIBLY ROBERT YATES',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
