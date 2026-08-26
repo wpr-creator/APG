@@ -263,7 +263,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260826-case-exit-layout',
-    'course-data.js?v=20260826-gettysburg-redux',
+    'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260826-exit-ticket',
     'data-view-link="home"',
@@ -453,10 +453,17 @@ function validateSharedCourseExperience() {
       errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
     }
   });
-  if (!courseData.includes('id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED"') ||
-      parsedSiteContent.assignmentUnlocks['u1-102-democracy-filtered'] !== true ||
-      parsedSiteContent.assignmentUrls['u1-102-democracy-filtered'] !== 'democracy-filtered.html') {
-    errors.push('Unit 1.02 Democracy, Filtered must be open from the Unit 1 page.');
+  const unit102Resources = {
+    'u1-102-democracy-filtered': 'democracy-filtered.html',
+    'u1-102-guided-notes': 'https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing'
+  };
+  Object.entries(unit102Resources).forEach(function ([resourceId, url]) {
+    if (parsedSiteContent.assignmentUnlocks[resourceId] !== false || parsedSiteContent.assignmentUrls[resourceId] !== url) {
+      errors.push('Unit 1.02 resource must remain closed with its assigned URL: ' + resourceId);
+    }
+  });
+  if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
+    errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
