@@ -263,7 +263,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260826-case-exit-layout',
-    'course-data.js?v=20260825-assessments-closed',
+    'course-data.js?v=20260826-gettysburg-redux',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260826-exit-ticket',
     'data-view-link="home"',
@@ -479,9 +479,11 @@ function validateSharedCourseExperience() {
   if (!democracyStyles.includes('[hidden]{display:none!important}')) {
     errors.push('Democracy, Filtered must display only the selected model panel.');
   }
-  if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== false ||
-      parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== '') {
-    errors.push('Gettysburg Redux must remain a Coming Soon card until its URL is supplied.');
+  const gettysburgReduxUrl = 'https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0';
+  if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== gettysburgReduxUrl ||
+      !courseData.includes('id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "' + gettysburgReduxUrl + '"')) {
+    errors.push('Gettysburg Redux must be open in Unit 1.01 with its assigned Google Doc URL.');
   }
   if (!fs.existsSync(path.join(root, 'docs/constitution-preamble.html')) ||
       !fs.readFileSync(path.join(root, 'docs/constitution-preamble.html'), 'utf8').includes('We the People')) {

@@ -47,7 +47,7 @@ window.COURSE_DATA = {
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
         { id: "u1-101-declaration-annotation", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION ANNOTATION", note: "ASSIGNMENT", url: "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0" },
-        { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "" },
+        { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0" },
         { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing" },
         { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" }
       ]
