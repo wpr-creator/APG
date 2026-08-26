@@ -13,7 +13,7 @@ const TABS = {
 };
 
 const ARCHIVE_PREFIX = 'Archive — ';
-const HEADERS = ['Date', 'Period', 'Student Name', 'Question', 'Response', 'Submitted At'];
+const HEADERS = ['Date', 'Period', 'Student Name', 'Question', 'Response', 'Submitted At', 'Submission ID'];
 
 // ════════════════════════════════════════════════════════════════
 //  doPost — receives each exit ticket submission
@@ -53,12 +53,27 @@ function doPost(e) {
     const question  = body.question  || '';
     const response  = body.response  || '';
     const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const submissionId = String(body.submissionId || '').trim();
+
+    if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId)) {
+      throw new Error('A valid submission ID is required.');
+    }
+    if (!TABS[period]) throw new Error('Unknown class period.');
+    if (!name || !question || response.length < 5) throw new Error('The exit ticket is incomplete.');
 
     const ss  = SpreadsheetApp.openByUrl(SHEET_URL);
-    const row = [date, period, name, question, response, timestamp];
+    const row = [date, period, name, question, response, timestamp, submissionId];
 
-    writeToTab(ss, TABS[period] || ('Period ' + period), row);
-    writeToTab(ss, TABS['all'], row);
+    const lock = LockService.getScriptLock();
+    lock.waitLock(10000);
+    try {
+      if (!submissionExists(ss, submissionId)) {
+        writeToTab(ss, TABS[period], row);
+        writeToTab(ss, TABS['all'], row);
+      }
+    } finally {
+      lock.releaseLock();
+    }
 
     return ContentService
       .createTextOutput(JSON.stringify({ result: 'success' }))
@@ -94,7 +109,18 @@ function writeToTab(ss, tabName, row) {
     sheet.setColumnWidth(6, 150);
   }
 
+  sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
+
   sheet.appendRow(row);
+}
+
+function submissionExists(ss, submissionId) {
+  const sheet = ss.getSheetByName(TABS['all']);
+  if (!sheet || sheet.getLastRow() < 2) return false;
+  return sheet.getRange(2, 7, sheet.getLastRow() - 1, 1)
+    .createTextFinder(submissionId)
+    .matchEntireCell(true)
+    .findNext() !== null;
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -222,10 +248,25 @@ function weeklyArchive() {
 // ════════════════════════════════════════════════════════════════
 //  doGet — health check
 // ════════════════════════════════════════════════════════════════
-function doGet() {
+function doGet(e) {
+  const submissionId = String((e && e.parameter && e.parameter.submissionId) || '').trim();
+  const callback = String((e && e.parameter && e.parameter.callback) || '').trim();
+  let payload = { running: true };
+
+  if (submissionId) {
+    const ss = SpreadsheetApp.openByUrl(SHEET_URL);
+    payload = { saved: submissionExists(ss, submissionId), submissionId: submissionId };
+  }
+
+  if (/^[a-zA-Z_$][0-9a-zA-Z_$.]*$/.test(callback)) {
+    return ContentService
+      .createTextOutput(callback + '(' + JSON.stringify(payload) + ');')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
   return ContentService
-    .createTextOutput("Mr. Rogers Exit Ticket Collector is running. \u2713")
-    .setMimeType(ContentService.MimeType.TEXT);
+    .createTextOutput(JSON.stringify(payload))
+    .setMimeType(ContentService.MimeType.JSON);
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -240,6 +281,7 @@ function testSubmission() {
         name:     'Test Student, Sample',
         question: 'What is judicial review?',
         response: 'The power of the Supreme Court to declare laws unconstitutional.',
+        submissionId: 'test-submission-0001'
       })
     }
   };

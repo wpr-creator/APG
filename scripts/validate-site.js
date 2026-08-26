@@ -265,7 +265,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260826-case-exit-layout',
     'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260826-exit-ticket',
+    'app.js?v=20260826-confirmed-exit-ticket',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -755,7 +755,8 @@ function validateSharedCourseExperience() {
   [
     'fetch("content.json", { cache: "no-store" })',
     'EXIT_TICKET_URL', 'populateExitStudents', 'submitExitTicket',
-    'body: JSON.stringify(payload)'
+    'body: JSON.stringify(payload)', 'verifyExitSubmission', 'submissionId',
+    'NOT CONFIRMED—YOUR RESPONSE MAY NOT HAVE SAVED.'
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Exit-ticket system changed or missing: ' + content);
   });

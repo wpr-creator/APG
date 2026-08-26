@@ -21,7 +21,7 @@
   const CONTENT_STORAGE_KEY = "apg-site-content-v1";
   const GITHUB_TOKEN_STORAGE_KEY = "pad-github-token-v1";
   const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";
-  const EXIT_TICKET_URL = "https://script.google.com/a/macros/ofarrellschool.org/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec";
+  const EXIT_TICKET_URL = "https://script.google.com/macros/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec";
   const GITHUB_CONTENT_URL = "https://api.github.com/repos/wpr-creator/APG/contents/site-content.json";
   let currentUnitId = "gov-0";
   let lastFocused = null;
@@ -36,6 +36,7 @@
   let presidentQuery = "";
   let scheduledUnlockTimer = null;
   let exitRoster = [];
+  let pendingExitSubmission = null;
 
   function assignmentIsUnlocked(resourceId) {
     if (siteContent.assignmentUnlocks?.[resourceId]) return true;
@@ -1773,6 +1774,14 @@
       response: document.getElementById("exit-response").value.trim()
     };
     if (!payload.period || !payload.name || payload.response.length < 5 || !payload.question) return;
+    const fingerprint = JSON.stringify(payload);
+    if (!pendingExitSubmission || pendingExitSubmission.fingerprint !== fingerprint) {
+      pendingExitSubmission = {
+        fingerprint,
+        submissionId: crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(36).slice(2)}`
+      };
+    }
+    payload.submissionId = pendingExitSubmission.submissionId;
     button.disabled = true;
     button.textContent = "SUBMITTING…";
     status.textContent = "Sending your response…";
@@ -1783,13 +1792,47 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
+      const confirmed = await verifyExitSubmission(payload.submissionId);
+      if (!confirmed) throw new Error("Submission could not be confirmed");
       document.getElementById("exit-ticket-form").hidden = true;
-      status.textContent = `SUBMITTED FOR ${payload.name.toUpperCase()}. THANK YOU.`;
+      pendingExitSubmission = null;
+      status.textContent = `SAVED FOR ${payload.name.toUpperCase()}. THANK YOU.`;
     } catch (error) {
       button.disabled = false;
       button.textContent = "SUBMIT EXIT TICKET";
-      status.textContent = "YOUR RESPONSE DID NOT SEND. TRY AGAIN OR SEE MR. ROGERS.";
+      status.textContent = "NOT CONFIRMED—YOUR RESPONSE MAY NOT HAVE SAVED. TRY AGAIN OR SEE MR. ROGERS.";
     }
+  }
+
+  function verifyExitSubmission(submissionId) {
+    return new Promise(resolve => {
+      let attempts = 0;
+      const callbackName = `apgExitVerify_${submissionId.replace(/-/g, "_")}`;
+      const check = () => {
+        attempts += 1;
+        const script = document.createElement("script");
+        const cleanup = () => { script.remove(); delete window[callbackName]; };
+        const timeout = window.setTimeout(() => {
+          cleanup();
+          if (attempts < 6) window.setTimeout(check, 750); else resolve(false);
+        }, 2500);
+        window[callbackName] = result => {
+          window.clearTimeout(timeout);
+          cleanup();
+          if (result?.saved) resolve(true);
+          else if (attempts < 6) window.setTimeout(check, 750);
+          else resolve(false);
+        };
+        script.onerror = () => {
+          window.clearTimeout(timeout);
+          cleanup();
+          if (attempts < 6) window.setTimeout(check, 750); else resolve(false);
+        };
+        script.src = `${EXIT_TICKET_URL}?submissionId=${encodeURIComponent(submissionId)}&callback=${encodeURIComponent(callbackName)}&t=${Date.now()}`;
+        document.head.append(script);
+      };
+      check();
+    });
   }
 
   function renderSiteContent() {
