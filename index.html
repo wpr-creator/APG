@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="Mr. Rogers AP Government and Politics at O'Farrell High School.">
   <title>AP United States Government and Politics</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260826-case-exit">
+  <link rel="stylesheet" href="styles.css?v=20260826-case-exit-layout">
   <script src="course-data.js?v=20260825-assessments-closed" defer></script>
   <script src="glossary-data.js?v=20260731" defer></script>
   <script src="foundations-data.js" defer></script>
@@ -82,6 +82,21 @@
           <a class="primary-action" id="current-action" href="#units">OPEN UNIT 0 <span aria-hidden="true">→</span></a>
         </div>
       </section>
+
+      <article class="dashboard-card exit-card">
+        <div class="card-heading"><div><p class="eyebrow">END OF CLASS</p><h2>EXIT TICKET</h2></div></div>
+        <p class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</p>
+        <form id="exit-ticket-form" hidden>
+          <div class="exit-identity">
+            <label for="exit-period">CLASS PERIOD<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
+            <label for="exit-student">YOUR NAME<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
+          </div>
+          <label for="exit-response">YOUR RESPONSE</label>
+          <textarea id="exit-response" rows="4" placeholder="TYPE YOUR RESPONSE…" required minlength="5"></textarea>
+          <button class="exit-submit" type="submit" disabled>SUBMIT EXIT TICKET</button>
+        </form>
+        <p class="system-note" id="exit-status" role="status"></p>
+      </article>
 
       <section class="home-dashboard" aria-label="Course tools">
         <article class="dashboard-card history-card">
@@ -150,20 +165,6 @@
           </div>
         </article>
 
-        <article class="dashboard-card exit-card">
-          <div class="card-heading"><div><p class="eyebrow">END OF CLASS</p><h2>EXIT TICKET</h2></div></div>
-          <p class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</p>
-          <form id="exit-ticket-form" hidden>
-            <div class="exit-identity">
-              <label for="exit-period">CLASS PERIOD<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
-              <label for="exit-student">YOUR NAME<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
-            </div>
-            <label for="exit-response">YOUR RESPONSE</label>
-            <textarea id="exit-response" rows="4" placeholder="TYPE YOUR RESPONSE…" required minlength="5"></textarea>
-            <button class="exit-submit" type="submit" disabled>SUBMIT EXIT TICKET</button>
-          </form>
-          <p class="system-note" id="exit-status" role="status"></p>
-        </article>
       </section>
     </section>
 

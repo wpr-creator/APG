@@ -262,7 +262,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260826-case-exit',
+    'styles.css?v=20260826-case-exit-layout',
     'course-data.js?v=20260825-assessments-closed',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260826-exit-ticket',
@@ -725,6 +725,10 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket form control changed or missing: ' + content);
   });
+  if (!(homepage.indexOf('class="now-panel"') < homepage.indexOf('class="dashboard-card exit-card"') &&
+        homepage.indexOf('class="dashboard-card exit-card"') < homepage.indexOf('class="home-dashboard"'))) {
+    errors.push('The exit ticket must appear directly below the current-unit card.');
+  }
   [
     'fetch("content.json", { cache: "no-store" })',
     'EXIT_TICKET_URL', 'populateExitStudents', 'submitExitTicket',

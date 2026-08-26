@@ -82,7 +82,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .primary-action { min-height: 52px; padding: .8rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--white); background: var(--black); border-radius: 3px; text-decoration: none; font-weight: 900; }
 .primary-action:hover { background: var(--charcoal); }
 
-.home-dashboard { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "history history history history history history history history upcoming upcoming upcoming upcoming" "election election election election election election election links links links links links" "exit exit exit exit exit exit exit exit exit exit exit exit"; gap: 1.2rem; align-items: stretch; }
+.home-dashboard { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "history history history history history history history history upcoming upcoming upcoming upcoming" "election election election election election election election links links links links links"; gap: 1.2rem; align-items: stretch; }
 .dashboard-card { padding: 1.5rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,.05); }
 .card-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 2px solid var(--black); }
 .card-heading h2 { margin: 0; font-size: 1.35rem; }
@@ -135,7 +135,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .compact-code code { font-size: .85rem; font-weight: 900; }
 .compact-code-list { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
 .compact-code-list .compact-code { grid-column: auto; }
-.exit-card { grid-area: exit; }
+.exit-card { margin: 1.2rem 0; }
 .exit-question { padding: 1rem; background: var(--stone); font-weight: 750; white-space: pre-line; }
 .exit-card label { display: block; margin: 1rem 0 .4rem; font-size: .76rem; font-weight: 900; }
 .exit-identity { display: grid; grid-template-columns: 1fr 1.6fr; gap: .7rem; }
@@ -703,7 +703,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .lesson { grid-template-columns: 46px 1fr; }
   .standard-tag { grid-column: 2; width: max-content; }
   .home-dashboard { grid-template-columns: 1fr; }
-  .home-dashboard { grid-template-areas: "history" "upcoming" "election" "links" "exit"; }
+  .home-dashboard { grid-template-areas: "history" "upcoming" "election" "links"; }
   .election-tracker-layout { grid-template-columns: 1fr; }
   .agenda-layout { min-height: auto; grid-template-columns: 1fr; }
   .agenda-date-panel { border-left: 0; border-top: 10px solid var(--slate); }
