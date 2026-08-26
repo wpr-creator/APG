@@ -136,7 +136,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .compact-code-list { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
 .compact-code-list .compact-code { grid-column: auto; }
 .exit-card { grid-area: exit; }
-.exit-question { padding: 1rem; background: var(--stone); font-weight: 750; }
+.exit-question { padding: 1rem; background: var(--stone); font-weight: 750; white-space: pre-line; }
 .exit-card label { display: block; margin: 1rem 0 .4rem; font-size: .76rem; font-weight: 900; }
 .exit-identity { display: grid; grid-template-columns: 1fr 1.6fr; gap: .7rem; }
 .exit-card textarea, .exit-card select, .admin-panel textarea, .admin-panel input, .admin-panel select { width: 100%; margin-top: .35rem; padding: .8rem; border: 1px solid var(--stone-dark); background: var(--white); color: var(--black); font: 700 .95rem Arial, sans-serif; }

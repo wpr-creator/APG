@@ -262,7 +262,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260826-exit-ticket',
+    'styles.css?v=20260826-case-exit',
     'course-data.js?v=20260825-assessments-closed',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260826-exit-ticket',
@@ -404,6 +404,10 @@ function validateSharedCourseExperience() {
     errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
   }
   const parsedSiteContent = JSON.parse(siteContent);
+  const expectedExitQuestion = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
+  if (parsedSiteContent.exitQuestion !== expectedExitQuestion) {
+    errors.push('Today\'s Prove Your Case exit ticket changed or is missing.');
+  }
   const expectedUpcoming = [
     { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
     { title: 'DECLARATION ANNOTATION', date: 'UNIT 1 · 1.01' },
