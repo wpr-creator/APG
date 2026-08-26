@@ -21,6 +21,7 @@
   const CONTENT_STORAGE_KEY = "apg-site-content-v1";
   const GITHUB_TOKEN_STORAGE_KEY = "pad-github-token-v1";
   const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";
+  const EXIT_TICKET_URL = "https://script.google.com/a/macros/ofarrellschool.org/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec";
   const GITHUB_CONTENT_URL = "https://api.github.com/repos/wpr-creator/APG/contents/site-content.json";
   let currentUnitId = "gov-0";
   let lastFocused = null;
@@ -34,6 +35,7 @@
   let presidentFacts = [];
   let presidentQuery = "";
   let scheduledUnlockTimer = null;
+  let exitRoster = [];
 
   function assignmentIsUnlocked(resourceId) {
     if (siteContent.assignmentUnlocks?.[resourceId]) return true;
@@ -1711,8 +1713,87 @@
     if (lastFocused) lastFocused.focus();
   }
 
+  function renderExitTicket() {
+    const question = (siteContent.exitQuestion || "").trim();
+    const form = document.getElementById("exit-ticket-form");
+    const periodSelect = document.getElementById("exit-period");
+    const status = document.getElementById("exit-status");
+    document.getElementById("exit-question").textContent = question || "NO EXIT TICKET TODAY.";
+    form.hidden = !question;
+    status.textContent = question ? "Choose your class period and name. Your response will be sent to Mr. Rogers." : "";
+    if (!question || !exitRoster.length) return;
+    const selected = periodSelect.value;
+    periodSelect.replaceChildren(new Option("CHOOSE YOUR PERIOD", ""));
+    exitRoster.forEach(period => periodSelect.add(new Option(period.label, period.id)));
+    if (exitRoster.some(period => period.id === selected)) periodSelect.value = selected;
+    populateExitStudents();
+  }
+
+  function populateExitStudents() {
+    const periodId = document.getElementById("exit-period").value;
+    const studentSelect = document.getElementById("exit-student");
+    const period = exitRoster.find(item => item.id === periodId);
+    studentSelect.replaceChildren(new Option(period ? "CHOOSE YOUR NAME" : "CHOOSE YOUR PERIOD FIRST", ""));
+    (period?.students || []).forEach(name => studentSelect.add(new Option(name, name)));
+    studentSelect.disabled = !period;
+    validateExitTicket();
+  }
+
+  function validateExitTicket() {
+    const ready = Boolean(
+      document.getElementById("exit-period").value &&
+      document.getElementById("exit-student").value &&
+      document.getElementById("exit-response").value.trim().length >= 5
+    );
+    document.querySelector(".exit-submit").disabled = !ready;
+  }
+
+  async function loadExitRoster() {
+    try {
+      const response = await fetch("content.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Roster unavailable");
+      const content = await response.json();
+      exitRoster = Array.isArray(content.periods) ? content.periods : [];
+    } catch (error) {
+      console.warn("Exit-ticket roster could not be loaded.", error);
+      document.getElementById("exit-status").textContent = "THE EXIT TICKET IS TEMPORARILY UNAVAILABLE. SEE MR. ROGERS.";
+    }
+    renderExitTicket();
+  }
+
+  async function submitExitTicket(event) {
+    event.preventDefault();
+    const button = document.querySelector(".exit-submit");
+    const status = document.getElementById("exit-status");
+    const payload = {
+      date: new Date().toLocaleDateString("en-US"),
+      period: document.getElementById("exit-period").value,
+      name: document.getElementById("exit-student").value,
+      question: (siteContent.exitQuestion || "").trim(),
+      response: document.getElementById("exit-response").value.trim()
+    };
+    if (!payload.period || !payload.name || payload.response.length < 5 || !payload.question) return;
+    button.disabled = true;
+    button.textContent = "SUBMITTING…";
+    status.textContent = "Sending your response…";
+    try {
+      await fetch(EXIT_TICKET_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      document.getElementById("exit-ticket-form").hidden = true;
+      status.textContent = `SUBMITTED FOR ${payload.name.toUpperCase()}. THANK YOU.`;
+    } catch (error) {
+      button.disabled = false;
+      button.textContent = "SUBMIT EXIT TICKET";
+      status.textContent = "YOUR RESPONSE DID NOT SEND. TRY AGAIN OR SEE MR. ROGERS.";
+    }
+  }
+
   function renderSiteContent() {
-    document.getElementById("exit-question").textContent = siteContent.exitQuestion || "NO EXIT TICKET TODAY.";
+    renderExitTicket();
     const classroom = document.getElementById("classroom-link");
     classroom.href = siteContent.classroomUrl || "https://classroom.google.com/";
     const agendaTitle = (siteContent.agendaTitle || "AGENDA").trim();
@@ -2206,6 +2287,10 @@
   });
   window.addEventListener("hashchange", route);
   window.setInterval(renderAgendaDate, 60000);
+  document.getElementById("exit-period").addEventListener("change", populateExitStudents);
+  document.getElementById("exit-student").addEventListener("change", validateExitTicket);
+  document.getElementById("exit-response").addEventListener("input", validateExitTicket);
+  document.getElementById("exit-ticket-form").addEventListener("submit", submitExitTicket);
 
   renderWords();
   renderDocuments();
@@ -2219,6 +2304,7 @@
   renderFoundingPower();
   renderElection2026();
   renderPortraitRain();
+  loadExitRoster();
   loadConfig();
   loadHistory();
   loadPresidentFacts();

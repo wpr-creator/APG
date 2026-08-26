@@ -138,10 +138,12 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .exit-card { grid-area: exit; }
 .exit-question { padding: 1rem; background: var(--stone); font-weight: 750; }
 .exit-card label { display: block; margin: 1rem 0 .4rem; font-size: .76rem; font-weight: 900; }
-.exit-card textarea, .admin-panel textarea, .admin-panel input, .admin-panel select { width: 100%; padding: .8rem; border: 1px solid var(--stone-dark); background: var(--white); color: var(--black); font: 700 .95rem Arial, sans-serif; }
+.exit-identity { display: grid; grid-template-columns: 1fr 1.6fr; gap: .7rem; }
+.exit-card textarea, .exit-card select, .admin-panel textarea, .admin-panel input, .admin-panel select { width: 100%; margin-top: .35rem; padding: .8rem; border: 1px solid var(--stone-dark); background: var(--white); color: var(--black); font: 700 .95rem Arial, sans-serif; }
 .exit-submit { min-height: 48px; margin-top: .7rem; padding: .7rem 1rem; border: 0; color: var(--white); background: var(--black); font-weight: 900; }
 .exit-submit:disabled { color: #777; background: var(--stone); }
 .system-note { margin: .55rem 0 0; color: var(--muted); font-size: .72rem; font-weight: 700; }
+@media (max-width: 620px) { .exit-identity { grid-template-columns: 1fr; } }
 
 .section-heading { margin-bottom: 1.4rem; display: flex; align-items: end; justify-content: space-between; gap: 1rem; }
 .section-heading h2 { margin: 0; font-size: clamp(1.8rem, 3.5vw, 3rem); letter-spacing: -.04em; }

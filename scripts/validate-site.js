@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { execFileSync } = require('child_process');
 const { isDirectlyPolitical } = require('./calendar-relevance');
 const { curatedEvents } = require('./calendar-curated-events');
@@ -261,10 +262,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260823-resource-colors',
+    'styles.css?v=20260826-exit-ticket',
     'course-data.js?v=20260825-assessments-closed',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260825-assessments-closed',
+    'app.js?v=20260826-exit-ticket',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -692,6 +693,12 @@ function validateSharedCourseExperience() {
   if (rosterByPeriod['1A']?.length !== 40 || rosterByPeriod['2B']?.length !== 39) {
     errors.push('Final AP rosters must contain 40 students in 1A and 39 students in 2B.');
   }
+  const rosterFingerprint = crypto.createHash('sha256')
+    .update(JSON.stringify(publishedContent.periods))
+    .digest('hex');
+  if (rosterFingerprint !== 'f6f48ef7a43c176ecadbc4b53af997bc5efe90a645c3aa1f2e1e738b0eeda9e9') {
+    errors.push('Published AP rosters no longer match the final 1A/2B list supplied on August 26, 2026.');
+  }
   Object.entries(rosterByPeriod).forEach(function ([period, students]) {
     if (students.length !== new Set(students).size) errors.push('Duplicate student in Period ' + period + ' roster.');
     if (students.some(function (name) { return name !== name.trim() || !name.includes(','); })) {
@@ -708,6 +715,19 @@ function validateSharedCourseExperience() {
       errors.push('Published and fallback AP rosters are out of sync.');
     }
   }
+  [
+    'id="exit-ticket-form"', 'id="exit-period"', 'id="exit-student"',
+    'id="exit-response"', 'id="exit-status"'
+  ].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Exit-ticket form control changed or missing: ' + content);
+  });
+  [
+    'fetch("content.json", { cache: "no-store" })',
+    'EXIT_TICKET_URL', 'populateExitStudents', 'submitExitTicket',
+    'body: JSON.stringify(payload)'
+  ].forEach(function (content) {
+    if (!appCode.includes(content)) errors.push('Exit-ticket system changed or missing: ' + content);
+  });
 }
 
 function validateCalendarData() {
