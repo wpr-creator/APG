@@ -7,8 +7,8 @@
   <meta name="description" content="An interactive AP Government lesson comparing participatory, pluralist, and elite models of representative democracy.">
   <title>1.02 Democracy, Filtered — AP Government</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="democracy-filtered.css?v=20260824-first-build">
-  <script src="democracy-filtered.js?v=20260824-first-build" defer></script>
+  <link rel="stylesheet" href="democracy-filtered.css?v=20260826-frq-foundations">
+  <script src="democracy-filtered.js?v=20260826-frq-foundations" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#lesson">Skip to the lesson</a>
@@ -91,6 +91,12 @@
       <div id="evidence-content" hidden>
         <div class="section-heading"><div><p class="eyebrow">THE SHOWDOWN</p><h2 id="evidence-title">WHO WOULD CLAIM THIS EVIDENCE?</h2></div><p><strong id="evidence-count">0 OF 3</strong> FILES CLASSIFIED</p></div>
         <p class="brief">Do not match by name alone. Match the argument to the democratic filter it supports.</p>
+        <div class="document-briefing" aria-labelledby="documents-title">
+          <div class="document-briefing-intro"><p class="eyebrow">FOUNDING EVIDENCE</p><h3 id="documents-title">THREE DOCUMENTS, THREE CLUES</h3><p>These documents do not simply name a model. Each gives you evidence about how representation should work. Ask what problem the author sees and what solution the document supports.</p></div>
+          <article><span>01</span><h4>BRUTUS NO. 1</h4><p><strong>THE WORRY:</strong> A large national republic may become too distant for representatives to know and express the people’s views.</p><p><strong>THE CONNECTION:</strong> Supports keeping participation close to ordinary citizens and warns that power can settle into the hands of a few.</p></article>
+          <article><span>02</span><h4>FEDERALIST NO. 10</h4><p><strong>THE WORRY:</strong> Factions may sacrifice the rights of others or the public good to their own interests.</p><p><strong>THE CONNECTION:</strong> A large republic multiplies competing interests, while elected representatives can refine public views.</p></article>
+          <article><span>03</span><h4>U.S. CONSTITUTION</h4><p><strong>THE DESIGN:</strong> Citizens elect representatives, but institutions divide power and filter decisions through different offices, terms, and branches.</p><p><strong>THE CONNECTION:</strong> The House connects government to voters; the larger structure favors representation, deliberation, and stability over direct national voting on laws.</p></article>
+        </div>
         <div class="evidence-grid">
           <article class="evidence-card" data-evidence="brutus"><span>CASE FILE 01</span><blockquote>In a large republic, representatives “cannot be sufficiently numerous to be acquainted with the local condition and wants of their different districts.”</blockquote><div class="classify"><button type="button" data-choice="brutus">BRUTUS</button><button type="button" data-choice="madison">MADISON</button><button type="button" data-choice="hamilton">HAMILTON</button></div><p role="status"></p></article>
           <article class="evidence-card" data-evidence="madison"><span>CASE FILE 02</span><blockquote>“Extend the sphere,” and the greater variety of interests makes it less likely that one faction can dominate.</blockquote><div class="classify"><button type="button" data-choice="brutus">BRUTUS</button><button type="button" data-choice="madison">MADISON</button><button type="button" data-choice="hamilton">HAMILTON</button></div><p role="status"></p></article>
@@ -106,9 +112,13 @@
         <div class="report-form">
           <label>NAME <input id="student-name" autocomplete="name" placeholder="Your name"></label>
           <label>CLASS PERIOD <select id="class-period"><option value="">Choose</option><option>1A</option><option>2B</option></select></label>
-          <label>Which model best answers the essential question?<select id="best-model"><option value="">Choose a model</option><option value="Participatory / Brutus">Participatory / Brutus</option><option value="Pluralist / Madison">Pluralist / Madison</option><option value="Elite-Filtered / Hamilton">Elite-Filtered / Hamilton</option></select></label>
-          <label>Compare it with another model.<textarea id="comparison" rows="3" placeholder="Unlike the ___ model, this model…"></textarea></label>
-          <label>Use specific evidence from Brutus No. 1, Federalist No. 10, or a constitutional structure.<textarea id="evidence-response" rows="4" placeholder="The strongest evidence is… This supports my judgment because…"></textarea></label>
+          <label>Which model best answers the essential question?<select id="best-model"><option value="">Choose a model</option><option value="Participatory / Brutus">Participatory / Brutus</option><option value="Pluralist / Madison">Pluralist / Madison</option><option value="Elite-Filtered">Elite-Filtered</option></select></label>
+          <label>Make your claim.<textarea id="claim-response" rows="3" placeholder="The ___ model best… because…"></textarea></label>
+          <label>Founding evidence: use a specific idea from Brutus No. 1, Federalist No. 10, or the U.S. Constitution.<textarea id="evidence-response" rows="4" placeholder="In ___, the author or structure shows…"></textarea></label>
+          <label>Explain the connection.<textarea id="reasoning-response" rows="3" placeholder="This evidence supports my claim because…"></textarea></label>
+          <label>Add a second piece of evidence from another document, the lesson, or a modern example.<textarea id="second-evidence" rows="4" placeholder="Another example is… This matters because…"></textarea></label>
+          <label>Compare your choice with another model.<textarea id="comparison" rows="3" placeholder="Unlike the ___ model, this model…"></textarea></label>
+          <label>Take on the other side—and answer it.<textarea id="rebuttal-response" rows="4" placeholder="Someone might argue… However…"></textarea></label>
           <label>Whose voice could still be left out?<textarea id="missing-voice" rows="3" placeholder="This model may leave out… because…"></textarea></label>
           <label class="transfer"><strong>NEW SITUATION</strong> A congressional committee hears testimony from technology companies, child-safety organizations, constitutional lawyers, and agency experts before writing a social-media bill. Which democratic models appear in this process, and whose influence is probably strongest?<textarea id="transfer-response" rows="5" placeholder="This shows… The strongest influence belongs to… because…"></textarea></label>
         </div>
@@ -125,7 +135,7 @@
         <article><img src="assets/democracy-filtered/madison-advocate.jpg" alt=""><b>MADISON</b><span>PLURALIST</span><small>COMPETING SIGNALS ✓</small></article>
         <article><img src="assets/democracy-filtered/hamilton-advocate.jpg" alt=""><b>HAMILTON</b><span>ELITE / FILTERED</span><small>INSTITUTIONAL FILTER ✓</small></article>
       </div>
-      <dl class="passport-answers"><div><dt>MY JUDGMENT</dt><dd id="passport-model"></dd></div><div><dt>COMPARISON</dt><dd id="passport-comparison"></dd></div><div><dt>FOUNDING EVIDENCE</dt><dd id="passport-evidence"></dd></div><div><dt>WHO MAY BE LEFT OUT?</dt><dd id="passport-missing"></dd></div><div><dt>TRANSFER TO A NEW SITUATION</dt><dd id="passport-transfer"></dd></div></dl>
+      <dl class="passport-answers"><div><dt>MY JUDGMENT</dt><dd id="passport-model"></dd></div><div><dt>MY CLAIM</dt><dd id="passport-claim"></dd></div><div><dt>FOUNDING EVIDENCE</dt><dd id="passport-evidence"></dd></div><div><dt>WHY THE EVIDENCE PROVES IT</dt><dd id="passport-reasoning"></dd></div><div><dt>SECOND PIECE OF EVIDENCE</dt><dd id="passport-second-evidence"></dd></div><div><dt>COMPARISON</dt><dd id="passport-comparison"></dd></div><div><dt>OTHER SIDE + MY RESPONSE</dt><dd id="passport-rebuttal"></dd></div><div><dt>WHO MAY BE LEFT OUT?</dt><dd id="passport-missing"></dd></div><div><dt>TRANSFER TO A NEW SITUATION</dt><dd id="passport-transfer"></dd></div></dl>
       <footer><strong>FINAL FIELD MARK</strong><p>On the printed copy, draw the route you believe public influence should take. Label where a voice is <b>amplified</b>, <b>filtered</b>, and possibly <b>blocked</b>.</p></footer>
     </section>
   </main>

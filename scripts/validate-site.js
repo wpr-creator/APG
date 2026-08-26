@@ -471,6 +471,8 @@ function validateSharedCourseExperience() {
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
     'WHY THESE THREE?', 'POSSIBLY ROBERT YATES', 'IN PLAIN LANGUAGE',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
+    'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
+    'Make your claim.', 'Explain the connection.', 'Take on the other side—and answer it.',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
     'assets/democracy-filtered/hamilton-advocate.jpg',
@@ -479,7 +481,9 @@ function validateSharedCourseExperience() {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered lesson is missing: ' + content);
   });
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
-  if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()')) {
+  if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()') ||
+      !democracyScript.includes('claim-response') || !democracyScript.includes('second-evidence') ||
+      !democracyScript.includes('rebuttal-response')) {
     errors.push('Democracy, Filtered must save progress locally and print its Voice Passport.');
   }
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');

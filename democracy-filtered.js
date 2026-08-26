@@ -53,15 +53,19 @@
     $("#report-content").hidden = !open;
   }
 
-  const fieldIds = ["student-name", "class-period", "best-model", "comparison", "evidence-response", "missing-voice", "transfer-response"];
-  const minimums = { "student-name": 2, "class-period": 2, "best-model": 2, comparison: 25, "evidence-response": 35, "missing-voice": 20, "transfer-response": 40 };
+  const fieldIds = ["student-name", "class-period", "best-model", "claim-response", "evidence-response", "reasoning-response", "second-evidence", "comparison", "rebuttal-response", "missing-voice", "transfer-response"];
+  const minimums = { "student-name": 2, "class-period": 2, "best-model": 2, "claim-response": 25, "evidence-response": 35, "reasoning-response": 30, "second-evidence": 35, comparison: 25, "rebuttal-response": 35, "missing-voice": 20, "transfer-response": 40 };
   function completeReport() { return fieldIds.every(id => (($(`#${id}`).value || "").trim().length >= minimums[id])); }
   function updatePassport() {
     const value = id => ($(`#${id}`).value || "").trim();
     $("#passport-student").textContent = value("student-name") ? `${value("student-name")} · ${value("class-period")}` : "";
     $("#passport-model").textContent = value("best-model");
+    $("#passport-claim").textContent = value("claim-response");
     $("#passport-comparison").textContent = value("comparison");
     $("#passport-evidence").textContent = value("evidence-response");
+    $("#passport-reasoning").textContent = value("reasoning-response");
+    $("#passport-second-evidence").textContent = value("second-evidence");
+    $("#passport-rebuttal").textContent = value("rebuttal-response");
     $("#passport-missing").textContent = value("missing-voice");
     $("#passport-transfer").textContent = value("transfer-response");
     const done = completeReport();
