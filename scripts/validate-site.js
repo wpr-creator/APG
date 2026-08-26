@@ -660,6 +660,16 @@ function validateSharedCourseExperience() {
   ['.doc-passage-text', '.doc-paragraph-text', '.doc-margin', '.doc-annotation', '.highlight-key', '.doc-nav', '.doc-rail'].forEach(function (selector) {
     if (!documentReaderStyles.includes(selector)) errors.push('Student document-reader style changed or missing: ' + selector);
   });
+  const declarationReader = fs.readFileSync(path.join(root, 'docs/declaration-of-independence.html'), 'utf8');
+  const grievanceTransition = 'The history of the present King of Great Britain is a history of repeated injuries and usurpations';
+  if ((declarationReader.match(new RegExp(grievanceTransition, 'g')) || []).length !== 1 ||
+      declarationReader.indexOf('3 · THE EVIDENCE AGAINST THE KING') > declarationReader.indexOf(grievanceTransition)) {
+    errors.push('The Declaration grievance transition must begin Section 3.');
+  }
+  if (declarationReader.includes('class="highlight"') || declarationReader.includes('<u>') ||
+      (declarationReader.match(/class="support"/g) || []).length < 8) {
+    errors.push('The Declaration must use plain original text while retaining its side annotations.');
+  }
   if (!appCode.includes('card.href = documentData.file') ||
       !appCode.includes('link.href = documentData.file') ||
       appCode.includes('button.addEventListener("click", () => openDocument(documentData, button))')) {
