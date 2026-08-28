@@ -469,7 +469,8 @@ function validateSharedCourseExperience() {
   [
     'How does representative democracy decide whose voices matter?',
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
-    'WHY THESE THREE?', 'POSSIBLY ROBERT YATES', 'IN PLAIN LANGUAGE',
+    'WHY THESE THREE?', 'BRUTUS · IDENTITY UNCERTAIN', 'JAMES MADISON', 'ALEXANDER HAMILTON', 'IN PLAIN LANGUAGE',
+    '<span>PARTICIPATORY</span>', '<span>PLURALIST</span>', '<span>ELITE / FILTERED</span>',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',

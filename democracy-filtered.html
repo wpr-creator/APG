@@ -7,8 +7,8 @@
   <meta name="description" content="An interactive AP Government lesson comparing participatory, pluralist, and elite models of representative democracy.">
   <title>1.02 Democracy, Filtered — AP Government</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="democracy-filtered.css?v=20260828-image-frq-bridge">
-  <script src="democracy-filtered.js?v=20260828-image-frq-bridge" defer></script>
+  <link rel="stylesheet" href="democracy-filtered.css?v=20260828-model-tabs">
+  <script src="democracy-filtered.js?v=20260828-model-tabs" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#lesson">Skip to the lesson</a>
@@ -50,13 +50,13 @@
       <div class="filter-brief"><p><strong>WHY THESE THREE?</strong> In the social-media scenario, Congress cannot listen equally to millions of individual voices, every organization, and every expert. These three models show three different ways elected representatives could decide whose voices carry the most influence.</p><ol><li><b>Participatory:</b> Listen broadly to individual citizens.</li><li><b>Pluralist:</b> Weigh organizations competing over the policy.</li><li><b>Elite / filtered:</b> Trust elected leaders and experts to decide.</li></ol><p class="filter-task"><strong>YOUR JOB:</strong> Test each route from public voice to government policy. Notice who becomes louder, who may be missed, and which model you think Congress should use.</p></div>
       <div class="progress-track" aria-label="Lesson progress"><span id="progress-fill"></span></div>
       <div class="advocate-tabs" role="tablist" aria-label="Democratic model advocates">
-        <button type="button" role="tab" aria-selected="true" aria-controls="panel-brutus" id="tab-brutus" data-model="brutus"><span>01</span><strong>BRUTUS</strong><small>OPEN THE CHANNEL</small></button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="panel-madison" id="tab-madison" data-model="madison"><span>02</span><strong>MADISON</strong><small>MULTIPLY THE SIGNALS</small></button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="panel-hamilton" id="tab-hamilton" data-model="hamilton"><span>03</span><strong>HAMILTON</strong><small>FILTER THE SIGNAL</small></button>
+        <button type="button" role="tab" aria-selected="true" aria-controls="panel-brutus" id="tab-brutus" data-model="brutus"><span>PARTICIPATORY</span><strong>BRUTUS</strong><small>OPEN THE CHANNEL</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="panel-madison" id="tab-madison" data-model="madison"><span>PLURALIST</span><strong>MADISON</strong><small>MULTIPLY THE SIGNALS</small></button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="panel-hamilton" id="tab-hamilton" data-model="hamilton"><span>ELITE / FILTERED</span><strong>HAMILTON</strong><small>FILTER THE SIGNAL</small></button>
       </div>
 
       <article class="advocate-panel model-brutus" id="panel-brutus" role="tabpanel" aria-labelledby="tab-brutus">
-        <div class="portrait"><img src="assets/democracy-filtered/brutus-advocate.jpg" alt="Anonymous eighteenth-century newspaper writer representing the pseudonym Brutus beside a printing press"><span>POSSIBLY ROBERT YATES</span></div>
+        <div class="portrait"><img src="assets/democracy-filtered/brutus-advocate.jpg" alt="Anonymous eighteenth-century newspaper writer representing the pseudonym Brutus beside a printing press"><span>BRUTUS · IDENTITY UNCERTAIN</span></div>
         <div class="advocate-copy"><p class="model-name">PARTICIPATORY DEMOCRACY</p><h3>“KEEP GOVERNMENT CLOSE.”</h3><p class="pitch">Participatory democracy says democracy works best when many ordinary people take an active role—not only by choosing representatives, but by speaking, organizing, voting, protesting, attending meetings, and sometimes deciding policies directly.</p><p class="plain-language"><strong>IN PLAIN LANGUAGE</strong> The more directly citizens can make government hear and respond to them, the more democratic the system is. For the social-media decision, Congress would collect broad public input rather than listening mainly to powerful organizations or experts.</p>
           <div class="route" aria-label="Participatory influence route"><b>PEOPLE</b><i>→</i><b>DIRECT ACTION</b><i>→</i><b>GOVERNMENT</b></div>
           <div class="today"><strong>LOOK FOR IT TODAY</strong><span>Town halls</span><span>Protests</span><span>Primaries</span><span>Ballot initiatives</span></div>
@@ -72,7 +72,7 @@
       </article>
 
       <article class="advocate-panel model-madison" id="panel-madison" role="tabpanel" aria-labelledby="tab-madison" hidden>
-        <div class="portrait"><img src="assets/democracy-filtered/madison-advocate.jpg" alt="Illustrated portrait of James Madison surrounded by intersecting groups of citizens"><span>FEDERALIST NO. 10</span></div>
+        <div class="portrait"><img src="assets/democracy-filtered/madison-advocate.jpg" alt="Illustrated portrait of James Madison surrounded by intersecting groups of citizens"><span>JAMES MADISON</span></div>
         <div class="advocate-copy"><p class="model-name">PLURALIST DEMOCRACY</p><h3>“LET INTERESTS COMPETE.”</h3><p class="pitch">Pluralist democracy says people gain influence by joining organizations built around shared interests. Many groups compete for attention, negotiate, form coalitions, and pressure officials, so public policy often emerges through compromise.</p><p class="plain-language"><strong>IN PLAIN LANGUAGE</strong> One person may be easy to ignore; an organized group is harder to ignore. For the social-media decision, Congress would weigh competing arguments from technology companies, parents, civil-liberties organizations, child-safety advocates, and other groups.</p>
           <div class="route" aria-label="Pluralist influence route"><b>PEOPLE</b><i>→</i><b>GROUPS COMPETE</b><i>→</i><b>GOVERNMENT</b></div>
           <div class="today"><strong>LOOK FOR IT TODAY</strong><span>Interest groups</span><span>Unions</span><span>Coalitions</span><span>Lobbying</span></div>
@@ -88,7 +88,7 @@
       </article>
 
       <article class="advocate-panel model-hamilton" id="panel-hamilton" role="tabpanel" aria-labelledby="tab-hamilton" hidden>
-        <div class="portrait"><img src="assets/democracy-filtered/hamilton-advocate.jpg" alt="Illustrated portrait of Alexander Hamilton framed by institutional columns and gates"><span>INSTITUTIONAL FILTERING</span></div>
+        <div class="portrait"><img src="assets/democracy-filtered/hamilton-advocate.jpg" alt="Illustrated portrait of Alexander Hamilton framed by institutional columns and gates"><span>ALEXANDER HAMILTON</span></div>
         <div class="advocate-copy"><p class="model-name">ELITE / FILTERED DEMOCRACY</p><h3>“LET INSTITUTIONS REFINE.”</h3><p class="pitch">Elite democracy emphasizes the influence of elected leaders, experts, wealthy or well-connected people, and durable institutions. Instead of converting every public demand directly into policy, the system filters those demands through representatives and government structures.</p><p class="plain-language"><strong>IN PLAIN LANGUAGE</strong> Citizens choose leaders, but leaders and experts do most of the detailed policymaking. For social-media policy, congressional committees would study evidence, hear specialized testimony, negotiate, and make the final decision.</p>
           <div class="route" aria-label="Filtered influence route"><b>PEOPLE</b><i>→</i><b>LEADERS + EXPERTS</b><i>→</i><b>POLICY</b></div>
           <div class="today"><strong>LOOK FOR IT TODAY</strong><span>Committees</span><span>Agencies</span><span>Courts</span><span>Trustee representation</span></div>
