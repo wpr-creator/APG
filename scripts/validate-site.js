@@ -473,6 +473,7 @@ function validateSharedCourseExperience() {
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',
+    'THE FOUNDERS’ TEST', 'stable government with government run by the people',
     'docs/brutus-1.html', 'docs/federalist-10.html', 'docs/constitution.html',
     'Make your claim.', 'Explain the connection.', 'Take on the other side—and answer it.',
     'assets/democracy-filtered/brutus-advocate.jpg',
@@ -496,6 +497,9 @@ function validateSharedCourseExperience() {
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
   if (!democracyStyles.includes('[hidden]{display:none!important}')) {
     errors.push('Democracy, Filtered must display only the selected model panel.');
+  }
+  if (!democracyStyles.includes('aspect-ratio:4/5') || !democracyStyles.includes('aspect-ratio:1400/768')) {
+    errors.push('Democracy, Filtered artwork must retain its intended image proportions.');
   }
   const gettysburgReduxUrl = 'https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0';
   if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== true ||
