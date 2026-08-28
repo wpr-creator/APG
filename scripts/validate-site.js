@@ -493,6 +493,15 @@ function validateSharedCourseExperience() {
       democracyFiltered.includes('<figcaption>PUBLIC VOICES')) {
     errors.push('Each Democracy, Filtered model must have four checks and the retired image caption must remain removed.');
   }
+  const democracyChecks = democracyFiltered.match(/<fieldset class="path-challenge"[\s\S]*?<\/fieldset>/g) || [];
+  democracyChecks.forEach(function (check, index) {
+    const answerLengths = Array.from(check.matchAll(/data-answer="(?:correct|wrong)">([^<]+)/g), function (match) {
+      return match[1].trim().split(/\s+/).length;
+    });
+    if (answerLengths.length !== 3 || Math.max.apply(null, answerLengths) - Math.min.apply(null, answerLengths) > 2) {
+      errors.push('Democracy, Filtered check ' + (index + 1) + ' must use three similarly sized answer choices.');
+    }
+  });
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
   if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()') ||
       !democracyScript.includes('claim-response') || !democracyScript.includes('second-evidence') ||
