@@ -469,8 +469,9 @@ function validateSharedCourseExperience() {
   [
     'How does representative democracy decide whose voices matter?',
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
-    'WHY THESE THREE?', 'BRUTUS · IDENTITY UNCERTAIN', 'JAMES MADISON', 'ALEXANDER HAMILTON', 'IN PLAIN LANGUAGE',
-    '<span>PARTICIPATORY</span>', '<span>PLURALIST</span>', '<span>ELITE / FILTERED</span>',
+    'WHY THESE THREE?', 'BRUTUS · IDENTITY UNCERTAIN', 'JAMES MADISON', 'ALEXANDER HAMILTON',
+    '<span>PARTICIPATORY</span>', '<span>PLURALIST</span>', '<span>ELITE</span>',
+    'ELITE DEMOCRACY', 'WHAT THAT MEANS', 'WHO GETS MORE POWER', 'WHO MAY BE MISSED',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',
