@@ -24,14 +24,19 @@
   }
 
   function updateProgress() {
-    const count = state.paths.length;
+    const models = ["brutus", "madison", "hamilton"];
+    const completedModels = models.filter(model => {
+      const checks = $$(`.path-challenge[data-path="${model}"]`).map(box => box.dataset.check);
+      return checks.length === 4 && checks.every(check => state.paths.includes(check));
+    });
+    const count = completedModels.length;
     $("#path-count").textContent = `${count} OF 3`;
     $("#progress-fill").style.width = `${(count / 3) * 100}%`;
     $$(".path-challenge").forEach(box => {
-      if (!state.paths.includes(box.dataset.path)) return;
+      if (!state.paths.includes(box.dataset.check)) return;
       $$('button', box).forEach(button => button.disabled = true);
       const feedback = $(".challenge-feedback", box);
-      feedback.textContent = "FILTER TESTED ✓";
+      feedback.textContent = "CHECK COMPLETE ✓";
       feedback.className = "challenge-feedback is-correct";
     });
     const open = count === 3;
@@ -88,9 +93,9 @@
     const box = button.closest(".path-challenge");
     const feedback = $(".challenge-feedback", box);
     if (button.dataset.answer === "correct") {
-      state.paths = uniqueAdd(state.paths, box.dataset.path); save(); updateProgress();
-      feedback.textContent = "That route matches this democratic filter. ✓"; feedback.className = "challenge-feedback is-correct";
-    } else { feedback.textContent = "Not this filter. Compare the route above and try again."; feedback.className = "challenge-feedback is-wrong"; }
+      state.paths = uniqueAdd(state.paths, box.dataset.check); save(); updateProgress();
+      feedback.textContent = "Yes—that idea fits this model. ✓"; feedback.className = "challenge-feedback is-correct";
+    } else { feedback.textContent = "Not quite. Re-read the explanation and document connection, then try again."; feedback.className = "challenge-feedback is-wrong"; }
   }));
   $$(".classify button").forEach(button => button.addEventListener("click", () => {
     const card = button.closest(".evidence-card");

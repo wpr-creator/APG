@@ -472,6 +472,8 @@ function validateSharedCourseExperience() {
     'WHY THESE THREE?', 'POSSIBLY ROBERT YATES', 'IN PLAIN LANGUAGE',
     'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
+    'When making a new social-media policy, who should government listen to most?',
+    'docs/brutus-1.html', 'docs/federalist-10.html', 'docs/constitution.html',
     'Make your claim.', 'Explain the connection.', 'Take on the other side—and answer it.',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
@@ -480,10 +482,15 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered lesson is missing: ' + content);
   });
+  if ((democracyFiltered.match(/class="path-challenge"/g) || []).length !== 12 ||
+      (democracyFiltered.match(/data-check="(brutus|madison|hamilton)-[1-4]"/g) || []).length !== 12 ||
+      democracyFiltered.includes('<figcaption>PUBLIC VOICES')) {
+    errors.push('Each Democracy, Filtered model must have four checks and the retired image caption must remain removed.');
+  }
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
   if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()') ||
       !democracyScript.includes('claim-response') || !democracyScript.includes('second-evidence') ||
-      !democracyScript.includes('rebuttal-response')) {
+      !democracyScript.includes('rebuttal-response') || !democracyScript.includes('checks.length === 4')) {
     errors.push('Democracy, Filtered must save progress locally and print its Voice Passport.');
   }
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
