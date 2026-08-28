@@ -218,6 +218,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-resource-assessment:not(.placeholder) { background: #a32638; border: 4px solid #174f85; box-shadow: inset 0 -8px 0 #174f85; }
 .unit-resource-assessment:not(.placeholder):hover { background: #84202e; }
 .unit-resource-item { min-width: 0; display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: .75rem; align-items: stretch; }
+.unit-resource-item-centered { width: calc(50% - .375rem); grid-column: 1 / -1; justify-self: center; }
 .unit-resource-item .unit-resource { min-width: 0; }
 .unit-completion-star { width: 92px; min-height: 92px; padding: 0; display: grid; place-items: center; color: #a32638; background: repeating-linear-gradient(-45deg, #fffdf8 0 12px, #a32638 12px 24px); border: 5px solid #a32638; border-radius: 4px; cursor: pointer; font: 950 4.6rem/1 Arial, sans-serif; text-shadow: 0 0 2px #fffdf8, 0 0 5px #fffdf8; }
 .unit-completion-star:hover { border-color: #174f85; }
@@ -697,6 +698,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .semester-card { grid-template-columns: auto 1fr; }
   .unit-resource-grid, .unit-source-grid { grid-template-columns: 1fr; }
   .unit-resource-item { grid-template-columns: 82px minmax(0, 1fr); }
+  .unit-resource-item-centered { width: 100%; }
   .unit-completion-star { width: 82px; min-height: 92px; font-size: 4.2rem; }
   .lesson-card { grid-template-columns: 46px minmax(0, 1fr); }
   .lesson-standard { grid-column: 2; width: fit-content; white-space: normal; }

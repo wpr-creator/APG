@@ -304,7 +304,7 @@
           if (lesson === "ASSESSMENTS") card.classList.add("unit-resource-assessment");
           else if (resourceType.includes("GUIDED NOTES")) card.classList.add("unit-resource-guided-notes");
           else if (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT")) card.classList.add("unit-resource-assignment");
-          else if (resourceType.includes("READ")) card.classList.add("unit-resource-reading");
+          else if (resourceType.includes("READ") || resourceType.includes("REVIEW")) card.classList.add("unit-resource-reading");
           if (unlocked) {
             card.href = resourceUrl;
             if (!resourceUrl.startsWith("#")) {
@@ -344,6 +344,7 @@
           }
           const item = document.createElement("div");
           item.className = "unit-resource-item";
+          if (resource.centered) item.classList.add("unit-resource-item-centered");
           item.append(createCompletionStar(resource, unlocked), card);
           resourceGrid.appendChild(item);
         });

@@ -446,13 +446,17 @@ function validateSharedCourseExperience() {
     'u1-101-preamble': 'docs/constitution-preamble.html',
     'u1-101-gettysburg': 'docs/gettysburg-address.html',
     'u1-101-declaration-annotation': 'https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0',
-    'u1-101-guided-notes': 'https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing'
+    'u1-101-guided-notes': 'https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing',
+    'u1-101-democratic-ideals-review': 'https://wpr-creator.github.io/GOV/founding-ideals-review.html'
   };
   Object.entries(unit101Resources).forEach(function ([resourceId, url]) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
       errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
     }
   });
+  if (!courseData.includes('id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html", centered: true')) {
+    errors.push('The centered Democratic Ideals Review card is missing from Unit 1.01.');
+  }
   const unit102Resources = {
     'u1-102-democracy-filtered': 'democracy-filtered.html',
     'u1-102-guided-notes': 'https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing'
