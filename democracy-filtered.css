@@ -19,5 +19,7 @@ button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-vis
 .frq-bridge h3{margin:.2rem 0 .45rem;font-size:clamp(1.35rem,2.4vw,2rem);line-height:1.05;color:var(--navy)}
 .frq-bridge p:last-child{margin:0;max-width:78ch;font-weight:700}
 .advocate-tabs span{align-self:center;font-size:clamp(.68rem,1.25vw,.92rem);letter-spacing:.06em;line-height:1.05}
+.pitch strong{color:var(--navy);letter-spacing:.025em}.route{align-items:stretch}.route span{display:grid;place-items:center;max-width:165px;padding:.4rem .5rem;background:#f1f4f7;color:var(--ink);font-size:.68rem;font-weight:700;line-height:1.2;text-align:center}.route i{align-self:center;font-style:normal;font-weight:900}
 @media(max-width:760px){.portrait{min-height:0;max-height:none;aspect-ratio:4/5}.scenario-art{min-height:0;aspect-ratio:1400/768}}
 @media(max-width:760px){.advocate-tabs span{display:block;font-size:.58rem;letter-spacing:0;overflow-wrap:anywhere}}
+@media(max-width:760px){.route{display:grid;grid-template-columns:1fr}.route b,.route span{max-width:none;text-align:center}.route i{transform:rotate(90deg);justify-self:center}}
