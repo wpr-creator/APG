@@ -475,7 +475,7 @@ function validateSharedCourseExperience() {
     'REPUBLICANISM', 'PEOPLE\'S VOICES', 'REPRESENTATIVES', 'PUBLIC POLICY',
     'WHY THESE THREE?', 'BRUTUS · IDENTITY UNCERTAIN', 'JAMES MADISON', 'ALEXANDER HAMILTON',
     '<span>PARTICIPATORY</span>', '<span>PLURALIST</span>', '<span>ELITE</span>',
-    'ELITE DEMOCRACY', 'WHAT THAT MEANS', 'WHO GETS MORE POWER', 'WHO MAY BE MISSED',
+    'ELITE DEMOCRACY', 'WHAT THAT MEANS', 'WHOSE VOICE GETS HEARD?', 'WHOSE VOICE MAY BE MISSED?',
     '<strong>FACTION</strong>', '<strong>INTEREST GROUP</strong>', '<strong>LOBBYING</strong>',
     '<strong>COALITION</strong>', '<strong>INSTITUTIONAL FILTER</strong>',
     'BRUTUS', 'MADISON', 'HAMILTON', 'LESSON COMPLETE',
@@ -496,6 +496,10 @@ function validateSharedCourseExperience() {
       democracyFiltered.includes('<figcaption>PUBLIC VOICES') || democracyFiltered.includes('class="route"') ||
       democracyFiltered.includes('class="today"')) {
     errors.push('Each Democracy, Filtered model must have four checks and retired grey route/example boxes must remain removed.');
+  }
+  if (democracyFiltered.includes('“LET THE PEOPLE TAKE PART.”') || democracyFiltered.includes('“LET GROUPS COMPETE.”') ||
+      democracyFiltered.includes('“LET LEADERS AND EXPERTS DECIDE.”')) {
+    errors.push('Democracy, Filtered must not present lesson slogans as quotations.');
   }
   const democracyChecks = democracyFiltered.match(/<fieldset class="path-challenge"[\s\S]*?<\/fieldset>/g) || [];
   democracyChecks.forEach(function (check, index) {
@@ -526,7 +530,8 @@ function validateSharedCourseExperience() {
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
   if (!democracyStyles.includes('grid-template-columns:minmax(360px,42%) 1fr') ||
       !democracyStyles.includes('.advocate-copy{display:contents}') ||
-      !democracyStyles.includes('.advocate-copy>.check-set{grid-column:1/-1}')) {
+      !democracyStyles.includes('.advocate-copy>.check-set{grid-column:1/-1}') ||
+      !democracyStyles.includes('.hero{grid-template-columns:1fr}')) {
     errors.push('Democracy, Filtered must keep the large portrait-and-full-width activity layout.');
   }
   if (!democracyStyles.includes('[hidden]{display:none!important}')) {
