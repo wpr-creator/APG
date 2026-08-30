@@ -61,7 +61,7 @@
   }
 
   const fieldIds = ["class-period", "student-name", "model-summary-response"];
-  const minimums = { "class-period": 2, "student-name": 2, "model-summary-response": 120 };
+  const minimums = { "class-period": 2, "student-name": 2, "model-summary-response": 80 };
   function completeReport() { return fieldIds.every(id => (($(`#${id}`).value || "").trim().length >= minimums[id])); }
   function value(id) { return ($(`#${id}`).value || "").trim(); }
   function payload() {
@@ -85,10 +85,10 @@
     const done = completeReport();
     const confirmed = Boolean(done && state.submission?.confirmed && state.submission.fingerprint === fingerprint());
     $("#submit-judgment").disabled = !done || confirmed;
-    $("#submit-judgment").textContent = confirmed ? "SUBMISSION CONFIRMED ✓" : "SUBMIT FINAL JUDGMENT";
+    $("#submit-judgment").textContent = confirmed ? "SAVED ✓" : "SUBMIT EXIT TICKET";
     $("#report-status").textContent = confirmed
-      ? "SAVED IN MR. ROGERS’S DEMOCRACY FILTERED RESPONSES."
-      : done ? "READY TO SUBMIT. YOUR AWARD UNLOCKS AFTER YOUR RESPONSE IS SAVED." : "Complete every response to unlock submission.";
+      ? "YOUR EXIT TICKET IS SAVED."
+      : done ? "READY TO SUBMIT." : "Write your response to submit.";
     $("#report-status").className = confirmed ? "report-status is-correct" : "report-status";
     $("#decision-award").hidden = !confirmed;
     if (confirmed) showAward();
