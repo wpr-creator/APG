@@ -524,6 +524,11 @@ function validateSharedCourseExperience() {
     errors.push('Democracy, Filtered must not retain the retired printable Voice Passport.');
   }
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
+  if (!democracyStyles.includes('grid-template-columns:minmax(360px,42%) 1fr') ||
+      !democracyStyles.includes('.advocate-copy{display:contents}') ||
+      !democracyStyles.includes('.advocate-copy>.check-set{grid-column:1/-1}')) {
+    errors.push('Democracy, Filtered must keep the large portrait-and-full-width activity layout.');
+  }
   if (!democracyStyles.includes('[hidden]{display:none!important}')) {
     errors.push('Democracy, Filtered must display only the selected model panel.');
   }
