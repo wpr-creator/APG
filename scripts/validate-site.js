@@ -478,7 +478,6 @@ function validateSharedCourseExperience() {
     'ELITE DEMOCRACY', 'WHAT THAT MEANS', 'WHO GETS MORE POWER', 'WHO MAY BE MISSED',
     '<strong>FACTION</strong>', '<strong>INTEREST GROUP</strong>', '<strong>LOBBYING</strong>',
     '<strong>COALITION</strong>', '<strong>INSTITUTIONAL FILTER</strong>',
-    'join groups that share their concerns', 'study the issue and make the decision',
     'BRUTUS', 'MADISON', 'HAMILTON', 'LESSON COMPLETE',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',
@@ -494,8 +493,9 @@ function validateSharedCourseExperience() {
   });
   if ((democracyFiltered.match(/class="path-challenge"/g) || []).length !== 12 ||
       (democracyFiltered.match(/data-check="(brutus|madison|hamilton)-[1-4]"/g) || []).length !== 12 ||
-      democracyFiltered.includes('<figcaption>PUBLIC VOICES')) {
-    errors.push('Each Democracy, Filtered model must have four checks and the retired image caption must remain removed.');
+      democracyFiltered.includes('<figcaption>PUBLIC VOICES') || democracyFiltered.includes('class="route"') ||
+      democracyFiltered.includes('class="today"')) {
+    errors.push('Each Democracy, Filtered model must have four checks and retired grey route/example boxes must remain removed.');
   }
   const democracyChecks = democracyFiltered.match(/<fieldset class="path-challenge"[\s\S]*?<\/fieldset>/g) || [];
   democracyChecks.forEach(function (check, index) {
@@ -514,6 +514,9 @@ function validateSharedCourseExperience() {
       !democracyScript.includes('question: "Democracy, Filtered') || !democracyScript.includes('checks.length === 4')) {
     errors.push('Democracy, Filtered must use the final roster, save progress locally, and verify exit-ticket submission.');
   }
+  ['termDefinitions', 'addTermDefinitions', 'PARTICIPATORY DEMOCRACY', 'PLURALIST DEMOCRACY', 'ELITE DEMOCRACY', 'INSTITUTIONAL FILTER'].forEach(function (content) {
+    if (!democracyScript.includes(content)) errors.push('Democracy, Filtered key-term definitions are missing: ' + content);
+  });
   ['id="submit-judgment"', 'id="decision-award"', 'id="award-student"', 'id="award-model"', '9 SENTENCES', 'TURN YOUR SCREEN AND SHOW MR. ROGERS'].forEach(function (content) {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered submitted award is missing: ' + content);
   });

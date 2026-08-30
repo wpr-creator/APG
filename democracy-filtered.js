@@ -7,6 +7,36 @@
   let roster = [];
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const termDefinitions = {
+    "REPUBLICANISM": "People govern through elected representatives.",
+    "REPRESENTATIVE DEMOCRACY": "Citizens elect officials to make public decisions for them.",
+    "PUBLIC POLICY": "A decision or action taken by government.",
+    "PARTICIPATORY DEMOCRACY": "A model that emphasizes broad and direct citizen involvement in political decisions.",
+    "POLITICAL PARTICIPATION": "Actions people take to influence government.",
+    "DIRECT DEMOCRACY": "Citizens vote directly on a law or policy.",
+    "PLURALIST DEMOCRACY": "A model in which organized groups compete to influence public policy.",
+    "FACTION": "A group united by a shared interest that may conflict with the rights or interests of others.",
+    "INTEREST GROUP": "An organized group that tries to influence government policy.",
+    "LOBBYING": "Contacting public officials to persuade them about a policy.",
+    "COALITION": "Several groups working together toward the same goal.",
+    "COMPROMISE": "An agreement in which each side gets some, but not all, of what it wants.",
+    "ELITE DEMOCRACY": "A model in which elected leaders and influential minorities have substantial policy influence.",
+    "POLITICAL ELITES": "A small group of leaders, experts, wealthy people, or well-connected people with strong political influence.",
+    "INSTITUTIONAL FILTER": "A part of government that separates immediate public preferences from final policy decisions."
+  };
+
+  function addTermDefinitions() {
+    const candidates = [$("#concept-title"), ...$$(".pitch strong")].filter(Boolean);
+    candidates.forEach(element => {
+      const term = element.textContent.trim().toUpperCase();
+      const definition = termDefinitions[term];
+      if (!definition) return;
+      element.classList.add("key-term");
+      element.tabIndex = 0;
+      element.dataset.definition = definition;
+      element.setAttribute("aria-label", `${term}: ${definition}`);
+    });
+  }
 
   function load() {
     try { return { ...empty, ...JSON.parse(localStorage.getItem(key) || "{}") }; }
@@ -209,5 +239,5 @@
   $("#reset-lesson").addEventListener("click", () => { if (window.confirm("Erase saved progress for this lesson and start over?")) { localStorage.removeItem(key); window.location.reload(); } });
 
   if (state.opening) { const opening = $(`input[name=opening][value=${state.opening}]`); if (opening) opening.checked = true; }
-  updateProgress(); updateEvidence(); updateReport(); loadRoster();
+  addTermDefinitions(); updateProgress(); updateEvidence(); updateReport(); loadRoster();
 })();

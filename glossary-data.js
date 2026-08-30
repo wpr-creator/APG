@@ -135,7 +135,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Republicanism",
-          "A system in which the government's authority comes from the people.",
+          "People govern through elected representatives.",
           [
             "1.1"
           ]
@@ -149,7 +149,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Faction",
-          "A group of self-interested people; Madison's term for groups whose interests conflict with those of the public.",
+          "A group united by a shared interest that may conflict with the rights or interests of others.",
           [
             "1.3"
           ]
@@ -489,17 +489,67 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Direct Democracy",
-          "A political system in which citizens vote directly on public policies.",
+          "Citizens vote directly on a law or policy.",
           [
             "1.1"
           ]
         ],
         [
           "Representative Democracy",
-          "A political system in which voters select representatives who then vote on matters of public policy.",
+          "Citizens elect officials to make public decisions for them.",
           [
             "1.1"
           ]
+        ],
+        [
+          "Participatory Democracy",
+          "A model that emphasizes broad and direct citizen involvement in political decisions.",
+          ["1.2"]
+        ],
+        [
+          "Political Participation",
+          "Actions people take to influence government.",
+          ["1.2"]
+        ],
+        [
+          "Pluralist Democracy",
+          "A model in which organized groups compete to influence public policy.",
+          ["1.2"]
+        ],
+        [
+          "Interest Group",
+          "An organized group that tries to influence government policy.",
+          ["1.2"]
+        ],
+        [
+          "Lobbying",
+          "Contacting public officials to persuade them about a policy.",
+          ["1.2"]
+        ],
+        [
+          "Coalition",
+          "Several groups working together toward the same goal.",
+          ["1.2"]
+        ],
+        [
+          "Compromise",
+          "An agreement in which each side gets some, but not all, of what it wants.",
+          ["1.2"]
+        ],
+        [
+          "Elite Democracy",
+          "A model in which elected leaders and influential minorities have substantial policy influence.",
+          ["1.2"]
+        ],
+        [
+          "Political Elites",
+          "A small group of leaders, experts, wealthy people, or well-connected people with strong political influence.",
+          ["1.2"]
+        ],
+        [
+          "Institutional Filter",
+          "A part of government that separates immediate public preferences from final policy decisions.",
+          ["1.2"]
         ],
         [
           "Eminent Domain",
