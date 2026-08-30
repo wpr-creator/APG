@@ -479,12 +479,12 @@ function validateSharedCourseExperience() {
     '<strong>FACTION</strong>', '<strong>INTEREST GROUP</strong>', '<strong>LOBBYING</strong>',
     '<strong>COALITION</strong>', '<strong>INSTITUTIONAL FILTER</strong>',
     'join groups that share their concerns', 'study the issue and make the decision',
-    'BRUTUS', 'MADISON', 'HAMILTON', 'VOICE PASSPORT',
+    'BRUTUS', 'MADISON', 'HAMILTON', 'DEMOCRACY DECISION AWARD',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',
     'THE FOUNDERS’ TEST', 'stable government with government run by the people',
     'docs/brutus-1.html', 'docs/federalist-10.html', 'docs/constitution.html',
-    'Make your claim.', 'Explain the connection.', 'Take on the other side—and answer it.',
+    'SUM UP THE THREE MODELS', 'That is nine sentences total.', 'Describe it in one sentence.',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
     'assets/democracy-filtered/hamilton-advocate.jpg',
@@ -507,10 +507,18 @@ function validateSharedCourseExperience() {
     }
   });
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
-  if (!democracyScript.includes('localStorage') || !democracyScript.includes('window.print()') ||
-      !democracyScript.includes('claim-response') || !democracyScript.includes('second-evidence') ||
-      !democracyScript.includes('rebuttal-response') || !democracyScript.includes('checks.length === 4')) {
-    errors.push('Democracy, Filtered must save progress locally and print its Voice Passport.');
+  if (!democracyScript.includes('localStorage') || !democracyScript.includes('type: "democracy-filtered"') ||
+      !democracyScript.includes('fetch("content.json", { cache: "no-store" })') ||
+      !democracyScript.includes('verifySubmission') || !democracyScript.includes('submissionId') ||
+      !democracyScript.includes('model-summary-response') || !democracyScript.includes('type: "exit"') ||
+      !democracyScript.includes('question: "Democracy, Filtered') || !democracyScript.includes('checks.length === 4')) {
+    errors.push('Democracy, Filtered must use the final roster, save progress locally, and verify Final Judgment submission.');
+  }
+  ['id="submit-judgment"', 'id="decision-award"', 'id="award-student"', 'id="award-model"', '9 SENTENCES', 'TURN YOUR SCREEN AND SHOW MR. ROGERS'].forEach(function (content) {
+    if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered submitted award is missing: ' + content);
+  });
+  if (democracyFiltered.includes('VOICE PASSPORT') || democracyFiltered.includes('PRINT / SAVE AS PDF')) {
+    errors.push('Democracy, Filtered must not retain the retired printable Voice Passport.');
   }
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
   if (!democracyStyles.includes('[hidden]{display:none!important}')) {
@@ -519,6 +527,9 @@ function validateSharedCourseExperience() {
   if (!democracyStyles.includes('aspect-ratio:4/5') || !democracyStyles.includes('aspect-ratio:1400/768')) {
     errors.push('Democracy, Filtered artwork must retain its intended image proportions.');
   }
+  ['.award-participatory', '.award-pluralist', '.award-elite', '.decision-award'].forEach(function (content) {
+    if (!democracyStyles.includes(content)) errors.push('Democracy, Filtered award palette is missing: ' + content);
+  });
   const gettysburgReduxUrl = 'https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0';
   if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== true ||
       parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== gettysburgReduxUrl ||
@@ -738,6 +749,10 @@ function validateSharedCourseExperience() {
     fs.readFileSync(path.join(root, 'data-core.js'), 'utf8'),
     fs.readFileSync(path.join(root, 'exit-ticket-script.gs'), 'utf8')
   ].join('\n');
+  const exitCollector = fs.readFileSync(path.join(root, 'exit-ticket-script.gs'), 'utf8');
+  ['Democracy Filtered', 'DEMOCRACY_HEADERS', "type === 'democracy-filtered'", 'democracySubmissionExists', 'writeDemocracyTab'].forEach(function (content) {
+    if (!exitCollector.includes(content)) errors.push('Democracy, Filtered response collector is missing: ' + content);
+  });
   ['Period 1A', 'Period 2B'].forEach(function (period) {
     if (!rosterSources.includes(period)) errors.push('Course period changed or missing: ' + period);
   });

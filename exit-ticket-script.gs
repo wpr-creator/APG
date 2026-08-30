@@ -14,6 +14,8 @@ const TABS = {
 
 const ARCHIVE_PREFIX = 'Archive — ';
 const HEADERS = ['Date', 'Period', 'Student Name', 'Question', 'Response', 'Submitted At', 'Submission ID'];
+const DEMOCRACY_TAB = 'Democracy Filtered';
+const DEMOCRACY_HEADERS = ['Date', 'Period', 'Student Name', 'Participatory — Meaning', 'Participatory — Strength', 'Participatory — Weakness', 'Pluralist — Meaning', 'Pluralist — Strength', 'Pluralist — Weakness', 'Elite — Meaning', 'Elite — Strength', 'Elite — Weakness', 'Submitted At', 'Submission ID'];
 
 // ════════════════════════════════════════════════════════════════
 //  doPost — receives each exit ticket submission
@@ -23,6 +25,38 @@ function doPost(e) {
     const body = JSON.parse(e.postData.contents);
 
     const type = body.type || 'exit';
+
+    // ── Democracy, Filtered final judgment ──
+    if (type === 'democracy-filtered') {
+      const requiredFields = ['period', 'name', 'participatoryMeaning', 'participatoryPro', 'participatoryCon', 'pluralistMeaning', 'pluralistPro', 'pluralistCon', 'eliteMeaning', 'elitePro', 'eliteCon', 'submissionId'];
+      requiredFields.forEach(function (field) {
+        if (!String(body[field] || '').trim()) throw new Error('The Final Judgment is incomplete.');
+      });
+      if (!TABS[body.period]) throw new Error('Unknown class period.');
+      const submissionId = String(body.submissionId).trim();
+      if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId)) throw new Error('A valid submission ID is required.');
+
+      const ss = SpreadsheetApp.openByUrl(SHEET_URL);
+      const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+      const row = [
+        body.date || new Date().toLocaleDateString('en-US'), body.period, body.name,
+        body.participatoryMeaning, body.participatoryPro, body.participatoryCon,
+        body.pluralistMeaning, body.pluralistPro, body.pluralistCon,
+        body.eliteMeaning, body.elitePro, body.eliteCon, timestamp, submissionId
+      ];
+
+      const lock = LockService.getScriptLock();
+      lock.waitLock(10000);
+      try {
+        if (!democracySubmissionExists(ss, submissionId)) writeDemocracyTab(ss, row);
+      } finally {
+        lock.releaseLock();
+      }
+
+      return ContentService
+        .createTextOutput(JSON.stringify({ result: 'success', type: type }))
+        .setMimeType(ContentService.MimeType.JSON);
+    }
 
     // ── Skill Builders submission ──
     if (type === 'skill') {
@@ -121,6 +155,37 @@ function submissionExists(ss, submissionId) {
     .createTextFinder(submissionId)
     .matchEntireCell(true)
     .findNext() !== null;
+}
+
+function democracySubmissionExists(ss, submissionId) {
+  const sheet = ss.getSheetByName(DEMOCRACY_TAB);
+  if (!sheet || sheet.getLastRow() < 2) return false;
+  return sheet.getRange(2, 14, sheet.getLastRow() - 1, 1)
+    .createTextFinder(submissionId)
+    .matchEntireCell(true)
+    .findNext() !== null;
+}
+
+function writeDemocracyTab(ss, row) {
+  let sheet = ss.getSheetByName(DEMOCRACY_TAB);
+  if (!sheet) {
+    sheet = ss.insertSheet(DEMOCRACY_TAB);
+    sheet.appendRow(DEMOCRACY_HEADERS);
+    sheet.getRange(1, 1, 1, DEMOCRACY_HEADERS.length)
+      .setFontWeight('bold')
+      .setBackground('#075e61')
+      .setFontColor('#ffffff');
+    sheet.setFrozenRows(1);
+    sheet.setColumnWidth(1, 90);
+    sheet.setColumnWidth(2, 70);
+    sheet.setColumnWidth(3, 180);
+    sheet.setColumnWidth(4, 150);
+    for (let column = 5; column <= 12; column += 1) sheet.setColumnWidth(column, 320);
+    sheet.setColumnWidth(13, 160);
+  }
+  sheet.getRange(1, 1, 1, DEMOCRACY_HEADERS.length).setValues([DEMOCRACY_HEADERS]);
+  sheet.appendRow(row);
+  sheet.getRange(sheet.getLastRow(), 5, 1, 8).setWrap(true).setVerticalAlignment('top');
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -250,12 +315,16 @@ function weeklyArchive() {
 // ════════════════════════════════════════════════════════════════
 function doGet(e) {
   const submissionId = String((e && e.parameter && e.parameter.submissionId) || '').trim();
+  const type = String((e && e.parameter && e.parameter.type) || 'exit').trim();
   const callback = String((e && e.parameter && e.parameter.callback) || '').trim();
   let payload = { running: true };
 
   if (submissionId) {
     const ss = SpreadsheetApp.openByUrl(SHEET_URL);
-    payload = { saved: submissionExists(ss, submissionId), submissionId: submissionId };
+    const saved = type === 'democracy-filtered'
+      ? democracySubmissionExists(ss, submissionId)
+      : submissionExists(ss, submissionId);
+    payload = { saved: saved, submissionId: submissionId, type: type };
   }
 
   if (/^[a-zA-Z_$][0-9a-zA-Z_$.]*$/.test(callback)) {

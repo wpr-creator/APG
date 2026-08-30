@@ -7,8 +7,8 @@
   <meta name="description" content="An interactive AP Government lesson comparing participatory, pluralist, and elite models of representative democracy.">
   <title>1.02 Democracy, Filtered — AP Government</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="democracy-filtered.css?v=20260828-balanced-checks">
-  <script src="democracy-filtered.js?v=20260828-balanced-checks" defer></script>
+  <link rel="stylesheet" href="democracy-filtered.css?v=20260829-nine-sentences">
+  <script src="democracy-filtered.js?v=20260829-nine-sentences" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#lesson">Skip to the lesson</a>
@@ -126,40 +126,30 @@
     <section class="voice-report" id="voice-report" aria-labelledby="report-title">
       <div class="locked-message" id="report-lock"><span>★</span><h2>YOUR VOICE REPORT IS LOCKED</h2><p>Correctly classify all three evidence files to begin your final judgment.</p></div>
       <div id="report-content" hidden>
-        <div class="section-heading"><div><p class="eyebrow">FINAL JUDGMENT</p><h2 id="report-title">BUILD YOUR VOICE PASSPORT</h2></div><p>Saved on this device</p></div>
-        <aside class="frq-bridge" aria-labelledby="founders-test-title">
-          <p class="eyebrow">THE FOUNDERS’ TEST</p>
-          <h3 id="founders-test-title">CAN GOVERNMENT BE STABLE AND STILL BE RUN BY THE PEOPLE?</h3>
-          <p>A representative democracy has to do both. Use the three models and the founding documents to decide which model creates the best balance.</p>
-        </aside>
+        <div class="section-heading"><div><p class="eyebrow">LESSON EXIT TICKET</p><h2 id="report-title">SUM UP THE THREE MODELS</h2></div><p>Submit to Mr. Rogers</p></div>
+        <p class="exit-ticket-directions">In your own words, write one sentence describing each model, one sentence explaining a strength, and one sentence explaining a weakness. That is nine sentences total.</p>
         <div class="report-form">
-          <label>NAME <input id="student-name" autocomplete="name" placeholder="Your name"></label>
-          <label>CLASS PERIOD <select id="class-period"><option value="">Choose</option><option>1A</option><option>2B</option></select></label>
-          <label>Which model best balances stable government with government run by the people?<select id="best-model"><option value="">Choose a model</option><option value="Participatory / Brutus">Participatory / Brutus</option><option value="Pluralist / Madison">Pluralist / Madison</option><option value="Elite / Hamilton">Elite / Hamilton</option></select></label>
-          <label>Make your claim.<textarea id="claim-response" rows="3" placeholder="The ___ model creates the best balance because…"></textarea></label>
-          <label>Founding evidence: use a specific idea from Brutus No. 1, Federalist No. 10, or the U.S. Constitution.<textarea id="evidence-response" rows="4" placeholder="In ___, the author or structure shows…"></textarea></label>
-          <label>Explain the connection.<textarea id="reasoning-response" rows="3" placeholder="This evidence supports my claim because…"></textarea></label>
-          <label>Add a second piece of evidence from another document, the lesson, or a modern example.<textarea id="second-evidence" rows="4" placeholder="Another example is… This matters because…"></textarea></label>
-          <label>Compare your choice with another model.<textarea id="comparison" rows="3" placeholder="Unlike the ___ model, this model…"></textarea></label>
-          <label>Take on the other side—and answer it.<textarea id="rebuttal-response" rows="4" placeholder="Someone might argue… However…"></textarea></label>
-          <label>Whose voice could still be left out?<textarea id="missing-voice" rows="3" placeholder="This model may leave out… because…"></textarea></label>
-          <label class="transfer"><strong>NEW SITUATION</strong> A congressional committee hears testimony from technology companies, child-safety organizations, constitutional lawyers, and agency experts before writing a social-media bill. Which democratic models appear in this process, and whose influence is probably strongest?<textarea id="transfer-response" rows="5" placeholder="This shows… The strongest influence belongs to… because…"></textarea></label>
+          <label>CLASS PERIOD <select id="class-period"><option value="">Choose your period</option></select></label>
+          <label>NAME <select id="student-name" disabled><option value="">Choose your period first</option></select></label>
+          <label class="single-exit-response">YOUR RESPONSE — Write all nine sentences here.<textarea id="model-summary-response" rows="12" placeholder="Participatory democracy… A strength is… A weakness is…&#10;&#10;Pluralist democracy… A strength is… A weakness is…&#10;&#10;Elite democracy… A strength is… A weakness is…"></textarea></label>
         </div>
-        <p class="report-status" id="report-status" role="status">Complete every response to unlock your printable Voice Passport.</p>
-        <div class="report-actions"><button type="button" id="preview-passport">PREVIEW PASSPORT</button><button type="button" id="print-passport" disabled>PRINT / SAVE AS PDF</button><button type="button" id="reset-lesson">START OVER</button></div>
+        <p class="report-status" id="report-status" role="status">Complete every response to unlock submission.</p>
+        <div class="report-actions"><button type="button" id="submit-judgment" disabled>SUBMIT FINAL JUDGMENT</button><button type="button" id="reset-lesson">START OVER</button></div>
       </div>
     </section>
 
-    <section class="passport" id="passport" aria-labelledby="passport-title" hidden>
-      <header><p>AP GOVERNMENT · UNIT 1.02</p><h2 id="passport-title">DEMOCRACY, FILTERED<br>VOICE PASSPORT</h2><strong id="passport-student"></strong></header>
-      <p class="passport-eq">How does representative democracy decide whose voices matter?</p>
-      <div class="passport-stamps">
-        <article><img src="assets/democracy-filtered/brutus-advocate.jpg" alt=""><b>BRUTUS</b><span>PARTICIPATORY</span><small>OPEN CHANNEL ✓</small></article>
-        <article><img src="assets/democracy-filtered/madison-advocate.jpg" alt=""><b>MADISON</b><span>PLURALIST</span><small>COMPETING SIGNALS ✓</small></article>
-        <article><img src="assets/democracy-filtered/hamilton-advocate.jpg" alt=""><b>HAMILTON</b><span>ELITE</span><small>LEADERS + EXPERTS ✓</small></article>
-      </div>
-      <dl class="passport-answers"><div><dt>MY JUDGMENT</dt><dd id="passport-model"></dd></div><div><dt>MY CLAIM</dt><dd id="passport-claim"></dd></div><div><dt>FOUNDING EVIDENCE</dt><dd id="passport-evidence"></dd></div><div><dt>WHY THE EVIDENCE PROVES IT</dt><dd id="passport-reasoning"></dd></div><div><dt>SECOND PIECE OF EVIDENCE</dt><dd id="passport-second-evidence"></dd></div><div><dt>COMPARISON</dt><dd id="passport-comparison"></dd></div><div><dt>OTHER SIDE + MY RESPONSE</dt><dd id="passport-rebuttal"></dd></div><div><dt>WHO MAY BE LEFT OUT?</dt><dd id="passport-missing"></dd></div><div><dt>TRANSFER TO A NEW SITUATION</dt><dd id="passport-transfer"></dd></div></dl>
-      <footer><strong>FINAL FIELD MARK</strong><p>On the printed copy, draw the route you believe public influence should take. Label where a voice is <b>amplified</b>, <b>filtered</b>, and possibly <b>blocked</b>.</p></footer>
+    <section class="decision-award" id="decision-award" aria-labelledby="award-title" hidden>
+      <div class="award-seal" aria-hidden="true">★</div>
+      <p class="award-kicker">AP GOVERNMENT · UNIT 1.02</p>
+      <p class="award-earned">FINAL JUDGMENT SUBMITTED</p>
+      <h2 id="award-title">DEMOCRACY DECISION AWARD</h2>
+      <p class="award-presented">PRESENTED TO</p>
+      <strong id="award-student"></strong>
+      <p class="award-period" id="award-period"></p>
+      <p class="award-choice">FOR COMPLETING</p>
+      <h3 id="award-model">THE THREE MODELS OF DEMOCRACY</h3>
+      <div class="award-proof"><p><b>9 SENTENCES</b><span>Three meanings · Three strengths · Three weaknesses</span></p></div>
+      <p class="award-show">TURN YOUR SCREEN AND SHOW MR. ROGERS</p>
     </section>
   </main>
 </body>

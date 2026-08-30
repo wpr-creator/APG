@@ -1,8 +1,10 @@
 (() => {
   "use strict";
   const key = "apg-democracy-filtered-v1";
-  const empty = { opening: "", paths: [], evidence: [], fields: {} };
+  const submissionUrl = "https://script.google.com/macros/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec";
+  const empty = { opening: "", paths: [], evidence: [], fields: {}, submission: null };
   let state = load();
+  let roster = [];
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
@@ -58,25 +60,116 @@
     $("#report-content").hidden = !open;
   }
 
-  const fieldIds = ["student-name", "class-period", "best-model", "claim-response", "evidence-response", "reasoning-response", "second-evidence", "comparison", "rebuttal-response", "missing-voice", "transfer-response"];
-  const minimums = { "student-name": 2, "class-period": 2, "best-model": 2, "claim-response": 25, "evidence-response": 35, "reasoning-response": 30, "second-evidence": 35, comparison: 25, "rebuttal-response": 35, "missing-voice": 20, "transfer-response": 40 };
+  const fieldIds = ["class-period", "student-name", "model-summary-response"];
+  const minimums = { "class-period": 2, "student-name": 2, "model-summary-response": 120 };
   function completeReport() { return fieldIds.every(id => (($(`#${id}`).value || "").trim().length >= minimums[id])); }
-  function updatePassport() {
-    const value = id => ($(`#${id}`).value || "").trim();
-    $("#passport-student").textContent = value("student-name") ? `${value("student-name")} · ${value("class-period")}` : "";
-    $("#passport-model").textContent = value("best-model");
-    $("#passport-claim").textContent = value("claim-response");
-    $("#passport-comparison").textContent = value("comparison");
-    $("#passport-evidence").textContent = value("evidence-response");
-    $("#passport-reasoning").textContent = value("reasoning-response");
-    $("#passport-second-evidence").textContent = value("second-evidence");
-    $("#passport-rebuttal").textContent = value("rebuttal-response");
-    $("#passport-missing").textContent = value("missing-voice");
-    $("#passport-transfer").textContent = value("transfer-response");
+  function value(id) { return ($(`#${id}`).value || "").trim(); }
+  function payload() {
+    return {
+      type: "exit",
+      date: new Date().toLocaleDateString("en-US"),
+      period: value("class-period"), name: value("student-name"),
+      question: "Democracy, Filtered — In your own words, describe each model and give one strength and one weakness for each.",
+      response: value("model-summary-response")
+    };
+  }
+  function fingerprint() { return JSON.stringify(payload()); }
+  function showAward() {
+    const award = $("#decision-award");
+    award.className = "decision-award award-complete";
+    $("#award-student").textContent = value("student-name");
+    $("#award-period").textContent = `PERIOD ${value("class-period")}`;
+    award.hidden = false;
+  }
+  function updateReport() {
     const done = completeReport();
-    $("#print-passport").disabled = !done;
-    $("#report-status").textContent = done ? "VOICE PASSPORT READY ✓" : "Complete every response to unlock your printable Voice Passport.";
-    $("#report-status").className = done ? "report-status is-correct" : "report-status";
+    const confirmed = Boolean(done && state.submission?.confirmed && state.submission.fingerprint === fingerprint());
+    $("#submit-judgment").disabled = !done || confirmed;
+    $("#submit-judgment").textContent = confirmed ? "SUBMISSION CONFIRMED ✓" : "SUBMIT FINAL JUDGMENT";
+    $("#report-status").textContent = confirmed
+      ? "SAVED IN MR. ROGERS’S DEMOCRACY FILTERED RESPONSES."
+      : done ? "READY TO SUBMIT. YOUR AWARD UNLOCKS AFTER YOUR RESPONSE IS SAVED." : "Complete every response to unlock submission.";
+    $("#report-status").className = confirmed ? "report-status is-correct" : "report-status";
+    $("#decision-award").hidden = !confirmed;
+    if (confirmed) showAward();
+  }
+  function populatePeriods() {
+    const periodField = $("#class-period");
+    const savedPeriod = state.fields["class-period"] || "";
+    periodField.replaceChildren(new Option("Choose your period", ""));
+    roster.forEach(period => periodField.add(new Option(period.label, period.id)));
+    if (roster.some(period => period.id === savedPeriod)) periodField.value = savedPeriod;
+    populateStudents();
+  }
+  function populateStudents() {
+    const periodId = value("class-period");
+    const period = roster.find(item => item.id === periodId);
+    const studentField = $("#student-name");
+    const savedName = state.fields["student-name"] || "";
+    studentField.replaceChildren(new Option(period ? "Choose your name" : "Choose your period first", ""));
+    (period?.students || []).forEach(name => studentField.add(new Option(name, name)));
+    studentField.disabled = !period;
+    if (period?.students.includes(savedName)) studentField.value = savedName;
+    else if (savedName) state.fields["student-name"] = "";
+    updateReport();
+  }
+  async function loadRoster() {
+    try {
+      const response = await fetch("content.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Roster unavailable");
+      const content = await response.json();
+      roster = Array.isArray(content.periods) ? content.periods : [];
+      populatePeriods();
+    } catch (error) {
+      $("#report-status").textContent = "THE CLASS ROSTER IS TEMPORARILY UNAVAILABLE. SEE MR. ROGERS.";
+    }
+  }
+  function newSubmissionId() {
+    if (crypto.randomUUID) return crypto.randomUUID();
+    const bytes = new Uint32Array(4); crypto.getRandomValues(bytes);
+    return `${Date.now()}-${Array.from(bytes, number => number.toString(36)).join("")}`;
+  }
+  function verifySubmission(submissionId) {
+    return new Promise(resolve => {
+      let attempts = 0;
+      const callbackName = `apgDemocracyVerify_${submissionId.replace(/-/g, "_")}`;
+      const check = () => {
+        attempts += 1;
+        const script = document.createElement("script");
+        const cleanup = () => { script.remove(); delete window[callbackName]; };
+        const timeout = window.setTimeout(() => { cleanup(); if (attempts < 6) window.setTimeout(check, 750); else resolve(false); }, 2500);
+        window[callbackName] = result => {
+          window.clearTimeout(timeout); cleanup();
+          if (result?.saved) resolve(true); else if (attempts < 6) window.setTimeout(check, 750); else resolve(false);
+        };
+        script.onerror = () => { window.clearTimeout(timeout); cleanup(); if (attempts < 6) window.setTimeout(check, 750); else resolve(false); };
+        script.src = `${submissionUrl}?type=exit&submissionId=${encodeURIComponent(submissionId)}&callback=${encodeURIComponent(callbackName)}&t=${Date.now()}`;
+        document.head.append(script);
+      };
+      check();
+    });
+  }
+  async function submitJudgment() {
+    if (!completeReport()) return;
+    const button = $("#submit-judgment");
+    const status = $("#report-status");
+    const submission = payload();
+    const currentFingerprint = JSON.stringify(submission);
+    if (!state.submission || state.submission.fingerprint !== currentFingerprint) {
+      state.submission = { fingerprint: currentFingerprint, submissionId: newSubmissionId(), confirmed: false };
+      save();
+    }
+    submission.submissionId = state.submission.submissionId;
+    button.disabled = true; button.textContent = "SUBMITTING…"; status.textContent = "SENDING YOUR EXIT TICKET TO MR. ROGERS…";
+    try {
+      await fetch(submissionUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "application/json" }, body: JSON.stringify(submission) });
+      if (!await verifySubmission(submission.submissionId)) throw new Error("Submission could not be confirmed");
+      state.submission.confirmed = true; save(); updateReport(); showAward();
+      $("#decision-award").scrollIntoView({ behavior: "smooth", block: "start" });
+    } catch (error) {
+      button.disabled = false; button.textContent = "TRY SUBMISSION AGAIN";
+      status.textContent = "NOT CONFIRMED—YOUR RESPONSE MAY NOT HAVE SAVED. TRY AGAIN OR SEE MR. ROGERS.";
+    }
   }
 
   $$("[role=tab]").forEach((tab, index, tabs) => {
@@ -104,16 +197,17 @@
       state.evidence = uniqueAdd(state.evidence, card.dataset.evidence); save(); updateEvidence();
     } else { feedback.textContent = "Look at the argument, not just the topic. Try again."; feedback.className = "is-wrong"; }
   }));
-  fieldIds.forEach(id => {
+  fieldIds.filter(id => !["class-period", "student-name"].includes(id)).forEach(id => {
     const field = $(`#${id}`);
     field.value = state.fields[id] || "";
-    field.addEventListener("input", () => { state.fields[id] = field.value; save(); updatePassport(); });
-    field.addEventListener("change", () => { state.fields[id] = field.value; save(); updatePassport(); });
+    field.addEventListener("input", () => { state.fields[id] = field.value; save(); updateReport(); });
+    field.addEventListener("change", () => { state.fields[id] = field.value; save(); updateReport(); });
   });
-  $("#preview-passport").addEventListener("click", () => { $("#passport").hidden = false; updatePassport(); $("#passport").scrollIntoView({ behavior: "smooth", block: "start" }); });
-  $("#print-passport").addEventListener("click", () => { $("#passport").hidden = false; updatePassport(); window.print(); });
+  $("#class-period").addEventListener("change", () => { state.fields["class-period"] = value("class-period"); state.fields["student-name"] = ""; save(); populateStudents(); });
+  $("#student-name").addEventListener("change", () => { state.fields["student-name"] = value("student-name"); save(); updateReport(); });
+  $("#submit-judgment").addEventListener("click", submitJudgment);
   $("#reset-lesson").addEventListener("click", () => { if (window.confirm("Erase saved progress for this lesson and start over?")) { localStorage.removeItem(key); window.location.reload(); } });
 
   if (state.opening) { const opening = $(`input[name=opening][value=${state.opening}]`); if (opening) opening.checked = true; }
-  updateProgress(); updateEvidence(); updatePassport();
+  updateProgress(); updateEvidence(); updateReport(); loadRoster();
 })();
