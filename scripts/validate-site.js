@@ -482,9 +482,9 @@ function validateSharedCourseExperience() {
     'BRUTUS', 'MADISON', 'HAMILTON', 'DEMOCRACY DECISION AWARD',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
     'When making a new social-media policy, who should government listen to most?',
-    'THE FOUNDERS’ TEST', 'stable government with government run by the people',
     'docs/brutus-1.html', 'docs/federalist-10.html', 'docs/constitution.html',
-    'SUM UP THE THREE MODELS', 'That is nine sentences total.', 'Describe it in one sentence.',
+    'SUM UP THE THREE MODELS', 'That is nine sentences total.',
+    'YOUR RESPONSE — Write all nine sentences here.', 'id="model-summary-response"',
     'assets/democracy-filtered/brutus-advocate.jpg',
     'assets/democracy-filtered/madison-advocate.jpg',
     'assets/democracy-filtered/hamilton-advocate.jpg',
@@ -507,12 +507,12 @@ function validateSharedCourseExperience() {
     }
   });
   const democracyScript = fs.readFileSync(path.join(root, 'democracy-filtered.js'), 'utf8');
-  if (!democracyScript.includes('localStorage') || !democracyScript.includes('type: "democracy-filtered"') ||
+  if (!democracyScript.includes('localStorage') ||
       !democracyScript.includes('fetch("content.json", { cache: "no-store" })') ||
       !democracyScript.includes('verifySubmission') || !democracyScript.includes('submissionId') ||
       !democracyScript.includes('model-summary-response') || !democracyScript.includes('type: "exit"') ||
       !democracyScript.includes('question: "Democracy, Filtered') || !democracyScript.includes('checks.length === 4')) {
-    errors.push('Democracy, Filtered must use the final roster, save progress locally, and verify Final Judgment submission.');
+    errors.push('Democracy, Filtered must use the final roster, save progress locally, and verify exit-ticket submission.');
   }
   ['id="submit-judgment"', 'id="decision-award"', 'id="award-student"', 'id="award-model"', '9 SENTENCES', 'TURN YOUR SCREEN AND SHOW MR. ROGERS'].forEach(function (content) {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered submitted award is missing: ' + content);
