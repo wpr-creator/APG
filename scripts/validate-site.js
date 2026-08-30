@@ -480,7 +480,7 @@ function validateSharedCourseExperience() {
     '<strong>COALITION</strong>', '<strong>INSTITUTIONAL FILTER</strong>',
     'BRUTUS', 'MADISON', 'HAMILTON', 'LESSON COMPLETE',
     'THREE DOCUMENTS, THREE CLUES', 'BRUTUS NO. 1', 'FEDERALIST NO. 10', 'U.S. CONSTITUTION',
-    'When making a new social-media policy, who should government listen to most?',
+    'WHO SHOULD GOVERNMENT LISTEN TO?',
     'docs/brutus-1.html', 'docs/federalist-10.html', 'docs/constitution.html',
     'For each model, write what it means, one strength, and one weakness.',
     'Use your own words. Write all nine sentences in the box.', 'id="model-summary-response"',
@@ -491,6 +491,10 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!democracyFiltered.includes(content)) errors.push('Democracy, Filtered lesson is missing: ' + content);
   });
+  if (!democracyFiltered.includes('THE SCENARIO + THE DECISION') ||
+      democracyFiltered.includes('class="mission"') || democracyFiltered.includes('name="opening"')) {
+    errors.push('Democracy, Filtered must combine the scenario and decision without an inactive opening poll.');
+  }
   if ((democracyFiltered.match(/class="path-challenge"/g) || []).length !== 12 ||
       (democracyFiltered.match(/data-check="(brutus|madison|hamilton)-[1-4]"/g) || []).length !== 12 ||
       democracyFiltered.includes('<figcaption>PUBLIC VOICES') || democracyFiltered.includes('class="route"') ||

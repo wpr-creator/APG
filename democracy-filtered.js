@@ -2,7 +2,7 @@
   "use strict";
   const key = "apg-democracy-filtered-v1";
   const submissionUrl = "https://script.google.com/macros/s/AKfycbyPbD_iSjdjtKO48jc2QDsMysiGl4j_K0ZzKlJeWlRVGgZJ8LSINO6iFWwPjd6a9gfe6w/exec";
-  const empty = { opening: "", paths: [], evidence: [], fields: {}, submission: null };
+  const empty = { paths: [], evidence: [], fields: {}, submission: null };
   let state = load();
   let roster = [];
   const $ = (selector, root = document) => root.querySelector(selector);
@@ -211,7 +211,6 @@
       selectTab(tabs[next].dataset.model, true);
     });
   });
-  $$("input[name=opening]").forEach(input => input.addEventListener("change", () => { state.opening = input.value; save(); }));
   $$(".path-challenge button").forEach(button => button.addEventListener("click", () => {
     const box = button.closest(".path-challenge");
     const feedback = $(".challenge-feedback", box);
@@ -238,6 +237,5 @@
   $("#submit-judgment").addEventListener("click", submitJudgment);
   $("#reset-lesson").addEventListener("click", () => { if (window.confirm("Erase saved progress for this lesson and start over?")) { localStorage.removeItem(key); window.location.reload(); } });
 
-  if (state.opening) { const opening = $(`input[name=opening][value=${state.opening}]`); if (opening) opening.checked = true; }
   addTermDefinitions(); updateProgress(); updateEvidence(); updateReport(); loadRoster();
 })();
