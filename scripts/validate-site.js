@@ -469,6 +469,22 @@ function validateSharedCourseExperience() {
   if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
     errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
+  if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html"') ||
+      parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
+    errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
+  }
+  const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
+  const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');
+  ['CONCEPT<br><span>PRACTICE</span>', 'Choose the idea that best fits each example.', 'QUESTION 1 OF 12', 'NEXT QUESTION →'].forEach(function (requiredText) {
+    if (!unit1ConceptPractice.includes(requiredText)) errors.push('Unit 1 Concept Practice is missing: ' + requiredText);
+  });
+  if ((unit1ConceptScript.match(/lesson: "/g) || []).length !== 12 ||
+      !unit1ConceptScript.includes('NATURAL RIGHTS') ||
+      !unit1ConceptScript.includes('PARTICIPATORY DEMOCRACY') ||
+      !unit1ConceptScript.includes('FEDERALIST NO. 10')) {
+    errors.push('Unit 1 Concept Practice must keep 12 questions spanning lessons 1.01 and 1.02.');
+  }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
     'How does representative democracy decide whose voices matter?',
