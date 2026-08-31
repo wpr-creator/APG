@@ -265,7 +265,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260831-resource-rows',
     'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260831-resource-rows',
+    'app.js?v=20260831-guided-practice',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -485,16 +485,18 @@ function validateSharedCourseExperience() {
   }
   const unitResourceAppCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const unitResourceStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
+  ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES & PRACTICE', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
     if (!unitResourceAppCode.includes(`label: "${rowLabel}"`)) errors.push('Lesson resource row is missing: ' + rowLabel);
   });
   if (!unitResourceAppCode.includes('if (!categoryResources.length) return;') ||
       !unitResourceAppCode.includes('resourceType.includes("INTERACTIVE")') ||
+      !unitResourceAppCode.includes('resourceType.includes("PRACTICE")') ||
+      !unitResourceAppCode.includes('resourceType.includes("REVIEW")') ||
       !unitResourceStyles.includes('.unit-resource-grid { display: grid; grid-template-columns: repeat(2, 1fr);') ||
       !unitResourceStyles.includes('.unit-resource { min-height: 92px;') ||
       !unitResourceStyles.includes('text-align: left;') ||
       unitResourceAppCode.includes('unit-resource-item-centered')) {
-    errors.push('Lesson resource rows must hide empty categories, use two equal columns, left-align cards, and group interactive pages with assignments.');
+    errors.push('Lesson resource rows must hide empty categories, use two equal columns, left-align cards, group practice with guided notes, and group interactive lessons with assignments.');
   }
   const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
   const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');

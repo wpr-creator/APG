@@ -297,7 +297,7 @@
         const categories = [
           { key: "assessment", label: "ASSESSMENTS" },
           { key: "assignment", label: "ASSIGNMENTS & PROJECTS" },
-          { key: "guided-notes", label: "GUIDED NOTES" },
+          { key: "guided-notes", label: "GUIDED NOTES & PRACTICE" },
           { key: "reading", label: "READINGS & RESOURCES" }
         ];
         const categorizedResources = new Map(categories.map(category => [category.key, []]));
@@ -305,7 +305,7 @@
           const resourceType = (resource.note || "").toUpperCase();
           let category = categories.some(item => item.key === resource.category) ? resource.category : "reading";
           if (!resource.category && (lesson === "ASSESSMENTS" || resourceType.includes("ASSESSMENT") || resourceType.includes("TEST"))) category = "assessment";
-          else if (!resource.category && resourceType.includes("GUIDED NOTES")) category = "guided-notes";
+          else if (!resource.category && (resourceType.includes("GUIDED NOTES") || resourceType.includes("PRACTICE") || resourceType.includes("REVIEW"))) category = "guided-notes";
           else if (!resource.category && (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT") || resourceType.includes("INTERACTIVE"))) category = "assignment";
           categorizedResources.get(category).push(resource);
         });
