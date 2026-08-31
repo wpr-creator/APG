@@ -474,6 +474,15 @@ function validateSharedCourseExperience() {
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
     errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
   }
+  const unitOnePracticeIndex = courseData.indexOf('id: "u1-concept-practice"');
+  const unitOne102Index = courseData.indexOf('id: "u1-102-democracy-filtered"');
+  const unitOne101Index = courseData.indexOf('id: "u1-101-democratic-ideals-review"');
+  if (!(unitOnePracticeIndex < unitOne102Index && unitOne102Index < unitOne101Index)) {
+    errors.push('Unit 1 must show Concept Practice, then lesson 1.02, then lesson 1.01.');
+  }
+  if (courseData.includes('id: "u1-103-history-lesson"') || parsedSiteContent.assignmentUnlocks['u1-103-history-lesson'] !== false) {
+    errors.push('Lesson 1.03 must remain hidden until it is introduced.');
+  }
   const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
   const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');
   ['CONCEPT<br><span>PRACTICE</span>', 'Choose the idea that best fits each example.', 'QUESTION 1', 'NEXT QUESTION →'].forEach(function (requiredText) {

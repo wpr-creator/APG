@@ -44,17 +44,16 @@ window.COURSE_DATA = {
       ],
       resources: [
         { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/", centered: true },
+        { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html" },
+        { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" },
+        { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },
         { id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html", centered: true },
         { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
         { id: "u1-101-declaration-annotation", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION ANNOTATION", note: "ASSIGNMENT", url: "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0" },
         { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0" },
-        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing" },
-        { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" },
-        { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },
-        { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html" },
-        { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE TIMELINE · RESEARCH", url: "history-lesson.html" }
+        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing" }
       ]
     },
     {
