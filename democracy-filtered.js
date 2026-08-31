@@ -66,7 +66,10 @@
     $("#progress-fill").style.width = `${(count / 3) * 100}%`;
     $$(".path-challenge").forEach(box => {
       if (!state.paths.includes(box.dataset.check)) return;
-      $$('button', box).forEach(button => button.disabled = true);
+      $$("button", box).forEach(button => {
+        button.disabled = true;
+        button.classList.toggle("is-selected-answer", button.dataset.answer === "correct");
+      });
       const feedback = $(".challenge-feedback", box);
       feedback.textContent = "CHECK COMPLETE ✓";
       feedback.className = "challenge-feedback is-correct";
@@ -81,7 +84,10 @@
     $$(".evidence-card").forEach(card => {
       if (!state.evidence.includes(card.dataset.evidence)) return;
       card.classList.add("solved");
-      $$("button", card).forEach(button => button.disabled = true);
+      $$("button", card).forEach(button => {
+        button.disabled = true;
+        button.classList.toggle("is-selected-answer", button.dataset.choice === card.dataset.evidence);
+      });
       $(":scope > p", card).textContent = "CLASSIFIED ✓";
       $(":scope > p", card).className = "is-correct";
     });
@@ -215,6 +221,7 @@
     const box = button.closest(".path-challenge");
     const feedback = $(".challenge-feedback", box);
     if (button.dataset.answer === "correct") {
+      button.classList.add("is-selected-answer");
       state.paths = uniqueAdd(state.paths, box.dataset.check); save(); updateProgress();
       feedback.textContent = "Yes—that idea fits this model. ✓"; feedback.className = "challenge-feedback is-correct";
     } else { feedback.textContent = "Not quite. Re-read the explanation and document connection, then try again."; feedback.className = "challenge-feedback is-wrong"; }
@@ -223,6 +230,7 @@
     const card = button.closest(".evidence-card");
     const feedback = $(":scope > p", card);
     if (button.dataset.choice === card.dataset.evidence) {
+      button.classList.add("is-selected-answer");
       state.evidence = uniqueAdd(state.evidence, card.dataset.evidence); save(); updateEvidence();
     } else { feedback.textContent = "Look at the argument, not just the topic. Try again."; feedback.className = "is-wrong"; }
   }));

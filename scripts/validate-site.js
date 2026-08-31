@@ -532,6 +532,11 @@ function validateSharedCourseExperience() {
     errors.push('Democracy, Filtered must not retain the retired printable Voice Passport.');
   }
   const democracyStyles = fs.readFileSync(path.join(root, 'democracy-filtered.css'), 'utf8');
+  if (!democracyScript.includes('is-selected-answer') ||
+      !democracyStyles.includes('.path-challenge button.is-selected-answer') ||
+      !democracyStyles.includes('.classify button.is-selected-answer')) {
+    errors.push('Democracy, Filtered selected answers must remain visibly filled and readable.');
+  }
   if (!democracyStyles.includes('grid-template-columns:minmax(360px,42%) 1fr') ||
       !democracyStyles.includes('.advocate-copy{display:contents}') ||
       !democracyStyles.includes('.advocate-copy>.check-set{grid-column:1/-1}') ||
