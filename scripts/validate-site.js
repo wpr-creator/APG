@@ -571,6 +571,13 @@ function validateSharedCourseExperience() {
       courseData.includes('0.7 —')) {
     errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
   }
+  const unitOneJoinCard = 'id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/", centered: true';
+  if (!courseData.includes(unitOneJoinCard) ||
+      courseData.indexOf(unitOneJoinCard) > courseData.indexOf('id: "u1-101-declaration"') ||
+      parsedSiteContent.assignmentUnlocks['u1-ap-classroom'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-ap-classroom'] !== 'https://myap.collegeboard.org/') {
+    errors.push('Unit 1 must begin with the open AP Classroom join card and both class codes.');
+  }
   const proveCaseFiles = [
     'prove-your-case.html',
     'prove-your-case/case-data.js',

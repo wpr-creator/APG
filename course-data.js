@@ -43,6 +43,7 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
+        { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/", centered: true },
         { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
