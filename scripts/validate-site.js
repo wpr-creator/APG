@@ -578,6 +578,9 @@ function validateSharedCourseExperience() {
       parsedSiteContent.assignmentUrls['u1-ap-classroom'] !== 'https://myap.collegeboard.org/') {
     errors.push('Unit 1 must begin with the open AP Classroom join card and both class codes.');
   }
+  if (courseData.indexOf('id: "u1-101-democratic-ideals-review"') > courseData.indexOf('id: "u1-101-declaration"')) {
+    errors.push('The centered Democratic Ideals Review must remain first in lesson 1.01.');
+  }
   const proveCaseFiles = [
     'prove-your-case.html',
     'prove-your-case/case-data.js',
