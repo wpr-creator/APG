@@ -262,10 +262,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260826-case-exit-layout',
+    'styles.css?v=20260831-resource-rows',
     'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260826-confirmed-exit-ticket',
+    'app.js?v=20260831-resource-rows',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -454,8 +454,8 @@ function validateSharedCourseExperience() {
       errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
     }
   });
-  if (!courseData.includes('id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html", centered: true')) {
-    errors.push('The centered Democratic Ideals Review card is missing from Unit 1.01.');
+  if (!courseData.includes('id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html"')) {
+    errors.push('The Democratic Ideals Review card is missing from Unit 1.01.');
   }
   const unit102Resources = {
     'u1-102-democracy-filtered': 'democracy-filtered.html',
@@ -469,10 +469,10 @@ function validateSharedCourseExperience() {
   if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
     errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
-  if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html", centered: true') ||
+  if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== false ||
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
-    errors.push('The closed, centered Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
+    errors.push('The closed Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
   }
   const unitOnePracticeIndex = courseData.indexOf('id: "u1-concept-practice"');
   const unitOne102Index = courseData.indexOf('id: "u1-102-democracy-filtered"');
@@ -482,6 +482,19 @@ function validateSharedCourseExperience() {
   }
   if (courseData.includes('id: "u1-103-history-lesson"') || parsedSiteContent.assignmentUnlocks['u1-103-history-lesson'] !== false) {
     errors.push('Lesson 1.03 must remain hidden until it is introduced.');
+  }
+  const unitResourceAppCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  const unitResourceStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
+  ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
+    if (!unitResourceAppCode.includes(`label: "${rowLabel}"`)) errors.push('Lesson resource row is missing: ' + rowLabel);
+  });
+  if (!unitResourceAppCode.includes('if (!categoryResources.length) return;') ||
+      !unitResourceAppCode.includes('resourceType.includes("INTERACTIVE")') ||
+      !unitResourceStyles.includes('.unit-resource-grid { display: grid; grid-template-columns: repeat(2, 1fr);') ||
+      !unitResourceStyles.includes('.unit-resource { min-height: 92px;') ||
+      !unitResourceStyles.includes('text-align: left;') ||
+      unitResourceAppCode.includes('unit-resource-item-centered')) {
+    errors.push('Lesson resource rows must hide empty categories, use two equal columns, left-align cards, and group interactive pages with assignments.');
   }
   const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
   const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');
@@ -604,7 +617,7 @@ function validateSharedCourseExperience() {
       courseData.includes('0.7 —')) {
     errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
   }
-  const unitOneJoinCard = 'id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/", centered: true';
+  const unitOneJoinCard = 'id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/"';
   if (!courseData.includes(unitOneJoinCard) ||
       courseData.indexOf(unitOneJoinCard) > courseData.indexOf('id: "u1-101-declaration"') ||
       parsedSiteContent.assignmentUnlocks['u1-ap-classroom'] !== true ||

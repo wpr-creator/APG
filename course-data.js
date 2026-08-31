@@ -17,18 +17,18 @@ window.COURSE_DATA = {
         { id: "course-site", lesson: "0.1 — CLASS IS IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
         { id: "ap-classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/" },
         { id: "syllabus", lesson: "0.2 — READ THE FINE PRINT", title: "CLASS SYLLABUS", url: "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing" },
-        { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0" },
-        { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html" },
-        { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77" },
-        { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog" },
-        { id: "civics-field-guide", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0" },
+        { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0", category: "assignment" },
+        { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html", category: "assignment" },
+        { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77", category: "assignment" },
+        { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog", category: "assignment" },
+        { id: "civics-field-guide", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0", category: "assignment" },
         { id: "mr-smith-extension", lesson: "ASSESSMENTS", title: "MR. SMITH GOES TO WASHINGTON EXTENSION", status: "SEE MR. ROGERS", url: "" },
-        { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html" },
+        { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html", category: "assignment" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
         { id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", status: "SEE MR. ROGERS", url: "" },
         { id: "ap-addendum", lesson: "0.6 — THE COURT IS IN SESSION", title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", status: "SEE MR. ROGERS", url: "" },
-        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html" }
+        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html", category: "assignment" }
       ]
     },
     {
@@ -43,11 +43,11 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
-        { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/", centered: true },
-        { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html", centered: true },
+        { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/" },
+        { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html" },
         { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" },
         { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },
-        { id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html", centered: true },
+        { id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html" },
         { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },

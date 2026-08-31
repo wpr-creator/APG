@@ -293,62 +293,81 @@
         if (lesson === "ASSESSMENTS") group.classList.add("unit-resource-group-assessments");
         const lessonTitle = document.createElement("h2");
         lessonTitle.textContent = lesson;
-        const resourceGrid = document.createElement("div");
-        resourceGrid.className = "unit-resource-grid";
+        group.appendChild(lessonTitle);
+        const categories = [
+          { key: "assessment", label: "ASSESSMENTS" },
+          { key: "assignment", label: "ASSIGNMENTS & PROJECTS" },
+          { key: "guided-notes", label: "GUIDED NOTES" },
+          { key: "reading", label: "READINGS & RESOURCES" }
+        ];
+        const categorizedResources = new Map(categories.map(category => [category.key, []]));
         lessonResources.forEach(resource => {
-          const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
-          const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
-          const card = document.createElement(unlocked ? "a" : "div");
-          card.className = "unit-resource";
           const resourceType = (resource.note || "").toUpperCase();
-          if (lesson === "ASSESSMENTS") card.classList.add("unit-resource-assessment");
-          else if (resourceType.includes("GUIDED NOTES")) card.classList.add("unit-resource-guided-notes");
-          else if (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT")) card.classList.add("unit-resource-assignment");
-          else if (resourceType.includes("READ") || resourceType.includes("REVIEW")) card.classList.add("unit-resource-reading");
-          if (unlocked) {
-            card.href = resourceUrl;
-            if (!resourceUrl.startsWith("#")) {
-              card.target = "_blank";
-              card.rel = "noopener";
-            }
-            if (resource.id === "course-site") {
-              card.addEventListener("click", event => {
-                event.preventDefault();
-                const device = `${navigator.platform || ""} ${navigator.userAgent || ""}`;
-                const appleDevice = /Mac|iPhone|iPad|iPod/i.test(device);
-                const chromebook = /CrOS/i.test(device);
-                const shortcut = appleDevice ? "⌘D" : "Ctrl+D";
-                const deviceNote = chromebook ? " on your Chromebook" : "";
-                window.location.hash = "home";
-                window.setTimeout(function () {
-                  window.alert(`Press ${shortcut}${deviceNote} to bookmark this course website.`);
-                }, 100);
-              });
-            }
-          } else {
-            card.classList.add("placeholder");
-            card.setAttribute("aria-disabled", "true");
-          }
-          const resourceTitle = document.createElement("strong");
-          resourceTitle.textContent = resource.title;
-          card.append(resourceTitle);
-          if (resource.note) {
-            const resourceNote = document.createElement("span");
-            resourceNote.textContent = resource.note;
-            card.append(resourceNote);
-          }
-          if (!unlocked) {
-            const resourceStatus = document.createElement("span");
-            resourceStatus.textContent = resource.status || "COMING SOON";
-            card.append(resourceStatus);
-          }
-          const item = document.createElement("div");
-          item.className = "unit-resource-item";
-          if (resource.centered) item.classList.add("unit-resource-item-centered");
-          item.append(createCompletionStar(resource, unlocked), card);
-          resourceGrid.appendChild(item);
+          let category = categories.some(item => item.key === resource.category) ? resource.category : "reading";
+          if (!resource.category && (lesson === "ASSESSMENTS" || resourceType.includes("ASSESSMENT") || resourceType.includes("TEST"))) category = "assessment";
+          else if (!resource.category && resourceType.includes("GUIDED NOTES")) category = "guided-notes";
+          else if (!resource.category && (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT") || resourceType.includes("INTERACTIVE"))) category = "assignment";
+          categorizedResources.get(category).push(resource);
         });
-        group.append(lessonTitle, resourceGrid);
+        categories.forEach(category => {
+          const categoryResources = categorizedResources.get(category.key);
+          if (!categoryResources.length) return;
+          const resourceRow = document.createElement("section");
+          resourceRow.className = `unit-resource-row unit-resource-row-${category.key}`;
+          const rowTitle = document.createElement("h3");
+          rowTitle.textContent = category.label;
+          const resourceGrid = document.createElement("div");
+          resourceGrid.className = "unit-resource-grid";
+          categoryResources.forEach(resource => {
+            const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
+            const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
+            const card = document.createElement(unlocked ? "a" : "div");
+            card.className = `unit-resource unit-resource-${category.key}`;
+            if (unlocked) {
+              card.href = resourceUrl;
+              if (!resourceUrl.startsWith("#")) {
+                card.target = "_blank";
+                card.rel = "noopener";
+              }
+              if (resource.id === "course-site") {
+                card.addEventListener("click", event => {
+                  event.preventDefault();
+                  const device = `${navigator.platform || ""} ${navigator.userAgent || ""}`;
+                  const appleDevice = /Mac|iPhone|iPad|iPod/i.test(device);
+                  const chromebook = /CrOS/i.test(device);
+                  const shortcut = appleDevice ? "⌘D" : "Ctrl+D";
+                  const deviceNote = chromebook ? " on your Chromebook" : "";
+                  window.location.hash = "home";
+                  window.setTimeout(function () {
+                    window.alert(`Press ${shortcut}${deviceNote} to bookmark this course website.`);
+                  }, 100);
+                });
+              }
+            } else {
+              card.classList.add("placeholder");
+              card.setAttribute("aria-disabled", "true");
+            }
+            const resourceTitle = document.createElement("strong");
+            resourceTitle.textContent = resource.title;
+            card.append(resourceTitle);
+            if (resource.note) {
+              const resourceNote = document.createElement("span");
+              resourceNote.textContent = resource.note;
+              card.append(resourceNote);
+            }
+            if (!unlocked) {
+              const resourceStatus = document.createElement("span");
+              resourceStatus.textContent = resource.status || "COMING SOON";
+              card.append(resourceStatus);
+            }
+            const item = document.createElement("div");
+            item.className = "unit-resource-item";
+            item.append(createCompletionStar(resource, unlocked), card);
+            resourceGrid.appendChild(item);
+          });
+          resourceRow.append(rowTitle, resourceGrid);
+          group.appendChild(resourceRow);
+        });
         resources.append(group);
       });
     }
