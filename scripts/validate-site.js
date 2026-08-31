@@ -503,14 +503,17 @@ function validateSharedCourseExperience() {
   ['CONCEPT<br><span>PRACTICE</span>', 'Choose the idea that best fits each example.', 'QUESTION 1', 'NEXT QUESTION →'].forEach(function (requiredText) {
     if (!unit1ConceptPractice.includes(requiredText)) errors.push('Unit 1 Concept Practice is missing: ' + requiredText);
   });
-  if ((unit1ConceptScript.match(/lesson: "/g) || []).length !== 33 ||
+  if ((unit1ConceptScript.match(/lesson: "/g) || []).length !== 42 ||
       !unit1ConceptScript.includes('NATURAL RIGHTS') ||
       !unit1ConceptScript.includes('EQUALITY') ||
       !unit1ConceptScript.includes('Sovereignty is the source; consent is authorization.') ||
       !unit1ConceptScript.includes('Rights → government → consent → limits → representation') ||
       !unit1ConceptScript.includes('PARTICIPATORY DEMOCRACY') ||
-      !unit1ConceptScript.includes('FEDERALIST NO. 10')) {
-    errors.push('Unit 1 Concept Practice must keep all 33 questions spanning lessons 1.01 and 1.02.');
+      !unit1ConceptScript.includes('FEDERALIST NO. 10') ||
+      !unit1ConceptScript.includes('CLUSTER 4 · BUILD AN ARGUMENT') ||
+      !unit1ConceptScript.includes('REFERENDUM') ||
+      !unit1ConceptScript.includes('upper-class accent')) {
+    errors.push('Unit 1 Concept Practice must keep all 42 assessment-aligned questions spanning Topics 1.1 and 1.2.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
