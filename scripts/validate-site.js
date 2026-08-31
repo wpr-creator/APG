@@ -470,9 +470,9 @@ function validateSharedCourseExperience() {
     errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
   if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html"') ||
-      parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== false ||
+      parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
-    errors.push('The closed Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
+    errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
   }
   const unitOnePracticeIndex = courseData.indexOf('id: "u1-concept-practice"');
   const unitOne102Index = courseData.indexOf('id: "u1-102-democracy-filtered"');
