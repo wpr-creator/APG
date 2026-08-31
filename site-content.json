@@ -8,7 +8,8 @@
     "gov-4": false,
     "gov-5": false
   },
-  "exitQuestion": "CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.",
+  "exitQuestion": "",
+  "exitQuestionDraft": "CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.",
   "upcoming": [
     {
       "title": "1.01 GUIDED NOTES",

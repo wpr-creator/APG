@@ -405,8 +405,8 @@ function validateSharedCourseExperience() {
   }
   const parsedSiteContent = JSON.parse(siteContent);
   const expectedExitQuestion = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
-  if (parsedSiteContent.exitQuestion !== expectedExitQuestion) {
-    errors.push('Today\'s Prove Your Case exit ticket changed or is missing.');
+  if (parsedSiteContent.exitQuestion !== '' || parsedSiteContent.exitQuestionDraft !== expectedExitQuestion) {
+    errors.push('The homepage exit ticket must remain closed while preserving its Prove Your Case draft.');
   }
   const expectedUpcoming = [
     { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
@@ -469,10 +469,10 @@ function validateSharedCourseExperience() {
   if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
     errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
-  if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html"') ||
+  if (!courseData.includes('id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html", centered: true') ||
       parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
-    errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
+    errors.push('The open, centered Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
   }
   const unitOnePracticeIndex = courseData.indexOf('id: "u1-concept-practice"');
   const unitOne102Index = courseData.indexOf('id: "u1-102-democracy-filtered"');
