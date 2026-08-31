@@ -462,8 +462,8 @@ function validateSharedCourseExperience() {
     'u1-102-guided-notes': 'https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing'
   };
   Object.entries(unit102Resources).forEach(function ([resourceId, url]) {
-    if (parsedSiteContent.assignmentUnlocks[resourceId] !== false || parsedSiteContent.assignmentUrls[resourceId] !== url) {
-      errors.push('Unit 1.02 resource must remain closed with its assigned URL: ' + resourceId);
+    if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
+      errors.push('Unit 1.02 resource must remain open with its assigned URL: ' + resourceId);
     }
   });
   if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
