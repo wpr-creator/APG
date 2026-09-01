@@ -3,7 +3,7 @@
 
   const data = window.HEARD_EXPLORER_DATA;
   const search = document.getElementById("organization-search");
-  const topics = document.getElementById("topic-buttons");
+  const resultsSection = document.getElementById("results-section");
   const grid = document.getElementById("organization-grid");
   const count = document.getElementById("result-count");
   const empty = document.getElementById("empty-state");
@@ -14,7 +14,6 @@
   const clearButton = document.getElementById("clear-comparison");
   const comparison = document.getElementById("comparison");
   const comparisonGrid = document.getElementById("comparison-grid");
-  let selectedTopic = data.topics[0].id;
   const selectedOrganizations = new Set();
 
   function topicFor(id) { return data.topics.find(function (topic) { return topic.id === id; }); }
@@ -31,25 +30,6 @@
   function searchableText(organization) {
     const topic = topicFor(organization.topic);
     return normal([organization.name, organization.summary, organization.represents, organization.wants, topic.label].concat(topic.aliases).join(" "));
-  }
-
-  function topicButton(topic) {
-    const button = document.createElement("button");
-    button.type = "button";
-    button.dataset.topic = topic.id;
-    button.textContent = topic.label;
-    button.setAttribute("aria-pressed", String(topic.id === selectedTopic));
-    button.addEventListener("click", function () {
-      selectedTopic = topic.id;
-      search.value = "";
-      renderTopics();
-      renderOrganizations();
-    });
-    return button;
-  }
-
-  function renderTopics() {
-    topics.replaceChildren.apply(topics, data.topics.map(topicButton));
   }
 
   function field(title, text) {
@@ -124,11 +104,12 @@
   function filteredOrganizations() {
     const query = normal(search.value);
     if (query) return data.organizations.filter(function (organization) { return matchesQuery(searchableText(organization), query); });
-    return data.organizations.filter(function (organization) { return organization.topic === selectedTopic; });
+    return [];
   }
 
   function renderOrganizations() {
     const organizations = filteredOrganizations();
+    resultsSection.hidden = !normal(search.value);
     grid.replaceChildren.apply(grid, organizations.map(card));
     count.textContent = organizations.length + (organizations.length === 1 ? " ORGANIZATION" : " ORGANIZATIONS");
     empty.hidden = organizations.length !== 0;
@@ -173,8 +154,6 @@
   }
 
   search.addEventListener("input", function () {
-    selectedTopic = "";
-    renderTopics();
     renderOrganizations();
   });
 
@@ -182,9 +161,7 @@
     const values = new Uint32Array(1);
     window.crypto.getRandomValues(values);
     const organization = data.organizations[values[0] % data.organizations.length];
-    selectedTopic = organization.topic;
     search.value = organization.name;
-    renderTopics();
     renderOrganizations();
     const article = grid.querySelector(".organization-card");
     const open = article && article.querySelector(".open-card");
@@ -205,7 +182,6 @@
     updateCompareTray();
   });
 
-  renderTopics();
   renderOrganizations();
   updateCompareTray();
 }());

@@ -27,15 +27,14 @@
     </header>
 
     <section class="controls" aria-labelledby="start-title">
-      <div class="section-heading"><p class="eyebrow">START HERE</p><h2 id="start-title">CHOOSE AN ISSUE</h2></div>
+      <div class="section-heading"><p class="eyebrow">START HERE</p><h2 id="start-title">SEARCH AN ISSUE</h2></div>
       <div class="search-row">
         <label for="organization-search"><span>SEARCH A WORD</span><input id="organization-search" type="search" placeholder="Try guns, weed, rent, college, TikTok…" autocomplete="off"></label>
         <button id="surprise-button" class="surprise" type="button">SURPRISE ME</button>
       </div>
-      <div id="topic-buttons" class="topic-buttons" role="group" aria-label="Issue topics"></div>
     </section>
 
-    <section class="results" aria-labelledby="results-title">
+    <section id="results-section" class="results" aria-labelledby="results-title" hidden>
       <div class="section-heading results-heading"><div><p class="eyebrow">THE ORGANIZATIONS</p><h2 id="results-title">WHO WANTS A SAY?</h2></div><p id="result-count" class="result-count" aria-live="polite"></p></div>
       <p class="instructions">Open the cards. Notice whose interests each organization represents, what it wants, and how it tries to get government officials to listen.</p>
       <div id="organization-grid" class="organization-grid"></div>

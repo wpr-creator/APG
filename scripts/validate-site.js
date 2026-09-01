@@ -960,12 +960,12 @@ function validateWhoIsTryingToBeHeard() {
   const sandbox = { window: {} };
   vm.runInNewContext(dataCode, sandbox);
   const data = sandbox.window.HEARD_EXPLORER_DATA;
-  if (!data || !Array.isArray(data.topics) || data.topics.length < 6) {
-    errors.push('Unit 5 organization explorer must include at least six topics.');
+  if (!data || !Array.isArray(data.topics) || data.topics.length < 8) {
+    errors.push('Unit 5 organization explorer must include at least eight topics.');
     return;
   }
-  if (!Array.isArray(data.organizations) || data.organizations.length < 24) {
-    errors.push('Unit 5 organization explorer must include at least 24 organizations.');
+  if (!Array.isArray(data.organizations) || data.organizations.length < 32) {
+    errors.push('Unit 5 organization explorer must include at least 32 organizations.');
     return;
   }
   const topicIds = new Set(data.topics.map(function (topic) { return topic.id; }));
