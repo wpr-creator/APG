@@ -512,7 +512,10 @@ function validateSharedCourseExperience() {
       !unit1ConceptScript.includes('FEDERALIST NO. 10') ||
       !unit1ConceptScript.includes('CLUSTER 4 · BUILD AN ARGUMENT') ||
       !unit1ConceptScript.includes('REFERENDUM') ||
-      !unit1ConceptScript.includes('upper-class accent')) {
+      !unit1ConceptScript.includes('upper-class accent') ||
+      !unit1ConceptScript.includes('crypto.getRandomValues') ||
+      !unit1ConceptScript.includes('sessionQuestions = buildSessionQuestions()') ||
+      unit1ConceptScript.includes('Math.random')) {
     errors.push('Unit 1 Concept Practice must keep all 42 assessment-aligned questions spanning Topics 1.1 and 1.2.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');

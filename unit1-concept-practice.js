@@ -48,6 +48,25 @@
     { lesson: "CLUSTER 4 · BUILD AN ARGUMENT", prompt: "Which evidence best supports a claim that pluralist democracy can limit domination by one interest?", choices: ["Brutus says a large republic cannot represent local views.", "Federalist No. 10 says many interests make one-faction control harder.", "The Constitution gives judges life tenure.", "Elite theory emphasizes unequal political resources."], answer: 1, why: "Federalist No. 10 supports the reasoning that a large, diverse sphere makes lasting control by one faction more difficult." }
   ];
 
+  function shuffle(items) {
+    const shuffled = [...items];
+    for (let current = shuffled.length - 1; current > 0; current -= 1) {
+      const randomValue = crypto.getRandomValues(new Uint32Array(1))[0];
+      const swapIndex = randomValue % (current + 1);
+      [shuffled[current], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[current]];
+    }
+    return shuffled;
+  }
+
+  function buildSessionQuestions() {
+    return shuffle(questions).map(item => {
+      const correctChoice = item.choices[item.answer];
+      const choices = shuffle(item.choices);
+      return { ...item, choices, answer: choices.indexOf(correctChoice) };
+    });
+  }
+
+  let sessionQuestions = buildSessionQuestions();
   let index = 0;
   let score = 0;
   let answered = false;
@@ -55,10 +74,10 @@
 
   function render() {
     answered = false;
-    const item = questions[index];
-    $("#progress-copy").textContent = `QUESTION ${index + 1} OF ${questions.length}`;
+    const item = sessionQuestions[index];
+    $("#progress-copy").textContent = `QUESTION ${index + 1} OF ${sessionQuestions.length}`;
     $("#score-copy").textContent = `${score} CORRECT`;
-    $("#progress-fill").style.width = `${(index / questions.length) * 100}%`;
+    $("#progress-fill").style.width = `${(index / sessionQuestions.length) * 100}%`;
     $("#lesson-tag").textContent = item.lesson;
     $("#question-title").textContent = item.prompt;
     $("#feedback").hidden = true;
@@ -77,7 +96,7 @@
   function answer(choiceIndex) {
     if (answered) return;
     answered = true;
-    const item = questions[index];
+    const item = sessionQuestions[index];
     const correct = choiceIndex === item.answer;
     if (correct) score += 1;
     Array.from($("#choices").children).forEach((button, buttonIndex) => {
@@ -89,13 +108,13 @@
     $("#feedback-result").textContent = correct ? "YES — THAT IS THE BEST ANSWER." : `BEST ANSWER: ${item.choices[item.answer].toUpperCase()}`;
     $("#feedback-copy").textContent = item.why;
     $("#feedback").hidden = false;
-    $("#next-question").textContent = index === questions.length - 1 ? "SEE RESULTS →" : "NEXT QUESTION →";
+    $("#next-question").textContent = index === sessionQuestions.length - 1 ? "SEE RESULTS →" : "NEXT QUESTION →";
     $("#next-question").hidden = false;
     $("#next-question").focus();
   }
 
   function next() {
-    if (index < questions.length - 1) {
+    if (index < sessionQuestions.length - 1) {
       index += 1;
       render();
       $("#question-title").focus?.();
@@ -103,12 +122,13 @@
     }
     $(".practice-card").hidden = true;
     $("#results").hidden = false;
-    $("#final-score").textContent = `${score} OF ${questions.length} CORRECT`;
+    $("#final-score").textContent = `${score} OF ${sessionQuestions.length} CORRECT`;
     $("#progress-fill").style.width = "100%";
     $("#results").scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
   }
 
   function restart() {
+    sessionQuestions = buildSessionQuestions();
     index = 0;
     score = 0;
     $("#results").hidden = true;
