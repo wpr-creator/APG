@@ -50,7 +50,14 @@
     top.className = "card-top";
     const badge = document.createElement("span");
     badge.className = "badge";
-    badge.textContent = organization.badge;
+    const logo = document.createElement("img");
+    const badgeText = document.createElement("span");
+    logo.src = "assets/organization-logos/" + organization.id + (organization.id === "yimby" ? ".svg" : ".png");
+    logo.alt = "";
+    badgeText.textContent = organization.badge;
+    logo.addEventListener("load", function () { badgeText.hidden = true; });
+    logo.addEventListener("error", function () { logo.hidden = true; });
+    badge.append(logo, badgeText);
     const identity = document.createElement("div");
     const issue = document.createElement("p");
     issue.className = "issue-label";
@@ -103,7 +110,15 @@
 
   function filteredOrganizations() {
     const query = normal(search.value);
-    if (query) return data.organizations.filter(function (organization) { return matchesQuery(searchableText(organization), query); });
+    if (query) {
+      const directTopics = data.topics.filter(function (topic) {
+        return normal(topic.label) === query || topic.aliases.some(function (alias) { return normal(alias) === query; });
+      }).map(function (topic) { return topic.id; });
+      if (directTopics.length) {
+        return data.organizations.filter(function (organization) { return directTopics.includes(organization.topic); });
+      }
+      return data.organizations.filter(function (organization) { return matchesQuery(searchableText(organization), query); });
+    }
     return [];
   }
 
@@ -142,7 +157,14 @@
     const article = document.createElement("article");
     const badge = document.createElement("span");
     badge.className = "badge";
-    badge.textContent = organization.badge;
+    const logo = document.createElement("img");
+    const badgeText = document.createElement("span");
+    logo.src = "assets/organization-logos/" + organization.id + (organization.id === "yimby" ? ".svg" : ".png");
+    logo.alt = "";
+    badgeText.textContent = organization.badge;
+    logo.addEventListener("load", function () { badgeText.hidden = true; });
+    logo.addEventListener("error", function () { logo.hidden = true; });
+    badge.append(logo, badgeText);
     const title = document.createElement("h3");
     title.textContent = organization.name;
     article.append(badge, title,

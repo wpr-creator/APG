@@ -960,12 +960,12 @@ function validateWhoIsTryingToBeHeard() {
   const sandbox = { window: {} };
   vm.runInNewContext(dataCode, sandbox);
   const data = sandbox.window.HEARD_EXPLORER_DATA;
-  if (!data || !Array.isArray(data.topics) || data.topics.length < 8) {
-    errors.push('Unit 5 organization explorer must include at least eight topics.');
+  if (!data || !Array.isArray(data.topics) || data.topics.length !== 12) {
+    errors.push('Unit 5 organization explorer must include all 12 original topics.');
     return;
   }
-  if (!Array.isArray(data.organizations) || data.organizations.length < 32) {
-    errors.push('Unit 5 organization explorer must include at least 32 organizations.');
+  if (!Array.isArray(data.organizations) || data.organizations.length !== 60) {
+    errors.push('Unit 5 organization explorer must include all 60 original-list organization slots.');
     return;
   }
   const topicIds = new Set(data.topics.map(function (topic) { return topic.id; }));
@@ -978,10 +978,13 @@ function validateWhoIsTryingToBeHeard() {
     organizationIds.add(organization.id);
     if (!topicIds.has(organization.topic)) errors.push('Unknown topic for organization: ' + organization.name);
     if (!/^https:\/\//.test(organization.url)) errors.push('Organization must use an official HTTPS link: ' + organization.name);
+    const logoExtension = organization.id === 'yimby' ? '.svg' : '.png';
+    const logo = path.join(root, 'assets', 'organization-logos', organization.id + logoExtension);
+    if (!fs.existsSync(logo) || fs.statSync(logo).size < 100) errors.push('Missing organization identifying mark: ' + organization.name);
   });
   data.topics.forEach(function (topic) {
     const total = data.organizations.filter(function (organization) { return organization.topic === topic.id; }).length;
-    if (total < 4) errors.push('Topic needs at least four organizations: ' + topic.label);
+    if (total !== 5) errors.push('Topic must include exactly five organization perspectives: ' + topic.label);
   });
 }
 
