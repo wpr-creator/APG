@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Explore how organizations compete to influence government policy in AP Government Unit 5.">
+  <title>Who Is Trying to Be Heard? — AP Government</title>
+  <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="who-is-trying-to-be-heard.css?v=20260831">
+  <script src="who-is-trying-to-be-heard-data.js?v=20260831" defer></script>
+  <script src="who-is-trying-to-be-heard.js?v=20260831" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#explorer">Skip to the explorer</a>
+  <header class="course-header">
+    <div class="course-header-inner">
+      <a class="brand" href="./#home"><img src="assets/course-mark.svg" alt=""><span><strong>AP UNITED STATES GOVERNMENT</strong><small>MR. ROGERS · O'FARRELL HIGH SCHOOL</small></span></a>
+      <nav aria-label="Course navigation"><a href="./#home">Home</a><a href="./#gov-5">Unit 5</a><a href="./#foundations">Foundations</a><a href="./#words">Glossary</a></nav>
+    </div>
+  </header>
+
+  <main id="explorer">
+    <header class="hero">
+      <div><p class="eyebrow">UNIT 5 · INTEREST GROUPS</p><h1>WHO IS TRYING<br><span>TO BE HEARD?</span></h1></div>
+      <div class="hero-brief"><strong>ONE ISSUE. MANY INTERESTS.</strong><p>Search a topic, open the organization cards, and see how different groups try to influence what government does.</p></div>
+    </header>
+
+    <section class="controls" aria-labelledby="start-title">
+      <div class="section-heading"><p class="eyebrow">START HERE</p><h2 id="start-title">CHOOSE AN ISSUE</h2></div>
+      <div class="search-row">
+        <label for="organization-search"><span>SEARCH A WORD</span><input id="organization-search" type="search" placeholder="Try guns, weed, rent, college, TikTok…" autocomplete="off"></label>
+        <button id="surprise-button" class="surprise" type="button">SURPRISE ME</button>
+      </div>
+      <div id="topic-buttons" class="topic-buttons" role="group" aria-label="Issue topics"></div>
+    </section>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="section-heading results-heading"><div><p class="eyebrow">THE ORGANIZATIONS</p><h2 id="results-title">WHO WANTS A SAY?</h2></div><p id="result-count" class="result-count" aria-live="polite"></p></div>
+      <p class="instructions">Open the cards. Notice whose interests each organization represents, what it wants, and how it tries to get government officials to listen.</p>
+      <div id="organization-grid" class="organization-grid"></div>
+      <div id="empty-state" class="empty-state" hidden><strong>NO MATCHES YET.</strong><p>Try a broader word or choose one of the issue buttons above.</p></div>
+    </section>
+
+    <aside id="compare-tray" class="compare-tray" aria-labelledby="compare-title" hidden>
+      <div><p class="eyebrow">COMPARE 2 OR 3</p><h2 id="compare-title">PUT THEIR INTERESTS SIDE BY SIDE</h2><p id="compare-status" aria-live="polite"></p></div>
+      <div class="compare-actions"><button id="open-comparison" type="button">COMPARE CARDS</button><button id="clear-comparison" class="secondary" type="button">CLEAR</button></div>
+    </aside>
+
+    <section id="comparison" class="comparison" aria-labelledby="comparison-title" hidden>
+      <div class="section-heading"><p class="eyebrow">SIDE BY SIDE</p><h2 id="comparison-title">SAME ISSUE, DIFFERENT INTERESTS</h2></div>
+      <div id="comparison-grid" class="comparison-grid"></div>
+    </section>
+
+    <footer class="source-note">
+      <p><strong>ABOUT THESE CARDS</strong> Descriptions summarize each organization’s stated mission and policy interests in neutral, student-friendly language. Use the official links to learn more. Last verified August 31, 2026.</p>
+      <p>These organizations do not sponsor or endorse this educational activity. Inclusion does not mean APG or O’Farrell High School supports an organization or its positions.</p>
+    </footer>
+  </main>
+</body>
+</html>

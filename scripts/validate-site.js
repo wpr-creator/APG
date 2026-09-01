@@ -255,7 +255,8 @@ function validateSharedCourseExperience() {
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
     const isDemocracyFiltered = relative(file) === 'democracy-filtered.html' && html.includes('democracy-filtered.css');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !html.includes('styles-gov-theme.css')) {
+    const isHeardExplorer = relative(file) === 'who-is-trying-to-be-heard.html' && html.includes('who-is-trying-to-be-heard.css');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -938,6 +939,52 @@ function validateCalendarData() {
   console.log('Local politics calendar:', Object.keys(database).length + ' dates,', entries.length + ' entries');
 }
 
+function validateWhoIsTryingToBeHeard() {
+  const pageFile = path.join(root, 'who-is-trying-to-be-heard.html');
+  const dataFile = path.join(root, 'who-is-trying-to-be-heard-data.js');
+  const logicFile = path.join(root, 'who-is-trying-to-be-heard.js');
+  if (![pageFile, dataFile, logicFile].every(fs.existsSync)) {
+    errors.push('Unit 5 organization explorer files are incomplete.');
+    return;
+  }
+  const page = fs.readFileSync(pageFile, 'utf8');
+  const dataCode = fs.readFileSync(dataFile, 'utf8');
+  const logic = fs.readFileSync(logicFile, 'utf8');
+  ['WHO IS TRYING', 'SURPRISE ME', 'COMPARE CARDS', 'do not sponsor or endorse'].forEach(function (text) {
+    if (!page.includes(text)) errors.push('Unit 5 organization explorer is missing: ' + text);
+  });
+  if (/Math\.random\s*\(/.test(page + dataCode + logic)) {
+    errors.push('Unit 5 organization explorer must use secure random selection, not Math.random.');
+  }
+  const vm = require('vm');
+  const sandbox = { window: {} };
+  vm.runInNewContext(dataCode, sandbox);
+  const data = sandbox.window.HEARD_EXPLORER_DATA;
+  if (!data || !Array.isArray(data.topics) || data.topics.length < 6) {
+    errors.push('Unit 5 organization explorer must include at least six topics.');
+    return;
+  }
+  if (!Array.isArray(data.organizations) || data.organizations.length < 24) {
+    errors.push('Unit 5 organization explorer must include at least 24 organizations.');
+    return;
+  }
+  const topicIds = new Set(data.topics.map(function (topic) { return topic.id; }));
+  const organizationIds = new Set();
+  data.organizations.forEach(function (organization) {
+    ['id', 'topic', 'name', 'summary', 'who', 'represents', 'wants', 'methods', 'competes', 'url'].forEach(function (field) {
+      if (!organization[field]) errors.push('Incomplete organization record: ' + (organization.name || organization.id || 'unknown') + ' — ' + field);
+    });
+    if (organizationIds.has(organization.id)) errors.push('Duplicate organization id: ' + organization.id);
+    organizationIds.add(organization.id);
+    if (!topicIds.has(organization.topic)) errors.push('Unknown topic for organization: ' + organization.name);
+    if (!/^https:\/\//.test(organization.url)) errors.push('Organization must use an official HTTPS link: ' + organization.name);
+  });
+  data.topics.forEach(function (topic) {
+    const total = data.organizations.filter(function (organization) { return organization.topic === topic.id; }).length;
+    if (total < 4) errors.push('Topic needs at least four organizations: ' + topic.label);
+  });
+}
+
 walk(root);
 validateJavaScript();
 validateJson();
@@ -948,6 +995,7 @@ validateSocialMetadata();
 validateAccessibilityAndHygiene();
 validateSharedCourseExperience();
 validateCalendarData();
+validateWhoIsTryingToBeHeard();
 
 if (errors.length) {
   console.error('\n' + errors.join('\n'));

@@ -123,6 +123,7 @@ window.COURSE_DATA = {
         ["Media", "How does political information shape participation?", "AP Topics 5.12–5.13", "Examine agenda setting, fragmented media, social media, and strategic communication.", "Evaluate the political effect of a media choice"]
       ],
       resources: [
+        { id: "u5-who-is-heard", lesson: "UNIT 5 PRACTICE", title: "WHO IS TRYING TO BE HEARD?", note: "INTERACTIVE · INTEREST GROUPS", url: "who-is-trying-to-be-heard.html" },
         { id: "ap-u5-overview", lesson: "UNIT 5 COURSE HUB", title: "UNIT 5 OVERVIEW", url: "unit5.html" },
         { id: "ap-u5-cases", lesson: "SUPREME COURT CASES", title: "UNIT 5 CASES", url: "unit5-cases.html" },
         { id: "california-ballot-2026", lesson: "UNIT 5 EXTENSION", title: "2026 CALIFORNIA BALLOT", url: "#election-2026" }

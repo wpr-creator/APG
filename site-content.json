@@ -72,6 +72,7 @@
     "ap-u5-overview": false,
     "ap-u5-cases": false,
     "california-ballot-2026": true
+    ,"u5-who-is-heard": true
   },
   "assignmentUrls": {
     "classroom": "https://classroom.google.com/",
@@ -118,6 +119,7 @@
     "ap-u5-overview": "unit5.html",
     "ap-u5-cases": "unit5-cases.html",
     "california-ballot-2026": "#election-2026"
+    ,"u5-who-is-heard": "who-is-trying-to-be-heard.html"
   },
   "assignmentUnlockAt": {},
   "proveCaseUnlocks": {
