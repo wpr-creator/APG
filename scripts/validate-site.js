@@ -262,7 +262,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260831-resource-rows',
+    'styles.css?v=20260831-white-checks',
     'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260831-guided-practice',
@@ -710,6 +710,10 @@ function validateSharedCourseExperience() {
   ['.unit-resource-item', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Resource card styling changed or missing: ' + selector);
   });
+  if (!primaryStyles.includes('color: #174f85; background: var(--white); border: 5px solid #174f85;') ||
+      !primaryStyles.includes('.unit-completion-star[aria-pressed="true"] { color: var(--white); background: #174f85;')) {
+    errors.push('Unit completion controls must begin white and become blue with a white star when complete.');
+  }
   if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
     errors.push('Unit pages must not render the retired Road Ahead lessons section.');
   }
