@@ -484,6 +484,18 @@ function validateSharedCourseExperience() {
   if (courseData.includes('id: "u1-103-history-lesson"') || parsedSiteContent.assignmentUnlocks['u1-103-history-lesson'] !== false) {
     errors.push('Lesson 1.03 must remain hidden until it is introduced.');
   }
+  const historyLesson = fs.readFileSync(path.join(root, 'history-lesson.html'), 'utf8');
+  if ((historyLesson.match(/<article class="moment/g) || []).length !== 7) {
+    errors.push('The History Lesson must contain exactly seven vertical timeline sections.');
+  }
+  ['TOPICS 1.3–1.5', 'GOVERNMENT POWER &amp; INDIVIDUAL RIGHTS', 'CHALLENGES OF THE ARTICLES', 'RATIFICATION',
+    'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html', 'docs/constitution.html',
+    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'href="./#words"'].forEach(function (requiredText) {
+    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson is missing: ' + requiredText);
+  });
+  ['history-research.html', 'history-research.js', 'history-research-data.js'].forEach(function (retiredFile) {
+    if (fs.existsSync(path.join(root, retiredFile))) errors.push('Retired History Lesson investigation file is still present: ' + retiredFile);
+  });
   const unitResourceAppCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const unitResourceStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
   ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES & PRACTICE', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
