@@ -266,7 +266,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260831-white-checks',
     'course-data.js?v=20260826-unit-102-notes',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260831-guided-practice',
+    'app.js?v=20260902-linked-glossary',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -490,9 +490,20 @@ function validateSharedCourseExperience() {
   }
   ['TOPICS 1.3–1.5', 'GOVERNMENT POWER &amp; INDIVIDUAL RIGHTS', 'CHALLENGES OF THE ARTICLES', 'RATIFICATION',
     'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html', 'docs/constitution.html',
-    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'href="./#words"'].forEach(function (requiredText) {
+    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'glossary-data.js?v=20260830'].forEach(function (requiredText) {
     if (!historyLesson.includes(requiredText)) errors.push('The History Lesson is missing: ' + requiredText);
   });
+  const historyLessonScript = fs.readFileSync(path.join(root, 'history-lesson.js'), 'utf8');
+  const historyLessonStyles = fs.readFileSync(path.join(root, 'history-lesson.css'), 'utf8');
+  if (!historyLessonScript.includes('window.APG_GLOSSARY_UNITS') ||
+      !historyLessonScript.includes('className = "glossary-term"') ||
+      !historyLessonScript.includes('?glossary=${encodeURIComponent(record.term)}#words') ||
+      !historyLessonStyles.includes('text-decoration-style:dotted') ||
+      !historyLessonStyles.includes('.glossary-term:hover::after,.glossary-term:focus::after') ||
+      !historyLessonStyles.includes('.hero h1,.hero .essential,.hero .directions{color:var(--ink)}') ||
+      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('function openLinkedGlossaryEntry()')) {
+    errors.push('The History Lesson glossary links or readable hero treatment is incomplete.');
+  }
   ['history-research.html', 'history-research.js', 'history-research-data.js'].forEach(function (retiredFile) {
     if (fs.existsSync(path.join(root, retiredFile))) errors.push('Retired History Lesson investigation file is still present: ' + retiredFile);
   });

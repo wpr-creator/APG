@@ -1734,6 +1734,22 @@
     if (lastFocused) lastFocused.focus();
   }
 
+  function openLinkedGlossaryEntry() {
+    const url = new URL(window.location.href);
+    const requested = (url.searchParams.get("glossary") || "").trim().toLowerCase();
+    if (!requested || location.hash !== "#words") return;
+    const word = glossaryWords.find(entry => entry[0].trim().toLowerCase() === requested);
+    if (!word) return;
+    glossaryFilter = "all";
+    glossaryQuery = requested;
+    document.getElementById("glossary-search").value = word[0];
+    renderWords();
+    const source = Array.from(wordGrid.querySelectorAll(".word-card")).find(card => card.querySelector("h2")?.textContent === word[0].toUpperCase());
+    if (source) openWord(word, source);
+    url.searchParams.delete("glossary");
+    history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+  }
+
   function renderExitTicket() {
     const question = (siteContent.exitQuestion || "").trim();
     const form = document.getElementById("exit-ticket-form");
@@ -1992,6 +2008,7 @@
     renderAmendments();
     renderSkills();
     route();
+    openLinkedGlossaryEntry();
   }
 
   function renderHistory() {

@@ -8,3 +8,14 @@
 @media(max-width:900px){.moment-card{grid-template-columns:1fr}.visual{border-right:0;border-bottom:5px solid #000}.compromises,.fact-grid,.debate,.milestones{grid-template-columns:1fr}}
 @media(max-width:680px){.hero{background:#fff}.page-header strong{display:none}.dilemma>div{grid-template-columns:1fr}.dilemma>div>span{text-align:center}.timeline{width:min(100% - 1rem,640px);padding-left:42px}.timeline-line{left:16px}.moment{margin-bottom:4rem;padding-left:0}.moment::before{top:0;left:-39px;width:20px;height:20px;border-width:5px}.date{position:relative;top:auto;left:auto;width:max-content;min-width:90px;margin:0 0 .7rem;padding:.35rem .55rem;display:flex;align-items:center;justify-content:center;gap:.4rem}.date span,.date strong{font-size:.62rem}.moment-card{box-shadow:7px 7px 0 #000}.cause-list p,.response-table p{grid-template-columns:1fr;gap:.25rem}.ap-connection{grid-template-columns:1fr}.topic-strip{display:grid}.closing-links .start-link{width:100%}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Keep the light hero readable after the shared course theme loads. */
+.hero h1,.hero .essential,.hero .directions{color:var(--ink)}
+
+/* Canonical glossary terms are decorated by history-lesson.js. */
+.glossary-term{position:relative;color:inherit;font-weight:900;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-thickness:2px;text-underline-offset:4px;cursor:help}
+.glossary-term:hover,.glossary-term:focus{color:var(--blue);outline:none}
+.glossary-term::after{content:attr(data-definition);position:absolute;z-index:20;left:0;bottom:calc(100% + .6rem);width:min(330px,78vw);padding:.75rem .85rem;color:#fff;background:#000;border-left:6px solid var(--red);box-shadow:8px 8px 0 rgba(0,0,0,.18);font-size:.78rem;font-weight:700;line-height:1.4;text-align:left;text-transform:none;letter-spacing:0;opacity:0;visibility:hidden;transform:translateY(.3rem);transition:opacity .15s,transform .15s,visibility .15s}
+.glossary-term:hover::after,.glossary-term:focus::after{opacity:1;visibility:visible;transform:none}
+.glossary-term:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.glossary-term::after{transition:none}}
