@@ -54,4 +54,22 @@
     fragment.append(document.createTextNode(node.data.slice(cursor)));
     node.replaceWith(fragment);
   });
+
+  const sectionPages = {
+    articles: "history-articles.html",
+    challenges: "history-challenges.html",
+    convention: "history-convention.html",
+    compromises: "history-compromises.html",
+    debate: "history-debate.html",
+    ratification: "history-ratification.html"
+  };
+  Object.entries(sectionPages).forEach(([sectionId, url]) => {
+    const story = document.querySelector(`#${sectionId} .story`);
+    if (!story) return;
+    const link = document.createElement("a");
+    link.className = "section-detail-link";
+    link.href = url;
+    link.innerHTML = `<span>SECTION ${document.querySelector(`#${sectionId} .date span`).textContent}</span>LEARN IT WELL ENOUGH TO TEACH IT →`;
+    story.append(link);
+  });
 })();

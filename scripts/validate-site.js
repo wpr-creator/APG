@@ -507,6 +507,26 @@ function validateSharedCourseExperience() {
   ['history-research.html', 'history-research.js', 'history-research-data.js'].forEach(function (retiredFile) {
     if (fs.existsSync(path.join(root, retiredFile))) errors.push('Retired History Lesson investigation file is still present: ' + retiredFile);
   });
+  const historySectionPages = ['articles', 'challenges', 'convention', 'compromises', 'debate', 'ratification'];
+  historySectionPages.forEach(function (section) {
+    const file = `history-${section}.html`;
+    const page = fs.readFileSync(path.join(root, file), 'utf8');
+    if (!page.includes(`data-section="${section}"`) || !page.includes('TEACH THIS SECTION') ||
+        !page.includes('history-section-data.js') || !page.includes('glossary-data.js')) {
+      errors.push('History Lesson teaching page is incomplete: ' + file);
+    }
+    if (!historyLessonScript.includes(`history-${section}.html`)) {
+      errors.push('History Lesson timeline does not link to teaching page: ' + file);
+    }
+  });
+  const historySectionData = fs.readFileSync(path.join(root, 'history-section-data.js'), 'utf8');
+  const historySectionScript = fs.readFileSync(path.join(root, 'history-section.js'), 'utf8');
+  ['claim:', 'background:', 'facts:', 'chain:', 'evidence:', 'vocabulary:', 'documents:', 'teach:', 'question:'].forEach(function (field) {
+    if (!historySectionData.includes(field)) errors.push('History teaching-page data is missing field: ' + field);
+  });
+  if (!historySectionScript.includes('window.APG_GLOSSARY_UNITS') || !historySectionScript.includes('className = "glossary-term"')) {
+    errors.push('History teaching pages must use the canonical course glossary.');
+  }
   const unitResourceAppCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const unitResourceStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
   ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES & PRACTICE', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
