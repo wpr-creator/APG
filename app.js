@@ -1879,6 +1879,7 @@
     document.getElementById("agenda-page-title").textContent = agendaTitle;
     document.getElementById("agenda-page-text").textContent = siteContent.agendaText || "";
     const list = document.getElementById("upcoming-list");
+    if (!list) return;
     list.replaceChildren();
     const items = Array.isArray(siteContent.upcoming) ? siteContent.upcoming : [];
     if (!items.length) {
