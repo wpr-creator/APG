@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="Mr. Rogers AP Government and Politics at O'Farrell High School.">
   <title>AP United States Government and Politics</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260903-corrections">
+  <link rel="stylesheet" href="styles.css?v=20260903-navigation">
   <script src="course-data.js?v=20260826-unit-102-notes" defer></script>
   <script src="glossary-data.js?v=20260830" defer></script>
   <script src="foundations-data.js" defer></script>
@@ -35,7 +35,9 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20260805-foundations-cases" defer></script>
-  <script src="app.js?v=20260903-corrections" defer></script>
+  <script src="app.js?v=20260903-navigation" defer></script>
+<link rel="stylesheet" href="course-shell.css?v=20260903">
+<script src="course-shell.js?v=20260903" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the course</a>
@@ -79,6 +81,7 @@
           <h2 id="now-title">Loading current unit…</h2>
         </div>
         <div class="next-step">
+          <a class="primary-action current-lesson-action" id="current-lesson-action" hidden></a>
           <a class="primary-action" id="current-action" href="#units">OPEN UNIT 0 <span aria-hidden="true">→</span></a>
         </div>
       </section>
@@ -99,24 +102,6 @@
       </article>
 
       <section class="home-dashboard" aria-label="Course tools">
-        <article class="dashboard-card history-card">
-          <div class="card-heading">
-            <div><p class="eyebrow">TODAY</p><h2>THIS DAY IN POLITICS</h2></div>
-            <span class="date-badge" id="history-date">TODAY</span>
-          </div>
-          <div class="history-body">
-            <div class="history-year" id="history-year">—</div>
-            <div>
-              <p id="history-text">LOADING TODAY’S POLITICAL HISTORY…</p>
-              <a class="history-source" id="history-source" href="#" target="_blank" rel="noopener" hidden>SOURCE ↗</a>
-            </div>
-          </div>
-          <div class="history-controls">
-            <button type="button" id="history-prev">← PREVIOUS</button>
-            <button type="button" id="history-next">NEXT →</button>
-          </div>
-        </article>
-
         <a class="dashboard-card test-corrections-card" href="https://docs.google.com/document/d/1MX2EaJ0GMz6gnurTAC_qEoAjNRGBxeWtGnGlqrOeXso/edit">
           <p class="eyebrow">ASSESSMENTS</p>
           <h2>TEST CORRECTIONS</h2>
@@ -142,6 +127,24 @@
               <p>Use the election tracker to connect campaigns, participation, and public policy to the choices California voters will make.</p>
               <a class="primary-action" href="#election-2026">OPEN ELECTION TRACKER <span aria-hidden="true">→</span></a>
             </div>
+          </div>
+        </article>
+
+        <article class="dashboard-card history-card">
+          <div class="card-heading">
+            <div><p class="eyebrow">TODAY</p><h2>THIS DAY IN POLITICS</h2></div>
+            <span class="date-badge" id="history-date">TODAY</span>
+          </div>
+          <div class="history-body">
+            <div class="history-year" id="history-year">—</div>
+            <div>
+              <p id="history-text">LOADING TODAY’S POLITICAL HISTORY…</p>
+              <a class="history-source" id="history-source" href="#" target="_blank" rel="noopener" hidden>SOURCE ↗</a>
+            </div>
+          </div>
+          <div class="history-controls">
+            <button type="button" id="history-prev">← PREVIOUS</button>
+            <button type="button" id="history-next">NEXT →</button>
           </div>
         </article>
 

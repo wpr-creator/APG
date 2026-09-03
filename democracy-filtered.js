@@ -121,9 +121,9 @@
     const done = completeReport();
     const confirmed = Boolean(done && state.submission?.confirmed && state.submission.fingerprint === fingerprint());
     $("#submit-judgment").disabled = !done || confirmed;
-    $("#submit-judgment").textContent = confirmed ? "SAVED ✓" : "SUBMIT EXIT TICKET";
+    $("#submit-judgment").textContent = confirmed ? "SUBMITTED TO MR. ROGERS ✓" : "SUBMIT EXIT TICKET";
     $("#report-status").textContent = confirmed
-      ? "YOUR EXIT TICKET IS SAVED."
+      ? "YOUR EXIT TICKET WAS SUBMITTED TO MR. ROGERS."
       : done ? "READY TO SUBMIT." : "Write your response to submit.";
     $("#report-status").className = confirmed ? "report-status is-correct" : "report-status";
     $("#decision-award").hidden = !confirmed;

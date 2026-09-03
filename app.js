@@ -230,6 +230,18 @@
     const question = document.createElement("p");
     question.textContent = unit.question;
     header.append(eyebrow, title, question);
+    const lessonMenu = document.createElement("div");
+    lessonMenu.className = "lesson-jump";
+    const jumpLabel = document.createElement("label");
+    jumpLabel.textContent = "JUMP TO A LESSON ";
+    const jump = document.createElement("select");
+    jump.append(new Option("Choose a lesson…", ""));
+    jumpLabel.append(jump);
+    lessonMenu.append(jumpLabel);
+    jump.addEventListener("change", () => {
+      const target = document.getElementById(jump.value);
+      if (target) { target.scrollIntoView(); target.focus({ preventScroll: true }); }
+    });
 
     const unitSources = document.createElement("section");
     unitSources.className = "unit-sources";
@@ -280,16 +292,26 @@
         resourceGroups.get(lesson).push(resource);
       });
       const resourceGroupEntries = Array.from(resourceGroups.entries());
-      if (unit.id === "gov-0") {
+      if (resourceGroupEntries.some(([lesson]) => /^\d+\.\d+/.test(lesson))) {
         resourceGroupEntries.sort(([lessonA], [lessonB]) => {
           if (lessonA === "ASSESSMENTS") return -1;
           if (lessonB === "ASSESSMENTS") return 1;
-          return lessonB.localeCompare(lessonA, undefined, { numeric: true });
+          if (lessonA === "START HERE") return -1;
+          if (lessonB === "START HERE") return 1;
+          if (lessonA.includes("CONCEPT PRACTICE")) return -1;
+          if (lessonB.includes("CONCEPT PRACTICE")) return 1;
+          const numberedA = /^\d+\.\d+/.test(lessonA);
+          const numberedB = /^\d+\.\d+/.test(lessonB);
+          if (numberedA && numberedB) return lessonB.localeCompare(lessonA, undefined, { numeric: true });
+          return Number(numberedB) - Number(numberedA);
         });
       }
       resourceGroupEntries.forEach(([lesson, lessonResources]) => {
         const group = document.createElement("section");
         group.className = "unit-resource-group";
+        group.id = `lesson-${lessonResources[0].id}`;
+        group.tabIndex = -1;
+        jump.append(new Option(lesson, group.id));
         if (lesson === "ASSESSMENTS") group.classList.add("unit-resource-group-assessments");
         const lessonTitle = document.createElement("h2");
         lessonTitle.textContent = lesson;
@@ -325,10 +347,16 @@
             card.className = `unit-resource unit-resource-${category.key}`;
             if (unlocked) {
               card.href = resourceUrl;
-              if (!resourceUrl.startsWith("#")) {
+              const destination = new URL(resourceUrl, location.href);
+              const courseRoot = new URL("./", location.href).pathname;
+              const internal = destination.origin === location.origin && destination.pathname.startsWith(courseRoot);
+              if (!internal) {
                 card.target = "_blank";
                 card.rel = "noopener";
               }
+              card.addEventListener("click", () => {
+                try { sessionStorage.setItem("apg-return-lesson", JSON.stringify({ unit: unit.id, lesson: group.id, destination: destination.pathname })); } catch (_) {}
+              });
               if (resource.id === "course-site") {
                 card.addEventListener("click", event => {
                   event.preventDefault();
@@ -373,8 +401,17 @@
     }
 
     container.appendChild(header);
+    const checklist = document.createElement("p");
+    checklist.className = "checklist-note";
+    checklist.textContent = "My checklist · Stars are saved on this browser. Marking something done does not submit it to Mr. Rogers.";
+    container.append(lessonMenu, checklist);
     if (!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length) container.append(unitSources);
     if (unit.resources?.length) container.append(resources);
+    const requestedLesson = new URL(location.href).searchParams.get("lesson");
+    if (requestedLesson) {
+      const target = document.getElementById(requestedLesson);
+      if (target) requestAnimationFrame(() => { target.scrollIntoView(); target.focus({ preventScroll: true }); });
+    }
   }
 
   function renderWords() {
@@ -1757,6 +1794,7 @@
     const status = document.getElementById("exit-status");
     document.getElementById("exit-question").textContent = question || "NO EXIT TICKET TODAY.";
     form.hidden = !question;
+    form.closest(".exit-card").hidden = !question;
     status.textContent = question ? "Choose your class period and name. Your response will be sent to Mr. Rogers." : "";
     if (!question || !exitRoster.length) return;
     const selected = periodSelect.value;
@@ -1832,7 +1870,7 @@
       if (!confirmed) throw new Error("Submission could not be confirmed");
       document.getElementById("exit-ticket-form").hidden = true;
       pendingExitSubmission = null;
-      status.textContent = `SAVED FOR ${payload.name.toUpperCase()}. THANK YOU.`;
+      status.textContent = `SUBMITTED TO MR. ROGERS FOR ${payload.name.toUpperCase()}.`;
     } catch (error) {
       button.disabled = false;
       button.textContent = "SUBMIT EXIT TICKET";
@@ -2001,6 +2039,14 @@
     document.getElementById("now-title").textContent = current.title.toUpperCase();
     document.getElementById("current-action").href = `#${current.id}`;
     document.getElementById("current-action").firstChild.textContent = `OPEN ${current.number.toUpperCase()} `;
+    const currentLesson = (current.resources || []).filter(resource => /^\d+\.\d+ —/.test(resource.lesson || "") && assignmentIsUnlocked(resource.id) && (siteContent.assignmentUrls?.[resource.id] || resource.url)).sort((a, b) => b.lesson.localeCompare(a.lesson, undefined, { numeric: true }))[0];
+    const lessonAction = document.getElementById("current-lesson-action");
+    lessonAction.hidden = !currentLesson;
+    if (currentLesson) {
+      lessonAction.textContent = `OPEN ${currentLesson.lesson}`;
+      const firstResource = current.resources.find(resource => resource.lesson === currentLesson.lesson);
+      lessonAction.href = `?lesson=lesson-${firstResource.id}#${current.id}`;
+    }
     renderSiteContent();
     scheduleAssignmentRefresh();
     renderAgendaDate();

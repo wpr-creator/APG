@@ -24,3 +24,6 @@ jobs:
 
       - name: Validate site
         run: node scripts/validate-site.js
+
+      - name: Test course navigation
+        run: node scripts/test-course-navigation.js
