@@ -82,7 +82,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .primary-action { min-height: 52px; padding: .8rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--white); background: var(--black); border-radius: 3px; text-decoration: none; font-weight: 900; }
 .primary-action:hover { background: var(--charcoal); }
 
-.home-dashboard { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "upcoming upcoming upcoming upcoming upcoming upcoming upcoming upcoming upcoming upcoming upcoming upcoming" "election election election election election election election history history history history history" "links links links links links links links links links links links links"; gap: 1.2rem; align-items: stretch; }
+.home-dashboard { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-areas: "election election election election election election election history history history history history" "links links links links links links links links links links links links"; gap: 1.2rem; align-items: stretch; }
 .exit-card[hidden], .current-lesson-action[hidden] { display: none; }
 .next-step { display: grid; gap: .65rem; }
 .current-lesson-action { background: #174f85; }
@@ -96,7 +96,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .card-heading h2 { margin: 0; font-size: 1.35rem; }
 .date-badge { padding: .35rem .6rem; color: var(--white); background: var(--black); font-size: .72rem; letter-spacing: .08em; }
 .history-card { grid-area: history; }
-.test-corrections-card { grid-area: upcoming; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; color: #fff; background: #a32638; border: 4px solid #174f85; box-shadow: inset 0 -8px 0 #174f85; text-decoration: none; }
+.test-corrections-card { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; color: #fff; background: #a32638; border: 4px solid #174f85; box-shadow: inset 0 -8px 0 #174f85; text-decoration: none; }
 .test-corrections-card:hover { background: #84202e; }
 .test-corrections-card:focus-visible { outline: 3px solid var(--black); outline-offset: 4px; }
 .test-corrections-card .eyebrow, .test-corrections-card h2 { margin: 0; color: #fff; }
@@ -136,7 +136,13 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .classroom-code-list { grid-column: 1 / -1; display: grid; gap: .55rem; }
 .classroom-code-list .classroom-code { grid-column: auto; }
 .ap-classroom-card .classroom-mark { font-size: 1rem; }
-.course-links-card { grid-area: links; }
+.course-links-card { grid-area: links; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
+.course-link-tile { box-sizing: border-box; aspect-ratio: 1; min-width: 0; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1rem; padding: clamp(1rem, 3vw, 2rem); color: #174f85; border: 4px solid #174f85; text-decoration: none; }
+.course-link-tile h2 { margin: 0; font-size: clamp(1.25rem, 2.4vw, 2rem); overflow-wrap: anywhere; }
+.course-link-tile > span { font-size: .9rem; font-weight: 850; }
+.course-link-tile:hover { background: #edf5fc; }
+.course-link-tile.test-corrections-card { color: #fff; background: #a32638; }
+.course-link-tile.test-corrections-card:hover { background: #84202e; }
 .course-link-list { display: grid; gap: .65rem; padding-top: .8rem; }
 .compact-course-link { padding: .7rem; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .6rem; align-items: center; background: var(--paper); border: 1px solid var(--line); }
 .compact-course-link .classroom-mark { width: 46px; height: 46px; font-size: 1rem; }
@@ -718,7 +724,9 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .lesson { grid-template-columns: 46px 1fr; }
   .standard-tag { grid-column: 2; width: max-content; }
   .home-dashboard { grid-template-columns: 1fr; }
-  .home-dashboard { grid-template-areas: "upcoming" "election" "history" "links"; }
+  .home-dashboard { grid-template-areas: "election" "history" "links"; }
+  .course-links-card { grid-template-columns: 1fr; }
+  .course-link-tile { aspect-ratio: auto; min-height: 150px; }
   .election-tracker-layout { grid-template-columns: 1fr; }
   .agenda-layout { min-height: auto; grid-template-columns: 1fr; }
   .agenda-date-panel { border-left: 0; border-top: 10px solid var(--slate); }

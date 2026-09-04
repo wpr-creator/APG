@@ -52,8 +52,11 @@ assert.equal(runShell({ saved: { destination: "/APG/democracy-filtered.html", un
 assert.equal(runShell({ saved: { destination: "/APG/other.html", unit: "gov-0", lesson: "unrelated" } }), "https://example.test/APG/#gov-1");
 runShell({ homepage: true });
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
-const cards = ["test-corrections-card", "election-tracker-card", "history-card", "course-links-card"].map(c => html.indexOf(c));
+const cards = ["election-tracker-card", "history-card", "course-links-card", "test-corrections-card"].map(c => html.indexOf(c));
 assert(cards.every((position, i) => position >= 0 && (!i || position > cards[i - 1])), "Reading order must match visual priority");
+const homeLinks = html.slice(html.indexOf('<section class="course-links-card"'), html.indexOf('<section class="view agenda-view"'));
+assert.equal((homeLinks.match(/course-link-tile/g) || []).length, 3);
+assert(!/JOIN CODE|VYJN37|9RN33E|wxe36xms/.test(homeLinks));
 const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
 const start = app.indexOf("    const currentLesson =");
 const end = app.indexOf("    renderSiteContent();", start);
