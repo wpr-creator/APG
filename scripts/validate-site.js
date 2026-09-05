@@ -532,6 +532,9 @@ function validateSharedCourseExperience() {
     if (!glossaryData.includes('"' + term + '"')) errors.push('Unit 1 glossary is missing ' + term + '.');
   });
   const historyLesson = fs.readFileSync(path.join(root, 'history-lesson.html'), 'utf8');
+  if (historyLesson.includes('EXPLAIN THE CHANGE IN POWER') || historyLesson.includes('class="synthesis"')) {
+    errors.push('The saved Unit 1 review concept must not appear on the History Lesson page.');
+  }
   if ((historyLesson.match(/<article class="moment/g) || []).length !== 7) {
     errors.push('The History Lesson must contain exactly seven vertical timeline sections.');
   }
