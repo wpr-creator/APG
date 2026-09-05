@@ -37,6 +37,8 @@
     $("#ratification-content").hidden = true;
     $("#ratification-test").hidden = true;
     $("#success").hidden = true;
+    $("#proposal").classList.remove("is-complete");
+    $("#ratification").classList.remove("is-complete");
     selectButton(null, "[data-ratification]");
     $("#proposal-test").hidden = false;
     $("#proposal-explainer").textContent = proposalOptions[proposalRoute].explainer;
@@ -59,6 +61,7 @@
     verdict.textContent = (passes ? "✓ GATE OPEN — " : "✕ GATE CLOSED — ") + message;
     verdict.className = `verdict ${passes ? "pass" : "fail"}`;
     if (!passes) return;
+    $("#proposal").classList.add("is-complete");
     $("#ratification").classList.remove("is-locked");
     $("#ratification-lock").hidden = true;
     $("#ratification-content").hidden = false;
@@ -84,6 +87,7 @@
       : `✕ GATE CLOSED — ${count} states is one short of the 38 needed.`;
     verdict.className = `verdict ${passes ? "pass" : "fail"}`;
     if (passes) {
+      $("#ratification").classList.add("is-complete");
       $("#success").hidden = false;
       $("#success").scrollIntoView({ behavior: scrollBehavior, block: "center" });
     }
