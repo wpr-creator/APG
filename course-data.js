@@ -43,11 +43,15 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
-        { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/" },
         { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGE THE UNCHANGEABLE", note: "INTERACTIVE ACTIVITY · ARTICLE V", category: "assignment", url: "changing-the-constitution.html" },
-        { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html" },
+        { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", url: "history-lesson.html" },
+        { id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON", title: "ARTICLES OF CONFEDERATION", note: "READ THE TEXT", category: "reading", url: "docs/articles-of-confederation.html" },
+        { id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "UNITED STATES CONSTITUTION", note: "READ THE TEXT", category: "reading", url: "docs/constitution.html" },
+        { id: "u1-concept-practice", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.01–1.02 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
         { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" },
         { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },
+        { id: "u1-102-federalist-10", lesson: "1.02 — DEMOCRACY, FILTERED", title: "FEDERALIST NO. 10", note: "READ THE TEXT", category: "reading", url: "docs/federalist-10.html" },
+        { id: "u1-102-brutus-1", lesson: "1.02 — DEMOCRACY, FILTERED", title: "BRUTUS NO. 1", note: "READ THE TEXT", category: "reading", url: "docs/brutus-1.html" },
         { id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html" },
         { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
