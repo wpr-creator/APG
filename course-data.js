@@ -44,7 +44,7 @@ window.COURSE_DATA = {
       ],
       resources: [
         { id: "u1-ap-classroom", lesson: "START HERE", title: "JOIN AP CLASSROOM", note: "1A JOIN CODE: VYJN37 · 2B JOIN CODE: 9RN33E", url: "https://myap.collegeboard.org/" },
-        { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGING THE CONSTITUTION", note: "INTERACTIVE ACTIVITY · ARTICLE V", category: "assignment", url: "changing-the-constitution.html" },
+        { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGE THE UNCHANGEABLE", note: "INTERACTIVE ACTIVITY · ARTICLE V", category: "assignment", url: "changing-the-constitution.html" },
         { id: "u1-concept-practice", lesson: "1.01 + 1.02 — CONCEPT PRACTICE", title: "UNIT 1 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", url: "unit1-concept-practice.html" },
         { id: "u1-102-democracy-filtered", lesson: "1.02 — DEMOCRACY, FILTERED", title: "DEMOCRACY, FILTERED", note: "ASSIGNMENT · INTERACTIVE LESSON", url: "democracy-filtered.html" },
         { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },

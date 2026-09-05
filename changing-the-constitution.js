@@ -8,7 +8,7 @@
 
   const proposalOptions = {
     congress: {
-      explainer: "Both chambers must clear the gate. Two-thirds means at least 290 of 435 House members and 67 of 100 senators.",
+      explainer: "The House has 435 seats and the Senate has 100. Both chambers must separately reach two-thirds. Which pair clears the gate?",
       choices: [
         ["289 + 67", "HOUSE + SENATE", rules.congressProposal(289, 67), "The Senate cleared its threshold, but the House is one vote short. Both chambers must reach two-thirds."],
         ["290 + 66", "HOUSE + SENATE", rules.congressProposal(290, 66), "The House cleared its threshold, but the Senate is one vote short. Both chambers must reach two-thirds."],
@@ -16,7 +16,7 @@
       ]
     },
     states: {
-      explainer: "Two-thirds of 50 state legislatures means 34 states must call for a convention to propose amendments.",
+      explainer: "There are 50 state legislatures. Which total reaches the two-thirds requirement to call a convention?",
       choices: [
         ["33", "STATES", rules.statesProposal(33), "One state short. Thirty-three is not two-thirds of 50."],
         ["34", "STATES", rules.statesProposal(34), "Proposal passed: 34 states reached the two-thirds threshold."],

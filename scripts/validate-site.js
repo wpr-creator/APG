@@ -265,7 +265,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260903-bottom-links',
-    'course-data.js?v=20260905-article-v',
+    'course-data.js?v=20260905-unchangeable',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260903-navigation',
     'data-view-link="home"',
@@ -486,9 +486,10 @@ function validateSharedCourseExperience() {
     errors.push('The History Lesson timeline must remain hidden until it is introduced.');
   }
   if (!courseData.includes('id: "u1-103-changing-constitution"') ||
+      !courseData.includes('title: "CHANGE THE UNCHANGEABLE"') ||
       parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== true ||
       parsedSiteContent.assignmentUrls['u1-103-changing-constitution'] !== 'changing-the-constitution.html') {
-    errors.push('The Changing the Constitution activity must be open in Lesson 1.03.');
+    errors.push('The Change the Unchangeable activity must be open in Lesson 1.03.');
   }
   const articleVHtml = fs.readFileSync(path.join(root, 'changing-the-constitution.html'), 'utf8');
   const articleVCss = fs.readFileSync(path.join(root, 'changing-the-constitution.css'), 'utf8');
@@ -499,11 +500,20 @@ function validateSharedCourseExperience() {
     'data-ratification="legislatures"', 'data-ratification="conventions"',
     'data-articles="12"', 'data-articles="13"'
   ].forEach(function (requiredText) {
-    if (!articleVHtml.includes(requiredText)) errors.push('Changing the Constitution is missing: ' + requiredText);
+    if (!articleVHtml.includes(requiredText)) errors.push('Change the Unchangeable is missing: ' + requiredText);
   });
   if (!articleVCss.includes('prefers-reduced-motion')) {
-    errors.push('Changing the Constitution must support reduced motion.');
+    errors.push('Change the Unchangeable must support reduced motion.');
   }
+  [
+    'Two-thirds means at least 290',
+    'means 34 states must',
+    'three-fourths means <strong>38 states</strong>'
+  ].forEach(function (prematureAnswer) {
+    if (articleVHtml.includes(prematureAnswer) || fs.readFileSync(path.join(root, 'changing-the-constitution.js'), 'utf8').includes(prematureAnswer)) {
+      errors.push('Article V setup reveals an answer before the student chooses: ' + prematureAnswer);
+    }
+  });
   ['Article V', 'Ratification', 'Supermajority', 'Unanimity'].forEach(function (term) {
     if (!glossaryData.includes('"' + term + '"')) errors.push('Unit 1 glossary is missing ' + term + '.');
   });
