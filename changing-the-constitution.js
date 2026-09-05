@@ -96,14 +96,5 @@
   $$('[data-proposal]').forEach(button => button.addEventListener("click", () => chooseProposal(button)));
   $$('[data-ratification]').forEach(button => button.addEventListener("click", () => chooseRatification(button)));
   $$('[data-ratify-count]').forEach(button => button.addEventListener("click", () => testRatification(button)));
-  $$('[data-articles]').forEach(button => button.addEventListener("click", () => {
-    selectButton(button, "[data-articles]");
-    const passes = rules.articlesAmendment(Number(button.dataset.articles));
-    const verdict = $("#articles-verdict");
-    verdict.textContent = passes
-      ? "✓ IT PASSES — Every state agreed. That is unanimity."
-      : "✕ IT FAILS — Even 12 of 13 was not enough. One state could block the change.";
-    verdict.className = `verdict ${passes ? "pass" : "fail"}`;
-  }));
   $("#reset").addEventListener("click", () => window.location.reload());
 })();

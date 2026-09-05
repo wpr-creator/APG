@@ -497,8 +497,7 @@ function validateSharedCourseExperience() {
     'ARTICLE V', 'TWO-THIRDS', 'THREE-FOURTHS', 'ARTICLES OF CONFEDERATION',
     'TWO-THIRDS PROPOSED', 'THREE-FOURTHS RATIFIED',
     'data-proposal="congress"', 'data-proposal="states"',
-    'data-ratification="legislatures"', 'data-ratification="conventions"',
-    'data-articles="12"', 'data-articles="13"'
+    'data-ratification="legislatures"', 'data-ratification="conventions"'
   ].forEach(function (requiredText) {
     if (!articleVHtml.includes(requiredText)) errors.push('Change the Unchangeable is missing: ' + requiredText);
   });
@@ -514,6 +513,9 @@ function validateSharedCourseExperience() {
       errors.push('Article V setup reveals an answer before the student chooses: ' + prematureAnswer);
     }
   });
+  if (articleVHtml.includes('articles-test') || articleVHtml.includes('data-articles=')) {
+    errors.push('The redundant Articles of Confederation test must remain removed.');
+  }
   ['Article V', 'Ratification', 'Supermajority', 'Unanimity'].forEach(function (term) {
     if (!glossaryData.includes('"' + term + '"')) errors.push('Unit 1 glossary is missing ' + term + '.');
   });
