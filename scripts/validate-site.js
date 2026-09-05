@@ -265,7 +265,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260903-bottom-links',
-    'course-data.js?v=20260905-unit1-lessons',
+    'course-data.js?v=20260905-unit103-notes',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260903-navigation',
     'data-view-link="home"',
@@ -480,6 +480,7 @@ function validateSharedCourseExperience() {
   }
   const unit103Resources = {
     'u1-103-history-lesson': 'history-lesson.html',
+    'u1-103-guided-notes': 'https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j',
     'u1-103-articles': 'docs/articles-of-confederation.html',
     'u1-103-constitution': 'docs/constitution.html'
   };
@@ -490,6 +491,7 @@ function validateSharedCourseExperience() {
   });
   [
     'id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON"',
+    'id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES"',
     'id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON"',
     'id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON"',
     'id: "u1-102-federalist-10", lesson: "1.02 — DEMOCRACY, FILTERED"',

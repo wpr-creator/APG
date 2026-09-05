@@ -45,6 +45,7 @@ window.COURSE_DATA = {
       resources: [
         { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGE THE UNCHANGEABLE", note: "INTERACTIVE ACTIVITY · ARTICLE V", category: "assignment", url: "changing-the-constitution.html" },
         { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", url: "history-lesson.html" },
+        { id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j" },
         { id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON", title: "ARTICLES OF CONFEDERATION", note: "READ THE TEXT", category: "reading", url: "docs/articles-of-confederation.html" },
         { id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "UNITED STATES CONSTITUTION", note: "READ THE TEXT", category: "reading", url: "docs/constitution.html" },
         { id: "u1-concept-practice", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.01–1.02 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
