@@ -1,14 +1,33 @@
 (() => {
   const bar = document.getElementById("progress-bar");
   if (!bar) return;
+  const timeline = document.getElementById("timeline");
   const update = () => {
     const total = document.documentElement.scrollHeight - window.innerHeight;
     const percent = total > 0 ? Math.min(100, Math.max(0, window.scrollY / total * 100)) : 0;
     bar.style.width = `${percent}%`;
+    if (timeline) {
+      const start = timeline.offsetTop;
+      const distance = timeline.offsetHeight;
+      const traced = Math.min(1, Math.max(0, (window.scrollY + window.innerHeight * .55 - start) / distance));
+      timeline.style.setProperty("--trace", traced.toFixed(3));
+    }
   };
   update();
   addEventListener("scroll", update, { passive: true });
   addEventListener("resize", update);
+
+  const moments = document.querySelectorAll(".moment");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("is-seen");
+      });
+    }, { rootMargin: "0px 0px -18% 0px", threshold: .08 });
+    moments.forEach(moment => observer.observe(moment));
+  } else {
+    moments.forEach(moment => moment.classList.add("is-seen"));
+  }
 
   const glossary = new Map();
   (window.APG_GLOSSARY_UNITS || []).forEach(unit => {

@@ -513,7 +513,7 @@ function validateSharedCourseExperience() {
   }
   ['TOPICS 1.3–1.5', 'GOVERNMENT POWER &amp; INDIVIDUAL RIGHTS', 'CHALLENGES OF THE ARTICLES', 'RATIFICATION',
     'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html', 'docs/constitution.html',
-    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'glossary-data.js?v=20260830'].forEach(function (requiredText) {
+    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'glossary-data.js?v=20260905-article-v'].forEach(function (requiredText) {
     if (!historyLesson.includes(requiredText)) errors.push('The History Lesson is missing: ' + requiredText);
   });
   const historyLessonScript = fs.readFileSync(path.join(root, 'history-lesson.js'), 'utf8');
@@ -524,6 +524,9 @@ function validateSharedCourseExperience() {
       !historyLessonStyles.includes('text-decoration-style:dotted') ||
       !historyLessonStyles.includes('.glossary-term:hover::after,.glossary-term:focus::after') ||
       !historyLessonStyles.includes('.hero h1,.hero .essential,.hero .directions{color:var(--ink)}') ||
+      !historyLessonStyles.includes('.timeline-line:after') ||
+      !historyLessonScript.includes('IntersectionObserver') ||
+      !historyLessonScript.includes('--trace') ||
       !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('function openLinkedGlossaryEntry()')) {
     errors.push('The History Lesson glossary links or readable hero treatment is incomplete.');
   }
