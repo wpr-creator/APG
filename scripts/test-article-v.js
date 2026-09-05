@@ -1,0 +1,12 @@
+const assert = require("node:assert/strict");
+const rules = require("../changing-the-constitution-rules.js");
+assert.equal(rules.congressProposal(289, 67), false);
+assert.equal(rules.congressProposal(290, 66), false);
+assert.equal(rules.congressProposal(290, 67), true);
+assert.equal(rules.statesProposal(33), false);
+assert.equal(rules.statesProposal(34), true);
+assert.equal(rules.ratification(37), false);
+assert.equal(rules.ratification(38), true);
+assert.equal(rules.articlesAmendment(12), false);
+assert.equal(rules.articlesAmendment(13), true);
+console.log("Article V threshold tests passed.");

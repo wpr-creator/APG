@@ -6,6 +6,34 @@ window.APG_GLOSSARY_UNITS = [
     "groups": {
       "Constitutional Foundations": [
         [
+          "Article V",
+          "The part of the Constitution that establishes the formal process for proposing and ratifying amendments.",
+          [
+            "1.3"
+          ]
+        ],
+        [
+          "Ratification",
+          "Formal approval. Under Article V, an amendment must be ratified by three-fourths of the states.",
+          [
+            "1.3"
+          ]
+        ],
+        [
+          "Supermajority",
+          "A voting requirement greater than a simple majority, such as two-thirds or three-fourths.",
+          [
+            "1.3"
+          ]
+        ],
+        [
+          "Unanimity",
+          "Complete agreement by everyone involved. The Articles of Confederation required all thirteen states to approve an amendment.",
+          [
+            "1.3"
+          ]
+        ],
+        [
           "Articles of Confederation",
           "The first basis for the new nation's government; adopted in 1781; created an alliance of sovereign states held together by a weak central government.",
           [

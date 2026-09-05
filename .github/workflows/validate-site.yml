@@ -27,3 +27,6 @@ jobs:
 
       - name: Test course navigation
         run: node scripts/test-course-navigation.js
+
+      - name: Test Article V activity
+        run: node scripts/test-article-v.js

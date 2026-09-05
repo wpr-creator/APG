@@ -256,7 +256,8 @@ function validateSharedCourseExperience() {
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
     const isDemocracyFiltered = relative(file) === 'democracy-filtered.html' && html.includes('democracy-filtered.css');
     const isHeardExplorer = relative(file) === 'who-is-trying-to-be-heard.html' && html.includes('who-is-trying-to-be-heard.css');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !html.includes('styles-gov-theme.css')) {
+    const isArticleVActivity = relative(file) === 'changing-the-constitution.html' && html.includes('changing-the-constitution.css');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -264,7 +265,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260903-bottom-links',
-    'course-data.js?v=20260826-unit-102-notes',
+    'course-data.js?v=20260905-article-v',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260903-navigation',
     'data-view-link="home"',
@@ -482,8 +483,30 @@ function validateSharedCourseExperience() {
     errors.push('Unit 1 must show Concept Practice, then lesson 1.02, then lesson 1.01.');
   }
   if (courseData.includes('id: "u1-103-history-lesson"') || parsedSiteContent.assignmentUnlocks['u1-103-history-lesson'] !== false) {
-    errors.push('Lesson 1.03 must remain hidden until it is introduced.');
+    errors.push('The History Lesson timeline must remain hidden until it is introduced.');
   }
+  if (!courseData.includes('id: "u1-103-changing-constitution"') ||
+      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-103-changing-constitution'] !== 'changing-the-constitution.html') {
+    errors.push('The Changing the Constitution activity must be open in Lesson 1.03.');
+  }
+  const articleVHtml = fs.readFileSync(path.join(root, 'changing-the-constitution.html'), 'utf8');
+  const articleVCss = fs.readFileSync(path.join(root, 'changing-the-constitution.css'), 'utf8');
+  [
+    'ARTICLE V', 'TWO-THIRDS', 'THREE-FOURTHS', 'ARTICLES OF CONFEDERATION',
+    'TWO-THIRDS PROPOSED', 'THREE-FOURTHS RATIFIED',
+    'data-proposal="congress"', 'data-proposal="states"',
+    'data-ratification="legislatures"', 'data-ratification="conventions"',
+    'data-articles="12"', 'data-articles="13"'
+  ].forEach(function (requiredText) {
+    if (!articleVHtml.includes(requiredText)) errors.push('Changing the Constitution is missing: ' + requiredText);
+  });
+  if (!articleVCss.includes('prefers-reduced-motion')) {
+    errors.push('Changing the Constitution must support reduced motion.');
+  }
+  ['Article V', 'Ratification', 'Supermajority', 'Unanimity'].forEach(function (term) {
+    if (!glossaryData.includes('"' + term + '"')) errors.push('Unit 1 glossary is missing ' + term + '.');
+  });
   const historyLesson = fs.readFileSync(path.join(root, 'history-lesson.html'), 'utf8');
   if ((historyLesson.match(/<article class="moment/g) || []).length !== 7) {
     errors.push('The History Lesson must contain exactly seven vertical timeline sections.');
