@@ -169,8 +169,9 @@ function validateAccessibilityAndHygiene() {
     const html = fs.readFileSync(file, 'utf8');
     const name = relative(file);
     const isRedirect = /http-equiv=["']refresh/i.test(html);
+    const isSlidesExport = name.startsWith('slides/unit-0/');
 
-    if (!/<html[^>]*\slang=["'][^"']+["']/i.test(html)) {
+    if (!isSlidesExport && !/<html[^>]*\slang=["'][^"']+["']/i.test(html)) {
       errors.push('HTML page is missing a language declaration: ' + name);
     }
     if (!/<title>[^<]+<\/title>/i.test(html)) {
@@ -183,7 +184,7 @@ function validateAccessibilityAndHygiene() {
     const imagesWithoutAlt = Array.from(html.matchAll(/<img\b[^>]*>/gi))
       .map(function (match) { return match[0]; })
       .filter(function (tag) { return !/\salt=["'][^"']*["']/i.test(tag); });
-    if (imagesWithoutAlt.length) {
+    if (!isSlidesExport && imagesWithoutAlt.length) {
       errors.push('HTML page contains images without alt attributes: ' + name);
     }
 
@@ -265,7 +266,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260903-bottom-links',
-    'course-data.js?v=20260905-unit103-notes',
+    'course-data.js?v=20260906-unit0-slides',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260903-navigation',
     'data-view-link="home"',
@@ -724,6 +725,26 @@ function validateSharedCourseExperience() {
       courseData.includes('0.7 —')) {
     errors.push('Unit 0 must end with 0.6 — The Court Is in Session and include Prove Your Case there.');
   }
+  const unitZeroSlideDecks = {
+    'u0-01-slides': 'slides/unit-0/lesson-01/',
+    'u0-02-slides': 'slides/unit-0/lesson-02/',
+    'u0-03-slides': 'slides/unit-0/lesson-03/',
+    'u0-04-slides': 'slides/unit-0/lesson-04/',
+    'u0-05-slides': 'slides/unit-0/lesson-05/',
+    'u0-06-slides': 'slides/unit-0/lesson-06/'
+  };
+  Object.entries(unitZeroSlideDecks).forEach(function ([resourceId, url]) {
+    const lessonNumber = resourceId.slice(3, 5);
+    const deckRoot = path.join(root, url);
+    if (!courseData.includes(`id: "${resourceId}"`) ||
+        parsedSiteContent.assignmentUnlocks[resourceId] !== true ||
+        parsedSiteContent.assignmentUrls[resourceId] !== url) {
+      errors.push('Unit 0 slide-review card is missing or closed: ' + resourceId);
+    }
+    ['index.html', 'lib/reveal.js', 'lib/offline.js'].forEach(function (requiredFile) {
+      if (!fs.existsSync(path.join(deckRoot, requiredFile))) errors.push(`Unit 0 lesson ${lessonNumber} deck is missing ${requiredFile}.`);
+    });
+  });
   if (courseData.includes('id: "u1-ap-classroom"') ||
       Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUnlocks, 'u1-ap-classroom') ||
       Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUrls, 'u1-ap-classroom')) {

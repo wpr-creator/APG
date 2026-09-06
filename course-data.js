@@ -16,19 +16,25 @@ window.COURSE_DATA = {
         { id: "classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "JOIN GOOGLE CLASSROOM", note: "JOIN CODE: wxe36xms", url: "https://classroom.google.com/" },
         { id: "course-site", lesson: "0.1 — CLASS IS IN SESSION", title: "BOOKMARK COURSE WEBSITE", url: "#home" },
         { id: "ap-classroom", lesson: "0.1 — CLASS IS IN SESSION", title: "AP CLASSROOM CHECK-IN", note: "1A: VYJN37 · 2B: 9RN33E", url: "https://myap.collegeboard.org/" },
+        { id: "u0-01-slides", lesson: "0.1 — CLASS IS IN SESSION", title: "0.1 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-01/" },
         { id: "syllabus", lesson: "0.2 — READ THE FINE PRINT", title: "CLASS SYLLABUS", url: "https://docs.google.com/document/d/1JRS7wb7qTVWhNokfK924OkKO34TbEF1a99Q9Mzh9Iug/edit?usp=sharing" },
         { id: "self-guided-tour", lesson: "0.2 — READ THE FINE PRINT", title: "SELF-GUIDED TOUR", url: "https://docs.google.com/document/d/1tPuBKdMDAK3NZwmKKrHXx-ALRhSJ53r2d0G-RaPkDFc/edit?tab=t.0", category: "assignment" },
         { id: "civic-selfie", lesson: "0.2 — READ THE FINE PRINT", title: "CIVIC SELFIE", url: "civic-selfie.html", category: "assignment" },
+        { id: "u0-02-slides", lesson: "0.2 — READ THE FINE PRINT", title: "0.2 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-02/" },
         { id: "pew-typology", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "PEW POLITICAL TYPOLOGY", url: "https://www.pewresearch.org/politics/quiz/political-typology/group/99e1939eab70f1619bde23fadf282d77", category: "assignment" },
         { id: "typology-reflection", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "TYPOLOGY REFLECTION: BETWEEN THE LINES", url: "https://docs.google.com/forms/d/e/1FAIpQLSe_BuUT-XX1ZFlTxXcSIsflQ__3H6Gc-p-tUZz4pDCrYKLMSw/viewform?usp=dialog", category: "assignment" },
+        { id: "u0-03-slides", lesson: "0.3 — PACK YOUR FIELD GUIDES", title: "0.3 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-03/" },
         { id: "civics-field-guide", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "CIVICS FIELD GUIDE", note: "WORKSHEET", url: "https://docs.google.com/document/d/1-xEhsGyKlaDogaCCvOtJV70IyeqFgpSwPo2H_wqkoOI/edit?tab=t.0", category: "assignment" },
+        { id: "u0-04-slides", lesson: "0.4 — GOVERNMENT TAKES THE STAGE", title: "0.4 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-04/" },
         { id: "mr-smith-extension", lesson: "ASSESSMENTS", title: "MR. SMITH GOES TO WASHINGTON EXTENSION", status: "SEE MR. ROGERS", url: "" },
         { id: "presidential-yearbook", lesson: "0.5 — PORTRAIT DAY", title: "THE PRESIDENTIAL YEARBOOK", url: "presidential-yearbook.html", category: "assignment" },
         { id: "presidential-library", lesson: "0.5 — PORTRAIT DAY", title: "PRESIDENTIAL LIBRARY", url: "#presidents" },
+        { id: "u0-05-slides", lesson: "0.5 — PORTRAIT DAY", title: "0.5 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-05/" },
         { id: "civics-field-test", lesson: "ASSESSMENTS", title: "CIVICS FIELD GUIDE TEST", status: "SEE MR. ROGERS", url: "" },
         { id: "ap-addendum", lesson: "0.6 — THE COURT IS IN SESSION", title: "AP APPENDUM STUDY GUIDE", url: "https://docs.google.com/document/d/12htrxeXMnU5NHfBzkLOXgG6jipT6KQMlK_TrbM6Z7gg/edit?tab=t.0" },
         { id: "ap-addendum-test", lesson: "ASSESSMENTS", title: "AP ADDENDUM TEST", status: "SEE MR. ROGERS", url: "" },
-        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html", category: "assignment" }
+        { id: "evidence-in-action", lesson: "0.6 — THE COURT IS IN SESSION", title: "PROVE YOUR CASE", url: "prove-your-case.html", category: "assignment" },
+        { id: "u0-06-slides", lesson: "0.6 — THE COURT IS IN SESSION", title: "0.6 LESSON SLIDES", note: "SLIDE REVIEW", category: "guided-notes", url: "slides/unit-0/lesson-06/" }
       ]
     },
     {
