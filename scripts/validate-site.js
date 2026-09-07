@@ -266,9 +266,9 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260903-bottom-links',
-    'course-data.js?v=20260906-unit0-slides',
+    'course-data.js?v=20260907-unit103-home',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260903-navigation',
+    'app.js?v=20260907-current-lesson',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -502,9 +502,15 @@ function validateSharedCourseExperience() {
   });
   if (!courseData.includes('id: "u1-103-changing-constitution"') ||
       !courseData.includes('title: "CHANGE THE UNCHANGEABLE"') ||
-      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== true ||
+      !courseData.includes('note: "EXTENDED NOTES", status: "COMING SOON", category: "guided-notes"') ||
+      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== false ||
       parsedSiteContent.assignmentUrls['u1-103-changing-constitution'] !== 'changing-the-constitution.html') {
-    errors.push('The Change the Unchangeable activity must be open in Lesson 1.03.');
+    errors.push('Change the Unchangeable must remain a locked Extended Notes card in Lesson 1.03.');
+  }
+  if (!courseData.includes('id: "u1-103-history-lesson"') ||
+      !courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
+      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('currentLesson.homepageAction')) {
+    errors.push('The homepage current-lesson button must open the History Lesson directly.');
   }
   const articleVHtml = fs.readFileSync(path.join(root, 'changing-the-constitution.html'), 'utf8');
   const articleVCss = fs.readFileSync(path.join(root, 'changing-the-constitution.css'), 'utf8');

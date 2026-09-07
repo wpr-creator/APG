@@ -2044,8 +2044,13 @@
     lessonAction.hidden = !currentLesson;
     if (currentLesson) {
       lessonAction.textContent = `OPEN ${currentLesson.lesson}`;
-      const firstResource = current.resources.find(resource => resource.lesson === currentLesson.lesson);
-      lessonAction.href = `?lesson=lesson-${firstResource.id}#${current.id}`;
+      const resourceUrl = siteContent.assignmentUrls?.[currentLesson.id] || currentLesson.url;
+      if (currentLesson.homepageAction && resourceUrl) {
+        lessonAction.href = resourceUrl;
+      } else {
+        const firstResource = current.resources.find(resource => resource.lesson === currentLesson.lesson);
+        lessonAction.href = `?lesson=lesson-${firstResource.id}#${current.id}`;
+      }
     }
     renderSiteContent();
     scheduleAssignmentRefresh();
