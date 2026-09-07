@@ -538,6 +538,10 @@ function validateSharedCourseExperience() {
   if (historyLesson.includes('EXPLAIN THE CHANGE IN POWER') || historyLesson.includes('class="synthesis"')) {
     errors.push('The saved Unit 1 review concept must not appear on the History Lesson page.');
   }
+  ['class="whole-story"', 'ONE PROBLEM LED TO THE NEXT', 'FEAR OF TYRANNY', 'WEAK ARTICLES',
+    'GOVERNMENT COULD NOT ACT', 'STRONGER CONSTITUTION', 'DEBATE OVER POWER', 'BILL OF RIGHTS'].forEach(function (requiredText) {
+    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson closing chain is missing: ' + requiredText);
+  });
   if ((historyLesson.match(/<article class="moment/g) || []).length !== 7) {
     errors.push('The History Lesson must contain exactly seven vertical timeline sections.');
   }
@@ -548,12 +552,15 @@ function validateSharedCourseExperience() {
   });
   const historyLessonScript = fs.readFileSync(path.join(root, 'history-lesson.js'), 'utf8');
   const historyLessonStyles = fs.readFileSync(path.join(root, 'history-lesson.css'), 'utf8');
+  const historyLessonFixes = fs.readFileSync(path.join(root, 'history-lesson-fixes.css'), 'utf8');
   if (!historyLessonScript.includes('window.APG_GLOSSARY_UNITS') ||
       !historyLessonScript.includes('className = "glossary-term"') ||
       !historyLessonScript.includes('?glossary=${encodeURIComponent(record.term)}#words') ||
       !historyLessonStyles.includes('text-decoration-style:dotted') ||
       !historyLessonStyles.includes('.glossary-term:hover::after,.glossary-term:focus::after') ||
       !historyLessonStyles.includes('.hero h1,.hero .essential,.hero .directions{color:var(--ink)}') ||
+      !historyLessonFixes.includes('.hero .topic-strip span') ||
+      !historyLessonFixes.includes('.whole-story') ||
       !historyLessonStyles.includes('.timeline-line:after') ||
       !historyLessonScript.includes('IntersectionObserver') ||
       !historyLessonScript.includes('--trace') ||
