@@ -260,7 +260,8 @@ function validateSharedCourseExperience() {
     const isArticleVActivity = relative(file) === 'changing-the-constitution.html' && html.includes('changing-the-constitution.css');
     const isHistoryHub = relative(file) === 'history-lesson.html' && html.includes('history-hub.css');
     const isHistoryReader = relative(file) === 'history-reader.html' && html.includes('history-reader-theme.css');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !html.includes('styles-gov-theme.css')) {
+    const isHistoryPresenter = relative(file) === 'history-presenter.html' && html.includes('history-presenter.css');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -553,6 +554,17 @@ function validateSharedCourseExperience() {
   if ((historyLesson.match(/class="section-card"/g) || []).length !== 7) {
     errors.push('The History Lesson hub must contain exactly seven section cards.');
   }
+  ['PRESENTER VIEW', 'TEACH THE WHOLE STORY', '7 SLIDES · SECTION TITLE + BIG IDEA', 'history-presenter.html?slide=1'].forEach(function (requiredText) {
+    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson presenter launch is missing: ' + requiredText);
+  });
+  const historyPresenter = fs.readFileSync(path.join(root, 'history-presenter.html'), 'utf8');
+  const historyPresenterScript = fs.readFileSync(path.join(root, 'history-presenter.js'), 'utf8');
+  ['history-reader-data.js', 'slide-title', 'slide-big-idea', 'fullscreen-button', 'slide-dots'].forEach(function (requiredText) {
+    if (!historyPresenter.includes(requiredText)) errors.push('The AP History presenter is missing: ' + requiredText);
+  });
+  ['ArrowRight', 'ArrowLeft', 'PageDown', 'Home', 'End', 'requestFullscreen', 'slide.title', 'slide.bigIdea'].forEach(function (requiredText) {
+    if (!historyPresenterScript.includes(requiredText)) errors.push('The AP History presenter behavior is missing: ' + requiredText);
+  });
   const historyReader = fs.readFileSync(path.join(root, 'history-reader.html'), 'utf8');
   const historyReaderData = fs.readFileSync(path.join(root, 'history-reader-data.js'), 'utf8');
   const historyReaderScript = fs.readFileSync(path.join(root, 'history-reader.js'), 'utf8');
