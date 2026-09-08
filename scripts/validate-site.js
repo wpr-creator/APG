@@ -258,7 +258,9 @@ function validateSharedCourseExperience() {
     const isDemocracyFiltered = relative(file) === 'democracy-filtered.html' && html.includes('democracy-filtered.css');
     const isHeardExplorer = relative(file) === 'who-is-trying-to-be-heard.html' && html.includes('who-is-trying-to-be-heard.css');
     const isArticleVActivity = relative(file) === 'changing-the-constitution.html' && html.includes('changing-the-constitution.css');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !html.includes('styles-gov-theme.css')) {
+    const isHistoryHub = relative(file) === 'history-lesson.html' && html.includes('history-hub.css');
+    const isHistoryReader = relative(file) === 'history-reader.html' && html.includes('history-reader-theme.css');
+    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -541,38 +543,28 @@ function validateSharedCourseExperience() {
     if (!glossaryData.includes('"' + term + '"')) errors.push('Unit 1 glossary is missing ' + term + '.');
   });
   const historyLesson = fs.readFileSync(path.join(root, 'history-lesson.html'), 'utf8');
-  if (historyLesson.includes('EXPLAIN THE CHANGE IN POWER') || historyLesson.includes('class="synthesis"')) {
-    errors.push('The saved Unit 1 review concept must not appear on the History Lesson page.');
-  }
-  ['class="whole-story"', 'ONE PROBLEM LED TO THE NEXT', 'FEAR OF TYRANNY', 'WEAK ARTICLES',
-    'GOVERNMENT COULD NOT ACT', 'STRONGER CONSTITUTION', 'DEBATE OVER POWER', 'BILL OF RIGHTS'].forEach(function (requiredText) {
-    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson closing chain is missing: ' + requiredText);
+  ['SEVEN PARTS OF THE STORY', 'A STRONGER GOVERNMENT WITH LIMITS', 'ONE PROBLEM LED TO THE NEXT',
+    'history-reader.html?topic=independence', 'history-reader.html?topic=articles', 'history-reader.html?topic=crisis',
+    'history-reader.html?topic=convention', 'history-reader.html?topic=compromises', 'history-reader.html?topic=debate',
+    'history-reader.html?topic=rights'].forEach(function (requiredText) {
+    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson hub is missing: ' + requiredText);
   });
-  if ((historyLesson.match(/<article class="moment/g) || []).length !== 7) {
-    errors.push('The History Lesson must contain exactly seven vertical timeline sections.');
+  if ((historyLesson.match(/class="section-card"/g) || []).length !== 7) {
+    errors.push('The History Lesson hub must contain exactly seven section cards.');
   }
-  ['TOPICS 1.3–1.5', 'GOVERNMENT POWER &amp; INDIVIDUAL RIGHTS', 'CHALLENGES OF THE ARTICLES', 'RATIFICATION',
-    'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html', 'docs/constitution.html',
-    'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html', 'glossary-data.js?v=20260905-article-v'].forEach(function (requiredText) {
-    if (!historyLesson.includes(requiredText)) errors.push('The History Lesson is missing: ' + requiredText);
+  const historyReader = fs.readFileSync(path.join(root, 'history-reader.html'), 'utf8');
+  const historyReaderData = fs.readFileSync(path.join(root, 'history-reader-data.js'), 'utf8');
+  const historyReaderScript = fs.readFileSync(path.join(root, 'history-reader.js'), 'utf8');
+  ['THE STORY', 'ACADEMIC VOCABULARY', 'CAN YOU EXPLAIN THESE IDEAS?', 'glossary-data.js', 'section-documents'].forEach(function (requiredText) {
+    if (!historyReader.includes(requiredText)) errors.push('The History Lesson reader is missing: ' + requiredText);
   });
-  const historyLessonScript = fs.readFileSync(path.join(root, 'history-lesson.js'), 'utf8');
-  const historyLessonStyles = fs.readFileSync(path.join(root, 'history-lesson.css'), 'utf8');
-  const historyLessonFixes = fs.readFileSync(path.join(root, 'history-lesson-fixes.css'), 'utf8');
-  if (!historyLessonScript.includes('window.APG_GLOSSARY_UNITS') ||
-      !historyLessonScript.includes('className = "glossary-term"') ||
-      !historyLessonScript.includes('?glossary=${encodeURIComponent(record.term)}#words') ||
-      !historyLessonStyles.includes('text-decoration-style:dotted') ||
-      !historyLessonStyles.includes('.glossary-term:hover::after,.glossary-term:focus::after') ||
-      !historyLessonStyles.includes('.hero h1,.hero .essential,.hero .directions{color:var(--ink)}') ||
-      !historyLessonFixes.includes('.hero .topic-strip span') ||
-      !historyLessonFixes.includes('.whole-story') ||
-      !historyLessonStyles.includes('.timeline-line:after') ||
-      !historyLessonScript.includes('IntersectionObserver') ||
-      !historyLessonScript.includes('--trace') ||
-      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('function openLinkedGlossaryEntry()')) {
-    errors.push('The History Lesson glossary links or readable hero treatment is incomplete.');
-  }
+  ['independence:', 'articles:', 'crisis:', 'convention:', 'compromises:', 'debate:', 'rights:', 'bigIdea:', 'vocabulary:', 'teach:'].forEach(function (field) {
+    if (!historyReaderData.includes(field)) errors.push('History reader data is missing: ' + field);
+  });
+  ['window.APG_GLOSSARY_UNITS', 'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html',
+    'docs/constitution.html', 'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html'].forEach(function (requiredText) {
+    if (!historyReaderScript.includes(requiredText)) errors.push('The AP History reader integration is missing: ' + requiredText);
+  });
   ['history-research.html', 'history-research.js', 'history-research-data.js'].forEach(function (retiredFile) {
     if (fs.existsSync(path.join(root, retiredFile))) errors.push('Retired History Lesson investigation file is still present: ' + retiredFile);
   });
@@ -583,9 +575,6 @@ function validateSharedCourseExperience() {
     if (!page.includes(`data-section="${section}"`) || !page.includes('TEACH THIS SECTION') ||
         !page.includes('history-section-data.js') || !page.includes('glossary-data.js')) {
       errors.push('History Lesson teaching page is incomplete: ' + file);
-    }
-    if (!historyLessonScript.includes(`history-${section}.html`)) {
-      errors.push('History Lesson timeline does not link to teaching page: ' + file);
     }
   });
   const historySectionData = fs.readFileSync(path.join(root, 'history-section-data.js'), 'utf8');
