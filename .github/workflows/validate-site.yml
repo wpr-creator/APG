@@ -30,3 +30,6 @@ jobs:
 
       - name: Test Article V activity
         run: node scripts/test-article-v.js
+
+      - name: Test History Lesson teaching structure
+        run: node scripts/test-history-reader.js

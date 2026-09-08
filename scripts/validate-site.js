@@ -555,14 +555,15 @@ function validateSharedCourseExperience() {
   const historyReader = fs.readFileSync(path.join(root, 'history-reader.html'), 'utf8');
   const historyReaderData = fs.readFileSync(path.join(root, 'history-reader-data.js'), 'utf8');
   const historyReaderScript = fs.readFileSync(path.join(root, 'history-reader.js'), 'utf8');
-  ['THE STORY', 'ACADEMIC VOCABULARY', 'CAN YOU EXPLAIN THESE IDEAS?', 'glossary-data.js', 'section-documents'].forEach(function (requiredText) {
+  ['THE STORY IN FOUR PARTS', 'ACADEMIC VOCABULARY', 'glossary-data.js', 'section-documents'].forEach(function (requiredText) {
     if (!historyReader.includes(requiredText)) errors.push('The History Lesson reader is missing: ' + requiredText);
   });
   ['independence:', 'articles:', 'crisis:', 'convention:', 'compromises:', 'debate:', 'rights:', 'bigIdea:', 'vocabulary:', 'teach:'].forEach(function (field) {
     if (!historyReaderData.includes(field)) errors.push('History reader data is missing: ' + field);
   });
   ['window.APG_GLOSSARY_UNITS', 'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html',
-    'docs/constitution.html', 'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html'].forEach(function (requiredText) {
+    'docs/constitution.html', 'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html',
+    'TEACHING POINT ${index + 1} OF 4', 'CAN YOU EXPLAIN IT?'].forEach(function (requiredText) {
     if (!historyReaderScript.includes(requiredText)) errors.push('The AP History reader integration is missing: ' + requiredText);
   });
   ['history-research.html', 'history-research.js', 'history-research-data.js'].forEach(function (retiredFile) {
