@@ -18,6 +18,10 @@ Object.entries(data).forEach(([topic, section]) => {
     assert.ok(point.heading, `${topic} teaching point ${index + 1} needs a heading.`);
     assert.ok(point.text || (point.bullets && point.bullets.length), `${topic} teaching point ${index + 1} needs content.`);
     assert.ok(section.teach[index], `${topic} teaching point ${index + 1} needs a matching explanation check.`);
+    const teachingText = [point.text || '', ...(point.bullets || [])].join(' ').trim();
+    const wordCount = teachingText.split(/\s+/).filter(Boolean).length;
+    assert.ok(wordCount <= 90, `${topic} teaching point ${index + 1} is ${wordCount} words; the maximum is 90.`);
+    assert.ok(section.teach[index].endsWith('?'), `${topic} explanation check ${index + 1} should be one clear question.`);
   });
 });
 

@@ -11,7 +11,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "THE IMPORTANT QUESTION", text: "After rejecting British rule, Americans had to create a government strong enough to work without creating another tyranny." }
     ],
     vocabulary: [["NATURAL RIGHTS", "Basic rights every person has."], ["POPULAR SOVEREIGNTY", "The people are the source of government power."], ["CONSENT", "Permission or agreement."], ["TYRANNY", "Government that abuses power and violates rights."]],
-    teach: ["Explain which rights the Declaration says government should protect.", "Explain that government gets its power from the people.", "Explain why government power must have limits.", "Explain the challenge after independence: create a government that could work without creating another tyranny."]
+    teach: ["What rights does the Declaration say government should protect?", "Where does government get its power?", "Why must government power have limits?", "What challenge did Americans face after independence?"]
   },
   articles: {
     number: "02", years: "1781", label: "THE FIRST GOVERNMENT", title: "THE ARTICLES OF CONFEDERATION",
@@ -89,12 +89,12 @@ window.HISTORY_SECTION_DATA = {
     bigIdea: "The Constitution created a stronger national government. The Bill of Rights added written rules protecting individual freedoms from government power.",
     opening: "Federalists won enough support for the Constitution to take effect, but Anti-Federalist criticism shaped what happened next. Several states ratified while recommending amendments that would protect individual liberty.",
     sections: [
-      { heading: "THE RATIFICATION TIMELINE", bullets: ["1788: New Hampshire became the ninth state to ratify, meeting the requirement for the Constitution to take effect.", "1789: The new Congress met, and George Washington began serving as president.", "1789: James Madison introduced amendments based partly on protections requested by the states.", "1791: The states ratified ten amendments known as the Bill of Rights."] },
-      { heading: "WHAT DID THE BILL OF RIGHTS DO?", text: "The first ten amendments protect freedoms such as religion, speech, press, assembly, and petition. They also protect people accused of crimes and place rules on searches, punishments, and government use of private property." },
-      { heading: "WHO DID IT LIMIT?", text: "At first, the Bill of Rights restricted only the federal government. It did not automatically apply to state or local governments. After the Fourteenth Amendment was ratified in 1868, the Supreme Court gradually required states to respect most Bill of Rights protections." },
-      { heading: "WHOSE IDEAS WON?", text: "The final system included ideas from both sides. Federalists gained a stronger national government. Anti-Federalist pressure helped produce written protections for individual rights. The argument over national power, state power, and liberty continues in American politics." }
+      { heading: "THE CONSTITUTION TAKES EFFECT", text: "In 1788, New Hampshire became the ninth state to ratify the Constitution. That met the requirement for the new government to begin. In 1789, the new Congress met and George Washington became president." },
+      { heading: "FEDERALISTS PROMISE PROTECTED RIGHTS", text: "Anti-Federalists argued that the Constitution did not clearly protect individual freedoms. To win support for ratification, Federalists promised that the new Congress would add a bill of rights. James Madison introduced proposed amendments in 1789." },
+      { heading: "THE BILL OF RIGHTS IS RATIFIED", text: "In 1791, the states ratified ten amendments known as the Bill of Rights. They protect freedoms such as religion, speech, press, assembly, and petition. They also protect people accused of crimes and limit government searches, punishments, and use of private property." },
+      { heading: "WHO HAD TO FOLLOW THESE RIGHTS?", text: "Originally, the Bill of Rights limited only the federal government—not state or local governments. After the Fourteenth Amendment was ratified in 1868, the Supreme Court gradually applied most Bill of Rights protections to the states. This process is called incorporation." }
     ],
     vocabulary: [["BILL OF RIGHTS", "The first ten amendments, which protect important freedoms and legal rights."], ["AMENDMENT", "A formal change or addition to the Constitution."], ["CIVIL LIBERTY", "A freedom the government must respect."], ["INCORPORATION", "Using the Fourteenth Amendment to require states to protect Bill of Rights freedoms."]],
-    teach: ["Explain what changed in 1788, 1789, and 1791.", "Explain why Federalists promised to add a Bill of Rights.", "Name at least three freedoms or legal rights protected by the Bill of Rights.", "Explain how the final system included a stronger government and written protections for individual rights."]
+    teach: ["What happened after the ninth state ratified the Constitution?", "Why did Federalists promise to add a bill of rights?", "What freedoms and legal rights does the Bill of Rights protect?", "Which government did the Bill of Rights originally limit, and how did the Fourteenth Amendment expand that protection?"]
   }
 };

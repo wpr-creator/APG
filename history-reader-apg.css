@@ -5,6 +5,6 @@
 .section-documents a:hover,.section-documents a:focus { color: #000; background: #fff; }
 .reader-order { font-weight: 800; }
 .teaching-point { display: inline-block; margin: 0 0 .65rem; padding: .35rem .55rem; color: #fff; background: #000; font-family: "Arial Narrow", Arial, sans-serif; font-size: .82rem; font-weight: 900; letter-spacing: .09em; }
-.explain-check { margin-top: 1.25rem; padding: 1rem; border: 3px solid #000; background: #fff; }
+.explain-check { margin-top: 1.25rem; padding: .85rem 1rem; border: 2px solid #000; background: #fff; }
 .explain-check strong { display: block; margin-bottom: .35rem; font-family: "Arial Narrow", Arial, sans-serif; letter-spacing: .08em; }
 .explain-check p { margin: 0; font-weight: 700; }
