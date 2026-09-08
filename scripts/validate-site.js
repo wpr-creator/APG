@@ -409,9 +409,10 @@ function validateSharedCourseExperience() {
     errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
   }
   const parsedSiteContent = JSON.parse(siteContent);
-  const expectedExitQuestion = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
-  if (parsedSiteContent.exitQuestion !== '' || parsedSiteContent.exitQuestionDraft !== expectedExitQuestion) {
-    errors.push('The homepage exit ticket must remain closed while preserving its Prove Your Case draft.');
+  const expectedExitQuestion = 'Where did the quiz place your dialect?\n\nNow imagine you grew up there—or somewhere other than San Diego or California. How might that place have shaped your POLITICAL BELIEFS?';
+  const expectedExitQuestionDraft = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
+  if (parsedSiteContent.exitQuestion !== expectedExitQuestion || parsedSiteContent.exitQuestionDraft !== expectedExitQuestionDraft) {
+    errors.push('The homepage must show today’s dialect exit ticket while preserving its Prove Your Case draft.');
   }
   const expectedUpcoming = [
     { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
