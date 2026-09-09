@@ -268,10 +268,10 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260903-bottom-links',
+    'styles.css?v=20260909-ticket-submitted',
     'course-data.js?v=20260907-unit103-home',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260907-current-lesson',
+    'app.js?v=20260909-ticket-submitted',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -286,6 +286,15 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
+  ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
+  });
+  const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  const confirmedSaveIndex = homepageApp.indexOf('if (!confirmed) throw new Error("Submission could not be confirmed")');
+  const showTicketIndex = homepageApp.indexOf('document.getElementById("exit-ticket-success").hidden = false');
+  if (confirmedSaveIndex < 0 || showTicketIndex < confirmedSaveIndex) {
+    errors.push('The submitted-ticket image must appear only after the exit response is confirmed saved.');
+  }
   if (homepage.includes('data-view-link="agenda"') || homepage.includes('href="#agenda"')) {
     errors.push('Agenda must remain disabled in the primary student navigation.');
   }

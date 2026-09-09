@@ -1792,6 +1792,7 @@
     const form = document.getElementById("exit-ticket-form");
     const periodSelect = document.getElementById("exit-period");
     const status = document.getElementById("exit-status");
+    document.getElementById("exit-ticket-success").hidden = true;
     document.getElementById("exit-question").textContent = question || "NO EXIT TICKET TODAY.";
     form.hidden = !question;
     form.closest(".exit-card").hidden = !question;
@@ -1858,6 +1859,7 @@
     payload.submissionId = pendingExitSubmission.submissionId;
     button.disabled = true;
     button.textContent = "SUBMITTING…";
+    document.getElementById("exit-ticket-success").hidden = true;
     status.textContent = "Sending your response…";
     try {
       await fetch(EXIT_TICKET_URL, {
@@ -1869,6 +1871,7 @@
       const confirmed = await verifyExitSubmission(payload.submissionId);
       if (!confirmed) throw new Error("Submission could not be confirmed");
       document.getElementById("exit-ticket-form").hidden = true;
+      document.getElementById("exit-ticket-success").hidden = false;
       pendingExitSubmission = null;
       status.textContent = `SUBMITTED TO MR. ROGERS FOR ${payload.name.toUpperCase()}.`;
     } catch (error) {
