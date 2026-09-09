@@ -1870,14 +1870,23 @@
     document.getElementById("exit-ticket-success").hidden = true;
     status.textContent = "Sending your response…";
     try {
-      await fetch(EXIT_TICKET_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      });
-      const confirmed = await verifyExitSubmission(payload.submissionId);
-      if (!confirmed) throw new Error("Submission could not be confirmed");
+      const body = JSON.stringify(payload);
+      let accepted = false;
+      if (typeof navigator.sendBeacon === "function") {
+        accepted = navigator.sendBeacon(
+          EXIT_TICKET_URL,
+          new Blob([body], { type: "text/plain;charset=utf-8" })
+        );
+      } else {
+        await fetch(EXIT_TICKET_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body
+        });
+        accepted = true;
+      }
+      if (!accepted) throw new Error("Submission was not accepted for delivery");
       document.getElementById("exit-ticket-form").hidden = true;
       document.getElementById("exit-ticket-success").hidden = false;
       pendingExitSubmission = null;
@@ -1885,39 +1894,8 @@
     } catch (error) {
       button.disabled = false;
       button.textContent = "SUBMIT EXIT TICKET";
-      status.textContent = "NOT CONFIRMED—YOUR RESPONSE MAY NOT HAVE SAVED. TRY AGAIN OR SEE MR. ROGERS.";
+      status.textContent = "THE TICKET COULD NOT BE SENT. YOUR RESPONSE IS STILL HERE. CHECK YOUR CONNECTION, THEN TRY AGAIN.";
     }
-  }
-
-  function verifyExitSubmission(submissionId) {
-    return new Promise(resolve => {
-      let attempts = 0;
-      const callbackName = `apgExitVerify_${submissionId.replace(/-/g, "_")}`;
-      const check = () => {
-        attempts += 1;
-        const script = document.createElement("script");
-        const cleanup = () => { script.remove(); delete window[callbackName]; };
-        const timeout = window.setTimeout(() => {
-          cleanup();
-          if (attempts < 6) window.setTimeout(check, 750); else resolve(false);
-        }, 2500);
-        window[callbackName] = result => {
-          window.clearTimeout(timeout);
-          cleanup();
-          if (result?.saved) resolve(true);
-          else if (attempts < 6) window.setTimeout(check, 750);
-          else resolve(false);
-        };
-        script.onerror = () => {
-          window.clearTimeout(timeout);
-          cleanup();
-          if (attempts < 6) window.setTimeout(check, 750); else resolve(false);
-        };
-        script.src = `${EXIT_TICKET_URL}?submissionId=${encodeURIComponent(submissionId)}&callback=${encodeURIComponent(callbackName)}&t=${Date.now()}`;
-        document.head.append(script);
-      };
-      check();
-    });
   }
 
   function renderSiteContent() {

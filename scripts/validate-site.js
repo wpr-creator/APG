@@ -272,7 +272,7 @@ function validateSharedCourseExperience() {
     'course-data.js?v=20260909-madison-brutus',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260909-madison-brutus',
+    'app.js?v=20260909-exit-beacon-fix',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -291,10 +291,10 @@ function validateSharedCourseExperience() {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
   });
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
-  const confirmedSaveIndex = homepageApp.indexOf('if (!confirmed) throw new Error("Submission could not be confirmed")');
+  const confirmedSaveIndex = homepageApp.indexOf('if (!accepted) throw new Error("Submission was not accepted for delivery")');
   const showTicketIndex = homepageApp.indexOf('document.getElementById("exit-ticket-success").hidden = false');
   if (confirmedSaveIndex < 0 || showTicketIndex < confirmedSaveIndex) {
-    errors.push('The submitted-ticket image must appear only after the exit response is confirmed saved.');
+    errors.push('The submitted-ticket image must appear only after the browser accepts the exit response for delivery.');
   }
   if (homepage.includes('data-view-link="agenda"') || homepage.includes('href="#agenda"')) {
     errors.push('Agenda must remain disabled in the primary student navigation.');
@@ -1030,11 +1030,15 @@ function validateSharedCourseExperience() {
   [
     'fetch("content.json", { cache: "no-store" })',
     'EXIT_TICKET_URL', 'populateExitStudents', 'submitExitTicket',
-    'body: JSON.stringify(payload)', 'verifyExitSubmission', 'submissionId',
-    'NOT CONFIRMED—YOUR RESPONSE MAY NOT HAVE SAVED.'
+    'navigator.sendBeacon', 'new Blob([body], { type: "text/plain;charset=utf-8" })',
+    'mode: "no-cors"', 'submissionId',
+    'THE TICKET COULD NOT BE SENT. YOUR RESPONSE IS STILL HERE.'
   ].forEach(function (content) {
     if (!appCode.includes(content)) errors.push('Exit-ticket system changed or missing: ' + content);
   });
+  if (appCode.includes('verifyExitSubmission') || appCode.includes('apgExitVerify_')) {
+    errors.push('Exit-ticket submission must not poll a redirected cross-origin Apps Script response.');
+  }
 }
 
 function validateCalendarData() {
