@@ -557,7 +557,7 @@ function validateSharedCourseExperience() {
   ['SEVEN PARTS OF THE STORY', 'A STRONGER GOVERNMENT WITH LIMITS', 'ONE PROBLEM LED TO THE NEXT',
     'history-reader.html?topic=independence', 'history-reader.html?topic=articles', 'history-reader.html?topic=crisis',
     'history-reader.html?topic=convention', 'history-reader.html?topic=compromises', 'history-reader.html?topic=debate',
-    'history-reader.html?topic=rights'].forEach(function (requiredText) {
+    'history-reader.html?topic=rights', 'DIVIDED POWER'].forEach(function (requiredText) {
     if (!historyLesson.includes(requiredText)) errors.push('The History Lesson hub is missing: ' + requiredText);
   });
   if ((historyLesson.match(/class="section-card"/g) || []).length !== 7) {

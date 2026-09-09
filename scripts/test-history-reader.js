@@ -25,4 +25,15 @@ Object.entries(data).forEach(([topic, section]) => {
   });
 });
 
+const printedNotesTerms = [
+  'voluntary state cooperation', 'collect taxes directly', 'regulate trade between the states',
+  'enumerated powers', 'Commerce Clause', 'Supremacy Clause', 'rule of law',
+  'two-thirds of both houses of Congress', 'three-fourths of state legislatures',
+  'Federalists promised to consider amendments'
+];
+const serializedData = JSON.stringify(data).toLowerCase();
+printedNotesTerms.forEach(term => {
+  assert.ok(serializedData.includes(term.toLowerCase()), `History Lesson is missing a printed-notes concept: ${term}`);
+});
+
 console.log('History Lesson teaching structure test passed.');
