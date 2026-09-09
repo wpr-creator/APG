@@ -893,7 +893,7 @@
     foundations.debates.forEach(debate => {
       const button = document.createElement("button");
       button.type = "button";
-      button.textContent = debate.title;
+      button.innerHTML = `<span aria-hidden="true">${debate.icon}</span><strong>${debate.title}</strong>`;
       button.setAttribute("aria-pressed", String(debate.id === selectedId));
       button.addEventListener("click", () => renderMadison(debate.id));
       topics.appendChild(button);
@@ -901,20 +901,28 @@
     const debate = foundations.debates.find(item => item.id === selectedId);
     const workspace = document.getElementById("madison-workspace");
     workspace.replaceChildren();
+    const setup = document.createElement("p");
+    setup.className = "madison-setup";
+    setup.textContent = debate.setup;
     const question = document.createElement("h2");
     question.textContent = debate.question;
     const sides = document.createElement("div");
     sides.className = "madison-sides";
-    [["MADISON · FEDERALIST VIEW", debate.federalist, debate.federalistSource], ["BRUTUS · ANTI-FEDERALIST VIEW", debate.anti, debate.antiSource]].forEach(([labelText, argument, source]) => {
+    [["MADISON · FEDERALIST VIEW", debate.federalist, debate.federalistSource, "assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison"], ["BRUTUS · ANTI-FEDERALIST VIEW", debate.anti, debate.antiSource, "assets/democracy-filtered/brutus-advocate.jpg", "Illustration representing the writer Brutus"]].forEach(([labelText, argument, source, imageUrl, imageAlt]) => {
       const side = document.createElement("section");
       side.className = "madison-side";
+      const portrait = document.createElement("img");
+      portrait.src = imageUrl;
+      portrait.alt = imageAlt;
+      portrait.width = 960;
+      portrait.height = 720;
       const label = document.createElement("h3");
       label.textContent = labelText;
       const text = document.createElement("p");
       text.textContent = argument;
       const sourceEl = document.createElement("strong");
       sourceEl.textContent = source;
-      side.append(label, text, sourceEl);
+      side.append(portrait, label, text, sourceEl);
       sides.appendChild(side);
     });
     const connection = document.createElement("div");
@@ -950,7 +958,7 @@
       choiceRow.appendChild(button);
     });
     turn.append(turnTitle, turnPrompt, choiceRow, responseLabel, response);
-    workspace.append(question, sides, connection, turn);
+    workspace.append(setup, question, sides, connection, turn);
   }
 
   function renderExplorer() {

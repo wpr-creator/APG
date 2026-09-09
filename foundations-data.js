@@ -158,44 +158,44 @@ window.FOUNDATIONS_DATA = {
   ],
   debates: [
     {
-      id:"executive", title:"EXECUTIVE ORDERS", question:"SHOULD A PRESIDENT BE ABLE TO MAKE MAJOR POLICY WITHOUT A NEW LAW FROM CONGRESS?",
-      federalist:"A single executive can act with speed, energy, and clear accountability when national problems demand action.",
-      federalistSource:"FEDERALIST NO. 70",
-      anti:"Allowing one person to create major policy weakens representative lawmaking and creates a path toward unchecked power.",
+      id:"distance", icon:"🗺️", title:"A GOVERNMENT FAR AWAY", setup:"The new Constitution would govern people spread across a large country. Could representatives far away understand what local communities actually need?", question:"CAN A FARAWAY GOVERNMENT REALLY REPRESENT THE PEOPLE?",
+      federalist:"Yes—if people elect representatives. A large republic includes many interests and viewpoints. Because so many groups compete, it becomes harder for one faction to take control of the whole government.",
+      federalistSource:"MADISON · FEDERALIST NO. 10",
+      anti:"Not very well. In a country this large, representatives will be too distant to know the people’s local needs. Government may end up listening mainly to wealthy and powerful people near the center of power.",
       antiSource:"BRUTUS NO. 1",
-      connection:"ARTICLE I gives legislative power to Congress. ARTICLE II gives executive power to the president.",
-      prompt:"Which danger matters more here: government that cannot act or executive power that cannot be checked?",
-      standards:"12.4.1; 12.4.4; 12.7.5; 12.10"
+      connection:"The Constitution creates a representative republic: citizens elect officials to make national decisions. The debate is whether representation can stay meaningful across a very large country.",
+      prompt:"Who makes the stronger argument about distance and representation—Madison or Brutus? Explain using one idea from the document.",
+      standards:"AP Topics 1.2–1.3"
     },
     {
-      id:"federalism", title:"FEDERAL LAW VS. STATE LAW", question:"WHEN A STATE LEGALIZES SOMETHING FEDERAL LAW PROHIBITS, WHICH LAW SHOULD CONTROL?",
-      federalist:"National law must be supreme in its constitutional sphere or the country becomes a collection of conflicting systems.",
-      federalistSource:"FEDERALIST NO. 33 AND THE SUPREMACY CLAUSE",
-      anti:"States are closer to the people and should control matters the Constitution does not clearly give to the national government.",
-      antiSource:"BRUTUS NO. 1 AND THE TENTH AMENDMENT",
-      connection:"The Supremacy Clause and the Tenth Amendment create an enduring federalism tension.",
-      prompt:"Should national uniformity or state choice matter more in this conflict?",
-      standards:"12.7.1; 12.7.3–12.7.4; 12.10"
+      id:"power", icon:"🏛️", title:"NATION OR STATES?", setup:"The Articles left most power with the states. The Constitution gave the national government new powers and made valid federal law supreme.", question:"IF NATIONAL AND STATE POWER COLLIDE, WHO SHOULD WIN?",
+      federalist:"The national government must be able to carry out the powers the Constitution gives it. If every state can ignore national decisions, the country will fall back into the same weakness it had under the Articles.",
+      federalistSource:"MADISON’S FEDERALIST POSITION",
+      anti:"The Necessary and Proper Clause and Supremacy Clause could let national power keep growing. As national power expands, the states may lose the ability to protect local choices and serve as a check on distant officials.",
+      antiSource:"BRUTUS NO. 1",
+      connection:"The Necessary and Proper Clause helps Congress carry out its listed powers. The Supremacy Clause gives valid federal law priority over conflicting state law.",
+      prompt:"Who makes the stronger argument about national and state power—Madison or Brutus? Use one constitutional clause in your explanation.",
+      standards:"AP Topics 1.3 and 1.6"
     },
     {
-      id:"electoral", title:"THE ELECTORAL COLLEGE", question:"SHOULD THE UNITED STATES REPLACE THE ELECTORAL COLLEGE WITH A NATIONAL POPULAR VOTE?",
-      federalist:"A filtered, state-based process can force candidates to build broad coalitions and protect the federal structure.",
-      federalistSource:"FEDERALIST NO. 68",
-      anti:"Political equality is clearer when every vote counts the same toward the national result.",
-      antiSource:"DEMOCRATIC EQUALITY CRITIQUE",
-      connection:"Article II and the Twelfth Amendment structure presidential selection.",
-      prompt:"Which value should control: federal representation or equal individual voting power?",
-      standards:"12.6.6; 12.10"
+      id:"action", icon:"⚙️", title:"STRONG ENOUGH TO ACT", setup:"Under the Articles, Congress had national responsibilities but could not reliably collect money, regulate interstate trade, enforce decisions, or respond to emergencies.", question:"WHAT IF THE GOVERNMENT IS TOO WEAK TO DO ITS JOB?",
+      federalist:"Liberty is not safe when government cannot act. The Constitution gives the national government real power, then divides that power among branches and between the nation and the states to prevent abuse.",
+      federalistSource:"MADISON’S FEDERALIST POSITION",
+      anti:"A government’s ability to act can also become an ability to control. Broad powers may be stretched beyond their original purpose, while distant officials become harder for ordinary people to watch or correct.",
+      antiSource:"BRUTUS NO. 1",
+      connection:"Separation of powers, checks and balances, and federalism try to create a government strong enough to work but limited enough to protect liberty.",
+      prompt:"Which danger worries you more—a government too weak to act or one powerful enough to abuse its power? Which writer better supports your answer?",
+      standards:"AP Topics 1.3 and 1.6"
     },
     {
-      id:"student-speech", title:"STUDENT SPEECH", question:"WHEN MAY A PUBLIC SCHOOL LIMIT STUDENT SPEECH?",
-      federalist:"Government institutions need enough authority to preserve safety and carry out their public responsibilities.",
-      federalistSource:"ORDER AND EFFECTIVE GOVERNMENT",
-      anti:"Officials should not silence criticism merely because it is uncomfortable or unpopular.",
-      antiSource:"FIRST AMENDMENT LIBERTY",
-      connection:"The First and Fourteenth Amendments protect speech while courts recognize school-specific limits.",
-      prompt:"What rule would protect expression without preventing a school from functioning?",
-      standards:"12.2.1; 12.5.1; 12.10"
+      id:"rights", icon:"📜", title:"WHERE ARE THE RIGHTS?", setup:"The original Constitution described government powers and limits, but it did not include a separate list of protected individual freedoms.", question:"SHOULD PEOPLE TRUST THE NEW GOVERNMENT WITHOUT A BILL OF RIGHTS?",
+      federalist:"The Constitution already limits the national government to the powers it grants. Listing a few protected rights might even be dangerous if officials later claim that unlisted rights do not exist.",
+      federalistSource:"THE FEDERALIST ARGUMENT",
+      anti:"A powerful government should face clear written limits. Without a bill of rights, there is no direct promise protecting freedoms such as speech, religion, press, or fair legal treatment.",
+      antiSource:"BRUTUS AND THE ANTI-FEDERALISTS",
+      connection:"Federalists promised to consider amendments protecting liberty. The first Congress proposed them, and the states ratified the Bill of Rights in 1791.",
+      prompt:"Was the Constitution safe enough without a Bill of Rights, or were the Anti-Federalists right to demand one? Use one detail from the debate.",
+      standards:"AP Topics 1.3 and 1.5"
     }
   ],
   skills: [

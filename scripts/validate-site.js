@@ -268,10 +268,11 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260909-ticket-submitted',
-    'course-data.js?v=20260907-unit103-home',
+    'styles.css?v=20260909-madison-brutus',
+    'course-data.js?v=20260909-madison-brutus',
+    'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260909-ticket-submitted',
+    'app.js?v=20260909-madison-brutus',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -494,6 +495,7 @@ function validateSharedCourseExperience() {
   }
   const unit103Resources = {
     'u1-103-history-lesson': 'history-lesson.html',
+    'u1-103-madison-brutus': '#madison',
     'u1-103-guided-notes': 'https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j',
     'u1-103-articles': 'docs/articles-of-confederation.html',
     'u1-103-constitution': 'docs/constitution.html'
@@ -505,6 +507,7 @@ function validateSharedCourseExperience() {
   });
   [
     'id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON"',
+    'id: "u1-103-madison-brutus", lesson: "1.03 — THE HISTORY LESSON", title: "MADISON VS. BRUTUS", note: "INTERACTIVE DEBATE"',
     'id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES"',
     'id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON"',
     'id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON"',
