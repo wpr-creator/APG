@@ -5,6 +5,9 @@
 .section-documents a:hover,.section-documents a:focus { color: #000; background: #fff; }
 .reader-order { font-weight: 800; }
 .teaching-point { display: inline-block; margin: 0 0 .65rem; padding: .35rem .55rem; color: #fff; background: #000; font-family: "Arial Narrow", Arial, sans-serif; font-size: .82rem; font-weight: 900; letter-spacing: .09em; }
+.guided-notes-cue { margin-top: 1.25rem; padding: .85rem 1rem; color: #000; background: repeating-linear-gradient(#fff 0 31px,#d8d8d8 32px); border: 3px double #000; }
+.guided-notes-cue strong { display: inline-block; margin: 0 0 .35rem; padding: .2rem .45rem; color: #fff; background: #9f2839; font-family: "Arial Narrow", Arial, sans-serif; font-size: .74rem; letter-spacing: .09em; }
+.guided-notes-cue p { margin: 0; font-family: "Arial Narrow", Arial, sans-serif; font-size: .92rem; font-weight: 900; letter-spacing: .035em; }
 .explain-check { margin-top: 1.25rem; padding: .85rem 1rem; border: 2px solid #000; background: #fff; }
 .explain-check strong { display: block; margin-bottom: .35rem; font-family: "Arial Narrow", Arial, sans-serif; letter-spacing: .08em; }
 .explain-check p { margin: 0; font-weight: 700; }

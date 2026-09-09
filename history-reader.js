@@ -39,6 +39,14 @@
       });
       article.append(list);
     }
+    const notesCue = document.createElement("aside");
+    notesCue.className = "guided-notes-cue";
+    const notesLabel = document.createElement("strong");
+    notesLabel.textContent = "ON YOUR GUIDED NOTES";
+    const notesText = document.createElement("p");
+    notesText.textContent = content.notes[index];
+    notesCue.append(notesLabel, notesText);
+    article.append(notesCue);
     const check = document.createElement("aside");
     check.className = "explain-check";
     const checkLabel = document.createElement("strong");

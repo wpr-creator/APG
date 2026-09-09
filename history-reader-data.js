@@ -11,6 +11,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "THE IMPORTANT QUESTION", text: "After rejecting British rule, Americans had to create a government strong enough to work without creating another tyranny." }
     ],
     vocabulary: [["NATURAL RIGHTS", "Basic rights every person has."], ["POPULAR SOVEREIGNTY", "The people are the source of government power."], ["CONSENT", "Permission or agreement."], ["TYRANNY", "Government that abuses power and violates rights."]],
+    notes: ["1776 · 1. FREEDOM FROM TYRANNY — NATURAL RIGHTS", "1776 · 1. FREEDOM FROM TYRANNY — POPULAR SOVEREIGNTY + CONSENT OF THE GOVERNED", "1776 · 1. FREEDOM FROM TYRANNY — GOVERNMENT’S JOB", "THE CENTRAL PROBLEM"],
     teach: ["What rights does the Declaration say government should protect?", "Where does government get its power?", "Why must government power have limits?", "What challenge did Americans face after independence?"]
   },
   articles: {
@@ -25,6 +26,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "THE TRADEOFF", text: "Every state had one vote, and all thirteen states had to approve an amendment. This protected state independence and kept national power limited, but Congress had national responsibilities without dependable national power. The system depended on voluntary state cooperation." }
     ],
     vocabulary: [["CONFEDERATION", "A partnership in which member states keep most power."], ["CONGRESS", "The national lawmaking body."], ["AMENDMENT", "A formal change to a governing document."]],
+    notes: ["1781 · 2. THE ARTICLES — WHY A CONFEDERATION?", "CONGRESS COULD", "CONGRESS COULD NOT", "TRADEOFF + AP CONNECTION"],
     teach: ["Why did Americans want the states to keep most of the power?", "What were two things Congress could do under the Articles?", "What important powers and parts did the national government lack?", "What did the Articles protect, and what problem did that tradeoff create?"]
   },
   crisis: {
@@ -39,6 +41,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "THE DEEPER LESSON", text: "Liberty can be threatened by a government that is too powerful. It can also be threatened when government is too weak to protect rights, property, public safety, or the rule of law." }
     ],
     vocabulary: [["REVENUE", "Money a government collects to pay for public work."], ["EXECUTIVE BRANCH", "The branch responsible for carrying out laws."], ["JUDICIAL BRANCH", "The branch that interprets laws and settles legal disputes."]],
+    notes: ["1780s · 3. PROBLEMS — ECONOMIC + GOVERNMENT PROBLEMS", "SHAYS’ REBELLION — WHAT HAPPENED", "SHAYS’ REBELLION — WHY IT MATTERED", "AP CONNECTION"],
     teach: ["What were three weaknesses people could see under the Articles?", "What happened during Shays’ Rebellion?", "What did the rebellion show about the national government’s ability to act?", "How can both too much government power and too little government power threaten liberty?"]
   },
   convention: {
@@ -53,6 +56,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "STRONGER, DIVIDED, AND LIMITED", text: "The Constitution gave the national government usable power, then divided and limited it. Separation of powers divided authority among the branches. Federalism divided authority between the national and state governments. Checks and balances allowed the branches to restrain one another." }
     ],
     vocabulary: [["ENUMERATED POWERS", "Powers specifically listed in the Constitution."], ["COMMERCE CLAUSE", "The clause giving Congress power to regulate interstate and international trade."], ["SEPARATION OF POWERS", "Government power is divided among different branches."], ["CHECKS AND BALANCES", "Each branch can limit certain powers of the other branches."], ["FEDERALISM", "Power is shared by the national and state governments."], ["SUPREMACY CLAUSE", "Valid federal laws take priority when a state law conflicts with them."], ["RULE OF LAW", "Officials and citizens must follow the law."]],
+    notes: ["PROBLEM → CONSTITUTIONAL RESPONSE → LIMIT: TAXES + TRADE", "PROBLEM → CONSTITUTIONAL RESPONSE → LIMIT: EXECUTIVE + COURTS", "PROBLEM → CONSTITUTIONAL RESPONSE → LIMIT: NATIONAL AUTHORITY", "AP CONNECTION"],
     teach: ["How did the Constitution address the Articles’ tax and trade problems while limiting Congress?", "How did the Constitution add enforcement and courts without giving either branch all the power?", "How did the Supremacy Clause and rule of law strengthen national authority?", "How did separation of powers, federalism, and checks and balances divide and limit the stronger government?"]
   },
   compromises: {
@@ -67,6 +71,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "ARTICLE V · RATIFICATION", text: "A proposed amendment becomes part of the Constitution only after three-fourths of state legislatures or state conventions ratify it. Unlike the Articles’ unanimous rule, Article V allows change without making the nation’s basic law easy to rewrite." }
     ],
     vocabulary: [["COMPROMISE", "An agreement in which different sides each accept part of what the other side wants."], ["REPRESENTATION", "Speaking and making decisions for other people in government."], ["AMENDMENT", "A formal change or addition to the Constitution."], ["RATIFICATION", "Formal approval of a constitution or amendment."]],
+    notes: ["THE GREAT COMPROMISE — THE DISAGREEMENT", "THE GREAT COMPROMISE TABLE — HOUSE + SENATE", "THE AMENDMENT PROCESS — PROPOSAL", "THE AMENDMENT PROCESS — RATIFICATION"],
     teach: ["Why did large and small states disagree about representation?", "How did the House and Senate settle that disagreement?", "What are the two ways an amendment may be proposed?", "What are the two ways an amendment may be ratified, and why is the process difficult?"]
   },
   debate: {
@@ -81,6 +86,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "THE SHARED GOAL AND THE PROMISE", text: "Both sides wanted to prevent tyranny and protect liberty. Federalists feared a government too weak to act; Anti-Federalists feared one powerful enough to abuse rights. To answer a central Anti-Federalist objection, Federalists promised to consider amendments protecting individual liberty." }
     ],
     vocabulary: [["RATIFY", "To formally approve a constitution or agreement."], ["FACTION", "A group united by an interest or belief that tries to influence government."], ["FEDERALIST", "A person who supported ratification of the Constitution."], ["ANTI-FEDERALIST", "A person who opposed the Constitution or demanded stronger protections before ratification."]],
+    notes: ["1787–88 · 6. THE RATIFICATION DEBATE — WHY APPROVAL MATTERED", "FEDERALISTS + FEDERALIST NO. 10", "ANTI-FEDERALISTS + BRUTUS NO. 1", "RATIFICATION PROMISE"],
     teach: ["Why did Federalists and Anti-Federalists have to persuade the public?", "How did Federalists use the Articles and Federalist No. 10 to defend the Constitution?", "Why did Anti-Federalists oppose the Constitution, and what did Brutus No. 1 warn about?", "What goal did both sides share, and what promise helped answer the Anti-Federalists?"]
   },
   rights: {
@@ -95,6 +101,7 @@ window.HISTORY_SECTION_DATA = {
       { heading: "WHO HAD TO FOLLOW THESE RIGHTS?", text: "Originally, the Bill of Rights limited only the federal government—not state or local governments. After the Fourteenth Amendment was ratified in 1868, the Supreme Court gradually applied most Bill of Rights protections to the states. This process is called incorporation." }
     ],
     vocabulary: [["BILL OF RIGHTS", "The first ten amendments, which protect important freedoms and legal rights."], ["AMENDMENT", "A formal change or addition to the Constitution."], ["CIVIL LIBERTY", "A freedom the government must respect."], ["INCORPORATION", "Using the Fourteenth Amendment to require states to protect Bill of Rights freedoms."]],
+    notes: ["1788 — THE NINTH STATE RATIFIED", "1789 — THE NEW GOVERNMENT BEGAN + MADISON INTRODUCED AMENDMENTS", "1791 — THE BILL OF RIGHTS WAS RATIFIED", "AP EXTENSION — WHO ORIGINALLY HAD TO FOLLOW THE BILL OF RIGHTS?"],
     teach: ["What happened after the ninth state ratified the Constitution?", "Why did Federalists promise to add a bill of rights?", "What freedoms and legal rights does the Bill of Rights protect?", "Which government did the Bill of Rights originally limit, and how did the Fourteenth Amendment expand that protection?"]
   }
 };

@@ -14,10 +14,12 @@ assert.deepEqual(Object.keys(data), expected, 'History Lesson topics changed une
 Object.entries(data).forEach(([topic, section]) => {
   assert.equal(section.sections.length, 4, `${topic} must have exactly four teaching points.`);
   assert.equal(section.teach.length, 4, `${topic} must have exactly four matching explanation checks.`);
+  assert.equal(section.notes.length, 4, `${topic} must have exactly four matching guided-notes cues.`);
   section.sections.forEach((point, index) => {
     assert.ok(point.heading, `${topic} teaching point ${index + 1} needs a heading.`);
     assert.ok(point.text || (point.bullets && point.bullets.length), `${topic} teaching point ${index + 1} needs content.`);
     assert.ok(section.teach[index], `${topic} teaching point ${index + 1} needs a matching explanation check.`);
+    assert.ok(section.notes[index], `${topic} teaching point ${index + 1} needs a matching guided-notes cue.`);
     const teachingText = [point.text || '', ...(point.bullets || [])].join(' ').trim();
     const wordCount = teachingText.split(/\s+/).filter(Boolean).length;
     assert.ok(wordCount <= 90, `${topic} teaching point ${index + 1} is ${wordCount} words; the maximum is 90.`);
