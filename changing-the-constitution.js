@@ -5,6 +5,33 @@
   const rules = window.ARTICLE_V_RULES;
   const scrollBehavior = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
   let proposalRoute = "";
+  const wallAnswers = { house: 290, senate: 67, states: 38 };
+  const clearedWalls = new Set();
+
+  function testWall(button) {
+    const round = button.closest("[data-wall]");
+    const wall = round.dataset.wall;
+    const choice = Number(button.dataset.wallChoice);
+    const answer = wallAnswers[wall];
+    round.querySelectorAll("button").forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+    const output = round.querySelector("output");
+    if (choice === answer) {
+      clearedWalls.add(wall);
+      round.classList.add("is-cleared");
+      output.textContent = `✓ ${choice} clears this wall.`;
+    } else {
+      clearedWalls.delete(wall);
+      round.classList.remove("is-cleared");
+      const difference = Math.abs(answer - choice);
+      output.textContent = choice < answer ? `✕ Still ${difference} short.` : `That would work—but ${answer} is the smallest number needed.`;
+    }
+    $("#wall-cleared").hidden = clearedWalls.size !== 3;
+  }
+
+  function revealProcess() {
+    $$(".gated-info").forEach(section => { section.hidden = false; });
+    $(".opening").scrollIntoView({ behavior: scrollBehavior, block: "start" });
+  }
 
   const proposalOptions = {
     congress: {
@@ -94,6 +121,8 @@
   }
 
   $$('[data-proposal]').forEach(button => button.addEventListener("click", () => chooseProposal(button)));
+  $$('[data-wall-choice]').forEach(button => button.addEventListener("click", () => testWall(button)));
+  $("#reveal-process").addEventListener("click", revealProcess);
   $$('[data-ratification]').forEach(button => button.addEventListener("click", () => chooseRatification(button)));
   $$('[data-ratify-count]').forEach(button => button.addEventListener("click", () => testRatification(button)));
   $("#reset").addEventListener("click", () => window.location.reload());

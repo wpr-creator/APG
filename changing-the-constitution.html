@@ -7,9 +7,10 @@
   <meta name="description" content="An interactive AP Government activity about Article V and the constitutional amendment process.">
   <title>Change the Unchangeable — AP Government</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="changing-the-constitution.css?v=20260905-unchangeable">
+  <link rel="stylesheet" href="changing-the-constitution.css?v=20260910-threshold-wall">
+  <link rel="stylesheet" href="changing-the-constitution-threshold.css?v=20260910">
   <script src="changing-the-constitution-rules.js?v=20260905" defer></script>
-  <script src="changing-the-constitution.js?v=20260905-clean-comparison" defer></script>
+  <script src="changing-the-constitution.js?v=20260910-threshold-wall" defer></script>
   <link rel="stylesheet" href="course-shell.css?v=20260903">
   <script src="course-shell.js?v=20260903" defer></script>
 </head>
@@ -24,11 +25,26 @@
     <header class="hero">
       <p class="kicker">1.03 · ARTICLE V</p>
       <h1>CHANGE THE UNCHANGEABLE<span>TRACE AN AMENDMENT FROM IDEA TO CONSTITUTION</span></h1>
-      <p class="hero-lede"><strong>ARTICLE V</strong> created a formal process for amending the Constitution. It allowed the system to change, but required broad agreement so that temporary majorities could not easily rewrite the nation’s fundamental law.</p>
-      <a href="#proposal">ENTER THE PROCESS ↓</a>
+      <p class="hero-lede">Changing the Constitution is possible—but first, see how much support you think it takes.</p>
+      <a href="#threshold-wall">TEST YOUR GUESS ↓</a>
     </header>
 
-    <section class="comic-panel opening" aria-labelledby="big-idea-title">
+    <section class="comic-panel threshold-wall" id="threshold-wall" aria-labelledby="threshold-wall-title">
+      <div class="panel-number">00</div>
+      <div>
+        <p class="kicker">BEFORE WE TELL YOU THE RULE</p>
+        <h2 id="threshold-wall-title">HOW HIGH IS THE WALL?</h2>
+        <p>Choose the smallest number that you think would be enough. Clear all three walls to unlock Article V.</p>
+        <div class="threshold-rounds">
+          <fieldset class="threshold-round" data-wall="house"><legend>OUT OF 435 HOUSE MEMBERS</legend><p>How many must vote yes to propose an amendment?</p><div><button type="button" data-wall-choice="218">218</button><button type="button" data-wall-choice="290">290</button><button type="button" data-wall-choice="326">326</button></div><output aria-live="polite">Choose a number.</output></fieldset>
+          <fieldset class="threshold-round" data-wall="senate"><legend>OUT OF 100 SENATORS</legend><p>How many must vote yes to propose an amendment?</p><div><button type="button" data-wall-choice="51">51</button><button type="button" data-wall-choice="60">60</button><button type="button" data-wall-choice="67">67</button></div><output aria-live="polite">Choose a number.</output></fieldset>
+          <fieldset class="threshold-round" data-wall="states"><legend>OUT OF 50 STATES</legend><p>How many must ratify an amendment?</p><div><button type="button" data-wall-choice="26">26</button><button type="button" data-wall-choice="34">34</button><button type="button" data-wall-choice="38">38</button></div><output aria-live="polite">Choose a number.</output></fieldset>
+        </div>
+        <div class="wall-cleared" id="wall-cleared" hidden><strong>290 REPRESENTATIVES. 67 SENATORS. 38 STATES.</strong><p>That is a lot of agreement. Now see how the whole process works.</p><button type="button" id="reveal-process">UNLOCK ARTICLE V ↓</button></div>
+      </div>
+    </section>
+
+    <section class="comic-panel opening gated-info" aria-labelledby="big-idea-title" hidden>
       <div class="panel-number">01</div>
       <div>
         <p class="kicker">THE BIG IDEA</p>
@@ -38,7 +54,7 @@
       </div>
     </section>
 
-    <section class="comic-panel stage" id="proposal" aria-labelledby="proposal-title">
+    <section class="comic-panel stage gated-info" id="proposal" aria-labelledby="proposal-title" hidden>
       <div class="panel-number">02</div>
       <div class="stage-copy">
         <p class="kicker">GATE ONE · PROPOSAL</p>
@@ -56,9 +72,9 @@
       </div>
     </section>
 
-    <div class="down-arrow" aria-hidden="true">↓</div>
+    <div class="down-arrow gated-info" aria-hidden="true" hidden>↓</div>
 
-    <section class="comic-panel stage is-locked" id="ratification" aria-labelledby="ratification-title">
+    <section class="comic-panel stage is-locked gated-info" id="ratification" aria-labelledby="ratification-title" hidden>
       <div class="panel-number">03</div>
       <div class="stage-copy">
         <p class="kicker">GATE TWO · RATIFICATION</p>
@@ -89,7 +105,7 @@
       <p>An amendment must complete <strong>one proposal route</strong> and <strong>one ratification route</strong>. A simple majority is never enough.</p>
     </section>
 
-    <section class="comic-panel comparison" id="articles-comparison" aria-labelledby="comparison-title">
+    <section class="comic-panel comparison gated-info" id="articles-comparison" aria-labelledby="comparison-title" hidden>
       <div class="panel-number">04</div>
       <div>
         <p class="kicker">THE OLD RULE</p>
@@ -103,7 +119,7 @@
       </div>
     </section>
 
-    <section class="takeaway" aria-labelledby="takeaway-title">
+    <section class="takeaway gated-info" aria-labelledby="takeaway-title" hidden>
       <p class="kicker">AP CONNECTION</p>
       <h2 id="takeaway-title">ADAPTABLE—BUT PROTECTED.</h2>
       <p>Article V balanced two competing goals. The Constitution had to remain adaptable, but its basic rules also needed protection from sudden political pressure.</p>

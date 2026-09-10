@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260910-history-concept-practice',
+    'course-data.js?v=20260910-threshold-wall',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260909-exit-beacon-fix',
@@ -518,10 +518,10 @@ function validateSharedCourseExperience() {
   });
   if (!courseData.includes('id: "u1-103-changing-constitution"') ||
       !courseData.includes('title: "CHANGE THE UNCHANGEABLE"') ||
-      !courseData.includes('note: "EXTENDED NOTES", status: "COMING SOON", category: "guided-notes"') ||
-      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== false ||
+      !courseData.includes('note: "INTERACTIVE ARTICLE V ACTIVITY", category: "guided-notes"') ||
+      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== true ||
       parsedSiteContent.assignmentUrls['u1-103-changing-constitution'] !== 'changing-the-constitution.html') {
-    errors.push('Change the Unchangeable must remain a locked Extended Notes card in Lesson 1.03.');
+    errors.push('Change the Unchangeable must remain an open interactive Article V activity in Lesson 1.03.');
   }
   if (!courseData.includes('id: "u1-103-history-lesson"') ||
       !courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
@@ -538,6 +538,15 @@ function validateSharedCourseExperience() {
   ].forEach(function (requiredText) {
     if (!articleVHtml.includes(requiredText)) errors.push('Change the Unchangeable is missing: ' + requiredText);
   });
+  ['id="threshold-wall"', 'data-wall="house"', 'data-wall="senate"', 'data-wall="states"', 'id="reveal-process"', 'class="comic-panel opening gated-info"'].forEach(function (requiredText) {
+    if (!articleVHtml.includes(requiredText)) errors.push('Article V threshold challenge is missing: ' + requiredText);
+  });
+  const articleVScript = fs.readFileSync(path.join(root, 'changing-the-constitution.js'), 'utf8');
+  if (!articleVScript.includes('wallAnswers = { house: 290, senate: 67, states: 38 }') ||
+      !articleVScript.includes('clearedWalls.size !== 3') ||
+      !articleVScript.includes('revealProcess')) {
+    errors.push('Article V must make students clear the House, Senate, and state threshold challenge before revealing the process.');
+  }
   if (!articleVCss.includes('prefers-reduced-motion')) {
     errors.push('Change the Unchangeable must support reduced motion.');
   }
@@ -660,7 +669,7 @@ function validateSharedCourseExperience() {
   const historyConceptPractice = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.html'), 'utf8');
   const historyConceptScript = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.js'), 'utf8');
   if (!historyConceptPractice.includes('UNIT 1 · TOPICS 1.3–1.5') ||
-      !historyConceptPractice.includes('HISTORY<br><span>CONCEPT PRACTICE</span>') ||
+      !historyConceptPractice.includes('THE FOUNDING<br><span>PRESSURE TEST</span>') ||
       !historyConceptPractice.includes('unit1-history-concept-practice.js?v=20260910') ||
       (historyConceptScript.match(/lesson:/g) || []).length !== 33 ||
       !historyConceptScript.includes('SHAYS’ REBELLION') ||
@@ -672,7 +681,7 @@ function validateSharedCourseExperience() {
       historyConceptScript.includes('Math.random')) {
     errors.push('Topics 1.3–1.5 Concept Practice must keep all 33 assessment-aligned, randomized questions.');
   }
-  if (!courseData.includes('id: "u1-103-105-concept-practice", lesson: "1.03 — THE HISTORY LESSON", title: "1.03–1.05 CONCEPT PRACTICE"') ||
+  if (!courseData.includes('id: "u1-103-105-concept-practice", lesson: "1.03 — THE HISTORY LESSON", title: "THE FOUNDING PRESSURE TEST", note: "1.03–1.05 CONCEPT PRACTICE"') ||
       parsedSiteContent.assignmentUnlocks['u1-103-105-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-103-105-concept-practice'] !== 'unit1-history-concept-practice.html') {
     errors.push('Topics 1.3–1.5 Concept Practice must be open in the 1.03 Guided Notes & Practice row.');
