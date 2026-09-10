@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260909-madison-brutus',
+    'course-data.js?v=20260910-history-concept-practice',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260909-exit-beacon-fix',
@@ -656,6 +656,26 @@ function validateSharedCourseExperience() {
       !unit1ConceptScript.includes('sessionQuestions = buildSessionQuestions()') ||
       unit1ConceptScript.includes('Math.random')) {
     errors.push('Unit 1 Concept Practice must keep all 42 assessment-aligned questions spanning Topics 1.1 and 1.2.');
+  }
+  const historyConceptPractice = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.html'), 'utf8');
+  const historyConceptScript = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.js'), 'utf8');
+  if (!historyConceptPractice.includes('UNIT 1 · TOPICS 1.3–1.5') ||
+      !historyConceptPractice.includes('HISTORY<br><span>CONCEPT PRACTICE</span>') ||
+      !historyConceptPractice.includes('unit1-history-concept-practice.js?v=20260910') ||
+      (historyConceptScript.match(/lesson:/g) || []).length !== 33 ||
+      !historyConceptScript.includes('SHAYS’ REBELLION') ||
+      !historyConceptScript.includes('GREAT COMPROMISE') ||
+      !historyConceptScript.includes('Three-Fifths Compromise') ||
+      !historyConceptScript.includes('ELECTORAL COLLEGE') ||
+      !historyConceptScript.includes('ARTICLE V') ||
+      !historyConceptScript.includes('crypto.getRandomValues') ||
+      historyConceptScript.includes('Math.random')) {
+    errors.push('Topics 1.3–1.5 Concept Practice must keep all 33 assessment-aligned, randomized questions.');
+  }
+  if (!courseData.includes('id: "u1-103-105-concept-practice", lesson: "1.03 — THE HISTORY LESSON", title: "1.03–1.05 CONCEPT PRACTICE"') ||
+      parsedSiteContent.assignmentUnlocks['u1-103-105-concept-practice'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-103-105-concept-practice'] !== 'unit1-history-concept-practice.html') {
+    errors.push('Topics 1.3–1.5 Concept Practice must be open in the 1.03 Guided Notes & Practice row.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
