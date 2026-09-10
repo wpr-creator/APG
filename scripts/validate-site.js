@@ -566,15 +566,17 @@ function validateSharedCourseExperience() {
   if ((historyLesson.match(/class="section-card"/g) || []).length !== 7) {
     errors.push('The History Lesson hub must contain exactly seven section cards.');
   }
-  ['PRESENTER VIEW', 'TEACH THE WHOLE STORY', '7 SLIDES · BIG IDEA + KEY POINTS', 'history-presenter.html?slide=1'].forEach(function (requiredText) {
+  ['PRESENTER VIEW', 'TEACH THE WHOLE STORY', '10 SLIDES · OPENING + BIG IDEAS + KEY POINTS', 'history-presenter.html?slide=1'].forEach(function (requiredText) {
     if (!historyLesson.includes(requiredText)) errors.push('The History Lesson presenter launch is missing: ' + requiredText);
   });
   const historyPresenter = fs.readFileSync(path.join(root, 'history-presenter.html'), 'utf8');
   const historyPresenterScript = fs.readFileSync(path.join(root, 'history-presenter.js'), 'utf8');
-  ['history-reader-data.js?v=20260910-key-points', 'history-presenter.css?v=20260910-key-points', 'history-presenter.js?v=20260910-key-points', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots'].forEach(function (requiredText) {
+  ['history-reader-data.js?v=20260910-key-points', 'history-presenter.css?v=20260910-opening-slides', 'history-presenter.js?v=20260910-opening-slides', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots',
+    'LESSON 1.03', 'THE COMPLETE OPPOSITE', 'Imagine this. You date someone who decides everything', 'THINK · PAIR · SHARE',
+    'FROM ONE EXTREME TO ANOTHER', 'ARTICLES OF CONFEDERATION', 'CONSTITUTION + RATIFICATION'].forEach(function (requiredText) {
     if (!historyPresenter.includes(requiredText)) errors.push('The AP History presenter is missing: ' + requiredText);
   });
-  ['ArrowRight', 'ArrowLeft', 'PageDown', 'Home', 'End', 'requestFullscreen', 'slide.title', 'slide.bigIdea', 'slide.presenterPoints'].forEach(function (requiredText) {
+  ['ArrowRight', 'ArrowLeft', 'PageDown', 'Home', 'End', 'requestFullscreen', 'slide.type === "section"', 'section.title', 'section.bigIdea', 'section.presenterPoints', 'openingSlides'].forEach(function (requiredText) {
     if (!historyPresenterScript.includes(requiredText)) errors.push('The AP History presenter behavior is missing: ' + requiredText);
   });
   const historyReader = fs.readFileSync(path.join(root, 'history-reader.html'), 'utf8');

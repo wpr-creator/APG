@@ -1,6 +1,12 @@
 (() => {
   const order = ["independence", "articles", "crisis", "convention", "compromises", "debate", "rights"];
-  const slides = order.map(key => window.HISTORY_SECTION_DATA?.[key]).filter(Boolean);
+  const openingSlides = [
+    { type: "title", label: "Title slide" },
+    { type: "hook", label: "The hook" },
+    { type: "bridge", label: "The bridge" }
+  ];
+  const sectionSlides = order.map(key => window.HISTORY_SECTION_DATA?.[key]).filter(Boolean).map(section => ({ type: "section", section }));
+  const slides = [...openingSlides, ...sectionSlides];
   let index = Math.min(Math.max(Number(new URLSearchParams(location.search).get("slide")) - 1 || 0, 0), slides.length - 1);
   const number = document.getElementById("slide-number");
   const label = document.getElementById("slide-label");
@@ -12,11 +18,14 @@
   const next = document.getElementById("next-button");
   const dots = document.getElementById("slide-dots");
   const fullscreen = document.getElementById("fullscreen-button");
+  const sectionSlide = document.getElementById("section-slide");
+  const openingPanels = [...document.querySelectorAll("[data-opening]")];
+  document.getElementById("slide-total").textContent = slides.length;
 
   slides.forEach((_, dotIndex) => {
     const dot = document.createElement("button");
     dot.type = "button";
-    dot.setAttribute("aria-label", `Go to section ${dotIndex + 1}`);
+    dot.setAttribute("aria-label", slides[dotIndex].label || `Go to section ${dotIndex - openingSlides.length + 1}`);
     dot.addEventListener("click", () => show(dotIndex));
     dots.append(dot);
   });
@@ -24,16 +33,22 @@
   function show(nextIndex) {
     index = Math.min(Math.max(nextIndex, 0), slides.length - 1);
     const slide = slides[index];
-    number.textContent = slide.number;
-    label.textContent = `SECTION ${index + 1} · ${slide.years}`;
-    title.textContent = slide.title;
-    bigIdea.textContent = slide.bigIdea;
-    keyPoints.replaceChildren();
-    slide.presenterPoints.forEach(point => {
-      const item = document.createElement("li");
-      item.textContent = point;
-      keyPoints.append(item);
-    });
+    const isSection = slide.type === "section";
+    sectionSlide.hidden = !isSection;
+    openingPanels.forEach(panel => { panel.hidden = isSection || panel.dataset.opening !== slide.type; });
+    if (isSection) {
+      const section = slide.section;
+      number.textContent = section.number;
+      label.textContent = `SECTION ${index - openingSlides.length + 1} · ${section.years}`;
+      title.textContent = section.title;
+      bigIdea.textContent = section.bigIdea;
+      keyPoints.replaceChildren();
+      section.presenterPoints.forEach(point => {
+        const item = document.createElement("li");
+        item.textContent = point;
+        keyPoints.append(item);
+      });
+    }
     current.textContent = index + 1;
     previous.disabled = index === 0;
     next.disabled = index === slides.length - 1;
