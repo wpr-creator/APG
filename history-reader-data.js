@@ -3,6 +3,7 @@ window.HISTORY_SECTION_DATA = {
     number: "01", years: "1776", label: "THE FOUNDING STANDARD", title: "WHAT SHOULD GOVERNMENT PROTECT?",
     image: "assets/history-lesson/01-declaration.jpg", imageAlt: "Woodcut-style illustration of a declaration, quill, and broken royal crown.",
     bigIdea: "The Declaration said that people have rights and that government gets its power from the people.",
+    presenterPoints: ["NATURAL RIGHTS", "POWER FROM THE PEOPLE", "LIMITED GOVERNMENT", "A GOVERNMENT STRONG ENOUGH TO WORK"],
     opening: "The Declaration of Independence did more than announce a break from Britain. It explained why government is legitimate and when people may replace it.",
     sections: [
       { heading: "NATURAL RIGHTS", text: "People are born with basic rights. Government does not create these rights. Its job is to protect them." },
@@ -18,6 +19,7 @@ window.HISTORY_SECTION_DATA = {
     number: "02", years: "1781", label: "THE FIRST GOVERNMENT", title: "THE ARTICLES OF CONFEDERATION",
     image: "assets/history-lesson/02-articles.jpg", imageAlt: "Woodcut-style illustration of thirteen state shields joined by a fragile chain.",
     bigIdea: "The Articles created the first U.S. government, but the states kept most of the power.",
+    presenterPoints: ["STATES KEPT MOST POWER", "ONE VOTE PER STATE", "NO PRESIDENT OR NATIONAL COURTS", "ALL 13 STATES TO CHANGE IT"],
     opening: "After declaring independence, Americans needed a way for thirteen states to work together. They also remembered how Britain had abused centralized power. Their solution was the Articles of Confederation, the first written plan for the national government.",
     sections: [
       { heading: "WHY DID STATES KEEP MOST POWER?", text: "Each state saw itself as independent and wanted to control its own laws, taxes, and economy. Americans also wanted to prevent a new central government from becoming like the British monarchy." },
@@ -33,6 +35,7 @@ window.HISTORY_SECTION_DATA = {
     number: "03", years: "1780s", label: "THE PROBLEMS", title: "WHY THE ARTICLES FAILED",
     image: "assets/history-lesson/04-shays.jpg", imageAlt: "Woodcut-style illustration of Massachusetts farmers protesting outside a closed courthouse.",
     bigIdea: "The national government had important jobs, but it lacked the money and power to do them well.",
+    presenterPoints: ["NO POWER TO TAX", "NO CONTROL OVER INTERSTATE TRADE", "NO WAY TO ENFORCE DECISIONS", "SHAYS’ REBELLION EXPOSED THE WEAKNESS"],
     opening: "Winning independence did not end the country’s problems. The United States owed war debts, states argued about trade, and foreign governments questioned whether Congress could keep its promises. The Articles made it very difficult for the country to respond as one nation.",
     sections: [
       { heading: "FIVE FAILURES PEOPLE COULD SEE", bullets: ["Taxes: Congress could ask states for money but could not require payment.", "Trade: States taxed one another’s goods, while Congress could not create one national trade policy.", "Enforcement: Congress could make decisions but had no executive branch to carry them out.", "Courts: No national judicial branch existed to settle disputes between states.", "Money: States issued different currencies, making trade and debt harder to manage."] },
@@ -48,6 +51,7 @@ window.HISTORY_SECTION_DATA = {
     number: "04", years: "1787", label: "A NEW PLAN", title: "THE CONSTITUTIONAL CONVENTION",
     image: "assets/history-lesson/05-convention.jpg", imageAlt: "Woodcut-style illustration of delegates debating around a table at the Constitutional Convention.",
     bigIdea: "The delegates replaced the Articles with the Constitution. The new government was stronger, but its power was divided and limited.",
+    presenterPoints: ["POWER TO TAX AND REGULATE TRADE", "PRESIDENT AND FEDERAL COURTS", "FEDERAL LAW CAN BE SUPREME", "POWER DIVIDED AND CHECKED"],
     opening: "In May 1787, delegates met in Philadelphia. Congress had authorized them to revise the Articles. The delegates met in private, debated the failures of the old system, and decided to write a completely new plan of government.",
     sections: [
       { heading: "TAXES AND TRADE", text: "Under the Articles, Congress lacked dependable revenue and could not regulate interstate trade. The Constitution gave Congress the power to tax and the Commerce Clause gave it power to regulate trade between the states. Elections and enumerated powers limited how Congress used that authority." },
@@ -63,6 +67,7 @@ window.HISTORY_SECTION_DATA = {
     number: "05", years: "1787", label: "THE DEALS", title: "THE CONSTITUTIONAL COMPROMISES",
     image: "assets/history-lesson/06-compromises.jpg", imageAlt: "Woodcut-style illustration of delegates shaking hands beneath a balance representing large and small states.",
     bigIdea: "Compromises helped the delegates finish the Constitution, but some agreements—especially those protecting slavery—were deeply unjust.",
+    presenterPoints: ["HOUSE BASED ON POPULATION", "TWO SENATORS PER STATE", "COMPROMISES PROTECTED SLAVERY", "A DIFFICULT BUT POSSIBLE AMENDMENT PROCESS"],
     opening: "The delegates agreed that the Articles had failed, but they disagreed about the new government. Large and small states wanted different kinds of representation. Delegates also fought over slavery, presidential elections, and how the Constitution could be changed.",
     sections: [
       { heading: "THE REPRESENTATION PROBLEM", text: "Large states wanted representation based on population because they had more people. Small states wanted equal representation because they feared being outvoted. The delegates needed a plan that both groups of states would accept." },
@@ -78,6 +83,7 @@ window.HISTORY_SECTION_DATA = {
     number: "06", years: "1787–88", label: "THE RATIFICATION DEBATE", title: "FEDERALISTS AND ANTI-FEDERALISTS",
     image: "assets/history-lesson/09-debate.jpg", imageAlt: "Woodcut-style illustration of Federalist and Anti-Federalist speakers debating before undecided listeners.",
     bigIdea: "Federalists and Anti-Federalists both wanted to protect liberty. They disagreed about whether a weak or powerful national government was more dangerous.",
+    presenterPoints: ["FEDERALISTS FEARED A WEAK GOVERNMENT", "ANTI-FEDERALISTS FEARED DISTANT POWER", "MADISON ANSWERED THE FACTION PROBLEM", "A BILL OF RIGHTS WAS PROMISED"],
     opening: "Writing the Constitution did not make it law. Special conventions in at least nine states had to ratify, or formally approve, it. Supporters and opponents used speeches, newspapers, pamphlets, and public meetings to persuade voters.",
     sections: [
       { heading: "WHY RATIFICATION HAD TO BE WON", text: "The Constitution would take effect only after conventions in nine states approved it. Federalists and Anti-Federalists therefore had to persuade the public through speeches, newspapers, pamphlets, and meetings." },
@@ -93,6 +99,7 @@ window.HISTORY_SECTION_DATA = {
     number: "07", years: "1788–91", label: "THE FINAL AGREEMENT", title: "RATIFICATION AND THE BILL OF RIGHTS",
     image: "assets/history-lesson/10-rights.jpg", imageAlt: "Woodcut-style illustration of citizens receiving news of ratification and the Bill of Rights.",
     bigIdea: "The Constitution created a stronger national government. The Bill of Rights added written rules protecting individual freedoms from government power.",
+    presenterPoints: ["NINE STATES PUT THE CONSTITUTION IN EFFECT", "MADISON PROPOSED AMENDMENTS", "TEN AMENDMENTS BECAME THE BILL OF RIGHTS", "RIGHTS LATER APPLIED TO THE STATES"],
     opening: "Federalists won enough support for the Constitution to take effect, but Anti-Federalist criticism shaped what happened next. Several states ratified while recommending amendments that would protect individual liberty.",
     sections: [
       { heading: "THE CONSTITUTION TAKES EFFECT", text: "In 1788, New Hampshire became the ninth state to ratify the Constitution. That met the requirement for the new government to begin. In 1789, the new Congress met and George Washington became president." },

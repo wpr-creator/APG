@@ -15,6 +15,11 @@ Object.entries(data).forEach(([topic, section]) => {
   assert.equal(section.sections.length, 4, `${topic} must have exactly four teaching points.`);
   assert.equal(section.teach.length, 4, `${topic} must have exactly four matching explanation checks.`);
   assert.equal(section.notes.length, 4, `${topic} must have exactly four matching guided-notes cues.`);
+  assert.equal(section.presenterPoints.length, 4, `${topic} must have exactly four presenter key points.`);
+  section.presenterPoints.forEach((point, index) => {
+    assert.ok(point.length <= 52, `${topic} presenter point ${index + 1} is too long for projection.`);
+    assert.equal(point, point.toUpperCase(), `${topic} presenter point ${index + 1} must remain a short display phrase.`);
+  });
   section.sections.forEach((point, index) => {
     assert.ok(point.heading, `${topic} teaching point ${index + 1} needs a heading.`);
     assert.ok(point.text || (point.bullets && point.bullets.length), `${topic} teaching point ${index + 1} needs content.`);
