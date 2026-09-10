@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260910-threshold-wall',
+    'course-data.js?v=20260910-amendment-definition',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260909-exit-beacon-fix',
@@ -495,7 +495,6 @@ function validateSharedCourseExperience() {
   }
   const unit103Resources = {
     'u1-103-history-lesson': 'history-lesson.html',
-    'u1-103-madison-brutus': '#madison',
     'u1-103-guided-notes': 'https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j',
     'u1-103-articles': 'docs/articles-of-confederation.html',
     'u1-103-constitution': 'docs/constitution.html'
@@ -507,7 +506,6 @@ function validateSharedCourseExperience() {
   });
   [
     'id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON"',
-    'id: "u1-103-madison-brutus", lesson: "1.03 — THE HISTORY LESSON", title: "MADISON VS. BRUTUS", note: "INTERACTIVE DEBATE"',
     'id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES"',
     'id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON"',
     'id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON"',
@@ -516,6 +514,11 @@ function validateSharedCourseExperience() {
   ].forEach(function (requiredCard) {
     if (!courseData.includes(requiredCard)) errors.push('Unit 1 lesson card is missing: ' + requiredCard);
   });
+  if (courseData.includes('id: "u1-103-madison-brutus"') ||
+      Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUnlocks, 'u1-103-madison-brutus') ||
+      Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUrls, 'u1-103-madison-brutus')) {
+    errors.push('The Madison vs. Brutus activity card must remain removed from Unit 1.');
+  }
   if (!courseData.includes('id: "u1-103-changing-constitution"') ||
       !courseData.includes('title: "CHANGE THE UNCHANGEABLE"') ||
       !courseData.includes('note: "INTERACTIVE ARTICLE V ACTIVITY", category: "guided-notes"') ||
@@ -530,6 +533,10 @@ function validateSharedCourseExperience() {
   }
   const articleVHtml = fs.readFileSync(path.join(root, 'changing-the-constitution.html'), 'utf8');
   const articleVCss = fs.readFileSync(path.join(root, 'changing-the-constitution.css'), 'utf8');
+  if (!articleVHtml.includes('<strong>AN AMENDMENT</strong> is an official change or addition to the Constitution.') ||
+      !articleVHtml.includes('Only <strong>27 AMENDMENTS</strong> have been ratified')) {
+    errors.push('Change the Unchangeable must define amendment and explain that only 27 have been ratified.');
+  }
   [
     'ARTICLE V', 'TWO-THIRDS', 'THREE-FOURTHS', 'ARTICLES OF CONFEDERATION',
     'TWO-THIRDS PROPOSED', 'THREE-FOURTHS RATIFIED',

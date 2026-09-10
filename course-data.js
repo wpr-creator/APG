@@ -51,7 +51,6 @@ window.COURSE_DATA = {
       resources: [
         { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGE THE UNCHANGEABLE", note: "INTERACTIVE ARTICLE V ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
         { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", homepageAction: true, url: "history-lesson.html" },
-        { id: "u1-103-madison-brutus", lesson: "1.03 — THE HISTORY LESSON", title: "MADISON VS. BRUTUS", note: "INTERACTIVE DEBATE", category: "assignment", url: "#madison" },
         { id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j" },
         { id: "u1-103-105-concept-practice", lesson: "1.03 — THE HISTORY LESSON", title: "THE FOUNDING PRESSURE TEST", note: "1.03–1.05 CONCEPT PRACTICE", category: "guided-notes", url: "unit1-history-concept-practice.html" },
         { id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON", title: "ARTICLES OF CONFEDERATION", note: "READ THE TEXT", category: "reading", url: "docs/articles-of-confederation.html" },
