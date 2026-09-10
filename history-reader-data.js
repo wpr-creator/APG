@@ -67,17 +67,22 @@ window.HISTORY_SECTION_DATA = {
     number: "05", years: "1787", label: "THE DEALS", title: "THE CONSTITUTIONAL COMPROMISES",
     image: "assets/history-lesson/06-compromises.jpg", imageAlt: "Woodcut-style illustration of delegates shaking hands beneath a balance representing large and small states.",
     bigIdea: "Compromises helped the delegates finish the Constitution, but some agreements—especially those protecting slavery—were deeply unjust.",
-    presenterPoints: ["HOUSE BASED ON POPULATION", "TWO SENATORS PER STATE", "COMPROMISES PROTECTED SLAVERY", "A DIFFICULT BUT POSSIBLE AMENDMENT PROCESS"],
+    presenterPoints: ["THE GREAT COMPROMISE", "COMPROMISES PROTECTED SLAVERY", "THE ELECTORAL COLLEGE", "A DIFFICULT BUT POSSIBLE AMENDMENT PROCESS"],
     opening: "The delegates agreed that the Articles had failed, but they disagreed about the new government. Large and small states wanted different kinds of representation. Delegates also fought over slavery, presidential elections, and how the Constitution could be changed.",
     sections: [
-      { heading: "THE REPRESENTATION PROBLEM", text: "Large states wanted representation based on population because they had more people. Small states wanted equal representation because they feared being outvoted. The delegates needed a plan that both groups of states would accept." },
-      { heading: "THE GREAT COMPROMISE", text: "The agreement created a two-house Congress. Seats in the House of Representatives depend on each state’s population, addressing the concerns of large states. Every state receives two senators, protecting the influence of small states." },
-      { heading: "ARTICLE V · PROPOSAL", text: "The Constitution can be changed, but a proposal needs broad support. An amendment may be proposed by two-thirds of both houses of Congress or by a convention requested by two-thirds of state legislatures." },
-      { heading: "ARTICLE V · RATIFICATION", text: "A proposed amendment becomes part of the Constitution only after three-fourths of state legislatures or state conventions ratify it. Unlike the Articles’ unanimous rule, Article V allows change without making the nation’s basic law easy to rewrite." }
+      { heading: "THE GREAT COMPROMISE", text: "Large states wanted representation based on population. Small states wanted equal votes. The agreement created a two-house Congress: population determines seats in the House of Representatives, while every state receives two seats in the Senate." },
+      { heading: "COMPROMISES OVER SLAVERY", text: "Southern delegates wanted enslaved people counted for representation even though enslaved people could not vote and had no political rights. The Three-Fifths Compromise increased slave states’ political power. Another compromise prevented Congress from banning the international slave trade before 1808. These agreements protected slavery rather than resolving its injustice." },
+      { heading: "THE ELECTORAL COLLEGE", text: "Delegates disagreed about whether Congress or voters should select the president. They created a system in which each state appoints electors who formally choose the president. A state’s number of electors equals its total number of representatives and senators, combining population with equal state representation in the Senate." },
+      { heading: "THE AMENDMENT PROCESS", text: "Under the Articles, every state had to approve a change. Article V created a process that is still difficult but does not require complete agreement. Two-thirds of both houses of Congress—or two-thirds of state legislatures calling a convention—may propose. Three-fourths of state legislatures or state conventions must ratify." }
     ],
     vocabulary: [["COMPROMISE", "An agreement in which different sides each accept part of what the other side wants."], ["REPRESENTATION", "Speaking and making decisions for other people in government."], ["AMENDMENT", "A formal change or addition to the Constitution."], ["RATIFICATION", "Formal approval of a constitution or amendment."]],
-    notes: ["THE GREAT COMPROMISE — THE DISAGREEMENT", "THE GREAT COMPROMISE TABLE — HOUSE + SENATE", "THE AMENDMENT PROCESS — PROPOSAL", "THE AMENDMENT PROCESS — RATIFICATION"],
-    teach: ["Why did large and small states disagree about representation?", "How did the House and Senate settle that disagreement?", "What are the two ways an amendment may be proposed?", "What are the two ways an amendment may be ratified, and why is the process difficult?"]
+    notes: [
+      { label: "ON YOUR NOTES", text: "The Great Compromise table" },
+      { label: "EXTRA DETAIL", text: "Not printed on the guided notes" },
+      { label: "EXTRA DETAIL", text: "Not printed on the guided notes" },
+      { label: "ON YOUR NOTES", text: "The Amendment Process · Article V table" }
+    ],
+    teach: ["How did the Great Compromise settle the disagreement between large and small states?", "How did the slavery compromises protect slavery and give slave states more political power?", "How does the Electoral College combine population with equal state representation?", "Why is the amendment process difficult but still possible?"]
   },
   debate: {
     number: "06", years: "1787–88", label: "THE RATIFICATION DEBATE", title: "FEDERALISTS AND ANTI-FEDERALISTS",

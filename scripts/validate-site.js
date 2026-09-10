@@ -571,7 +571,7 @@ function validateSharedCourseExperience() {
   });
   const historyPresenter = fs.readFileSync(path.join(root, 'history-presenter.html'), 'utf8');
   const historyPresenterScript = fs.readFileSync(path.join(root, 'history-presenter.js'), 'utf8');
-  ['history-reader-data.js?v=20260910-key-points', 'history-presenter.css?v=20260910-opening-slides', 'history-presenter.js?v=20260910-opening-slides', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots',
+  ['history-reader-data.js?v=20260910-compromises', 'history-presenter.css?v=20260910-opening-slides', 'history-presenter.js?v=20260910-opening-slides', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots',
     'LESSON 1.03', 'THE COMPLETE OPPOSITE', 'Imagine this. You date someone who decides everything', 'THINK · PAIR · SHARE', 'assets/history-lesson/statue-liberty-hook.png',
     'FROM ONE EXTREME TO ANOTHER', 'ARTICLES OF CONFEDERATION', 'CONSTITUTION + RATIFICATION'].forEach(function (requiredText) {
     if (!historyPresenter.includes(requiredText)) errors.push('The AP History presenter is missing: ' + requiredText);
@@ -590,6 +590,10 @@ function validateSharedCourseExperience() {
   });
   ['independence:', 'articles:', 'crisis:', 'convention:', 'compromises:', 'debate:', 'rights:', 'bigIdea:', 'vocabulary:', 'notes:', 'teach:'].forEach(function (field) {
     if (!historyReaderData.includes(field)) errors.push('History reader data is missing: ' + field);
+  });
+  ['THE GREAT COMPROMISE', 'COMPROMISES OVER SLAVERY', 'THE ELECTORAL COLLEGE', 'THE AMENDMENT PROCESS',
+    'presenterPoints: ["THE GREAT COMPROMISE", "COMPROMISES PROTECTED SLAVERY", "THE ELECTORAL COLLEGE"'].forEach(function (requiredText) {
+    if (!historyReaderData.includes(requiredText)) errors.push('The constitutional compromises sequence is missing: ' + requiredText);
   });
   ['window.APG_GLOSSARY_UNITS', 'docs/declaration-of-independence.html', 'docs/articles-of-confederation.html',
     'docs/constitution.html', 'docs/federalist-10.html', 'docs/brutus-1.html', 'docs/bill-of-rights.html',

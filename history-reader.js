@@ -42,9 +42,10 @@
     const notesCue = document.createElement("aside");
     notesCue.className = "guided-notes-cue";
     const notesLabel = document.createElement("strong");
-    notesLabel.textContent = "ON YOUR GUIDED NOTES";
+    const noteCue = typeof content.notes[index] === "string" ? { label: "ON YOUR GUIDED NOTES", text: content.notes[index] } : content.notes[index];
+    notesLabel.textContent = noteCue.label;
     const notesText = document.createElement("p");
-    notesText.textContent = content.notes[index];
+    notesText.textContent = noteCue.text;
     notesCue.append(notesLabel, notesText);
     article.append(notesCue);
     const check = document.createElement("aside");

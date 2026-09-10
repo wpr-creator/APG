@@ -32,6 +32,13 @@ Object.entries(data).forEach(([topic, section]) => {
   });
 });
 
+assert.deepEqual(
+  Array.from(data.compromises.sections, point => point.heading),
+  ['THE GREAT COMPROMISE', 'COMPROMISES OVER SLAVERY', 'THE ELECTORAL COLLEGE', 'THE AMENDMENT PROCESS'],
+  'The constitutional compromises must follow the intended four-part teaching order.'
+);
+assert.equal(data.compromises.presenterPoints[2], 'THE ELECTORAL COLLEGE', 'The presenter’s third compromise point must be the Electoral College.');
+
 const printedNotesTerms = [
   'voluntary state cooperation', 'collect taxes directly', 'regulate trade between the states',
   'enumerated powers', 'Commerce Clause', 'Supremacy Clause', 'rule of law',
