@@ -572,10 +572,13 @@ function validateSharedCourseExperience() {
   const historyPresenter = fs.readFileSync(path.join(root, 'history-presenter.html'), 'utf8');
   const historyPresenterScript = fs.readFileSync(path.join(root, 'history-presenter.js'), 'utf8');
   ['history-reader-data.js?v=20260910-key-points', 'history-presenter.css?v=20260910-opening-slides', 'history-presenter.js?v=20260910-opening-slides', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots',
-    'LESSON 1.03', 'THE COMPLETE OPPOSITE', 'Imagine this. You date someone who decides everything', 'THINK · PAIR · SHARE',
+    'LESSON 1.03', 'THE COMPLETE OPPOSITE', 'Imagine this. You date someone who decides everything', 'THINK · PAIR · SHARE', 'assets/history-lesson/statue-liberty-hook.png',
     'FROM ONE EXTREME TO ANOTHER', 'ARTICLES OF CONFEDERATION', 'CONSTITUTION + RATIFICATION'].forEach(function (requiredText) {
     if (!historyPresenter.includes(requiredText)) errors.push('The AP History presenter is missing: ' + requiredText);
   });
+  if (!fs.existsSync(path.join(root, 'assets/history-lesson/statue-liberty-hook.png'))) {
+    errors.push('The History Lesson hook is missing its Statue of Liberty artwork.');
+  }
   ['ArrowRight', 'ArrowLeft', 'PageDown', 'Home', 'End', 'requestFullscreen', 'slide.type === "section"', 'section.title', 'section.bigIdea', 'section.presenterPoints', 'openingSlides'].forEach(function (requiredText) {
     if (!historyPresenterScript.includes(requiredText)) errors.push('The AP History presenter behavior is missing: ' + requiredText);
   });
