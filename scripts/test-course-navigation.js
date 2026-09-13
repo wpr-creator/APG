@@ -58,18 +58,12 @@ const homeLinks = html.slice(html.indexOf('<section class="course-links-card"'),
 assert.equal((homeLinks.match(/course-link-tile/g) || []).length, 3);
 assert(!/JOIN CODE|VYJN37|9RN33E|wxe36xms/.test(homeLinks));
 const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
-const start = app.indexOf("    const currentLesson =");
+const start = app.indexOf('    const lessonAction = document.getElementById("current-lesson-action");');
 const end = app.indexOf("    renderSiteContent();", start);
-const elements = { "current-lesson-action": {} };
-const resources = [
-  { id: "older", lesson: "1.01 — FIRST", url: "first.html" },
-  { id: "newer", lesson: "1.02 — SECOND", url: "second.html" },
-  { id: "future", lesson: "1.03 — LATER", url: "later.html" }
-];
-vm.runInNewContext(app.slice(start, end), { current: { id: "gov-1", resources }, siteContent: {}, assignmentIsUnlocked: id => id !== "future", document: { getElementById: id => elements[id] } });
-assert.equal(elements["current-lesson-action"].href, "?lesson=lesson-newer#gov-1", "Current lesson must exclude locked work");
-assert.equal(elements["current-lesson-action"].hidden, false);
-resources.length = 0;
-vm.runInNewContext(app.slice(start, end), { current: { id: "gov-1", resources }, siteContent: {}, assignmentIsUnlocked: () => true, document: { getElementById: id => elements[id] } });
+const lessonAction = { href: "history-lesson.html", hidden: false, textContent: "OPEN 1.03", removeAttribute(name) { delete this[name]; } };
+const elements = { "current-lesson-action": lessonAction };
+vm.runInNewContext(app.slice(start, end), { document: { getElementById: id => elements[id] } });
 assert.equal(elements["current-lesson-action"].hidden, true);
-console.log("Course navigation tests passed: shared headers, retained heroes, menu toggle/Escape, return links, tab behavior, homepage order, and current-lesson availability.");
+assert.equal(elements["current-lesson-action"].href, undefined);
+assert.equal(elements["current-lesson-action"].textContent, "");
+console.log("Course navigation tests passed: shared headers, retained heroes, menu toggle/Escape, return links, tab behavior, homepage order, and Unit-only homepage action.");
