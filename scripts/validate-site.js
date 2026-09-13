@@ -269,10 +269,10 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260913-topic-16-practice',
+    'course-data.js?v=20260913-unit1-home',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260913-topic-16-practice',
+    'app.js?v=20260913-unit1-home',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -420,10 +420,10 @@ function validateSharedCourseExperience() {
     errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
   }
   const parsedSiteContent = JSON.parse(siteContent);
-  const expectedExitQuestion = 'Where did the quiz place your dialect?\n\nNow imagine you grew up there—or somewhere other than San Diego or California. How might that place have shaped your POLITICAL BELIEFS?';
+  const expectedExitQuestion = '';
   const expectedExitQuestionDraft = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
   if (parsedSiteContent.exitQuestion !== expectedExitQuestion || parsedSiteContent.exitQuestionDraft !== expectedExitQuestionDraft) {
-    errors.push('The homepage must show today’s dialect exit ticket while preserving its Prove Your Case draft.');
+    errors.push('The homepage exit ticket must be closed while preserving its Prove Your Case draft.');
   }
   const expectedUpcoming = [
     { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
@@ -532,9 +532,9 @@ function validateSharedCourseExperience() {
     errors.push('Lesson 1.04 must contain Article V Explained, locked Guided Notes, and Federalist No. 51.');
   }
   if (!courseData.includes('id: "u1-103-history-lesson"') ||
-      !courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
-      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('currentLesson.homepageAction')) {
-    errors.push('The homepage current-lesson button must open the History Lesson directly.');
+      courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
+      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('lessonAction.hidden = true')) {
+    errors.push('The homepage must show only the current Unit 1 button, not a History Lesson shortcut.');
   }
   const articleVHtml = fs.readFileSync(path.join(root, 'changing-the-constitution.html'), 'utf8');
   const articleVCss = fs.readFileSync(path.join(root, 'changing-the-constitution.css'), 'utf8');

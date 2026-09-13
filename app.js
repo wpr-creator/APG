@@ -2021,19 +2021,10 @@
     document.getElementById("now-title").textContent = current.title.toUpperCase();
     document.getElementById("current-action").href = `#${current.id}`;
     document.getElementById("current-action").firstChild.textContent = `OPEN ${current.number.toUpperCase()} `;
-    const currentLesson = (current.resources || []).filter(resource => /^\d+\.\d+ —/.test(resource.lesson || "") && assignmentIsUnlocked(resource.id) && (siteContent.assignmentUrls?.[resource.id] || resource.url)).sort((a, b) => b.lesson.localeCompare(a.lesson, undefined, { numeric: true }))[0];
     const lessonAction = document.getElementById("current-lesson-action");
-    lessonAction.hidden = !currentLesson;
-    if (currentLesson) {
-      lessonAction.textContent = `OPEN ${currentLesson.lesson}`;
-      const resourceUrl = siteContent.assignmentUrls?.[currentLesson.id] || currentLesson.url;
-      if (currentLesson.homepageAction && resourceUrl) {
-        lessonAction.href = resourceUrl;
-      } else {
-        const firstResource = current.resources.find(resource => resource.lesson === currentLesson.lesson);
-        lessonAction.href = `?lesson=lesson-${firstResource.id}#${current.id}`;
-      }
-    }
+    lessonAction.hidden = true;
+    lessonAction.removeAttribute("href");
+    lessonAction.textContent = "";
     renderSiteContent();
     scheduleAssignmentRefresh();
     renderAgendaDate();

@@ -55,7 +55,7 @@ window.COURSE_DATA = {
         { id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", status: "COMING SOON", category: "guided-notes", url: "" },
         { id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
         { id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", url: "docs/federalist-51.html" },
-        { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", homepageAction: true, url: "history-lesson.html" },
+        { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", url: "history-lesson.html" },
         { id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j" },
         { id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON", title: "ARTICLES OF CONFEDERATION", note: "READ THE TEXT", category: "reading", url: "docs/articles-of-confederation.html" },
         { id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "UNITED STATES CONSTITUTION", note: "READ THE TEXT", category: "reading", url: "docs/constitution.html" },
