@@ -269,10 +269,10 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260913-lesson-104',
+    'course-data.js?v=20260913-topic-16-practice',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260909-exit-beacon-fix',
+    'app.js?v=20260913-topic-16-practice',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -649,14 +649,18 @@ function validateSharedCourseExperience() {
     if (!unitResourceAppCode.includes(`label: "${rowLabel}"`)) errors.push('Lesson resource row is missing: ' + rowLabel);
   });
   if (!unitResourceAppCode.includes('if (!categoryResources.length) return;') ||
+      !unitResourceAppCode.includes('if (category.key === "guided-notes")') ||
+      !unitResourceAppCode.includes('Number(bIsNotes) - Number(aIsNotes)') ||
       !unitResourceAppCode.includes('resourceType.includes("INTERACTIVE")') ||
       !unitResourceAppCode.includes('resourceType.includes("PRACTICE")') ||
       !unitResourceAppCode.includes('resourceType.includes("REVIEW")') ||
       !unitResourceStyles.includes('.unit-resource-grid { display: grid; grid-template-columns: repeat(2, 1fr);') ||
       !unitResourceStyles.includes('.unit-resource { min-height: 92px;') ||
       !unitResourceStyles.includes('text-align: left;') ||
-      unitResourceAppCode.includes('unit-resource-item-centered')) {
-    errors.push('Lesson resource rows must hide empty categories, use two equal columns, left-align cards, group practice with guided notes, and group interactive lessons with assignments.');
+      unitResourceAppCode.includes('unit-resource-item-centered') ||
+      unitResourceAppCode.includes('JUMP TO A LESSON') ||
+      unitResourceAppCode.includes('className = "lesson-jump"')) {
+    errors.push('Lesson rows must hide empty categories, put Guided Notes first, use two columns, and omit the lesson-jump menu.');
   }
   const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
   const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');
@@ -698,12 +702,29 @@ function validateSharedCourseExperience() {
       parsedSiteContent.assignmentUrls['u1-103-105-concept-practice'] !== 'unit1-history-concept-practice.html') {
     errors.push('Topics 1.3–1.5 Concept Practice must be open in the Unit 1 Concept Practice row.');
   }
+  const topic16Practice = fs.readFileSync(path.join(root, 'unit1-topic-16-concept-practice.html'), 'utf8');
+  const topic16Script = fs.readFileSync(path.join(root, 'unit1-topic-16-concept-practice.js'), 'utf8');
+  if (!topic16Practice.includes('1.6<br><span>CONCEPT PRACTICE</span>') ||
+      !topic16Practice.includes('unit1-topic-16-concept-practice.js?v=20260913') ||
+      (topic16Script.match(/lesson:/g) || []).length !== 28 ||
+      !topic16Script.includes('SEPARATION OF POWERS') ||
+      !topic16Script.includes('CHECKS AND BALANCES') ||
+      !topic16Script.includes('POWER OF THE PURSE') ||
+      !topic16Script.includes('BICAMERALISM') ||
+      !topic16Script.includes('FEDERALIST NO. 51') ||
+      !topic16Script.includes('crypto.getRandomValues') || topic16Script.includes('Math.random') ||
+      !courseData.includes('id: "u1-16-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.6 CONCEPT PRACTICE"') ||
+      parsedSiteContent.assignmentUnlocks['u1-16-concept-practice'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-16-concept-practice'] !== 'unit1-topic-16-concept-practice.html') {
+    errors.push('Topic 1.6 Concept Practice must keep all 28 assessment-aligned, randomized questions and remain open.');
+  }
   const unit1ResourceStart = courseData.indexOf('resources: [', courseData.indexOf('id: "gov-1"'));
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
   const firstLessonResource = courseData.indexOf('id: "u1-104-changing-constitution"', unit1ResourceStart);
   if (firstUnit1Resource < unit1ResourceStart || firstUnit1Resource > firstLessonResource ||
-      courseData.indexOf('id: "u1-103-105-concept-practice"', unit1ResourceStart) > firstLessonResource) {
-    errors.push('Both Unit 1 concept practices must remain together in the first resource row.');
+      courseData.indexOf('id: "u1-103-105-concept-practice"', unit1ResourceStart) > firstLessonResource ||
+      courseData.indexOf('id: "u1-16-concept-practice"', unit1ResourceStart) > firstLessonResource) {
+    errors.push('All Unit 1 concept practices must remain together in the first resource row.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [

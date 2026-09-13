@@ -230,19 +230,6 @@
     const question = document.createElement("p");
     question.textContent = unit.question;
     header.append(eyebrow, title, question);
-    const lessonMenu = document.createElement("div");
-    lessonMenu.className = "lesson-jump";
-    const jumpLabel = document.createElement("label");
-    jumpLabel.textContent = "JUMP TO A LESSON ";
-    const jump = document.createElement("select");
-    jump.append(new Option("Choose a lesson…", ""));
-    jumpLabel.append(jump);
-    lessonMenu.append(jumpLabel);
-    jump.addEventListener("change", () => {
-      const target = document.getElementById(jump.value);
-      if (target) { target.scrollIntoView(); target.focus({ preventScroll: true }); }
-    });
-
     const unitSources = document.createElement("section");
     unitSources.className = "unit-sources";
     unitSources.setAttribute("aria-label", "Sources for this unit");
@@ -311,7 +298,6 @@
         group.className = "unit-resource-group";
         group.id = `lesson-${lessonResources[0].id}`;
         group.tabIndex = -1;
-        jump.append(new Option(lesson, group.id));
         if (lesson === "ASSESSMENTS") group.classList.add("unit-resource-group-assessments");
         const lessonTitle = document.createElement("h2");
         lessonTitle.textContent = lesson;
@@ -334,6 +320,13 @@
         categories.forEach(category => {
           const categoryResources = categorizedResources.get(category.key);
           if (!categoryResources.length) return;
+          if (category.key === "guided-notes") {
+            categoryResources.sort((resourceA, resourceB) => {
+              const aIsNotes = /GUIDED NOTES/.test((resourceA.note || "").toUpperCase());
+              const bIsNotes = /GUIDED NOTES/.test((resourceB.note || "").toUpperCase());
+              return Number(bIsNotes) - Number(aIsNotes);
+            });
+          }
           const resourceRow = document.createElement("section");
           resourceRow.className = `unit-resource-row unit-resource-row-${category.key}`;
           const rowTitle = document.createElement("h3");
@@ -404,7 +397,7 @@
     const checklist = document.createElement("p");
     checklist.className = "checklist-note";
     checklist.textContent = "My checklist · Stars are saved on this browser. Marking something done does not submit it to Mr. Rogers.";
-    container.append(lessonMenu, checklist);
+    container.append(checklist);
     if (!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length) container.append(unitSources);
     if (unit.resources?.length) container.append(resources);
     const requestedLesson = new URL(location.href).searchParams.get("lesson");

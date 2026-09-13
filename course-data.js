@@ -51,8 +51,9 @@ window.COURSE_DATA = {
       resources: [
         { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
         { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-history-concept-practice.html" },
-        { id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
+        { id: "u1-16-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.6 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-16-concept-practice.html" },
         { id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", status: "COMING SOON", category: "guided-notes", url: "" },
+        { id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
         { id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", url: "docs/federalist-51.html" },
         { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", homepageAction: true, url: "history-lesson.html" },
         { id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j" },
@@ -62,13 +63,13 @@ window.COURSE_DATA = {
         { id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing" },
         { id: "u1-102-federalist-10", lesson: "1.02 — DEMOCRACY, FILTERED", title: "FEDERALIST NO. 10", note: "READ THE TEXT", category: "reading", url: "docs/federalist-10.html" },
         { id: "u1-102-brutus-1", lesson: "1.02 — DEMOCRACY, FILTERED", title: "BRUTUS NO. 1", note: "READ THE TEXT", category: "reading", url: "docs/brutus-1.html" },
+        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing" },
         { id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html" },
         { id: "u1-101-declaration", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION OF INDEPENDENCE", note: "READ THE TEXT", url: "docs/declaration-of-independence.html" },
         { id: "u1-101-preamble", lesson: "1.01 — THE FOUNDING PROMISE", title: "PREAMBLE TO THE CONSTITUTION", note: "READ THE TEXT", url: "docs/constitution-preamble.html" },
         { id: "u1-101-gettysburg", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG ADDRESS", note: "READ THE TEXT", url: "docs/gettysburg-address.html" },
         { id: "u1-101-declaration-annotation", lesson: "1.01 — THE FOUNDING PROMISE", title: "DECLARATION ANNOTATION", note: "ASSIGNMENT", url: "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0" },
         { id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0" },
-        { id: "u1-101-guided-notes", lesson: "1.01 — THE FOUNDING PROMISE", title: "1.01 GUIDED NOTES", note: "GUIDED NOTES", url: "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing" }
       ]
     },
     {
