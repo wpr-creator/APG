@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260909-madison-brutus',
-    'course-data.js?v=20260913-topic-number-practice',
+    'course-data.js?v=20260913-lesson-104',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'app.js?v=20260909-exit-beacon-fix',
@@ -488,7 +488,7 @@ function validateSharedCourseExperience() {
   if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
     errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
   }
-  if (!courseData.includes('id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "AP GOV TOPICS 1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html"') ||
+  if (!courseData.includes('id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
     errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
@@ -519,12 +519,17 @@ function validateSharedCourseExperience() {
       Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUrls, 'u1-103-madison-brutus')) {
     errors.push('The Madison vs. Brutus activity card must remain removed from Unit 1.');
   }
-  if (!courseData.includes('id: "u1-103-changing-constitution"') ||
-      !courseData.includes('title: "CHANGE THE UNCHANGEABLE"') ||
-      !courseData.includes('note: "INTERACTIVE ARTICLE V ACTIVITY", category: "guided-notes"') ||
-      parsedSiteContent.assignmentUnlocks['u1-103-changing-constitution'] !== true ||
-      parsedSiteContent.assignmentUrls['u1-103-changing-constitution'] !== 'changing-the-constitution.html') {
-    errors.push('Change the Unchangeable must remain an open interactive Article V activity in Lesson 1.03.');
+  if (!courseData.includes('id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html"') ||
+      parsedSiteContent.assignmentUnlocks['u1-104-changing-constitution'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-104-changing-constitution'] !== 'changing-the-constitution.html' ||
+      !courseData.includes('id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", status: "COMING SOON", category: "guided-notes", url: ""') ||
+      parsedSiteContent.assignmentUnlocks['u1-104-guided-notes'] !== false ||
+      parsedSiteContent.assignmentUrls['u1-104-guided-notes'] !== '' ||
+      !courseData.includes('id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", url: "docs/federalist-51.html"') ||
+      parsedSiteContent.assignmentUnlocks['u1-104-federalist-51'] !== true ||
+      parsedSiteContent.assignmentUrls['u1-104-federalist-51'] !== 'docs/federalist-51.html' ||
+      courseData.includes('id: "u1-103-changing-constitution"')) {
+    errors.push('Lesson 1.04 must contain Article V Explained, locked Guided Notes, and Federalist No. 51.');
   }
   if (!courseData.includes('id: "u1-103-history-lesson"') ||
       !courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
@@ -655,7 +660,7 @@ function validateSharedCourseExperience() {
   }
   const unit1ConceptPractice = fs.readFileSync(path.join(root, 'unit1-concept-practice.html'), 'utf8');
   const unit1ConceptScript = fs.readFileSync(path.join(root, 'unit1-concept-practice.js'), 'utf8');
-  ['AP GOV TOPICS<br><span>1.1–1.2 CONCEPT PRACTICE</span>', 'Choose the idea that best fits each example.', 'QUESTION 1', 'NEXT QUESTION →'].forEach(function (requiredText) {
+  ['1.1–1.2<br><span>CONCEPT PRACTICE</span>', 'Choose the idea that best fits each example.', 'QUESTION 1', 'NEXT QUESTION →'].forEach(function (requiredText) {
     if (!unit1ConceptPractice.includes(requiredText)) errors.push('Unit 1 Concept Practice is missing: ' + requiredText);
   });
   if ((unit1ConceptScript.match(/lesson: "/g) || []).length !== 42 ||
@@ -675,8 +680,8 @@ function validateSharedCourseExperience() {
   }
   const historyConceptPractice = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.html'), 'utf8');
   const historyConceptScript = fs.readFileSync(path.join(root, 'unit1-history-concept-practice.js'), 'utf8');
-  if (!historyConceptPractice.includes('AP GOVERNMENT · TOPICS 1.3–1.5') ||
-      !historyConceptPractice.includes('AP GOV TOPICS<br><span>1.3–1.5 CONCEPT PRACTICE</span>') ||
+  if (!historyConceptPractice.includes('TOPICS 1.3–1.5') ||
+      !historyConceptPractice.includes('1.3–1.5<br><span>CONCEPT PRACTICE</span>') ||
       !historyConceptPractice.includes('unit1-history-concept-practice.js?v=20260910') ||
       (historyConceptScript.match(/lesson:/g) || []).length !== 33 ||
       !historyConceptScript.includes('SHAYS’ REBELLION') ||
@@ -688,14 +693,14 @@ function validateSharedCourseExperience() {
       historyConceptScript.includes('Math.random')) {
     errors.push('Topics 1.3–1.5 Concept Practice must keep all 33 assessment-aligned, randomized questions.');
   }
-  if (!courseData.includes('id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "AP GOV TOPICS 1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK"') ||
+  if (!courseData.includes('id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK"') ||
       parsedSiteContent.assignmentUnlocks['u1-103-105-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-103-105-concept-practice'] !== 'unit1-history-concept-practice.html') {
     errors.push('Topics 1.3–1.5 Concept Practice must be open in the Unit 1 Concept Practice row.');
   }
   const unit1ResourceStart = courseData.indexOf('resources: [', courseData.indexOf('id: "gov-1"'));
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
-  const firstLessonResource = courseData.indexOf('id: "u1-103-changing-constitution"', unit1ResourceStart);
+  const firstLessonResource = courseData.indexOf('id: "u1-104-changing-constitution"', unit1ResourceStart);
   if (firstUnit1Resource < unit1ResourceStart || firstUnit1Resource > firstLessonResource ||
       courseData.indexOf('id: "u1-103-105-concept-practice"', unit1ResourceStart) > firstLessonResource) {
     errors.push('Both Unit 1 concept practices must remain together in the first resource row.');
