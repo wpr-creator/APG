@@ -52,7 +52,7 @@ window.COURSE_DATA = {
         { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
         { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-history-concept-practice.html" },
         { id: "u1-16-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.6 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-16-concept-practice.html" },
-        { id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", status: "COMING SOON", category: "guided-notes", url: "" },
+        { id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c" },
         { id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
         { id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", url: "docs/federalist-51.html" },
         { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", url: "history-lesson.html" },
