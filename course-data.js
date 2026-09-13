@@ -49,8 +49,8 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
-        { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.01–1.02 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
-        { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "THE FOUNDING PRESSURE TEST", note: "1.03–1.05 CONCEPT PRACTICE", category: "guided-notes", url: "unit1-history-concept-practice.html" },
+        { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "AP GOV TOPICS 1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
+        { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "AP GOV TOPICS 1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-history-concept-practice.html" },
         { id: "u1-103-changing-constitution", lesson: "1.03 — THE HISTORY LESSON", title: "CHANGE THE UNCHANGEABLE", note: "INTERACTIVE ARTICLE V ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html" },
         { id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON", title: "THE HISTORY LESSON", note: "INTERACTIVE LESSON", category: "assignment", homepageAction: true, url: "history-lesson.html" },
         { id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j" },
