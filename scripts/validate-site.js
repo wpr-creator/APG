@@ -272,7 +272,7 @@ function validateSharedCourseExperience() {
     'course-data.js?v=20260913-unit1-home',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260913-unit1-home',
+    'app.js?v=20260913-unit0-closed',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -433,9 +433,13 @@ function validateSharedCourseExperience() {
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
     errors.push('Upcoming Assignments must reflect the three Unit 1.01 assignments.');
   }
-  const expectedUnitUnlocks = { 'gov-0': true, 'gov-1': true, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
+  const expectedUnitUnlocks = { 'gov-0': false, 'gov-1': true, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
   if (JSON.stringify(parsedSiteContent.unitUnlocks) !== JSON.stringify(expectedUnitUnlocks)) {
-    errors.push('Unit 1 must be current and open while later units remain locked.');
+    errors.push('Unit 0 must be closed, Unit 1 current, and later units locked.');
+  }
+  if (!fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('const displayUnits = [...data.units].sort((a, b) => (a.id === "gov-0") - (b.id === "gov-0"));') ||
+      !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('isClosedUnit ? "UNIT CLOSED"')) {
+    errors.push('The Units page must place closed Unit 0 last and label it closed.');
   }
   [
     'ap-u2-overview', 'ap-u2-documents', 'ap-u2-cases', 'bill-journey', 'presidential-power', 'presidential-library-u2',

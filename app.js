@@ -190,13 +190,15 @@
 
   function renderUnits() {
     unitGrid.replaceChildren();
-    data.units.forEach(unit => {
+    const displayUnits = [...data.units].sort((a, b) => (a.id === "gov-0") - (b.id === "gov-0"));
+    displayUnits.forEach(unit => {
       const state = unitState(unit);
+      const isClosedUnit = unit.id === "gov-0" && state === "locked";
       const card = document.createElement("article");
       card.className = "unit-card " + state;
       const top = document.createElement("div");
       top.className = "unit-top";
-      top.innerHTML = `<span class="unit-index">${unit.number}</span><span class="unit-state">${state === "locked" ? "◇ LOCKED" : state === "current" ? "● OPEN NOW" : "✓ OPEN"}</span>`;
+      top.innerHTML = `<span class="unit-index">${unit.number}</span><span class="unit-state">${isClosedUnit ? "◇ CLOSED" : state === "locked" ? "◇ LOCKED" : state === "current" ? "● OPEN NOW" : "✓ OPEN"}</span>`;
       const title = document.createElement("h2");
       title.textContent = unit.title.toUpperCase();
       const question = document.createElement("p");
@@ -207,7 +209,7 @@
       const button = document.createElement("button");
       button.type = "button";
       button.disabled = state === "locked";
-      button.textContent = state === "locked" ? "NOT OPEN YET" : state === "current" ? "START THIS UNIT →" : "OPEN UNIT →";
+      button.textContent = isClosedUnit ? "UNIT CLOSED" : state === "locked" ? "NOT OPEN YET" : state === "current" ? "START THIS UNIT →" : "OPEN UNIT →";
       if (!button.disabled) button.addEventListener("click", () => { location.hash = unit.id; });
       card.append(top, title, question, standards, button);
       unitGrid.appendChild(card);
