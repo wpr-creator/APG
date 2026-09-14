@@ -268,7 +268,7 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260913-exit-page',
+    'styles.css?v=20260913-flat-hero',
     'course-data.js?v=20260913-104-notes',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
@@ -289,6 +289,10 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
+  if (!homepage.includes('<span class="hero-line-primary">AP UNITED STATES</span><span class="hero-line-secondary">GOVERNMENT &amp; POLITICS</span>') ||
+      homepage.includes('class="hero-visual"') || homepage.includes('class="pediment"')) {
+    errors.push('The homepage hero must use the centered two-line title without the building illustration.');
+  }
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
   });
