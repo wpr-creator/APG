@@ -42,7 +42,7 @@ function runShell({ saved, homepage = false } = {}) {
   assert(oldHeader.classes.has("apg-replaced-navigation"));
   assert(!lessonHero.classes.has("apg-replaced-navigation"), "Lesson heroes must stay visible");
   const header = body.children[0], button = header.children[1], nav = header.children[2];
-  assert.deepEqual(nav.children.map(a => a.textContent), ["Home", "Units", "Foundations", "Glossary", "Skill Builders"]);
+  assert.deepEqual(nav.children.map(a => a.textContent), ["HOME", "UNITS", "FOUNDATIONS", "GLOSSARY", "EXIT TICKET"]);
   button.events.click(); assert.equal(button.getAttribute("aria-expanded"), "true"); assert(nav.classes.has("is-open"));
   header.events.keydown({ key: "Escape" }); assert.equal(button.getAttribute("aria-expanded"), "false"); assert(!nav.classes.has("is-open")); assert(button.focused);
   return header.afterNode.href;
@@ -57,6 +57,8 @@ assert(cards.every((position, i) => position >= 0 && (!i || position > cards[i -
 const homeLinks = html.slice(html.indexOf('<section class="course-links-card"'), html.indexOf('<section class="view agenda-view"'));
 assert.equal((homeLinks.match(/course-link-tile/g) || []).length, 3);
 assert(!/JOIN CODE|VYJN37|9RN33E|wxe36xms/.test(homeLinks));
+assert(homeLinks.indexOf("TEST CORRECTIONS") < homeLinks.indexOf("GOOGLE CLASSROOM"));
+assert(homeLinks.indexOf("GOOGLE CLASSROOM") < homeLinks.indexOf("AP CLASSROOM"));
 const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
 const start = app.indexOf('    const lessonAction = document.getElementById("current-lesson-action");');
 const end = app.indexOf("    renderSiteContent();", start);

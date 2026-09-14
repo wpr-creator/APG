@@ -152,7 +152,7 @@
       location.hash = "home";
       return;
     }
-    const valid = ["home", "units", "foundations", "words", "skills", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents"].includes(routeName) || data.units.some(unit => unit.id === routeName);
+    const valid = ["home", "units", "foundations", "words", "skills", "exit-ticket", "madison", "constitution-explorer", "rights-referee", "election-2026", "presidential-power", "bill-journey", "federalism-map", "founding-power", "presidents"].includes(routeName) || data.units.some(unit => unit.id === routeName);
     if (routeName === "founding-power" && unitState(data.units.find(unit => unit.id === "gov-1")) === "locked") {
       location.hash = "units";
       return;
@@ -1798,7 +1798,8 @@
     document.getElementById("exit-ticket-success").hidden = true;
     document.getElementById("exit-question").textContent = question || "NO EXIT TICKET TODAY.";
     form.hidden = !question;
-    form.closest(".exit-card").hidden = !question;
+    form.closest(".exit-card").classList.toggle("is-empty", !question);
+    document.getElementById("home-exit-ticket").hidden = !question;
     status.textContent = question ? "Choose your class period and name. Your response will be sent to Mr. Rogers." : "";
     if (!question || !exitRoster.length) return;
     const selected = periodSelect.value;
@@ -1952,39 +1953,6 @@
     progressElement.setAttribute("aria-valuenow", String(progress));
     progressElement.setAttribute("aria-valuetext", `${daysUntil} days until the 2026 midterm elections`);
     document.getElementById("election-progress-fill").style.width = `${progress}%`;
-  }
-
-  function renderPortraitRain() {
-    const portraits = [
-      "george-washington.jpg",
-      "abraham-lincoln.jpg",
-      "theodore-roosevelt.jpg",
-      "franklin-d-roosevelt.jpg",
-      "dwight-d-eisenhower.jpg",
-      "john-f-kennedy.jpg",
-      "ronald-reagan.jpg",
-      "barack-obama.jpg",
-      "george-washington.jpg",
-      "abraham-lincoln.jpg"
-    ];
-    const positions = [4, 17, 31, 46, 61, 76, 89, 11, 54, 83];
-    const sizes = [118, 92, 134, 104, 126, 88, 112, 138, 82, 102];
-    document.querySelectorAll("#home, .agenda-view").forEach(view => {
-      const layer = document.createElement("div");
-      layer.className = "portrait-rain";
-      layer.setAttribute("aria-hidden", "true");
-      portraits.forEach((portrait, index) => {
-        const cameo = document.createElement("span");
-        cameo.style.setProperty("--portrait", `url("assets/presidents/${portrait}")`);
-        cameo.style.setProperty("--left", `${positions[index]}%`);
-        cameo.style.setProperty("--size", `${sizes[index]}px`);
-        cameo.style.setProperty("--duration", `${27 + (index % 4) * 5}s`);
-        cameo.style.setProperty("--delay", `${-index * 4.3}s`);
-        cameo.style.setProperty("--rest", `${8 + index * 9}vh`);
-        layer.appendChild(cameo);
-      });
-      view.prepend(layer);
-    });
   }
 
   async function loadConfig() {
@@ -2410,7 +2378,6 @@
   renderFederalismMap();
   renderFoundingPower();
   renderElection2026();
-  renderPortraitRain();
   loadExitRoster();
   loadConfig();
   loadHistory();

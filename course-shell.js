@@ -51,10 +51,10 @@
     name.innerHTML = "<strong>AP UNITED STATES GOVERNMENT</strong><small>MR. ROGERS · O’FARRELL HIGH SCHOOL</small>";
     brand.append(mark, name);
     const button = document.createElement("button");
-    button.type = "button"; button.textContent = "☰ Menu";
+    button.type = "button"; button.textContent = "☰ MENU";
     button.setAttribute("aria-expanded", "false"); button.setAttribute("aria-controls", "apg-shared-nav");
     const nav = document.createElement("nav"); nav.id = "apg-shared-nav"; nav.setAttribute("aria-label", "Main navigation");
-    [["Home","home"],["Units","units"],["Foundations","foundations"],["Glossary","words"],["Skill Builders","skills"]].forEach(([label, hash]) => {
+    [["HOME","home"],["UNITS","units"],["FOUNDATIONS","foundations"],["GLOSSARY","words"],["EXIT TICKET","exit-ticket"]].forEach(([label, hash]) => {
       const a = document.createElement("a"); a.textContent = label; a.href = root.href + "#" + hash; nav.append(a);
     });
     button.addEventListener("click", () => { const open = button.getAttribute("aria-expanded") !== "true"; button.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open); });

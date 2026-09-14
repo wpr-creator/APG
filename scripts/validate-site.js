@@ -268,16 +268,18 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260909-madison-brutus',
+    'styles.css?v=20260913-exit-page',
     'course-data.js?v=20260913-104-notes',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260913-unit0-closed',
+    'app.js?v=20260913-exit-page',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
     'data-view-link="words"',
-    'data-view-link="skills"',
+    'data-view-link="exit-ticket"',
+    'id="home-exit-ticket"',
+    'data-view="exit-ticket"',
     'https://classroom.google.com/',
     '<h2>GOOGLE CLASSROOM</h2>',
     'href="https://myap.collegeboard.org/"',
@@ -955,11 +957,11 @@ function validateSharedCourseExperience() {
   }
   const navCode = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
   [
-    '["Home", "#home"]',
-    '["Units", "#units"]',
-    '["Foundations", "#foundations"]',
-    '["Glossary", "#words"]',
-    '["Skill Builders", "#skills"]'
+    '["HOME", "#home"]',
+    '["UNITS", "#units"]',
+    '["FOUNDATIONS", "#foundations"]',
+    '["GLOSSARY", "#words"]',
+    '["EXIT TICKET", "#exit-ticket"]'
   ].forEach(function (content) {
     if (!navCode.includes(content)) errors.push('Shared navigation does not match the primary site menu: ' + content);
   });
@@ -1107,9 +1109,10 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket form control changed or missing: ' + content);
   });
-  if (!(homepage.indexOf('class="now-panel"') < homepage.indexOf('class="dashboard-card exit-card"') &&
-        homepage.indexOf('class="dashboard-card exit-card"') < homepage.indexOf('class="home-dashboard"'))) {
-    errors.push('The exit ticket must appear directly below the current-unit card.');
+  if (!(homepage.indexOf('id="home-exit-ticket"') > homepage.indexOf('class="now-panel"') &&
+        homepage.indexOf('id="home-exit-ticket"') < homepage.indexOf('class="home-dashboard"') &&
+        homepage.indexOf('class="view exit-ticket-view"') > homepage.indexOf('class="home-dashboard"'))) {
+    errors.push('The homepage must use a conditional Exit Ticket bar linked to the dedicated Exit Ticket view.');
   }
   [
     'fetch("content.json", { cache: "no-store" })',

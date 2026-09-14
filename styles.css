@@ -42,6 +42,35 @@ nav a:hover, nav a[aria-current="page"] { color: var(--black); background: var(-
 main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .view { animation: reveal .25s ease-out; }
 #home, .agenda-view { position: relative; isolation: isolate; }
+.home-dynamic-background {
+  position: fixed;
+  z-index: -1;
+  inset: 74px 0 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 14% 18%, rgba(163, 38, 56, .14) 0 5px, transparent 6px),
+    radial-gradient(circle at 84% 34%, rgba(23, 79, 133, .16) 0 6px, transparent 7px),
+    linear-gradient(115deg, transparent 0 46%, rgba(255, 253, 248, .72) 47% 53%, transparent 54%),
+    repeating-linear-gradient(90deg, rgba(23, 79, 133, .055) 0 1px, transparent 1px 88px),
+    repeating-linear-gradient(0deg, rgba(163, 38, 56, .045) 0 1px, transparent 1px 88px);
+  background-size: 240px 240px, 310px 310px, 180% 180%, 88px 88px, 88px 88px;
+  animation: civic-background-drift 28s linear infinite alternate;
+}
+.home-dynamic-background::after {
+  content: "★  WE THE PEOPLE  ★  LIBERTY  ★  JUSTICE  ★  DEMOCRACY  ★";
+  position: absolute;
+  top: 18%;
+  left: -8%;
+  width: 116%;
+  color: rgba(24, 40, 56, .035);
+  font-size: clamp(3.8rem, 9vw, 9rem);
+  font-weight: 950;
+  line-height: 1.7;
+  letter-spacing: .06em;
+  transform: rotate(-8deg);
+  white-space: normal;
+}
 .portrait-rain {
   position: fixed; z-index: -1; inset: 0;
   pointer-events: none; overflow: hidden;
@@ -141,8 +170,10 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .course-link-tile h2 { margin: 0; font-size: clamp(1.25rem, 2.4vw, 2rem); overflow-wrap: anywhere; }
 .course-link-tile > span { font-size: .9rem; font-weight: 850; }
 .course-link-tile:hover { background: #edf5fc; }
-.course-link-tile.test-corrections-card { color: #fff; background: #a32638; }
+.course-link-tile.test-corrections-card { color: #fff; background: #a32638; border-color: #a32638; box-shadow: inset 0 -8px 0 #7f1d2d; }
 .course-link-tile.test-corrections-card:hover { background: #84202e; }
+.course-link-tile.ap-classroom-tile { color: #fff; background: #174f85; border-color: #174f85; box-shadow: inset 0 -8px 0 #103a63; }
+.course-link-tile.ap-classroom-tile:hover { color: #fff; background: #103f6d; }
 .course-link-list { display: grid; gap: .65rem; padding-top: .8rem; }
 .compact-course-link { padding: .7rem; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: .6rem; align-items: center; background: var(--paper); border: 1px solid var(--line); }
 .compact-course-link .classroom-mark { width: 46px; height: 46px; font-size: 1rem; }
@@ -154,7 +185,23 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .compact-code code { font-size: .85rem; font-weight: 900; }
 .compact-code-list { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem; }
 .compact-code-list .compact-code { grid-column: auto; }
+.home-exit-ticket { margin: 1.2rem 0 2rem; min-height: 112px; padding: 1.1rem 1.4rem; display: grid; grid-template-columns: 64px minmax(0, 1fr) auto; align-items: center; gap: 1.1rem; color: var(--white); background: var(--black); border: 3px solid var(--black); box-shadow: 7px 7px 0 var(--stone-dark); text-decoration: none; }
+.home-exit-ticket:hover { color: var(--black); background: var(--white); }
+.home-exit-icon { width: 64px; height: 64px; display: grid; place-items: center; color: var(--black); background: var(--white); font-size: 2rem; }
+.home-exit-ticket:hover .home-exit-icon { color: var(--white); background: var(--black); }
+.home-exit-ticket small, .home-exit-ticket strong { display: block; }
+.home-exit-ticket small { margin-bottom: .2rem; color: var(--stone); font-size: .68rem; font-weight: 900; letter-spacing: .12em; }
+.home-exit-ticket:hover small { color: var(--muted); }
+.home-exit-ticket strong { font-size: clamp(1.1rem, 2.3vw, 1.65rem); line-height: 1.05; }
+.home-exit-ticket > b { font-size: 2rem; }
+.exit-ticket-view { max-width: 1040px; margin: 0 auto; padding-bottom: 3rem; }
+.exit-page-header { margin: 1rem 0 1.5rem; padding: clamp(1.5rem, 4vw, 2.5rem); display: flex; align-items: center; justify-content: space-between; gap: 1rem; color: var(--white); background: var(--black); border-bottom: 10px solid var(--slate); }
+.exit-page-header h1 { margin: 0; font-size: clamp(2.7rem, 7vw, 5.7rem); line-height: .9; letter-spacing: -.06em; }
+.exit-page-header .eyebrow { color: var(--stone); }
+.exit-page-number { width: clamp(72px, 12vw, 120px); aspect-ratio: 1; display: grid; place-items: center; color: var(--black); background: var(--white); font-size: clamp(2.5rem, 6vw, 5rem); }
 .exit-card { margin: 1.2rem 0; }
+.exit-card.is-empty .card-heading { display: none; }
+.exit-card.is-empty .exit-question { margin: 0; padding: clamp(2rem, 5vw, 4rem); text-align: center; font-size: clamp(1.3rem, 3vw, 2rem); }
 .exit-question { padding: 1rem; background: var(--stone); font-weight: 750; white-space: pre-line; }
 .exit-card label { display: block; margin: 1rem 0 .4rem; font-size: .76rem; font-weight: 900; }
 .exit-identity { display: grid; grid-template-columns: 1fr 1.6fr; gap: .7rem; }
@@ -165,6 +212,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .exit-ticket-success { width: min(680px, 100%); margin: 1rem auto .35rem; animation: ticket-arrives .45s cubic-bezier(.2,.8,.2,1) both; }
 .exit-ticket-success img { width: 100%; height: auto; display: block; }
 @keyframes ticket-arrives { from { opacity: 0; transform: translateY(14px) rotate(-1deg) scale(.96); } to { opacity: 1; transform: none; } }
+@keyframes civic-background-drift { from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; } to { background-position: 80px 45px, -55px 70px, 100% 100%, 44px 22px, -22px 44px; } }
 @media (max-width: 620px) { .exit-identity { grid-template-columns: 1fr; } }
 @media (prefers-reduced-motion: reduce) { .exit-ticket-success { animation: none; } }
 
@@ -746,6 +794,8 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .home-dashboard { grid-template-areas: "election" "history" "links"; }
   .course-links-card { grid-template-columns: 1fr; }
   .course-link-tile { aspect-ratio: auto; min-height: 150px; }
+  .home-exit-ticket { grid-template-columns: 52px minmax(0, 1fr) auto; padding: .9rem; gap: .75rem; }
+  .home-exit-icon { width: 52px; height: 52px; }
   .election-tracker-layout { grid-template-columns: 1fr; }
   .agenda-layout { min-height: auto; grid-template-columns: 1fr; }
   .agenda-date-panel { border-left: 0; border-top: 10px solid var(--slate); }

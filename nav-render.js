@@ -19,13 +19,13 @@
 function buildNavHTML(opts) {
   const basePath = (opts && opts.basePath) || "/APG/";
   return [
-    ["Home", "#home"],
-    ["Units", "#units"],
-    ["Foundations", "#foundations"],
-    ["Glossary", "#words"],
-    ["Skill Builders", "#skills"]
+    ["HOME", "#home"],
+    ["UNITS", "#units"],
+    ["FOUNDATIONS", "#foundations"],
+    ["GLOSSARY", "#words"],
+    ["EXIT TICKET", "#exit-ticket"]
   ].map(function ([label, hash]) {
-    const active = label === "Units";
+    const active = label === "UNITS";
     return `<a class="nav-tab${active ? " active" : ""}" href="${basePath}${hash}"${active ? ' aria-current="page"' : ""}>${label}</a>`;
   }).join("\n");
 }
@@ -50,7 +50,7 @@ function renderNav(opts) {
     toggle.type = 'button';
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', el.id);
-    toggle.innerHTML = '<i class="ti ti-menu-2" aria-hidden="true"></i><span>Menu</span>';
+      toggle.innerHTML = '<i class="ti ti-menu-2" aria-hidden="true"></i><span>MENU</span>';
     nav.insertBefore(toggle, el);
   }
 

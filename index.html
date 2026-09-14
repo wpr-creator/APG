@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="Mr. Rogers AP Government and Politics at O'Farrell High School.">
   <title>AP United States Government and Politics</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260909-madison-brutus">
+  <link rel="stylesheet" href="styles.css?v=20260913-exit-page">
   <script src="course-data.js?v=20260913-104-notes" defer></script>
   <script src="glossary-data.js?v=20260905-article-v" defer></script>
   <script src="foundations-data.js?v=20260909-madison-brutus" defer></script>
@@ -35,9 +35,9 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20260805-foundations-cases" defer></script>
-  <script src="app.js?v=20260913-unit0-closed" defer></script>
-<link rel="stylesheet" href="course-shell.css?v=20260903">
-<script src="course-shell.js?v=20260903" defer></script>
+  <script src="app.js?v=20260913-exit-page" defer></script>
+<link rel="stylesheet" href="course-shell.css?v=20260913-exit-page">
+<script src="course-shell.js?v=20260913-exit-page" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the course</a>
@@ -51,16 +51,17 @@
       <span aria-hidden="true">☰</span> Menu
     </button>
     <nav id="site-nav" aria-label="Main navigation">
-      <a href="#home" data-view-link="home">Home</a>
-      <a href="#units" data-view-link="units">Units</a>
-      <a href="#foundations" data-view-link="foundations">Foundations</a>
-      <a href="#words" data-view-link="words">Glossary</a>
-      <a href="#skills" data-view-link="skills">Skill Builders</a>
+      <a href="#home" data-view-link="home">HOME</a>
+      <a href="#units" data-view-link="units">UNITS</a>
+      <a href="#foundations" data-view-link="foundations">FOUNDATIONS</a>
+      <a href="#words" data-view-link="words">GLOSSARY</a>
+      <a href="#exit-ticket" data-view-link="exit-ticket">EXIT TICKET</a>
     </nav>
   </header>
 
   <main id="main" tabindex="-1">
     <section class="view" id="home" data-view="home">
+      <div class="home-dynamic-background" aria-hidden="true"></div>
       <div class="hero">
         <div class="hero-copy">
           <h1>AP UNITED STATES<br><span>GOVERNMENT &amp; POLITICS</span></h1>
@@ -86,23 +87,11 @@
         </div>
       </section>
 
-      <article class="dashboard-card exit-card">
-        <div class="card-heading"><div><p class="eyebrow">END OF CLASS</p><h2>EXIT TICKET</h2></div></div>
-        <p class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</p>
-        <form id="exit-ticket-form" hidden>
-          <div class="exit-identity">
-            <label for="exit-period">CLASS PERIOD<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
-            <label for="exit-student">YOUR NAME<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
-          </div>
-          <label for="exit-response">YOUR RESPONSE</label>
-          <textarea id="exit-response" rows="4" placeholder="TYPE YOUR RESPONSE…" required minlength="5"></textarea>
-          <button class="exit-submit" type="submit" disabled>SUBMIT EXIT TICKET</button>
-        </form>
-        <figure class="exit-ticket-success" id="exit-ticket-success" hidden>
-          <img src="assets/exit-ticket-submitted.png" alt="Ticket submitted" width="1000" height="500">
-        </figure>
-        <p class="system-note" id="exit-status" role="status"></p>
-      </article>
+      <a class="home-exit-ticket" id="home-exit-ticket" href="#exit-ticket" hidden>
+        <span class="home-exit-icon" aria-hidden="true">✎</span>
+        <span><small>END OF CLASS</small><strong>COMPLETE TODAY’S EXIT TICKET</strong></span>
+        <b aria-hidden="true">→</b>
+      </a>
 
       <section class="home-dashboard" aria-label="Course tools">
         <article class="dashboard-card election-tracker-card">
@@ -146,21 +135,46 @@
         </article>
 
         <section class="course-links-card" aria-label="Course links">
-          <a class="dashboard-card course-link-tile" id="classroom-link" href="https://classroom.google.com/" target="_blank" rel="noopener">
-            <h2>GOOGLE CLASSROOM</h2>
-            <span>OPEN CLASSROOM ↗</span>
-          </a>
-          <a class="dashboard-card course-link-tile" href="https://myap.collegeboard.org/" target="_blank" rel="noopener">
-            <h2>AP CLASSROOM</h2>
-            <span>OPEN AP CLASSROOM ↗</span>
-          </a>
           <a class="dashboard-card course-link-tile test-corrections-card" href="https://docs.google.com/document/d/1MX2EaJ0GMz6gnurTAC_qEoAjNRGBxeWtGnGlqrOeXso/edit" target="_blank" rel="noopener">
             <h2>TEST CORRECTIONS</h2>
             <span>OPEN THE DOCUMENT ↗</span>
           </a>
+          <a class="dashboard-card course-link-tile" id="classroom-link" href="https://classroom.google.com/" target="_blank" rel="noopener">
+            <h2>GOOGLE CLASSROOM</h2>
+            <span>OPEN CLASSROOM ↗</span>
+          </a>
+          <a class="dashboard-card course-link-tile ap-classroom-tile" href="https://myap.collegeboard.org/" target="_blank" rel="noopener">
+            <h2>AP CLASSROOM</h2>
+            <span>OPEN AP CLASSROOM ↗</span>
+          </a>
         </section>
 
       </section>
+    </section>
+
+    <section class="view exit-ticket-view" id="exit-ticket" data-view="exit-ticket" hidden>
+      <a class="back-button" href="#home"><span aria-hidden="true">←</span> HOME</a>
+      <header class="exit-page-header">
+        <div><p class="eyebrow">END OF CLASS</p><h1>EXIT TICKET</h1></div>
+        <span class="exit-page-number" aria-hidden="true">✎</span>
+      </header>
+      <article class="dashboard-card exit-card">
+        <div class="card-heading"><div><p class="eyebrow">TODAY</p><h2>YOUR RESPONSE</h2></div></div>
+        <p class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</p>
+        <form id="exit-ticket-form" hidden>
+          <div class="exit-identity">
+            <label for="exit-period">CLASS PERIOD<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
+            <label for="exit-student">YOUR NAME<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
+          </div>
+          <label for="exit-response">YOUR RESPONSE</label>
+          <textarea id="exit-response" rows="5" placeholder="TYPE YOUR RESPONSE…" required minlength="5"></textarea>
+          <button class="exit-submit" type="submit" disabled>SUBMIT EXIT TICKET</button>
+        </form>
+        <figure class="exit-ticket-success" id="exit-ticket-success" hidden>
+          <img src="assets/exit-ticket-submitted.png" alt="Ticket submitted" width="1000" height="500">
+        </figure>
+        <p class="system-note" id="exit-status" role="status"></p>
+      </article>
     </section>
 
     <section class="view agenda-view" id="agenda" data-view="agenda" hidden>
