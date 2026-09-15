@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════════════════════════
-//  MR. ROGERS — EXIT TICKET COLLECTOR + AUTO-ARCHIVE
+//  MR. ROGERS — EXIT TICKET COLLECTOR
 //  AP Government & Politics — Periods 1A and 2B
 //  O'Farrell High School · 2026–27
 // ════════════════════════════════════════════════════════════════
@@ -7,13 +7,13 @@
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/16TcskHZ3QmcLsToZuyfCWnd24t5WtB4duTsX8x1tiqg/edit';
 
 const TABS = {
-  '1A':  'Period 1A',
-  '2B':  'Period 2B',
-  'all': 'All Responses'
+  '1A': true,
+  '2B': true
 };
 
-const ARCHIVE_PREFIX = 'Archive — ';
-const HEADERS = ['Date', 'Period', 'Student Name', 'Question', 'Response', 'Submitted At', 'Submission ID'];
+const TIME_ZONE = 'America/Los_Angeles';
+const ROSTER_TAB = 'Rosters';
+const EXIT_HEADERS = ['Student', 'Response', 'Submitted'];
 const DEMOCRACY_TAB = 'Democracy Filtered';
 const DEMOCRACY_HEADERS = ['Date', 'Period', 'Student Name', 'Participatory — Meaning', 'Participatory — Strength', 'Participatory — Weakness', 'Pluralist — Meaning', 'Pluralist — Strength', 'Pluralist — Weakness', 'Elite — Meaning', 'Elite — Strength', 'Elite — Weakness', 'Submitted At', 'Submission ID'];
 
@@ -37,7 +37,7 @@ function doPost(e) {
       if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId)) throw new Error('A valid submission ID is required.');
 
       const ss = SpreadsheetApp.openByUrl(SHEET_URL);
-      const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+      const timestamp = new Date().toLocaleString('en-US', { timeZone: TIME_ZONE });
       const row = [
         body.date || new Date().toLocaleDateString('en-US'), body.period, body.name,
         body.participatoryMeaning, body.participatoryPro, body.participatoryCon,
@@ -68,7 +68,7 @@ function doPost(e) {
       const score     = body.score     !== undefined ? body.score : '';
       const total     = body.total     !== undefined ? body.total : '';
       const percent   = body.percent   || '';
-      const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+      const timestamp = new Date().toLocaleString('en-US', { timeZone: TIME_ZONE });
 
       const ss = SpreadsheetApp.openByUrl(SHEET_URL);
       const timeSpent = body.timeSpent || 'Unknown';
@@ -86,7 +86,7 @@ function doPost(e) {
     const name      = body.name      || 'Anonymous';
     const question  = body.question  || '';
     const response  = body.response  || '';
-    const timestamp = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+    const timestamp = new Date().toLocaleString('en-US', { timeZone: TIME_ZONE });
     const submissionId = String(body.submissionId || '').trim();
 
     if (!/^[a-zA-Z0-9-]{16,80}$/.test(submissionId)) {
@@ -96,14 +96,14 @@ function doPost(e) {
     if (!name || !question || response.length < 5) throw new Error('The exit ticket is incomplete.');
 
     const ss  = SpreadsheetApp.openByUrl(SHEET_URL);
-    const row = [date, period, name, question, response, timestamp, submissionId];
 
     const lock = LockService.getScriptLock();
     lock.waitLock(10000);
     try {
       if (!submissionExists(ss, submissionId)) {
-        writeToTab(ss, TABS[period], row);
-        writeToTab(ss, TABS['all'], row);
+        if (!studentIsOnRoster(ss, period, name)) throw new Error('Student is not on the AP Government roster.');
+        writeExitTicket(ss, date, period, name, question, response, timestamp);
+        rememberSubmission(submissionId);
       }
     } finally {
       lock.releaseLock();
@@ -122,39 +122,118 @@ function doPost(e) {
 }
 
 // ════════════════════════════════════════════════════════════════
-//  writeToTab — finds or creates a tab, adds header, appends row
+//  Exit-ticket tabs — one tab per ticket and class period
 // ════════════════════════════════════════════════════════════════
-function writeToTab(ss, tabName, row) {
+function writeExitTicket(ss, rawDate, period, name, question, response, timestamp) {
+  const date = normalizeTicketDate(rawDate);
+  const ticketLabel = findOrCreateTicketLabel(ss, date, question);
+  const tabName = ticketLabel + ' · ' + period;
   let sheet = ss.getSheetByName(tabName);
 
-  if (!sheet) {
-    sheet = ss.insertSheet(tabName);
-    sheet.appendRow(HEADERS);
-    const headerRange = sheet.getRange(1, 1, 1, HEADERS.length);
-    headerRange.setFontWeight('bold')
-               .setBackground('#1a2e5a')
-               .setFontColor('#ffffff');
-    sheet.setFrozenRows(1);
-    sheet.setColumnWidth(1, 90);
-    sheet.setColumnWidth(2, 70);
-    sheet.setColumnWidth(3, 160);
-    sheet.setColumnWidth(4, 280);
-    sheet.setColumnWidth(5, 380);
-    sheet.setColumnWidth(6, 150);
-  }
+  if (!sheet) sheet = createExitTicketTab(ss, tabName, question);
 
-  sheet.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]);
-
-  sheet.appendRow(row);
+  sheet.appendRow([name, response, timestamp]);
+  const lastRow = sheet.getLastRow();
+  sheet.getRange(lastRow, 1, 1, EXIT_HEADERS.length).setVerticalAlignment('top');
+  sheet.getRange(lastRow, 2).setWrap(true);
 }
 
 function submissionExists(ss, submissionId) {
-  const sheet = ss.getSheetByName(TABS['all']);
+  if (PropertiesService.getScriptProperties().getProperty(submissionKey(submissionId))) return true;
+
+  // Preserve duplicate detection for submissions saved before this version.
+  const sheet = ss.getSheetByName('All Responses');
   if (!sheet || sheet.getLastRow() < 2) return false;
   return sheet.getRange(2, 7, sheet.getLastRow() - 1, 1)
     .createTextFinder(submissionId)
     .matchEntireCell(true)
     .findNext() !== null;
+}
+
+function rememberSubmission(submissionId) {
+  PropertiesService.getScriptProperties().setProperty(submissionKey(submissionId), '1');
+}
+
+function submissionKey(submissionId) {
+  const digest = Utilities.computeDigest(Utilities.DigestAlgorithm.SHA_256, submissionId);
+  const compact = Utilities.base64EncodeWebSafe(digest).replace(/=+$/, '').slice(0, 16);
+  return 'exit_' + compact;
+}
+
+function studentIsOnRoster(ss, period, name) {
+  const sheet = ss.getSheetByName(ROSTER_TAB);
+  if (!sheet || sheet.getLastRow() < 2) throw new Error('The AP Government roster is unavailable.');
+  const rows = sheet.getRange(2, 1, sheet.getLastRow() - 1, 2).getDisplayValues();
+  return rows.some(function(row) {
+    return row[0].trim() === period && row[1].trim() === name;
+  });
+}
+
+function normalizeTicketDate(rawDate) {
+  const value = String(rawDate || '').trim();
+  const match = value.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+  if (match) {
+    return match[3] + '-' + match[1].padStart(2, '0') + '-' + match[2].padStart(2, '0');
+  }
+  return Utilities.formatDate(new Date(), TIME_ZONE, 'yyyy-MM-dd');
+}
+
+function findOrCreateTicketLabel(ss, date, question) {
+  const matchingSheets = ss.getSheets().filter(function(sheet) {
+    const prefix = sheet.getName().split(' · ')[0];
+    return prefix === date || prefix.indexOf(date + ' ') === 0;
+  }).filter(function(sheet) {
+    return / · (?:1A|2B)$/.test(sheet.getName());
+  });
+
+  for (let i = 0; i < matchingSheets.length; i += 1) {
+    if (matchingSheets[i].getRange('A1').getDisplayValue().trim() === question.trim()) {
+      return matchingSheets[i].getName().split(' · ')[0];
+    }
+  }
+
+  const usedLabels = new Set(matchingSheets.map(function(sheet) {
+    return sheet.getName().split(' · ')[0];
+  }));
+  if (!usedLabels.has(date)) return date;
+
+  let sequence = 2;
+  while (usedLabels.has(date + ' ' + sequenceLetters(sequence))) sequence += 1;
+  return date + ' ' + sequenceLetters(sequence);
+}
+
+function sequenceLetters(number) {
+  let value = number;
+  let letters = '';
+  while (value > 0) {
+    value -= 1;
+    letters = String.fromCharCode(65 + (value % 26)) + letters;
+    value = Math.floor(value / 26);
+  }
+  return letters;
+}
+
+function createExitTicketTab(ss, tabName, question) {
+  const sheet = ss.insertSheet(tabName, 0);
+  sheet.getRange('A1:C1').merge();
+  sheet.getRange('A1')
+    .setValue(question)
+    .setFontWeight('bold')
+    .setFontSize(12)
+    .setBackground('#e8edf5')
+    .setFontColor('#17283a')
+    .setWrap(true);
+  sheet.getRange('A2:C2')
+    .setValues([EXIT_HEADERS])
+    .setFontWeight('bold')
+    .setBackground('#1a2e5a')
+    .setFontColor('#ffffff');
+  sheet.setFrozenRows(2);
+  sheet.setRowHeight(1, 48);
+  sheet.setColumnWidth(1, 210);
+  sheet.setColumnWidth(2, 520);
+  sheet.setColumnWidth(3, 170);
+  return sheet;
 }
 
 function democracySubmissionExists(ss, submissionId) {
@@ -228,89 +307,6 @@ function writeSkillTab(ss, row) {
 }
 
 // ════════════════════════════════════════════════════════════════
-//  weeklyArchive — runs every Sunday night
-//  Moves all rows from Period 1A, Period 2B, All Responses
-//  into Archive tabs labeled by week (e.g. "Archive — Sep 8–12")
-//
-//  TO SET UP THE TRIGGER:
-//  1. In Apps Script editor click the clock icon (Triggers)
-//  2. Click "+ Add Trigger"
-//  3. Function: weeklyArchive
-//  4. Event source: Time-driven
-//  5. Type: Week timer → Every Sunday → 10pm-11pm
-//  6. Save
-// ════════════════════════════════════════════════════════════════
-function weeklyArchive() {
-  const ss = SpreadsheetApp.openByUrl(SHEET_URL);
-
-  // Build week label: "Sep 8–12" style
-  const now    = new Date();
-  const day    = now.getDay(); // 0=Sun
-  const monday = new Date(now);
-  monday.setDate(now.getDate() - (day === 0 ? 6 : day - 1));
-  const friday = new Date(monday);
-  friday.setDate(monday.getDate() + 4);
-
-  const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-  const weekLabel = monthNames[monday.getMonth()] + ' ' + monday.getDate() +
-    '\u2013' + friday.getDate();
-  const archiveName = ARCHIVE_PREFIX + weekLabel;
-
-  const tabsToArchive = [TABS['1A'], TABS['2B'], TABS['all']];
-  let totalMoved = 0;
-
-  tabsToArchive.forEach(function(tabName) {
-    const sheet = ss.getSheetByName(tabName);
-    if (!sheet) return;
-
-    const lastRow = sheet.getLastRow();
-    if (lastRow <= 1) return; // Only header row — nothing to archive
-
-    // Get all data rows (skip header)
-    const dataRange = sheet.getRange(2, 1, lastRow - 1, HEADERS.length);
-    const data      = dataRange.getValues();
-
-    // Create or get archive tab
-    const archiveTabName = archiveName + ' — ' + tabName;
-    let archiveSheet = ss.getSheetByName(archiveTabName);
-    if (!archiveSheet) {
-      archiveSheet = ss.insertSheet(archiveTabName);
-      archiveSheet.appendRow(HEADERS);
-      const headerRange = archiveSheet.getRange(1, 1, 1, HEADERS.length);
-      headerRange.setFontWeight('bold')
-                 .setBackground('#2d4a7a')
-                 .setFontColor('#ffffff');
-      archiveSheet.setFrozenRows(1);
-      archiveSheet.setColumnWidth(1, 90);
-      archiveSheet.setColumnWidth(2, 70);
-      archiveSheet.setColumnWidth(3, 160);
-      archiveSheet.setColumnWidth(4, 280);
-      archiveSheet.setColumnWidth(5, 380);
-      archiveSheet.setColumnWidth(6, 150);
-    }
-
-    // Copy rows to archive
-    data.forEach(function(row) {
-      if (row.some(function(cell) { return cell !== ''; })) {
-        archiveSheet.appendRow(row);
-        totalMoved++;
-      }
-    });
-
-    // Clear data rows from active sheet (keep header)
-    dataRange.clearContent();
-
-    Logger.log('Archived ' + data.length + ' rows from ' + tabName + ' to ' + archiveTabName);
-  });
-
-  Logger.log('weeklyArchive complete. Total rows moved: ' + totalMoved);
-
-  // Optional: send yourself an email summary
-  // MailApp.sendEmail('your@email.com', 'AP Gov Exit Ticket Archive', 
-  //   'Archived ' + totalMoved + ' responses for week of ' + weekLabel);
-}
-
-// ════════════════════════════════════════════════════════════════
 //  doGet — health check
 // ════════════════════════════════════════════════════════════════
 function doGet(e) {
@@ -336,33 +332,4 @@ function doGet(e) {
   return ContentService
     .createTextOutput(JSON.stringify(payload))
     .setMimeType(ContentService.MimeType.JSON);
-}
-
-// ════════════════════════════════════════════════════════════════
-//  testSubmission — run manually to test
-// ════════════════════════════════════════════════════════════════
-function testSubmission() {
-  const fakeData = {
-    postData: {
-      contents: JSON.stringify({
-        date:     new Date().toLocaleDateString('en-US'),
-        period:   '1A',
-        name:     'Test Student, Sample',
-        question: 'What is judicial review?',
-        response: 'The power of the Supreme Court to declare laws unconstitutional.',
-        submissionId: 'test-submission-0001'
-      })
-    }
-  };
-  const result = doPost(fakeData);
-  Logger.log(result.getContent());
-}
-
-// ════════════════════════════════════════════════════════════════
-//  testArchive — run manually to test the archive function
-//  WARNING: this will move real data if your sheets have rows
-// ════════════════════════════════════════════════════════════════
-function testArchive() {
-  weeklyArchive();
-  Logger.log('Archive test complete -- check your Sheet for new Archive tabs');
 }

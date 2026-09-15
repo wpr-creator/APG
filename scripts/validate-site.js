@@ -1074,6 +1074,17 @@ function validateSharedCourseExperience() {
   ['Democracy Filtered', 'DEMOCRACY_HEADERS', "type === 'democracy-filtered'", 'democracySubmissionExists', 'writeDemocracyTab'].forEach(function (content) {
     if (!exitCollector.includes(content)) errors.push('Democracy, Filtered response collector is missing: ' + content);
   });
+  [
+    "const ROSTER_TAB = 'Rosters'", "const EXIT_HEADERS = ['Student', 'Response', 'Submitted']",
+    'writeExitTicket', 'findOrCreateTicketLabel', "ss.insertSheet(tabName, 0)",
+    "sheet.getRange('A1:C1').merge()", 'studentIsOnRoster', 'LockService.getScriptLock()',
+    'rememberSubmission(submissionId)'
+  ].forEach(function (content) {
+    if (!exitCollector.includes(content)) errors.push('Per-ticket exit collector is missing: ' + content);
+  });
+  if (/writeToTab\(ss, TABS\[|weeklyArchive|function testSubmission/.test(exitCollector)) {
+    errors.push('Exit tickets must not write to permanent period tabs, auto-archive, or include a fake-submission helper.');
+  }
   ['Period 1A', 'Period 2B'].forEach(function (period) {
     if (!rosterSources.includes(period)) errors.push('Course period changed or missing: ' + period);
   });
