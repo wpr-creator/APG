@@ -268,11 +268,11 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260913-flat-hero',
+    'styles.css?v=20260915-intentional-ticket',
     'course-data.js?v=20260913-104-notes',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260913-exit-page',
+    'app.js?v=20260915-intentional-ticket',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',

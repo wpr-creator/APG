@@ -1796,7 +1796,7 @@
     const periodSelect = document.getElementById("exit-period");
     const status = document.getElementById("exit-status");
     document.getElementById("exit-ticket-success").hidden = true;
-    document.getElementById("exit-question").textContent = question || "NO EXIT TICKET TODAY.";
+    document.getElementById("exit-question").innerHTML = question ? formatExitQuestion(question) : "NO EXIT TICKET TODAY.";
     form.hidden = !question;
     form.closest(".exit-card").classList.toggle("is-empty", !question);
     document.getElementById("home-exit-ticket").hidden = !question;
@@ -1807,6 +1807,28 @@
     exitRoster.forEach(period => periodSelect.add(new Option(period.label, period.id)));
     if (exitRoster.some(period => period.id === selected)) periodSelect.value = selected;
     populateExitStudents();
+  }
+
+  function formatExitQuestion(value) {
+    const escapeAndFormat = text => String(text)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g, "<em>$1</em>");
+    const blocks = String(value).trim().split(/\n\s*\n/);
+    return blocks.map((block, index) => {
+      const lines = block.split("\n").map(line => line.trim()).filter(Boolean);
+      const iconMatch = lines[0]?.match(/^(\p{Extended_Pictographic}\uFE0F?)\s*/u);
+      const icon = iconMatch?.[1] || (index === 0 ? "✎" : "⚖️");
+      const question = (lines[0] || "").replace(/^\p{Extended_Pictographic}\uFE0F?\s*/u, "");
+      const supporting = lines.slice(1).map(line => {
+        const type = /^\*\*OR\*\*$/i.test(line) ? "exit-or" : /^\p{Extended_Pictographic}/u.test(line) ? "exit-side" : "exit-direction";
+        return `<p class="exit-support ${type}">${escapeAndFormat(line)}</p>`;
+      }).join("");
+      const label = blocks.length === 1 ? "EXIT TICKET" : `QUESTION ${index + 1}`;
+      return `<section class="exit-prompt"><div class="exit-prompt-marker"><span aria-hidden="true">${icon}</span><b>${label}</b></div><div class="exit-prompt-copy"><p>${escapeAndFormat(question)}</p>${supporting}</div></section>`;
+    }).join("");
   }
 
   function populateExitStudents() {
