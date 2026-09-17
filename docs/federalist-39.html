@@ -27,6 +27,7 @@
     .doc-context-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--doc-accent);margin-bottom:8px;}
     .doc-context-text{font-size:14px;line-height:1.8;color:#374151;} .doc-context-text p{margin-bottom:10px;} .doc-context-text p:last-child{margin-bottom:0;}
     .quick-start{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:20px}.quick-start>div{padding:14px 16px;background:#fff;border:1px solid var(--doc-border);border-top:5px solid var(--doc-accent);border-radius:8px}.quick-start strong{display:block;margin-bottom:5px;color:var(--doc-dark);font-size:10px;letter-spacing:.1em;text-transform:uppercase}.quick-start p{margin:0;color:#374151;font-size:13px;line-height:1.55}
+    .classification{margin:0 0 20px;padding:18px 20px;background:#fff;border:2px solid var(--doc-dark);border-radius:10px}.classification h2{margin:0 0 5px;color:var(--doc-dark);font-size:16px}.classification-intro{margin:0 0 14px;color:#4b5563;font-size:13px;line-height:1.55}.classification-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.classification-card{padding:14px 16px;background:var(--doc-bg-light);border-left:6px solid var(--doc-accent)}.classification-card strong{display:block;margin-bottom:5px;color:var(--doc-dark);font-size:12px;letter-spacing:.08em;text-transform:uppercase}.classification-card p{margin:0 0 7px;color:#374151;font-size:13px;line-height:1.55}.classification-card ul{margin:0;padding-left:1.15rem;color:#374151;font-size:13px;line-height:1.55}
     .doc-section{margin-bottom:28px;scroll-margin-top:80px;}
     .doc-section-title{font-size:16px;color:var(--doc-dark);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--doc-border);}
     .doc-row{display:grid;grid-template-columns:1fr 180px;gap:16px;margin-bottom:18px;align-items:start;}
@@ -44,7 +45,7 @@
     .rail-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
     .mistake-row{display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid var(--doc-border);font-size:12px;line-height:1.5;}
     .mistake-row:last-child{border-bottom:none;} .mx{color:#ef4444;font-weight:800;flex-shrink:0;}
-    @media(max-width:900px){.doc-page{grid-template-columns:1fr;}.doc-left,.doc-rail{position:static;}.doc-row,.quick-start{grid-template-columns:1fr;}}
+    @media(max-width:900px){.doc-page{grid-template-columns:1fr;}.doc-left,.doc-rail{position:static;}.doc-row,.quick-start,.classification-grid{grid-template-columns:1fr;}}
     
     :root{--doc-dark:#2c1810;--doc-accent:#b8952a;--doc-border:#d4b896;--doc-bg-light:#f5ead6;--doc-hero-bg:#2c1810;}
     .doc-nav-head,.rail-card-head{background:#2c1810;color:rgba(184,149,42,0.8);}
@@ -83,6 +84,14 @@
         <div><strong>Madison’s answer</strong><p>The Constitution is neither purely national nor purely federal. It is a <b>composition of both</b>.</p></div>
         <div><strong>Federal features</strong><p>States ratify and amend the Constitution, keep their own governments, and receive equal representation in the Senate.</p></div>
         <div><strong>National features</strong><p>The government acts directly on people, and representation in the House is based on population.</p></div>
+      </section>
+      <section class="classification" aria-labelledby="classification-title">
+        <h2 id="classification-title">How Madison Tells the Difference</h2>
+        <p class="classification-intro">Madison does not give the whole system one label. He examines each feature separately and asks whether it treats the states as political units or the American people as one nation.</p>
+        <div class="classification-grid">
+          <div class="classification-card"><strong>Federal Feature</strong><p>The states matter as separate political units. Each state participates as a state rather than being combined into one nationwide total.</p><ul><li>Ratification happens state by state.</li><li>Every state has equal representation in the Senate.</li><li>States must approve constitutional amendments.</li></ul></div>
+          <div class="classification-card"><strong>National Feature</strong><p>The national government represents or acts directly on people across the country rather than working only through state governments.</p><ul><li>House representation is based on population.</li><li>Federal laws, courts, and taxes can apply directly to individuals.</li><li>The president is chosen through a system partly based on population.</li></ul></div>
+        </div>
       </section>
       <div class="doc-context"><div class="doc-context-label">Historical Context — Read This First</div><div class="doc-context-text"><p>By January 1788 the Constitution had been drafted but not yet ratified. Nine states were needed; only three had signed on. Critics — led by Brutus in the New York press — were hammering the Constitution from two directions simultaneously: it was either too national (destroying state sovereignty) or too federal (just another failed league like the Articles of Confederation). Madison, writing as "Publius" in the New York press, needed to answer both criticisms at once.</p><p>Federalist 39 is his answer. He argues the Constitution fits no existing template — it is deliberately both federal and national, a compound republic that borrows the best features of each. Read this document as a rebuttal to Brutus No. 1 and as Madison's most precise constitutional taxonomy.</p></div></div>
       <div id="republic" class="doc-section">
