@@ -728,12 +728,28 @@ function validateSharedCourseExperience() {
       parsedSiteContent.assignmentUrls['u1-16-concept-practice'] !== 'unit1-topic-16-concept-practice.html') {
     errors.push('Topic 1.6 Concept Practice must keep all 28 assessment-aligned, randomized questions and remain open.');
   }
+  const topic1719Practice = fs.readFileSync(path.join(root, 'unit1-topic-17-19-concept-practice.html'), 'utf8');
+  const topic1719Script = fs.readFileSync(path.join(root, 'unit1-topic-17-19-concept-practice.js'), 'utf8');
+  if (!topic1719Practice.includes('1.7–1.9<br><span>CONCEPT PRACTICE</span>') ||
+      !topic1719Practice.includes('unit1-topic-17-19-concept-practice.js?v=20260918') ||
+      (topic1719Script.match(/lesson:/g) || []).length !== 37 ||
+      !topic1719Script.includes('MCCULLOCH v. MARYLAND') ||
+      !topic1719Script.includes('UNITED STATES v. LOPEZ') ||
+      !topic1719Script.includes('BLOCK GRANTS') ||
+      !topic1719Script.includes('UNFUNDED MANDATES') ||
+      !topic1719Script.includes('crypto.getRandomValues') || topic1719Script.includes('Math.random') ||
+      !courseData.includes('id: "u1-17-19-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.7–1.9 CONCEPT PRACTICE"') ||
+      parsedSiteContent.assignmentUnlocks['u1-17-19-concept-practice'] === true ||
+      parsedSiteContent.assignmentUrls['u1-17-19-concept-practice']) {
+    errors.push('Topics 1.7–1.9 Concept Practice must keep all 37 assessment-aligned, randomized questions and remain locked.');
+  }
   const unit1ResourceStart = courseData.indexOf('resources: [', courseData.indexOf('id: "gov-1"'));
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
   const firstLessonResource = courseData.indexOf('id: "u1-104-changing-constitution"', unit1ResourceStart);
   if (firstUnit1Resource < unit1ResourceStart || firstUnit1Resource > firstLessonResource ||
       courseData.indexOf('id: "u1-103-105-concept-practice"', unit1ResourceStart) > firstLessonResource ||
-      courseData.indexOf('id: "u1-16-concept-practice"', unit1ResourceStart) > firstLessonResource) {
+      courseData.indexOf('id: "u1-16-concept-practice"', unit1ResourceStart) > firstLessonResource ||
+      courseData.indexOf('id: "u1-17-19-concept-practice"', unit1ResourceStart) > firstLessonResource) {
     errors.push('All Unit 1 concept practices must remain together in the first resource row.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');

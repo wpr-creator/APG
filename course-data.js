@@ -49,6 +49,7 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
+        { id: "u1-17-19-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.7–1.9 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", status: "COMING SOON", url: "unit1-topic-17-19-concept-practice.html" },
         { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
         { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-history-concept-practice.html" },
         { id: "u1-16-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.6 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-16-concept-practice.html" },
