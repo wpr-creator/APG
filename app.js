@@ -2303,16 +2303,6 @@
   document.querySelectorAll("[data-foundation-tab]").forEach(button => button.addEventListener("click", () => switchFoundationTab(button.dataset.foundationTab)));
   foundationDialog.querySelector(".foundation-dialog-close").addEventListener("click", closeFoundationDialog);
   foundationDialog.addEventListener("click", event => { if (event.target === foundationDialog) closeFoundationDialog(); });
-  document.getElementById("history-prev").addEventListener("click", () => {
-    if (!historyEvents.length) return;
-    historyIndex = (historyIndex - 1 + historyEvents.length) % historyEvents.length;
-    renderHistory();
-  });
-  document.getElementById("history-next").addEventListener("click", () => {
-    if (!historyEvents.length) return;
-    historyIndex = (historyIndex + 1) % historyEvents.length;
-    renderHistory();
-  });
   document.getElementById("admin-close").addEventListener("click", closeAdmin);
   document.getElementById("admin-add-upcoming").addEventListener("click", () => addAdminUpcoming());
   document.getElementById("admin-save-preview").addEventListener("click", saveAdminPreview);

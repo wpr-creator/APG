@@ -268,11 +268,11 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260915-intentional-ticket',
+    'styles.css?v=20260919-history-audit',
     'course-data.js?v=20260916-105-division',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260919-dev-disabled',
+    'app.js?v=20260919-history-audit',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1162,6 +1162,13 @@ function validateSharedCourseExperience() {
 function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
+  const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  ['history-prev', 'history-next', 'history-controls'].forEach(function (control) {
+    if (homepage.includes(control) || appCode.includes(control)) {
+      errors.push('This Day in Politics must show today only; remove calendar control: ' + control);
+    }
+  });
   const validKey = /^(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/;
   const expectedKeys = [];
   const cursor = new Date(2024, 0, 1);
@@ -1197,12 +1204,16 @@ function validateCalendarData() {
         errors.push('Incomplete calendar event: ' + key + '[' + index + ']');
       }
       if (![1, 2, 3, 4, 5].includes(event.unit)) errors.push('Invalid AP unit: ' + key + '[' + index + ']');
-      if (!['event', 'birth', 'death'].includes(event.kind)) errors.push('Invalid event kind: ' + key + '[' + index + ']');
+      if (event.kind !== 'event') errors.push('Calendar entries must be political events, not births or deaths: ' + key + '[' + index + ']');
       const isCurated = Boolean(curatedEvents[key] && JSON.stringify(curatedEvents[key][index]) === JSON.stringify(event));
       if (!isCurated && !isDirectlyPolitical(event)) errors.push('Weak calendar relevance: ' + key + '[' + index + ']');
     });
   });
   const entries = Object.values(database).flat();
+  const duplicateTexts = entries.map(function (event) { return event.text; }).filter(function (text, index, all) {
+    return all.indexOf(text) !== index;
+  });
+  if (duplicateTexts.length) errors.push('Calendar contains duplicate event text: ' + duplicateTexts[0]);
   console.log('Local politics calendar:', Object.keys(database).length + ' dates,', entries.length + ' entries');
 }
 
