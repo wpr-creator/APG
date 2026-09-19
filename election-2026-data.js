@@ -57,12 +57,12 @@ window.ELECTION_2026_DATA = {
     },
     {
       number: 3,
-      title: "TAX ON HIGH INCOMES",
-      short: "Should a tax on very high incomes continue permanently?",
-      explanation: "California currently charges an extra tax on income above about $371,000. The money helps fund public schools. The tax is supposed to end in 2031.",
-      yes: "The extra tax never ends.",
-      no: "The extra tax ends in 2031.",
-      money: "Keeping it would bring the state about $5 billion to $15 billion each year after 2031.",
+      title: "INCOME TAX ON HIGH EARNERS",
+      short: "Should California make its current income-tax increase on high earners permanent?",
+      explanation: "Since 2012, California has used higher income-tax rates for people earning more than about $371,000 a year. The money helps fund public schools. Under current law, the higher rates end in 2031.",
+      yes: "The higher income-tax rates become permanent.",
+      no: "The higher income-tax rates end in 2031.",
+      money: "Making the rates permanent would keep about $5 billion to $15 billion in state revenue each year after 2031.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/3/index.htm"
     },

@@ -268,12 +268,12 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260919-election-simple',
+    'styles.css?v=20260919-election-clean',
     'course-data.js?v=20260916-105-division',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'election-2026-data.js?v=20260919-election-simple',
-    'app.js?v=20260919-election-simple',
+    'election-2026-data.js?v=20260919-election-clean',
+    'app.js?v=20260919-election-clean',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -345,10 +345,15 @@ function validateSharedCourseExperience() {
   [
     'START WITH YOUR ZIP CODE', 'FIND MY EXACT BALLOT', 'election-zip-form',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
-    'START WITH THESE', 'MORE PROPOSITIONS', 'These are more technical. Here is the shortest version.',
-    'These short backgrounds describe public experience. They do not tell you whom to support.'
+    'START WITH THESE', 'MORE PROPOSITIONS', 'These are more technical. Here is the shortest version.'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
+  });
+  [
+    'These short backgrounds describe public experience. They do not tell you whom to support.',
+    'Open a card. Read the question, then compare Yes and No.'
+  ].forEach(function (content) {
+    if (homepageApp.includes(content)) errors.push('Retired election tracker instruction is still present: ' + content);
   });
   const agendaRedirect = fs.readFileSync(path.join(root, 'agenda.html'), 'utf8');
   ['content="0; url=./#home"', 'window.location.replace("./#home");'].forEach(function (content) {
