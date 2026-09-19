@@ -268,11 +268,12 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260919-history-audit',
+    'styles.css?v=20260919-election-zip',
     'course-data.js?v=20260916-105-division',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260919-history-audit',
+    'election-2026-data.js?v=20260919-election-zip',
+    'app.js?v=20260919-election-zip',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -313,6 +314,36 @@ function validateSharedCourseExperience() {
   }
   ['MIDTERM ELECTION TRACKER', 'href="#election-2026"', 'id="election-count"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Home election tracker is missing: ' + content);
+  });
+  const electionCode = fs.readFileSync(path.join(root, 'election-2026-data.js'), 'utf8');
+  const electionSandbox = { window: {} };
+  require('vm').runInNewContext(electionCode, electionSandbox);
+  const electionData = electionSandbox.window.ELECTION_2026_DATA;
+  if (electionData.location?.exampleZip !== '92114' || electionData.location?.district !== 'CALIFORNIA DISTRICT 52' ||
+      electionData.location?.lookupSource !== 'https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html') {
+    errors.push('Election tracker must use 92114 only as the District 52 example and link to the official San Diego County ballot lookup.');
+  }
+  if (!Array.isArray(electionData.races) || electionData.races.length !== 2 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
+    errors.push('Election tracker candidate races are incomplete.');
+  }
+  if (!Array.isArray(electionData.propositions) || electionData.propositions.length !== 14) {
+    errors.push('Election tracker must include all 14 statewide propositions.');
+  } else {
+    electionData.propositions.forEach(function (proposition) {
+      ['number', 'title', 'short', 'explanation', 'yes', 'no', 'money', 'source'].forEach(function (field) {
+        if (!proposition[field]) errors.push('Proposition ' + proposition.number + ' is missing ' + field + '.');
+      });
+      if (!/^https:\/\/voterguide\.sos\.ca\.gov\/propositions\//.test(proposition.source || '')) {
+        errors.push('Proposition ' + proposition.number + ' must link to its official California voter-guide page.');
+      }
+    });
+  }
+  [
+    'START WITH YOUR ZIP CODE', 'FIND MY EXACT BALLOT', 'election-zip-form',
+    'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
+    'These short backgrounds describe public experience. They do not tell you whom to support.'
+  ].forEach(function (content) {
+    if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
   const agendaRedirect = fs.readFileSync(path.join(root, 'agenda.html'), 'utf8');
   ['content="0; url=./#home"', 'window.location.replace("./#home");'].forEach(function (content) {
