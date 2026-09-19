@@ -531,10 +531,10 @@
 
     const propositions = document.createElement("section");
     propositions.className = "ballot-section";
-    propositions.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STATEWIDE PROPOSITIONS</p><h2>WHAT DOES EACH VOTE DO?</h2></div><p>Open one card. Read what changes, then compare Yes and No.</p></div>`;
+    propositions.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STATEWIDE PROPOSITIONS</p><h2>START WITH THESE</h2></div><p>Open a card. Read the question, then compare Yes and No.</p></div>`;
     const featuredGrid = document.createElement("div");
     featuredGrid.className = "proposition-grid";
-    electionData.propositions.forEach(proposition => {
+    electionData.propositions.filter(proposition => proposition.featured).forEach(proposition => {
       const details = document.createElement("details");
       details.className = "proposition-card";
       const summary = document.createElement("summary");
@@ -557,7 +557,18 @@
       details.append(summary, explanation, choices, money, source);
       featuredGrid.appendChild(details);
     });
-    propositions.append(featuredGrid);
+
+    const more = document.createElement("section");
+    more.className = "more-propositions";
+    more.innerHTML = `<h3>MORE PROPOSITIONS</h3><p>These are more technical. Here is the shortest version.</p>`;
+    const moreList = document.createElement("ul");
+    electionData.propositions.filter(proposition => !proposition.featured).forEach(proposition => {
+      const item = document.createElement("li");
+      item.innerHTML = `<strong>PROP ${proposition.number} · ${proposition.title}</strong><span>${proposition.short}</span><a href="${proposition.source}" target="_blank" rel="noopener">OFFICIAL GUIDE ↗</a>`;
+      moreList.appendChild(item);
+    });
+    more.appendChild(moreList);
+    propositions.append(featuredGrid, more);
 
     const sources = document.createElement("footer");
     sources.className = "ballot-sources";
