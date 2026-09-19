@@ -272,7 +272,7 @@ function validateSharedCourseExperience() {
     'course-data.js?v=20260916-105-division',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'app.js?v=20260915-intentional-ticket',
+    'app.js?v=20260919-dev-disabled',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',

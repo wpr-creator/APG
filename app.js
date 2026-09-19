@@ -28,7 +28,6 @@
   let siteContent = { currentUnit: "gov-0", unitUnlocks: {}, exitQuestion: "", upcoming: [], classroomUrl: "", agendaTitle: "AGENDA", agendaText: "COMING SOON.", assignmentUnlocks: {}, assignmentUrls: {}, assignmentUnlockAt: {} };
   let historyEvents = [];
   let historyIndex = 0;
-  let devKeys = "";
   let amendmentFilter = "current";
   let glossaryFilter = "all";
   let glossaryQuery = "";
@@ -2372,14 +2371,6 @@
     if (event.key === "Tab" && !foundationDialog.hidden) {
       event.preventDefault();
       foundationDialog.querySelector(".foundation-dialog-close").focus();
-    }
-    if (!event.metaKey && !event.ctrlKey && !event.altKey && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
-      devKeys = (devKeys + event.key.toLowerCase()).slice(-3);
-      if (devKeys === "dev") {
-        if (adminOverlay.hidden) openAdmin();
-        else closeAdmin();
-        devKeys = "";
-      }
     }
   });
   window.addEventListener("hashchange", route);
