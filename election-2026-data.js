@@ -1,5 +1,5 @@
 window.ELECTION_2026_DATA = {
-  updated: "SEPTEMBER 19, 2026",
+  updated: "SEPTEMBER 20, 2026",
   electionDate: "NOVEMBER 3, 2026",
   registrationDeadline: "OCTOBER 19, 2026",
   ballotMailingDeadline: "OCTOBER 5, 2026",
@@ -47,7 +47,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 2,
       title: "A LARGER RAINY DAY FUND",
-      short: "Changes how much money California saves for future emergencies.",
+      short: "Should California save more money for emergencies and future budget problems?",
       explanation: "A rainy day fund is money the state saves for emergencies or years when tax revenue falls. The measure also changes rules for paying state debt.",
       yes: "The state changes the rules, builds larger budget reserves, and must make extra debt payments for a longer time.",
       no: "The current rules for state savings and extra debt payments stay in place.",
@@ -91,7 +91,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 37,
       title: "MIDDLE-INCOME HOME LOANS",
-      short: "Creates a state loan program for some middle-income homebuyers.",
+      short: "Should California create a state home-loan program for some middle-income buyers?",
       explanation: "Eligible buyers could receive a fixed-rate state loan for up to 17% of a qualifying new home’s price. Buyers must meet residency, income, occupancy, and down-payment rules.",
       yes: "The state may sell up to $25 billion in bonds and create the homebuying loan program.",
       no: "The state is not required to create this new homebuying program.",
@@ -102,7 +102,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 38,
       title: "MEDICAL RESEARCH BONDS",
-      short: "Borrows $8.4 billion for research into immune-system treatments.",
+      short: "Should California borrow $8.4 billion for research into immune-system treatments?",
       explanation: "Half of the money would go to one UC-affiliated nonprofit research institute. The other half would fund grants to public or nonprofit universities and institutions.",
       yes: "California may sell $8.4 billion in bonds for immunology and immunotherapy research.",
       no: "California may not sell these bonds for the proposed research program.",
@@ -135,7 +135,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 41,
       title: "AUDITS OF SPECIAL-TAX PROGRAMS",
-      short: "Adds more reviews and audits for programs paid for by special taxes.",
+      short: "Should programs paid for by special taxes face more reviews and audits?",
       explanation: "A special tax raises money for a stated purpose. The measure requires reviews before some tax initiatives reach voters and repeated audits after new special taxes fund programs. It also restricts excluding new tax money from the state spending limit.",
       yes: "The new audit requirements and spending-limit rule take effect.",
       no: "Current audit responsibilities and state spending-limit rules stay in place.",
@@ -146,7 +146,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 42,
       title: "LIMITS ON NEW PROPERTY TAXES",
-      short: "Limits California’s ability to create some new taxes on things people own.",
+      short: "Should California be blocked from creating certain new taxes on things people own?",
       explanation: "Personal property means things people own other than real estate, including investments, retirement accounts, business interests, and intellectual property.",
       yes: "The state cannot create new taxes on owning personal property and cannot create certain taxes that apply retroactively to past activity.",
       no: "The state keeps the option to create these taxes in the future.",
@@ -168,7 +168,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 44,
       title: "COMMUNITY CLINIC SPENDING",
-      short: "Requires some nonprofit clinics to spend at least 90% of their money on services.",
+      short: "Should some nonprofit clinics have to spend at least 90% of their money on services?",
       explanation: "These clinics provide primary care in medically underserved communities. Program services include patient care and other work that supports the clinic’s charitable mission.",
       yes: "Covered clinics must meet the 90% requirement or may face penalties, with limited exceptions.",
       no: "The new clinic spending requirement does not take effect.",
@@ -179,7 +179,7 @@ window.ELECTION_2026_DATA = {
     {
       number: 45,
       title: "FASTER ENVIRONMENTAL REVIEW",
-      short: "Speeds up environmental reviews for some large projects.",
+      short: "Should some large projects receive faster environmental and court reviews?",
       explanation: "The measure covers many housing, transportation, water, health, and clean-energy projects. It sets deadlines and limits some parts of environmental and court review.",
       yes: "Qualifying projects use the new, faster review and court procedures.",
       no: "Projects continue using current environmental review and court procedures.",

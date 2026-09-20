@@ -268,12 +268,12 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260919-election-clean',
+    'styles.css?v=20260920-election-all',
     'course-data.js?v=20260916-105-division',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
-    'election-2026-data.js?v=20260919-election-clean',
-    'app.js?v=20260919-election-clean',
+    'election-2026-data.js?v=20260920-election-all',
+    'app.js?v=20260920-election-all',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -333,25 +333,23 @@ function validateSharedCourseExperience() {
       ['number', 'title', 'short', 'explanation', 'yes', 'no', 'money', 'source'].forEach(function (field) {
         if (!proposition[field]) errors.push('Proposition ' + proposition.number + ' is missing ' + field + '.');
       });
-      if (typeof proposition.featured !== 'boolean') errors.push('Proposition ' + proposition.number + ' is missing its display priority.');
       if (!/^https:\/\/voterguide\.sos\.ca\.gov\/propositions\//.test(proposition.source || '')) {
         errors.push('Proposition ' + proposition.number + ' must link to its official California voter-guide page.');
       }
     });
-    if (electionData.propositions.filter(function (proposition) { return proposition.featured; }).length !== 7) {
-      errors.push('Election tracker must keep seven first-time-voter propositions in full breakout cards.');
-    }
   }
   [
     'START WITH YOUR ZIP CODE', 'FIND MY EXACT BALLOT', 'election-zip-form',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
-    'START WITH THESE', 'MORE PROPOSITIONS', 'These are more technical. Here is the shortest version.'
+    'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
   [
     'These short backgrounds describe public experience. They do not tell you whom to support.',
-    'Open a card. Read the question, then compare Yes and No.'
+    'Open a card. Read the question, then compare Yes and No.',
+    'MORE PROPOSITIONS',
+    'These are more technical. Here is the shortest version.'
   ].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Retired election tracker instruction is still present: ' + content);
   });
