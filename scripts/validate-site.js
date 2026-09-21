@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260920-mobile-hero',
-    'course-data.js?v=20260921-unit1-notes-practice',
+    'course-data.js?v=20260921-unit1-105-notes-doc',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -782,14 +782,11 @@ function validateSharedCourseExperience() {
       parsedSiteContent.assignmentUrls['u1-17-19-concept-practice'] !== 'unit1-topic-17-19-concept-practice.html') {
     errors.push('Topics 1.7–1.9 Concept Practice must keep all 37 assessment-aligned, randomized questions and remain open.');
   }
-  const topic15GuidedNotes = fs.readFileSync(path.join(root, 'unit1-topic-15-guided-notes.html'), 'utf8');
-  if (!topic15GuidedNotes.includes('FEDERALISM') ||
-      !topic15GuidedNotes.includes('ENUMERATED POWERS') ||
-      !topic15GuidedNotes.includes('SUPREMACY CLAUSE') ||
-      !courseData.includes('id: "u1-105-guided-notes", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "1.05 GUIDED NOTES"') ||
+  const unit105GuidedNotesUrl = 'https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY/edit?usp=sharing';
+  if (!courseData.includes('id: "u1-105-guided-notes", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "1.05 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "' + unit105GuidedNotesUrl + '"') ||
       parsedSiteContent.assignmentUnlocks['u1-105-guided-notes'] !== true ||
-      parsedSiteContent.assignmentUrls['u1-105-guided-notes'] !== 'unit1-topic-15-guided-notes.html') {
-    errors.push('Topic 1.5 Guided Notes must remain complete and open.');
+      parsedSiteContent.assignmentUrls['u1-105-guided-notes'] !== unit105GuidedNotesUrl) {
+    errors.push('Topic 1.5 Guided Notes must remain open with its assigned Google Doc URL.');
   }
   const unit1ResourceStart = courseData.indexOf('resources: [', courseData.indexOf('id: "gov-1"'));
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
