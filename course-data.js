@@ -49,10 +49,10 @@ window.COURSE_DATA = {
         ["Political Culture", "Which values shape American government?", "AP Topic 1.1", "Examine liberty, equality, individualism, democracy, and rule of law.", "Connect a political value to a constitutional choice"]
       ],
       resources: [
-        { id: "u1-17-19-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.7–1.9 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-17-19-concept-practice.html" },
         { id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html" },
         { id: "u1-103-105-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.3–1.5 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-history-concept-practice.html" },
         { id: "u1-16-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.6 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-16-concept-practice.html" },
+        { id: "u1-17-19-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.7–1.9 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-topic-17-19-concept-practice.html" },
         { id: "u1-105-guided-notes", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "1.05 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY/edit?usp=sharing" },
         { id: "u1-105-federalist-39", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "FEDERALIST NO. 39", note: "READ THE TEXT", category: "reading", url: "docs/federalist-39.html" },
         { id: "u1-105-federalism-clauses", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "THE CONSTITUTIONAL BOUNDARY", note: "ARTICLE I · ARTICLE VI · TENTH AMENDMENT", category: "reading", url: "docs/federalism-clauses.html" },

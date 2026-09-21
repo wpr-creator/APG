@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260920-mobile-hero',
-    'course-data.js?v=20260921-unit1-105-notes-doc',
+    'course-data.js?v=20260921-unit1-practice-order',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -791,11 +791,12 @@ function validateSharedCourseExperience() {
   const unit1ResourceStart = courseData.indexOf('resources: [', courseData.indexOf('id: "gov-1"'));
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
   const firstLessonResource = courseData.indexOf('id: "u1-104-changing-constitution"', unit1ResourceStart);
+  const unit1PracticeIds = ['u1-concept-practice', 'u1-103-105-concept-practice', 'u1-16-concept-practice', 'u1-17-19-concept-practice'];
+  const unit1PracticePositions = unit1PracticeIds.map(function (id) { return courseData.indexOf('id: "' + id + '"', unit1ResourceStart); });
   if (firstUnit1Resource < unit1ResourceStart || firstUnit1Resource > firstLessonResource ||
-      courseData.indexOf('id: "u1-103-105-concept-practice"', unit1ResourceStart) > firstLessonResource ||
-      courseData.indexOf('id: "u1-16-concept-practice"', unit1ResourceStart) > firstLessonResource ||
-      courseData.indexOf('id: "u1-17-19-concept-practice"', unit1ResourceStart) > firstLessonResource) {
-    errors.push('All Unit 1 concept practices must remain together in the first resource row.');
+      unit1PracticePositions.some(function (position) { return position > firstLessonResource; }) ||
+      unit1PracticePositions.some(function (position, index) { return index > 0 && position < unit1PracticePositions[index - 1]; })) {
+    errors.push('Unit 1 Concept Practice cards must stay together and appear in ascending topic order.');
   }
   const democracyFiltered = fs.readFileSync(path.join(root, 'democracy-filtered.html'), 'utf8');
   [
