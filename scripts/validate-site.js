@@ -268,12 +268,12 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260920-mobile-hero',
+    'styles.css?v=20260921-concept-practice-gold',
     'course-data.js?v=20260921-unit1-practice-order',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260920-election-all',
+    'app.js?v=20260921-concept-practice-gold',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1005,7 +1005,7 @@ function validateSharedCourseExperience() {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-resource-item', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
+  ['.unit-resource-item', '.unit-resource-item-concept-practice', '.unit-resource-concept-practice', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Resource card styling changed or missing: ' + selector);
   });
   if (!primaryStyles.includes('color: #174f85; background: var(--white); border: 5px solid #174f85;') ||

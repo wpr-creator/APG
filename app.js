@@ -339,6 +339,8 @@
             const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
             const card = document.createElement(unlocked ? "a" : "div");
             card.className = `unit-resource unit-resource-${category.key}`;
+            const isConceptPractice = resource.lesson === "CONCEPT PRACTICE";
+            if (isConceptPractice) card.classList.add("unit-resource-concept-practice");
             if (unlocked) {
               card.href = resourceUrl;
               const destination = new URL(resourceUrl, location.href);
@@ -384,6 +386,7 @@
             }
             const item = document.createElement("div");
             item.className = "unit-resource-item";
+            if (isConceptPractice) item.classList.add("unit-resource-item-concept-practice");
             item.append(createCompletionStar(resource, unlocked), card);
             resourceGrid.appendChild(item);
           });
