@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260921-concept-practice-gold',
-    'course-data.js?v=20260923-unit1-frqs',
+    'course-data.js?v=20260923-unit1-frq-pages',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
@@ -828,22 +828,33 @@ function validateSharedCourseExperience() {
   const firstUnit1Resource = courseData.indexOf('id: "u1-concept-practice"', unit1ResourceStart);
   const firstLessonResource = courseData.indexOf('id: "u1-104-changing-constitution"', unit1ResourceStart);
   const unit1PracticeIds = ['u1-concept-practice', 'u1-103-105-concept-practice', 'u1-16-concept-practice', 'u1-17-19-concept-practice'];
-  const frqPractice = fs.readFileSync(path.join(root, 'unit1-practice-frqs.html'), 'utf8');
   const frqPracticeScript = fs.readFileSync(path.join(root, 'unit1-practice-frqs.js'), 'utf8');
-  if (!courseData.includes('id: "u1-practice-frqs", lesson: "CONCEPT PRACTICE", title: "UNIT 1 PRACTICE FRQS"') ||
-      parsedSiteContent.assignmentUnlocks['u1-practice-frqs'] !== true ||
-      parsedSiteContent.assignmentUrls['u1-practice-frqs'] !== 'unit1-practice-frqs.html' ||
-      !frqPractice.includes('course-shell.css?v=20260913-exit-page') ||
-      (frqPractice.match(/class="frq" data-frq=/g) || []).length !== 3 ||
-      (frqPractice.match(/<textarea /g) || []).length !== 3 ||
-      !frqPractice.includes('The Twenty-Seventh Amendment') ||
-      !frqPractice.includes('whether the federal government\'s role in education should be expanded') ||
-      !frqPractice.includes('success of the framers\' federalist design') ||
-      !frqPractice.includes('the site does not grade your writing automatically') ||
-      !frqPractice.includes('id="frq3-evidence"') ||
-      !frqPracticeScript.includes('localStorage.setItem') ||
+  const frqPages = [
+    ['u1-practice-frqs', 'unit1-practice-frqs.html', 'CONCEPT APPLICATION', 'The Twenty-Seventh Amendment'],
+    ['u1-education-frq', 'unit1-education-frq.html', 'ARGUMENT ESSAY', "whether the federal government's role in education should be expanded"],
+    ['u1-federalism-frq', 'unit1-federalism-frq.html', 'ARGUMENT ESSAY', "success of the framers' federalist design"]
+  ];
+  frqPages.forEach(function ([id, file, type, promptText], index) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    if (!courseData.includes('id: "' + id + '", lesson: "CONCEPT PRACTICE"') ||
+        parsedSiteContent.assignmentUnlocks[id] !== true ||
+        parsedSiteContent.assignmentUrls[id] !== file ||
+        !html.includes('<h1>' + type + '</h1>') ||
+        !html.includes(promptText) ||
+        !html.includes('unit1-practice-frqs.js?v=20260923-pages') ||
+        !html.includes('unit1-practice-frqs.css?v=20260923-pages') ||
+        !html.includes('the site does not grade your writing automatically') ||
+        (html.match(/class="frq" data-frq=/g) || []).length !== 1 ||
+        !html.includes('data-frq="' + (index + 1) + '"') ||
+        (html.match(/<textarea /g) || []).length !== 1 ||
+        /<span>FRQ [123]<\/span>/.test(html)) {
+      errors.push('Unit 1 Practice FRQ page is missing or incorrectly labeled: ' + file);
+    }
+  });
+  if (!frqPracticeScript.includes('localStorage.setItem') ||
+      !frqPracticeScript.includes('records[index] = snapshot()') ||
       frqPracticeScript.includes('fetch(')) {
-    errors.push('Unit 1 Practice FRQs are missing prompts, self-review, local drafts, or course integration.');
+    errors.push('Unit 1 Practice FRQ local drafts are missing or may overwrite another page.');
   }
   const unit1PracticePositions = unit1PracticeIds.map(function (id) { return courseData.indexOf('id: "' + id + '"', unit1ResourceStart); });
   if (firstUnit1Resource < unit1ResourceStart || firstUnit1Resource > firstLessonResource ||

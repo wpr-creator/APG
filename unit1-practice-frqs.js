@@ -2,6 +2,8 @@
   "use strict";
   const key = "apg-unit1-practice-frqs-v1";
   const cards = Array.from(document.querySelectorAll(".frq"));
+  const card = cards[0];
+  const index = Number(card.dataset.frq) - 1;
   const status = document.querySelector(".save-status");
 
   function readSaved() {
@@ -9,13 +11,11 @@
     catch (_) { return {}; }
   }
   function snapshot() {
-    return cards.map(function (card) {
-      return {
-        response: card.querySelector("textarea").value,
-        checks: Array.from(card.querySelectorAll('input[type="checkbox"]')).map(function (box) { return box.checked; }),
-        evidence: card.querySelector("select") ? card.querySelector("select").value : null
-      };
-    });
+    return {
+      response: card.querySelector("textarea").value,
+      checks: Array.from(card.querySelectorAll('input[type="checkbox"]')).map(function (box) { return box.checked; }),
+      evidence: card.querySelector("select") ? card.querySelector("select").value : null
+    };
   }
   function score(card) {
     const boxes = Array.from(card.querySelectorAll('input[type="checkbox"]'));
@@ -34,14 +34,17 @@
   }
   function save() {
     try {
-      localStorage.setItem(key, JSON.stringify(snapshot()));
+      const all = readSaved();
+      const records = Array.isArray(all) ? all : [];
+      records[index] = snapshot();
+      localStorage.setItem(key, JSON.stringify(records));
       status.textContent = "Saved in this browser. Nothing was submitted.";
     } catch (_) {
       status.textContent = "This browser could not save your draft. Copy your response before leaving.";
     }
   }
   const saved = readSaved();
-  cards.forEach(function (card, index) {
+  cards.forEach(function (card) {
     const record = Array.isArray(saved) ? saved[index] : null;
     if (record && typeof record.response === "string") card.querySelector("textarea").value = record.response;
     const boxes = Array.from(card.querySelectorAll('input[type="checkbox"]'));
@@ -54,14 +57,14 @@
     if (evidence) evidence.addEventListener("change", function () { score(card); save(); });
   });
   document.querySelector("#clear-work").addEventListener("click", function () {
-    if (!window.confirm("Clear all three responses and self-review checks from this browser? This cannot be undone.")) return;
+    if (!window.confirm("Clear this response and its self-review checks from this browser? This cannot be undone.")) return;
     cards.forEach(function (card) {
       card.querySelector("textarea").value = "";
       card.querySelectorAll('input[type="checkbox"]').forEach(function (box) { box.checked = false; });
       if (card.querySelector("select")) card.querySelector("select").value = "0";
       score(card);
     });
-    try { localStorage.removeItem(key); } catch (_) { /* Storage may be unavailable. */ }
-    status.textContent = "Responses and checks cleared from this browser.";
+    save();
+    status.textContent = "This response and its checks were cleared from this browser.";
   });
 }());
