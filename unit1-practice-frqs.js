@@ -23,7 +23,7 @@
     let points;
     if (card.dataset.frq === "3") {
       const evidence = Number(card.querySelector("select").value);
-      points = Number(checked[0]) + Math.min(evidence, checked[0] ? 3 : 2) + Number(checked[1]);
+      points = Number(checked[0]) + Math.min(evidence, checked[0] ? 3 : 2) + Number(checked[1] && evidence > 0);
       points = Math.min(points, 4);
     } else {
       points = card.dataset.frq === "1"
