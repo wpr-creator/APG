@@ -831,6 +831,7 @@ function validateSharedCourseExperience() {
   const frqPractice = fs.readFileSync(path.join(root, 'unit1-practice-frqs.html'), 'utf8');
   const frqPracticeScript = fs.readFileSync(path.join(root, 'unit1-practice-frqs.js'), 'utf8');
   if (!courseData.includes('id: "u1-practice-frqs", lesson: "CONCEPT PRACTICE", title: "UNIT 1 PRACTICE FRQS"') ||
+      parsedSiteContent.assignmentUnlocks['u1-practice-frqs'] !== true ||
       parsedSiteContent.assignmentUrls['u1-practice-frqs'] !== 'unit1-practice-frqs.html' ||
       !frqPractice.includes('course-shell.css?v=20260913-exit-page') ||
       (frqPractice.match(/class="frq" data-frq=/g) || []).length !== 3 ||
