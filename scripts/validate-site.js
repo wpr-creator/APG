@@ -269,7 +269,8 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260921-concept-practice-gold',
-    'course-data.js?v=20260921-unit1-practice-order',
+    'course-data.js?v=20260923-federalism-glossary',
+    'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -406,6 +407,41 @@ function validateSharedCourseExperience() {
     }, 0);
   }, 0);
   if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
+  const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));
+  const expectedFederalismTerms = {
+    'Federalism': 'A system that divides power between the national and state governments.',
+    'National Government': 'The government of the entire United States.',
+    'State Government': 'The government of an individual state.',
+    'Enumerated Powers': 'Powers specifically listed in the Constitution for the national government.',
+    'Reserved Powers': 'Powers kept by the states under the Tenth Amendment.',
+    'Concurrent Powers': 'Powers shared by more than one level of government.',
+    'Tenth Amendment': 'Reserves powers not given to the national government to the states or the people.',
+    'Supremacy Clause': 'Makes the Constitution and valid federal laws the supreme law of the land.',
+    'Necessary and Proper Clause': 'Allows Congress to make laws needed to carry out its enumerated powers.',
+    'Implied Powers': 'Powers not specifically written in the Constitution but reasonably connected to an enumerated power.',
+    'Commerce Clause': 'Gives Congress power to regulate commerce among the states.',
+    'Commerce': 'Buying, selling, and exchanging goods and services.',
+    'Judicial Review': 'The power of courts to determine whether government actions violate the Constitution.',
+    'Grants-in-Aid': 'Federal money given to state or local governments for public programs.',
+    'Categorical Grants': 'Federal money for a specific purpose with detailed federal requirements.',
+    'Block Grants': 'Federal money for a broad purpose with greater state discretion.',
+    'Discretion': 'Freedom to decide how something will be done or how money will be used.',
+    'Federal Mandate': 'A federal requirement that state or local governments must follow.',
+    'Unfunded Mandate': 'A federal requirement without enough federal money to cover its cost.',
+    'Full Faith and Credit Clause': 'Requires states to recognize many official records and court decisions from other states.',
+    'Privileges and Immunities Clause': 'Protects citizens from being denied basic rights simply because they come from another state.',
+    'Extradition': 'Returning someone to the state where they have been charged with a crime.',
+    'Stakeholder': 'A person or group affected by or interested in a policy.',
+    'Access Point': 'A place in government where a stakeholder can try to influence policy.',
+    'Multiple Access Points': 'The many institutions and levels of government where people can try to influence policy.',
+    'Policy Variation': 'Different states making different policy choices.'
+  };
+  Object.entries(expectedFederalismTerms).forEach(function ([term, definition]) {
+    if (federalismTerms[term] !== definition) errors.push('Unit 1 federalism glossary entry missing or changed: ' + term);
+  });
+  ['McCulloch v. Maryland', 'United States v. Lopez'].forEach(function (caseName) {
+    if (federalismTerms[caseName]) errors.push('Required case should remain a case resource, not a federalism vocabulary entry: ' + caseName);
+  });
   [
     '["Natural rights", "N", "Rights every person has simply because they are human, including life and liberty."',
     '["Social contract", "S", "People agree to give government authority in exchange for order and protection of their rights."',

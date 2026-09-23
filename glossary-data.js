@@ -270,9 +270,37 @@ window.APG_GLOSSARY_UNITS = [
       "Federalism": [
         [
           "Federalism",
-          "The sharing of power between the national government and the states.",
+          "A system that divides power between the national and state governments.",
           [
-            "1.2"
+            "1.7"
+          ]
+        ],
+        [
+          "National Government",
+          "The government of the entire United States.",
+          [
+            "1.7"
+          ]
+        ],
+        [
+          "State Government",
+          "The government of an individual state.",
+          [
+            "1.7"
+          ]
+        ],
+        [
+          "Enumerated Powers",
+          "Powers specifically listed in the Constitution for the national government.",
+          [
+            "1.7"
+          ]
+        ],
+        [
+          "Reserved Powers",
+          "Powers kept by the states under the Tenth Amendment.",
+          [
+            "1.7"
           ]
         ],
         [
@@ -326,23 +354,37 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Supremacy Clause",
-          "Constitutional provision declaring that the Constitution and all national laws and treaties are the supreme law of the land.",
+          "Makes the Constitution and valid federal laws the supreme law of the land.",
           [
-            "1.2"
+            "1.7"
           ]
         ],
         [
           "Tenth Amendment",
-          "Reserves powers not delegated to the national government to the states and the people; the basis of federalism.",
+          "Reserves powers not given to the national government to the states or the people.",
           [
-            "1.2"
+            "1.7"
           ]
         ],
         [
           "Concurrent Powers",
-          "Powers granted to both states and the federal government in the Constitution.",
+          "Powers shared by more than one level of government.",
           [
-            "1.2"
+            "1.7"
+          ]
+        ],
+        [
+          "Necessary and Proper Clause",
+          "Allows Congress to make laws needed to carry out its enumerated powers.",
+          [
+            "1.8"
+          ]
+        ],
+        [
+          "Implied Powers",
+          "Powers not specifically written in the Constitution but reasonably connected to an enumerated power.",
+          [
+            "1.8"
           ]
         ],
         [
@@ -354,23 +396,37 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Commerce Clause",
-          "Grants Congress the authority to regulate interstate business and commercial activity.",
+          "Gives Congress power to regulate commerce among the states.",
           [
-            "1.2"
+            "1.8"
+          ]
+        ],
+        [
+          "Commerce",
+          "Buying, selling, and exchanging goods and services.",
+          [
+            "1.8"
+          ]
+        ],
+        [
+          "Judicial Review",
+          "The power of courts to determine whether government actions violate the Constitution.",
+          [
+            "1.8"
           ]
         ],
         [
           "Full Faith and Credit Clause",
-          "Constitutional clause requiring states to recognize the public acts, records, and civil court proceedings from another state.",
+          "Requires states to recognize many official records and court decisions from other states.",
           [
-            "1.2"
+            "1.9"
           ]
         ],
         [
           "Privileges and Immunities Clause",
-          "Prevents states from discriminating against people from out of state.",
+          "Protects citizens from being denied basic rights simply because they come from another state.",
           [
-            "1.2"
+            "1.9"
           ]
         ],
         [
@@ -389,23 +445,37 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Categorical Grants",
-          "Grants-in-aid provided to states with specific provisions on their use; gives federal government more control.",
+          "Federal money for a specific purpose with detailed federal requirements.",
           [
-            "1.2"
+            "1.9"
           ]
         ],
         [
-          "Block Grant",
-          "A type of grant-in-aid that gives state officials more authority in the disbursement of federal funds.",
+          "Block Grants",
+          "Federal money for a broad purpose with greater state discretion.",
           [
-            "1.2"
+            "1.9"
           ]
         ],
         [
           "Grants-in-Aid",
-          "Federal money provided to states to implement public policy objectives.",
+          "Federal money given to state or local governments for public programs.",
           [
-            "1.2"
+            "1.9"
+          ]
+        ],
+        [
+          "Discretion",
+          "Freedom to decide how something will be done or how money will be used.",
+          [
+            "1.9"
+          ]
+        ],
+        [
+          "Federal Mandate",
+          "A federal requirement that state or local governments must follow.",
+          [
+            "1.9"
           ]
         ],
         [
@@ -417,9 +487,9 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Unfunded Mandate",
-          "Federal requirement the states must follow without being provided with funding.",
+          "A federal requirement without enough federal money to cover its cost.",
           [
-            "1.2"
+            "1.9"
           ]
         ],
         [
@@ -431,9 +501,37 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Extradition",
-          "The requirement that officials in one state return a defendant to another state where the crime was committed.",
+          "Returning someone to the state where they have been charged with a crime.",
           [
-            "1.2"
+            "1.9"
+          ]
+        ],
+        [
+          "Stakeholder",
+          "A person or group affected by or interested in a policy.",
+          [
+            "1.9"
+          ]
+        ],
+        [
+          "Access Point",
+          "A place in government where a stakeholder can try to influence policy.",
+          [
+            "1.9"
+          ]
+        ],
+        [
+          "Multiple Access Points",
+          "The many institutions and levels of government where people can try to influence policy.",
+          [
+            "1.9"
+          ]
+        ],
+        [
+          "Policy Variation",
+          "Different states making different policy choices.",
+          [
+            "1.9"
           ]
         ],
         [
