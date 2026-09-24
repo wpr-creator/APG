@@ -268,13 +268,13 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260921-concept-practice-gold',
+    'styles.css?v=20260924-foundational-case-tints',
     'course-data.js?v=20260924-unit1-slides',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260921-concept-practice-gold',
+    'app.js?v=20260924-foundational-case-tints',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -610,7 +610,7 @@ function validateSharedCourseExperience() {
       !courseData.includes('id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c"') ||
       parsedSiteContent.assignmentUnlocks['u1-104-guided-notes'] !== true ||
       parsedSiteContent.assignmentUrls['u1-104-guided-notes'] !== 'https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c' ||
-      !courseData.includes('id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", url: "docs/federalist-51.html"') ||
+      !courseData.includes('id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", visualType: "foundational-text", url: "docs/federalist-51.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-104-federalist-51'] !== true ||
       parsedSiteContent.assignmentUrls['u1-104-federalist-51'] !== 'docs/federalist-51.html' ||
       courseData.includes('id: "u1-103-changing-constitution"')) {
@@ -1079,6 +1079,7 @@ function validateSharedCourseExperience() {
     'const UNIT_ZERO_COMPLETION_KEY = "apg-unit0-completion-v1";',
     'const CONTENT_STORAGE_KEY = "apg-site-content-v1";',
     'assignmentIsUnlocked(resource.id)',
+    'resource.visualType === "foundational-text" || resource.visualType === "scotus-case"',
     'createCompletionStar(resource, unlocked)',
     'group.classList.add("unit-resource-group-assessments")',
     'if (lessonA === "ASSESSMENTS") return -1;',
@@ -1087,7 +1088,7 @@ function validateSharedCourseExperience() {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-resource-item', '.unit-resource-item-concept-practice', '.unit-resource-concept-practice', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
+  ['.unit-resource-item', '.unit-resource-item-concept-practice', '.unit-resource-concept-practice', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-foundational-text', '.unit-resource-scotus-case', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Resource card styling changed or missing: ' + selector);
   });
   if (!primaryStyles.includes('color: #174f85; background: var(--white); border: 5px solid #174f85;') ||

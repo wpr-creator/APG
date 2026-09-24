@@ -297,6 +297,12 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-resource.placeholder span { color: var(--muted); }
 .unit-resource-reading:not(.placeholder) { background: #174f85; }
 .unit-resource-reading:not(.placeholder):hover { background: #113f6b; }
+.unit-resource-foundational-text:not(.placeholder) { color: #3f3529; background: #f3efe8; border: 1px solid #d5c7b4; box-shadow: inset 0 4px 0 #8a704f; }
+.unit-resource-foundational-text:not(.placeholder) span { color: #705a40; }
+.unit-resource-foundational-text:not(.placeholder):hover { background: #e9e1d5; }
+.unit-resource-scotus-case:not(.placeholder) { color: #24384a; background: #edf1f4; border: 1px solid #c5d0d9; box-shadow: inset 0 4px 0 #52718a; }
+.unit-resource-scotus-case:not(.placeholder) span { color: #405f77; }
+.unit-resource-scotus-case:not(.placeholder):hover { background: #dfe7ed; }
 .unit-resource-assignment:not(.placeholder) { background: #a32638; }
 .unit-resource-assignment:not(.placeholder):hover { background: #84202e; }
 .unit-resource-guided-notes:not(.placeholder) { color: var(--black); background: var(--white); border: 4px solid #174f85; }

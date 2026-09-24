@@ -339,6 +339,9 @@
             const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
             const card = document.createElement(unlocked ? "a" : "div");
             card.className = `unit-resource unit-resource-${category.key}`;
+            if (resource.visualType === "foundational-text" || resource.visualType === "scotus-case") {
+              card.classList.add(`unit-resource-${resource.visualType}`);
+            }
             const isConceptPractice = resource.lesson === "CONCEPT PRACTICE";
             if (isConceptPractice) card.classList.add("unit-resource-concept-practice");
             if (unlocked) {
