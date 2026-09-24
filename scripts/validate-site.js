@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260924-foundational-case-tints',
-    'course-data.js?v=20260924-unit1-slides',
+    'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
