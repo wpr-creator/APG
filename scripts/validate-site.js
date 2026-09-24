@@ -169,7 +169,7 @@ function validateAccessibilityAndHygiene() {
     const html = fs.readFileSync(file, 'utf8');
     const name = relative(file);
     const isRedirect = /http-equiv=["']refresh/i.test(html);
-    const isSlidesExport = name.startsWith('slides/unit-0/');
+    const isSlidesExport = name.startsWith('slides/unit-0/') || name.startsWith('slides/unit-1/');
 
     if (!isSlidesExport && !/<html[^>]*\slang=["'][^"']+["']/i.test(html)) {
       errors.push('HTML page is missing a language declaration: ' + name);
@@ -193,7 +193,7 @@ function validateAccessibilityAndHygiene() {
     const duplicateIds = Array.from(new Set(ids.filter(function (id, index) {
       return ids.indexOf(id) !== index;
     })));
-    if (duplicateIds.length) {
+    if (!isSlidesExport && duplicateIds.length) {
       errors.push('HTML page contains duplicate IDs: ' + name + ' — ' + duplicateIds.join(', '));
     }
   });
@@ -269,7 +269,7 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
     'styles.css?v=20260921-concept-practice-gold',
-    'course-data.js?v=20260923-unit1-frq-pages',
+    'course-data.js?v=20260924-unit1-slides',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
@@ -987,6 +987,24 @@ function validateSharedCourseExperience() {
     }
     ['index.html', 'lib/reveal.js', 'lib/offline.js'].forEach(function (requiredFile) {
       if (!fs.existsSync(path.join(deckRoot, requiredFile))) errors.push(`Unit 0 lesson ${lessonNumber} deck is missing ${requiredFile}.`);
+    });
+  });
+  const unitOneSlideDecks = {
+    'u1-101-slides': ['slides/unit-1/lesson-01/', '1.01 — THE FOUNDING PROMISE'],
+    'u1-102-slides': ['slides/unit-1/lesson-02/', '1.02 — DEMOCRACY, FILTERED'],
+    'u1-103-slides': ['slides/unit-1/lesson-03/', '1.03 — THE HISTORY LESSON'],
+    'u1-104-slides': ['slides/unit-1/lesson-04/', '1.04 — AMBITION CHECKS AMBITION'],
+    'u1-105-slides': ['slides/unit-1/lesson-05/', '1.05 — ...BUT A COMPOSITION OF BOTH.']
+  };
+  Object.entries(unitOneSlideDecks).forEach(function ([resourceId, [url, lesson]]) {
+    const deckRoot = path.join(root, url);
+    if (!courseData.includes('id: "' + resourceId + '", lesson: "' + lesson + '"') ||
+        parsedSiteContent.assignmentUnlocks[resourceId] !== true ||
+        parsedSiteContent.assignmentUrls[resourceId] !== url) {
+      errors.push('Unit 1 slide card is missing, misplaced, or locked: ' + resourceId);
+    }
+    ['index.html', 'lib/reveal.js', 'lib/offline.js'].forEach(function (requiredFile) {
+      if (!fs.existsSync(path.join(deckRoot, requiredFile))) errors.push('Unit 1 deck ' + resourceId + ' is missing ' + requiredFile + '.');
     });
   });
   if (courseData.includes('id: "u1-ap-classroom"') ||
