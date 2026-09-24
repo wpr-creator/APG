@@ -268,13 +268,13 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260924-foundational-case-tints',
+    'styles.css?v=20260924-lesson-path',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260924-foundational-case-tints',
+    'app.js?v=20260924-lesson-path',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -736,11 +736,15 @@ function validateSharedCourseExperience() {
   if (!unitResourceAppCode.includes('if (!categoryResources.length) return;') ||
       !unitResourceAppCode.includes('if (category.key === "guided-notes")') ||
       !unitResourceAppCode.includes('Number(bIsNotes) - Number(aIsNotes)') ||
+      !unitResourceAppCode.includes('const group = document.createElement("details")') ||
+      !unitResourceAppCode.includes('const groupSummary = document.createElement("summary")') ||
+      !unitResourceAppCode.includes('lessonA.localeCompare(lessonB, undefined, { numeric: true })') ||
+      !unitResourceAppCode.includes('target.open = true') ||
       !unitResourceAppCode.includes('resourceType.includes("INTERACTIVE")') ||
       !unitResourceAppCode.includes('resourceType.includes("PRACTICE")') ||
       !unitResourceAppCode.includes('resourceType.includes("REVIEW")') ||
-      !unitResourceStyles.includes('.unit-resource-grid { display: grid; grid-template-columns: repeat(2, 1fr);') ||
-      !unitResourceStyles.includes('.unit-resource { min-height: 92px;') ||
+      !unitResourceStyles.includes('.unit-resource-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));') ||
+      !unitResourceStyles.includes('.unit-resource { min-height: 68px;') ||
       !unitResourceStyles.includes('text-align: left;') ||
       unitResourceAppCode.includes('unit-resource-item-centered') ||
       unitResourceAppCode.includes('JUMP TO A LESSON') ||
@@ -1088,12 +1092,17 @@ function validateSharedCourseExperience() {
     if (!appCode.includes(content)) errors.push('Unit 0 interaction changed or missing: ' + content);
   });
   const primaryStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['.unit-resource-item', '.unit-resource-item-concept-practice', '.unit-resource-concept-practice', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource-reading', '.unit-resource-foundational-text', '.unit-resource-scotus-case', '.unit-resource-assignment', '.unit-resource-guided-notes', '.unit-resource-assessment'].forEach(function (selector) {
+  ['.unit-resource-item', '.unit-resource-group', '.unit-resource-summary', '.unit-resource-count', '.unit-resource-kind', '.unit-resource-concept-practice', '.unit-completion-star', '.unit-completion-star[aria-pressed="true"]', '.unit-resource'].forEach(function (selector) {
     if (!primaryStyles.includes(selector)) errors.push('Resource card styling changed or missing: ' + selector);
   });
-  if (!primaryStyles.includes('color: #174f85; background: var(--white); border: 5px solid #174f85;') ||
-      !primaryStyles.includes('.unit-completion-star[aria-pressed="true"] { color: var(--white); background: #174f85;')) {
-    errors.push('Unit completion controls must begin white and become blue with a white star when complete.');
+  if (!primaryStyles.includes('color: #78848e; background: var(--white); border: 1px solid #cbd1d6;') ||
+      !primaryStyles.includes('.unit-completion-star[aria-pressed="true"] { color: #463700; background: #f1d982;')) {
+    errors.push('Unit completion controls must remain visually quiet until marked complete.');
+  }
+  if (!primaryStyles.includes('.unit-resource { min-height: 68px;') ||
+      !primaryStyles.includes('.unit-resource-group { margin: 0 0 .65rem;') ||
+      !primaryStyles.includes('.unit-resource-group-practice > .unit-resource-summary { border-left: 4px solid #bd941c;')) {
+    errors.push('Unit lesson panels must use compact neutral resources with a restrained practice cue.');
   }
   if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
     errors.push('Unit pages must not render the retired Road Ahead lessons section.');

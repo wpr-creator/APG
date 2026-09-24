@@ -290,19 +290,26 @@
           if (lessonB.includes("CONCEPT PRACTICE")) return 1;
           const numberedA = /^\d+\.\d+/.test(lessonA);
           const numberedB = /^\d+\.\d+/.test(lessonB);
-          if (numberedA && numberedB) return lessonB.localeCompare(lessonA, undefined, { numeric: true });
+          if (numberedA && numberedB) return lessonA.localeCompare(lessonB, undefined, { numeric: true });
           return Number(numberedB) - Number(numberedA);
         });
       }
       resourceGroupEntries.forEach(([lesson, lessonResources]) => {
-        const group = document.createElement("section");
+        const group = document.createElement("details");
         group.className = "unit-resource-group";
         group.id = `lesson-${lessonResources[0].id}`;
         group.tabIndex = -1;
         if (lesson === "ASSESSMENTS") group.classList.add("unit-resource-group-assessments");
+        if (lesson === "CONCEPT PRACTICE") group.classList.add("unit-resource-group-practice");
+        const groupSummary = document.createElement("summary");
+        groupSummary.className = "unit-resource-summary";
         const lessonTitle = document.createElement("h2");
         lessonTitle.textContent = lesson;
-        group.appendChild(lessonTitle);
+        const lessonCount = document.createElement("span");
+        lessonCount.className = "unit-resource-count";
+        lessonCount.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`;
+        groupSummary.append(lessonTitle, lessonCount);
+        group.appendChild(groupSummary);
         const categories = [
           { key: "assessment", label: "ASSESSMENTS" },
           { key: "assignment", label: "ASSIGNMENTS & PROJECTS" },
@@ -331,7 +338,7 @@
           const resourceRow = document.createElement("section");
           resourceRow.className = `unit-resource-row unit-resource-row-${category.key}`;
           const rowTitle = document.createElement("h3");
-          rowTitle.textContent = category.label;
+          rowTitle.textContent = lesson === "CONCEPT PRACTICE" && category.key === "guided-notes" ? "PRACTICE" : category.label;
           const resourceGrid = document.createElement("div");
           resourceGrid.className = "unit-resource-grid";
           categoryResources.forEach(resource => {
@@ -339,9 +346,6 @@
             const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
             const card = document.createElement(unlocked ? "a" : "div");
             card.className = `unit-resource unit-resource-${category.key}`;
-            if (resource.visualType === "foundational-text" || resource.visualType === "scotus-case") {
-              card.classList.add(`unit-resource-${resource.visualType}`);
-            }
             const isConceptPractice = resource.lesson === "CONCEPT PRACTICE";
             if (isConceptPractice) card.classList.add("unit-resource-concept-practice");
             if (unlocked) {
@@ -376,6 +380,12 @@
             }
             const resourceTitle = document.createElement("strong");
             resourceTitle.textContent = resource.title;
+            if (resource.visualType === "foundational-text" || resource.visualType === "scotus-case") {
+              const resourceKind = document.createElement("span");
+              resourceKind.className = "unit-resource-kind";
+              resourceKind.textContent = resource.visualType === "foundational-text" ? "FOUNDATIONAL TEXT" : "SUPREME COURT CASE";
+              card.append(resourceKind);
+            }
             card.append(resourceTitle);
             if (resource.note) {
               const resourceNote = document.createElement("span");
@@ -406,11 +416,24 @@
     checklist.textContent = "My checklist · Stars are saved on this browser. Marking something done does not submit it to Mr. Rogers.";
     container.append(checklist);
     if (!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length) container.append(unitSources);
-    if (unit.resources?.length) container.append(resources);
+    if (unit.resources?.length) {
+      const pathHeading = document.createElement("div");
+      pathHeading.className = "unit-path-heading";
+      const pathTitle = document.createElement("h2");
+      pathTitle.textContent = "LESSON PATH";
+      const pathDescription = document.createElement("p");
+      pathDescription.textContent = "Open a lesson to find its notes, slides, readings, and practice.";
+      pathHeading.append(pathTitle, pathDescription);
+      container.append(pathHeading, resources);
+    }
     const requestedLesson = new URL(location.href).searchParams.get("lesson");
     if (requestedLesson) {
       const target = document.getElementById(requestedLesson);
-      if (target) requestAnimationFrame(() => { target.scrollIntoView(); target.focus({ preventScroll: true }); });
+      if (target) requestAnimationFrame(() => {
+        if (target instanceof HTMLDetailsElement) target.open = true;
+        target.scrollIntoView();
+        target.focus({ preventScroll: true });
+      });
     }
   }
 
