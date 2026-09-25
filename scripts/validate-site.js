@@ -269,14 +269,14 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
-    'styles.css?v=20260925-foundational-primary-artifacts',
+    'styles.css?v=20260925-featured-documents',
     'course-shell.css?v=20260925-civic-magazine-nav',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-foundational-chronology',
+    'app.js?v=20260925-featured-documents',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -297,35 +297,19 @@ function validateSharedCourseExperience() {
       !homepage.includes('<h1 id="home-hero-title"><span>Who gets</span><span>to decide?</span></h1>') ||
       !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
-      !homepage.includes('class="hero-artifact"') ||
-      !homepage.includes('id="featured-document-previous"') ||
-      !homepage.includes('id="featured-document-next"') ||
-      !homepage.includes('id="featured-document-toggle"') ||
-      !homepage.includes('id="featured-document-link"') ||
+      !homepage.includes('class="featured-documents"') ||
+      !homepage.includes('id="featured-documents-title"') ||
+      !homepage.includes('class="featured-document" href="docs/declaration-of-independence.html"') ||
+      !homepage.includes('class="featured-document" href="docs/constitution.html"') ||
+      !homepage.includes('class="featured-document" href="docs/letter-birmingham-jail.html"') ||
+      !homepage.includes('href="#foundations">ALL 14') ||
       !homepage.includes('id="current-question"') ||
       homepage.includes('class="home-dynamic-background"')) {
-    errors.push('The homepage must use the civic-magazine hero with its current-unit question and founding artifact.');
+    errors.push('The homepage must use the civic-magazine hero with its current-unit question and featured primary-source documents.');
   }
-  const featuredDocumentArtwork = [
-    'declaration', 'articles', 'constitution', 'bill-of-rights', 'fed10', 'fed51', 'brutus1',
-    'fed39', 'wealth-of-nations', 'fed70', 'fed78', 'emancipation', 'gettysburg', 'birmingham'
-  ];
-  const carouselSource = homepageApp.slice(
-    homepageApp.indexOf('function initFoundingDocumentCarousel()'),
-    homepageApp.indexOf('function renderSiteContent()')
-  );
-  featuredDocumentArtwork.forEach(function (id) {
-    const key = id.includes('-') ? `"${id}"` : id;
-    if (!carouselSource.includes(`${key}: ["`)) errors.push('Foundational document carousel is missing artwork for: ' + id);
-  });
-  if (carouselSource.includes('assets/democracy-filtered/') ||
-      carouselSource.includes('adam-smith.jpg') ||
-      carouselSource.includes('martin-luther-king-jr.jpg')) {
-    errors.push('Foundational document carousel must use document-source imagery, not author illustrations or portraits.');
-  }
-  if (!carouselSource.includes('previous.addEventListener("click", () => step(-1))') ||
-      !carouselSource.includes('next.addEventListener("click", () => step(1))')) {
-    errors.push('Foundational document carousel must let students move backward and forward through the documents.');
+  if (homepage.includes('featured-document-previous') || homepage.includes('featured-document-next') ||
+      homepage.includes('featured-document-toggle') || homepageApp.includes('function initFoundingDocumentCarousel()')) {
+    errors.push('The homepage should use static featured document links, not the old rotating document carousel.');
   }
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
