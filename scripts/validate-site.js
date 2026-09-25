@@ -276,7 +276,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-foundational-primary-artifacts',
+    'app.js?v=20260925-foundational-carousel-controls',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -298,8 +298,8 @@ function validateSharedCourseExperience() {
       !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="hero-artifact"') ||
-      homepage.includes('id="featured-document-previous"') ||
-      homepage.includes('id="featured-document-next"') ||
+      !homepage.includes('id="featured-document-previous"') ||
+      !homepage.includes('id="featured-document-next"') ||
       !homepage.includes('id="featured-document-toggle"') ||
       !homepage.includes('id="featured-document-link"') ||
       !homepage.includes('id="current-question"') ||
@@ -322,6 +322,10 @@ function validateSharedCourseExperience() {
       carouselSource.includes('adam-smith.jpg') ||
       carouselSource.includes('martin-luther-king-jr.jpg')) {
     errors.push('Foundational document carousel must use document-source imagery, not author illustrations or portraits.');
+  }
+  if (!carouselSource.includes('previous.addEventListener("click", () => step(-1))') ||
+      !carouselSource.includes('next.addEventListener("click", () => step(1))')) {
+    errors.push('Foundational document carousel must let students move backward and forward through the documents.');
   }
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);

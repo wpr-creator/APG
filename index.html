@@ -35,7 +35,7 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20260805-foundations-cases" defer></script>
-  <script src="app.js?v=20260925-foundational-primary-artifacts" defer></script>
+  <script src="app.js?v=20260925-foundational-carousel-controls" defer></script>
 <link rel="stylesheet" href="course-shell.css?v=20260925-civic-magazine-nav">
 <script src="course-shell.js?v=20260913-exit-page" defer></script>
 </head>
@@ -89,7 +89,9 @@
             <span id="featured-document-credit" class="hero-artifact-credit">IMAGE: NATIONAL ARCHIVES</span>
           </figcaption>
           <div class="hero-artifact-controls" role="group" aria-label="Foundational document slideshow controls">
+            <button type="button" id="featured-document-previous" aria-label="Previous foundational document">←</button>
             <button type="button" id="featured-document-toggle" aria-pressed="false">Pause rotation</button>
+            <button type="button" id="featured-document-next" aria-label="Next foundational document">→</button>
           </div>
         </figure>
       </section>

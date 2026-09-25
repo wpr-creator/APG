@@ -114,7 +114,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .hero-artifact-label span { color: #737b80; font-size: .62rem; font-weight: 700; }
 .hero-artifact figcaption a { min-height: 44px; display: inline-flex; align-items: center; gap: .45rem; color: #8f3438; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .hero-artifact-credit { grid-column: 1 / -1; align-self: end; color: #646e74; font-size: .6rem; letter-spacing: .055em; font-weight: 700; }
-.hero-artifact-controls { margin-top: .3rem; display: flex; align-items: center; }
+.hero-artifact-controls { margin-top: .3rem; display: flex; align-items: center; gap: .45rem; }
 .hero-artifact-controls button { min-width: 44px; min-height: 44px; padding: .45rem .65rem; color: #182838; background: transparent; border: 1px solid #aeb4b5; border-radius: 2px; cursor: pointer; font-weight: 800; }
 .hero-artifact-controls button:hover { color: #8f3438; border-color: #8f3438; }
 #featured-document-toggle { min-width: 120px; color: #46525b; font-size: .72rem; }

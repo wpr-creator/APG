@@ -1982,8 +1982,10 @@
     const year = document.getElementById("featured-document-year");
     const position = document.getElementById("featured-document-position");
     const credit = document.getElementById("featured-document-credit");
+    const previous = document.getElementById("featured-document-previous");
     const toggle = document.getElementById("featured-document-toggle");
-    if (!image || !link || !year || !position || !credit || !toggle || !Array.isArray(window.REQUIRED_DOCS)) return;
+    const next = document.getElementById("featured-document-next");
+    if (!image || !link || !year || !position || !credit || !previous || !toggle || !next || !Array.isArray(window.REQUIRED_DOCS)) return;
 
     const artwork = {
       declaration: ["assets/foundations/artifacts/declaration.jpg", "Archival manuscript of the Declaration of Independence", "DOCUMENT: NATIONAL ARCHIVES"],
@@ -2027,7 +2029,9 @@
       toggle.textContent = paused ? "Resume rotation" : "Pause rotation";
       toggle.setAttribute("aria-pressed", String(paused));
     };
+    previous.addEventListener("click", () => step(-1));
     toggle.addEventListener("click", () => { paused = !paused; syncToggle(); });
+    next.addEventListener("click", () => step(1));
     reducedMotion.addEventListener?.("change", event => { if (event.matches) { paused = true; syncToggle(); } });
     window.setInterval(() => {
       if (!paused && !document.hidden && !figure.matches(":hover") && !figure.contains(document.activeElement)) step(1);
