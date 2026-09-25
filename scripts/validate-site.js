@@ -268,13 +268,13 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260924-lesson-path',
+    'styles.css?v=20260925-remove-checklist-note',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260924-lesson-path',
+    'app.js?v=20260925-remove-checklist-note',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -738,6 +738,7 @@ function validateSharedCourseExperience() {
       !unitResourceAppCode.includes('Number(bIsNotes) - Number(aIsNotes)') ||
       !unitResourceAppCode.includes('const group = document.createElement("details")') ||
       !unitResourceAppCode.includes('const groupSummary = document.createElement("summary")') ||
+      !unitResourceAppCode.includes('lesson === "CONCEPT PRACTICE" ? `${unit.number.toUpperCase()} CONCEPT PRACTICE` : lesson') ||
       !unitResourceAppCode.includes('lessonA.localeCompare(lessonB, undefined, { numeric: true })') ||
       !unitResourceAppCode.includes('target.open = true') ||
       !unitResourceAppCode.includes('resourceType.includes("INTERACTIVE")') ||
@@ -1106,6 +1107,9 @@ function validateSharedCourseExperience() {
   }
   if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
     errors.push('Unit pages must not render the retired Road Ahead lessons section.');
+  }
+  if (appCode.includes('My checklist · Stars are saved on this browser.') || appCode.includes('checklist.className = "checklist-note"')) {
+    errors.push('Unit pages must not display the checklist disclaimer beneath the unit header.');
   }
   if (!appCode.includes('!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length')) {
     errors.push('Unit 1 must hide the broad Unit Sources block and show lesson resources only.');

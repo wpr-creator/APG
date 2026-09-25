@@ -304,7 +304,7 @@
         const groupSummary = document.createElement("summary");
         groupSummary.className = "unit-resource-summary";
         const lessonTitle = document.createElement("h2");
-        lessonTitle.textContent = lesson;
+        lessonTitle.textContent = lesson === "CONCEPT PRACTICE" ? `${unit.number.toUpperCase()} CONCEPT PRACTICE` : lesson;
         const lessonCount = document.createElement("span");
         lessonCount.className = "unit-resource-count";
         lessonCount.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`;
@@ -411,10 +411,6 @@
     }
 
     container.appendChild(header);
-    const checklist = document.createElement("p");
-    checklist.className = "checklist-note";
-    checklist.textContent = "My checklist · Stars are saved on this browser. Marking something done does not submit it to Mr. Rogers.";
-    container.append(checklist);
     if (!["gov-0", "gov-1"].includes(unit.id) && sourceGrid.children.length) container.append(unitSources);
     if (unit.resources?.length) {
       const pathHeading = document.createElement("div");

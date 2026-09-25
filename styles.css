@@ -115,7 +115,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .lesson-jump { margin: 1.25rem 0 .75rem; }
 .lesson-jump label { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; font-size: .9rem; font-weight: 800; }
 .lesson-jump select { max-width: 100%; min-height: 48px; padding: .65rem; color: var(--black); background: white; border: 2px solid #174f85; font: inherit; }
-.checklist-note { margin: .75rem 0 1.5rem; color: var(--muted); font-size: .9rem; line-height: 1.5; }
 .unit-resource-group { scroll-margin-top: 1.5rem; }
 .dashboard-card { padding: 1.5rem; background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 8px 24px rgba(0,0,0,.05); }
 .card-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; padding-bottom: 1rem; border-bottom: 2px solid var(--black); }
