@@ -2003,7 +2003,14 @@
       gettysburg: ["assets/foundations/artifacts/gettysburg-address.jpg", "Nicolay manuscript copy of the Gettysburg Address in Abraham Lincoln’s handwriting", "DOCUMENT: LIBRARY OF CONGRESS"],
       birmingham: ["assets/foundations/artifacts/letter-birmingham-1963.jpg", "First page of the 1963 American Friends Service Committee edition of Martin Luther King Jr.’s Letter from Birmingham City Jail", "DOCUMENT: AMERICAN FRIENDS SERVICE COMMITTEE, 1963 EDITION"]
     };
-    const docs = window.REQUIRED_DOCS.filter(doc => artwork[doc.id]);
+    const docs = window.REQUIRED_DOCS
+      .filter(doc => artwork[doc.id])
+      .slice()
+      .sort((a, b) => {
+        const yearA = Number((String(a.year).match(/\d{4}/) || [0])[0]);
+        const yearB = Number((String(b.year).match(/\d{4}/) || [0])[0]);
+        return yearA - yearB;
+      });
     if (!docs.length) return;
 
     const figure = image.closest("figure");
