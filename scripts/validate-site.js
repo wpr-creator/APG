@@ -269,14 +269,14 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
-    'styles.css?v=20260925-foundational-rotation',
+    'styles.css?v=20260925-foundational-primary-artifacts',
     'course-shell.css?v=20260925-civic-magazine-nav',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-foundational-rotation',
+    'app.js?v=20260925-foundational-primary-artifacts',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -298,8 +298,8 @@ function validateSharedCourseExperience() {
       !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="hero-artifact"') ||
-      !homepage.includes('id="featured-document-previous"') ||
-      !homepage.includes('id="featured-document-next"') ||
+      homepage.includes('id="featured-document-previous"') ||
+      homepage.includes('id="featured-document-next"') ||
       !homepage.includes('id="featured-document-toggle"') ||
       !homepage.includes('id="featured-document-link"') ||
       !homepage.includes('id="current-question"') ||
@@ -310,10 +310,19 @@ function validateSharedCourseExperience() {
     'declaration', 'articles', 'constitution', 'bill-of-rights', 'fed10', 'fed51', 'brutus1',
     'fed39', 'wealth-of-nations', 'fed70', 'fed78', 'emancipation', 'gettysburg', 'birmingham'
   ];
+  const carouselSource = homepageApp.slice(
+    homepageApp.indexOf('function initFoundingDocumentCarousel()'),
+    homepageApp.indexOf('function renderSiteContent()')
+  );
   featuredDocumentArtwork.forEach(function (id) {
     const key = id.includes('-') ? `"${id}"` : id;
-    if (!homepageApp.includes(`${key}: ["assets/`)) errors.push('Foundational document carousel is missing artwork for: ' + id);
+    if (!carouselSource.includes(`${key}: ["`)) errors.push('Foundational document carousel is missing artwork for: ' + id);
   });
+  if (carouselSource.includes('assets/democracy-filtered/') ||
+      carouselSource.includes('adam-smith.jpg') ||
+      carouselSource.includes('martin-luther-king-jr.jpg')) {
+    errors.push('Foundational document carousel must use document-source imagery, not author illustrations or portraits.');
+  }
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
   });

@@ -1982,26 +1982,24 @@
     const year = document.getElementById("featured-document-year");
     const position = document.getElementById("featured-document-position");
     const credit = document.getElementById("featured-document-credit");
-    const previous = document.getElementById("featured-document-previous");
-    const next = document.getElementById("featured-document-next");
     const toggle = document.getElementById("featured-document-toggle");
-    if (!image || !link || !year || !position || !credit || !previous || !next || !toggle || !Array.isArray(window.REQUIRED_DOCS)) return;
+    if (!image || !link || !year || !position || !credit || !toggle || !Array.isArray(window.REQUIRED_DOCS)) return;
 
     const artwork = {
-      declaration: ["assets/foundations/artifacts/declaration.jpg", "Archival parchment of the Declaration of Independence", "IMAGE: NATIONAL ARCHIVES"],
-      articles: ["assets/foundations/artifacts/articles-of-confederation.jpg", "Archival parchment of the Articles of Confederation", "IMAGE: NATIONAL ARCHIVES"],
-      constitution: ["assets/foundations/artifacts/constitution.jpg", "First page of the United States Constitution", "IMAGE: NATIONAL ARCHIVES"],
-      "bill-of-rights": ["assets/foundations/artifacts/bill-of-rights.jpg", "Engrossed Bill of Rights document at the National Archives", "IMAGE: NATIONAL ARCHIVES"],
-      fed10: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, author of Federalist No. 10", "ILLUSTRATION: JAMES MADISON"],
-      fed51: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, traditionally associated with Federalist No. 51", "ILLUSTRATION: JAMES MADISON"],
-      brutus1: ["assets/democracy-filtered/brutus-advocate.jpg", "Illustration representing the anonymous writer known as Brutus", "ILLUSTRATION: THE BRUTUS PSEUDONYM"],
-      fed39: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, author of Federalist No. 39", "ILLUSTRATION: JAMES MADISON"],
-      "wealth-of-nations": ["assets/foundations/artifacts/adam-smith.jpg", "Engraved portrait of Adam Smith", "IMAGE: LIBRARY OF CONGRESS"],
-      fed70: ["assets/democracy-filtered/hamilton-advocate.jpg", "Illustrated portrait of Alexander Hamilton, author of Federalist No. 70", "ILLUSTRATION: ALEXANDER HAMILTON"],
-      fed78: ["assets/democracy-filtered/hamilton-advocate.jpg", "Illustrated portrait of Alexander Hamilton, author of Federalist No. 78", "ILLUSTRATION: ALEXANDER HAMILTON"],
-      emancipation: ["assets/foundations/artifacts/emancipation-proclamation.jpg", "Page of the Emancipation Proclamation signed by Abraham Lincoln", "IMAGE: NATIONAL ARCHIVES"],
-      gettysburg: ["assets/foundations/artifacts/gettysburg-address.jpg", "Nicolay manuscript copy of the Gettysburg Address in Abraham Lincoln’s handwriting", "IMAGE: LIBRARY OF CONGRESS"],
-      birmingham: ["assets/foundations/artifacts/martin-luther-king-jr.jpg", "Martin Luther King Jr. at the White House in 1963; portrait associated with his Letter from Birmingham Jail", "IMAGE: LIBRARY OF CONGRESS"]
+      declaration: ["assets/foundations/artifacts/declaration.jpg", "Archival manuscript of the Declaration of Independence", "DOCUMENT: NATIONAL ARCHIVES"],
+      articles: ["assets/foundations/artifacts/articles-of-confederation.jpg", "Archival manuscript of the Articles of Confederation", "DOCUMENT: NATIONAL ARCHIVES"],
+      constitution: ["assets/foundations/artifacts/constitution.jpg", "First page of the United States Constitution", "DOCUMENT: NATIONAL ARCHIVES"],
+      "bill-of-rights": ["assets/foundations/artifacts/bill-of-rights.jpg", "Engrossed Bill of Rights document", "DOCUMENT: NATIONAL ARCHIVES"],
+      fed10: ["assets/foundations/artifacts/federalist-10.jpg", "Page from Federalist No. 10 in the 1788 first edition of The Federalist", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
+      fed51: ["assets/foundations/artifacts/federalist-volume-2.jpg", "Page from the 1788 first edition of The Federalist, volume two", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
+      brutus1: ["assets/foundations/artifacts/brutus-no-1.jpg", "Original newspaper page containing Brutus No. 1, The New-York Journal, October 18, 1787", "DOCUMENT: LIBRARY OF CONGRESS NEWSPAPER ARCHIVE"],
+      fed39: ["assets/foundations/artifacts/federalist-volume-2.jpg", "Page from the 1788 first edition of The Federalist, volume two", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
+      "wealth-of-nations": ["assets/foundations/artifacts/wealth-of-nations-1776.jpg", "Title page of the 1776 first edition of The Wealth of Nations, volume one", "DOCUMENT: INTERNET ARCHIVE SCAN OF THE 1776 FIRST EDITION"],
+      fed70: ["assets/foundations/artifacts/federalist-volume-2.jpg", "Page from the 1788 first edition of The Federalist, volume two", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
+      fed78: ["assets/foundations/artifacts/federalist-volume-2.jpg", "Page from the 1788 first edition of The Federalist, volume two", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
+      emancipation: ["assets/foundations/artifacts/emancipation-proclamation.jpg", "Page of the Emancipation Proclamation signed by Abraham Lincoln", "DOCUMENT: NATIONAL ARCHIVES"],
+      gettysburg: ["assets/foundations/artifacts/gettysburg-address.jpg", "Nicolay manuscript copy of the Gettysburg Address in Abraham Lincoln’s handwriting", "DOCUMENT: LIBRARY OF CONGRESS"],
+      birmingham: ["https://docsteach.org/wp-content/smush-webp/documents/114601602355/primary_14044_20250124133731.jpg.webp", "Archival copy of the first page of the Letter from Birmingham Jail, from the National Archives JFK Library collection", "DOCUMENT: JOHN F. KENNEDY PRESIDENTIAL LIBRARY VIA NATIONAL ARCHIVES DOCSTEACH"]
     };
     const docs = window.REQUIRED_DOCS.filter(doc => artwork[doc.id]);
     if (!docs.length) return;
@@ -2029,8 +2027,6 @@
       toggle.textContent = paused ? "Resume rotation" : "Pause rotation";
       toggle.setAttribute("aria-pressed", String(paused));
     };
-    previous.addEventListener("click", () => step(-1));
-    next.addEventListener("click", () => step(1));
     toggle.addEventListener("click", () => { paused = !paused; syncToggle(); });
     reducedMotion.addEventListener?.("change", event => { if (event.matches) { paused = true; syncToggle(); } });
     window.setInterval(() => {
