@@ -268,13 +268,13 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260925-remove-checklist-note',
+    'styles.css?v=20260925-civic-magazine',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-remove-checklist-note',
+    'app.js?v=20260925-civic-magazine',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -291,9 +291,12 @@ function validateSharedCourseExperience() {
   ].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
-  if (!homepage.includes('<span class="hero-line-primary">AP UNITED STATES</span><span class="hero-line-secondary">GOVERNMENT &amp; POLITICS</span>') ||
-      homepage.includes('class="hero-visual"') || homepage.includes('class="pediment"')) {
-    errors.push('The homepage hero must use the centered two-line title without the building illustration.');
+  if (!homepage.includes('class="hero home-hero"') ||
+      !homepage.includes('<h1 id="home-hero-title"><span>Who gets</span><span>to decide?</span></h1>') ||
+      !homepage.includes('class="hero-artifact"') ||
+      !homepage.includes('id="current-question"') ||
+      homepage.includes('class="home-dynamic-background"')) {
+    errors.push('The homepage must use the civic-magazine hero with its current-unit question and founding artifact.');
   }
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);

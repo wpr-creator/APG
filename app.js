@@ -2071,6 +2071,7 @@
     const current = data.units.find(unit => unit.id === currentUnitId);
     document.getElementById("current-unit-number").textContent = `${current.number} · AP UNITED STATES GOVERNMENT`;
     document.getElementById("now-title").textContent = current.title.toUpperCase();
+    document.getElementById("current-question").textContent = current.question;
     document.getElementById("current-action").href = `#${current.id}`;
     document.getElementById("current-action").firstChild.textContent = `OPEN ${current.number.toUpperCase()} `;
     const lessonAction = document.getElementById("current-lesson-action");
