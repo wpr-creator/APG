@@ -28,16 +28,16 @@ button { color: inherit; }
 .skip-link { position: fixed; z-index: 1000; top: 8px; left: 8px; padding: .7rem 1rem; background: var(--white); transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
 
-.site-header { min-height: 74px; max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
+.site-header { min-height: 74px; max-width: 1240px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; gap: 2rem; border-bottom: 1px solid #c5c4bf; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; text-decoration: none; line-height: 1.05; }
 .brand img { border-radius: 9px; }
 .brand span { display: grid; }
 .brand strong { font-size: 1rem; letter-spacing: .01em; }
 .brand small { margin-top: 5px; color: var(--muted); font-family: Arial, sans-serif; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 nav { display: flex; gap: .25rem; }
-nav a { min-height: 44px; padding: .7rem .75rem; color: var(--muted); text-decoration: none; font-weight: 750; border-radius: 999px; text-transform: uppercase; white-space: nowrap; }
-nav a:hover, nav a[aria-current="page"] { color: var(--black); background: var(--stone); }
-.menu-button { display: none; min-height: 44px; border: 1px solid var(--line); background: var(--white); border-radius: 999px; padding: .5rem .85rem; font-weight: 800; }
+nav a { min-height: 44px; padding: .7rem .75rem; display: inline-flex; align-items: center; color: #46525b; text-decoration: none; font-weight: 750; border-bottom: 2px solid transparent; text-transform: uppercase; white-space: nowrap; }
+nav a:hover, nav a[aria-current="page"] { color: #182838; background: transparent; border-bottom-color: #9b343c; }
+.menu-button { display: none; min-height: 44px; border: 1px solid #aeb4b5; background: transparent; border-radius: 2px; padding: .5rem .85rem; font-weight: 800; }
 
 main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .view { animation: reveal .25s ease-out; }
@@ -92,7 +92,8 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .home-hero .hero-copy { color: #182838; text-align: left; }
 .home-hero::before { display: none; }
 .home-hero .hero-copy { z-index: auto; }
-.home-hero .eyebrow { max-width: 36rem; margin-bottom: 1.2rem; color: #8f3438; font-size: .72rem; letter-spacing: .13em; }
+.home-hero .eyebrow { max-width: 36rem; margin-bottom: 1.2rem; color: #46525b; font-size: .72rem; letter-spacing: .13em; }
+.hero.home-hero .eyebrow { color: #46525b; }
 .home-hero h1 { max-width: 760px; color: #182838; font-family: Georgia, "Times New Roman", serif; font-size: clamp(4rem, 8.6vw, 7.6rem); font-weight: 500; letter-spacing: -.075em; line-height: .83; text-transform: none; }
 .home-hero h1 span:last-child { color: #9b343c; font-style: italic; }
 .home-hero .hero-intro { max-width: 34rem; margin: 1.35rem 0 2rem; color: #46525b; font-size: clamp(1.05rem, 1.6vw, 1.25rem); font-weight: 400; line-height: 1.55; }
@@ -107,7 +108,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .hero-artifact { position: relative; width: min(100%, 390px); margin: 0 auto; padding: 0 0 1rem; }
 .hero-artifact img { width: 100%; max-height: 470px; display: block; object-fit: cover; object-position: 48% 42%; filter: sepia(.14) contrast(.94); }
 .hero-artifact-year { position: absolute; top: -1rem; right: -1rem; width: 82px; aspect-ratio: 1; display: grid; place-items: center; color: #fffdf8; background: #9b343c; border: 5px solid #f1eee7; border-radius: 50%; font-family: Georgia, serif; font-size: 1.45rem; }
-.hero-artifact figcaption { padding-top: .75rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; border-top: 1px solid #aeb4b5; font-size: .65rem; font-weight: 900; letter-spacing: .1em; }
+.hero-artifact figcaption { padding-top: .75rem; display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 1rem; border-top: 1px solid #aeb4b5; color: #46525b; font-size: .65rem; font-weight: 900; letter-spacing: .1em; }
 .hero-artifact figcaption a { min-height: 44px; display: inline-flex; align-items: center; gap: .45rem; color: #8f3438; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 .home-section-label { margin: 2.4rem 0 .3rem; padding: .75rem 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .4rem 1rem; border-top: 3px solid #182838; border-bottom: 1px solid #aeb4b5; color: #8f3438; font-size: .67rem; font-weight: 900; letter-spacing: .14em; }
 .home-section-label span:last-child { color: #5c646b; font-size: .61rem; }

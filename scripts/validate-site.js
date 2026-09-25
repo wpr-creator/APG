@@ -268,7 +268,8 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   [
-    'styles.css?v=20260925-civic-magazine',
+    'styles.css?v=20260925-civic-magazine-contrast',
+    'course-shell.css?v=20260925-civic-magazine-nav',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
@@ -293,6 +294,8 @@ function validateSharedCourseExperience() {
   });
   if (!homepage.includes('class="hero home-hero"') ||
       !homepage.includes('<h1 id="home-hero-title"><span>Who gets</span><span>to decide?</span></h1>') ||
+      !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
+      homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="hero-artifact"') ||
       !homepage.includes('id="current-question"') ||
       homepage.includes('class="home-dynamic-background"')) {
