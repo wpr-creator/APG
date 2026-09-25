@@ -1976,6 +1976,70 @@
     }
   }
 
+  function initFoundingDocumentCarousel() {
+    const image = document.getElementById("featured-document-image");
+    const link = document.getElementById("featured-document-link");
+    const year = document.getElementById("featured-document-year");
+    const position = document.getElementById("featured-document-position");
+    const credit = document.getElementById("featured-document-credit");
+    const previous = document.getElementById("featured-document-previous");
+    const next = document.getElementById("featured-document-next");
+    const toggle = document.getElementById("featured-document-toggle");
+    if (!image || !link || !year || !position || !credit || !previous || !next || !toggle || !Array.isArray(window.REQUIRED_DOCS)) return;
+
+    const artwork = {
+      declaration: ["assets/foundations/artifacts/declaration.jpg", "Archival parchment of the Declaration of Independence", "IMAGE: NATIONAL ARCHIVES"],
+      articles: ["assets/foundations/artifacts/articles-of-confederation.jpg", "Archival parchment of the Articles of Confederation", "IMAGE: NATIONAL ARCHIVES"],
+      constitution: ["assets/foundations/artifacts/constitution.jpg", "First page of the United States Constitution", "IMAGE: NATIONAL ARCHIVES"],
+      "bill-of-rights": ["assets/foundations/artifacts/bill-of-rights.jpg", "Engrossed Bill of Rights document at the National Archives", "IMAGE: NATIONAL ARCHIVES"],
+      fed10: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, author of Federalist No. 10", "ILLUSTRATION: JAMES MADISON"],
+      fed51: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, traditionally associated with Federalist No. 51", "ILLUSTRATION: JAMES MADISON"],
+      brutus1: ["assets/democracy-filtered/brutus-advocate.jpg", "Illustration representing the anonymous writer known as Brutus", "ILLUSTRATION: THE BRUTUS PSEUDONYM"],
+      fed39: ["assets/democracy-filtered/madison-advocate.jpg", "Illustrated portrait of James Madison, author of Federalist No. 39", "ILLUSTRATION: JAMES MADISON"],
+      "wealth-of-nations": ["assets/foundations/artifacts/adam-smith.jpg", "Engraved portrait of Adam Smith", "IMAGE: LIBRARY OF CONGRESS"],
+      fed70: ["assets/democracy-filtered/hamilton-advocate.jpg", "Illustrated portrait of Alexander Hamilton, author of Federalist No. 70", "ILLUSTRATION: ALEXANDER HAMILTON"],
+      fed78: ["assets/democracy-filtered/hamilton-advocate.jpg", "Illustrated portrait of Alexander Hamilton, author of Federalist No. 78", "ILLUSTRATION: ALEXANDER HAMILTON"],
+      emancipation: ["assets/foundations/artifacts/emancipation-proclamation.jpg", "Page of the Emancipation Proclamation signed by Abraham Lincoln", "IMAGE: NATIONAL ARCHIVES"],
+      gettysburg: ["assets/foundations/artifacts/gettysburg-address.jpg", "Nicolay manuscript copy of the Gettysburg Address in Abraham Lincoln’s handwriting", "IMAGE: LIBRARY OF CONGRESS"],
+      birmingham: ["assets/foundations/artifacts/martin-luther-king-jr.jpg", "Martin Luther King Jr. at the White House in 1963; portrait associated with his Letter from Birmingham Jail", "IMAGE: LIBRARY OF CONGRESS"]
+    };
+    const docs = window.REQUIRED_DOCS.filter(doc => artwork[doc.id]);
+    if (!docs.length) return;
+
+    const figure = image.closest("figure");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let index = 0;
+    let paused = reducedMotion.matches;
+    const draw = () => {
+      const doc = docs[index];
+      const [src, alt, attribution] = artwork[doc.id];
+      image.src = src;
+      image.alt = alt;
+      year.textContent = (String(doc.year).match(/\d{4}/) || [""])[0];
+      link.href = doc.file;
+      link.firstChild.textContent = `READ ${doc.title.toUpperCase()} `;
+      position.textContent = `${String(index + 1).padStart(2, "0")} / ${String(docs.length).padStart(2, "0")}`;
+      credit.textContent = attribution;
+    };
+    const step = delta => {
+      index = (index + delta + docs.length) % docs.length;
+      draw();
+    };
+    const syncToggle = () => {
+      toggle.textContent = paused ? "Resume rotation" : "Pause rotation";
+      toggle.setAttribute("aria-pressed", String(paused));
+    };
+    previous.addEventListener("click", () => step(-1));
+    next.addEventListener("click", () => step(1));
+    toggle.addEventListener("click", () => { paused = !paused; syncToggle(); });
+    reducedMotion.addEventListener?.("change", event => { if (event.matches) { paused = true; syncToggle(); } });
+    window.setInterval(() => {
+      if (!paused && !document.hidden && !figure.matches(":hover") && !figure.contains(document.activeElement)) step(1);
+    }, 8000);
+    draw();
+    syncToggle();
+  }
+
   function renderSiteContent() {
     renderExitTicket();
     const classroom = document.getElementById("classroom-link");
@@ -2427,6 +2491,7 @@
   });
   window.addEventListener("hashchange", route);
   window.setInterval(renderAgendaDate, 60000);
+  initFoundingDocumentCarousel();
   document.getElementById("exit-period").addEventListener("change", populateExitStudents);
   document.getElementById("exit-student").addEventListener("change", validateExitTicket);
   document.getElementById("exit-response").addEventListener("input", validateExitTicket);

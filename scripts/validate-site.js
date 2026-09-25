@@ -267,15 +267,16 @@ function validateSharedCourseExperience() {
   });
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
-    'styles.css?v=20260925-civic-magazine-contrast',
+    'styles.css?v=20260925-foundational-rotation',
     'course-shell.css?v=20260925-civic-magazine-nav',
     'course-data.js?v=20260924-foundational-case-tints',
     'glossary-data.js?v=20260923-federalism-glossary',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-civic-magazine',
+    'app.js?v=20260925-foundational-rotation',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -297,14 +298,25 @@ function validateSharedCourseExperience() {
       !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="hero-artifact"') ||
+      !homepage.includes('id="featured-document-previous"') ||
+      !homepage.includes('id="featured-document-next"') ||
+      !homepage.includes('id="featured-document-toggle"') ||
+      !homepage.includes('id="featured-document-link"') ||
       !homepage.includes('id="current-question"') ||
       homepage.includes('class="home-dynamic-background"')) {
     errors.push('The homepage must use the civic-magazine hero with its current-unit question and founding artifact.');
   }
+  const featuredDocumentArtwork = [
+    'declaration', 'articles', 'constitution', 'bill-of-rights', 'fed10', 'fed51', 'brutus1',
+    'fed39', 'wealth-of-nations', 'fed70', 'fed78', 'emancipation', 'gettysburg', 'birmingham'
+  ];
+  featuredDocumentArtwork.forEach(function (id) {
+    const key = id.includes('-') ? `"${id}"` : id;
+    if (!homepageApp.includes(`${key}: ["assets/`)) errors.push('Foundational document carousel is missing artwork for: ' + id);
+  });
   ['id="exit-ticket-success" hidden', 'assets/exit-ticket-submitted.png', 'alt="Ticket submitted"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Exit-ticket confirmation art is missing: ' + content);
   });
-  const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const confirmedSaveIndex = homepageApp.indexOf('if (!accepted) throw new Error("Submission was not accepted for delivery")');
   const showTicketIndex = homepageApp.indexOf('document.getElementById("exit-ticket-success").hidden = false');
   if (confirmedSaveIndex < 0 || showTicketIndex < confirmedSaveIndex) {

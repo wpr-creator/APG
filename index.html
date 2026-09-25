@@ -23,7 +23,7 @@
   <meta name="twitter:image:alt" content="Mr. Rogers AP Government and Politics at O'Farrell High School.">
   <title>AP United States Government and Politics</title>
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=20260925-civic-magazine-contrast">
+  <link rel="stylesheet" href="styles.css?v=20260925-foundational-rotation">
   <script src="course-data.js?v=20260924-foundational-case-tints" defer></script>
   <script src="glossary-data.js?v=20260923-federalism-glossary" defer></script>
   <script src="foundations-data.js?v=20260909-madison-brutus" defer></script>
@@ -35,7 +35,7 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20260805-foundations-cases" defer></script>
-  <script src="app.js?v=20260925-civic-magazine" defer></script>
+  <script src="app.js?v=20260925-foundational-rotation" defer></script>
 <link rel="stylesheet" href="course-shell.css?v=20260925-civic-magazine-nav">
 <script src="course-shell.js?v=20260913-exit-page" defer></script>
 </head>
@@ -79,9 +79,20 @@
           </section>
         </div>
         <figure class="hero-artifact">
-          <img src="assets/foundations/artifacts/declaration.jpg" alt="Archival parchment image of the Declaration of Independence, courtesy of the National Archives">
-          <span class="hero-artifact-year" aria-hidden="true">1776</span>
-          <figcaption><span>THE FOUNDING DOCUMENTS</span><a href="docs/declaration-of-independence.html">READ THE DECLARATION <b aria-hidden="true">↗</b></a></figcaption>
+          <div class="hero-artifact-image-wrap">
+            <img id="featured-document-image" src="assets/foundations/artifacts/declaration.jpg" alt="Archival parchment image of the Declaration of Independence, courtesy of the National Archives">
+            <span class="hero-artifact-year" id="featured-document-year" aria-hidden="true">1776</span>
+          </div>
+          <figcaption>
+            <span class="hero-artifact-label">FOUNDATIONAL DOCUMENT <span id="featured-document-position">01 / 14</span></span>
+            <a id="featured-document-link" href="docs/declaration-of-independence.html">READ THE DECLARATION <b aria-hidden="true">↗</b></a>
+            <span id="featured-document-credit" class="hero-artifact-credit">IMAGE: NATIONAL ARCHIVES</span>
+          </figcaption>
+          <div class="hero-artifact-controls" role="group" aria-label="Foundational document slideshow controls">
+            <button type="button" id="featured-document-previous" aria-label="Previous foundational document">←</button>
+            <button type="button" id="featured-document-toggle" aria-pressed="false">Pause rotation</button>
+            <button type="button" id="featured-document-next" aria-label="Next foundational document">→</button>
+          </div>
         </figure>
       </section>
 
