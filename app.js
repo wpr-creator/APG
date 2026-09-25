@@ -2001,7 +2001,7 @@
       fed78: ["assets/foundations/artifacts/federalist-volume-2.jpg", "Page from the 1788 first edition of The Federalist, volume two", "DOCUMENT: LIBRARY OF CONGRESS, 1788 FIRST EDITION"],
       emancipation: ["assets/foundations/artifacts/emancipation-proclamation.jpg", "Page of the Emancipation Proclamation signed by Abraham Lincoln", "DOCUMENT: NATIONAL ARCHIVES"],
       gettysburg: ["assets/foundations/artifacts/gettysburg-address.jpg", "Nicolay manuscript copy of the Gettysburg Address in Abraham Lincoln’s handwriting", "DOCUMENT: LIBRARY OF CONGRESS"],
-      birmingham: ["https://docsteach.org/wp-content/smush-webp/documents/114601602355/primary_14044_20250124133731.jpg.webp", "Archival copy of the first page of the Letter from Birmingham Jail, from the National Archives JFK Library collection", "DOCUMENT: JOHN F. KENNEDY PRESIDENTIAL LIBRARY VIA NATIONAL ARCHIVES DOCSTEACH"]
+      birmingham: ["assets/foundations/artifacts/letter-birmingham-1963.jpg", "First page of the 1963 American Friends Service Committee edition of Martin Luther King Jr.’s Letter from Birmingham City Jail", "DOCUMENT: AMERICAN FRIENDS SERVICE COMMITTEE, 1963 EDITION"]
     };
     const docs = window.REQUIRED_DOCS.filter(doc => artwork[doc.id]);
     if (!docs.length) return;

@@ -276,7 +276,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-foundational-carousel-controls',
+    'app.js?v=20260925-birmingham-local-scan',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
