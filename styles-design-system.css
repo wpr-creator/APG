@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap');
+
+/*
+ * APG shared typography system
+ * This is intentionally a foundation, not a page template: local styles keep
+ * their layouts, colors, and display-size choices while sharing type roles.
+ */
+:root {
+  --type-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --type-reading: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --type-label: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --type-size-label: clamp(.66rem, .63rem + .12vw, .74rem);
+  --type-size-body: clamp(.98rem, .95rem + .16vw, 1.06rem);
+  --type-size-deck: clamp(1.08rem, 1rem + .38vw, 1.34rem);
+  --type-size-section: clamp(1.45rem, 1.18rem + .8vw, 2.05rem);
+  --type-size-display: clamp(2.35rem, 1.45rem + 3.25vw, 4.55rem);
+}
+
+body {
+  font-family: var(--type-reading) !important;
+  font-size: var(--type-size-body);
+  line-height: 1.58;
+}
+
+body :not(:where(svg, svg *, .ti, [class*="ti-"], .fa, [class*="fa-"], .material-icons, [class*="icon"])) {
+  font-family: var(--type-reading) !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+h1 *, h2 *, h3 *, h4 *, h5 *, h6 * {
+  font-family: var(--type-display) !important;
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+h1 { font-size: var(--type-size-display); }
+h2 { font-size: var(--type-size-section); }
+h3 { font-size: clamp(1.18rem, 1.05rem + .48vw, 1.55rem); }
+
+p, li, dt, dd, label, figcaption, summary, input, textarea, select {
+  font-family: var(--type-reading) !important;
+}
+
+blockquote, q, .pull-quote, .pullquote, .hero-quote,
+blockquote *, q *, .pull-quote *, .pullquote *, .hero-quote * {
+  font-family: var(--type-display) !important;
+}
+
+code, pre, kbd, samp { font-family: ui-monospace, 'SFMono-Regular', Consolas, monospace !important; }
+
+nav a, .eyebrow, .kicker, [class*="eyebrow"], [class*="kicker"],
+[data-type="label"], .metadata, .meta-label {
+  font-family: var(--type-label) !important;
+}
+
+.eyebrow, .kicker, [class*="eyebrow"], [class*="kicker"] {
+  font-size: var(--type-size-label);
+  font-weight: 500;
+  letter-spacing: .085em;
+  line-height: 1.4;
+}
+
+.type-display { font-family: var(--type-display) !important; font-size: var(--type-size-display); line-height: .98; letter-spacing: -.045em; }
+.type-title { font-family: var(--type-display) !important; font-size: var(--type-size-section); line-height: 1.08; letter-spacing: -.03em; }
+.type-deck { font-family: var(--type-reading) !important; font-size: var(--type-size-deck); line-height: 1.5; }
+.type-body { font-family: var(--type-reading) !important; font-size: var(--type-size-body); line-height: 1.58; }
+.type-label { font-family: var(--type-label) !important; font-size: var(--type-size-label); letter-spacing: .08em; }
+
+@media (max-width: 600px) {
+  body { line-height: 1.55; }
+  h1 { text-wrap: pretty; }
+}

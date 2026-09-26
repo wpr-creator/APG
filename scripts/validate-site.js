@@ -268,9 +268,20 @@ function validateSharedCourseExperience() {
 
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  const typographyPages = files.filter(function (file) {
+    return file.endsWith('.html') && !relative(file).startsWith('slides/');
+  });
+  typographyPages.forEach(function (file) {
+    const html = fs.readFileSync(file, 'utf8');
+    const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
+    if (!html.includes('href="' + stylesheet + '?v=20260926-shared-type-system"')) {
+      errors.push('Page is missing the shared typography system: ' + relative(file));
+    }
+  });
   [
     'styles.css?v=20260926-editorial-typography',
     'course-shell.css?v=20260926-editorial-typography',
+    'styles-design-system.css?v=20260926-shared-type-system',
     'course-data.js?v=20260926-ap-unit-titles',
     'glossary-data.js?v=20260926-ap-unit-titles',
     'foundations-data.js?v=20260909-madison-brutus',

@@ -1,9 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Public+Sans:wght@400;500;600;700&display=swap');
-
 :root {
-  --type-display: 'Newsreader', Georgia, 'Times New Roman', serif;
-  --type-reading: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
-  --type-label: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
   --ink: #17202b;
   --black: #182838;
   --charcoal: #263b52;
