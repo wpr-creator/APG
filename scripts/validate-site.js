@@ -276,7 +276,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260925-featured-documents',
+    'app.js?v=20260926-no-duplicate-course-label',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -296,7 +296,9 @@ function validateSharedCourseExperience() {
   if (!homepage.includes('class="hero home-hero"') ||
       !homepage.includes('<h1 id="home-hero-title"><span>AP Government</span><span>&amp; Politics</span></h1>') ||
       !homepage.includes('How do government and politics connect—and how can you take part? Study how the president, Congress, the Supreme Court, and political beliefs shape public policy.') ||
-      homepage.includes('<p class="eyebrow">AP GOVERNMENT &amp; POLITICS</p>') ||
+      !homepage.includes('<span><strong>MR. ROGERS</strong><small>O\'FARRELL HIGH SCHOOL</small></span>') ||
+      homepage.includes('AP UNITED STATES GOVERNMENT</strong>') ||
+      !homepageApp.includes('document.getElementById("current-unit-number").textContent = current.number;') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="featured-documents"') ||
       !homepage.includes('id="featured-documents-title"') ||

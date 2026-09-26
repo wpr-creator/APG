@@ -2069,7 +2069,7 @@
       console.warn("Using default course content.", error);
     }
     const current = data.units.find(unit => unit.id === currentUnitId);
-    document.getElementById("current-unit-number").textContent = `${current.number} · AP UNITED STATES GOVERNMENT`;
+    document.getElementById("current-unit-number").textContent = current.number;
     document.getElementById("now-title").textContent = current.title.toUpperCase();
     document.getElementById("current-question").textContent = current.question;
     document.getElementById("current-action").href = `#${current.id}`;
