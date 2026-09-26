@@ -48,7 +48,7 @@
     const mark = document.createElement("img");
     mark.src = new URL("assets/course-mark.svg", root).href; mark.alt = ""; mark.width = 44; mark.height = 44;
     const name = document.createElement("span");
-    name.innerHTML = "<strong>AP UNITED STATES GOVERNMENT</strong><small>MR. ROGERS · O’FARRELL HIGH SCHOOL</small>";
+    name.innerHTML = "<strong>AP UNITED STATES GOVERNMENT</strong><small>MR. ROGERS · THE O’FARRELL HIGH SCHOOL</small>";
     brand.append(mark, name);
     const button = document.createElement("button");
     button.type = "button"; button.textContent = "☰ MENU";

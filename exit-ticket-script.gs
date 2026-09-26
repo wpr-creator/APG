@@ -1,7 +1,7 @@
 // ════════════════════════════════════════════════════════════════
 //  MR. ROGERS — EXIT TICKET COLLECTOR
 //  AP Government & Politics — Periods 1A and 2B
-//  O'Farrell High School · 2026–27
+//  The O’Farrell High School · 2026–27
 // ════════════════════════════════════════════════════════════════
 
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/16TcskHZ3QmcLsToZuyfCWnd24t5WtB4duTsX8x1tiqg/edit';

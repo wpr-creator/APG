@@ -296,10 +296,10 @@ function validateSharedCourseExperience() {
   if (!homepage.includes('class="hero home-hero"') ||
       !homepage.includes('<h1 id="home-hero-title"><span>AP Government</span><span>&amp; Politics</span></h1>') ||
       !homepage.includes('How do government and politics connect—and how can you take part? Study how the president, Congress, the Supreme Court, and political beliefs shape public policy.') ||
-      !homepage.includes('<span><strong>MR. ROGERS</strong><small>O\'FARRELL HIGH SCHOOL</small></span>') ||
+      !homepage.includes('<span><strong>MR. ROGERS</strong><small>THE O’FARRELL HIGH SCHOOL</small></span>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT</strong>') ||
       !homepageApp.includes('document.getElementById("current-unit-number").textContent = current.number;') ||
-      homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
+      homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · THE O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="featured-documents"') ||
       !homepage.includes('id="featured-documents-title"') ||
       !homepage.includes('class="featured-document" href="docs/declaration-of-independence.html"') ||

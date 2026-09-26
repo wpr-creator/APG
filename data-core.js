@@ -1,11 +1,11 @@
 // ════════════════════════════════════════════════════
 // data-core.js — AP Gov Site: Core Data & Site Engine
-// O'Farrell High School · 2026-27
+// The O’Farrell High School · 2026-27
 // ════════════════════════════════════════════════════
 
 // ════════════════════════════════════════════════════════════════
 // apgov-data.js -- AP Government & Politics Site Data
-// O'Farrell High School · 2026-27
+// The O’Farrell High School · 2026-27
 //
 // ADD A SCOTUS CASE: find SCOTUS_CASES array, add an object
 // ADD A GLOSSARY TERM: find GLOSSARY_UNITS, add to right group  
@@ -644,7 +644,7 @@ async function loadContent() {
       action: 'TEMPLATE',
       text: 'AP Gov: ' + title,
       dates: dateFormatted + '/' + endFormatted,
-      details: "AP Government & Politics - O'Farrell High School",
+      details: "AP Government & Politics - The O’Farrell High School",
       allday: 'true'
     });
     return 'https://calendar.google.com/calendar/render?' + params.toString();
