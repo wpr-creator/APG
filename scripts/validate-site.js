@@ -294,8 +294,8 @@ function validateSharedCourseExperience() {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
   if (!homepage.includes('class="hero home-hero"') ||
-      !homepage.includes('<h1 id="home-hero-title"><span>Who gets</span><span>to decide?</span></h1>') ||
-      !homepage.includes('<p class="eyebrow">GOVERNMENT, UP CLOSE</p>') ||
+      !homepage.includes('<h1 id="home-hero-title"><span>Who makes</span><span>the rules?</span></h1>') ||
+      !homepage.includes('<p class="eyebrow">AP GOVERNMENT &amp; POLITICS</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="featured-documents"') ||
       !homepage.includes('id="featured-documents-title"') ||
