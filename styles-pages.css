@@ -7,7 +7,7 @@
 /* Nav links for multi-page (replace data-tab with hrefs) */
 .nav-link {
   display: block;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.1em; text-transform: uppercase;
   color: rgba(255,255,255,0.48);
@@ -160,11 +160,11 @@
   display: flex; align-items: center; justify-content: space-between;
 }
 .case-preview-name {
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 15px; font-weight: 700; color: white;
 }
 .case-preview-year {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px; color: rgba(255,255,255,0.5);
 }
 .case-preview-body { padding: 14px 16px; }
@@ -224,7 +224,7 @@
 }
 .amend-row:last-child { border-bottom: none; }
 .amend-row-num {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 11px; font-weight: 700; color: var(--navy);
   background: var(--navy-xlight); padding: 3px 10px;
   border-radius: 4px; flex-shrink: 0; margin-top: 2px;
@@ -308,7 +308,7 @@
   font-weight: 600;
 }
 .case-vote {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 12px; color: var(--gray-400); margin-bottom: 6px;
 }
 .case-dissent-box {
@@ -418,7 +418,7 @@
 .doc-paragraph-text {
   font-size: 15px; line-height: 1.9; color: var(--text);
   margin-bottom: 0;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Public Sans', sans-serif;
 }
 .doc-paragraph-text .highlight-key {
   background: #fef08a; padding: 1px 3px; border-radius: 3px;
@@ -471,7 +471,7 @@
 /* ── UNIT 1: Foundations — Aged Parchment & Ink ── */
 .unit-1 {
   background: var(--unit-bg);
-  --unit-heading-font: 'Archivo', sans-serif;
+  --unit-heading-font: 'Newsreader', sans-serif;
   --unit-heading-weight: 900;
   --unit-heading-transform: uppercase;
   --unit-bg:       #f5ead6;
@@ -652,7 +652,7 @@
    override color/font-size locally; only the FONT ITSELF is now
    centralized here. */
 .doc-hero-title, .case-hero-title, .doc-section-title, .doc-bento-title, .page-hero-title {
-  font-family: var(--unit-heading-font, 'Archivo', sans-serif);
+  font-family: var(--unit-heading-font, 'Newsreader', sans-serif);
   font-weight: var(--unit-heading-weight, 700);
   text-transform: var(--unit-heading-transform, uppercase);
   font-style: normal;

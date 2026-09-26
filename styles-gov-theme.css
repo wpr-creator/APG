@@ -14,6 +14,9 @@
   --gov-muted: #5c646b;
   --gov-line: #c5c4bf;
   --gov-shadow: 0 18px 45px rgba(24, 40, 56, .12);
+  --type-display: 'Newsreader', Georgia, 'Times New Roman', serif;
+  --type-reading: 'Public Sans', 'Helvetica Neue', Arial, sans-serif;
+  --type-label: 'IBM Plex Mono', 'SFMono-Regular', Consolas, monospace;
 
   --navy: var(--gov-navy);
   --navy-dark: var(--gov-navy-dark);
@@ -38,18 +41,28 @@
 body {
   background: var(--gov-paper);
   color: var(--gov-ink);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: var(--type-reading);
+  font-size: 1rem;
+  line-height: 1.62;
 }
 
 h1, h2, h3, h4, h5, h6,
 .header-text h1, .nav-tab, .nav-group-label,
 .card-head, .btn, button, .section-title {
-  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--type-display);
+  font-weight: 600;
+  letter-spacing: -.035em;
+  line-height: 1.06;
 }
 
 h1, h2, h3, .header-text h1, .nav-tab, .nav-group-label {
-  text-transform: uppercase;
+  text-transform: none;
+}
+
+.nav-tab, .nav-group-label, .card-head, .btn, button, .section-title,
+.nav-link, .unit-jump-link, .page-hero-eyebrow, .eyebrow {
+  font-family: var(--type-label);
+  letter-spacing: .045em;
 }
 
 .stars-stripe {
@@ -96,9 +109,9 @@ nav { background: var(--gov-navy); }
 .btn-primary:hover, .btn-primary:focus-visible { background: var(--gov-red-dark); }
 .tdih-year {
   color: var(--gov-blue);
-  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Newsreader", "Helvetica Neue", Arial, sans-serif;
 }
-input, textarea, select { font-family: Arial, Helvetica, sans-serif; }
+input, textarea, select { font-family: var(--type-reading); }
 
 .launch-grid, .extension-grid {
   display: grid;
@@ -119,7 +132,7 @@ input, textarea, select { font-family: Arial, Helvetica, sans-serif; }
 }
 .launch-card > span, .extension-grid > a > span {
   color: var(--gov-red);
-  font-family: "Arial Black", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Newsreader", "Helvetica Neue", Arial, sans-serif;
   font-size: .75rem;
   letter-spacing: .12em;
   text-transform: uppercase;
@@ -173,8 +186,8 @@ input, textarea, select { font-family: Arial, Helvetica, sans-serif; }
 }
 .agenda-date-panel { display: grid; grid-template-rows: 1fr auto; color: var(--gov-white); background: var(--gov-navy-dark); border-left: 10px solid var(--gov-blue); }
 .agenda-today { padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 3rem); display: flex; flex-direction: column; justify-content: center; }
-.agenda-today p { margin: 0; color: var(--gov-red-soft); font-family: "Arial Black", Arial, sans-serif; font-size: clamp(1.35rem, 3vw, 2.5rem); text-transform: uppercase; }
-.agenda-today time { font-family: "Arial Black", Arial, sans-serif; font-size: clamp(4rem, 8vw, 7.5rem); font-weight: 950; line-height: .82; letter-spacing: -.07em; text-transform: uppercase; }
+.agenda-today p { margin: 0; color: var(--gov-red-soft); font-family: "Newsreader", Arial, sans-serif; font-size: clamp(1.35rem, 3vw, 2.5rem); text-transform: uppercase; }
+.agenda-today time { font-family: "Newsreader", Arial, sans-serif; font-size: clamp(4rem, 8vw, 7.5rem); font-weight: 950; line-height: .82; letter-spacing: -.07em; text-transform: uppercase; }
 .agenda-edit-button { min-height: 60px; border: 0; color: var(--gov-white); background: var(--gov-red); cursor: pointer; text-transform: uppercase; }
 dialog { width: min(650px, calc(100% - 2rem)); padding: 0; color: var(--gov-ink); background: var(--gov-white); border: 1px solid var(--gov-line); box-shadow: var(--gov-shadow); }
 dialog::backdrop { background: rgba(24, 40, 56, .72); }
@@ -188,7 +201,7 @@ dialog input, dialog textarea { width: 100%; padding: .8rem; border: 2px solid v
 .dialog-actions button:last-child { background: var(--gov-red); }
 
 .president-tools { margin-bottom: 1rem; padding: 1rem; background: var(--gov-stone); border-radius: 8px; }
-.president-tools label { display: block; margin-bottom: .4rem; font-family: "Arial Black", Arial, sans-serif; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
+.president-tools label { display: block; margin-bottom: .4rem; font-family: "Newsreader", Arial, sans-serif; font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; }
 .president-tools input { width: 100%; min-height: 50px; padding: .75rem .9rem; border: 2px solid var(--gov-navy); background: var(--gov-white); font-weight: 750; }
 .president-tools p { margin: .6rem 0 0; color: var(--gov-muted); font-size: .75rem; font-weight: 900; }
 .president-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; align-items: start; }
@@ -198,7 +211,7 @@ dialog input, dialog textarea { width: 100%; padding: .8rem; border: 2px solid v
 .president-card-heading h2 { margin: .2rem 0; font-size: 1.3rem; }
 .president-card-heading span, .president-card-heading strong { color: var(--gov-muted); }
 .president-card details { border-top: 1px solid var(--gov-line); }
-.president-card summary { min-height: 48px; padding: .85rem 1rem; cursor: pointer; font-family: "Arial Black", Arial, sans-serif; text-transform: uppercase; }
+.president-card summary { min-height: 48px; padding: .85rem 1rem; cursor: pointer; font-family: "Newsreader", Arial, sans-serif; text-transform: uppercase; }
 .president-facts { padding: 0 1rem 1rem; }
 .president-facts p { margin: 0; padding: .7rem 0; border-bottom: 1px solid var(--gov-line); }
 .president-facts b, .president-facts span { display: block; }

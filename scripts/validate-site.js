@@ -269,8 +269,8 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
-    'styles.css?v=20260926-ap-unit-titles',
-    'course-shell.css?v=20260925-civic-magazine-nav',
+    'styles.css?v=20260926-editorial-typography',
+    'course-shell.css?v=20260926-editorial-typography',
     'course-data.js?v=20260926-ap-unit-titles',
     'glossary-data.js?v=20260926-ap-unit-titles',
     'foundations-data.js?v=20260909-madison-brutus',
