@@ -269,10 +269,10 @@ function validateSharedCourseExperience() {
   const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   [
-    'styles.css?v=20260925-featured-documents',
+    'styles.css?v=20260926-ap-unit-titles',
     'course-shell.css?v=20260925-civic-magazine-nav',
-    'course-data.js?v=20260924-foundational-case-tints',
-    'glossary-data.js?v=20260923-federalism-glossary',
+    'course-data.js?v=20260926-ap-unit-titles',
+    'glossary-data.js?v=20260926-ap-unit-titles',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -294,8 +294,9 @@ function validateSharedCourseExperience() {
     if (!homepage.includes(content)) errors.push('New APG shell is missing: ' + content);
   });
   if (!homepage.includes('class="hero home-hero"') ||
-      !homepage.includes('<h1 id="home-hero-title"><span>Who makes</span><span>the rules?</span></h1>') ||
-      !homepage.includes('<p class="eyebrow">AP GOVERNMENT &amp; POLITICS</p>') ||
+      !homepage.includes('<h1 id="home-hero-title"><span>AP Government</span><span>&amp; Politics</span></h1>') ||
+      !homepage.includes('How do government and politics connect—and how can you take part? Study how the president, Congress, the Supreme Court, and political beliefs shape public policy.') ||
+      homepage.includes('<p class="eyebrow">AP GOVERNMENT &amp; POLITICS</p>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT &amp; POLITICS · O’FARRELL HIGH SCHOOL') ||
       !homepage.includes('class="featured-documents"') ||
       !homepage.includes('id="featured-documents-title"') ||
@@ -414,6 +415,20 @@ function validateSharedCourseExperience() {
   });
 
   const courseData = fs.readFileSync(path.join(root, 'course-data.js'), 'utf8');
+  [
+    'title: "Foundations of American Democracy"',
+    'title: "Interactions Among Branches of Government"',
+    'title: "Civil Liberties and Civil Rights"',
+    'title: "American Political Ideologies and Beliefs"',
+    'title: "Political Participation"',
+    'question: "How did the Constitution shape democracy—and what did it leave unresolved?"',
+    'question: "How do the branches shape and carry out policy?"',
+    'question: "How should government balance freedom and order?"',
+    'question: "How do political beliefs shape public policy?"',
+    'question: "How can people influence government decisions?"'
+  ].forEach(function (courseTerm) {
+    if (!courseData.includes(courseTerm)) errors.push('Course outline is missing an official AP unit title or concise essential question: ' + courseTerm);
+  });
   const glossaryData = fs.readFileSync(path.join(root, 'glossary-data.js'), 'utf8');
   const glossaryUnits = JSON.parse(glossaryData.slice(glossaryData.indexOf('['), glossaryData.lastIndexOf(']') + 1));
   const glossaryEntryCount = glossaryUnits.reduce(function (total, unit) {
@@ -548,7 +563,7 @@ function validateSharedCourseExperience() {
   if (parsedSiteContent.currentUnit !== 'gov-1') {
     errors.push('Unit 1 must be the current homepage unit.');
   }
-  if (!courseData.includes('question: "How can a government be powerful enough to govern but limited enough to preserve democracy?"')) {
+  if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');
   }
   ['ap-u1-overview', 'ap-u1-documents', 'founding-power', 'federalism-map', 'constitution-explorer', 'madison-vs-brutus'].forEach(function (resourceId) {

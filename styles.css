@@ -893,7 +893,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   nav.open { display: flex; }
   nav a { width: 100%; }
   main { padding: 5px 14px 60px; }
-  .home-hero { margin: .5rem 0 1.5rem; padding: 1.5rem 0; grid-template-columns: minmax(0, 1fr) minmax(150px, .7fr); gap: 1.25rem; }
+  .home-hero { margin: .5rem 0 1.5rem; padding: 1.5rem 0; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
   .hero.home-hero { border-radius: 0; }
   .home-hero h1 { font-size: clamp(3.4rem, 9vw, 5rem); }
   .home-hero .now-panel { grid-template-columns: minmax(0, 1fr); }

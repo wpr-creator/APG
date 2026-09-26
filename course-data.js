@@ -39,7 +39,7 @@ window.COURSE_DATA = {
     },
     {
       id: "gov-1", number: "Unit 1", title: "Foundations of American Democracy",
-      question: "How can a government be powerful enough to govern but limited enough to preserve democracy?",
+      question: "How did the Constitution shape democracy—and what did it leave unresolved?",
       standards: "AP Unit Weight · 15–22%",
       lessons: [
         ["Principles of American Democracy", "Where does legitimate power come from?", "AP Topic 1.1", "Connect natural rights, popular sovereignty, republicanism, and the social contract.", "Use a founding principle to explain a government action"],
@@ -88,8 +88,8 @@ window.COURSE_DATA = {
       ]
     },
     {
-      id: "gov-2", number: "Unit 2", title: "Interactions Among Branches",
-      question: "How do Congress, the president, bureaucracy, and courts compete and cooperate?",
+      id: "gov-2", number: "Unit 2", title: "Interactions Among Branches of Government",
+      question: "How do the branches shape and carry out policy?",
       standards: "AP Unit Weight · 25–36%",
       lessons: [
         ["Congress", "How does Congress turn representation into policy?", "AP Topics 2.1–2.3", "Examine chamber structure, leadership, committees, elections, and lawmaking.", "Explain how a congressional rule affects policy"],
@@ -109,7 +109,7 @@ window.COURSE_DATA = {
     },
     {
       id: "gov-3", number: "Unit 3", title: "Civil Liberties and Civil Rights",
-      question: "How does constitutional interpretation define freedom and equality?",
+      question: "How should government balance freedom and order?",
       standards: "AP Unit Weight · 13–18%",
       lessons: [
         ["First Amendment Freedoms", "When may government limit expression or religion?", "AP Topics 3.2–3.5", "Apply speech, press, assembly, establishment, and free-exercise doctrine.", "Use precedent to decide a rights claim"],
@@ -126,8 +126,8 @@ window.COURSE_DATA = {
       ]
     },
     {
-      id: "gov-4", number: "Unit 4", title: "Political Ideologies and Beliefs",
-      question: "Where do political beliefs come from, and how do they shape policy?",
+      id: "gov-4", number: "Unit 4", title: "American Political Ideologies and Beliefs",
+      question: "How do political beliefs shape public policy?",
       standards: "AP Unit Weight · 10–15%",
       lessons: [
         ["American Political Culture", "Which values do Americans share and contest?", "AP Topics 4.1–4.2", "Examine core values and tensions within American political culture.", "Use evidence to describe a political-value conflict"],
@@ -144,7 +144,7 @@ window.COURSE_DATA = {
     },
     {
       id: "gov-5", number: "Unit 5", title: "Political Participation",
-      question: "How do people, parties, groups, elections, and media connect citizens to government?",
+      question: "How can people influence government decisions?",
       standards: "AP Unit Weight · 20–27%",
       lessons: [
         ["Voting and Turnout", "Why do some citizens participate more than others?", "AP Topics 5.1–5.2", "Analyze voting rights, turnout, demographics, and institutional barriers.", "Use evidence to explain a turnout pattern"],

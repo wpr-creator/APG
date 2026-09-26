@@ -339,7 +339,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "number": 3,
-      "title": "Civil Liberties & Civil Rights",
+      "title": "Civil Liberties and Civil Rights",
       "weight": "13-18%",
       "topics": [
         "First Amendment Freedoms",
@@ -365,7 +365,7 @@ const DEFAULT_CONTENT = {
     },
     {
       "number": 4,
-      "title": "American Political Ideologies & Beliefs",
+      "title": "American Political Ideologies and Beliefs",
       "weight": "10-15%",
       "topics": [
         "American Political Culture",
@@ -1241,7 +1241,7 @@ const GLOSSARY_UNITS = [
     }
   },
   {
-    key: 'unit2', label: 'Unit 2: Interactions Among Branches', weight: '25-36%',
+    key: 'unit2', label: 'Unit 2: Interactions Among Branches of Government', weight: '25-36%',
     groups: {
       'Congress': [
         ['Bicameral Legislature','A legislature with two houses, such as the U.S. Congress.',['2.1']],

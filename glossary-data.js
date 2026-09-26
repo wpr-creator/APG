@@ -710,7 +710,7 @@ window.APG_GLOSSARY_UNITS = [
   },
   {
     "key": "unit2",
-    "label": "Unit 2: Interactions Among Branches",
+    "label": "Unit 2: Interactions Among Branches of Government",
     "weight": "25-36%",
     "groups": {
       "Congress": [
