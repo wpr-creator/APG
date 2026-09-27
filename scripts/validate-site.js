@@ -282,12 +282,12 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260926-nav-page-spacing',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260926-parchment-paper',
-    'course-data.js?v=20260926-ap-unit-titles',
-    'glossary-data.js?v=20260926-ap-unit-titles',
+    'course-data.js?v=20260926-glossary-audit',
+    'glossary-data.js?v=20260926-glossary-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260926-no-duplicate-course-label',
+    'app.js?v=20260926-glossary-audit',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -450,6 +450,19 @@ function validateSharedCourseExperience() {
     }, 0);
   }, 0);
   if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
+  const glossaryAllEntries = glossaryUnits.flatMap(function (unit) { return Object.values(unit.groups).flat(); });
+  const wealthEntry = glossaryAllEntries.find(function (entry) { return entry[0] === 'The Wealth of Nations'; });
+  if (!wealthEntry || wealthEntry[1] !== 'Adam Smith argues that self-interest and competition can organize economic activity through free markets, with limited government interference.') {
+    errors.push('The Wealth of Nations glossary entry must use its document title and a concise student-facing definition.');
+  }
+  if (glossaryAllEntries.some(function (entry) { return entry[0] === 'Adam Smith / The Wealth of Nations'; })) {
+    errors.push('The glossary must not file the Wealth of Nations under the author as a slashed compound label.');
+  }
+  if (glossaryAllEntries.some(function (entry) { return /\bEK\s+\d/i.test(entry[1]); })) {
+    errors.push('Student glossary definitions must not expose internal AP framework codes.');
+  }
+  if (!courseData.includes('["Agenda setting", "A",')) errors.push('Agenda setting must use its initial, not a numeric topic marker, as its glossary card symbol.');
+  if (!homepageApp.includes('replace(/^(?:a|an|the)\\s+/i, "")')) errors.push('Glossary terms beginning with an article must sort by the next word.');
   const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));
   const expectedFederalismTerms = {
     'Federalism': 'A system that divides power between the national and state governments.',

@@ -205,7 +205,7 @@ window.COURSE_DATA = {
     ["Interest group", "G", "An organization seeking to influence policy without governing directly.", "An environmental group lobbies Congress.", "gov-5"],
     ["Political action committee", "PAC", "An organization that raises and spends money to influence elections.", "A PAC contributes to candidates who support its issues.", "gov-5"],
     ["Gerrymandering", "⌗", "Drawing districts to advantage a party or group.", "A map may pack opposing voters into a small number of districts.", "gov-5"],
-    ["Agenda setting", "1", "Influencing which political issues receive public attention.", "Heavy news coverage can move an issue onto the public agenda.", "gov-5"],
+    ["Agenda setting", "A", "Influencing which political issues receive public attention.", "Heavy news coverage can move an issue onto the public agenda.", "gov-5"],
     ["Claim", "C", "A defensible answer to a political question.", "A student argues that Congress has the stronger constitutional claim.", "gov-0"],
     ["Evidence", "E", "Specific facts, documents, cases, or data supporting a claim.", "Federalist 51 can support an argument about checks and balances.", "gov-0"],
     ["Reasoning", "R", "The explanation connecting evidence to a claim.", "Reasoning explains why the evidence proves the argument.", "gov-0"]

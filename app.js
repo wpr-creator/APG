@@ -128,7 +128,7 @@
   });
   const glossaryWords = Array.from(glossaryEntries.values())
     .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units)])
-    .sort((left, right) => left[0].localeCompare(right[0]));
+    .sort((left, right) => left[0].replace(/^(?:a|an|the)\s+/i, "").localeCompare(right[0].replace(/^(?:a|an|the)\s+/i, ""), "en", { sensitivity: "base" }));
 
   function showView(name) {
     const isUnit = data.units.some(unit => unit.id === name);
