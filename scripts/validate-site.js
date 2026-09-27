@@ -283,7 +283,7 @@ function validateSharedCourseExperience() {
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260926-parchment-paper',
     'course-data.js?v=20260926-glossary-audit',
-    'glossary-data.js?v=20260926-glossary-audit',
+    'glossary-data.js?v=20260926-glossary-cleanup',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -458,9 +458,21 @@ function validateSharedCourseExperience() {
   if (glossaryAllEntries.some(function (entry) { return entry[0] === 'Adam Smith / The Wealth of Nations'; })) {
     errors.push('The glossary must not file the Wealth of Nations under the author as a slashed compound label.');
   }
-  if (glossaryAllEntries.some(function (entry) { return /\bEK\s+\d/i.test(entry[1]); })) {
-    errors.push('Student glossary definitions must not expose internal AP framework codes.');
+  if (glossaryAllEntries.some(function (entry) { return /\b(?:EK|LO)\s+\d/i.test(entry[1]); })) {
+    errors.push('Student glossary definitions must not expose AP framework or learning-objective codes.');
   }
+  const dataCoreSource = fs.readFileSync(path.join(root, 'data-core.js'), 'utf8');
+  const legacyGlossaryStart = dataCoreSource.indexOf('const GLOSSARY_UNITS = [');
+  const legacyGlossaryEnd = dataCoreSource.indexOf('\n];', legacyGlossaryStart);
+  if (legacyGlossaryStart < 0 || legacyGlossaryEnd < 0) {
+    errors.push('The AP study-tools glossary data could not be located for audit.');
+  } else {
+    const legacyGlossary = dataCoreSource.slice(legacyGlossaryStart, legacyGlossaryEnd);
+    if (/\b(?:EK|LO)\s+\d/i.test(legacyGlossary)) errors.push('AP study-tools glossary definitions must not expose framework codes.');
+    if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
+  }
+  const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
+  if (!apTools.includes('data-core.js?v=20260926-glossary-cleanup')) errors.push('AP study-tools page must refresh its updated glossary data.');
   if (!courseData.includes('["Agenda setting", "A",')) errors.push('Agenda setting must use its initial, not a numeric topic marker, as its glossary card symbol.');
   if (!homepageApp.includes('replace(/^(?:a|an|the)\\s+/i, "")')) errors.push('Glossary terms beginning with an article must sort by the next word.');
   const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));

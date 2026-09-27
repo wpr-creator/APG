@@ -205,7 +205,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "The Gettysburg Address",
-          "A speech delivered by Abraham Lincoln during the Civil War that reaffirmed equality and popular sovereignty as defining foundations of democracy. Required foundational document per LO 1.1.A.",
+          "A speech Abraham Lincoln delivered during the Civil War, reaffirming equality and popular sovereignty as foundations of democracy.",
           [
             "1.1"
           ]

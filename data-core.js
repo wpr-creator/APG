@@ -1173,7 +1173,7 @@ const GLOSSARY_UNITS = [
         ['Compromise on Importation','Agreement at the Constitutional Convention that Congress could not restrict the slave trade until 1808.',['1.3']],
       ],
       'Founding Principles and Documents': [
-        ['Popular Sovereignty','The idea that the government\'s right to rule comes from the people. Reaffirmed in the Gettysburg Address (EK 1.1.A.3) and foundational to both the Declaration of Independence and the Constitution.',['1.1']],
+        ['Popular Sovereignty','The idea that the government\'s right to rule comes from the people. The Declaration of Independence, the Constitution, and the Gettysburg Address all reflect this principle.',['1.1']],
         ['Rule of Law','The principle that no one, including public officials, is above the law.',['1.1']],
         ['Democracy','A system of government where power is held by the people.',['1.1']],
         ['Republic','A government ruled by representatives of the people.',['1.1']],
@@ -1183,8 +1183,8 @@ const GLOSSARY_UNITS = [
         ['Federalist No. 10','An essay by Madison arguing that the dangers of faction can be mitigated by a large republic and republican government.',['1.3']],
         ['Federalist No. 51','An essay by Madison arguing that separation of powers and federalism will prevent tyranny.',['1.4']],
         ['Federalist Papers','A series of eighty-five essays by Hamilton, Madison, and Jay published 1787-1788 that lay out the theory behind the Constitution.',['1.3']],
-        ['The Gettysburg Address','A speech delivered by Abraham Lincoln during the Civil War that reaffirmed equality and popular sovereignty as defining foundations of democracy. Required foundational document per LO 1.1.A.',['1.1']],
-        ['Federalist No. 39','Essay by James Madison explaining that the U.S. Constitution combines national and state features to limit concentration of power while allowing multiple access points for political participation. Ties to EK 1.7.A.1.',['1.7']],
+        ['The Gettysburg Address','A speech Abraham Lincoln delivered during the Civil War, reaffirming equality and popular sovereignty as foundations of democracy.',['1.1']],
+        ['Federalist No. 39','Madison explains that the Constitution creates a government that is partly national and partly federal, with multiple places for people to influence policy.',['1.7']],
         ['Brutus No. 1','An Anti-Federalist paper arguing the country was too large to be governed as a republic and the Constitution gave too much power to the national government.',['1.3']],
         ['Federalist','Supporter of the proposed Constitution who called for a strong national government.',['1.3']],
         ['Anti-Federalists','A person opposed to the proposed Constitution who favored stronger state governments.',['1.3']],
@@ -1418,7 +1418,7 @@ const GLOSSARY_UNITS = [
         ['Common-Law Right','A right of the people rooted in legal tradition and past court rulings, rather than the Constitution.',['3.3']],
       ],
       'Civil Rights and Equal Protection': [
-        ['Emancipation Proclamation','An executive order issued by President Lincoln in 1863 that freed enslaved people in the states in rebellion. The subsequent ratification of the Thirteenth Amendment permanently abolished slavery and marked a shift toward civil rights for the formerly enslaved. Required foundational document per EK 3.12.A.1.',['3.12']],
+        ['Emancipation Proclamation','Lincoln\'s 1863 order declared enslaved people free in areas rebelling against the United States. It did not end slavery everywhere; the Thirteenth Amendment abolished slavery nationwide in 1865.',['3.12']],
         ['Civil Rights','Protections from discrimination as a member of a particular group.',['3.4']],
         ['Equal Protection Clause','A clause of the Fourteenth Amendment that requires the states to treat all citizens alike with regard to application of the laws.',['3.4']],
         ['Fourteenth Amendment','Constitutional amendment granting citizenship to persons born in the United States and prohibiting states from denying due process or equal protection.',['3.4']],
@@ -1459,7 +1459,7 @@ const GLOSSARY_UNITS = [
     groups: {
       'Political Ideology': [
         ['Political Ideology','An individual\'s coherent set of beliefs about government and politics.',['4.1']],
-        ['Free Enterprise','The pursuit of self-interest, competition, efficient allocation of resources, and limited government regulation of the market; espoused by Adam Smith in The Wealth of Nations. One of four core American values per EK 4.1.A.1.',['4.1']],
+        ['Free Enterprise','The belief that people and businesses should be free to make economic choices, with competition and limited government regulation shaping the market.',['4.1']],
         ['American Political Culture','The set of beliefs, customs, traditions, and values that Americans share.',['4.1']],
         ['Conservatism','An ideology favoring more regulation of social behavior and less government interference in the economy.',['4.1']],
         ['Liberalism','An ideology favoring less government control over social behavior and greater regulation of the economy.',['4.1']],
@@ -1513,8 +1513,8 @@ const GLOSSARY_UNITS = [
         ['Bandwagon Effect','Increased media coverage of candidates who poll high.',['4.3']],
       ],
       'Economic Ideology and Policy': [
-        ['Adam Smith / The Wealth of Nations','Adam Smith\'s foundational economic text arguing for free markets, competition, and limited government interference. Core Principles from The Wealth of Nations are a required AP Gov foundational document per EK 4.1.A.1.',['4.4']],
-        ['Equality of Opportunity','The belief that all people are given an equal chance to compete; one of four core American values per EK 4.1.A.1.',['4.1']],
+        ['The Wealth of Nations','Adam Smith argues that self-interest and competition can organize economic activity through free markets, with limited government interference.',['4.4']],
+        ['Equality of Opportunity','The belief that everyone should have a fair chance to succeed, even though people may have different outcomes.',['4.1']],
         ['Fiscal Policy','Government use of taxes and spending to attempt to lower unemployment, support economic activity, and stabilize the economy.',['4.4']],
         ['Monetary Policy','A set of economic policy tools designed to regulate the amount of money in the economy.',['4.4']],
         ['Keynesian Economics','An economic policy based on the idea that economic growth is closely tied to the ability of individuals to consume goods.',['4.4']],
