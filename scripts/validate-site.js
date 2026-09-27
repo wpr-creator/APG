@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20260926-compact-units-index',
+    'styles.css?v=20260926-nav-page-spacing',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260926-parchment-paper',
     'course-data.js?v=20260926-ap-unit-titles',
