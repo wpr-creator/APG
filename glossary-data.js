@@ -35,16 +35,10 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Articles of Confederation",
-          "The first basis for the new nation's government; adopted in 1781; created an alliance of sovereign states held together by a weak central government.",
+          "The first U.S. constitution, in effect from 1781 to 1789. Also formally called the Articles of Confederation and Perpetual Union, it created a weak national government and left most power with the states.",
           [
+            "1.2",
             "1.3"
-          ]
-        ],
-        [
-          "Articles of Confederation and Perpetual Union",
-          "A governing document that created a union of thirteen sovereign states in which the states, not the union, were supreme.",
-          [
-            "1.2"
           ]
         ],
         [
@@ -1463,10 +1457,11 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Amicus Curiae",
-          "Literally a \"friend of the court\"; a brief filed by someone interested in but not party to a case.",
+          "Amicus Curiae Brief",
+          "A \"friend of the court\" brief filed by a person or organization that is not a party to a case, offering information or an argument for the court to consider.",
           [
-            "2.5"
+            "2.5",
+            "5.3"
           ]
         ],
         [
@@ -3143,13 +3138,6 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Free Rider Problem",
           "The situation that occurs when some individuals receive benefits without helping to bear the cost.",
-          [
-            "5.3"
-          ]
-        ],
-        [
-          "Amicus Curiae Brief",
-          "A brief filed by someone who is not a party to a case in an attempt to persuade the court.",
           [
             "5.3"
           ]

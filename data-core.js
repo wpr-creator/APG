@@ -1157,8 +1157,7 @@ const GLOSSARY_UNITS = [
     key: 'unit1', label: 'Unit 1: Foundations of American Democracy', weight: '15-22%',
     groups: {
       'Constitutional Foundations': [
-        ['Articles of Confederation','The first basis for the new nation\'s government; adopted in 1781; created an alliance of sovereign states held together by a weak central government.',['1.3']],
-        ['Articles of Confederation and Perpetual Union','A governing document that created a union of thirteen sovereign states in which the states, not the union, were supreme.',['1.2']],
+        ['Articles of Confederation','The first U.S. constitution, in effect from 1781 to 1789. Also formally called the Articles of Confederation and Perpetual Union, it created a weak national government and left most power with the states.',['1.2','1.3']],
         ['Constitutional Convention','A meeting attended by state delegates in 1787 to fix the Articles of Confederation.',['1.3']],
         ['Constitution','A document that sets out the fundamental principles of governance and establishes the institutions of a government.',['1.3']],
         ['Constitutional Republic','A democratic system with elected representatives in which the constitution is the supreme law.',['1.3']],
@@ -1356,7 +1355,7 @@ const GLOSSARY_UNITS = [
         ['Concurring Opinion','An opinion that agrees with the majority decision but offers different reasoning; does not serve as precedent.',['2.5']],
         ['Dissenting Opinion','An opinion that disagrees with the majority opinion and does not serve as precedent.',['2.5']],
         ['Standing','The legal ability to bring a case in court.',['2.5']],
-        ['Amicus Curiae','Literally a "friend of the court"; a brief filed by someone interested in but not party to a case.',['2.5']],
+        ['Amicus Curiae Brief','A "friend of the court" brief filed by a person or organization that is not a party to a case, offering information or an argument for the court to consider.',['2.5','5.3']],
         ['Senatorial Courtesy','An unwritten custom by which the president consults senators in the state before nominating a federal court candidate.',['2.5']],
         ['Federalist No. 78','Argument by Hamilton that the federal judiciary would serve as a check on the other two branches.',['2.8']],
         ['Solicitor General','The lawyer who represents the federal government and argues cases before the Supreme Court.',['2.5']],
@@ -1631,7 +1630,6 @@ const GLOSSARY_UNITS = [
         ['Disturbance Theory','The theory that an external event can lead to interest group mobilization.',['5.3']],
         ['Free Rider','Individual who enjoys collective goods and benefits from the actions of an interest group without joining.',['5.3']],
         ['Free Rider Problem','The situation that occurs when some individuals receive benefits without helping to bear the cost.',['5.3']],
-        ['Amicus Curiae Brief','A brief filed by someone who is not a party to a case in an attempt to persuade the court.',['5.3']],
         ['Social Movement','Large groups of citizens organizing for political change.',['5.3']],
         ['Collective Action','Political action that occurs when individuals contribute their energy, time, or money to a larger group goal.',['5.3']],
         ['Single-Issue Group','Association focusing on one specific area of public policy, often a moral issue about which they are unwilling to compromise.',['5.3']],

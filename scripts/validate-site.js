@@ -282,8 +282,8 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260926-nav-page-spacing',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260926-parchment-paper',
-    'course-data.js?v=20260926-glossary-audit',
-    'glossary-data.js?v=20260926-glossary-cleanup',
+    'course-data.js?v=20260927-glossary-dedup',
+    'glossary-data.js?v=20260927-glossary-dedup',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -458,21 +458,36 @@ function validateSharedCourseExperience() {
   if (glossaryAllEntries.some(function (entry) { return entry[0] === 'Adam Smith / The Wealth of Nations'; })) {
     errors.push('The glossary must not file the Wealth of Nations under the author as a slashed compound label.');
   }
+  const articlesEntries = glossaryAllEntries.filter(function (entry) { return /^articles of confederation(?: and perpetual union)?$/i.test(entry[0]); });
+  if (articlesEntries.length !== 1 || articlesEntries[0][0] !== 'Articles of Confederation' || !articlesEntries[0][1].includes('Articles of Confederation and Perpetual Union') || !articlesEntries[0][2].includes('1.2') || !articlesEntries[0][2].includes('1.3')) {
+    errors.push('The Articles of Confederation glossary entry must combine its formal title and preserve both topic references.');
+  }
+  const amicusEntries = glossaryAllEntries.filter(function (entry) { return /^amicus curiae(?: brief)?$/i.test(entry[0]); });
+  if (amicusEntries.length !== 1 || amicusEntries[0][0] !== 'Amicus Curiae Brief' || !amicusEntries[0][1].includes('friend of the court') || !amicusEntries[0][2].includes('2.5') || !amicusEntries[0][2].includes('5.3')) {
+    errors.push('Amicus Curiae must appear as one glossary entry with both topic references.');
+  }
   if (glossaryAllEntries.some(function (entry) { return /\b(?:EK|LO)\s+\d/i.test(entry[1]); })) {
     errors.push('Student glossary definitions must not expose AP framework or learning-objective codes.');
   }
   const dataCoreSource = fs.readFileSync(path.join(root, 'data-core.js'), 'utf8');
   const legacyGlossaryStart = dataCoreSource.indexOf('const GLOSSARY_UNITS = [');
   const legacyGlossaryEnd = dataCoreSource.indexOf('\n];', legacyGlossaryStart);
+  let legacyGlossary = '';
   if (legacyGlossaryStart < 0 || legacyGlossaryEnd < 0) {
     errors.push('The AP study-tools glossary data could not be located for audit.');
   } else {
-    const legacyGlossary = dataCoreSource.slice(legacyGlossaryStart, legacyGlossaryEnd);
+    legacyGlossary = dataCoreSource.slice(legacyGlossaryStart, legacyGlossaryEnd);
     if (/\b(?:EK|LO)\s+\d/i.test(legacyGlossary)) errors.push('AP study-tools glossary definitions must not expose framework codes.');
     if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
-  if (!apTools.includes('data-core.js?v=20260926-glossary-cleanup')) errors.push('AP study-tools page must refresh its updated glossary data.');
+  if (!apTools.includes('data-core.js?v=20260927-glossary-dedup')) errors.push('AP study-tools page must refresh its updated glossary data.');
+  if ((legacyGlossary.match(/\['Articles of Confederation(?: and Perpetual Union)?'/g) || []).length !== 1 || (legacyGlossary.match(/\['Amicus Curiae(?: Brief)?'/g) || []).length !== 1) {
+    errors.push('AP study-tools glossary must use the combined Articles and Amicus Curiae entries.');
+  }
+  if (!courseData.includes('["Political Action Committee (PAC)", "PAC"') || courseData.includes('["Political action committee", "PAC"')) {
+    errors.push('The site glossary must combine the political action committee title and acronym.');
+  }
   if (!courseData.includes('["Agenda setting", "A",')) errors.push('Agenda setting must use its initial, not a numeric topic marker, as its glossary card symbol.');
   if (!homepageApp.includes('replace(/^(?:a|an|the)\\s+/i, "")')) errors.push('Glossary terms beginning with an article must sort by the next word.');
   const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));
