@@ -49,27 +49,17 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
   pointer-events: none;
   overflow: hidden;
   background:
-    radial-gradient(circle at 14% 18%, rgba(163, 38, 56, .14) 0 5px, transparent 6px),
-    radial-gradient(circle at 84% 34%, rgba(23, 79, 133, .16) 0 6px, transparent 7px),
-    linear-gradient(115deg, transparent 0 46%, rgba(255, 253, 248, .72) 47% 53%, transparent 54%),
-    repeating-linear-gradient(90deg, rgba(23, 79, 133, .055) 0 1px, transparent 1px 88px),
-    repeating-linear-gradient(0deg, rgba(163, 38, 56, .045) 0 1px, transparent 1px 88px);
-  background-size: 240px 240px, 310px 310px, 180% 180%, 88px 88px, 88px 88px;
-  animation: civic-background-drift 28s linear infinite alternate;
+    radial-gradient(ellipse at 22% 24%, rgba(166, 130, 83, .08), transparent 54%),
+    radial-gradient(ellipse at 78% 72%, rgba(255, 255, 255, .32), transparent 58%),
+    linear-gradient(125deg, rgba(116, 86, 51, .025), transparent 62%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.11'/%3E%3C/svg%3E");
+  background-size: 165% 165%, 175% 175%, 180% 180%, 220px 220px;
+  background-position: 0% 0%, 100% 100%, 0% 50%, center;
+  background-repeat: no-repeat, no-repeat, no-repeat, repeat;
+  animation: civic-background-drift 48s ease-in-out infinite alternate;
 }
 .home-dynamic-background::after {
-  content: "★  WE THE PEOPLE  ★  LIBERTY  ★  JUSTICE  ★  DEMOCRACY  ★";
-  position: absolute;
-  top: 18%;
-  left: -8%;
-  width: 116%;
-  color: rgba(24, 40, 56, .035);
-  font-size: clamp(3.8rem, 9vw, 9rem);
-  font-weight: 950;
-  line-height: 1.7;
-  letter-spacing: .06em;
-  transform: rotate(-8deg);
-  white-space: normal;
+  display: none;
 }
 /* Editorial homepage: an open, print-inspired cover and field guide. */
 #home { color: #182838; }
@@ -309,7 +299,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .exit-ticket-success { width: min(680px, 100%); margin: 1rem auto .35rem; animation: ticket-arrives .45s cubic-bezier(.2,.8,.2,1) both; }
 .exit-ticket-success img { width: 100%; height: auto; display: block; }
 @keyframes ticket-arrives { from { opacity: 0; transform: translateY(14px) rotate(-1deg) scale(.96); } to { opacity: 1; transform: none; } }
-@keyframes civic-background-drift { from { background-position: 0 0, 0 0, 0 0, 0 0, 0 0; } to { background-position: 80px 45px, -55px 70px, 100% 100%, 44px 22px, -22px 44px; } }
+@keyframes civic-background-drift { from { background-position: 0% 0%, 100% 100%, 0% 50%, center; } to { background-position: 100% 72%, 4% 18%, 100% 55%, center; } }
 @media (max-width: 620px) { .exit-identity { grid-template-columns: 1fr; } .exit-prompt { grid-template-columns: 76px minmax(0, 1fr); border-radius: 12px; } .exit-page-number { display: none; } }
 @media (prefers-reduced-motion: reduce) { .exit-ticket-success { animation: none; } }
 

@@ -274,14 +274,14 @@ function validateSharedCourseExperience() {
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
-    if (!html.includes('href="' + stylesheet + '?v=20260926-shared-type-system"')) {
+    if (!html.includes('href="' + stylesheet + '?v=20260926-parchment-paper"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
     }
   });
   [
-    'styles.css?v=20260926-editorial-typography',
+    'styles.css?v=20260926-parchment-paper',
     'course-shell.css?v=20260926-editorial-typography',
-    'styles-design-system.css?v=20260926-shared-type-system',
+    'styles-design-system.css?v=20260926-parchment-paper',
     'course-data.js?v=20260926-ap-unit-titles',
     'glossary-data.js?v=20260926-ap-unit-titles',
     'foundations-data.js?v=20260909-madison-brutus',
@@ -318,7 +318,7 @@ function validateSharedCourseExperience() {
       !homepage.includes('class="featured-document" href="docs/letter-birmingham-jail.html"') ||
       !homepage.includes('href="#foundations">ALL 14') ||
       !homepage.includes('id="current-question"') ||
-      homepage.includes('class="home-dynamic-background"')) {
+      !homepage.includes('class="home-dynamic-background"')) {
     errors.push('The homepage must use the civic-magazine hero with its current-unit question and featured primary-source documents.');
   }
   if (homepage.includes('featured-document-previous') || homepage.includes('featured-document-next') ||
