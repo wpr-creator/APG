@@ -33,3 +33,6 @@ jobs:
 
       - name: Test History Lesson teaching structure
         run: node scripts/test-history-reader.js
+
+      - name: Test reading progress indicator
+        run: node scripts/test-reading-progress.js

@@ -1265,6 +1265,21 @@ function validateSharedCourseExperience() {
       errors.push('Required guide cannot load its AP Addendum Summary: ' + relative(file));
     }
   });
+  const readingProgressCSS = fs.readFileSync(path.join(root, 'reading-progress.css'), 'utf8');
+  const readingProgressJS = fs.readFileSync(path.join(root, 'reading-progress.js'), 'utf8');
+  if (!readingProgressCSS.includes('.reading-progress__fill') ||
+      !readingProgressCSS.includes('prefers-reduced-motion') ||
+      !readingProgressJS.includes('.case-page, .doc-page, .reader, .page-main') ||
+      !readingProgressJS.includes('requestAnimationFrame')) {
+    errors.push('The shared reading progress indicator is missing its page targeting, animation-frame update, or reduced-motion styling.');
+  }
+  REQUIRED_SUMMARY_FILES.forEach(function (file) {
+    const page = fs.readFileSync(file, 'utf8');
+    if (!page.includes('reading-progress.css?v=20260929-slim-reading-line') ||
+        !page.includes('reading-progress.js?v=20260929-slim-reading-line')) {
+      errors.push('Required document or case is missing the reading progress indicator: ' + relative(file));
+    }
+  });
   const documentReaderStyles = fs.readFileSync(path.join(root, 'styles-document-reader.css'), 'utf8');
   fs.readdirSync(path.join(root, 'docs')).filter(function (file) {
     return file.endsWith('.html') && file !== 'ARCHITECTURE.html';
