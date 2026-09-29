@@ -1249,20 +1249,21 @@ function validateSharedCourseExperience() {
       !fs.existsSync(path.join(root, 'docs', 'bill-of-rights.html'))) {
     errors.push('The AP Addendum foundational-document list must include a dedicated Bill of Rights guide.');
   }
-  if (!navCode.includes('addAddendumSummary') || !navCode.includes('AP ADDENDUM SUMMARY')) {
-    errors.push('Required documents and cases must receive the shared AP Addendum Summary panel.');
+  if (navCode.includes('addAddendumSummary') || navCode.includes('AP ADDENDUM SUMMARY')) {
+    errors.push('Retired AP Addendum Summary panels must not return to document and case pages.');
   }
-  if (!navCode.includes("document.querySelector(doc ? '.doc-hero, .page-hero, .document-hero' : '.case-hero')")) {
-    errors.push('AP Addendum summaries must support both document hero layouts.');
-  }
-  const REQUIRED_SUMMARY_FILES = [
+  const REQUIRED_GUIDE_FILES = [
     ...fs.readdirSync(path.join(root, 'docs')).filter(function (file) { return file.endsWith('.html') && file !== 'ARCHITECTURE.html'; }).map(function (file) { return path.join(root, 'docs', file); }),
     ...fs.readdirSync(path.join(root, 'cases')).filter(function (file) { return file.endsWith('.html'); }).map(function (file) { return path.join(root, 'cases', file); })
   ];
-  REQUIRED_SUMMARY_FILES.forEach(function (file) {
+  REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
-    if (!page.includes('data-required.js') || !page.includes('nav-render.js')) {
-      errors.push('Required guide cannot load its AP Addendum Summary: ' + relative(file));
+    if (!page.includes('nav-render.js?v=20260929-clean-guides') ||
+        !page.includes('course-shell.js?v=20260929-clean-guides')) {
+      errors.push('Document or case cannot load shared course navigation: ' + relative(file));
+    }
+    if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"/.test(page)) {
+      errors.push('Document or case contains retired summary panels, redundant hero tags, or reader instructions: ' + relative(file));
     }
   });
   const readingProgressCSS = fs.readFileSync(path.join(root, 'reading-progress.css'), 'utf8');
@@ -1273,7 +1274,7 @@ function validateSharedCourseExperience() {
       !readingProgressJS.includes('requestAnimationFrame')) {
     errors.push('The shared reading progress indicator is missing its page targeting, animation-frame update, or reduced-motion styling.');
   }
-  REQUIRED_SUMMARY_FILES.forEach(function (file) {
+  REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
     if (!page.includes('reading-progress.css?v=20260929-slim-reading-line') ||
         !page.includes('reading-progress.js?v=20260929-slim-reading-line')) {
@@ -1287,21 +1288,24 @@ function validateSharedCourseExperience() {
     const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
     const newReaderFiles = ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'];
     const readerLink = newReaderFiles.includes(file)
-      ? 'document-reader.css?v=20260823-apg-reader'
-      : 'styles-document-reader.css?v=20260819-student-reader';
+      ? 'document-reader.css?v=20260929-reader-cleanup'
+      : 'styles-document-reader.css?v=20260929-guide-cleanup';
     if (!page.includes(readerLink) || page.indexOf(readerLink) > page.indexOf('</head>')) {
       errors.push('Document does not load the student reader inside its head: docs/' + file);
     }
   });
   const newDocumentReaderStyles = fs.readFileSync(path.join(root, 'docs', 'document-reader.css'), 'utf8');
-  ['.course-shell', '.document-hero', '.passage', '.original', '.support', '.highlight', '.addendum-summary'].forEach(function (selector) {
+  ['.course-shell', '.document-hero', '.passage', '.original', '.support', '.highlight'].forEach(function (selector) {
     if (!newDocumentReaderStyles.includes(selector)) errors.push('New Unit 1 reader style changed or missing: ' + selector);
+  });
+  ['.reader-header', '.reading-path', '.addendum-summary'].forEach(function (selector) {
+    if (newDocumentReaderStyles.includes(selector)) errors.push('Unneeded document-reader layout remains: ' + selector);
   });
   ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'].forEach(function (file) {
     const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
     if (!page.includes('class="course-shell"') || !page.includes('AP UNITED STATES GOVERNMENT') ||
-        !page.includes('AP ADDENDUM SUMMARY') && !page.includes('addAddendumSummary(')) {
-      errors.push('Unit 1 reader is missing its AP-wide shell or concise summary: docs/' + file);
+        !page.includes('document-end') || page.includes('reader-header') || page.includes('reading-path')) {
+      errors.push('Unit 1 reader is missing its course shell or retains redundant reader furniture: docs/' + file);
     }
   });
   ['.doc-passage-text', '.doc-paragraph-text', '.doc-margin', '.doc-annotation', '.highlight-key', '.doc-nav', '.doc-rail'].forEach(function (selector) {

@@ -20,7 +20,7 @@ class Element {
   matches(selector) { return selector.split(",").some(s => s.trim() === this.tag || s.trim() === "." + this.className); }
   querySelector() { return this.brand || null; }
 }
-function runShell({ saved, homepage = false } = {}) {
+function runShell({ saved, homepage = false, readingPage = false } = {}) {
   const body = new Element("body");
   const oldHeader = new Element("header"); oldHeader.className = "course-header";
   const lessonHero = new Element("header"); lessonHero.className = "section-hero";
@@ -32,7 +32,11 @@ function runShell({ saved, homepage = false } = {}) {
     currentScript: { src: "https://example.test/APG/course-shell.js" }, body,
     addEventListener: (event, fn) => { if (event === "DOMContentLoaded") fn(); },
     createElement: tag => new Element(tag),
-    querySelector: () => homepage ? mainHeader : null,
+    querySelector: selector => {
+      if (selector === ".site-header") return homepage ? mainHeader : null;
+      if (selector === ".case-page, .doc-page, .reader, .page-main") return readingPage ? new Element() : null;
+      return null;
+    },
     querySelectorAll: selector => selector === 'a[target="_blank"]' ? [internal, external] : selector === "a[href]" ? [back] : [oldHeader, lessonHero]
   };
   vm.runInNewContext(shell, { document, URL, location: { href: "https://example.test/APG/democracy-filtered.html", pathname: "/APG/democracy-filtered.html" }, sessionStorage: { getItem: () => JSON.stringify(saved || null) } });
@@ -45,12 +49,17 @@ function runShell({ saved, homepage = false } = {}) {
   assert.deepEqual(nav.children.map(a => a.textContent), ["HOME", "UNITS", "FOUNDATIONS", "GLOSSARY", "EXIT TICKET"]);
   button.events.click(); assert.equal(button.getAttribute("aria-expanded"), "true"); assert(nav.classes.has("is-open"));
   header.events.keydown({ key: "Escape" }); assert.equal(button.getAttribute("aria-expanded"), "false"); assert(!nav.classes.has("is-open")); assert(button.focused);
+  if (readingPage) {
+    assert.equal(header.afterNode, undefined, "Reading pages should use the persistent course menu instead of a duplicate return button.");
+    return;
+  }
   return header.afterNode.href;
 }
 assert.equal(runShell(), "https://example.test/APG/#gov-1");
 assert.equal(runShell({ saved: { destination: "/APG/democracy-filtered.html", unit: "gov-1", lesson: "lesson-u1-102-democracy-filtered" } }), "https://example.test/APG/?lesson=lesson-u1-102-democracy-filtered#gov-1");
 assert.equal(runShell({ saved: { destination: "/APG/other.html", unit: "gov-0", lesson: "unrelated" } }), "https://example.test/APG/#gov-1");
 runShell({ homepage: true });
+runShell({ readingPage: true });
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
 const cards = ["election-tracker-card", "history-card", "course-links-card", "test-corrections-card"].map(c => html.indexOf(c));
 assert(cards.every((position, i) => position >= 0 && (!i || position > cards[i - 1])), "Reading order must match visual priority");
@@ -68,4 +77,4 @@ vm.runInNewContext(app.slice(start, end), { document: { getElementById: id => el
 assert.equal(elements["current-lesson-action"].hidden, true);
 assert.equal(elements["current-lesson-action"].href, undefined);
 assert.equal(elements["current-lesson-action"].textContent, "");
-console.log("Course navigation tests passed: shared headers, retained heroes, menu toggle/Escape, return links, tab behavior, homepage order, and Unit-only homepage action.");
+console.log("Course navigation tests passed: shared headers, menu toggle/Escape, reading-page return links, tab behavior, homepage order, and Unit-only homepage action.");

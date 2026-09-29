@@ -7,7 +7,6 @@
 //
 // HOW A PAGE USES THIS (once wired in):
 //   <div id="app-nav"></div>
-//   <script src="data-required.js"></script>      <!-- adjust ../ as needed -->
 //   <script src="nav-render.js"></script>
 //   <script>renderNav({ mountId: "app-nav", currentFile: "unit2-docs.html", basePath: "" })</script>
 //
@@ -55,44 +54,7 @@ function renderNav(opts) {
   }
 
   addStandaloneSkipLink();
-  addAddendumSummary((opts && opts.currentFile) || "");
   wireStandaloneNavigation(nav, el);
-}
-
-function addAddendumSummary(currentFile) {
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function () {
-      addAddendumSummary(currentFile);
-    }, { once: true });
-    return;
-  }
-  if (document.querySelector('.addendum-summary')) return;
-
-  const doc = REQUIRED_DOCS.find(function (item) { return item.file === currentFile; });
-  const courtCase = REQUIRED_CASES.find(function (item) { return item.file === currentFile; });
-  const hero = document.querySelector(doc ? '.doc-hero, .page-hero, .document-hero' : '.case-hero');
-  if (!hero || (!doc && !courtCase)) return;
-
-  const section = document.createElement('section');
-  section.className = 'addendum-summary';
-  section.setAttribute('aria-labelledby', 'addendum-summary-title');
-
-  if (doc) {
-    section.innerHTML =
-      '<div class="addendum-summary-label" id="addendum-summary-title">AP ADDENDUM SUMMARY</div>' +
-      '<div class="addendum-summary-grid addendum-summary-grid-single">' +
-        '<div><strong>MAIN IDEA / WHY IT MATTERS</strong><p>' + doc.blurb + '</p></div>' +
-      '</div>';
-  } else {
-    section.innerHTML =
-      '<div class="addendum-summary-label" id="addendum-summary-title">AP ADDENDUM SUMMARY</div>' +
-      '<div class="addendum-summary-grid">' +
-        '<div><strong>WHAT WAS THE CASE ABOUT?</strong><p>' + courtCase.question + '</p></div>' +
-        '<div><strong>WHAT DID THE COURT RULE?</strong><p>' + courtCase.holding + '</p></div>' +
-      '</div>';
-  }
-
-  hero.insertAdjacentElement('afterend', section);
 }
 
 function addStandaloneSkipLink() {

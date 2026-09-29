@@ -62,7 +62,8 @@
     header.append(brand, button, nav); document.body.prepend(header);
     const skip = document.querySelector(".skip-link");
     if (skip) document.body.prepend(skip);
-    {
+    const readingPage = document.querySelector(".case-page, .doc-page, .reader, .page-main");
+    if (!readingPage) {
       const back = document.createElement("a"); back.className = "apg-return-link";
       back.textContent = unit ? "← BACK TO UNIT " + unit.slice(-1) + (lesson ? " · YOUR LESSON" : "") : "← BACK TO UNITS";
       back.href = root.href + (lesson ? "?lesson=" + encodeURIComponent(lesson) : "") + "#" + (unit || "units");
