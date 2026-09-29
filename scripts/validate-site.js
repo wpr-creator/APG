@@ -1262,8 +1262,15 @@ function validateSharedCourseExperience() {
         !page.includes('course-shell.js?v=20260929-clean-guides')) {
       errors.push('Document or case cannot load shared course navigation: ' + relative(file));
     }
-    if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"/.test(page)) {
-      errors.push('Document or case contains retired summary panels, redundant hero tags, or reader instructions: ' + relative(file));
+    if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"|doc-margin-tag|doc-annotation-tags|doc-annotation-tag/.test(page)) {
+      errors.push('Document or case contains retired summary panels, redundant tags, or reader instructions: ' + relative(file));
+    }
+    if (/\bEK\s+\d(?:\.\w+)+|AP Standard|AP Topics/.test(page)) {
+      errors.push('Document or case exposes course framework codes that clutter student-facing copy: ' + relative(file));
+    }
+    const eyebrow = page.match(/<(?:div|p) class="(?:doc-hero-eyebrow|case-hero-eyebrow|page-hero-eyebrow|eyebrow)"[^>]*>([\s\S]*?)<\/(?:div|p)>/);
+    if (eyebrow && !/^\s*Units?\s+[1-5](?:\s*&amp;?\s*[1-5])?\s*$/i.test(eyebrow[1].replace(/<[^>]*>/g, '').trim())) {
+      errors.push('Document or case eyebrow should show only its unit, not repeated topic or requirement tags: ' + relative(file));
     }
   });
   const readingProgressCSS = fs.readFileSync(path.join(root, 'reading-progress.css'), 'utf8');
