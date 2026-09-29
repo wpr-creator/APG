@@ -28,7 +28,7 @@
   let siteContent = { currentUnit: "gov-0", unitUnlocks: {}, exitQuestion: "", upcoming: [], classroomUrl: "", agendaTitle: "AGENDA", agendaText: "COMING SOON.", assignmentUnlocks: {}, assignmentUrls: {}, assignmentUnlockAt: {} };
   let historyEvents = [];
   let historyIndex = 0;
-  let amendmentFilter = "current";
+  let amendmentFilter = "all";
   let glossaryFilter = "all";
   let glossaryQuery = "";
   let presidentFacts = [];
@@ -821,7 +821,6 @@
   function amendmentMatches(amendment) {
     const number = amendment[0];
     if (amendmentFilter === "all") return true;
-    if (amendmentFilter === "current") return amendment[4].includes(currentUnitId);
     if (amendmentFilter.startsWith("unit:")) return amendment[4].includes(amendmentFilter.slice(5));
     if (amendmentFilter === "rights") return number >= 1 && number <= 10;
     if (amendmentFilter === "voting") return [12, 15, 17, 19, 23, 24, 26].includes(number);
@@ -833,7 +832,7 @@
     filterContainer.replaceChildren();
     const unitFilterId = amendmentFilter.startsWith("unit:") ? amendmentFilter : null;
     const unitFilter = unitFilterId ? data.units.find(unit => unit.id === unitFilterId.slice(5)) : null;
-    const filters = unitFilter ? [[unitFilterId, `${unitFilter.number.toUpperCase()} AMENDMENTS`]] : [["current", "CURRENT UNIT"]];
+    const filters = unitFilter ? [[unitFilterId, `${unitFilter.number.toUpperCase()} AMENDMENTS`]] : [];
     filters.push(["rights", "BILL OF RIGHTS"], ["voting", "VOTING"], ["all", "ALL 27"]);
     filters.forEach(([id, label]) => {
       const button = document.createElement("button");

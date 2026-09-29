@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260926-glossary-audit',
+    'app.js?v=20260929-all-foundations',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -406,6 +406,24 @@ function validateSharedCourseExperience() {
   });
   if (homepage.includes('AP GOVERNMENT WORDS, PLAIN LANGUAGE') || homepage.includes('Short definitions. One clear example.')) {
     errors.push('APG glossary contains retired promotional phrasing.');
+  }
+  const amendmentMatchStart = homepageApp.indexOf('  function amendmentMatches(amendment) {');
+  const amendmentRenderStart = homepageApp.indexOf('  function renderAmendments() {', amendmentMatchStart);
+  const amendmentOrdinalStart = homepageApp.indexOf('  function ordinal(number) {', amendmentRenderStart);
+  const amendmentFilterCode = homepageApp.slice(amendmentMatchStart, amendmentOrdinalStart);
+  const documentRenderStart = homepageApp.indexOf('  function renderDocuments() {');
+  const caseRenderStart = homepageApp.indexOf('  function renderRequiredCases() {', documentRenderStart);
+  const documentRenderCode = homepageApp.slice(documentRenderStart, caseRenderStart);
+  const caseRenderEnd = homepageApp.indexOf('  function openDocument(', caseRenderStart);
+  const caseRenderCode = homepageApp.slice(caseRenderStart, caseRenderEnd);
+  if (!homepageApp.includes('let amendmentFilter = "all";') ||
+      amendmentFilterCode.includes('currentUnitId') || amendmentFilterCode.includes('"current"') ||
+      !amendmentFilterCode.includes('["all", "ALL 27"]') ||
+      documentRenderCode.includes('foundations.documents.filter') ||
+      !documentRenderCode.includes('foundations.documents.forEach') ||
+      caseRenderCode.includes('REQUIRED_CASES || []).filter') ||
+      !caseRenderCode.includes('(window.REQUIRED_CASES || []).forEach')) {
+    errors.push('Foundations must show all documents, required cases, and all amendments by default—not only the current unit.');
   }
   const studentInterface = [
     'index.html',
