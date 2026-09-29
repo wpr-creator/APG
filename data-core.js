@@ -1193,10 +1193,9 @@ const GLOSSARY_UNITS = [
         ['Inalienable Rights','Rights the government cannot take away; foundational to the Declaration of Independence.',['1.1']],
       ],
       'Federalism': [
-        ['Federalism','The sharing of power between the national government and the states.',['1.2']],
-        ['Federal System','A system where power is divided between the national and state governments.',['1.2']],
+        ['Federalism','Federalism, also called a federal system, divides power between the national and state governments.',['1.2','1.7']],
         ['Unitary System','A system where the central government has all of the power over subnational governments.',['1.2']],
-        ['Confedral System','A system where the subnational governments have most of the power.',['1.2']],
+        ['Confederal System','A system in which state or regional governments hold most governing power and the national government is weak.',['1.2']],
         ['Dual Federalism','A form of American federalism in which the states and the nation operate independently in their own areas; "layer cake."',['1.2']],
         ['Cooperative Federalism','A form of American federalism in which the states and the national government work together; "marble cake."',['1.2']],
         ['New Federalism','A style of federalism premised on the idea that decentralization of policies enhances administrative efficiency.',['1.2']],
@@ -1576,8 +1575,7 @@ const GLOSSARY_UNITS = [
       'Elections and Voting': [
         ['Electoral College','A constitutionally required process for selecting the president through slates of electors chosen in each state.',['5.2']],
         ['Winner-Take-All System','A system in which the candidate who wins the plurality of votes within a state receives all of that state\'s Electoral College votes.',['5.2']],
-        ['Franchise (or Suffrage)','The right to vote in political elections.',['5.2']],
-        ['Suffrage','The right to vote in political elections.',['5.2']],
+        ['Suffrage','The right to vote in political elections; also called the franchise.',['5.2']],
         ['Voter Turnout','The number of eligible voters who participate in an election as a percentage of the total number of eligible voters.',['5.2']],
         ['Closed Primary','A primary election in which only those who have registered as a member of a political party may vote.',['5.2']],
         ['Open Primary','A primary election in which all eligible voters may vote, regardless of their party affiliation.',['5.2']],

@@ -264,8 +264,9 @@ window.APG_GLOSSARY_UNITS = [
       "Federalism": [
         [
           "Federalism",
-          "A system that divides power between the national and state governments.",
+          "Federalism, also called a federal system, divides power between the national and state governments.",
           [
+            "1.2",
             "1.7"
           ]
         ],
@@ -298,13 +299,6 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Federal System",
-          "A system where power is divided between the national and state governments.",
-          [
-            "1.2"
-          ]
-        ],
-        [
           "Unitary System",
           "A system where the central government has all of the power over subnational governments.",
           [
@@ -312,8 +306,8 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Confedral System",
-          "A system where the subnational governments have most of the power.",
+          "Confederal System",
+          "A system in which state or regional governments hold most governing power and the national government is weak.",
           [
             "1.2"
           ]
@@ -2777,15 +2771,8 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Franchise (or Suffrage)",
-          "The right to vote in political elections.",
-          [
-            "5.2"
-          ]
-        ],
-        [
           "Suffrage",
-          "The right to vote in political elections.",
+          "The right to vote in political elections; also called the franchise.",
           [
             "5.2"
           ]

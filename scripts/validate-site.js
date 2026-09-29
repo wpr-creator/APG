@@ -282,8 +282,8 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260926-nav-page-spacing',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260926-parchment-paper',
-    'course-data.js?v=20260927-glossary-dedup',
-    'glossary-data.js?v=20260927-glossary-dedup',
+    'course-data.js?v=20260929-glossary-audit',
+    'glossary-data.js?v=20260929-glossary-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
@@ -466,6 +466,17 @@ function validateSharedCourseExperience() {
   if (amicusEntries.length !== 1 || amicusEntries[0][0] !== 'Amicus Curiae Brief' || !amicusEntries[0][1].includes('friend of the court') || !amicusEntries[0][2].includes('2.5') || !amicusEntries[0][2].includes('5.3')) {
     errors.push('Amicus Curiae must appear as one glossary entry with both topic references.');
   }
+  const federalSystemEntries = glossaryAllEntries.filter(function (entry) { return /^federal(?:ism| system)$/i.test(entry[0]); });
+  if (federalSystemEntries.length !== 1 || federalSystemEntries[0][0] !== 'Federalism' || !federalSystemEntries[0][1].includes('federal system') || !federalSystemEntries[0][2].includes('1.2') || !federalSystemEntries[0][2].includes('1.7')) {
+    errors.push('Federalism and Federal System must share one glossary entry with both topic references.');
+  }
+  const suffrageEntries = glossaryAllEntries.filter(function (entry) { return /^(?:franchise \(or suffrage\)|suffrage)$/i.test(entry[0]); });
+  if (suffrageEntries.length !== 1 || suffrageEntries[0][0] !== 'Suffrage' || !suffrageEntries[0][1].includes('franchise')) {
+    errors.push('Franchise and Suffrage must share one glossary entry.');
+  }
+  if (glossaryAllEntries.some(function (entry) { return entry[0] === 'Confedral System'; }) || !glossaryAllEntries.some(function (entry) { return entry[0] === 'Confederal System'; })) {
+    errors.push('The glossary must spell Confederal System correctly.');
+  }
   if (glossaryAllEntries.some(function (entry) { return /\b(?:EK|LO)\s+\d/i.test(entry[1]); })) {
     errors.push('Student glossary definitions must not expose AP framework or learning-objective codes.');
   }
@@ -481,18 +492,24 @@ function validateSharedCourseExperience() {
     if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
-  if (!apTools.includes('data-core.js?v=20260927-glossary-dedup')) errors.push('AP study-tools page must refresh its updated glossary data.');
+  if (!apTools.includes('data-core.js?v=20260929-glossary-audit')) errors.push('AP study-tools page must refresh its updated glossary data.');
   if ((legacyGlossary.match(/\['Articles of Confederation(?: and Perpetual Union)?'/g) || []).length !== 1 || (legacyGlossary.match(/\['Amicus Curiae(?: Brief)?'/g) || []).length !== 1) {
     errors.push('AP study-tools glossary must use the combined Articles and Amicus Curiae entries.');
   }
+  if ((legacyGlossary.match(/\['Federalism'/g) || []).length !== 1 || legacyGlossary.includes("['Federal System'") || legacyGlossary.includes("['Confedral System'") || (legacyGlossary.match(/\['Suffrage'/g) || []).length !== 1 || legacyGlossary.includes("['Franchise (or Suffrage)'") || !legacyGlossary.includes("['Confederal System'")) {
+    errors.push('AP study-tools glossary must consolidate federal-system and suffrage synonyms and correct Confederal System.');
+  }
   if (!courseData.includes('["Political Action Committee (PAC)", "PAC"') || courseData.includes('["Political action committee", "PAC"')) {
     errors.push('The site glossary must combine the political action committee title and acronym.');
+  }
+  if (!courseData.includes('["Civil Liberties", "L"') || courseData.includes('["Civil liberty", "L"') || !courseData.includes('["Civil Rights", "="') || courseData.includes('["Civil right", "="')) {
+    errors.push('Civil liberty and civil right starter terms must use the same canonical labels as the full glossary.');
   }
   if (!courseData.includes('["Agenda setting", "A",')) errors.push('Agenda setting must use its initial, not a numeric topic marker, as its glossary card symbol.');
   if (!homepageApp.includes('replace(/^(?:a|an|the)\\s+/i, "")')) errors.push('Glossary terms beginning with an article must sort by the next word.');
   const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));
   const expectedFederalismTerms = {
-    'Federalism': 'A system that divides power between the national and state governments.',
+    'Federalism': 'Federalism, also called a federal system, divides power between the national and state governments.',
     'National Government': 'The government of the entire United States.',
     'State Government': 'The government of an individual state.',
     'Enumerated Powers': 'Powers specifically listed in the Constitution for the national government.',

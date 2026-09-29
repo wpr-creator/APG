@@ -40,13 +40,12 @@ Files including `index-app.js`, `data-core.js`, `data-content.js`,
 are not the implementation of the current `index.html` shell. Confirm which
 HTML page loads a legacy file before modifying or removing it.
 
-These files were reference-audited on August 3, 2026. The JavaScript data files
-remain loaded by `ap-tools.html`, and the legacy stylesheets remain shared by
-the unit, document, case, agenda, extension, and presidential-library pages.
-They therefore cannot be removed without first migrating those supported
-routes. A future retirement should migrate one page family at a time, update
-its references, run validation, and verify the published legacy URLs before
-deleting shared files.
+The JavaScript data files remain loaded by `ap-tools.html`, and the legacy
+stylesheets remain shared by the unit, document, case, agenda, extension, and
+presidential-library pages. They cannot be removed without first migrating
+those supported routes. A future retirement should migrate one page family at
+a time, update its references, run validation, and verify the published URLs
+before deleting shared files.
 
 Likewise, `content.json` supports older standalone experiences;
 `site-content.json` is the current shell's editable course-state file.
@@ -59,8 +58,15 @@ access token restricted to the `wpr-creator/APG` repository with only
 **Contents: Read and write** permission. Remove the token from the editor when
 using a shared device.
 
-The editor writes only `site-content.json` on `main`. Structural or code
-changes should still be made on a branch and reviewed in a pull request.
+The editor writes only `site-content.json` on `main`. For code changes, pull
+the latest `main`, validate locally, commit and push the scoped change to
+`main`, then verify the GitHub Pages deployment and live result.
+
+The deployed Apps Script project no longer contains `weeklyArchive`. If an old
+time-based trigger still refers to that function, delete that stale trigger in
+Apps Script. Do not restore the old function: it moved and cleared rows from
+the former period-wide response tabs, while the current collector creates
+separate tabs for each ticket and period.
 
 ## Validation
 

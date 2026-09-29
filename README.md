@@ -46,7 +46,6 @@ routes, and safe teacher-publishing guidance.
 ## Course settings
 
 - Google Classroom: `https://classroom.google.com/` (join code: `wxe36xms`)
-- Join code: `wxe36xms`
 - Initial current unit: `gov-0`
 - Initial release: Unit 0 open; AP Units 1–5 locked
 
@@ -69,4 +68,4 @@ to `main`.
 
 ## Publishing
 
-Make changes on a review branch, validate locally, and open a pull request. Merge only after review. After merging, wait for GitHub Pages and verify the actual live pages on desktop and mobile.
+Pull the latest `main`, make the requested change, run `node scripts/validate-site.js` and any relevant focused tests, then commit and push to `main`. Wait for GitHub Pages to deploy and verify the live page; check desktop and mobile when presentation changes.
