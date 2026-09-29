@@ -58,9 +58,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
   background-repeat: no-repeat, no-repeat, no-repeat, repeat;
   animation: civic-background-drift 48s ease-in-out infinite alternate;
 }
-.home-dynamic-background::after {
-  display: none;
-}
 /* Editorial homepage: an open, print-inspired cover and field guide. */
 #home { color: #182838; }
 .home-hero {
@@ -980,7 +977,6 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .featured-document-image { width: 72px; height: 72px; }
   .featured-document-copy strong { font-size: .94rem; }
   .featured-document-copy > span:last-child { font-size: .69rem; }
-  .home-dashboard .election-tracker-layout { grid-template-columns: minmax(95px, .4fr) minmax(0, 1fr); }
   .home-dashboard .election-tracker-layout { grid-template-columns: 1fr; }
   .home-dashboard .election-countdown { padding-right: .65rem; }
   .home-dashboard .election-tracker-copy { padding-left: .7rem; }
