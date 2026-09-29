@@ -274,14 +274,14 @@ function validateSharedCourseExperience() {
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
-    if (!html.includes('href="' + stylesheet + '?v=20260926-parchment-paper"')) {
+    if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
     }
   });
   [
     'styles.css?v=20260929-css-cleanup',
     'course-shell.css?v=20260926-editorial-typography',
-    'styles-design-system.css?v=20260926-parchment-paper',
+    'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20260929-glossary-audit',
     'glossary-data.js?v=20260929-glossary-audit',
     'foundations-data.js?v=20260909-madison-brutus',
@@ -389,6 +389,11 @@ function validateSharedCourseExperience() {
   });
   const sharedNav = fs.readFileSync(path.join(root, 'nav-render.js'), 'utf8');
   if (sharedNav.includes('{ label: "Agenda"')) errors.push('Agenda must remain disabled in shared navigation.');
+  const courseShell = fs.readFileSync(path.join(root, 'course-shell.js'), 'utf8');
+  if (!courseShell.includes('<strong>MR. ROGERS</strong><small>THE O’FARRELL HIGH SCHOOL</small>') ||
+      courseShell.includes('AP UNITED STATES GOVERNMENT</strong>') || courseShell.includes('apg-return-link')) {
+    errors.push('Inner pages must match the homepage brand and must not add a duplicate return button.');
+  }
   if (!homepage.includes('<h1>AP GOVERNMENT GLOSSARY</h1>')) {
     errors.push('APG glossary heading is missing.');
   }
@@ -1259,7 +1264,7 @@ function validateSharedCourseExperience() {
   REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
     if (!page.includes('nav-render.js?v=20260929-clean-guides') ||
-        !page.includes('course-shell.js?v=20260929-clean-guides')) {
+        !page.includes('course-shell.js?v=20260929-home-editorial-system')) {
       errors.push('Document or case cannot load shared course navigation: ' + relative(file));
     }
     if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"|doc-margin-tag|doc-annotation-tags|doc-annotation-tag/.test(page)) {

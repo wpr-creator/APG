@@ -48,7 +48,7 @@
     const mark = document.createElement("img");
     mark.src = new URL("assets/course-mark.svg", root).href; mark.alt = ""; mark.width = 44; mark.height = 44;
     const name = document.createElement("span");
-    name.innerHTML = "<strong>AP UNITED STATES GOVERNMENT</strong><small>MR. ROGERS · THE O’FARRELL HIGH SCHOOL</small>";
+    name.innerHTML = "<strong>MR. ROGERS</strong><small>THE O’FARRELL HIGH SCHOOL</small>";
     brand.append(mark, name);
     const button = document.createElement("button");
     button.type = "button"; button.textContent = "☰ MENU";
@@ -62,12 +62,5 @@
     header.append(brand, button, nav); document.body.prepend(header);
     const skip = document.querySelector(".skip-link");
     if (skip) document.body.prepend(skip);
-    const readingPage = document.querySelector(".case-page, .doc-page, .reader, .page-main");
-    if (!readingPage) {
-      const back = document.createElement("a"); back.className = "apg-return-link";
-      back.textContent = unit ? "← BACK TO UNIT " + unit.slice(-1) + (lesson ? " · YOUR LESSON" : "") : "← BACK TO UNITS";
-      back.href = root.href + (lesson ? "?lesson=" + encodeURIComponent(lesson) : "") + "#" + (unit || "units");
-      header.after(back);
-    }
   });
 })();

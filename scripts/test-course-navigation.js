@@ -43,21 +43,21 @@ function runShell({ saved, homepage = false, readingPage = false } = {}) {
   assert.equal(internal.attrs.target, undefined);
   assert.equal(external.attrs.target, "_blank");
   if (homepage) { assert(mainHeader.classes.has("apg-shared-header")); return; }
+  assert(shell.includes('<strong>MR. ROGERS</strong><small>THE O’FARRELL HIGH SCHOOL</small>'), "Inner pages should match the homepage brand.");
+  assert(!shell.includes("AP UNITED STATES GOVERNMENT</strong>"), "Inner pages should not repeat a second course title.");
+  assert(!shell.includes("apg-return-link"), "The shared menu replaces injected return buttons.");
   assert(oldHeader.classes.has("apg-replaced-navigation"));
   assert(!lessonHero.classes.has("apg-replaced-navigation"), "Lesson heroes must stay visible");
   const header = body.children[0], button = header.children[1], nav = header.children[2];
   assert.deepEqual(nav.children.map(a => a.textContent), ["HOME", "UNITS", "FOUNDATIONS", "GLOSSARY", "EXIT TICKET"]);
   button.events.click(); assert.equal(button.getAttribute("aria-expanded"), "true"); assert(nav.classes.has("is-open"));
   header.events.keydown({ key: "Escape" }); assert.equal(button.getAttribute("aria-expanded"), "false"); assert(!nav.classes.has("is-open")); assert(button.focused);
-  if (readingPage) {
-    assert.equal(header.afterNode, undefined, "Reading pages should use the persistent course menu instead of a duplicate return button.");
-    return;
-  }
-  return header.afterNode.href;
+  assert.equal(header.afterNode, undefined, "Pages should use the persistent course menu instead of a duplicate return button.");
+  return header.afterNode;
 }
-assert.equal(runShell(), "https://example.test/APG/#gov-1");
-assert.equal(runShell({ saved: { destination: "/APG/democracy-filtered.html", unit: "gov-1", lesson: "lesson-u1-102-democracy-filtered" } }), "https://example.test/APG/?lesson=lesson-u1-102-democracy-filtered#gov-1");
-assert.equal(runShell({ saved: { destination: "/APG/other.html", unit: "gov-0", lesson: "unrelated" } }), "https://example.test/APG/#gov-1");
+assert.equal(runShell(), undefined);
+assert.equal(runShell({ saved: { destination: "/APG/democracy-filtered.html", unit: "gov-1", lesson: "lesson-u1-102-democracy-filtered" } }), undefined);
+assert.equal(runShell({ saved: { destination: "/APG/other.html", unit: "gov-0", lesson: "unrelated" } }), undefined);
 runShell({ homepage: true });
 runShell({ readingPage: true });
 const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
@@ -77,4 +77,4 @@ vm.runInNewContext(app.slice(start, end), { document: { getElementById: id => el
 assert.equal(elements["current-lesson-action"].hidden, true);
 assert.equal(elements["current-lesson-action"].href, undefined);
 assert.equal(elements["current-lesson-action"].textContent, "");
-console.log("Course navigation tests passed: shared headers, menu toggle/Escape, reading-page return links, tab behavior, homepage order, and Unit-only homepage action.");
+console.log("Course navigation tests passed: shared headers, menu toggle/Escape, no redundant return buttons, tab behavior, homepage order, and Unit-only homepage action.");
