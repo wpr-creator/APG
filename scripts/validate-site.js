@@ -282,12 +282,12 @@ function validateSharedCourseExperience() {
     'styles.css?v=20260929-css-cleanup',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'course-data.js?v=20260929-glossary-audit',
-    'glossary-data.js?v=20261007-unit-glossary-audit',
+    'course-data.js?v=20261007-framework-glossary-audit',
+    'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
-    'data-required.js?v=20260805-foundations-cases',
+    'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-unit-glossary-tabs',
+    'app.js?v=20261007-full-framework-audit',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -402,8 +402,8 @@ function validateSharedCourseExperience() {
   });
   if (homepage.includes('data-glossary-filter="current"') ||
       !homepageApp.includes('word[4].includes(glossaryFilter)') ||
-      !homepageApp.includes('unitIndex === 1 ? group : topics')) {
-    errors.push('Glossary unit filters must show explicitly selected unit terms, independent of the current-unit setting.');
+      !homepageApp.includes('const references = group')) {
+    errors.push('Glossary unit filters must show explicitly selected unit terms and current group labels, independent of the current-unit setting.');
   }
   [
     'data-foundation-tab="cases"',
@@ -497,6 +497,30 @@ function validateSharedCourseExperience() {
       !unit2Terms.get('Pocket Veto')?.includes('cannot override this veto')) {
     errors.push('Unit 2 glossary needs accurate explanations of line-item, pocket, and war-powers rules.');
   }
+  const unitTerms = glossaryUnits.map(function (unit) {
+    return new Map(Object.values(unit.groups).flat().map(function (entry) { return [entry[0], entry[1]]; }));
+  });
+  [0, 2, 3, 4].forEach(function (index) {
+    const entries = Object.values(glossaryUnits[index].groups).flat();
+    const names = entries.map(function (entry) { return entry[0].toLowerCase(); });
+    if (new Set(names).size !== names.length) errors.push('Unit ' + (index + 1) + ' glossary contains duplicate term cards.');
+  });
+  [
+    ['Article V', 0], ['Federalist No. 10', 0], ['Brutus No. 1', 0],
+    ['First Amendment', 2], ['Second Amendment', 2], ['Fourth Amendment', 2],
+    ['Fifth Amendment', 2], ['Sixth Amendment', 2], ['Eighth Amendment', 2],
+    ['Letter from Birmingham Jail', 2], ['Political Values', 3],
+    ['Voter Registration', 4], ['Selective Benefits', 4]
+  ].forEach(function ([term, index]) {
+    if (!unitTerms[index].has(term)) errors.push('Unit ' + (index + 1) + ' glossary is missing framework vocabulary: ' + term);
+  });
+  if (!unitTerms[0].get('Writ of Habeas Corpus')?.includes('bring a detained person before a judge') ||
+      !unitTerms[0].get('Three-Fifths Compromise')?.includes('enslaved population') ||
+      !unitTerms[2].get('Clear and Present Danger Test')?.includes('not the current standard') ||
+      !unitTerms[3].get('Scientific Poll')?.includes('sound sampling method') ||
+      !unitTerms[4].get('Citizens United')?.includes('did not remove limits on direct contributions')) {
+    errors.push('Units 1, 3, 4, and 5 glossary definitions need framework-aligned accuracy updates.');
+  }
   const wealthEntry = glossaryAllEntries.find(function (entry) { return entry[0] === 'The Wealth of Nations'; });
   if (!wealthEntry || wealthEntry[1] !== 'Adam Smith argues that self-interest and competition can organize economic activity through free markets, with limited government interference.') {
     errors.push('The Wealth of Nations glossary entry must use its document title and a concise student-facing definition.');
@@ -527,7 +551,7 @@ function validateSharedCourseExperience() {
     errors.push('Student glossary definitions must not expose AP framework or learning-objective codes.');
   }
   const dataCoreSource = fs.readFileSync(path.join(root, 'data-core.js'), 'utf8');
-  const legacyGlossaryStart = dataCoreSource.indexOf('const GLOSSARY_UNITS = [');
+  const legacyGlossaryStart = dataCoreSource.indexOf('const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [');
   const legacyGlossaryEnd = dataCoreSource.indexOf('\n];', legacyGlossaryStart);
   let legacyGlossary = '';
   if (legacyGlossaryStart < 0 || legacyGlossaryEnd < 0) {
@@ -538,7 +562,12 @@ function validateSharedCourseExperience() {
     if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
-  if (!apTools.includes('data-core.js?v=20260929-glossary-audit')) errors.push('AP study-tools page must refresh its updated glossary data.');
+  if (!apTools.includes('data-core.js?v=20261007-canonical-glossary') ||
+      !apTools.includes('glossary-data.js?v=20261007-full-framework-audit') ||
+      apTools.indexOf('glossary-data.js?v=20261007-full-framework-audit') > apTools.indexOf('data-core.js?v=20261007-canonical-glossary') ||
+      !dataCoreSource.includes('const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [')) {
+    errors.push('AP study tools must load the canonical course glossary before their application data.');
+  }
   if ((legacyGlossary.match(/\['Articles of Confederation(?: and Perpetual Union)?'/g) || []).length !== 1 || (legacyGlossary.match(/\['Amicus Curiae(?: Brief)?'/g) || []).length !== 1) {
     errors.push('AP study-tools glossary must use the combined Articles and Amicus Curiae entries.');
   }
@@ -1294,6 +1323,18 @@ function validateSharedCourseExperience() {
   if (!requiredData.includes('file: "docs/bill-of-rights.html"') ||
       !fs.existsSync(path.join(root, 'docs', 'bill-of-rights.html'))) {
     errors.push('The AP Addendum foundational-document list must include a dedicated Bill of Rights guide.');
+  }
+  const requiredCaseSource = requiredData.slice(requiredData.indexOf('const REQUIRED_CASES = ['));
+  if ((requiredCaseSource.match(/^\s+id: /gm) || []).length !== 14 ||
+      !requiredCaseSource.includes('New York Times Co. v. United States') ||
+      !requiredCaseSource.includes('Citizens United v. Federal Election Commission') ||
+      !requiredCaseSource.includes('Later decisions replaced that test') ||
+      !requiredCaseSource.includes('not whether Tennessee\'s districts were unconstitutional')) {
+    errors.push('Required case collection must contain all 14 current cases with accurate, non-redundant summaries.');
+  }
+  if (!requiredData.includes('Bill of Rights (part of the U.S. Constitution)') ||
+      !requiredData.includes('CED counts it within the Constitution')) {
+    errors.push('The separate Bill of Rights reader must be identified as part of the required Constitution document.');
   }
   if (navCode.includes('addAddendumSummary') || navCode.includes('AP ADDENDUM SUMMARY')) {
     errors.push('Retired AP Addendum Summary panels must not return to document and case pages.');

@@ -53,14 +53,14 @@ const REQUIRED_DOCS = [
   },
   {
     id: "bill-of-rights",
-    title: "Bill of Rights",
+    title: "Bill of Rights (part of the U.S. Constitution)",
     navLabel: "Bill of Rights",
     author: "James Madison / First Congress",
     year: "1791",
     unit: 1,
     icon: "🛡️",
     file: "docs/bill-of-rights.html",
-    blurb: "The first ten amendments protect individual liberties and reserve undelegated powers to the states or the people. They answered Anti-Federalist fears of federal overreach and later became the foundation for selective incorporation through the Fourteenth Amendment."
+    blurb: "A focused reader on the first ten amendments. The College Board includes the Bill of Rights within the required U.S. Constitution document; this page gives students a separate place to study it."
   },
   {
     id: "fed10",
@@ -201,13 +201,13 @@ const REQUIRED_CASES = [
   },
   {
     id: "lopez",
-    title: "U.S. v. Lopez",
+    title: "United States v. Lopez",
     year: "1995",
     unit: 2,
     tag: "Commerce Clause",
     file: "cases/us-v-lopez.html",
     question: "Does the Gun-Free School Zones Act fall within Congress's Commerce Clause power?",
-    holding: "No — first Commerce Clause limit in 60 years. Non-economic activity doesn't count."
+    holding: "No — Congress exceeded its Commerce Clause power by making gun possession in a school zone a federal crime; the regulated activity was not economic and lacked a substantial connection to interstate commerce."
   },
   {
     id: "schenck",
@@ -217,7 +217,7 @@ const REQUIRED_CASES = [
     tag: "1st Amend.",
     file: "cases/schenck-v-us.html",
     question: "Can government restrict speech creating a \"clear and present danger\"?",
-    holding: "Yes — Holmes established the clear and present danger test. Anti-draft leaflets not protected."
+    holding: "Yes — the 1919 Court upheld Schenck's conviction, applying the clear-and-present-danger test to anti-draft leaflets. Later decisions replaced that test; it is not the current standard."
   },
   {
     id: "engel",
@@ -251,13 +251,13 @@ const REQUIRED_CASES = [
   },
   {
     id: "nyt",
-    title: "New York Times v. United States",
+    title: "New York Times Co. v. United States",
     year: "1971",
     unit: 3,
     tag: "1st Amend.",
     file: "cases/nyt-v-us.html",
     question: "Can government stop a newspaper from publishing the Pentagon Papers?",
-    holding: "No — prior restraint is the most serious First Amendment violation. Government couldn't meet the burden."
+    holding: "No — the government did not meet its heavy burden to justify stopping the newspapers from publishing the Pentagon Papers before publication."
   },
   {
     id: "yoder",
@@ -277,17 +277,17 @@ const REQUIRED_CASES = [
     tag: "Eq. Protection",
     file: "cases/brown-v-board.html",
     question: "Does racial segregation in public schools violate the Equal Protection Clause?",
-    holding: "Yes — \"Separate but equal is inherently unequal.\" Unanimous. Overturned Plessy (1896)."
+    holding: "Yes — state-sponsored racial segregation in public schools violates the Equal Protection Clause. The Court ruled unanimously; its holding rejected the use of separate-but-equal in public education."
   },
   {
     id: "mcdonald",
-    title: "McDonald v. City of Chicago",
+    title: "McDonald v. Chicago",
     year: "2010",
     unit: 3,
     tag: "2nd & 14th",
     file: "cases/mcdonald-v-chicago.html",
     question: "Does the 2nd Amendment apply to state and local governments?",
-    holding: "Yes — most recent major selective incorporation case. 2nd Amendment applies to all levels of government."
+    holding: "Yes — the Second Amendment right recognized in District of Columbia v. Heller applies to state and local governments through the Fourteenth Amendment's Due Process Clause."
   },
   {
     id: "baker",
@@ -297,7 +297,7 @@ const REQUIRED_CASES = [
     tag: "Equal Protection",
     file: "cases/baker-v-carr.html",
     question: "Are legislative apportionment questions justiciable by federal courts?",
-    holding: "Yes — \"one person, one vote\" begins here. Courts CAN review redistricting. Landmark for voting rights."
+    holding: "Yes — federal courts may hear Equal Protection challenges to legislative apportionment. Baker addressed justiciability, not whether Tennessee's districts were unconstitutional or whether districts had equal populations."
   },
   {
     id: "shaw",
@@ -307,17 +307,17 @@ const REQUIRED_CASES = [
     tag: "Equal Protection",
     file: "cases/shaw-v-reno.html",
     question: "Can race be the predominant factor in drawing congressional district lines?",
-    holding: "No — racial gerrymandering violates Equal Protection even when designed to help minority voters."
+    holding: "The Court allowed voters to challenge a district in which race was the predominant factor under the Equal Protection Clause; it did not hold that every majority-minority district is unconstitutional."
   },
   {
     id: "citizens-united",
-    title: "Citizens United v. FEC",
+    title: "Citizens United v. Federal Election Commission",
     year: "2010",
     unit: 5,
     tag: "1st Amend.",
     file: "cases/citizens-united-v-fec.html",
     question: "Can Congress limit independent political expenditures by corporations?",
-    holding: "No — political spending is protected speech. Opened the door to Super PACs. Most controversial campaign finance ruling."
+    holding: "No — the government may not prohibit corporations and unions from making independent political expenditures. The ruling did not remove limits on direct contributions to candidates."
   }
 ];
 
@@ -330,7 +330,7 @@ window.REQUIRED_CASES = REQUIRED_CASES;
 // file to confirm every doc/case count matches what the handoff doc says.
 function _auditRequiredContent() {
   console.log("Docs by unit:", REQUIRED_DOCS.reduce((a, d) => (a[d.unit] = (a[d.unit] || 0) + 1, a), {}));
-  console.log("Total docs:", REQUIRED_DOCS.length, "(expect 14)");
+  console.log("Document study pages:", REQUIRED_DOCS.length, "(includes a separate Bill of Rights reader; CED counts it within the Constitution)");
   console.log("Cases by unit:", REQUIRED_CASES.reduce((a, c) => (a[c.unit] = (a[c.unit] || 0) + 1, a), {}));
   console.log("Total cases:", REQUIRED_CASES.length, "(expect 14)");
 }

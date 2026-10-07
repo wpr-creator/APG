@@ -31,16 +31,16 @@ const SCOTUS_CASES = [
   {
     name: "Schenck v. United States", year: 1919, unit: 3,
     issue: "Can the government limit speech during wartime?",
-    ruling: "Yes. Speech creating a 'clear and present danger' can be restricted.",
-    sig: "Established the 'clear and present danger' test for limiting First Amendment rights.",
-    tip: "Contrast with Tinker v. Des Moines to show how speech protections have evolved."
+    ruling: "The 1919 Court upheld Schenck's conviction, applying the clear-and-present-danger test to anti-draft leaflets.",
+    sig: "A historical First Amendment ruling; later decisions replaced its clear-and-present-danger test with a more speech-protective standard.",
+    tip: "Learn Schenck as the historical ruling, not today's speech test. Compare it with later First Amendment protections."
   },
   {
     name: "Brown v. Board of Education", year: 1954, unit: 3,
     issue: "Does racial segregation in public schools violate the Equal Protection Clause?",
-    ruling: "Yes. Unanimous decision overturning Plessy v. Ferguson's 'separate but equal' doctrine.",
-    sig: "Landmark civil rights ruling. Used the 14th Amendment's Equal Protection Clause to end de jure school segregation.",
-    tip: "Know that it overruled Plessy (1896). Often paired with civil rights FRQs and the 14th Amendment."
+    ruling: "Yes. The Court unanimously held that racial segregation in public schools violates the Fourteenth Amendment's Equal Protection Clause.",
+    sig: "Rejected separate-but-equal in public education; Brown II later addressed the remedy.",
+    tip: "Connect Brown to equal protection and distinguish its holding from Brown II's desegregation remedy."
   },
   {
     name: "Engel v. Vitale", year: 1962, unit: 3,
@@ -53,7 +53,7 @@ const SCOTUS_CASES = [
     name: "Baker v. Carr", year: 1962, unit: 5,
     issue: "Are legislative apportionment disputes justiciable (can courts rule on them)?",
     ruling: "Yes. The Court held that redistricting cases are justiciable under the Equal Protection Clause.",
-    sig: "Opened the door for courts to rule on redistricting. Led to 'one person, one vote' principle.",
+    sig: "Held that federal courts may hear Equal Protection challenges to legislative apportionment. It did not itself require equal-population districts; Reynolds v. Sims later did.",
     tip: "Pair with Shaw v. Reno. Both deal with redistricting -- Baker opened courts to it, Shaw addressed racial gerrymandering."
   },
   {
@@ -71,10 +71,10 @@ const SCOTUS_CASES = [
     tip: "High-frequency case. Know the 'substantial disruption' test. Contrast with Bethel School District v. Fraser."
   },
   {
-    name: "New York Times v. United States", year: 1971, unit: 3,
+    name: "New York Times Co. v. United States", year: 1971, unit: 3,
     issue: "Can the government prevent the press from publishing the Pentagon Papers?",
     ruling: "No. Prior restraint requires an extremely heavy burden of justification. Press prevailed.",
-    sig: "Reaffirmed freedom of the press and the near-absolute ban on prior restraint of publication.",
+    sig: "Applied a heavy presumption against prior restraint; the government did not meet its burden to stop publication.",
     tip: "Know 'prior restraint' -- the government stopping publication before it happens. This case rejected it."
   },
   {
@@ -88,29 +88,29 @@ const SCOTUS_CASES = [
     name: "Shaw v. Reno", year: 1993, unit: 5,
     issue: "Can states draw oddly shaped legislative districts solely to create majority-minority districts?",
     ruling: "Such districts can be challenged under the Equal Protection Clause if race is the predominant factor.",
-    sig: "Limited racial gerrymandering. While the Voting Rights Act permits some race-consciousness, race cannot be the sole factor.",
+    sig: "Allowed voters to challenge districts where race was the predominant factor under the Equal Protection Clause; it did not declare every majority-minority district invalid.",
     tip: "Pair with Baker v. Carr. Shaw addresses racial gerrymandering -- know the difference between political and racial gerrymandering."
   },
   {
-    name: "U.S. v. Lopez", year: 1995, unit: 2,
+    name: "United States v. Lopez", year: 1995, unit: 2,
     issue: "Did Congress exceed its Commerce Clause power by banning guns near schools?",
     ruling: "Yes. The Gun-Free School Zones Act exceeded Congressional commerce power.",
-    sig: "First major case in decades to limit Congress's Commerce Clause power, signaling a new federalism.",
+    sig: "A prominent modern limit on Congress's Commerce Clause power: the Court found gun possession near a school was not economic activity substantially connected to interstate commerce.",
     tip: "Shows limits on federal power. Contrast with McCulloch (broad federal power) -- shows the tension in federalism."
   },
   {
     name: "McDonald v. City of Chicago", year: 2010, unit: 3,
     issue: "Does the 2nd Amendment apply to state and local governments?",
-    ruling: "Yes. The 2nd Amendment is incorporated against the states through the 14th Amendment.",
+    ruling: "Yes. The Second Amendment right recognized in Heller applies to state and local governments through the Fourteenth Amendment.",
     sig: "Extended D.C. v. Heller (2008) to states via selective incorporation. Individuals have the right to keep arms for self-defense at home.",
     tip: "Another selective incorporation case -- the 2nd Amendment applied to states via the 14th. Connect to the incorporation doctrine."
   },
   {
-    name: "Citizens United v. FEC", year: 2010, unit: 5,
+    name: "Citizens United v. Federal Election Commission", year: 2010, unit: 5,
     issue: "Can the government limit independent political expenditures by corporations and other groups?",
     ruling: "No. Political spending by corporations is a form of protected speech under the 1st Amendment.",
-    sig: "Opened the door to unlimited 'outside spending' in elections and the rise of Super PACs.",
-    tip: "Major campaign finance case. Know the connection to Super PACs, dark money, and the debate over money as speech."
+    sig: "Protected independent political expenditures by corporations and unions; it did not remove limits on direct contributions to candidates.",
+    tip: "Distinguish independent expenditures from direct contributions. Super PACs are separate committees that cannot coordinate with candidates."
   }
 ];
 
@@ -1150,9 +1150,9 @@ style.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { tr
 document.head.appendChild(style);
 
 // ══════════════════════════════════════════════════════════
-//  GLOSSARY DATA -- 392 Terms, 5 Units, 23 Groups
+//  GLOSSARY DATA -- canonical glossary-data.js, with a legacy fallback
 // ══════════════════════════════════════════════════════════
-const GLOSSARY_UNITS = [
+const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [
   {
     key: 'unit1', label: 'Unit 1: Foundations of American Democracy', weight: '15-22%',
     groups: {

@@ -43,7 +43,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Constitutional Convention",
-          "A meeting attended by state delegates in 1787 to fix the Articles of Confederation.",
+          "A meeting of state delegates in 1787 that began as an effort to revise the Articles of Confederation and produced a new Constitution instead.",
           [
             "1.3"
           ]
@@ -64,7 +64,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Three-Fifths Compromise",
-          "An agreement at the Constitutional Convention that a slave would count as three-fifths of a person in calculating a state's representation.",
+          "An agreement that counted three-fifths of each state's enslaved population when apportioning House seats and direct federal taxes; enslaved people could not vote.",
           [
             "1.3"
           ]
@@ -113,7 +113,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Writ of Habeas Corpus",
-          "The right of people detained by the government to know the charges against them.",
+          "A court order requiring the government to bring a detained person before a judge and justify the detention.",
           [
             "1.3"
           ]
@@ -164,7 +164,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Individualism",
-          "The belief that individuals should be responsible for themselves and for the decisions they make.",
+          "A political value that emphasizes individual liberty, independence, and the importance of each person's rights and choices.",
           [
             "1.1"
           ]
@@ -206,7 +206,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Federalist No. 39",
-          "Madison explains that the Constitution creates a government that is partly national and partly federal, with multiple places for people to influence policy.",
+          "Madison argues that the Constitution creates a compound republic: national in some respects and federal, with states retaining a role, in others.",
           [
             "1.7"
           ]
@@ -241,14 +241,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Social Contract",
-          "People allow their governments to rule over them to ensure an orderly and functioning society.",
+          "An idea that government gets its authority from the people's consent and exists to protect their rights; people may change a government that violates that purpose.",
           [
             "1.1"
           ]
         ],
         [
           "Natural Rights",
-          "The right to life, liberty, and property, which government cannot take away; rooted in Enlightenment philosophy.",
+          "Basic rights people have by nature, not because government grants them. The Declaration names life, liberty, and the pursuit of happiness.",
           [
             "1.1"
           ]
@@ -682,13 +682,6 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Common Law",
           "The pattern of law developed by judges through case decisions largely based on precedent.",
-          [
-            "1.1"
-          ]
-        ],
-        [
-          "Social Contract",
-          "People allow their governments to rule over them to ensure an orderly and functioning society.",
           [
             "1.1"
           ]
@@ -1705,6 +1698,36 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
+          "First Amendment",
+          "Protects freedom of religion, speech, press, assembly, and petition from government restrictions, subject to constitutional limits.",
+          ["3.2", "3.3", "3.4"]
+        ],
+        [
+          "Second Amendment",
+          "Protects an individual right to keep and bear arms, which applies to state and local governments through the Fourteenth Amendment.",
+          ["3.5", "3.7"]
+        ],
+        [
+          "Fourth Amendment",
+          "Protects people from unreasonable government searches and seizures and sets rules for warrants.",
+          ["3.6", "3.7"]
+        ],
+        [
+          "Fifth Amendment",
+          "Protects rights including grand-jury indictment in federal cases, freedom from compelled self-incrimination, and due process; it also bars double jeopardy.",
+          ["3.6", "3.8"]
+        ],
+        [
+          "Sixth Amendment",
+          "Protects rights of people accused of crimes, including a speedy public trial, an impartial jury, and assistance of counsel.",
+          ["3.8"]
+        ],
+        [
+          "Eighth Amendment",
+          "Bars excessive bail and fines and cruel and unusual punishment.",
+          ["3.6"]
+        ],
+        [
           "Civil Liberties",
           "Fundamental rights and freedoms protected from infringement by the government.",
           [
@@ -1727,21 +1750,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Free Exercise Clause",
-          "First Amendment protection of the rights of individuals to exercise and express their religious beliefs.",
+          "The First Amendment protection for religious belief and practice. Government may still enforce neutral laws that apply generally, subject to constitutional limits.",
           [
             "3.1"
           ]
         ],
         [
           "Prior Restraint",
-          "The suppression of material prior to publication; generally unconstitutional per New York Times v. United States.",
+          "Government action that stops speech or publication before it occurs. Courts presume it is unconstitutional, though the rule is not absolute.",
           [
             "3.1"
           ]
         ],
         [
           "Clear and Present Danger Test",
-          "Legal standard that speech posing an immediate and serious threat to national security is not protected by the First Amendment; from Schenck v. U.S.",
+          "The historical standard used in Schenck v. United States (1919) to uphold limits on speech that posed a clear and present danger. Later decisions replaced it with a more speech-protective test; it is not the current standard.",
           [
             "3.1"
           ]
@@ -1769,7 +1792,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Sherbert Test",
-          "A standard for deciding whether a law violates the Free Exercise Clause; requires compelling governmental interest and least restrictive means.",
+          "A strict-scrutiny approach used in Sherbert v. Verner (1963) for some Free Exercise claims. Later Supreme Court decisions changed how courts generally review neutral laws that burden religion.",
           [
             "3.1"
           ]
@@ -1785,21 +1808,21 @@ window.APG_GLOSSARY_UNITS = [
       "Rights of the Accused": [
         [
           "Miranda Rights",
-          "The right to remain silent and to have an attorney present during questioning; from Miranda v. Arizona.",
+          "Rights explained before custodial interrogation, including the right to remain silent and the right to an attorney; established in Miranda v. Arizona.",
           [
             "3.2"
           ]
         ],
         [
           "Miranda Warning",
-          "A statement by law enforcement officers informing a person of their rights before interrogation.",
+          "The warning police give before custodial interrogation to explain Miranda rights, including the right to remain silent and the right to an attorney.",
           [
             "3.2"
           ]
         ],
         [
           "Exclusionary Rule",
-          "A rule that evidence obtained without a warrant is inadmissible in court; from Mapp v. Ohio.",
+          "A rule that can keep evidence obtained through a constitutional violation from being used in court; applied to the states through Mapp v. Ohio.",
           [
             "3.2"
           ]
@@ -1813,14 +1836,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Procedural Due Process",
-          "A judicial standard requiring that fairness be applied to all individuals equally.",
+          "The requirement that government follow fair procedures before depriving a person of life, liberty, or property.",
           [
             "3.2"
           ]
         ],
         [
           "Writ of Habeas Corpus",
-          "The right of people detained by the government to know the charges against them.",
+          "A court order requiring the government to bring a detained person before a judge and justify the detention.",
           [
             "3.2"
           ]
@@ -1870,15 +1893,8 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Privacy",
-          "A right not enumerated in the Constitution but affirmed by Supreme Court decisions covering individuals' private decisions.",
-          [
-            "3.3"
-          ]
-        ],
-        [
           "Right to Privacy",
-          "The right to be free of government intrusion.",
+          "A constitutional interest recognized in Supreme Court decisions that protects some personal decisions from unjustified government interference.",
           [
             "3.3"
           ]
@@ -1892,7 +1908,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Natural Rights",
-          "The right to life, liberty, and property, which government cannot take away.",
+          "Basic rights people have by nature, not because government grants them. The Declaration names life, liberty, and the pursuit of happiness.",
           [
             "3.3"
           ]
@@ -1929,35 +1945,35 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Fourteenth Amendment",
-          "Constitutional amendment granting citizenship to persons born in the United States and prohibiting states from denying due process or equal protection.",
+          "Grants citizenship to people born or naturalized in the United States and bars states from denying any person due process or equal protection of the laws.",
           [
             "3.4"
           ]
         ],
         [
           "Thirteenth Amendment",
-          "Constitutional amendment that outlaws slavery.",
+          "Abolished slavery and involuntary servitude, except as punishment for a crime, throughout the United States.",
           [
             "3.4"
           ]
         ],
         [
           "Fifteenth Amendment",
-          "Constitutional amendment that gave African Americans the right to vote.",
+          "Prohibits the federal and state governments from denying or abridging a citizen's right to vote because of race, color, or previous condition of servitude.",
           [
             "3.4"
           ]
         ],
         [
           "Nineteenth Amendment",
-          "A 1920 constitutional amendment granting women the right to vote.",
+          "Prohibits the federal and state governments from denying or abridging a citizen's right to vote on account of sex.",
           [
             "3.4"
           ]
         ],
         [
           "Twenty-Sixth Amendment",
-          "Allows those eighteen years old and older to vote.",
+          "Prohibits the federal and state governments from denying citizens who are 18 or older the right to vote because of age.",
           [
             "3.4"
           ]
@@ -1971,14 +1987,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Civil Rights Act of 1964",
-          "Legislation outlawing racial segregation in schools and public places.",
+          "Federal law prohibiting discrimination in several areas, including public accommodations, employment, and federally funded programs; it also strengthened enforcement against school segregation.",
           [
             "3.4"
           ]
         ],
         [
           "Voting Rights Act of 1965",
-          "Legislation outlawing literacy tests and authorizing the Justice Department to send federal officers to register voters in uncooperative jurisdictions.",
+          "Federal law that prohibits racial discrimination in voting and banned literacy tests. Its original federal oversight rules were later limited by the Supreme Court.",
           [
             "3.4"
           ]
@@ -2068,6 +2084,11 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
+          "Letter from Birmingham Jail",
+          "Martin Luther King Jr.'s 1963 defense of nonviolent direct action and civil disobedience against unjust segregation laws.",
+          ["3.10", "3.11", "3.12"]
+        ],
+        [
           "Tyranny of the Majority",
           "When a large number of citizens use the power of their majority to trample on the rights of a smaller group.",
           [
@@ -2124,13 +2145,6 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
-          "Civil Disobedience",
-          "The intentional refusal to obey a law to call attention to its injustice.",
-          [
-            "3.4"
-          ]
-        ],
-        [
           "Majority Rule",
           "A fundamental principle of democracy; the majority should have the power to make decisions binding upon the whole.",
           [
@@ -2168,29 +2182,34 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
+          "Political Values",
+          "Core beliefs about what government should protect or promote, such as liberty, equality, individualism, and rule of law.",
+          ["4.1", "4.2"]
+        ],
+        [
           "Conservatism",
-          "An ideology favoring more regulation of social behavior and less government interference in the economy.",
+          "A broad ideology that generally values tradition and social order and tends to favor less economic regulation; specific positions vary across time and groups.",
           [
             "4.1"
           ]
         ],
         [
           "Liberalism",
-          "An ideology favoring less government control over social behavior and greater regulation of the economy.",
+          "A broad ideology emphasizing individual rights and government action to address social or economic problems; its meaning varies by country and historical period.",
           [
             "4.1"
           ]
         ],
         [
           "Modern Conservatism",
-          "A political ideology that prioritizes individual liberties, preferring a smaller government that stays out of the economy.",
+          "A major U.S. political outlook that often favors lower taxes and less economic regulation and supports traditional social values; views differ among conservatives.",
           [
             "4.1"
           ]
         ],
         [
           "Modern Liberalism",
-          "A political ideology focused on equality and supporting government intervention in society and the economy if it promotes equality.",
+          "A major U.S. political outlook that often supports government action to address economic inequality and protect civil rights and individual freedoms; views differ among liberals.",
           [
             "4.1"
           ]
@@ -2204,14 +2223,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Neoconservatism",
-          "The belief that the United States should aggressively use its might to promote its values and ideals around the world.",
+          "A conservative outlook especially associated with an assertive U.S. role in world affairs and the promotion of U.S. interests abroad.",
           [
             "4.1"
           ]
         ],
         [
           "Classical Liberalism",
-          "A political ideology based on belief in individual liberties and rights and the idea of free will, with little role for government.",
+          "A political tradition emphasizing individual rights, limited government, private property, and free markets.",
           [
             "4.1"
           ]
@@ -2269,7 +2288,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Agent of Political Socialization",
-          "A person or entity that teaches and influences others about politics through use of information.",
+          "A person, group, or institution—such as family, school, peers, or media—that helps shape political beliefs and behavior.",
           [
             "4.2"
           ]
@@ -2311,7 +2330,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Gender Gap",
-          "The fact that American women are more likely to identify with and vote for Democratic Party candidates than men.",
+          "A recurring difference between the political preferences of women and men in the United States; its size and direction can vary by election and issue.",
           [
             "4.2"
           ]
@@ -2355,21 +2374,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Scientific Poll",
-          "A representative poll of randomly selected respondents with a statistically significant sample size using neutral language.",
+          "A survey designed to estimate public opinion using a sound sampling method, clear and neutral questions, and transparent information about how it was conducted.",
           [
             "4.3"
           ]
         ],
         [
           "Margin of Error",
-          "A number that states how far poll results may be from the actual preferences of the total population.",
+          "A range around a poll estimate that describes sampling uncertainty at a stated confidence level; it does not account for every possible source of error.",
           [
             "4.3"
           ]
         ],
         [
           "Sampling Error",
-          "The margin of error in a poll, usually calculated to plus or minus three percentage points.",
+          "The difference between a poll's estimate and the true population value that can occur because the poll surveys a sample rather than everyone.",
           [
             "4.3"
           ]
@@ -2418,7 +2437,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Mass Survey",
-          "A survey designed to measure the opinions of the population, usually consisting of 1,500 responses.",
+          "A survey that asks a sample of people questions to estimate the views of a larger population; accuracy depends on how it is designed and conducted, not a fixed sample size.",
           [
             "4.3"
           ]
@@ -2481,14 +2500,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Bradley Effect",
-          "The difference between a poll result and an election result in which voters gave a socially desirable response rather than an honest one.",
+          "A proposed explanation for a gap between polling and election results, in which some voters may give a socially acceptable answer rather than state their actual choice; it is not a universal or automatic pattern.",
           [
             "4.3"
           ]
         ],
         [
           "Bandwagon Effect",
-          "Increased media coverage of candidates who poll high.",
+          "A tendency for some people to support a candidate or position because it appears popular or likely to win.",
           [
             "4.3"
           ]
@@ -2525,14 +2544,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Keynesian Economics",
-          "An economic policy based on the idea that economic growth is closely tied to the ability of individuals to consume goods.",
+          "An approach arguing that government can use spending and taxes to support demand and reduce the effects of economic downturns.",
           [
             "4.4"
           ]
         ],
         [
           "Supply-Side Economics",
-          "An economic policy that assumes economic growth is largely a function of a country's productive capacity.",
+          "An approach that seeks to increase production and investment, often by reducing taxes or regulations that supporters argue discourage economic activity.",
           [
             "4.4"
           ]
@@ -2567,21 +2586,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Socialism",
-          "A system in which government uses its authority to promote social and economic equality.",
+          "A family of political and economic ideas that supports public or social ownership or control of some important parts of the economy; forms and policies vary.",
           [
             "4.4"
           ]
         ],
         [
           "Communism",
-          "A political and economic system in which government promotes common ownership of all property and means of production.",
+          "A political and economic ideology that calls for collective ownership of the means of production and, in theory, a classless society.",
           [
             "4.4"
           ]
         ],
         [
           "Economic Recession",
-          "A period of decline in economic activity, typically defined by two consecutive quarters of negative GDP growth.",
+          "A significant decline in economic activity across the economy that lasts more than a few months; economists consider several indicators, not only GDP.",
           [
             "4.4"
           ]
@@ -2623,7 +2642,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Federal Reserve System",
-          "A board of governors, Federal Reserve Banks, and member banks responsible for monetary policy.",
+          "The U.S. central banking system, which conducts monetary policy and helps support a stable financial system.",
           [
             "4.4"
           ]
@@ -2665,7 +2684,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Medicaid",
-          "A federal program that provides health care for the poor.",
+          "A federal-state health coverage program for eligible people with low incomes and other qualifying groups.",
           [
             "4.4"
           ]
@@ -2984,21 +3003,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Motor Voter Law",
-          "A law allowing Americans to register to vote when applying for or renewing their driver's licenses.",
+          "The National Voter Registration Act of 1993, which requires voter-registration opportunities at motor-vehicle agencies and certain public agencies.",
           [
             "5.2"
           ]
         ],
         [
           "Absentee Ballots",
-          "Voting completed and submitted by a voter before the day of an election.",
+          "A ballot cast by a voter who is not voting in person at their assigned polling place; rules for requesting and returning one vary by state.",
           [
             "5.2"
           ]
         ],
         [
           "Early Voting",
-          "An accommodation that allows voting up to two weeks before Election Day.",
+          "Casting a ballot in person before Election Day; the dates and availability depend on state law.",
           [
             "5.2"
           ]
@@ -3081,6 +3100,11 @@ window.APG_GLOSSARY_UNITS = [
           ]
         ],
         [
+          "Voter Registration",
+          "The process eligible citizens use to enroll to vote; requirements and available methods vary by state.",
+          ["5.2"]
+        ],
+        [
           "Twenty-Fourth Amendment",
           "Prohibits poll taxes as a condition for voting in federal elections.",
           [
@@ -3154,28 +3178,28 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Political Action Committee (PAC)",
-          "An organization that raises money for candidates and campaigns.",
+          "A political committee that raises and spends money to influence elections, subject to campaign-finance rules; contribution limits depend on the committee type.",
           [
             "5.3"
           ]
         ],
         [
           "Super PAC",
-          "An organization that may spend an unlimited amount of money on a political campaign, as long as the spending is not coordinated with the campaign.",
+          "An independent-expenditure-only political committee that may raise and spend unlimited amounts, but may not contribute directly to candidates or coordinate spending with their campaigns.",
           [
             "5.3"
           ]
         ],
         [
           "Citizens United",
-          "Citizens United v. FEC; a 2010 Supreme Court case that granted corporations and unions the right to spend unlimited amounts of money on elections.",
+          "Citizens United v. FEC (2010), which held that the government may not bar corporations and unions from making independent political expenditures. It did not remove limits on direct contributions to candidates.",
           [
             "5.3"
           ]
         ],
         [
           "Soft Money",
-          "Money that interests can spend on behalf of candidates without being restricted by federal law.",
+          "Historically, money given to political parties outside federal candidate-contribution limits. The Bipartisan Campaign Reform Act of 2002 barred national party committees from raising or spending this type of money.",
           [
             "5.3"
           ]
@@ -3249,6 +3273,11 @@ window.APG_GLOSSARY_UNITS = [
           [
             "5.3"
           ]
+        ],
+        [
+          "Selective Benefits",
+          "Benefits an interest group offers only to its members to encourage people to join and help support the group.",
+          ["5.5"]
         ],
         [
           "Social Movement",
@@ -3464,7 +3493,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Net Neutrality",
-          "An FCC rule that required internet service providers to treat all data and content providers equally.",
+          "The principle that internet service providers should not unfairly block, slow, or favor online content. Whether and how federal rules enforce it has changed over time.",
           [
             "5.4"
           ]

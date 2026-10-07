@@ -122,8 +122,9 @@
   });
   glossaryUnits.forEach((unit, unitIndex) => {
     Object.entries(unit.groups || {}).forEach(([group, entries]) => entries.forEach(entry => {
-      const topics = (entry[2] || []).map(topic => `Topic ${topic}`).join(" · ");
-      const references = unitIndex === 1 ? group : topics;
+      // The 2026 College Board framework renumbered and split many topics.
+      // Group labels stay useful to students without surfacing stale topic IDs.
+      const references = group;
       addGlossaryEntry(entry[0], "", entry[1], references, [`gov-${unitIndex + 1}`]);
     }));
   });
