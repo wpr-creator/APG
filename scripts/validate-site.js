@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261007-unit2-glossary-landing',
+    'styles.css?v=20261007-home-featured-unit-layout',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261007-framework-glossary-audit',
@@ -306,7 +306,8 @@ function validateSharedCourseExperience() {
   });
   if (!homepage.includes('class="hero home-hero"') ||
       !homepage.includes('<h1 id="home-hero-title"><span>AP Government</span><span>&amp; Politics</span></h1>') ||
-      !homepage.includes('How do government and politics connect—and how can you take part? Study how the president, Congress, the Supreme Court, and political beliefs shape public policy.') ||
+      homepage.includes('class="hero-intro"') ||
+      !homepage.includes('class="hero-current now-panel"') ||
       !homepage.includes('<span><strong>MR. ROGERS</strong><small>THE O’FARRELL HIGH SCHOOL</small></span>') ||
       homepage.includes('AP UNITED STATES GOVERNMENT</strong>') ||
       !homepageApp.includes('document.getElementById("current-unit-number").textContent = current.number;') ||
