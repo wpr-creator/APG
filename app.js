@@ -456,8 +456,7 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "word-card";
-      button.innerHTML = `<span class="word-symbol" aria-hidden="true"></span><h2></h2><p></p>`;
-      button.querySelector(".word-symbol").textContent = word[1];
+      button.innerHTML = `<h2></h2><p></p>`;
       button.querySelector("h2").textContent = word[0].toUpperCase();
       button.querySelector("p").textContent = word[2];
       button.addEventListener("click", () => openWord(word, button));

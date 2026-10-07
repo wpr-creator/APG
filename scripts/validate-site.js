@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261007-home-featured-unit-layout',
+    'styles.css?v=20261007-clean-glossary-cards',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261007-framework-glossary-audit',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-remove-redundant-units-button',
+    'app.js?v=20261007-clean-glossary-cards',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -405,6 +405,9 @@ function validateSharedCourseExperience() {
       !homepageApp.includes('word[4].includes(glossaryFilter)') ||
       !homepageApp.includes('const references = group')) {
     errors.push('Glossary unit filters must show explicitly selected unit terms and current group labels, independent of the current-unit setting.');
+  }
+  if (homepageApp.includes('word-symbol') || homepageApp.includes('button.querySelector(".word-symbol")')) {
+    errors.push('Glossary cards must not display the redundant letter marker above each term.');
   }
   [
     'data-foundation-tab="cases"',
