@@ -121,10 +121,11 @@
     addGlossaryEntry(word[0], word[1], word[2], word[3], [word[4]]);
   });
   glossaryUnits.forEach((unit, unitIndex) => {
-    Object.values(unit.groups || {}).flat().forEach(entry => {
+    Object.entries(unit.groups || {}).forEach(([group, entries]) => entries.forEach(entry => {
       const topics = (entry[2] || []).map(topic => `Topic ${topic}`).join(" · ");
-      addGlossaryEntry(entry[0], "", entry[1], topics, [`gov-${unitIndex + 1}`]);
-    });
+      const references = unitIndex === 1 ? group : topics;
+      addGlossaryEntry(entry[0], "", entry[1], references, [`gov-${unitIndex + 1}`]);
+    }));
   });
   const glossaryWords = Array.from(glossaryEntries.values())
     .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units)])
@@ -436,7 +437,7 @@
   function renderWords() {
     wordGrid.replaceChildren();
     const matches = glossaryWords.filter(word => {
-      const inUnit = glossaryFilter === "all" || word[4].includes(currentUnitId);
+      const inUnit = glossaryFilter === "all" || word[4].includes(glossaryFilter);
       const text = `${word[0]} ${word[2]} ${word[3]}`.toLowerCase();
       return inUnit && text.includes(glossaryQuery);
     });
@@ -452,14 +453,16 @@
       wordGrid.appendChild(button);
     });
     const status = document.getElementById("glossary-status");
-    status.textContent = `${matches.length} ${matches.length === 1 ? "TERM" : "TERMS"} SHOWN`;
+    const selectedFilter = document.querySelector(`[data-glossary-filter="${glossaryFilter}"]`);
+    const scope = glossaryFilter === "all" ? "ALL TERMS" : selectedFilter?.textContent || "SELECTED UNIT";
+    status.textContent = `${matches.length} ${matches.length === 1 ? "TERM" : "TERMS"} SHOWN · ${scope}`;
     document.querySelectorAll("[data-glossary-filter]").forEach(button => {
       button.setAttribute("aria-pressed", String(button.dataset.glossaryFilter === glossaryFilter));
     });
     if (!matches.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "NO MATCH YET. TRY A SHORTER WORD OR CHOOSE ALL TERMS.";
+      empty.textContent = "NO MATCH YET. TRY A SHORTER WORD OR CHOOSE ANOTHER UNIT.";
       wordGrid.appendChild(empty);
     }
   }
@@ -2063,7 +2066,6 @@
       siteContent.assignmentUnlockAt = siteContent.assignmentUnlockAt || {};
       siteContent.unitUnlocks = siteContent.unitUnlocks || {};
       if (data.units.some(unit => unit.id === siteContent.currentUnit)) currentUnitId = siteContent.currentUnit;
-      if (!glossaryWords.some(word => word[4].includes(currentUnitId))) glossaryFilter = "all";
     } catch (error) {
       console.warn("Using default course content.", error);
     }

@@ -25,7 +25,7 @@
   <link rel="icon" href="assets/course-mark.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css?v=20260929-css-cleanup">
   <script src="course-data.js?v=20260929-glossary-audit" defer></script>
-  <script src="glossary-data.js?v=20260929-glossary-audit" defer></script>
+  <script src="glossary-data.js?v=20261007-unit-glossary-audit" defer></script>
   <script src="foundations-data.js?v=20260909-madison-brutus" defer></script>
   <script src="constitution-explorer-data.js" defer></script>
   <script src="rights-referee-data.js" defer></script>
@@ -35,7 +35,7 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20260805-foundations-cases" defer></script>
-  <script src="app.js?v=20260929-all-foundations" defer></script>
+  <script src="app.js?v=20261007-unit-glossary-tabs" defer></script>
 <link rel="stylesheet" href="course-shell.css?v=20260926-editorial-typography">
 <script src="course-shell.js?v=20260929-home-editorial-system" defer></script>
 <link rel="stylesheet" href="styles-design-system.css?v=20260929-home-editorial-system">
@@ -266,8 +266,13 @@
         <label for="glossary-search">SEARCH THE GLOSSARY</label>
         <input id="glossary-search" type="search" inputmode="search" autocomplete="off" placeholder="TRY: RIGHTS, COURTS, OR POWER">
         <div class="glossary-filters" id="glossary-filters" aria-label="Filter glossary terms">
-          <button type="button" aria-pressed="false" data-glossary-filter="current">CURRENT UNIT</button>
           <button type="button" aria-pressed="true" data-glossary-filter="all">ALL TERMS</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-0">COURSE BASICS</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-1">UNIT 1</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-2">UNIT 2</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-3">UNIT 3</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-4">UNIT 4</button>
+          <button type="button" aria-pressed="false" data-glossary-filter="gov-5">UNIT 5</button>
         </div>
         <p id="glossary-status" class="glossary-status" role="status"></p>
       </div>

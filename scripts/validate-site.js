@@ -283,11 +283,11 @@ function validateSharedCourseExperience() {
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20260929-glossary-audit',
-    'glossary-data.js?v=20260929-glossary-audit',
+    'glossary-data.js?v=20261007-unit-glossary-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20260805-foundations-cases',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20260929-all-foundations',
+    'app.js?v=20261007-unit-glossary-tabs',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -397,6 +397,14 @@ function validateSharedCourseExperience() {
   if (!homepage.includes('<h1>AP GOVERNMENT GLOSSARY</h1>')) {
     errors.push('APG glossary heading is missing.');
   }
+  ['all', 'gov-0', 'gov-1', 'gov-2', 'gov-3', 'gov-4', 'gov-5'].forEach(function (filter) {
+    if (!homepage.includes('data-glossary-filter="' + filter + '"')) errors.push('Glossary is missing its ' + filter + ' filter.');
+  });
+  if (homepage.includes('data-glossary-filter="current"') ||
+      !homepageApp.includes('word[4].includes(glossaryFilter)') ||
+      !homepageApp.includes('unitIndex === 1 ? group : topics')) {
+    errors.push('Glossary unit filters must show explicitly selected unit terms, independent of the current-unit setting.');
+  }
   [
     'data-foundation-tab="cases"',
     'id="foundation-cases"',
@@ -474,6 +482,21 @@ function validateSharedCourseExperience() {
   }, 0);
   if (glossaryEntryCount < 400) errors.push('APG glossary must retain the full AP vocabulary library.');
   const glossaryAllEntries = glossaryUnits.flatMap(function (unit) { return Object.values(unit.groups).flat(); });
+  const unit2Entries = Object.values(glossaryUnits[1].groups).flat();
+  const unit2Terms = new Map(unit2Entries.map(function (entry) { return [entry[0], entry[1]]; }));
+  [
+    'Committee Chair', 'Markup', 'Committee of the Whole', 'Revenue Bill', 'Partisan Voting',
+    'Polarization', 'Commander in Chief', 'Bargaining and Persuasion', 'Senate Confirmation',
+    'Congressional Agenda', 'Government Corporation', 'Delegated Discretionary Authority',
+    'Compliance Monitoring', 'Judicial Independence', 'Life Tenure', 'Court-Curbing', 'Power of the Purse'
+  ].forEach(function (term) {
+    if (!unit2Terms.has(term)) errors.push('Unit 2 glossary is missing current framework vocabulary: ' + term);
+  });
+  if (!unit2Terms.get('Line-Item Veto')?.includes('struck down the federal line-item veto in 1998') ||
+      !unit2Terms.get('War Powers Resolution')?.includes('within 48 hours') ||
+      !unit2Terms.get('Pocket Veto')?.includes('cannot override this veto')) {
+    errors.push('Unit 2 glossary needs accurate explanations of line-item, pocket, and war-powers rules.');
+  }
   const wealthEntry = glossaryAllEntries.find(function (entry) { return entry[0] === 'The Wealth of Nations'; });
   if (!wealthEntry || wealthEntry[1] !== 'Adam Smith argues that self-interest and competition can organize economic activity through free markets, with limited government interference.') {
     errors.push('The Wealth of Nations glossary entry must use its document title and a concise student-facing definition.');

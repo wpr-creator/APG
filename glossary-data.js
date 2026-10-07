@@ -760,14 +760,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "House Majority Leader",
-          "The person who is the second in command of the House of Representatives.",
+          "A leader of the House majority party who helps set its legislative priorities and build support for bills.",
           [
             "2.1"
           ]
         ],
         [
           "Senate Majority Leader",
-          "The person who has the most power in the Senate and is the head of the party with the most seats.",
+          "The elected leader of the Senate's majority party, who helps set the chamber's schedule and legislative priorities.",
           [
             "2.1"
           ]
@@ -788,7 +788,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Filibuster",
-          "A tactic through which an individual senator may use the right of unlimited debate to delay or block action on legislation.",
+          "A Senate tactic that prolongs debate to delay or prevent a vote on a bill.",
           [
             "2.1"
           ]
@@ -953,6 +953,48 @@ window.APG_GLOSSARY_UNITS = [
           [
             "2.1"
           ]
+        ],
+        [
+          "Committee Chair",
+          "The member who leads a committee, schedules its work, and guides its hearings and consideration of bills.",
+          [
+            "2.2"
+          ]
+        ],
+        [
+          "Markup",
+          "A committee meeting where members debate a bill and propose or vote on changes before it moves forward.",
+          [
+            "2.2"
+          ]
+        ],
+        [
+          "Committee of the Whole",
+          "A House procedure that lets representatives meet under less formal rules to consider legislation more quickly.",
+          [
+            "2.2"
+          ]
+        ],
+        [
+          "Revenue Bill",
+          "A bill that raises money through taxes; the Constitution requires these bills to begin in the House of Representatives.",
+          [
+            "2.2"
+          ]
+        ],
+        [
+          "Partisan Voting",
+          "Voting mainly in line with one's political party, which can make it harder for Congress to agree on legislation.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Polarization",
+          "A sharp ideological distance between political parties.",
+          [
+            "2.3"
+          ]
         ]
       ],
       "The Presidency": [
@@ -1007,14 +1049,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Pocket Veto",
-          "An informal veto when the president does not sign a bill within ten days while Congress is adjourned.",
+          "A veto that occurs when the president does not sign a bill within ten days (excluding Sundays) and Congress adjourns so the bill cannot be returned; the bill does not become law and Congress cannot override this veto.",
           [
             "2.3"
           ]
         ],
         [
           "Line-Item Veto",
-          "A type of veto that allows an executive to reject specific provisions of a bill rather than the whole bill.",
+          "A proposed power to cancel specific parts of a law. The Supreme Court struck down the federal line-item veto in 1998, so the president cannot use it today.",
           [
             "2.3"
           ]
@@ -1035,7 +1077,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "War Powers Resolution",
-          "A law restricting the president's power to maintain troops in combat for more than sixty days without congressional authorization.",
+          "A 1973 law requiring the president to notify Congress within 48 hours of sending U.S. forces into hostilities and generally withdraw them within 60 days unless Congress authorizes the action, with up to 30 additional days for withdrawal.",
           [
             "2.3"
           ]
@@ -1129,6 +1171,34 @@ window.APG_GLOSSARY_UNITS = [
           "A spike in presidential popularity during international crises.",
           [
             "2.3"
+          ]
+        ],
+        [
+          "Commander in Chief",
+          "The president's constitutional role as the top civilian leader of the U.S. armed forces.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Bargaining and Persuasion",
+          "Informal presidential tools—such as negotiation, rewards, and appeals—used to gain support from members of Congress.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Senate Confirmation",
+          "The Senate's approval of many presidential nominees, including Cabinet officers, ambassadors, and federal judges.",
+          [
+            "2.5"
+          ]
+        ],
+        [
+          "Congressional Agenda",
+          "The formal list of policies and bills Congress is considering at a given time.",
+          [
+            "2.5"
           ]
         ]
       ],
@@ -1300,6 +1370,27 @@ window.APG_GLOSSARY_UNITS = [
           [
             "2.4"
           ]
+        ],
+        [
+          "Government Corporation",
+          "A government-owned organization that provides a public service and operates somewhat like a business.",
+          [
+            "2.12"
+          ]
+        ],
+        [
+          "Delegated Discretionary Authority",
+          "Room Congress gives an agency to interpret a law and decide how to carry it out within legal limits.",
+          [
+            "2.13"
+          ]
+        ],
+        [
+          "Compliance Monitoring",
+          "Checking whether agencies, organizations, or recipients are following rules and using public funds as required.",
+          [
+            "2.14"
+          ]
         ]
       ],
       "The Federal Courts": [
@@ -1319,14 +1410,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Judicial Activism",
-          "A philosophy that justices should wield judicial review, sometimes creating bold new policies.",
+          "An approach that supports using judicial review to overturn precedent or invalidate laws and executive actions when judges find them unconstitutional.",
           [
             "2.5"
           ]
         ],
         [
           "Judicial Restraint",
-          "A philosophy that asserts justices should be cautious in overturning laws.",
+          "An approach that favors limiting judicial review and generally following constitutional and legal precedent.",
           [
             "2.5"
           ]
@@ -1478,6 +1569,28 @@ window.APG_GLOSSARY_UNITS = [
           [
             "2.5"
           ]
+        ],
+        [
+          "Judicial Independence",
+          "The ability of courts to decide cases without direct control by the president or Congress; life tenure helps protect this independence for federal judges.",
+          [
+            "2.8",
+            "2.10"
+          ]
+        ],
+        [
+          "Life Tenure",
+          "Federal judges may serve for life during good behavior, helping them make decisions independent of short-term political pressure.",
+          [
+            "2.10"
+          ]
+        ],
+        [
+          "Court-Curbing",
+          "Actions other branches can take to limit the Supreme Court's influence, such as changing jurisdiction by law, amending the Constitution, or shaping the Court through appointments.",
+          [
+            "2.11"
+          ]
         ]
       ],
       "Separation of Powers and Checks and Balances": [
@@ -1521,6 +1634,14 @@ window.APG_GLOSSARY_UNITS = [
           "A situation when control of the presidency and one or both chambers of Congress is split between the two major parties.",
           [
             "2.2"
+          ]
+        ],
+        [
+          "Power of the Purse",
+          "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs.",
+          [
+            "2.14",
+            "2.15"
           ]
         ]
       ],
