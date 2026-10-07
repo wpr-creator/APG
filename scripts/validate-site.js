@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20260929-css-cleanup',
+    'styles.css?v=20261007-unit2-glossary-landing',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261007-framework-glossary-audit',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-full-framework-audit',
+    'app.js?v=20261007-unit2-glossary-landing',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -689,9 +689,9 @@ function validateSharedCourseExperience() {
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
     errors.push('Upcoming Assignments must reflect the three Unit 1.01 assignments.');
   }
-  const expectedUnitUnlocks = { 'gov-0': false, 'gov-1': true, 'gov-2': false, 'gov-3': false, 'gov-4': false, 'gov-5': false };
+  const expectedUnitUnlocks = { 'gov-0': false, 'gov-1': true, 'gov-2': true, 'gov-3': false, 'gov-4': false, 'gov-5': false };
   if (JSON.stringify(parsedSiteContent.unitUnlocks) !== JSON.stringify(expectedUnitUnlocks)) {
-    errors.push('Unit 0 must be closed, Unit 1 current, and later units locked.');
+    errors.push('Unit 0 must be closed, Unit 1 must remain open, Unit 2 current, and later units locked.');
   }
   if (!fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('const displayUnits = [...data.units].sort((a, b) => (a.id === "gov-0") - (b.id === "gov-0"));') ||
       !fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('isClosedUnit ? "UNIT CLOSED"')) {
@@ -705,8 +705,14 @@ function validateSharedCourseExperience() {
   ].forEach(function (resourceId) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== false) errors.push('Later-course resource must remain locked: ' + resourceId);
   });
-  if (parsedSiteContent.currentUnit !== 'gov-1') {
-    errors.push('Unit 1 must be the current homepage unit.');
+  if (parsedSiteContent.currentUnit !== 'gov-2') {
+    errors.push('Unit 2 must be the current homepage unit.');
+  }
+  const unit2Landing = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  if (!unit2Landing.includes('if (id === "gov-2")') ||
+      !unit2Landing.includes('index.html?unit=2#words') ||
+      !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
+    errors.push('The open Unit 2 page must offer only a direct link to the Unit 2 glossary, and that link must filter to Unit 2 terms.');
   }
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');

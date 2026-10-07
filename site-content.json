@@ -1,9 +1,9 @@
 {
-  "currentUnit": "gov-1",
+  "currentUnit": "gov-2",
   "unitUnlocks": {
     "gov-0": false,
     "gov-1": true,
-    "gov-2": false,
+    "gov-2": true,
     "gov-3": false,
     "gov-4": false,
     "gov-5": false

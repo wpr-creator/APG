@@ -233,6 +233,16 @@
     const question = document.createElement("p");
     question.textContent = unit.question;
     header.append(eyebrow, title, question);
+
+    if (id === "gov-2") {
+      const glossaryLink = document.createElement("a");
+      glossaryLink.className = "unit-source unit-glossary-link";
+      glossaryLink.href = "index.html?unit=2#words";
+      glossaryLink.innerHTML = "<strong>OPEN UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
+      container.append(header, glossaryLink);
+      return;
+    }
+
     const unitSources = document.createElement("section");
     unitSources.className = "unit-sources";
     unitSources.setAttribute("aria-label", "Sources for this unit");
@@ -2070,6 +2080,8 @@
     } catch (error) {
       console.warn("Using default course content.", error);
     }
+    const requestedGlossaryUnit = new URLSearchParams(window.location.search).get("unit");
+    if (/^[1-5]$/.test(requestedGlossaryUnit || "")) glossaryFilter = `gov-${requestedGlossaryUnit}`;
     const current = data.units.find(unit => unit.id === currentUnitId);
     document.getElementById("current-unit-number").textContent = current.number;
     document.getElementById("now-title").textContent = current.title.toUpperCase();
