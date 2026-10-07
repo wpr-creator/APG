@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-unit2-glossary-landing',
+    'app.js?v=20261007-remove-redundant-units-button',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -709,6 +709,10 @@ function validateSharedCourseExperience() {
     errors.push('Unit 2 must be the current homepage unit.');
   }
   const unit2Landing = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));
+  if (unitDetailMarkup.includes('back-to-units') || unit2Landing.includes('getElementById("back-to-units")')) {
+    errors.push('Unit detail pages must rely on the persistent Units navigation instead of a duplicate All Units button.');
+  }
   if (!unit2Landing.includes('if (id === "gov-2")') ||
       !unit2Landing.includes('index.html?unit=2#words') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {

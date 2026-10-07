@@ -2375,7 +2375,6 @@
     nav.classList.toggle("open", open);
     menuButton.setAttribute("aria-expanded", String(open));
   });
-  document.getElementById("back-to-units").addEventListener("click", () => { location.hash = "units"; });
   document.querySelectorAll("[data-foundation-tab]").forEach(button => button.addEventListener("click", () => switchFoundationTab(button.dataset.foundationTab)));
   foundationDialog.querySelector(".foundation-dialog-close").addEventListener("click", closeFoundationDialog);
   foundationDialog.addEventListener("click", event => { if (event.target === foundationDialog) closeFoundationDialog(); });
