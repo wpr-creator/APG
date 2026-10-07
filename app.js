@@ -30,6 +30,7 @@
   let historyIndex = 0;
   let amendmentFilter = "all";
   let glossaryFilter = "all";
+  let glossaryBranchFilter = "all";
   let glossaryQuery = "";
   let presidentFacts = [];
   let presidentQuery = "";
@@ -131,6 +132,13 @@
   const glossaryWords = Array.from(glossaryEntries.values())
     .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units)])
     .sort((left, right) => left[0].replace(/^(?:a|an|the)\s+/i, "").localeCompare(right[0].replace(/^(?:a|an|the)\s+/i, ""), "en", { sensitivity: "base" }));
+  const unit2BranchGroups = {
+    congress: ["Congress", "Representation and Legislative Roles"],
+    presidency: ["The Presidency"],
+    bureaucracy: ["The Federal Bureaucracy"],
+    courts: ["The Federal Courts"],
+    interbranch: ["Separation of Powers and Checks and Balances"]
+  };
 
   function showView(name) {
     const isUnit = data.units.some(unit => unit.id === name);
@@ -447,10 +455,17 @@
 
   function renderWords() {
     wordGrid.replaceChildren();
+    const branchFilters = document.getElementById("glossary-branch-filters");
+    branchFilters.hidden = glossaryFilter !== "gov-2";
     const matches = glossaryWords.filter(word => {
       const inUnit = glossaryFilter === "all" || word[4].includes(glossaryFilter);
+      const references = word[3].split(" · ");
+      const branchGroups = unit2BranchGroups[glossaryBranchFilter] || [];
+      const inBranch = glossaryFilter !== "gov-2" || glossaryBranchFilter === "all" ||
+        branchGroups.some(group => references.includes(group)) ||
+        (glossaryBranchFilter === "congress" && word[0].toLowerCase() === "bicameralism");
       const text = `${word[0]} ${word[2]} ${word[3]}`.toLowerCase();
-      return inUnit && text.includes(glossaryQuery);
+      return inUnit && inBranch && text.includes(glossaryQuery);
     });
     matches.forEach(word => {
       const button = document.createElement("button");
@@ -464,10 +479,16 @@
     });
     const status = document.getElementById("glossary-status");
     const selectedFilter = document.querySelector(`[data-glossary-filter="${glossaryFilter}"]`);
-    const scope = glossaryFilter === "all" ? "ALL TERMS" : selectedFilter?.textContent || "SELECTED UNIT";
+    const branchButton = document.querySelector(`[data-glossary-branch-filter="${glossaryBranchFilter}"]`);
+    const scope = glossaryFilter === "all" ? "ALL TERMS" :
+      glossaryFilter === "gov-2" && glossaryBranchFilter !== "all" ? `UNIT 2 · ${branchButton?.textContent || "SELECTED BRANCH"}` :
+      selectedFilter?.textContent || "SELECTED UNIT";
     status.textContent = `${matches.length} ${matches.length === 1 ? "TERM" : "TERMS"} SHOWN · ${scope}`;
     document.querySelectorAll("[data-glossary-filter]").forEach(button => {
       button.setAttribute("aria-pressed", String(button.dataset.glossaryFilter === glossaryFilter));
+    });
+    document.querySelectorAll("[data-glossary-branch-filter]").forEach(button => {
+      button.setAttribute("aria-pressed", String(button.dataset.glossaryBranchFilter === glossaryBranchFilter));
     });
     if (!matches.length) {
       const empty = document.createElement("p");
@@ -2418,6 +2439,13 @@
     const button = event.target.closest("[data-glossary-filter]");
     if (!button) return;
     glossaryFilter = button.dataset.glossaryFilter;
+    glossaryBranchFilter = "all";
+    renderWords();
+  });
+  document.getElementById("glossary-branch-filters").addEventListener("click", event => {
+    const button = event.target.closest("[data-glossary-branch-filter]");
+    if (!button) return;
+    glossaryBranchFilter = button.dataset.glossaryBranchFilter;
     renderWords();
   });
   document.getElementById("president-search").addEventListener("input", event => {

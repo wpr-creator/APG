@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261007-clean-glossary-cards',
+    'styles.css?v=20261007-unit2-branch-glossary',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261007-framework-glossary-audit',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-clean-glossary-cards',
+    'app.js?v=20261007-unit2-branch-glossary',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -408,6 +408,14 @@ function validateSharedCourseExperience() {
   }
   if (homepageApp.includes('word-symbol') || homepageApp.includes('button.querySelector(".word-symbol")')) {
     errors.push('Glossary cards must not display the redundant letter marker above each term.');
+  }
+  ['congress', 'presidency', 'bureaucracy', 'courts', 'interbranch'].forEach(function (branch) {
+    if (!homepage.includes('data-glossary-branch-filter="' + branch + '"')) errors.push('Unit 2 glossary is missing its ' + branch + ' subfilter.');
+  });
+  if (!homepageApp.includes('const unit2BranchGroups = {') ||
+      !homepageApp.includes('word[0].toLowerCase() === "bicameralism"') ||
+      !homepageApp.includes('branchFilters.hidden = glossaryFilter !== "gov-2"')) {
+    errors.push('Unit 2 glossary branch filters must cover all branch-specific groups and remain scoped to Unit 2.');
   }
   [
     'data-foundation-tab="cases"',
