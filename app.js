@@ -256,7 +256,7 @@
       const glossaryLink = document.createElement("a");
       glossaryLink.className = "unit-source unit-glossary-link";
       glossaryLink.href = "index.html?unit=2#words";
-      glossaryLink.innerHTML = "<strong>OPEN UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
+      glossaryLink.innerHTML = "<strong>UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
 
       const practiceGroup = document.createElement("details");
       practiceGroup.className = "unit-resource-group unit-resource-group-practice unit-lesson-group";

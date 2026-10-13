@@ -358,8 +358,9 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-source:hover { background: var(--paper); }
 .unit-quick-resources { margin: 1.5rem 0 2rem; }
 .unit-quick-resources-heading { margin: 0 0 .8rem; }
-.unit-glossary-link { max-width: none; min-height: 76px; margin: 0 0 .65rem; border-top-color: var(--slate); }
-.unit-glossary-link strong { display: flex; justify-content: space-between; align-items: center; font-family: var(--type-display); font-size: 1rem; letter-spacing: .02em; }
+.unit-glossary-link { max-width: none; min-height: 64px; margin: 0 0 .65rem; border: 1px solid var(--line); border-left: 4px solid var(--black); border-radius: 4px; }
+.unit-glossary-link:hover { background: #f7f8f8; }
+.unit-source.unit-glossary-link strong { display: flex; justify-content: space-between; align-items: center; font-family: var(--type-display); font-size: clamp(1rem, 1.8vw, 1.25rem); letter-spacing: .025em; }
 .unit-source strong { font-size: .88rem; }
 .unit-source span { color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .04em; }
 .unit-resource-group { margin: 0 0 .65rem; border: 1px solid var(--line); border-radius: 4px; background: var(--white); scroll-margin-top: 1rem; }
