@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261013-unit2-resource-cards',
+    'app.js?v=20261013-unit2-resource-cards2',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
