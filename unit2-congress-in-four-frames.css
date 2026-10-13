@@ -18,12 +18,8 @@ body { margin: 0; color: var(--frame-ink); background: var(--frame-paper); font-
 .frames-shell { width: min(1180px, calc(100% - 2rem)); margin: 0 auto; padding: clamp(1.3rem, 4vw, 3rem) 0 4rem; }
 .page-heading { position: static; display: flex; width: auto; max-width: 1180px; align-items: center; justify-content: space-between; gap: 1rem; margin: 0 auto .6rem; padding: 0; border: 0; color: var(--frame-ink); background: transparent; box-shadow: none; }
 .page-heading h1 { margin: 0; font: 700 clamp(1.8rem, 4.2vw, 3.2rem)/1 Georgia, 'Times New Roman', serif; letter-spacing: -.045em; }
-.toolbar { display: flex; flex: 0 0 auto; flex-wrap: wrap; align-items: center; gap: .45rem; }
-.toolbar button { min-height: 44px; padding: .6rem .78rem; border: 1px solid var(--frame-ink); color: var(--frame-ink); background: white; font-size: .7rem; font-weight: 800; letter-spacing: .035em; cursor: pointer; }
-.frame-nav a:focus-visible, .toolbar button:focus-visible { outline: 3px solid #174f85; outline-offset: 3px; }
-.toolbar button:hover { color: white; background: var(--frame-ink); }
-.toolbar button[aria-pressed="true"] { color: white; background: var(--frame-ink); }
-.mode-status { margin-left: auto; color: var(--frame-muted); font-size: .8rem; }
+.key-label { margin: .35rem 0 0; color: var(--frame-red); font-size: .72rem; font-weight: 800; letter-spacing: .11em; text-transform: uppercase; }
+.frame-nav a:focus-visible { outline: 3px solid #174f85; outline-offset: 3px; }
 .frame-nav { position: static; display: flex; width: auto; flex-wrap: wrap; gap: .45rem; overflow: visible; padding: .25rem 0 1rem; border: 0; background: transparent; box-shadow: none; }
 .frame-nav a { flex: 0 0 auto; min-height: 42px; display: inline-flex; align-items: center; padding: .55rem .75rem; border: 1px solid var(--frame-line); color: var(--frame-ink); background: rgba(255,255,255,.65); font-size: .72rem; font-weight: 700; text-decoration: none; }
 .frame-nav a:hover { border-color: var(--frame-ink); }
@@ -36,7 +32,7 @@ body { margin: 0; color: var(--frame-ink); background: var(--frame-paper); font-
 .key-stamp { flex: 0 0 auto; min-width: 7.2rem; padding: .4rem .55rem; border: 1.5px solid #252525; border-radius: 8px; text-align: center; letter-spacing: .02em; }
 .sheet-title { margin: .38in 0 .27in; color: #151719; font: 700 clamp(1.7rem, 3.7vw, 2.8rem)/1.08 Georgia, 'Times New Roman', serif; letter-spacing: -.025em; }
 .sheet-rule { height: 3px; margin-bottom: .18in; background: var(--accent); }
-.sheet-instruction { margin: 0 0 .16in; color: #444; font-size: .68rem; font-weight: 800; }
+.sheet-instruction { margin: 0 0 .16in; color: var(--frame-muted); font-size: .72rem; font-weight: 700; letter-spacing: .055em; }
 .two-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .32in; }
 .three-columns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .2in; }
 .full-card { margin-bottom: .2in; }
@@ -48,9 +44,7 @@ body { margin: 0; color: var(--frame-ink); background: var(--frame-paper); font-
 .card-heading { padding-right: .55in; color: #202326; font-size: .73rem; line-height: 1.25; font-weight: 800; text-transform: uppercase; }
 .ap-mark { position: absolute; top: .09in; right: .11in; min-width: .42in; padding: .08in .1in; border: 1.5px solid #242424; border-radius: 4px; color: #222; background: white; font-size: .65rem; line-height: 1; font-weight: 800; text-align: center; }
 .answer-slot { display: flex; flex: 1; flex-direction: column; min-height: .37in; margin-top: .08in; color: #555; font-size: .73rem; line-height: 1.42; white-space: pre-line; }
-.answer-slot textarea { display: block; flex: 1; width: 100%; min-height: .38in; resize: none; border: 0; border-bottom: 1px solid #aeb5b8; border-radius: 0; color: #222; background: transparent; font: inherit; line-height: inherit; }
-.answer-slot textarea:focus { outline: 2px solid color-mix(in srgb, var(--accent) 55%, white); outline-offset: 1px; }
-.answer-slot textarea::placeholder { color: transparent; }
+.answer-slot .answer-text { display: block; }
 .compact { min-height: .66in; }
 .compact:nth-of-type(5) { min-height: .78in; }
 .tall { min-height: 1in; margin-top: .06in; }
@@ -84,13 +78,9 @@ body { margin: 0; color: var(--frame-ink); background: var(--frame-paper); font-
 .spending-card { min-height: 1.45in; }
 .spending-card .answer-slot { min-height: .8in; }
 
-body.answer-key .answer-slot textarea { display: none; }
-body.answer-key .answer-slot .answer-text { display: block; }
-body:not(.answer-key) .answer-slot .answer-text { display: none; }
 @media (max-width: 680px) {
   .frames-shell { width: min(100% - 1rem, 1180px); }
   .page-heading { align-items: flex-start; flex-direction: column; gap: .55rem; }
-  .toolbar { width: 100%; }
   .diagram-sheet { min-height: 0; padding: 1rem; }
   .sheet-meta { font-size: .58rem; }
   .key-stamp { min-width: 6.8rem; }
@@ -128,49 +118,4 @@ body:not(.answer-key) .answer-slot .answer-text { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
-}
-
-@page { size: letter portrait; margin: .36in; }
-@media print {
-  html, body { background: white !important; color: #000 !important; }
-  body { font-size: 9pt; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-  .apg-shared-header, .apg-return-link, .page-heading, .frame-nav, .skip-link { display: none !important; }
-  .frames-shell { width: 100%; margin: 0; padding: 0; }
-  .diagram-sheet { width: 100%; min-height: 0; height: 10.2in; margin: 0; padding: .06in .08in; border: 0; box-shadow: none; break-after: page; page-break-after: always; }
-  .diagram-sheet:last-child { break-after: auto; page-break-after: auto; }
-  .sheet-meta { font-size: 7pt; }
-  .key-stamp { padding: 3pt 6pt; border-color: #000; border-radius: 5pt; }
-  .sheet-title { margin: .22in 0 .16in; color: #000 !important; font-size: 23pt; }
-  .sheet-rule { height: 1.5pt; margin-bottom: .11in; background: #000 !important; }
-  .sheet-instruction { margin-bottom: .11in; font-size: 7pt; }
-  .two-columns { gap: .19in; }
-  .three-columns { gap: .12in; }
-  .chamber h3, .subsection-title { margin-bottom: .06in; font-size: 8pt; }
-  .diagram-card { margin-bottom: .055in; padding: .095in .11in; border: 1.1pt solid #111 !important; border-radius: 7pt; background: white !important; box-shadow: none !important; break-inside: avoid; }
-  .card-heading { color: #000; font-size: 7.1pt; }
-  .answer-slot { min-height: .24in; margin-top: .04in; color: #444; font-size: 7.2pt; line-height: 1.28; }
-  .answer-slot textarea { min-height: .26in; border-bottom: .75pt solid #777; color: #000; font-size: 7.2pt; }
-  .ap-mark { top: .055in; right: .07in; min-width: .3in; padding: .045in; border-color: #111; border-radius: 3pt; font-size: 6.2pt; }
-  .compact { min-height: .56in; }
-  .compact:nth-of-type(5) { min-height: .69in; }
-  .tall { min-height: .74in; margin-top: .035in; }
-  .power-card { min-height: 1.3in; }
-  .power-card .answer-slot { min-height: .92in; }
-  .sheet-footer { margin-top: .14in; padding-top: .06in; border-top: .7pt solid #111; color: #111; font-size: 6.5pt; }
-  .leader-card { min-height: .67in; }
-  .leader-card:nth-of-type(2) { min-height: .8in; }
-  .leader-card:nth-of-type(3) { min-height: .64in; }
-  .leader-card .answer-slot { min-height: .27in; }
-  .committee-overview { min-height: .62in; margin-top: .08in; }
-  .type-card { min-height: .7in; }
-  .chair-role { min-height: .7in; margin-top: .08in; }
-  .process-step { min-height: .66in; padding: .1in .12in; }
-  .process-step .answer-slot { min-height: .23in; }
-  .flow-arrow { height: .14in; color: #000 !important; font-size: 10pt; line-height: .14in; }
-  .budget-step { min-height: .54in; padding: .08in .12in; }
-  .budget-step .answer-slot { min-height: .18in; }
-  .spending-card { min-height: 1.18in; }
-  .spending-card .answer-slot { min-height: .66in; }
-  .diagram-card:hover, .diagram-card:focus-visible, .diagram-card.is-highlighted, .flow-arrow.is-highlighted { border-color: #111 !important; background: white !important; box-shadow: none !important; transform: none !important; }
-  .diagram-card, .sheet-rule, .flow-arrow { --accent: #111 !important; }
 }

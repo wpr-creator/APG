@@ -1,7 +1,6 @@
 (() => {
   "use strict";
 
-  const answerToggle = document.getElementById("answer-toggle");
   const cards = Array.from(document.querySelectorAll(".diagram-card[data-flow]"));
   let pinnedFlow = [];
 
@@ -9,28 +8,9 @@
     const answer = slot.dataset.answer;
     const answerText = document.createElement("span");
     answerText.className = "answer-text";
-    answerText.textContent = answer;
-    const field = document.createElement("textarea");
-    field.rows = 2;
-    field.spellcheck = true;
-    field.setAttribute("aria-label", `Your notes: ${slot.closest(".diagram-card").getAttribute("aria-label")}`);
-    field.hidden = document.body.classList.contains("answer-key");
-    slot.append(answerText, field);
+    answerText.textContent = answer.replace(/\\n/g, "\n");
+    slot.append(answerText);
   });
-
-  answerToggle.addEventListener("click", () => {
-    const showingKey = document.body.classList.toggle("answer-key");
-    answerToggle.setAttribute("aria-pressed", String(showingKey));
-    answerToggle.textContent = showingKey ? "SHOW WORKSHEET" : "SHOW ANSWER KEY";
-    document.querySelectorAll(".key-stamp").forEach(stamp => {
-      stamp.textContent = `${showingKey ? "KEY" : "WORKSHEET"} ${stamp.dataset.number} / 04`;
-    });
-    document.querySelectorAll(".footer-key").forEach(footer => {
-      footer.textContent = showingKey ? "CONGRESSIONAL DIAGRAMS / ANSWER KEY" : "CONGRESSIONAL DIAGRAMS / GUIDED NOTES";
-    });
-  });
-
-  document.getElementById("print-frames").addEventListener("click", () => window.print());
 
   function clearHighlights() {
     document.querySelectorAll("[data-flow].is-highlighted").forEach(element => element.classList.remove("is-highlighted"));
@@ -52,8 +32,7 @@
     card.addEventListener("focusout", event => {
       if (!card.contains(event.relatedTarget)) highlight(pinnedFlow);
     });
-    card.addEventListener("click", event => {
-      if (event.target.closest("textarea")) return;
+    card.addEventListener("click", () => {
       const selected = card.dataset.flow.split(/\s+/);
       const sameSelection = selected.length === pinnedFlow.length && selected.every(flow => pinnedFlow.includes(flow));
       pinnedFlow = sameSelection ? [] : selected;

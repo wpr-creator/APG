@@ -1657,7 +1657,7 @@ function validateCongressFourFrames() {
   const unit = fs.readFileSync(path.join(root, 'unit2.html'), 'utf8');
   if ((page.match(/class="diagram-sheet /g) || []).length !== 4 ||
       (page.match(/class="answer-slot" data-answer=/g) || []).length !== 44) {
-    errors.push('Congress in Four Frames must keep all four diagrams and 44 matching answer spaces.');
+    errors.push('Congress in Four Frames must keep all four answer-key diagrams and 44 matching response entries.');
   }
   [
     'Congress in Four Frames',
@@ -1665,15 +1665,16 @@ function validateCongressFourFrames() {
     'CONGRESSIONAL LEADERSHIP &amp; COMMITTEES',
     'HOW A BILL BECOMES A LAW',
     'FEDERAL BUDGET PROCESS',
-    'A legislature with two houses.',
+    'A legislature with two houses, such as the U.S. Congress.',
     'By population; represents the people.',
-    'Elected by a majority of House members; presides over the House legislative work.',
+    'The leader of the House of Representatives, chosen by an election of its members; presides over the House and guides its legislative work.',
     'If the House and Senate pass different versions, a conference committee reconciles the differences.',
     'Federal agencies spend funds as enacted laws direct.',
-    'Spending Congress approves each year, including defense, education, and infrastructure.',
-    'id="answer-toggle"',
-    'id="print-frames"',
-    'unit2-congress-in-four-frames.css?v=20261013-congress-four-frames-layout-fix'
+    'Spending required by existing laws that is locked in the budget.',
+    'Spending for programs and policies at the discretion of Congress and the president.',
+    'ANSWER KEY · 01 / 04',
+    'unit2-congress-in-four-frames.css?v=20261013-answer-key-only',
+    'unit2-congress-in-four-frames.js?v=20261013-answer-key-only'
   ].forEach(function (text) {
     if (!page.includes(text)) errors.push('Congress in Four Frames is missing supplied content or a control: ' + text);
   });
@@ -1682,15 +1683,13 @@ function validateCongressFourFrames() {
       !unit.includes("'congress-notes'")) {
     errors.push('Unit 2 must link the Congress diagrams and its branch-organized glossary.');
   }
-  if (!styles.includes('@page { size: letter portrait;') ||
-      !styles.includes('@media print') ||
-      !styles.includes('background: transparent; box-shadow: none;') ||
-      !styles.includes('.diagram-card, .sheet-rule, .flow-arrow { --accent: #111 !important; }') ||
-      !script.includes('window.print()') ||
-      !script.includes('answer-key')) {
-    errors.push('Congress in Four Frames needs its black-and-white print style and worksheet/key controls.');
+  if (!styles.includes('background: transparent; box-shadow: none;') ||
+      !script.includes('answerText.textContent = answer.replace') ||
+      /<textarea|answer-toggle|print-frames|\.answer-slot textarea|@media print/i.test(page + script + styles)) {
+    errors.push('Congress in Four Frames must be an answer-key-only interactive reference with no worksheet controls.');
   }
-  if (/Four diagrams on Congress|UNIT 2 GLOSSARY <span|Answer key · supplied wording shown/.test(page)) {
+  if (/Four diagrams on Congress|UNIT 2 GLOSSARY <span|Answer key · supplied wording shown/.test(page) ||
+      /worksheet and answer key|guided-note diagrams|Open worksheet|Four guided-note diagrams/i.test(unit)) {
     errors.push('Congress in Four Frames should not include redundant introductory copy or Unit 2 navigation links.');
   }
 }
