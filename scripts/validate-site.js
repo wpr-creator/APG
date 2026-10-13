@@ -1672,7 +1672,8 @@ function validateCongressFourFrames() {
     'Federal agencies spend funds as enacted laws direct.',
     'Spending Congress approves each year, including defense, education, and infrastructure.',
     'id="answer-toggle"',
-    'id="print-frames"'
+    'id="print-frames"',
+    'unit2-congress-in-four-frames.css?v=20261013-congress-four-frames-layout-fix'
   ].forEach(function (text) {
     if (!page.includes(text)) errors.push('Congress in Four Frames is missing supplied content or a control: ' + text);
   });
@@ -1683,6 +1684,7 @@ function validateCongressFourFrames() {
   }
   if (!styles.includes('@page { size: letter portrait;') ||
       !styles.includes('@media print') ||
+      !styles.includes('background: transparent; box-shadow: none;') ||
       !styles.includes('.diagram-card, .sheet-rule, .flow-arrow { --accent: #111 !important; }') ||
       !script.includes('window.print()') ||
       !script.includes('answer-key')) {
