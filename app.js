@@ -251,22 +251,30 @@
       pathHeading.className = "unit-path-heading";
       const pathTitle = document.createElement("h2");
       pathTitle.textContent = "LESSON PATH";
-      pathHeading.append(pathTitle);
+      const pathDescription = document.createElement("p");
+      pathDescription.textContent = "Open a lesson to find its notes, slides, readings, and practice.";
+      pathHeading.append(pathTitle, pathDescription);
 
       const lessonList = document.createElement("ol");
       lessonList.className = "unit-lessons lesson-list unit-lesson-list";
       lessonList.setAttribute("aria-label", "Unit 2 lessons");
       (unit.lessonTitles || []).forEach(([number, lessonTitle]) => {
         const item = document.createElement("li");
-        item.className = "lesson unit-lesson-title";
-        const lessonNumber = document.createElement("span");
-        lessonNumber.className = "lesson-num";
-        lessonNumber.textContent = number;
-        const titleBlock = document.createElement("div");
-        const heading = document.createElement("h3");
-        heading.textContent = lessonTitle;
-        titleBlock.append(heading);
-        item.append(lessonNumber, titleBlock);
+        const group = document.createElement("details");
+        group.className = "unit-resource-group unit-lesson-group";
+        const summary = document.createElement("summary");
+        summary.className = "unit-resource-summary";
+        const heading = document.createElement("h2");
+        heading.textContent = `${number} — ${lessonTitle}`;
+        const count = document.createElement("span");
+        count.className = "unit-resource-count";
+        count.textContent = "0 RESOURCES";
+        summary.append(heading, count);
+        const empty = document.createElement("p");
+        empty.className = "unit-lesson-empty";
+        empty.textContent = "Lesson resources will be added here.";
+        group.append(summary, empty);
+        item.appendChild(group);
         lessonList.appendChild(item);
       });
 

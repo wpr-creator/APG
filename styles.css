@@ -423,8 +423,10 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .lesson-list { display: grid; gap: .75rem; }
 .unit-lessons { margin: 2rem 0; }
 .unit-lesson-list { padding: 0; list-style: none; }
-.unit-lesson-title { grid-template-columns: 62px minmax(0, 1fr); align-items: center; border-left: 6px solid var(--slate); border-radius: 4px; }
-.unit-lesson-title h3 { font-family: var(--type-display); font-size: clamp(1.05rem, 2vw, 1.3rem); }
+.unit-lesson-group { margin-bottom: .65rem; }
+.unit-lesson-group:last-child { margin-bottom: 0; }
+.unit-lesson-group .unit-resource-summary h2 { font-family: var(--type-display); font-size: clamp(1rem, 1.8vw, 1.25rem); }
+.unit-lesson-empty { margin: 0; padding: 0 1rem 1rem 3rem; color: var(--muted); font-size: .9rem; }
 .lesson-card {
   min-height: 132px;
   padding: 1.25rem;
