@@ -1643,6 +1643,56 @@ function validateWhoIsTryingToBeHeard() {
   });
 }
 
+function validateCongressFourFrames() {
+  const pagePath = path.join(root, 'unit2-congress-in-four-frames.html');
+  const stylePath = path.join(root, 'unit2-congress-in-four-frames.css');
+  const scriptPath = path.join(root, 'unit2-congress-in-four-frames.js');
+  if (![pagePath, stylePath, scriptPath].every(fs.existsSync)) {
+    errors.push('Unit 2 Congress in Four Frames resources are incomplete.');
+    return;
+  }
+  const page = fs.readFileSync(pagePath, 'utf8');
+  const styles = fs.readFileSync(stylePath, 'utf8');
+  const script = fs.readFileSync(scriptPath, 'utf8');
+  const unit = fs.readFileSync(path.join(root, 'unit2.html'), 'utf8');
+  if ((page.match(/class="diagram-sheet /g) || []).length !== 4 ||
+      (page.match(/class="answer-slot" data-answer=/g) || []).length !== 44) {
+    errors.push('Congress in Four Frames must keep all four diagrams and 44 matching answer spaces.');
+  }
+  [
+    'Congress in Four Frames',
+    'CONGRESS: STRUCTURE &amp; POWERS',
+    'CONGRESSIONAL LEADERSHIP &amp; COMMITTEES',
+    'HOW A BILL BECOMES A LAW',
+    'FEDERAL BUDGET PROCESS',
+    'A legislature with two houses.',
+    'By population; represents the people.',
+    'Elected by a majority of House members; presides over the House legislative work.',
+    'If the House and Senate pass different versions, a conference committee reconciles the differences.',
+    'Federal agencies spend funds as enacted laws direct.',
+    'Spending Congress approves each year, including defense, education, and infrastructure.',
+    'id="answer-toggle"',
+    'id="print-frames"'
+  ].forEach(function (text) {
+    if (!page.includes(text)) errors.push('Congress in Four Frames is missing supplied content or a control: ' + text);
+  });
+  if (!unit.includes('href="unit2-congress-in-four-frames.html"') ||
+      !unit.includes('href="index.html?unit=2#words"') ||
+      !unit.includes("'congress-notes'")) {
+    errors.push('Unit 2 must link the Congress diagrams and its branch-organized glossary.');
+  }
+  if (!styles.includes('@page { size: letter portrait;') ||
+      !styles.includes('@media print') ||
+      !styles.includes('.diagram-card, .sheet-rule, .flow-arrow { --accent: #111 !important; }') ||
+      !script.includes('window.print()') ||
+      !script.includes('answer-key')) {
+    errors.push('Congress in Four Frames needs its black-and-white print style and worksheet/key controls.');
+  }
+  if (/Four diagrams on Congress|UNIT 2 GLOSSARY <span|Answer key · supplied wording shown/.test(page)) {
+    errors.push('Congress in Four Frames should not include redundant introductory copy or Unit 2 navigation links.');
+  }
+}
+
 walk(root);
 validateJavaScript();
 validateJson();
@@ -1654,6 +1704,7 @@ validateAccessibilityAndHygiene();
 validateSharedCourseExperience();
 validateCalendarData();
 validateWhoIsTryingToBeHeard();
+validateCongressFourFrames();
 
 if (errors.length) {
   console.error('\n' + errors.join('\n'));

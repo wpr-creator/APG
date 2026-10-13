@@ -341,6 +341,7 @@
   <!-- JUMP BAR -->
   <div class="unit-jumpbar">
     <a class="unit-jump-link" href="#concepts">Concepts</a>
+    <a class="unit-jump-link" href="#congress-notes">Guided Notes</a>
     <a class="unit-jump-link" href="#branches">The Three Branches</a>
     <a class="unit-jump-link" href="#cases">Cases</a>
     <a class="unit-jump-link" href="#documents">Documents</a>
@@ -446,6 +447,34 @@
             <div class="concept-row-body">The Commerce Clause (Article I, Sec. 8) gives Congress power to regulate commerce "among the several States." This has been the constitutional basis for most federal economic regulation since the New Deal. The Court interpreted it broadly until U.S. v. Lopez (1995) — the first time in 60 years the Court struck down a federal law for exceeding the Commerce Clause. Lopez established limits: Congress can regulate economic activity that substantially affects interstate commerce, but not non-economic activity just because it might indirectly affect commerce.</div>
           </div>
 
+        </div>
+      </div>
+
+      <!-- CONGRESS GUIDED NOTES AND UNIT GLOSSARY -->
+      <div id="congress-notes" class="unit-section">
+        <div class="unit-section-header">
+          <div class="unit-section-title">Guided Notes &amp; Glossary</div>
+          <div class="unit-section-rule"></div>
+        </div>
+        <div class="docs-bento">
+          <a class="doc-bento-card" href="unit2-congress-in-four-frames.html">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon" aria-hidden="true">▤</span>
+              <div class="doc-bento-title">Congress in Four Frames</div>
+              <div class="doc-bento-meta">Four guided-note diagrams</div>
+            </div>
+            <div class="doc-bento-body">Structure and powers · congressional leadership and committees · how a bill becomes a law · the federal budget</div>
+            <div class="doc-bento-footer">Open worksheet and answer key →</div>
+          </a>
+          <a class="doc-bento-card" href="index.html?unit=2#words">
+            <div class="doc-bento-top">
+              <span class="doc-bento-icon" aria-hidden="true">Aa</span>
+              <div class="doc-bento-title">Unit 2 Glossary</div>
+              <div class="doc-bento-meta">Terms organized by branch</div>
+            </div>
+            <div class="doc-bento-body">Review Congress, the presidency, the bureaucracy, federal courts, and concepts across branches.</div>
+            <div class="doc-bento-footer">Open Unit 2 glossary →</div>
+          </a>
         </div>
       </div>
 
@@ -689,7 +718,7 @@
       el.classList.add('active');
       document.getElementById('ep-' + panel).classList.add('active');
     }
-    const sections = ['concepts','branches','cases','documents','examguide','frq'];
+    const sections = ['concepts','congress-notes','branches','cases','documents','examguide','frq'];
     const jumpLinks = document.querySelectorAll('.unit-jump-link');
     window.addEventListener('scroll', () => {
       let current = sections[0];
