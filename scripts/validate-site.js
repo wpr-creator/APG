@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261013-unit2-concept-practice',
+    'styles.css?v=20261013-unit2-resource-layout',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261013-unit2-concept-practice',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261013-unit2-concept-practice',
+    'app.js?v=20261013-unit2-resource-layout',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -727,10 +727,12 @@ function validateSharedCourseExperience() {
   }
   if (!unit2Landing.includes('if (id === "gov-2")') ||
       !unit2Landing.includes('index.html?unit=2#words') ||
-      !unit2Landing.includes('container.append(header, glossaryLink, pathHeading, lessonList)') ||
+      !unit2Landing.includes('unitResources.append(resourceHeading, glossaryLink, practiceGroup)') ||
+      !unit2Landing.includes('container.append(header, unitResources, pathHeading, lessonList)') ||
+      !unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
-    errors.push('The open Unit 2 page must place a direct Unit 2 glossary link above its lesson path.');
+    errors.push('The open Unit 2 page must separate Unit Resources (glossary and concept practice) from the lesson path.');
   }
   [
     ["2.01", "Two Houses, One Congress"],

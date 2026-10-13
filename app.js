@@ -243,25 +243,24 @@
     header.append(eyebrow, title, question);
 
     if (id === "gov-2") {
+      const unitResources = document.createElement("section");
+      unitResources.className = "unit-quick-resources";
+      unitResources.setAttribute("aria-labelledby", "unit-quick-resources-title");
+      const resourceHeading = document.createElement("div");
+      resourceHeading.className = "unit-path-heading unit-quick-resources-heading";
+      const resourceTitle = document.createElement("h2");
+      resourceTitle.id = "unit-quick-resources-title";
+      resourceTitle.textContent = "UNIT RESOURCES";
+      resourceHeading.appendChild(resourceTitle);
+
       const glossaryLink = document.createElement("a");
       glossaryLink.className = "unit-source unit-glossary-link";
       glossaryLink.href = "index.html?unit=2#words";
       glossaryLink.innerHTML = "<strong>OPEN UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
-      const pathHeading = document.createElement("div");
-      pathHeading.className = "unit-path-heading";
-      const pathTitle = document.createElement("h2");
-      pathTitle.textContent = "LESSON PATH";
-      const pathDescription = document.createElement("p");
-      pathDescription.textContent = "Open a lesson to find its notes, slides, readings, and practice.";
-      pathHeading.append(pathTitle, pathDescription);
 
-      const lessonList = document.createElement("ol");
-      lessonList.className = "unit-lessons lesson-list unit-lesson-list";
-      lessonList.setAttribute("aria-label", "Unit 2 lesson path");
-      const practiceItem = document.createElement("li");
       const practiceGroup = document.createElement("details");
       practiceGroup.className = "unit-resource-group unit-resource-group-practice unit-lesson-group";
-      practiceGroup.id = "lesson-unit2-concept-practice";
+      practiceGroup.id = "unit2-concept-practice";
       const practiceSummary = document.createElement("summary");
       practiceSummary.className = "unit-resource-summary";
       const practiceTitle = document.createElement("h2");
@@ -274,8 +273,19 @@
       practiceEmpty.className = "unit-lesson-empty";
       practiceEmpty.textContent = "Concept practice will be added here.";
       practiceGroup.append(practiceSummary, practiceEmpty);
-      practiceItem.appendChild(practiceGroup);
-      lessonList.appendChild(practiceItem);
+      unitResources.append(resourceHeading, glossaryLink, practiceGroup);
+
+      const pathHeading = document.createElement("div");
+      pathHeading.className = "unit-path-heading";
+      const pathTitle = document.createElement("h2");
+      pathTitle.textContent = "LESSON PATH";
+      const pathDescription = document.createElement("p");
+      pathDescription.textContent = "Open a lesson to find its notes, slides, readings, and practice.";
+      pathHeading.append(pathTitle, pathDescription);
+
+      const lessonList = document.createElement("ol");
+      lessonList.className = "unit-lessons lesson-list unit-lesson-list";
+      lessonList.setAttribute("aria-label", "Unit 2 lesson path");
       (unit.lessonTitles || []).forEach(([number, lessonTitle]) => {
         const item = document.createElement("li");
         const group = document.createElement("details");
@@ -296,7 +306,7 @@
         lessonList.appendChild(item);
       });
 
-      container.append(header, glossaryLink, pathHeading, lessonList);
+      container.append(header, unitResources, pathHeading, lessonList);
       return;
     }
 
