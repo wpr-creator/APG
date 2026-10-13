@@ -91,6 +91,14 @@ window.COURSE_DATA = {
       id: "gov-2", number: "Unit 2", title: "Interactions Among Branches of Government",
       question: "How do the branches shape and carry out policy?",
       standards: "AP Unit Weight · 25–36%",
+      lessonTitles: [
+        ["2.01", "Two Houses, One Congress"],
+        ["2.02", "Whose Congress?"],
+        ["2.03", "The Energetic Executive"],
+        ["2.04", "The Least Dangerous?"],
+        ["2.05", "The Fourth Branch"],
+        ["2.06", "Power in Motion"]
+      ],
       lessons: [
         ["Congress", "How does Congress turn representation into policy?", "AP Topics 2.1–2.3", "Examine chamber structure, leadership, committees, elections, and lawmaking.", "Explain how a congressional rule affects policy"],
         ["The Presidency", "How has presidential power expanded and been constrained?", "AP Topics 2.4–2.6", "Analyze formal and informal powers, communication, and checks on the executive.", "Evaluate a presidential action using constitutional evidence"],

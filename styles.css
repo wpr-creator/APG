@@ -422,6 +422,9 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .president-facts a { margin-top: .8rem; display: inline-block; color: var(--black); font-size: .72rem; font-weight: 900; }
 .lesson-list { display: grid; gap: .75rem; }
 .unit-lessons { margin: 2rem 0; }
+.unit-lesson-list { padding: 0; list-style: none; }
+.unit-lesson-title { grid-template-columns: 62px minmax(0, 1fr); align-items: center; border-left: 6px solid var(--slate); border-radius: 4px; }
+.unit-lesson-title h3 { font-family: var(--type-display); font-size: clamp(1.05rem, 2vw, 1.3rem); }
 .lesson-card {
   min-height: 132px;
   padding: 1.25rem;

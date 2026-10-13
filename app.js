@@ -247,7 +247,30 @@
       glossaryLink.className = "unit-source unit-glossary-link";
       glossaryLink.href = "index.html?unit=2#words";
       glossaryLink.innerHTML = "<strong>OPEN UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
-      container.append(header, glossaryLink);
+      const pathHeading = document.createElement("div");
+      pathHeading.className = "unit-path-heading";
+      const pathTitle = document.createElement("h2");
+      pathTitle.textContent = "LESSON PATH";
+      pathHeading.append(pathTitle);
+
+      const lessonList = document.createElement("ol");
+      lessonList.className = "unit-lessons lesson-list unit-lesson-list";
+      lessonList.setAttribute("aria-label", "Unit 2 lessons");
+      (unit.lessonTitles || []).forEach(([number, lessonTitle]) => {
+        const item = document.createElement("li");
+        item.className = "lesson unit-lesson-title";
+        const lessonNumber = document.createElement("span");
+        lessonNumber.className = "lesson-num";
+        lessonNumber.textContent = number;
+        const titleBlock = document.createElement("div");
+        const heading = document.createElement("h3");
+        heading.textContent = lessonTitle;
+        titleBlock.append(heading);
+        item.append(lessonNumber, titleBlock);
+        lessonList.appendChild(item);
+      });
+
+      container.append(header, glossaryLink, pathHeading, lessonList);
       return;
     }
 

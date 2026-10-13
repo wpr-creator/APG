@@ -279,15 +279,15 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261007-unit2-branch-glossary',
+    'styles.css?v=20261013-unit2-lessons-glossary',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'course-data.js?v=20261007-framework-glossary-audit',
+    'course-data.js?v=20261013-unit2-lessons-glossary',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261007-unit2-branch-glossary',
+    'app.js?v=20261013-unit2-lessons-glossary',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -727,9 +727,21 @@ function validateSharedCourseExperience() {
   }
   if (!unit2Landing.includes('if (id === "gov-2")') ||
       !unit2Landing.includes('index.html?unit=2#words') ||
+      !unit2Landing.includes('container.append(header, glossaryLink, pathHeading, lessonList)') ||
+      !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
-    errors.push('The open Unit 2 page must offer only a direct link to the Unit 2 glossary, and that link must filter to Unit 2 terms.');
+    errors.push('The open Unit 2 page must place a direct Unit 2 glossary link above its lesson path.');
   }
+  [
+    ["2.01", "Two Houses, One Congress"],
+    ["2.02", "Whose Congress?"],
+    ["2.03", "The Energetic Executive"],
+    ["2.04", "The Least Dangerous?"],
+    ["2.05", "The Fourth Branch"],
+    ["2.06", "Power in Motion"]
+  ].forEach(function ([number, title]) {
+    if (!courseData.includes(`["${number}", "${title}"]`)) errors.push('Unit 2 lesson title is missing or out of sync: ' + number + ' — ' + title);
+  });
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');
   }
