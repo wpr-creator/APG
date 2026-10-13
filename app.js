@@ -257,7 +257,25 @@
 
       const lessonList = document.createElement("ol");
       lessonList.className = "unit-lessons lesson-list unit-lesson-list";
-      lessonList.setAttribute("aria-label", "Unit 2 lessons");
+      lessonList.setAttribute("aria-label", "Unit 2 lesson path");
+      const practiceItem = document.createElement("li");
+      const practiceGroup = document.createElement("details");
+      practiceGroup.className = "unit-resource-group unit-resource-group-practice unit-lesson-group";
+      practiceGroup.id = "lesson-unit2-concept-practice";
+      const practiceSummary = document.createElement("summary");
+      practiceSummary.className = "unit-resource-summary";
+      const practiceTitle = document.createElement("h2");
+      practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE";
+      const practiceCount = document.createElement("span");
+      practiceCount.className = "unit-resource-count";
+      practiceCount.textContent = "0 RESOURCES";
+      practiceSummary.append(practiceTitle, practiceCount);
+      const practiceEmpty = document.createElement("p");
+      practiceEmpty.className = "unit-lesson-empty";
+      practiceEmpty.textContent = "Concept practice will be added here.";
+      practiceGroup.append(practiceSummary, practiceEmpty);
+      practiceItem.appendChild(practiceGroup);
+      lessonList.appendChild(practiceItem);
       (unit.lessonTitles || []).forEach(([number, lessonTitle]) => {
         const item = document.createElement("li");
         const group = document.createElement("details");
