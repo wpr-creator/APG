@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261013-unit2-resource-cards2',
+    'app.js?v=20261014-unit2-worksheet-glossary',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1550,6 +1550,52 @@ function validateSharedCourseExperience() {
   }
 }
 
+function validateUnit2WorksheetGlossary() {
+  const glossaryPath = path.join(root, 'glossary-data.js');
+  const appPath = path.join(root, 'app.js');
+  const sandbox = { window: {} };
+  require('vm').runInNewContext(fs.readFileSync(glossaryPath, 'utf8'), sandbox);
+  const unit2 = (sandbox.window.APG_GLOSSARY_UNITS || []).find(function (unit) { return unit.key === 'unit2'; });
+  if (!unit2) {
+    errors.push('Unit 2 glossary data is missing.');
+    return;
+  }
+  const entries = Object.values(unit2.groups || {}).flat();
+  const expected = [
+    ['Bicameral Legislature', 'A legislature with two houses, such as the U.S. Congress.'],
+    ['Constituency', 'A body of voters in a given area who elect a representative or senator.'],
+    ['Filibuster', 'A Senate tactic that prolongs debate to delay or prevent a vote on a bill.'],
+    ['Standing Committee', 'A permanent legislative committee that meets regularly.'],
+    ['Executive Privilege', 'A right claimed by presidents to keep certain conversations, records, and transcripts confidential from outside scrutiny.'],
+    ['Bureaucratic Discretion', 'The power to decide how a law is implemented.'],
+    ['Enumerated Powers', 'Powers explicitly granted to the national government through the Constitution; also called express powers.'],
+    ['Implied Powers', 'Authority of the federal government beyond its expressed powers; considered necessary to carry out enumerated powers.'],
+    ['Power of the Purse', "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs."],
+    ['Mandatory Spending', 'Spending required by existing laws that is locked in the budget.'],
+    ['Discretionary Spending', 'Spending for programs and policies at the discretion of Congress and the president.'],
+    ['Cloture', 'A procedure through which senators can end a filibuster, provided three-fifths of senators (60) agree.'],
+    ['Markup', 'A committee meeting where members debate a bill and propose or vote on changes before it moves forward.'],
+    ['Conference Committee', 'A special joint committee that reconciles different bills passed in the House and Senate so a single bill results.'],
+    ['Appropriation', 'The process through which congressional committees allocate funds to executive branch agencies.'],
+    ['Logrolling', 'Trading of votes on legislation by members of Congress to get their earmarks passed.'],
+    ['Gridlock', "A slowdown or halt in Congress's ability to legislate, especially due to partisanship."],
+    ['Executive Order', 'Policy directives issued by presidents that do not require congressional approval.'],
+    ['Bureaucratic Adjudication', 'When the federal bureaucracy settles disputes between parties that arise over the implementation of federal laws.'],
+    ['Judicial Review', 'The authority of the Supreme Court to strike down a law or executive action if it conflicts with the Constitution; established in Marbury v. Madison.']
+  ];
+  expected.forEach(function ([term, definition]) {
+    const entry = entries.find(function (candidate) { return candidate[0].toLowerCase() === term.toLowerCase(); });
+    if (!entry) errors.push('Unit 2 glossary is missing worksheet term: ' + term);
+    else if (entry[1] !== definition) errors.push('Unit 2 glossary definition does not match the worksheet for: ' + term);
+  });
+  const app = fs.readFileSync(appPath, 'utf8');
+  if (!app.includes('existing.definitions.set(unitId, definition)') ||
+      !app.includes('word[5]?.[glossaryFilter]') ||
+      !app.includes('textContent = glossaryDefinition(word)')) {
+    errors.push('The glossary must use the selected unit’s definition when a term appears in multiple units.');
+  }
+}
+
 function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
@@ -1717,6 +1763,7 @@ validateLocalReferences();
 validateSocialMetadata();
 validateAccessibilityAndHygiene();
 validateSharedCourseExperience();
+validateUnit2WorksheetGlossary();
 validateCalendarData();
 validateWhoIsTryingToBeHeard();
 validateCongressFourFrames();

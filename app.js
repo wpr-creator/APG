@@ -105,7 +105,10 @@
     const key = term.trim().toLowerCase();
     const existing = glossaryEntries.get(key);
     if (existing) {
-      unitIds.forEach(unitId => existing.units.add(unitId));
+      unitIds.forEach(unitId => {
+        existing.units.add(unitId);
+        existing.definitions.set(unitId, definition);
+      });
       reference.split(" · ").filter(Boolean).forEach(item => existing.references.add(item));
       return;
     }
@@ -114,6 +117,7 @@
       symbol: symbol || term.trim().charAt(0).toUpperCase(),
       definition,
       units: new Set(unitIds),
+      definitions: new Map(unitIds.map(unitId => [unitId, definition])),
       references: new Set(reference.split(" · ").filter(Boolean))
     });
   }
@@ -130,8 +134,11 @@
     }));
   });
   const glossaryWords = Array.from(glossaryEntries.values())
-    .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units)])
+    .map(entry => [entry.term, entry.symbol, entry.definition, Array.from(entry.references).join(" · "), Array.from(entry.units), Object.fromEntries(entry.definitions)])
     .sort((left, right) => left[0].replace(/^(?:a|an|the)\s+/i, "").localeCompare(right[0].replace(/^(?:a|an|the)\s+/i, ""), "en", { sensitivity: "base" }));
+  function glossaryDefinition(word) {
+    return glossaryFilter !== "all" ? word[5]?.[glossaryFilter] || word[2] : word[2];
+  }
   const unit2BranchGroups = {
     congress: ["Congress", "Representation and Legislative Roles"],
     presidency: ["The Presidency"],
@@ -523,7 +530,7 @@
       const inBranch = glossaryFilter !== "gov-2" || glossaryBranchFilter === "all" ||
         branchGroups.some(group => references.includes(group)) ||
         (glossaryBranchFilter === "congress" && word[0].toLowerCase() === "bicameralism");
-      const text = `${word[0]} ${word[2]} ${word[3]}`.toLowerCase();
+      const text = `${word[0]} ${glossaryDefinition(word)} ${word[3]}`.toLowerCase();
       return inUnit && inBranch && text.includes(glossaryQuery);
     });
     matches.forEach(word => {
@@ -532,7 +539,7 @@
       button.className = "word-card";
       button.innerHTML = `<h2></h2><p></p>`;
       button.querySelector("h2").textContent = word[0].toUpperCase();
-      button.querySelector("p").textContent = word[2];
+      button.querySelector("p").textContent = glossaryDefinition(word);
       button.addEventListener("click", () => openWord(word, button));
       wordGrid.appendChild(button);
     });
@@ -1913,7 +1920,7 @@
   function openWord(word, source) {
     lastFocused = source;
     document.getElementById("dialog-term").textContent = word[0].toUpperCase();
-    document.getElementById("dialog-definition").textContent = word[2];
+    document.getElementById("dialog-definition").textContent = glossaryDefinition(word);
     document.getElementById("dialog-example").textContent = word[3];
     dialog.hidden = false;
     document.body.style.overflow = "hidden";
