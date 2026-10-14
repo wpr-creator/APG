@@ -340,7 +340,7 @@
         lessonList.appendChild(item);
       });
 
-      container.append(header, unitResources, pathHeading, lessonList);
+      container.append(header, pathHeading, lessonList, unitResources);
       return;
     }
 

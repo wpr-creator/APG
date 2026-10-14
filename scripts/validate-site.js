@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261014-unit2-01-congress-key',
+    'app.js?v=20261014-unit2-resources-bottom',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -728,7 +728,7 @@ function validateSharedCourseExperience() {
   if (!unit2Landing.includes('if (id === "gov-2")') ||
       !unit2Landing.includes('index.html?unit=2#words') ||
       !unit2Landing.includes('unitResources.append(resourceHeading, glossaryLink, practiceGroup)') ||
-      !unit2Landing.includes('container.append(header, unitResources, pathHeading, lessonList)') ||
+      !unit2Landing.includes('container.append(header, pathHeading, lessonList, unitResources)') ||
       !unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
