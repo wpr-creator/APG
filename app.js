@@ -250,20 +250,42 @@
     header.append(eyebrow, title, question);
 
     if (id === "gov-2") {
-      const unitResources = document.createElement("section");
-      unitResources.className = "unit-quick-resources";
-      unitResources.setAttribute("aria-labelledby", "unit-quick-resources-title");
-      const resourceHeading = document.createElement("div");
-      resourceHeading.className = "unit-path-heading unit-quick-resources-heading";
+      const unitResources = document.createElement("details");
+      unitResources.className = "unit-resource-group unit-lesson-group unit-quick-resources";
+      unitResources.id = "unit2-resources";
+      const resourceSummary = document.createElement("summary");
+      resourceSummary.className = "unit-resource-summary";
       const resourceTitle = document.createElement("h2");
-      resourceTitle.id = "unit-quick-resources-title";
       resourceTitle.textContent = "UNIT RESOURCES";
-      resourceHeading.appendChild(resourceTitle);
+      const resourceCount = document.createElement("span");
+      resourceCount.className = "unit-resource-count";
+      resourceCount.textContent = "2 RESOURCES";
+      resourceSummary.append(resourceTitle, resourceCount);
 
-      const glossaryLink = document.createElement("a");
-      glossaryLink.className = "unit-source unit-glossary-link";
-      glossaryLink.href = "index.html?unit=2#words";
-      glossaryLink.innerHTML = "<strong>UNIT 2 GLOSSARY <span aria-hidden=\"true\">→</span></strong>";
+      const resourceRow = document.createElement("section");
+      resourceRow.className = "unit-resource-row";
+      const resourceGrid = document.createElement("div");
+      resourceGrid.className = "unit-resource-grid";
+      [
+        { title: "UNIT 2 GLOSSARY", note: "TERMS BY BRANCH", url: "index.html?unit=2#words" },
+        { title: "UNIT 2 SLIDESHOWS", note: "ALL LESSON SLIDES", url: "https://slides.com/westonrogers/decks/apg-u2", external: true }
+      ].forEach(resource => {
+        const link = document.createElement("a");
+        link.className = "unit-resource";
+        link.href = resource.url;
+        if (resource.external) {
+          link.target = "_blank";
+          link.rel = "noopener";
+        }
+        const title = document.createElement("strong");
+        title.textContent = resource.title;
+        const note = document.createElement("span");
+        note.textContent = resource.note;
+        link.append(title, note);
+        resourceGrid.appendChild(link);
+      });
+      resourceRow.appendChild(resourceGrid);
+      unitResources.append(resourceSummary, resourceRow);
 
       const practiceGroup = document.createElement("details");
       practiceGroup.className = "unit-resource-group unit-resource-group-practice unit-lesson-group";
@@ -280,7 +302,6 @@
       practiceEmpty.className = "unit-lesson-empty";
       practiceEmpty.textContent = "Concept practice will be added here.";
       practiceGroup.append(practiceSummary, practiceEmpty);
-      unitResources.append(resourceHeading, glossaryLink, practiceGroup);
 
       const pathHeading = document.createElement("div");
       pathHeading.className = "unit-path-heading";
@@ -340,7 +361,7 @@
         lessonList.appendChild(item);
       });
 
-      container.append(header, pathHeading, lessonList, unitResources);
+      container.append(header, pathHeading, lessonList, unitResources, practiceGroup);
       return;
     }
 
