@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261013-unit2-resource-cards2',
+    'styles.css?v=20261014-unit2-resource-accents',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
@@ -1322,8 +1322,9 @@ function validateSharedCourseExperience() {
   }
   if (!primaryStyles.includes('.unit-resource { min-height: 68px;') ||
       !primaryStyles.includes('.unit-resource-group { margin: 0 0 .65rem;') ||
-      !primaryStyles.includes('.unit-resource-group-practice > .unit-resource-summary { border-left: 4px solid #bd941c;')) {
-    errors.push('Unit lesson panels must use compact neutral resources with a restrained practice cue.');
+      !primaryStyles.includes('.unit-resource-group-practice > .unit-resource-summary { border-left: 4px solid #bd941c;') ||
+      !primaryStyles.includes('.unit-quick-resources > .unit-resource-summary { border-left: 4px solid var(--charcoal);')) {
+    errors.push('Unit lesson panels must use compact resources with distinct Unit Resources and Concept Practice accents.');
   }
   if (appCode.includes('THE ROAD AHEAD') || appCode.includes('lessons.append(lessonHeading, lessonList)')) {
     errors.push('Unit pages must not render the retired Road Ahead lessons section.');

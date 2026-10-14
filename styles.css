@@ -374,6 +374,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .unit-resource-count { margin-left: auto; color: var(--muted); font-size: .68rem; font-weight: 850; letter-spacing: .07em; white-space: nowrap; }
 .unit-resource-group-assessments > .unit-resource-summary h2 { color: #8e2a37; }
 .unit-resource-group-practice > .unit-resource-summary { border-left: 4px solid #bd941c; }
+.unit-quick-resources > .unit-resource-summary { border-left: 4px solid var(--charcoal); }
 .unit-resource-row { margin: 0; padding: .25rem 1rem 1rem; }
 .unit-resource-row + .unit-resource-row { padding-top: 0; }
 .unit-resource-row > h3 { margin: 0 0 .45rem; padding-bottom: .35rem; color: var(--muted); border-bottom: 1px solid var(--line); font-size: .68rem; font-weight: 900; letter-spacing: .09em; }
