@@ -282,12 +282,12 @@ function validateSharedCourseExperience() {
     'styles.css?v=20261013-unit2-resource-cards2',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'course-data.js?v=20261013-unit2-concept-practice',
+    'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261014-unit2-worksheet-glossary',
+    'app.js?v=20261014-unit2-01-congress-key',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -744,6 +744,13 @@ function validateSharedCourseExperience() {
   ].forEach(function ([number, title]) {
     if (!courseData.includes(`["${number}", "${title}"]`)) errors.push('Unit 2 lesson title is missing or out of sync: ' + number + ' — ' + title);
   });
+  if (!courseData.includes('id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES"') ||
+      !courseData.includes('url: "unit2-congress-in-four-frames.html", category: "guided-notes"') ||
+      !courseData.includes('"2.01": [') ||
+      !unit2Landing.includes('const lessonResources = unit.lessonResources?.[number] || []') ||
+      !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
+    errors.push('The Congress in Four Frames answer key must appear as a counted 2.01 lesson resource.');
+  }
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');
   }

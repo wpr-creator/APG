@@ -294,6 +294,7 @@
       lessonList.className = "unit-lessons lesson-list unit-lesson-list";
       lessonList.setAttribute("aria-label", "Unit 2 lesson path");
       (unit.lessonTitles || []).forEach(([number, lessonTitle]) => {
+        const lessonResources = unit.lessonResources?.[number] || [];
         const item = document.createElement("li");
         const group = document.createElement("details");
         group.className = "unit-resource-group unit-lesson-group";
@@ -303,12 +304,38 @@
         heading.textContent = `${number} — ${lessonTitle}`;
         const count = document.createElement("span");
         count.className = "unit-resource-count";
-        count.textContent = "0 RESOURCES";
+        count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`;
         summary.append(heading, count);
-        const empty = document.createElement("p");
-        empty.className = "unit-lesson-empty";
-        empty.textContent = "Lesson resources will be added here.";
-        group.append(summary, empty);
+        group.appendChild(summary);
+        if (lessonResources.length) {
+          const resourceRow = document.createElement("section");
+          resourceRow.className = "unit-resource-row unit-resource-row-guided-notes";
+          const rowTitle = document.createElement("h3");
+          rowTitle.textContent = "GUIDED NOTES & PRACTICE";
+          const resourceGrid = document.createElement("div");
+          resourceGrid.className = "unit-resource-grid";
+          lessonResources.forEach(resource => {
+            const link = document.createElement("a");
+            link.className = "unit-resource unit-resource-guided-notes";
+            link.href = resource.url;
+            const resourceTitle = document.createElement("strong");
+            resourceTitle.textContent = resource.title;
+            link.appendChild(resourceTitle);
+            if (resource.note) {
+              const resourceNote = document.createElement("span");
+              resourceNote.textContent = resource.note;
+              link.appendChild(resourceNote);
+            }
+            resourceGrid.appendChild(link);
+          });
+          resourceRow.append(rowTitle, resourceGrid);
+          group.appendChild(resourceRow);
+        } else {
+          const empty = document.createElement("p");
+          empty.className = "unit-lesson-empty";
+          empty.textContent = "Lesson resources will be added here.";
+          group.appendChild(empty);
+        }
         item.appendChild(group);
         lessonList.appendChild(item);
       });

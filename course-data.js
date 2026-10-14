@@ -99,6 +99,11 @@ window.COURSE_DATA = {
         ["2.05", "The Fourth Branch"],
         ["2.06", "Power in Motion"]
       ],
+      lessonResources: {
+        "2.01": [
+          { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "ANSWER KEY · 4 DIAGRAMS", url: "unit2-congress-in-four-frames.html", category: "guided-notes" }
+        ]
+      },
       lessons: [
         ["Congress", "How does Congress turn representation into policy?", "AP Topics 2.1–2.3", "Examine chamber structure, leadership, committees, elections, and lawmaking.", "Explain how a congressional rule affects policy"],
         ["The Presidency", "How has presidential power expanded and been constrained?", "AP Topics 2.4–2.6", "Analyze formal and informal powers, communication, and checks on the executive.", "Evaluate a presidential action using constitutional evidence"],
