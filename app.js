@@ -651,14 +651,19 @@
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
-    const localRaceCards = [];
+    const schoolZipRaceCards = [];
+    const regionalHouseCards = [];
     electionData.races.forEach(race => {
       const article = document.createElement("article");
       article.className = "race-card";
-      if (race.local) {
+      if (race.regionalOnly) {
+        article.classList.add("regional-race");
+        article.hidden = true;
+        regionalHouseCards.push(article);
+      } else if (race.local) {
         article.classList.add("local-race");
         article.hidden = false;
-        localRaceCards.push(article);
+        schoolZipRaceCards.push(article);
       }
       const localLabel = race.local ? `<span class="local-label">${race.localLabel || "ZIP 92114 EXAMPLE"}</span>` : "";
       article.innerHTML = `${localLabel}<p class="eyebrow">${race.office}</p><h3>${race.question}</h3><p>${race.note}</p>`;
@@ -670,7 +675,7 @@
         if (candidate.priorities?.length) {
           const priorities = document.createElement("div");
           priorities.className = "candidate-detail";
-          priorities.innerHTML = `<h5>PRIORITIES</h5><ul>${candidate.priorities.map(item => `<li>${item}</li>`).join("")}</ul>`;
+          priorities.innerHTML = `<h5>${race.priorityLabel || "PRIORITIES"}</h5><ul>${candidate.priorities.map(item => `<li>${item}</li>`).join("")}</ul>`;
           candidateCard.appendChild(priorities);
         }
         if (candidate.endorsements?.length || candidate.endorsementNote) {
@@ -729,8 +734,8 @@
     const localLookupCard = document.createElement("article");
     localLookupCard.className = "race-card local-lookup-card";
     localLookupCard.hidden = true;
-    localLookupCard.innerHTML = `<span class="local-label">YOUR LOCAL RACES</span><h3>USE YOUR ADDRESS FOR THE EXACT LIST</h3><p>ZIP codes can cross district lines. The official San Diego County lookup will show your U.S. House race and any local races or measures.</p><a href="${electionData.location.lookupSource}" target="_blank" rel="noopener">FIND MY EXACT BALLOT ↗</a>`;
-    raceGrid.appendChild(localLookupCard);
+    localLookupCard.innerHTML = `<span class="local-label">REGIONAL REFERENCE</span><h3>SAN DIEGO-AREA HOUSE RACES</h3><p>These five congressional races are shown as regional examples, not as a confirmed ballot. ZIP codes can cross district lines.</p><a href="${electionData.location.lookupSource}" target="_blank" rel="noopener">FIND MY EXACT BALLOT ↗</a>`;
+    races.appendChild(localLookupCard);
     races.appendChild(raceGrid);
 
     const zipForm = locationCopy.querySelector("#election-zip-form");
@@ -751,14 +756,15 @@
         return;
       }
       const isSchoolZip = zip === electionData.location.schoolZip;
-      ballotZipTitle.textContent = `BALLOT FOR ZIP CODE ${zip}`;
-      localRaceCards.forEach(card => { card.hidden = !isSchoolZip; });
+      ballotZipTitle.textContent = isSchoolZip ? `BALLOT FOR ZIP CODE ${zip}` : `REGIONAL EXAMPLES FOR ZIP CODE ${zip}`;
+      schoolZipRaceCards.forEach(card => { card.hidden = !isSchoolZip; });
+      regionalHouseCards.forEach(card => { card.hidden = isSchoolZip; });
       localLookupCard.hidden = isSchoolZip;
       zipForm.hidden = true;
       changeZipButton.setAttribute("aria-expanded", "false");
       zipStatus.textContent = isSchoolZip
-        ? `${zip} is in ${electionData.location.district} and includes San Diego City Council District 4. These are examples; use the official lookup to confirm your exact ballot.`
-        : `${zip} selected. Use FIND MY EXACT BALLOT because a ZIP code can cross district lines.`;
+        ? `${zip} selected. The local races shown are examples; use the official lookup to confirm your exact ballot.`
+        : `${zip} selected. San Diego-area congressional races are shown as regional examples, not a confirmed ballot.`;
     });
 
     const propositions = document.createElement("section");

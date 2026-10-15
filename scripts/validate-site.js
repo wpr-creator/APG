@@ -279,15 +279,15 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-california-ballot',
+    'styles.css?v=20261015-san-diego-house-races',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-ballot-zip-copy',
-    'app.js?v=20261015-california-ballot',
+    'election-2026-data.js?v=20261015-san-diego-house-races',
+    'app.js?v=20261015-san-diego-house-races',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -357,8 +357,23 @@ function validateSharedCourseExperience() {
       electionData.location?.lookupSource !== 'https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html') {
     errors.push('Election tracker must default to The O’Farrell High School ZIP and link to the official San Diego County ballot lookup.');
   }
-  if (!Array.isArray(electionData.races) || electionData.races.length !== 3 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
+  if (!Array.isArray(electionData.races) || electionData.races.length !== 7 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
     errors.push('Election tracker candidate races are incomplete.');
+  }
+  const regionalHouseRaces = electionData.races.filter(function (race) { return race.regionalOnly; });
+  const expectedSanDiegoHouseRaces = {
+    'U.S. HOUSE · DISTRICT 48': ['MARNI VON WILPERT', 'JIM DESMOND'],
+    'U.S. HOUSE · DISTRICT 49': ['MIKE LEVIN', 'ARMEN KURDIAN'],
+    'U.S. HOUSE · DISTRICT 50': ['SCOTT PETERS', 'STEVE COHEN'],
+    'U.S. HOUSE · DISTRICT 51': ['SARA JACOBS', 'RICARDO CABRERA']
+  };
+  if (regionalHouseRaces.length !== 4 || Object.keys(expectedSanDiegoHouseRaces).some(function (office) {
+    const race = regionalHouseRaces.find(function (item) { return item.office === office; });
+    return !race?.candidates?.every(function (candidate, index) {
+      return candidate.name === expectedSanDiegoHouseRaces[office][index] && candidate.website;
+    }) || !race?.sources?.some(function (source) { return source.url.includes('cert-list-candidates.pdf'); });
+  })) {
+    errors.push('Regional San Diego congressional examples must include sourced candidate pairs for Districts 48–51.');
   }
   const district52 = electionData.races.find(function (race) { return race.office === 'U.S. HOUSE · DISTRICT 52'; });
   const cityDistrict4 = electionData.races.find(function (race) { return race.office === 'SAN DIEGO CITY COUNCIL · DISTRICT 4'; });
@@ -379,7 +394,7 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT', 'CHANGE TO MY ZIP', 'election-zip-form',
+    'BALLOT FOR ZIP CODE', 'REGIONAL EXAMPLES FOR ZIP CODE', 'REGIONAL REFERENCE', 'regionalHouseCards', 'FIND MY EXACT BALLOT', 'CHANGE TO MY ZIP', 'election-zip-form',
     'ballot-mark',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'

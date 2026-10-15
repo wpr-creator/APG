@@ -21,10 +21,135 @@ window.ELECTION_2026_DATA = {
       source: "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm"
     },
     {
+      office: "U.S. HOUSE · DISTRICT 48",
+      question: "WHO SHOULD REPRESENT DISTRICT 48?",
+      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      local: true,
+      regionalOnly: true,
+      localLabel: "DISTRICT 48 · SAN DIEGO AREA EXAMPLE",
+      priorityLabel: "PRIORITIES REPORTED BY KPBS",
+      candidates: [
+        {
+          name: "MARNI VON WILPERT",
+          party: "DEMOCRATIC",
+          fact: "San Diego City Councilmember, District 5; certified ballot designation: Councilwoman / Health Advocate.",
+          priorities: ["Health-care access", "Restoring Affordable Care Act subsidies", "Expanding affordable care options"],
+          website: "https://www.marnivonwilpert.com/"
+        },
+        {
+          name: "JIM DESMOND",
+          party: "REPUBLICAN",
+          fact: "San Diego County Supervisor, District 5.",
+          priorities: ["Housing and energy affordability", "Down-payment assistance for first-time homebuyers", "Producing more energy in California"],
+          website: "https://www.desmondforcongress.com/"
+        }
+      ],
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-48",
+      sourceLabel: "KPBS DISTRICT 48 PROFILES",
+      sources: [
+        { label: "KPBS candidate profiles and interviews", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-48" },
+        { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
+      ]
+    },
+    {
+      office: "U.S. HOUSE · DISTRICT 49",
+      question: "WHO SHOULD REPRESENT DISTRICT 49?",
+      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      local: true,
+      regionalOnly: true,
+      localLabel: "DISTRICT 49 · SAN DIEGO AREA EXAMPLE",
+      priorityLabel: "PRIORITIES REPORTED BY KPBS",
+      candidates: [
+        {
+          name: "MIKE LEVIN",
+          party: "DEMOCRATIC",
+          fact: "Incumbent U.S. representative; previously practiced law in energy and environmental policy.",
+          priorities: ["Congressional authority over federal spending", "Health care and food assistance", "Lower energy costs through renewable energy"],
+          website: "https://www.mikelevin.org/"
+        },
+        {
+          name: "ARMEN KURDIAN",
+          party: "REPUBLICAN",
+          fact: "Retired Navy captain.",
+          priorities: ["Cost of living", "Reducing regulations", "Supporting multiple energy sources"],
+          website: "https://kurdianforcongress.com/"
+        }
+      ],
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-49",
+      sourceLabel: "KPBS DISTRICT 49 PROFILES",
+      sources: [
+        { label: "KPBS candidate profiles and interviews", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-49" },
+        { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
+      ]
+    },
+    {
+      office: "U.S. HOUSE · DISTRICT 50",
+      question: "WHO SHOULD REPRESENT DISTRICT 50?",
+      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      local: true,
+      regionalOnly: true,
+      localLabel: "DISTRICT 50 · SAN DIEGO AREA EXAMPLE",
+      priorityLabel: "PRIORITIES REPORTED BY KPBS",
+      candidates: [
+        {
+          name: "SCOTT PETERS",
+          party: "DEMOCRATIC",
+          fact: "Incumbent U.S. representative; previously led the San Diego Unified Port District and served on the San Diego City Council.",
+          priorities: ["Lowering costs for San Diego families", "Protecting democratic institutions", "Bringing federal resources to San Diego"],
+          website: "https://scottpeters.com/"
+        },
+        {
+          name: "STEVE COHEN",
+          party: "REPUBLICAN",
+          fact: "Television news consultant; previously worked in broadcast journalism for about five decades.",
+          priorities: ["Support and defend the U.S. Constitution", "Reduce debt and pursue a balanced budget", "Protect Social Security"],
+          website: "https://cohenforcongressca50.com/"
+        }
+      ],
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-50",
+      sourceLabel: "KPBS DISTRICT 50 PROFILES",
+      sources: [
+        { label: "KPBS candidate profiles and interviews", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-50" },
+        { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
+      ]
+    },
+    {
+      office: "U.S. HOUSE · DISTRICT 51",
+      question: "WHO SHOULD REPRESENT DISTRICT 51?",
+      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      local: true,
+      regionalOnly: true,
+      localLabel: "DISTRICT 51 · SAN DIEGO AREA EXAMPLE",
+      priorityLabel: "PRIORITIES REPORTED BY KPBS",
+      candidates: [
+        {
+          name: "SARA JACOBS",
+          party: "DEMOCRATIC",
+          fact: "Incumbent U.S. representative; previously held policy positions at the U.S. State Department.",
+          priorities: ["Reducing the cost of living", "Humane immigration policies", "Ending the war in Iran"],
+          website: "https://sarajacobsforca.com/"
+        },
+        {
+          name: "RICARDO CABRERA",
+          party: "REPUBLICAN",
+          fact: "Business owner who operates a cybersecurity company.",
+          priorities: ["Lowering the cost of living", "Congressional term limits", "Stronger ethics standards"],
+          website: "https://www.cabreraforcongress2026.com/"
+        }
+      ],
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-51",
+      sourceLabel: "KPBS DISTRICT 51 PROFILES",
+      sources: [
+        { label: "KPBS candidate profiles and interviews", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-51" },
+        { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
+      ]
+    },
+    {
       office: "U.S. HOUSE · DISTRICT 52",
       question: "WHO SHOULD REPRESENT THIS AREA IN CONGRESS?",
       note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
       local: true,
+      localLabel: "DISTRICT 52 EXAMPLE",
       candidates: [
         {
           name: "JUAN VARGAS",
@@ -44,9 +169,9 @@ window.ELECTION_2026_DATA = {
           website: "https://www.belleforcongress.com/"
         }
       ],
-      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52",
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-52",
       sources: [
-        { label: "KPBS candidate profiles and endorsements", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52" },
+        { label: "KPBS candidate profiles and endorsements", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-52" },
         { label: "Juan Vargas official House biography", url: "https://vargas.house.gov/about/about-juan" },
         { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
       ]
