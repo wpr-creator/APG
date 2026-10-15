@@ -7,7 +7,6 @@ window.ELECTION_2026_DATA = {
     schoolName: "The O’Farrell High School",
     schoolZip: "92114",
     district: "CALIFORNIA DISTRICT 52",
-    note: "We’re showing local examples for The O’Farrell High School (92114). Change the ZIP if yours is different. ZIP codes can cross district lines, so confirm your exact ballot with the official lookup.",
     lookupSource: "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
   },
   races: [

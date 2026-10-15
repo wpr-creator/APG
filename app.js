@@ -632,15 +632,13 @@
     locationCard.className = "ballot-location";
     const locationCopy = document.createElement("div");
     locationCopy.innerHTML = `
-      <p class="eyebrow">YOUR BALLOT</p>
-      <h2>START WITH THE SCHOOL ZIP</h2>
-      <p>${electionData.location.note}</p>
-      <button class="zip-change-button" id="change-zip-button" type="button" aria-expanded="false" aria-controls="election-zip-form">CHANGE ZIP CODE</button>
+      <h2 id="ballot-zip-title">BALLOT FOR ZIP CODE ${electionData.location.schoolZip}</h2>
+      <button class="zip-change-button" id="change-zip-button" type="button" aria-expanded="false" aria-controls="election-zip-form">CHANGE TO MY ZIP</button>
       <form class="zip-chooser" id="election-zip-form" hidden>
         <label for="election-zip">YOUR ZIP CODE</label>
         <div><input id="election-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" value="${electionData.location.schoolZip}" required><button type="submit">USE THIS ZIP</button></div>
       </form>
-      <p class="zip-status" id="election-zip-status" role="status">Showing local examples for ZIP ${electionData.location.schoolZip}.</p>`;
+      <p class="zip-status" id="election-zip-status" role="status"></p>`;
     const lookupLink = document.createElement("a");
     lookupLink.href = electionData.location.lookupSource;
     lookupLink.target = "_blank";
@@ -739,6 +737,7 @@
     const zipInput = locationCopy.querySelector("#election-zip");
     const zipStatus = locationCopy.querySelector("#election-zip-status");
     const changeZipButton = locationCopy.querySelector("#change-zip-button");
+    const ballotZipTitle = locationCopy.querySelector("#ballot-zip-title");
     changeZipButton.addEventListener("click", () => {
       zipForm.hidden = !zipForm.hidden;
       changeZipButton.setAttribute("aria-expanded", String(!zipForm.hidden));
@@ -752,6 +751,7 @@
         return;
       }
       const isSchoolZip = zip === electionData.location.schoolZip;
+      ballotZipTitle.textContent = `BALLOT FOR ZIP CODE ${zip}`;
       localRaceCards.forEach(card => { card.hidden = !isSchoolZip; });
       localLookupCard.hidden = isSchoolZip;
       zipForm.hidden = true;

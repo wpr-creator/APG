@@ -279,15 +279,15 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-school-zip-default',
+    'styles.css?v=20261015-ballot-zip-copy',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-school-zip-default',
-    'app.js?v=20261015-school-zip-default',
+    'election-2026-data.js?v=20261015-ballot-zip-copy',
+    'app.js?v=20261015-ballot-zip-copy',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -379,7 +379,7 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'START WITH THE SCHOOL ZIP', 'FIND MY EXACT BALLOT', 'CHANGE ZIP CODE', 'election-zip-form',
+    'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT', 'CHANGE TO MY ZIP', 'election-zip-form',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
