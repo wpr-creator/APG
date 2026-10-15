@@ -116,10 +116,12 @@
       border: 1px solid #d4b896; overflow: hidden;
     }
     .concept-row-header {
+      list-style: none;
       display: flex; align-items: center; gap: 12px;
       padding: 12px 16px; cursor: pointer; transition: background 0.12s;
     }
-    .concept-row-header:hover { background: #f5ead6; }
+    .concept-row-header::-webkit-details-marker { display: none; }
+    .concept-row-header:hover, .concept-row-header:focus-visible { background: #f5ead6; }
     .concept-row-num {
       width: 28px; height: 28px; border-radius: 50%;
       background: #2c1810; color: #b8952a;
@@ -128,12 +130,12 @@
     }
     .concept-row-title { font-size: 14px; font-weight: 800; color: #2c1810; flex: 1; }
     .concept-row-toggle { font-size: 18px; color: #d4b896; transition: transform 0.2s; }
-    .concept-row.open .concept-row-toggle { transform: rotate(180deg); }
+    .concept-row[open] .concept-row-toggle { transform: rotate(180deg); }
     .concept-row-body {
       display: none; padding: 0 16px 16px 56px;
       font-size: 14px; line-height: 1.8; color: #5c3d2e;
     }
-    .concept-row.open .concept-row-body { display: block; }
+    .concept-row[open] .concept-row-body { display: block; }
 
     /* Case rows — Unit 1 has no required cases, but layout kept for consistency */
     .cases-list { display: flex; flex-direction: column; gap: 8px; }
@@ -205,11 +207,14 @@
     .exam-guide { background: #2c1810; border-radius: 14px; overflow: hidden; }
     .exam-guide-tabs { display: flex; border-bottom: 1px solid rgba(184,149,42,0.2); }
     .exam-guide-tab {
+      appearance: none; background: transparent; border: 0; border-bottom: 3px solid transparent;
+      font: inherit; text-align: left;
       padding: 12px 20px; font-size: 11px; font-weight: 800;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: rgba(184,149,42,0.45); cursor: pointer;
       border-bottom: 3px solid transparent; transition: all 0.15s;
     }
+    .exam-guide-tab:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
     .exam-guide-tab.active { color: #b8952a; border-bottom-color: #b8952a; }
     .exam-guide-panel { display: none; padding: 20px 24px; }
     .exam-guide-panel.active { display: block; }
@@ -248,6 +253,7 @@
 <link rel="stylesheet" href="course-shell.css?v=20260926-editorial-typography">
 <script src="course-shell.js?v=20260929-home-editorial-system" defer></script>
 <link rel="stylesheet" href="styles-design-system.css?v=20260929-home-editorial-system">
+<link rel="stylesheet" href="unit-pages.css?v=20261015-unit-guides-a11y">
 </head>
 <body class="unit-1">
 
@@ -275,7 +281,7 @@
   <!-- HERO BANNER -->
   <div class="unit-hero">
     <div class="unit-hero-content">
-      <div class="unit-hero-eyebrow">15–22% of Exam</div>
+      <div class="unit-hero-eyebrow">AP Government &amp; Politics · 15–22% of Exam</div>
       <h1 class="unit-hero-title">Foundations of American Democracy</h1>
       <p class="unit-hero-sub">This unit examines foundational ideas, the constitutional system, federalism, separation of powers, and checks and balances.</p>
       <div class="unit-hero-tags">
@@ -335,68 +341,61 @@
         </div>
         <div class="concepts-list">
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">1</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">1</div>
               <div class="concept-row-title">Natural Rights & Social Contract</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Enlightenment thinkers — especially John Locke — argued that people are born with natural rights (life, liberty, property) that no government can legitimately take away. Government exists by a "social contract": people give up some freedom in exchange for protection. If the government breaks the contract by violating rights, the people have the right to alter or abolish it. Jefferson built the Declaration of Independence on this framework. It is the philosophical DNA of the American founding.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">2</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">2</div>
               <div class="concept-row-title">The Articles of Confederation — Why They Failed</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">America's first constitution gave almost all power to the states. Congress could not tax, could not raise an army without state cooperation, could not regulate commerce between states, and needed unanimous consent to amend anything. Shays' Rebellion (1786) — a debt crisis in Massachusetts where the state government nearly collapsed — convinced leaders that the Articles were fatally weak. The Constitutional Convention (1787) was called to fix this. Instead, the delegates scrapped the Articles entirely and wrote a new constitution.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">3</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">3</div>
               <div class="concept-row-title">Constitutional Compromises</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">The Constitution was not inevitable — it required four major compromises. The <strong>Great Compromise</strong> created a bicameral legislature: the House (population-based) satisfied large states, the Senate (equal representation) satisfied small states. The <strong>Three-Fifths Compromise</strong> counted enslaved people as 3/5 of a person for representation — a moral catastrophe that empowered slaveholding states. The <strong>Commerce and Slave Trade Compromise</strong> prevented Congress from banning the slave trade until 1808. The <strong>Electoral College</strong> was created as a compromise between direct popular election and congressional selection of the president.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">4</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">4</div>
               <div class="concept-row-title">Federalism</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Federalism divides power between the national government and state governments, each with its own sphere of authority. The Constitution gives the federal government <strong>enumerated powers</strong> (listed in Article I, Section 8) and <strong>implied powers</strong> (from the Necessary and Proper Clause). The <strong>10th Amendment</strong> reserves all other powers to the states. <strong>Dual federalism</strong> (layer cake) kept the spheres separate; <strong>cooperative federalism</strong> (marble cake) has them intertwined since the New Deal. The Supremacy Clause establishes that when federal and state law conflict, federal law wins.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">5</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">5</div>
               <div class="concept-row-title">Separation of Powers & Checks and Balances</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">The Constitution divides power among three branches — legislative (Congress), executive (President), and judicial (courts) — so no single branch can dominate. But separation alone isn't enough; each branch also has tools to limit the others. Congress can override a presidential veto, the President nominates judges and can veto legislation, the courts can strike down laws as unconstitutional. Madison called this "ambition must be made to counteract ambition" — the system relies on the self-interest of each branch to prevent another from overreaching. This is why the system sometimes appears gridlocked: it's designed to make action difficult.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">6</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">6</div>
               <div class="concept-row-title">Federalist vs. Anti-Federalist Debate</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Ratification wasn't guaranteed. <strong>Federalists</strong> (Hamilton, Madison, Jay) argued in the Federalist Papers that a strong central government was necessary to prevent the chaos of the Articles era. A large republic, Madison argued in Federalist 10, would actually protect liberty better than a small one — more factions would cancel each other out. <strong>Anti-Federalists</strong> (writing as "Brutus," "Federal Farmer") feared the new government would destroy states' rights and individual liberty. They demanded a Bill of Rights as the price of ratification. Without that concession, the Constitution might not have been ratified. The Anti-Federalists lost the vote but won the argument about the Bill of Rights.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">7</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">7</div>
               <div class="concept-row-title">American Political Values & Culture</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">American political culture rests on a set of core values that most Americans broadly share despite political disagreements: <strong>liberty</strong> (freedom from government interference), <strong>equality</strong> (equal treatment under law and equal political participation), <strong>democracy</strong> (government by consent of the governed), <strong>individualism</strong> (personal responsibility and self-reliance), and <strong>rule of law</strong> (no one is above the law, including the government). These values coexist in tension — liberty and equality sometimes conflict — and Americans disagree about how to balance them. Understanding this tension is essential for AP Government.</div>
-          </div>
+          </details>
 
         </div>
       </div>
@@ -560,12 +559,12 @@
           <div class="unit-section-rule"></div>
         </div>
         <div class="exam-guide">
-          <div class="exam-guide-tabs">
-            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
-            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
-            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          <div class="exam-guide-tabs" role="tablist" aria-label="AP Exam Guide topics">
+            <button type="button" role="tab" id="tab-tested" aria-selected="true" aria-controls="ep-tested" class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</button>
+            <button type="button" role="tab" id="tab-mistakes" aria-selected="false" tabindex="-1" aria-controls="ep-mistakes" class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</button>
+            <button type="button" role="tab" id="tab-bigpicture" aria-selected="false" tabindex="-1" aria-controls="ep-bigpicture" class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</button>
           </div>
-          <div class="exam-guide-panel active" id="ep-tested">
+          <div class="exam-guide-panel active" id="ep-tested" role="tabpanel" aria-labelledby="tab-tested" tabindex="0">
             <ul style="padding-left:18px;margin:0;">
               <li>The specific weaknesses of the Articles of Confederation — know at least five</li>
               <li>The Great Compromise — why both chambers exist and how they differ</li>
@@ -576,7 +575,7 @@
               <li>Dual federalism vs. cooperative federalism — and which era each belongs to</li>
             </ul>
           </div>
-          <div class="exam-guide-panel" id="ep-mistakes">
+          <div class="exam-guide-panel" id="ep-mistakes" role="tabpanel" aria-labelledby="tab-mistakes" tabindex="0" hidden>
             <ul style="padding-left:18px;margin:0;">
               <li>Confusing Federalists (pro-Constitution) with federalism (the system of divided power) — they're related but different</li>
               <li>Thinking the Declaration of Independence is a legal document — it has no legal force; the Constitution is the law</li>
@@ -585,7 +584,7 @@
               <li>Confusing the Necessary and Proper Clause (implied powers) with the Supremacy Clause (federal law wins over state law) — they do different things</li>
             </ul>
           </div>
-          <div class="exam-guide-panel" id="ep-bigpicture">
+          <div class="exam-guide-panel" id="ep-bigpicture" role="tabpanel" aria-labelledby="tab-bigpicture" tabindex="0" hidden>
             <div class="exam-guide-bigpicture">Unit 1 is about one central tension: how do you create a government strong enough to function but not so strong it becomes tyrannical? The Founders had just fought a revolution against an overpowering central authority. They were terrified of concentrating power — in a king, in a majority, in any single faction. Every design choice in the Constitution is a response to that fear. The separation of powers, federalism, checks and balances, the Bill of Rights — all of it is a system for preventing any one group from controlling everything. <strong style="color:#b8952a;">Understand that fear, and you understand the whole unit.</strong></div>
           </div>
         </div>
@@ -639,11 +638,31 @@
 
   <script>
     function examTab(el, panel) {
-      document.querySelectorAll('.exam-guide-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.exam-guide-panel').forEach(p => p.classList.remove('active'));
-      el.classList.add('active');
-      document.getElementById('ep-' + panel).classList.add('active');
+      document.querySelectorAll('.exam-guide-tab').forEach(t => {
+        const selected = t === el;
+        t.classList.toggle('active', selected);
+        t.setAttribute('aria-selected', String(selected));
+        t.tabIndex = selected ? 0 : -1;
+      });
+      document.querySelectorAll('.exam-guide-panel').forEach(p => {
+        const selected = p.id === 'ep-' + panel;
+        p.classList.toggle('active', selected);
+        p.hidden = !selected;
+      });
     }
+    document.querySelectorAll('.exam-guide-tab').forEach((tab, index, tabs) => {
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        tabs[next].focus();
+        tabs[next].click();
+      });
+    });
     const sections = ['concepts','documents','amendments','examguide','frq'];
     const jumpLinks = document.querySelectorAll('.unit-jump-link');
     window.addEventListener('scroll', () => {

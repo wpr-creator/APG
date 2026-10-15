@@ -1,0 +1,109 @@
+/* Shared presentation for the two currently open AP Government unit guides. */
+body.unit-1 .unit-hero {
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4.5rem) 1.8rem !important;
+}
+body.unit-1 .unit-hero-content {
+  width: min(100%, 900px);
+  max-width: 900px !important;
+  margin: 0 auto !important;
+}
+body.unit-1 .unit-hero-stats { gap: 1.5rem; }
+body.unit-1 .unit-hero-stat { padding-left: 1.5rem; border-left: 1px solid var(--line); }
+body.unit-1 .unit-hero-stat:first-child { padding-left: 0; border-left: 0; }
+body.unit-2 .unit2-hero {
+  color: var(--black) !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(1.5rem, 5vw, 4.5rem) 1.8rem !important;
+  text-align: left !important;
+}
+body.unit-2 .unit2-hero-columns { display: none !important; }
+body.unit-2 .unit2-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 900px);
+  max-width: 900px !important;
+  margin: 0 auto !important;
+  text-align: left !important;
+}
+body.unit-2 .unit2-hero-title {
+  color: var(--black) !important;
+  font-family: var(--type-display) !important;
+  font-size: clamp(2.55rem, 6.3vw, 5.1rem) !important;
+  font-weight: 500 !important;
+  letter-spacing: -.055em !important;
+  line-height: .98 !important;
+  text-transform: none !important;
+}
+body.unit-2 .unit2-hero-eyebrow {
+  color: #8f3438 !important;
+  font-family: var(--type-label) !important;
+  font-size: var(--type-size-label) !important;
+  font-weight: 500 !important;
+  letter-spacing: .1em !important;
+}
+body.unit-2 .unit2-hero-sub {
+  max-width: 720px;
+  margin-left: 0 !important;
+  color: var(--muted) !important;
+  font-family: var(--type-reading) !important;
+  font-size: var(--type-size-deck) !important;
+  font-weight: 400 !important;
+  line-height: 1.55 !important;
+}
+body.unit-2 .unit2-hero-tag {
+  color: var(--black) !important;
+  background: var(--stone) !important;
+  border: 0 !important;
+  border-radius: 2px !important;
+}
+body.unit-2 .unit2-hero-stats {
+  width: min(100% - 3rem, 900px);
+  margin: 1.25rem auto 0;
+  justify-content: flex-start;
+}
+body.unit-2 .unit2-hero-stat { align-items: flex-start; padding: 0 1.5rem; }
+body.unit-2 .unit2-hero-stat:first-child { padding-left: 0; }
+body.unit-2 .unit2-hero-stat-num { color: #9b343c !important; }
+body.unit-2 .unit2-hero-stat-label {
+  color: #8f3438 !important;
+  font-family: var(--type-label) !important;
+  font-size: var(--type-size-label) !important;
+  font-weight: 500 !important;
+  letter-spacing: .1em !important;
+}
+
+/* Match the shared card, heading, and accent language across Unit 1 and 2. */
+body:is(.unit-1, .unit-2) :is(.concept-row, .case-row, .doc-bento-card, .branch-card, .amend-pill, .frq-row) {
+  color: var(--ink) !important;
+  background: var(--white) !important;
+  border-color: var(--line) !important;
+  border-radius: 3px !important;
+  box-shadow: none !important;
+}
+body:is(.unit-1, .unit-2) :is(.concept-row-header:hover, .concept-row-header:focus-visible) { background: var(--stone) !important; }
+body:is(.unit-1, .unit-2) :is(.concept-row-num, .case-row-year, .amend-pill-num) {
+  color: var(--white) !important;
+  background: var(--black) !important;
+}
+body:is(.unit-1, .unit-2) :is(.concept-row-title, .concept-row-body, .case-row-name, .case-row-ruling, .doc-bento-title, .doc-bento-body, .frq-row-title, .frq-row-preview, .amend-pill-title, .amend-pill-text) { color: var(--ink) !important; }
+body:is(.unit-1, .unit-2) .unit-sidebar-link { color: var(--ink) !important; background: transparent !important; border-color: var(--line) !important; }
+body:is(.unit-1, .unit-2) .unit-sidebar-link .sidebar-year { color: var(--muted) !important; }
+body:is(.unit-1, .unit-2) :is(.unit-sidebar-link:hover, .unit-sidebar-link.active) { color: var(--black) !important; background: var(--stone) !important; border-color: var(--line) !important; border-left-color: #9b343c !important; }
+body:is(.unit-1, .unit-2) .exam-guide { background: var(--black) !important; border-radius: 3px !important; }
+body:is(.unit-1, .unit-2) .exam-guide-tab { color: rgba(255, 253, 248, .72) !important; }
+body:is(.unit-1, .unit-2) .exam-guide-tab.active { color: var(--white) !important; border-bottom-color: #c86b6b !important; }
+body:is(.unit-1, .unit-2) .exam-guide-panel :is(li, .exam-guide-bigpicture) { color: var(--white) !important; }
+body:is(.unit-1, .unit-2) .doc-bento-top { background: var(--stone) !important; border-color: var(--line) !important; }
+body:is(.unit-1, .unit-2) .doc-bento-footer { color: #8f3438 !important; border-color: var(--line) !important; }
+body:is(.unit-1, .unit-2) .unit-section-rule { background: var(--line) !important; }
+body:is(.unit-1, .unit-2) .unit-section-count { color: #8f3438 !important; }
+body:is(.unit-1, .unit-2) .exam-guide-tab:focus-visible { outline: 3px solid #f6c453; outline-offset: -3px; }
+
+@media (max-width: 760px) {
+  body:is(.unit-1, .unit-2) :is(.unit-hero, .unit2-hero) { padding: 1.35rem 1.25rem !important; }
+  body.unit-2 .unit2-hero-stats { width: 100%; }
+}

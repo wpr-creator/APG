@@ -138,10 +138,12 @@
       box-shadow: 0 1px 3px rgba(26,26,46,0.05);
     }
     .concept-row-header {
+      list-style: none;
       display: flex; align-items: center; gap: 12px;
       padding: 12px 16px; cursor: pointer; transition: background 0.12s;
     }
-    .concept-row-header:hover { background: #f8f9fa; }
+    .concept-row-header::-webkit-details-marker { display: none; }
+    .concept-row-header:hover, .concept-row-header:focus-visible { background: #f8f9fa; }
     .concept-row-num {
       width: 28px; height: 28px; border-radius: 50%;
       background: #2d2d30; color: #c8a951;
@@ -150,12 +152,12 @@
     }
     .concept-row-title { font-size: 14px; font-weight: 800; color: #2d2d30; flex: 1; }
     .concept-row-toggle { font-size: 18px; color: #d1d5db; transition: transform 0.2s; }
-    .concept-row.open .concept-row-toggle { transform: rotate(180deg); }
+    .concept-row[open] .concept-row-toggle { transform: rotate(180deg); }
     .concept-row-body {
       display: none; padding: 0 16px 16px 56px;
       font-size: 14px; line-height: 1.8; color: #374151;
     }
-    .concept-row.open .concept-row-body { display: block; }
+    .concept-row[open] .concept-row-body { display: block; }
 
     /* Case rows */
     .cases-list { display: flex; flex-direction: column; gap: 8px; }
@@ -213,11 +215,14 @@
     .exam-guide { background: #2d2d30; border-radius: 14px; overflow: hidden; }
     .exam-guide-tabs { display: flex; border-bottom: 1px solid rgba(200,169,81,0.15); }
     .exam-guide-tab {
+      appearance: none; background: transparent; border: 0; border-bottom: 3px solid transparent;
+      font: inherit; text-align: left;
       padding: 12px 20px; font-size: 11px; font-weight: 800;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: rgba(200,169,81,0.4); cursor: pointer;
       border-bottom: 3px solid transparent; transition: all 0.15s;
     }
+    .exam-guide-tab:focus-visible { outline: 3px solid var(--focus); outline-offset: -3px; }
     .exam-guide-tab.active { color: #c8a951; border-bottom-color: #c8a951; }
     .exam-guide-panel { display: none; padding: 20px 24px; }
     .exam-guide-panel.active { display: block; }
@@ -291,6 +296,7 @@
 <link rel="stylesheet" href="course-shell.css?v=20260926-editorial-typography">
 <script src="course-shell.js?v=20260929-home-editorial-system" defer></script>
 <link rel="stylesheet" href="styles-design-system.css?v=20260929-home-editorial-system">
+<link rel="stylesheet" href="unit-pages.css?v=20261015-unit-guides-a11y">
 </head>
 <body class="unit-2">
 
@@ -321,7 +327,7 @@
       <span></span><span></span><span></span><span></span><span></span><span></span>
     </div>
     <div class="unit2-hero-content">
-      <div class="unit2-hero-eyebrow">AP Government &amp; Politics · 15–22% of Exam</div>
+      <div class="unit2-hero-eyebrow">AP Government &amp; Politics · 25–36% of Exam</div>
       <h1 class="unit2-hero-title">Interactions Among Branches of Government</h1>
       <p class="unit2-hero-sub">This unit examines Congress, the presidency, the courts, and the checks each branch can exercise over the others.</p>
       <div class="unit2-hero-tags">
@@ -384,68 +390,61 @@
         </div>
         <div class="concepts-list">
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">1</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">1</div>
               <div class="concept-row-title">Separation of Powers in Practice</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">The Constitution divides government into three branches — legislative, executive, judicial — each with distinct functions and powers. Congress makes law, the President executes law, the courts interpret law. But in practice these functions overlap constantly: the President issues executive orders that look like law, agencies write regulations that function as law, and courts sometimes look like they're making policy. The clean separation on paper is messier in reality, which is exactly why checks and balances are necessary.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">2</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">2</div>
               <div class="concept-row-title">Checks and Balances</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Each branch has specific constitutional tools to limit the other two. Congress can override a presidential veto (2/3 majority), impeach and remove the President and federal judges, and refuse to confirm appointments or ratify treaties. The President can veto legislation, nominate federal judges, and use executive orders. Courts can declare laws and executive actions unconstitutional. These mechanisms mean no single branch can act unchecked — but they also create gridlock when the branches are controlled by opposing parties.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">3</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">3</div>
               <div class="concept-row-title">Congressional Powers — Enumerated and Implied</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Article I, Section 8 lists Congress's enumerated (express) powers: taxation, borrowing, commerce regulation, declaring war, raising armies, coining money, and more. The Necessary and Proper Clause then expands these by allowing Congress to "make all Laws... necessary and proper" to carry out the enumerated powers — the source of implied powers. McCulloch v. Maryland (1819) established that implied powers are broad: Congress doesn't need an explicit grant to do something, just a reasonable connection to an enumerated power.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">4</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">4</div>
               <div class="concept-row-title">Presidential Powers — Formal and Informal</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Formal presidential powers come directly from Article II: commander-in-chief, treaty negotiation, appointments, the veto, pardons, and State of the Union. Informal powers have developed over time through practice and political evolution: executive orders, executive agreements (bypassing the Senate's treaty power), signing statements, and the bully pulpit — using the presidency's platform to influence public opinion and pressure Congress. The modern presidency exercises far more power than the Constitution's text suggests.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">5</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">5</div>
               <div class="concept-row-title">Judicial Review</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">Judicial review is the power of courts to strike down laws and executive actions that violate the Constitution. It is not in the Constitution — Chief Justice John Marshall established it in Marbury v. Madison (1803). Marshall's logic: the Constitution is supreme law; courts decide what the law means; therefore courts must be able to void laws that conflict with the Constitution. Without judicial review, the Constitution would be unenforceable against Congress and the President. Hamilton anticipated this power in Federalist 78.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">6</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">6</div>
               <div class="concept-row-title">The Federal Bureaucracy</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">The bureaucracy — the Cabinet departments, independent agencies, and regulatory bodies that actually implement federal law — is not mentioned in the Constitution but has become the fourth branch in practice. Congress creates agencies and funds them; the President appoints agency heads and directs policy; courts review agency decisions. Bureaucrats exercise enormous discretionary power through rulemaking, enforcement decisions, and policy interpretation. Iron triangles — the tight relationships between congressional committees, executive agencies, and interest groups — often determine policy outcomes more than elected officials do.</div>
-          </div>
+          </details>
 
-          <div class="concept-row" onclick="this.classList.toggle('open')">
-            <div class="concept-row-header">
-              <div class="concept-row-num">7</div>
+          <details class="concept-row">
+            <summary class="concept-row-header"><div class="concept-row-num">7</div>
               <div class="concept-row-title">Federalism and the Commerce Clause</div>
-              <div class="concept-row-toggle">⌄</div>
-            </div>
+              <div class="concept-row-toggle" aria-hidden="true">⌄</div>
+            </summary>
             <div class="concept-row-body">The Commerce Clause (Article I, Sec. 8) gives Congress power to regulate commerce "among the several States." This has been the constitutional basis for most federal economic regulation since the New Deal. The Court interpreted it broadly until U.S. v. Lopez (1995) — the first time in 60 years the Court struck down a federal law for exceeding the Commerce Clause. Lopez established limits: Congress can regulate economic activity that substantially affects interstate commerce, but not non-economic activity just because it might indirectly affect commerce.</div>
-          </div>
+          </details>
 
         </div>
       </div>
@@ -634,12 +633,12 @@
           <div class="unit-section-rule"></div>
         </div>
         <div class="exam-guide">
-          <div class="exam-guide-tabs">
-            <div class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</div>
-            <div class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</div>
-            <div class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</div>
+          <div class="exam-guide-tabs" role="tablist" aria-label="AP Exam Guide topics">
+            <button type="button" role="tab" id="tab-tested" aria-selected="true" aria-controls="ep-tested" class="exam-guide-tab active" onclick="examTab(this,'tested')">WHAT GETS TESTED</button>
+            <button type="button" role="tab" id="tab-mistakes" aria-selected="false" tabindex="-1" aria-controls="ep-mistakes" class="exam-guide-tab" onclick="examTab(this,'mistakes')">COMMON MISTAKES</button>
+            <button type="button" role="tab" id="tab-bigpicture" aria-selected="false" tabindex="-1" aria-controls="ep-bigpicture" class="exam-guide-tab" onclick="examTab(this,'bigpicture')">THE BIG PICTURE</button>
           </div>
-          <div class="exam-guide-panel active" id="ep-tested">
+          <div class="exam-guide-panel active" id="ep-tested" role="tabpanel" aria-labelledby="tab-tested" tabindex="0">
             <ul style="padding-left:18px;margin:0;">
               <li>Judicial review — what it is, where it came from (Marbury), why Hamilton anticipated it in Fed. 78</li>
               <li>Implied powers — the N&P Clause + McCulloch + the logic of "let the end be legitimate"</li>
@@ -650,7 +649,7 @@
               <li>Hamilton's argument for an energetic executive in Federalist 70</li>
             </ul>
           </div>
-          <div class="exam-guide-panel" id="ep-mistakes">
+          <div class="exam-guide-panel" id="ep-mistakes" role="tabpanel" aria-labelledby="tab-mistakes" tabindex="0" hidden>
             <ul style="padding-left:18px;margin:0;">
               <li>Saying judicial review is in the Constitution — it is NOT; Marshall created it in Marbury</li>
               <li>Confusing McCulloch (implied powers + supremacy) with Lopez (Commerce Clause limits) — they cut in opposite directions</li>
@@ -659,7 +658,7 @@
               <li>Saying Congress controls the bureaucracy — both Congress AND the President have authority over agencies, which creates tension</li>
             </ul>
           </div>
-          <div class="exam-guide-panel" id="ep-bigpicture">
+          <div class="exam-guide-panel" id="ep-bigpicture" role="tabpanel" aria-labelledby="tab-bigpicture" tabindex="0" hidden>
             <div class="exam-guide-bigpicture">Unit 2 is about institutional design under pressure. The Constitution created a structure, but that structure has been tested, stretched, and reinterpreted constantly. The President has more power than Article II says. Congress has less than it seems. The bureaucracy wasn't imagined by the Founders but now employs millions. Courts have the power of judicial review despite the Constitution never saying so. <strong style="color:#c8a951;">The question isn't just what the Constitution says — it's what each branch has been able to claim and hold over 230 years of political conflict.</strong></div>
           </div>
         </div>
@@ -713,11 +712,31 @@
 
   <script>
     function examTab(el, panel) {
-      document.querySelectorAll('.exam-guide-tab').forEach(t => t.classList.remove('active'));
-      document.querySelectorAll('.exam-guide-panel').forEach(p => p.classList.remove('active'));
-      el.classList.add('active');
-      document.getElementById('ep-' + panel).classList.add('active');
+      document.querySelectorAll('.exam-guide-tab').forEach(t => {
+        const selected = t === el;
+        t.classList.toggle('active', selected);
+        t.setAttribute('aria-selected', String(selected));
+        t.tabIndex = selected ? 0 : -1;
+      });
+      document.querySelectorAll('.exam-guide-panel').forEach(p => {
+        const selected = p.id === 'ep-' + panel;
+        p.classList.toggle('active', selected);
+        p.hidden = !selected;
+      });
     }
+    document.querySelectorAll('.exam-guide-tab').forEach((tab, index, tabs) => {
+      tab.addEventListener('keydown', event => {
+        let next = index;
+        if (event.key === 'ArrowRight') next = (index + 1) % tabs.length;
+        else if (event.key === 'ArrowLeft') next = (index - 1 + tabs.length) % tabs.length;
+        else if (event.key === 'Home') next = 0;
+        else if (event.key === 'End') next = tabs.length - 1;
+        else return;
+        event.preventDefault();
+        tabs[next].focus();
+        tabs[next].click();
+      });
+    });
     const sections = ['concepts','congress-notes','branches','cases','documents','examguide','frq'];
     const jumpLinks = document.querySelectorAll('.unit-jump-link');
     window.addEventListener('scroll', () => {
