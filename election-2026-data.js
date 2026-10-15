@@ -4,9 +4,10 @@ window.ELECTION_2026_DATA = {
   registrationDeadline: "OCTOBER 19, 2026",
   ballotMailingDeadline: "OCTOBER 5, 2026",
   location: {
-    exampleZip: "92114",
+    schoolName: "The O’Farrell High School",
+    schoolZip: "92114",
     district: "CALIFORNIA DISTRICT 52",
-    note: "Enter your ZIP code. Then use the official lookup for your exact ballot. A ZIP code can include more than one voting district.",
+    note: "We’re showing local examples for The O’Farrell High School (92114). Change the ZIP if yours is different. ZIP codes can cross district lines, so confirm your exact ballot with the official lookup.",
     lookupSource: "https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html"
   },
   races: [

@@ -279,15 +279,15 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-remove-history-research-link',
+    'styles.css?v=20261015-school-zip-default',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-voter-guide-races',
-    'app.js?v=20261015-remove-history-research-link',
+    'election-2026-data.js?v=20261015-school-zip-default',
+    'app.js?v=20261015-school-zip-default',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -353,9 +353,9 @@ function validateSharedCourseExperience() {
   const electionSandbox = { window: {} };
   require('vm').runInNewContext(electionCode, electionSandbox);
   const electionData = electionSandbox.window.ELECTION_2026_DATA;
-  if (electionData.location?.exampleZip !== '92114' || electionData.location?.district !== 'CALIFORNIA DISTRICT 52' ||
+  if (electionData.location?.schoolZip !== '92114' || electionData.location?.schoolName !== 'The O’Farrell High School' || electionData.location?.district !== 'CALIFORNIA DISTRICT 52' ||
       electionData.location?.lookupSource !== 'https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html') {
-    errors.push('Election tracker must use 92114 only as the District 52 example and link to the official San Diego County ballot lookup.');
+    errors.push('Election tracker must default to The O’Farrell High School ZIP and link to the official San Diego County ballot lookup.');
   }
   if (!Array.isArray(electionData.races) || electionData.races.length !== 3 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
     errors.push('Election tracker candidate races are incomplete.');
@@ -379,7 +379,7 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'START WITH YOUR ZIP CODE', 'FIND MY EXACT BALLOT', 'election-zip-form',
+    'START WITH THE SCHOOL ZIP', 'FIND MY EXACT BALLOT', 'CHANGE ZIP CODE', 'election-zip-form',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {

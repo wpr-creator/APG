@@ -828,6 +828,9 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .race-source-list summary { min-height: 44px; display: flex; align-items: center; color: var(--muted); font-size: .68rem; font-weight: 950; cursor: pointer; }
 .race-source-list a { min-height: 40px; padding: .35rem 0; display: flex; align-items: center; color: var(--black); font-size: .75rem; font-weight: 750; }
 .zip-chooser { margin-top: 1rem; }
+.zip-change-button { min-height: 44px; margin-top: .25rem; padding: .5rem 0; color: var(--black); background: transparent; border: 0; border-bottom: 1px solid var(--black); font: inherit; font-size: .7rem; font-weight: 950; cursor: pointer; }
+.zip-change-button:hover { color: var(--slate); }
+.zip-change-button:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
 .zip-chooser label { display: block; margin-bottom: .35rem; font-size: .72rem; font-weight: 950; letter-spacing: .08em; }
 .zip-chooser > div { display: flex; gap: .5rem; }
 .zip-chooser input { width: 10rem; min-height: 48px; padding: .75rem; border: 2px solid var(--black); background: var(--white); font: inherit; font-weight: 900; }
