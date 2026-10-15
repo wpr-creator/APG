@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-student-friendly-copy',
+    'election-2026-data.js?v=20261015-governor-priorities',
     'app.js?v=20261015-ballot-callout-removed',
     'data-view-link="home"',
     'data-view-link="units"',

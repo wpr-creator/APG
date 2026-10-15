@@ -14,9 +14,22 @@ window.ELECTION_2026_DATA = {
       office: "CALIFORNIA GOVERNOR",
       question: "WHO SHOULD BE CALIFORNIA’S GOVERNOR?",
       note: "The governor leads California’s government, proposes the budget, and signs bills into law or vetoes (rejects) them. Terms last four years.",
+      priorityLabel: "CAMPAIGN PRIORITIES",
       candidates: [
-        { name: "XAVIER BECERRA", party: "DEMOCRATIC", fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress." },
-        { name: "STEVE HILTON", party: "REPUBLICAN", fact: "Former policy adviser and TV host; he has not held elected office." }
+        {
+          name: "XAVIER BECERRA",
+          party: "DEMOCRATIC",
+          fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress.",
+          priorities: ["Strengthen Medi-Cal and make health care more affordable", "Build more affordable housing", "Lower living costs and challenge price gouging"],
+          website: "https://www.xavierbecerra2026.com/priorities/"
+        },
+        {
+          name: "STEVE HILTON",
+          party: "REPUBLICAN",
+          fact: "Former policy adviser and TV host; he has not held elected office.",
+          priorities: ["Cut state income taxes and lower gas prices", "Build more starter homes by reducing fees and rules", "Lower energy costs by changing state energy regulations"],
+          website: "https://stevehiltonforgovernor.com/"
+        }
       ],
       source: "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm"
     },
