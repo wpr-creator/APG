@@ -1,5 +1,5 @@
 window.ELECTION_2026_DATA = {
-  updated: "SEPTEMBER 20, 2026",
+  updated: "OCTOBER 15, 2026",
   electionDate: "NOVEMBER 3, 2026",
   registrationDeadline: "OCTOBER 19, 2026",
   ballotMailingDeadline: "OCTOBER 5, 2026",
@@ -26,10 +26,83 @@ window.ELECTION_2026_DATA = {
       note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
       local: true,
       candidates: [
-        { name: "JUAN VARGAS", party: "DEMOCRATIC", fact: "Current District 52 representative and former state and local elected official." },
-        { name: "JEFF BELLE", party: "REPUBLICAN", fact: "Business owner challenging the current representative." }
+        {
+          name: "JUAN VARGAS",
+          party: "DEMOCRATIC",
+          fact: "First elected to Congress in 2012. Previously served in the California State Senate and Assembly and on the San Diego City Council; he also worked in business.",
+          priorities: ["Tijuana River Valley pollution", "Immigration enforcement", "Affordability"],
+          endorsements: ["California Democratic Party", "California Teachers Association", "California Federation of Labor Unions", "American Federation of Government Employees", "Equality California"],
+          website: "https://www.votevargas.com/"
+        },
+        {
+          name: "JEFF BELLE",
+          party: "REPUBLICAN",
+          fact: "CEO of a San Diego-based private-equity firm and former member of the Contra Costa County Board of Education.",
+          priorities: ["Faith", "Freedom", "Finances"],
+          endorsements: [],
+          endorsementNote: "KPBS reports no endorsements from major organizations, parties, or unions.",
+          website: "https://www.belleforcongress.com/"
+        }
       ],
-      source: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf"
+      source: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52",
+      sources: [
+        { label: "KPBS candidate profiles and endorsements", url: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52" },
+        { label: "Juan Vargas official House biography", url: "https://vargas.house.gov/about/about-juan" },
+        { label: "Certified candidate list", url: "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf" }
+      ]
+    },
+    {
+      office: "SAN DIEGO CITY COUNCIL · DISTRICT 4",
+      question: "WHICH PRIORITIES SHOULD GUIDE DISTRICT 4?",
+      note: "The City Council votes on city laws and budgets and represents local communities. District 4 includes O’Farrell and ZIP code 92114. This is a local example; a ZIP code alone cannot confirm your ballot.",
+      local: true,
+      localLabel: "92114 LOCAL EXAMPLE",
+      nonpartisan: true,
+      candidates: [
+        {
+          name: "HENRY FOSTER III",
+          party: "NONPARTISAN CITY RACE",
+          fact: "The incumbent councilmember. His ballot statement highlights neighborhood services, jobs, small businesses, parks, libraries, streets, youth programs, and public safety.",
+          website: "https://www.henryfoster4sd.com/"
+        },
+        {
+          name: "MARTHA ABRAHAM",
+          party: "NONPARTISAN CITY RACE",
+          fact: "A neonatal ICU nurse, small-business owner, and mother. Her ballot statement emphasizes neighborhood investment, public health, listening to residents, and accountability.",
+          website: "https://martha4sandiego.com/"
+        }
+      ],
+      issues: [
+        {
+          title: "Housing and growth",
+          responses: [
+            "Foster says projects should contribute to infrastructure and community needs; he also emphasizes affordability and livable wages.",
+            "Abraham supports middle housing on commercial corridors when infrastructure can support it, and says growth should be matched with infrastructure, parks, and services."
+          ]
+        },
+        {
+          title: "City budget and services",
+          responses: [
+            "Foster says core services should come first. He proposes finding ineffective spending and operational inefficiencies, reviewing leases, and considering changes to how street repairs and emergency medical services are delivered.",
+            "Abraham says the city should address its structural budget deficit by reviewing administrative layers and reducing supervisory positions while protecting frontline services."
+          ]
+        },
+        {
+          title: "Neighborhood conditions",
+          responses: [
+            "Foster focuses on day-to-day quality of life, including public safety, streets, parks, and youth and workforce opportunities.",
+            "Abraham points to long-term disinvestment and names flooding, storm channels, roads, schools, and parks as concerns that affect health, safety, and opportunity."
+          ]
+        }
+      ],
+      source: "https://www.axios.com/local/san-diego/2026/10/15/san-diego-henry-foster-martha-abraham-city-services-infrastructure",
+      sourceLabel: "Axios candidate interview (Oct. 15, 2026)",
+      sources: [
+        { label: "City of San Diego official candidate and election information", url: "https://www.sandiego.gov/city-clerk/elections/city/electioninfo" },
+        { label: "Official June candidate statements", url: "https://www.sandiego.gov/sites/default/files/2026-05/sd-104-508-eng.pdf" },
+        { label: "Axios candidate interview (Oct. 15, 2026)", url: "https://www.axios.com/local/san-diego/2026/10/15/san-diego-henry-foster-martha-abraham-city-services-infrastructure" },
+        { label: "District 4 communities and ZIP codes", url: "https://www.sandiego.gov/citycouncil/cd4/communities" }
+      ]
     }
   ],
   propositions: [

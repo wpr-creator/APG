@@ -814,6 +814,21 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .candidate-list h4 { margin: 0 0 .25rem; font-size: 1rem; }
 .candidate-list strong { display: block; font-size: .7rem; letter-spacing: .06em; }
 .candidate-list p { margin: .65rem 0 0; font-size: .82rem; font-weight: 650; line-height: 1.4; }
+.candidate-detail { margin-top: .85rem; padding-top: .7rem; border-top: 1px solid var(--stone-dark); }
+.candidate-detail h5, .race-issues > h4, .race-issue-row h5 { margin: 0 0 .4rem; color: var(--muted); font-size: .66rem; font-weight: 950; letter-spacing: .08em; }
+.candidate-detail ul { margin: 0; padding-left: 1.15rem; font-size: .8rem; line-height: 1.45; }
+.candidate-detail p { margin: 0; }
+.candidate-website { min-height: 44px; margin-top: .6rem; display: inline-flex; align-items: center; color: var(--black); font-size: .67rem; font-weight: 950; }
+.race-issues { margin: 1rem 0; padding: 1rem; background: #f5f1e9; border-left: 4px solid var(--slate); }
+.race-issues > h4 { margin-bottom: .75rem; }
+.race-issue-row { padding: .75rem 0; border-top: 1px solid var(--stone-dark); }
+.race-issue-row > div { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; }
+.race-issue-row section { padding: .65rem; background: var(--white); }
+.race-issue-row section strong { font-size: .68rem; letter-spacing: .04em; }
+.race-issue-row section p { margin: .35rem 0 0; font-size: .79rem; font-weight: 600; line-height: 1.45; }
+.race-source-list { margin-top: .35rem; }
+.race-source-list summary { min-height: 44px; display: flex; align-items: center; color: var(--muted); font-size: .68rem; font-weight: 950; cursor: pointer; }
+.race-source-list a { min-height: 40px; padding: .35rem 0; display: flex; align-items: center; color: var(--black); font-size: .75rem; font-weight: 750; }
 .zip-chooser { margin-top: 1rem; }
 .zip-chooser label { display: block; margin-bottom: .35rem; font-size: .72rem; font-weight: 950; letter-spacing: .08em; }
 .zip-chooser > div { display: flex; gap: .5rem; }
@@ -1011,6 +1026,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .lesson { grid-template-columns: 1fr; }
   .lesson details, .standard-tag { grid-column: 1; }
   .ballot-header dl, .candidate-list, .proposition-choices { grid-template-columns: 1fr; }
+  .race-issue-row > div { grid-template-columns: 1fr; }
   .power-options, .power-limits { grid-template-columns: 1fr; }
   .bill-choices { grid-template-columns: 1fr; }
   .bill-proposal-grid button { grid-template-columns: 1fr; }

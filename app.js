@@ -652,30 +652,79 @@
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
-    let localRaceCard = null;
+    const localRaceCards = [];
     electionData.races.forEach(race => {
       const article = document.createElement("article");
       article.className = "race-card";
       if (race.local) {
         article.classList.add("local-race");
         article.hidden = true;
-        localRaceCard = article;
+        localRaceCards.push(article);
       }
-      const localLabel = race.local ? `<span class="local-label">ZIP 92114 EXAMPLE</span>` : "";
+      const localLabel = race.local ? `<span class="local-label">${race.localLabel || "ZIP 92114 EXAMPLE"}</span>` : "";
       article.innerHTML = `${localLabel}<p class="eyebrow">${race.office}</p><h3>${race.question}</h3><p>${race.note}</p>`;
       const candidateList = document.createElement("div");
       candidateList.className = "candidate-list";
       race.candidates.forEach(candidate => {
         const candidateCard = document.createElement("section");
         candidateCard.innerHTML = `<h4>${candidate.name}</h4><strong>${candidate.party}</strong><p>${candidate.fact}</p>`;
+        if (candidate.priorities?.length) {
+          const priorities = document.createElement("div");
+          priorities.className = "candidate-detail";
+          priorities.innerHTML = `<h5>PRIORITIES</h5><ul>${candidate.priorities.map(item => `<li>${item}</li>`).join("")}</ul>`;
+          candidateCard.appendChild(priorities);
+        }
+        if (candidate.endorsements?.length || candidate.endorsementNote) {
+          const endorsements = document.createElement("div");
+          endorsements.className = "candidate-detail";
+          endorsements.innerHTML = `<h5>SELECTED ENDORSEMENTS</h5>${candidate.endorsements?.length ? `<ul>${candidate.endorsements.map(item => `<li>${item}</li>`).join("")}</ul>` : `<p>${candidate.endorsementNote}</p>`}`;
+          candidateCard.appendChild(endorsements);
+        }
+        if (candidate.website) {
+          const website = document.createElement("a");
+          website.className = "candidate-website";
+          website.href = candidate.website;
+          website.target = "_blank";
+          website.rel = "noopener";
+          website.textContent = "CANDIDATE WEBSITE ↗";
+          candidateCard.appendChild(website);
+        }
         candidateList.appendChild(candidateCard);
       });
+      article.appendChild(candidateList);
+      if (race.issues?.length) {
+        const comparison = document.createElement("section");
+        comparison.className = "race-issues";
+        comparison.setAttribute("aria-label", "Candidate issue comparison");
+        comparison.innerHTML = `<h4>WHAT THEY SAY ABOUT THE ISSUES</h4>`;
+        race.issues.forEach(issue => {
+          const row = document.createElement("div");
+          row.className = "race-issue-row";
+          row.innerHTML = `<h5>${issue.title}</h5><div><section><strong>${race.candidates[0].name}</strong><p>${issue.responses[0]}</p></section><section><strong>${race.candidates[1].name}</strong><p>${issue.responses[1]}</p></section></div>`;
+          comparison.appendChild(row);
+        });
+        article.appendChild(comparison);
+      }
       const source = document.createElement("a");
       source.href = race.source;
       source.target = "_blank";
       source.rel = "noopener";
-      source.textContent = "CHECK THE RACE SOURCE ↗";
-      article.append(candidateList, source);
+      source.textContent = `${race.sourceLabel || "CHECK THE RACE SOURCE"} ↗`;
+      article.appendChild(source);
+      if (race.sources?.length) {
+        const sourceList = document.createElement("details");
+        sourceList.className = "race-source-list";
+        sourceList.innerHTML = `<summary>MORE SOURCES</summary>`;
+        race.sources.forEach(item => {
+          const link = document.createElement("a");
+          link.href = item.url;
+          link.target = "_blank";
+          link.rel = "noopener";
+          link.textContent = `${item.label} ↗`;
+          sourceList.appendChild(link);
+        });
+        article.appendChild(sourceList);
+      }
       raceGrid.appendChild(article);
     });
     const localLookupCard = document.createElement("article");
@@ -695,10 +744,10 @@
         return;
       }
       const isExampleZip = zip === electionData.location.exampleZip;
-      localRaceCard.hidden = !isExampleZip;
+      localRaceCards.forEach(card => { card.hidden = !isExampleZip; });
       localLookupCard.hidden = isExampleZip;
       zipStatus.textContent = isExampleZip
-        ? `${zip} is in ${electionData.location.district}. The District 52 candidates are shown below.`
+        ? `${zip} is in ${electionData.location.district} and includes San Diego City Council District 4. These are examples; use the official lookup to confirm your exact ballot.`
         : `${zip} selected. Use FIND MY EXACT BALLOT because a ZIP code can cross district lines.`;
     });
 

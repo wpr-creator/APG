@@ -279,15 +279,15 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261014-unit2-resource-accents',
+    'styles.css?v=20261015-voter-guide-races',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20260920-election-all',
-    'app.js?v=20261014-unit2-bottom-accordions',
+    'election-2026-data.js?v=20261015-voter-guide-races',
+    'app.js?v=20261015-voter-guide-races',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -354,8 +354,14 @@ function validateSharedCourseExperience() {
       electionData.location?.lookupSource !== 'https://www.sdvote.com/content/rov/en/sample-ballot-info-lookup.html') {
     errors.push('Election tracker must use 92114 only as the District 52 example and link to the official San Diego County ballot lookup.');
   }
-  if (!Array.isArray(electionData.races) || electionData.races.length !== 2 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
+  if (!Array.isArray(electionData.races) || electionData.races.length !== 3 || electionData.races.some(function (race) { return race.candidates?.length !== 2; })) {
     errors.push('Election tracker candidate races are incomplete.');
+  }
+  const district52 = electionData.races.find(function (race) { return race.office === 'U.S. HOUSE · DISTRICT 52'; });
+  const cityDistrict4 = electionData.races.find(function (race) { return race.office === 'SAN DIEGO CITY COUNCIL · DISTRICT 4'; });
+  if (!district52?.candidates?.every(function (candidate) { return candidate.priorities?.length === 3 && candidate.website; }) ||
+      !cityDistrict4?.local || !cityDistrict4?.issues?.length || !cityDistrict4.sources?.some(function (source) { return source.url.includes('sandiego.gov'); })) {
+    errors.push('District 52 profiles and sourced San Diego City Council District 4 comparison are incomplete.');
   }
   if (!Array.isArray(electionData.propositions) || electionData.propositions.length !== 14) {
     errors.push('Election tracker must include all 14 statewide propositions.');
