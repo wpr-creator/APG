@@ -130,7 +130,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .home-dashboard .history-body { min-height: 0; padding: 1.2rem 0 .6rem; grid-template-columns: minmax(90px, 130px) minmax(0, 1fr); gap: 1rem; }
 .home-dashboard .history-year { color: #9b343c; font-family: var(--type-display); font-size: clamp(2.7rem, 5vw, 4rem); font-weight: 500; }
 .home-dashboard .history-body p { font-size: .95rem; font-weight: 400; line-height: 1.5; }
-.home-dashboard .history-source { color: #8f3438; font-size: .7rem; }
 .home-dashboard .upcoming-row { padding: .65rem 0; }
 .home-dashboard .upcoming-row span { color: #46525b; background: transparent; font-weight: 750; }
 .course-links-card { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 clamp(1rem, 3vw, 2rem); }
@@ -208,7 +207,6 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .history-body { min-height: 130px; padding: 1.25rem 0; display: grid; grid-template-columns: minmax(145px, 175px) minmax(0, 1fr); gap: 1.25rem; align-items: start; }
 .history-year { max-width: 100%; color: var(--stone-dark); font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; font-weight: 950; letter-spacing: -.06em; white-space: nowrap; }
 .history-body p { margin: 0 0 .8rem; max-width: 850px; font-size: 1.05rem; font-weight: 650; }
-.history-source { min-height: 44px; padding: .55rem 0; display: inline-flex; align-items: center; font-size: .78rem; font-weight: 900; text-transform: uppercase; }
 .upcoming-list { display: grid; }
 .upcoming-unit-link { min-height: 44px; padding: .55rem .7rem; display: inline-flex; align-items: center; color: var(--white); background: var(--black); text-decoration: none; font-size: .7rem; font-weight: 900; white-space: nowrap; }
 .upcoming-row { padding: 1rem 0; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); }

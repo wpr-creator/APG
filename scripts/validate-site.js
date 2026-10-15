@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-voter-guide-races',
+    'styles.css?v=20261015-remove-history-research-link',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-voter-guide-races',
-    'app.js?v=20261015-voter-guide-races',
+    'app.js?v=20261015-remove-history-research-link',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -342,6 +342,9 @@ function validateSharedCourseExperience() {
   }
   if (homepage.includes('history-connection') || fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('plainHistoryConnection')) {
     errors.push('This Day in Politics must not render the retired connection tags.');
+  }
+  if (homepage.includes('id="history-source"') || fs.readFileSync(path.join(root, 'app.js'), 'utf8').includes('history-source')) {
+    errors.push('This Day in Politics must not render the removed research/source link.');
   }
   ['MIDTERM ELECTION TRACKER', 'href="#election-2026"', 'id="election-count"'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Home election tracker is missing: ' + content);

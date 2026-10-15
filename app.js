@@ -2295,14 +2295,6 @@
     }
     document.getElementById("history-year").textContent = String(event.year || "CIVIC MOMENT");
     document.getElementById("history-text").textContent = event.text || "";
-    const source = document.getElementById("history-source");
-    if (event.source_url) {
-      source.href = event.source_url;
-      source.textContent = `${event.source_label || "SOURCE"} ↗`;
-      source.hidden = false;
-    } else {
-      source.hidden = true;
-    }
   }
 
   async function loadHistory() {
