@@ -1051,8 +1051,8 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   padding: clamp(1rem, 2.8vw, 2.1rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) clamp(2.4rem, 5vw, 4rem);
   overflow: hidden;
   color: #17191b;
-  background-color: #fffefa;
-  background-image: repeating-linear-gradient(0deg, rgba(35, 35, 35, .012) 0 1px, transparent 1px 5px);
+  background-color: #fff;
+  background-image: none;
   border: 1px solid #b9b7b0;
   box-shadow: 0 8px 24px rgba(20, 24, 27, .08);
 }
@@ -1087,7 +1087,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   flex: 0 0 auto;
   display: block;
   border: 1px solid #b9b6ac;
-  background: #fffefa;
+  background: #fff;
 }
 .ballot-california-seal img { display: block; width: 100%; height: auto; }
 .ballot-stock-barcode {
@@ -1108,7 +1108,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, .85fr);
   align-items: center;
   color: #17191b;
-  background: #f5f2e9;
+  background: #fff;
   border: 1px solid #27292b;
   border-bottom: 4px solid #27292b;
 }
@@ -1119,14 +1119,14 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .ballot-header dl div + div { border-left: 1px solid #77736a; }
 .ballot-header dt { color: #565656; font-family: var(--type-label); }
 .ballot-header dd { font-size: .88rem; }
-.ballot-location { background: #f5f2e9; border: 1px solid #333; border-left: 1px solid #333; border-top: 4px solid #27292b; }
+.ballot-location { background: #fff; border: 1px solid #333; border-left: 1px solid #333; border-top: 4px solid #27292b; }
 .ballot-location h2 { color: #17191b; }
 .ballot-location .zip-change-button { color: #17191b; border-color: #17191b; }
 .ballot-location a, .race-card > a, .ballot-sources a, .proposition-source { color: #17191b; }
 .race-card, .proposition-card { border-color: #565656; border-top-color: #17191b; border-radius: 0; box-shadow: none; }
 .race-card.local-race { outline: 2px solid #17191b; outline-offset: -5px; }
 .race-card .local-label { color: #fffefa; background: #292b2d; }
-.candidate-list section { position: relative; padding-left: 3rem; background: #fffefa; border: 1px solid #8c8a83; }
+.candidate-list section { position: relative; padding-left: 3rem; background: #fff; border: 1px solid #8c8a83; }
 .ballot-mark {
   width: 1.08rem;
   height: .82rem;
@@ -1137,13 +1137,13 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   vertical-align: -.1em;
 }
 .candidate-list .ballot-mark { position: absolute; top: 1.1rem; left: 1rem; }
-.proposition-choices p { background: #f6f3eb; border: 1px solid #a7a49b; }
+.proposition-choices p { background: #f7f7f5; border: 1px solid #a7a49b; }
 .proposition-choices b { display: flex; align-items: center; gap: .45rem; color: #17191b; }
-.proposition-explanation { background: #f3f0e8; }
+.proposition-explanation { background: #f7f7f5; }
 .proposition-money { border-color: #a7a49b; }
 .proposition-card summary span { color: #fffefa; background: #292b2d; border-radius: 0; }
-.more-propositions, .ballot-sources { background: #f3f0e8; border-color: #343638; border-radius: 0; }
-.more-propositions li { background: #fffefa; border-left-color: #343638; }
+.more-propositions, .ballot-sources { background: #f7f7f5; border-color: #343638; border-radius: 0; }
+.more-propositions li { background: #fff; border-left-color: #343638; }
 
 @media (max-width: 700px) {
   .ballot-paper { padding: 1rem .85rem 1rem 2.25rem; }

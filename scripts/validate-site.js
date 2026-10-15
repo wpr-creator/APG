@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-school-zip-bear-flag',
+    'styles.css?v=20261015-white-ballot-paper',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
