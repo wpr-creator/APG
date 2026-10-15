@@ -666,7 +666,7 @@
       candidateList.className = "candidate-list";
       race.candidates.forEach(candidate => {
         const candidateCard = document.createElement("section");
-        candidateCard.innerHTML = `<h4>${candidate.name}</h4><strong>${candidate.party}</strong><p>${candidate.fact}</p>`;
+        candidateCard.innerHTML = `<span class="ballot-mark" aria-hidden="true"></span><h4>${candidate.name}</h4><strong>${candidate.party}</strong><p>${candidate.fact}</p>`;
         if (candidate.priorities?.length) {
           const priorities = document.createElement("div");
           priorities.className = "candidate-detail";
@@ -776,7 +776,7 @@
       explanation.innerHTML = `<b>WHAT CHANGES?</b>${proposition.explanation}`;
       const choices = document.createElement("div");
       choices.className = "proposition-choices";
-      choices.innerHTML = `<p><b>YES</b>${proposition.yes}</p><p><b>NO</b>${proposition.no}</p>`;
+      choices.innerHTML = `<p><b><span class="ballot-mark" aria-hidden="true"></span>YES</b>${proposition.yes}</p><p><b><span class="ballot-mark" aria-hidden="true"></span>NO</b>${proposition.no}</p>`;
       const money = document.createElement("p");
       money.className = "proposition-money";
       money.innerHTML = `<b>COST OR SAVINGS</b>${proposition.money}`;

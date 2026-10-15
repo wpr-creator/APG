@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-ballot-zip-copy',
+    'styles.css?v=20261015-california-ballot',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-ballot-zip-copy',
-    'app.js?v=20261015-ballot-zip-copy',
+    'app.js?v=20261015-california-ballot',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -380,10 +380,14 @@ function validateSharedCourseExperience() {
   }
   [
     'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT', 'CHANGE TO MY ZIP', 'election-zip-form',
+    'ballot-mark',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
+  });
+  ['class="ballot-paper"', 'class="ballot-stock-line"', 'CALIFORNIA BALLOT', 'STUDENT VOTER GUIDE'].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
   });
   [
     'These short backgrounds describe public experience. They do not tell you whom to support.',
