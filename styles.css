@@ -1075,7 +1075,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   gap: 1rem;
   border-bottom: 1px dashed #77736a;
 }
-.ballot-stock-mark, .ballot-california-seal > span {
+.ballot-stock-mark {
   color: #303234;
   font-family: var(--type-label);
   font-size: .63rem;
@@ -1083,17 +1083,13 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   letter-spacing: .11em;
 }
 .ballot-california-seal {
-  min-width: 106px;
-  padding: .3rem .45rem;
-  display: grid;
-  justify-items: center;
-  gap: .08rem;
-  border: 1px solid #b59b61;
-  color: #a28345;
+  width: 112px;
+  flex: 0 0 auto;
+  display: block;
+  border: 1px solid #b9b6ac;
+  background: #fffefa;
 }
-.ballot-california-seal svg { width: 74px; height: 42px; overflow: visible; }
-.ballot-california-seal .seal-star { fill: #a28345; }
-.ballot-california-seal .seal-bear, .ballot-california-seal .seal-ground { fill: #1d2021; }
+.ballot-california-seal img { display: block; width: 100%; height: auto; }
 .ballot-stock-barcode {
   width: min(23%, 150px);
   height: 24px;
@@ -1154,9 +1150,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .ballot-paper::before { left: .55rem; top: 9rem; bottom: 1rem; }
   .ballot-stock-line { min-height: 52px; gap: .45rem; }
   .ballot-stock-mark { font-size: .53rem; }
-  .ballot-california-seal { min-width: 82px; padding: .2rem; }
-  .ballot-california-seal svg { width: 62px; height: 34px; }
-  .ballot-california-seal > span { font-size: .52rem; }
+  .ballot-california-seal { width: 84px; }
   .ballot-stock-barcode { width: 20%; height: 18px; }
   .ballot-header { grid-template-columns: 1fr; }
   .ballot-header dl { grid-template-columns: 1fr 1fr; }

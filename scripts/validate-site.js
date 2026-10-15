@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-san-diego-house-races',
+    'styles.css?v=20261015-school-zip-bear-flag',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'course-data.js?v=20261014-unit2-01-congress-key',
@@ -287,7 +287,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-san-diego-house-races',
-    'app.js?v=20261015-san-diego-house-races',
+    'app.js?v=20261015-school-zip-bear-flag',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -375,6 +375,11 @@ function validateSharedCourseExperience() {
   })) {
     errors.push('Regional San Diego congressional examples must include sourced candidate pairs for Districts 48–51.');
   }
+  if (!homepageApp.includes('electionData.races.filter(race => !race.regionalOnly)') ||
+      homepageApp.includes('regionalHouseCards') || homepageApp.includes('REGIONAL EXAMPLES FOR ZIP CODE') ||
+      homepageApp.includes('election-zip-form') || homepageApp.includes('CHANGE TO MY ZIP')) {
+    errors.push('Other congressional districts must remain hidden and the student ballot must stay fixed to the school ZIP.');
+  }
   const district52 = electionData.races.find(function (race) { return race.office === 'U.S. HOUSE · DISTRICT 52'; });
   const cityDistrict4 = electionData.races.find(function (race) { return race.office === 'SAN DIEGO CITY COUNCIL · DISTRICT 4'; });
   if (!district52?.candidates?.every(function (candidate) { return candidate.priorities?.length === 3 && candidate.website; }) ||
@@ -394,16 +399,19 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'BALLOT FOR ZIP CODE', 'REGIONAL EXAMPLES FOR ZIP CODE', 'REGIONAL REFERENCE', 'regionalHouseCards', 'FIND MY EXACT BALLOT', 'CHANGE TO MY ZIP', 'election-zip-form',
+    'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT',
     'ballot-mark',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
-  ['class="ballot-paper"', 'class="ballot-stock-line"', 'CALIFORNIA BALLOT', 'STUDENT VOTER GUIDE'].forEach(function (content) {
+  ['class="ballot-paper"', 'class="ballot-stock-line"', 'CALIFORNIA BALLOT', 'STUDENT VOTER GUIDE', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
   });
+  if (homepage.includes('seal-bear') || homepage.includes('seal-star')) {
+    errors.push('The student ballot should use the supplied California flag image rather than the drawn bear seal.');
+  }
   [
     'These short backgrounds describe public experience. They do not tell you whom to support.',
     'Open a card. Read the question, then compare Yes and No.',

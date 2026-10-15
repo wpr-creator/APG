@@ -631,14 +631,7 @@
     const locationCard = document.createElement("section");
     locationCard.className = "ballot-location";
     const locationCopy = document.createElement("div");
-    locationCopy.innerHTML = `
-      <h2 id="ballot-zip-title">BALLOT FOR ZIP CODE ${electionData.location.schoolZip}</h2>
-      <button class="zip-change-button" id="change-zip-button" type="button" aria-expanded="false" aria-controls="election-zip-form">CHANGE TO MY ZIP</button>
-      <form class="zip-chooser" id="election-zip-form" hidden>
-        <label for="election-zip">YOUR ZIP CODE</label>
-        <div><input id="election-zip" name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}" value="${electionData.location.schoolZip}" required><button type="submit">USE THIS ZIP</button></div>
-      </form>
-      <p class="zip-status" id="election-zip-status" role="status"></p>`;
+    locationCopy.innerHTML = `<h2 id="ballot-zip-title">BALLOT FOR ZIP CODE ${electionData.location.schoolZip}</h2>`;
     const lookupLink = document.createElement("a");
     lookupLink.href = electionData.location.lookupSource;
     lookupLink.target = "_blank";
@@ -651,19 +644,12 @@
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
-    const schoolZipRaceCards = [];
-    const regionalHouseCards = [];
-    electionData.races.forEach(race => {
+    electionData.races.filter(race => !race.regionalOnly).forEach(race => {
       const article = document.createElement("article");
       article.className = "race-card";
-      if (race.regionalOnly) {
-        article.classList.add("regional-race");
-        article.hidden = true;
-        regionalHouseCards.push(article);
-      } else if (race.local) {
+      if (race.local) {
         article.classList.add("local-race");
         article.hidden = false;
-        schoolZipRaceCards.push(article);
       }
       const localLabel = race.local ? `<span class="local-label">${race.localLabel || "ZIP 92114 EXAMPLE"}</span>` : "";
       article.innerHTML = `${localLabel}<p class="eyebrow">${race.office}</p><h3>${race.question}</h3><p>${race.note}</p>`;
@@ -731,41 +717,7 @@
       }
       raceGrid.appendChild(article);
     });
-    const localLookupCard = document.createElement("article");
-    localLookupCard.className = "race-card local-lookup-card";
-    localLookupCard.hidden = true;
-    localLookupCard.innerHTML = `<span class="local-label">REGIONAL REFERENCE</span><h3>SAN DIEGO-AREA HOUSE RACES</h3><p>These five congressional races are shown as regional examples, not as a confirmed ballot. ZIP codes can cross district lines.</p><a href="${electionData.location.lookupSource}" target="_blank" rel="noopener">FIND MY EXACT BALLOT ↗</a>`;
-    races.appendChild(localLookupCard);
     races.appendChild(raceGrid);
-
-    const zipForm = locationCopy.querySelector("#election-zip-form");
-    const zipInput = locationCopy.querySelector("#election-zip");
-    const zipStatus = locationCopy.querySelector("#election-zip-status");
-    const changeZipButton = locationCopy.querySelector("#change-zip-button");
-    const ballotZipTitle = locationCopy.querySelector("#ballot-zip-title");
-    changeZipButton.addEventListener("click", () => {
-      zipForm.hidden = !zipForm.hidden;
-      changeZipButton.setAttribute("aria-expanded", String(!zipForm.hidden));
-      if (!zipForm.hidden) zipInput.focus();
-    });
-    zipForm.addEventListener("submit", event => {
-      event.preventDefault();
-      const zip = zipInput.value.trim();
-      if (!/^\d{5}$/.test(zip)) {
-        zipStatus.textContent = "Enter a five-digit ZIP code.";
-        return;
-      }
-      const isSchoolZip = zip === electionData.location.schoolZip;
-      ballotZipTitle.textContent = isSchoolZip ? `BALLOT FOR ZIP CODE ${zip}` : `REGIONAL EXAMPLES FOR ZIP CODE ${zip}`;
-      schoolZipRaceCards.forEach(card => { card.hidden = !isSchoolZip; });
-      regionalHouseCards.forEach(card => { card.hidden = isSchoolZip; });
-      localLookupCard.hidden = isSchoolZip;
-      zipForm.hidden = true;
-      changeZipButton.setAttribute("aria-expanded", "false");
-      zipStatus.textContent = isSchoolZip
-        ? `${zip} selected. The local races shown are examples; use the official lookup to confirm your exact ballot.`
-        : `${zip} selected. San Diego-area congressional races are shown as regional examples, not a confirmed ballot.`;
-    });
 
     const propositions = document.createElement("section");
     propositions.className = "ballot-section";
