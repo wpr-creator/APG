@@ -616,18 +616,6 @@
     const container = document.getElementById("election-2026-content");
     container.replaceChildren();
 
-    const ballotHeader = document.createElement("section");
-    ballotHeader.className = "ballot-header";
-    ballotHeader.innerHTML = `
-      <div>
-        <p class="eyebrow">ELECTION DAY</p>
-        <h2>${electionData.electionDate}</h2>
-      </div>
-      <dl>
-        <div><dt>REGISTER BY</dt><dd>${electionData.registrationDeadline}</dd></div>
-        <div><dt>BALLOTS MAILED BY</dt><dd>${electionData.ballotMailingDeadline}</dd></div>
-      </dl>`;
-
     const races = document.createElement("section");
     races.className = "ballot-section";
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
@@ -755,7 +743,7 @@
       sources.appendChild(link);
     });
 
-    container.append(ballotHeader, races, propositions, sources);
+    container.append(races, propositions, sources);
   }
 
   function renderPresidents() {
