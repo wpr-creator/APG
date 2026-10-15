@@ -667,7 +667,7 @@
         if (candidate.endorsements?.length || candidate.endorsementNote) {
           const endorsements = document.createElement("div");
           endorsements.className = "candidate-detail";
-          endorsements.innerHTML = `<h5>SELECTED ENDORSEMENTS</h5>${candidate.endorsements?.length ? `<ul>${candidate.endorsements.map(item => `<li>${item}</li>`).join("")}</ul>` : `<p>${candidate.endorsementNote}</p>`}`;
+          endorsements.innerHTML = `<h5>ENDORSEMENTS · PUBLIC SUPPORT</h5>${candidate.endorsements?.length ? `<ul>${candidate.endorsements.map(item => `<li>${item}</li>`).join("")}</ul>` : `<p>${candidate.endorsementNote}</p>`}`;
           candidateCard.appendChild(endorsements);
         }
         if (candidate.website) {
@@ -686,7 +686,7 @@
         const comparison = document.createElement("section");
         comparison.className = "race-issues";
         comparison.setAttribute("aria-label", "Candidate issue comparison");
-        comparison.innerHTML = `<h4>WHAT THEY SAY ABOUT THE ISSUES</h4>`;
+        comparison.innerHTML = `<h4>VIEWS ON LOCAL ISSUES</h4>`;
         race.issues.forEach(issue => {
           const row = document.createElement("div");
           row.className = "race-issue-row";
@@ -699,7 +699,7 @@
       source.href = race.source;
       source.target = "_blank";
       source.rel = "noopener";
-      source.textContent = `${race.sourceLabel || "CHECK THE RACE SOURCE"} ↗`;
+      source.textContent = `${race.sourceLabel || "CANDIDATE INFORMATION"} ↗`;
       article.appendChild(source);
       if (race.sources?.length) {
         const sourceList = document.createElement("details");
@@ -721,7 +721,7 @@
 
     const propositions = document.createElement("section");
     propositions.className = "ballot-section";
-    propositions.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STATEWIDE PROPOSITIONS</p><h2>ALL 14 PROPOSITIONS</h2></div></div>`;
+    propositions.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STATEWIDE PROPOSITIONS</p><h2>ALL 14 PROPOSITIONS</h2><p>A proposition is a measure voters approve or reject.</p></div></div>`;
     const propositionGrid = document.createElement("div");
     propositionGrid.className = "proposition-grid";
     electionData.propositions.forEach(proposition => {

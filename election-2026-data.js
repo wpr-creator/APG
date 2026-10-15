@@ -13,17 +13,17 @@ window.ELECTION_2026_DATA = {
     {
       office: "CALIFORNIA GOVERNOR",
       question: "WHO SHOULD BE CALIFORNIA’S GOVERNOR?",
-      note: "The governor runs California’s state government, proposes the state budget, and signs or vetoes state laws. The term lasts four years.",
+      note: "The governor leads California’s government, proposes the budget, and signs bills into law or vetoes (rejects) them. Terms last four years.",
       candidates: [
         { name: "XAVIER BECERRA", party: "DEMOCRATIC", fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress." },
-        { name: "STEVE HILTON", party: "REPUBLICAN", fact: "Former policy adviser and television host. He has not held elected office." }
+        { name: "STEVE HILTON", party: "REPUBLICAN", fact: "Former policy adviser and TV host; he has not held elected office." }
       ],
       source: "https://voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm"
     },
     {
       office: "U.S. HOUSE · DISTRICT 48",
       question: "WHO SHOULD REPRESENT DISTRICT 48?",
-      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
       localLabel: "DISTRICT 48 · SAN DIEGO AREA EXAMPLE",
@@ -54,7 +54,7 @@ window.ELECTION_2026_DATA = {
     {
       office: "U.S. HOUSE · DISTRICT 49",
       question: "WHO SHOULD REPRESENT DISTRICT 49?",
-      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
       localLabel: "DISTRICT 49 · SAN DIEGO AREA EXAMPLE",
@@ -85,7 +85,7 @@ window.ELECTION_2026_DATA = {
     {
       office: "U.S. HOUSE · DISTRICT 50",
       question: "WHO SHOULD REPRESENT DISTRICT 50?",
-      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
       localLabel: "DISTRICT 50 · SAN DIEGO AREA EXAMPLE",
@@ -116,7 +116,7 @@ window.ELECTION_2026_DATA = {
     {
       office: "U.S. HOUSE · DISTRICT 51",
       question: "WHO SHOULD REPRESENT DISTRICT 51?",
-      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
       localLabel: "DISTRICT 51 · SAN DIEGO AREA EXAMPLE",
@@ -146,26 +146,26 @@ window.ELECTION_2026_DATA = {
     },
     {
       office: "U.S. HOUSE · DISTRICT 52",
-      question: "WHO SHOULD REPRESENT THIS AREA IN CONGRESS?",
-      note: "A U.S. representative votes on national laws, taxes, and spending. The term lasts two years.",
+      question: "WHO SHOULD REPRESENT DISTRICT 52 IN CONGRESS?",
+      note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       localLabel: "DISTRICT 52 EXAMPLE",
       candidates: [
         {
           name: "JUAN VARGAS",
           party: "DEMOCRATIC",
-          fact: "First elected to Congress in 2012. Previously served in the California State Senate and Assembly and on the San Diego City Council; he also worked in business.",
-          priorities: ["Tijuana River Valley pollution", "Immigration enforcement", "Affordability"],
+          fact: "First elected to Congress in 2012. Previously served in California’s Legislature and on the San Diego City Council; he also worked in business.",
+          priorities: ["Cleaning up Tijuana River Valley pollution", "Enforcing immigration laws", "Making life more affordable"],
           endorsements: ["California Democratic Party", "California Teachers Association", "California Federation of Labor Unions", "American Federation of Government Employees", "Equality California"],
           website: "https://www.votevargas.com/"
         },
         {
           name: "JEFF BELLE",
           party: "REPUBLICAN",
-          fact: "CEO of a San Diego-based private-equity firm and former member of the Contra Costa County Board of Education.",
+          fact: "Leads a San Diego investment firm; formerly served on the Contra Costa County school board.",
           priorities: ["Faith", "Freedom", "Finances"],
           endorsements: [],
-          endorsementNote: "KPBS reports no endorsements from major organizations, parties, or unions.",
+          endorsementNote: "KPBS reported no major endorsements.",
           website: "https://www.belleforcongress.com/"
         }
       ],
@@ -179,21 +179,21 @@ window.ELECTION_2026_DATA = {
     {
       office: "SAN DIEGO CITY COUNCIL · DISTRICT 4",
       question: "WHICH PRIORITIES SHOULD GUIDE DISTRICT 4?",
-      note: "The City Council votes on city laws and budgets and represents local communities. District 4 includes O’Farrell and ZIP code 92114. This is a local example; a ZIP code alone cannot confirm your ballot.",
+      note: "The City Council makes city laws, approves the budget, and represents local districts. District 4 includes O’Farrell and ZIP code 92114.",
       local: true,
       localLabel: "92114 LOCAL EXAMPLE",
       nonpartisan: true,
       candidates: [
         {
           name: "HENRY FOSTER III",
-          party: "NONPARTISAN CITY RACE",
-          fact: "The incumbent councilmember. His ballot statement highlights neighborhood services, jobs, small businesses, parks, libraries, streets, youth programs, and public safety.",
+          party: "NONPARTISAN · NO PARTY LABEL",
+          fact: "The current councilmember. His statement highlights neighborhood services, jobs, small businesses, parks, streets, youth programs, and public safety.",
           website: "https://www.henryfoster4sd.com/"
         },
         {
           name: "MARTHA ABRAHAM",
-          party: "NONPARTISAN CITY RACE",
-          fact: "A neonatal ICU nurse, small-business owner, and mother. Her ballot statement emphasizes neighborhood investment, public health, listening to residents, and accountability.",
+          party: "NONPARTISAN · NO PARTY LABEL",
+          fact: "A nurse and small-business owner. Her statement emphasizes neighborhood investment, public health, listening to residents, and accountability.",
           website: "https://martha4sandiego.com/"
         }
       ],
@@ -201,22 +201,22 @@ window.ELECTION_2026_DATA = {
         {
           title: "Housing and growth",
           responses: [
-            "Foster says projects should contribute to infrastructure and community needs; he also emphasizes affordability and livable wages.",
-            "Abraham supports middle housing on commercial corridors when infrastructure can support it, and says growth should be matched with infrastructure, parks, and services."
+            "Foster says new projects should address community needs and infrastructure. He also emphasizes affordability and livable wages.",
+            "Abraham supports more types of homes along business corridors when roads and services can support them. She wants growth matched with parks and public services."
           ]
         },
         {
           title: "City budget and services",
           responses: [
-            "Foster says core services should come first. He proposes finding ineffective spending and operational inefficiencies, reviewing leases, and considering changes to how street repairs and emergency medical services are delivered.",
-            "Abraham says the city should address its structural budget deficit by reviewing administrative layers and reducing supervisory positions while protecting frontline services."
+            "Foster puts core services first. He proposes finding ineffective spending, reviewing leases, and changing how the city provides street repairs and emergency medical services.",
+            "Abraham would address the city’s ongoing budget gap by reducing management layers while protecting frontline services."
           ]
         },
         {
           title: "Neighborhood conditions",
           responses: [
-            "Foster focuses on day-to-day quality of life, including public safety, streets, parks, and youth and workforce opportunities.",
-            "Abraham points to long-term disinvestment and names flooding, storm channels, roads, schools, and parks as concerns that affect health, safety, and opportunity."
+            "Foster focuses on public safety, streets, parks, and opportunities for young people and workers.",
+            "Abraham points to years of underinvestment. She names flooding, storm channels, roads, schools, and parks as concerns affecting health and safety."
           ]
         }
       ],
@@ -234,120 +234,120 @@ window.ELECTION_2026_DATA = {
     {
       number: 1,
       title: "BORROW MONEY FOR HOUSING",
-      short: "Should California borrow $11.25 billion to help pay for affordable housing?",
-      explanation: "A bond lets the state borrow money and repay it over time. This money would support affordable housing, veterans’ home loans, and help with down payments.",
-      yes: "The state borrows and spends the $11.25 billion.",
+      short: "Should California borrow $11.25 billion for housing programs?",
+      explanation: "A bond is money the state borrows and repays over time. This bond would fund affordable housing, veterans’ home loans, and down-payment help.",
+      yes: "The state may borrow and spend $11.25 billion on these programs.",
       no: "The state does not borrow this money.",
-      money: "Repaying it would cost the state about $500 million to $600 million each year for about 25 years.",
+      money: "Repayment would cost the state about $500–$600 million a year for about 25 years.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/1/index.htm"
     },
     {
       number: 2,
       title: "A LARGER RAINY DAY FUND",
-      short: "Should California save more money for emergencies and future budget problems?",
-      explanation: "A rainy day fund is money the state saves for emergencies or years when tax revenue falls. The measure also changes rules for paying state debt.",
-      yes: "The state changes the rules, builds larger budget reserves, and must make extra debt payments for a longer time.",
+      short: "Should California set aside more money for hard budget years?",
+      explanation: "A rainy day fund is savings for hard budget years. This measure raises the reserve cap from 10% to 20% of General Fund revenue (money for the state’s main budget) and requires more saving in high-revenue years.",
+      yes: "The state builds larger reserves and changes some debt-payment rules.",
       no: "The current rules for state savings and extra debt payments stay in place.",
-      money: "State budget reserves would likely be higher, leaving more saved money for future downturns.",
+      money: "The state would keep more money in its budget reserves.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/2/index.htm"
     },
     {
       number: 3,
       title: "INCOME TAX ON HIGH EARNERS",
-      short: "Should California make its current income-tax increase on high earners permanent?",
-      explanation: "Since 2012, California has used higher income-tax rates for people earning more than about $371,000 a year. The money helps fund public schools. Under current law, the higher rates end in 2031.",
-      yes: "The higher income-tax rates become permanent.",
-      no: "The higher income-tax rates end in 2031.",
-      money: "Making the rates permanent would keep about $5 billion to $15 billion in state revenue each year after 2031.",
+      short: "Should higher income-tax rates for high earners continue after 2031?",
+      explanation: "Since 2012, people earning above about $371,000 have paid higher state income-tax rates. The money helps fund public schools. Current law ends the higher rates in 2031.",
+      yes: "The higher tax rates continue after 2031.",
+      no: "The higher tax rates end in 2031, as current law says.",
+      money: "Continuing the rates could bring in $5–$15 billion more each year after 2031.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/3/index.htm"
     },
     {
       number: 4,
       title: "PUBLIC MONEY FOR CAMPAIGNS",
-      short: "Should governments be allowed to help pay for political campaigns?",
-      explanation: "Right now, California mostly bans this. The measure would let state and local governments create programs that give public money to candidates who follow the rules.",
-      yes: "Governments may create these programs.",
-      no: "The current ban stays.",
-      money: "Running the programs would cost money. The amount depends on which governments create one.",
+      short: "Should governments be allowed to use public money for campaigns?",
+      explanation: "California mostly bans public campaign funding now. This measure would let state and local governments create programs to fund candidates who follow set rules.",
+      yes: "Governments may create public campaign-funding programs.",
+      no: "The current limits stay in place.",
+      money: "Costs depend on which governments create a program.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/4/index.htm"
     },
     {
       number: 5,
       title: "RECALL ELECTIONS",
-      short: "Should California change how a removed state official is replaced?",
-      explanation: "A recall election lets voters remove an official before the term ends. Today, voters also choose a possible replacement on the same ballot.",
-      yes: "Replacement names come off the recall ballot. The replacement would usually be chosen later by an election or appointment.",
-      no: "The recall ballot keeps both questions: remove the official and choose a replacement.",
-      money: "A separate replacement election could cost millions of dollars.",
+      short: "Should California change how voters replace a recalled state official?",
+      explanation: "A recall election lets voters remove a state officer before the term ends. Today, voters decide on removal and a possible replacement at the same time.",
+      yes: "If the governor is recalled, the lieutenant governor takes over. Other offices are filled later by election or appointment.",
+      no: "Voters decide on removal and a replacement in the same election.",
+      money: "Costs or savings are uncertain and depend on which officer is recalled and how often.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/5/index.htm"
     },
     {
       number: 37,
       title: "MIDDLE-INCOME HOME LOANS",
-      short: "Should California create a state home-loan program for some middle-income buyers?",
-      explanation: "Eligible buyers could receive a fixed-rate state loan for up to 17% of a qualifying new home’s price. Buyers must meet residency, income, occupancy, and down-payment rules.",
-      yes: "The state may sell up to $25 billion in bonds and create the homebuying loan program.",
-      no: "The state is not required to create this new homebuying program.",
-      money: "Homeowners’ loan payments, rather than the state budget, would repay the bonds. The state estimates no direct state or local cost.",
+      short: "Should California offer home loans to some middle-income buyers?",
+      explanation: "Eligible buyers could get a state loan for up to 17% of a new home’s price, at a fixed interest rate. Income, residency, and down-payment rules apply.",
+      yes: "Creates a state loan program funded by up to $25 billion in bonds.",
+      no: "The state loan program is not created.",
+      money: "Borrowers’ loan payments would repay the bonds. The state estimates no direct cost to state or local budgets.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/37/index.htm"
     },
     {
       number: 38,
       title: "MEDICAL RESEARCH BONDS",
-      short: "Should California borrow $8.4 billion for research into immune-system treatments?",
-      explanation: "Half of the money would go to one UC-affiliated nonprofit research institute. The other half would fund grants to public or nonprofit universities and institutions.",
-      yes: "California may sell $8.4 billion in bonds for immunology and immunotherapy research.",
-      no: "California may not sell these bonds for the proposed research program.",
-      money: "The state would pay about $500 million to $600 million each year for about 20 years, although research revenue could repay part of the cost.",
+      short: "Should California borrow $8.4 billion for immune-system research?",
+      explanation: "Half would go to a UC-affiliated nonprofit institute. The rest would fund research grants to public and nonprofit institutions.",
+      yes: "The state may borrow $8.4 billion for this research.",
+      no: "The state does not borrow this money for the research program.",
+      money: "Repayment would cost about $500–$600 million a year for 20 years. Research income could cover part of the cost.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/38/index.htm"
     },
     {
       number: 39,
       title: "ID REQUIRED TO VOTE",
-      short: "Should voters have to provide ID information every time they vote?",
-      explanation: "People voting in person would show government ID. People voting by mail would write the last four digits of an approved ID number on the envelope. Free voter ID cards would be available.",
-      yes: "The new ID rules begin.",
-      no: "Current rules stay. Election officials continue checking the voter’s signature.",
-      money: "The change could cost governments tens of millions to hundreds of millions of dollars each year.",
+      short: "Should voters have to show or provide government ID information to vote?",
+      explanation: "In-person voters would show approved ID. Mail voters would write the last four digits of an approved ID number on the envelope. Free voter ID cards would be available.",
+      yes: "The new voter ID rules take effect.",
+      no: "Current rules stay. Officials continue checking mail-ballot signatures.",
+      money: "It could cost governments tens to hundreds of millions of dollars each year.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/39/index.htm"
     },
     {
       number: 40,
-      title: "ONE-TIME TAX ON BILLIONAIRES",
-      short: "Should California collect a one-time tax on wealth above $1 billion?",
-      explanation: "The tax would equal 5% of some wealth above $1 billion. Most of the money would pay for health care.",
-      yes: "California collects the tax once.",
-      no: "California does not collect the tax.",
-      money: "It could raise tens of billions of dollars. Some billionaires might leave California, which could reduce future tax money.",
+      title: "ONE-TIME TAX ON SOME BILLIONAIRES",
+      short: "Should California tax some billionaires’ assets one time?",
+      explanation: "Certain people with more than $1 billion in covered assets would pay up to 5%. Assets are things of value, such as businesses and investments; homes and some retirement accounts are excluded.",
+      yes: "A one-time tax takes effect. 90% of the money goes to health care; 10% to food aid or education.",
+      no: "The one-time tax does not take effect.",
+      money: "It could raise tens of billions over several years. Income-tax revenue from billionaires could later fall by less than $1 billion a year.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/40/index.htm"
     },
     {
       number: 41,
       title: "AUDITS OF SPECIAL-TAX PROGRAMS",
-      short: "Should programs paid for by special taxes face more reviews and audits?",
-      explanation: "A special tax raises money for a stated purpose. The measure requires reviews before some tax initiatives reach voters and repeated audits after new special taxes fund programs. It also restricts excluding new tax money from the state spending limit.",
-      yes: "The new audit requirements and spending-limit rule take effect.",
-      no: "Current audit responsibilities and state spending-limit rules stay in place.",
+      short: "Should some new special taxes get more audits?",
+      explanation: "A special tax pays for one purpose. An audit checks how money is used. This measure adds audits for some new state special taxes and changes which taxes count toward the spending limit.",
+      yes: "The new audit and spending-limit rules take effect.",
+      no: "Current audit and spending-limit rules stay in place.",
       money: "The total cost or savings is unknown because it depends on future taxes, audits, and programs.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/41/index.htm"
     },
     {
       number: 42,
-      title: "LIMITS ON NEW PROPERTY TAXES",
-      short: "Should California be blocked from creating certain new taxes on things people own?",
-      explanation: "Personal property means things people own other than real estate, including investments, retirement accounts, business interests, and intellectual property.",
-      yes: "The state cannot create new taxes on owning personal property and cannot create certain taxes that apply retroactively to past activity.",
-      no: "The state keeps the option to create these taxes in the future.",
+      title: "TAXES ON PERSONAL PROPERTY",
+      short: "Should California be barred from creating certain taxes on personal property?",
+      explanation: "Personal property means assets other than real estate, such as investments, retirement accounts, and business interests.",
+      yes: "The state cannot create these personal-property taxes or certain retroactive taxes.",
+      no: "The state keeps the option to create these taxes.",
       money: "Future state tax revenue might be lower than it otherwise would be.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/42/index.htm"
@@ -355,10 +355,10 @@ window.ELECTION_2026_DATA = {
     {
       number: 43,
       title: "LOCAL SPECIAL TAXES",
-      short: "Should some local taxes need two-thirds approval instead of a simple majority?",
-      explanation: "A special tax pays for one named purpose, such as roads or fire protection. Some can now pass with just over half the vote.",
+      short: "Should some local taxes need two-thirds of the vote to pass?",
+      explanation: "A special tax pays for one purpose, such as roads or fire protection. Some now pass with just over half the vote.",
       yes: "These taxes need support from at least two-thirds of voters.",
-      no: "Current rules stay, so some can pass with just over half.",
+      no: "Current rules stay; some taxes can pass with just over half the vote.",
       money: "Fewer local taxes might pass, so local governments could collect less money.",
       featured: true,
       source: "https://voterguide.sos.ca.gov/propositions/43/index.htm"
@@ -366,20 +366,20 @@ window.ELECTION_2026_DATA = {
     {
       number: 44,
       title: "COMMUNITY CLINIC SPENDING",
-      short: "Should some nonprofit clinics have to spend at least 90% of their money on services?",
-      explanation: "These clinics provide primary care in medically underserved communities. Program services include patient care and other work that supports the clinic’s charitable mission.",
-      yes: "Covered clinics must meet the 90% requirement or may face penalties, with limited exceptions.",
-      no: "The new clinic spending requirement does not take effect.",
-      money: "State enforcement could cost up to the low tens of millions of dollars each year, mostly covered by fees and penalties.",
+      short: "Should some nonprofit clinics spend at least 90% of revenue on services?",
+      explanation: "These clinics provide primary care in areas with limited access. Services include patient care and work that supports the clinic’s mission.",
+      yes: "Covered clinics must meet the 90% rule or may face penalties. Some exceptions apply.",
+      no: "The 90% spending rule does not take effect.",
+      money: "Enforcement could cost up to tens of millions each year, mostly paid by fees and penalties.",
       featured: false,
       source: "https://voterguide.sos.ca.gov/propositions/44/index.htm"
     },
     {
       number: 45,
       title: "FASTER ENVIRONMENTAL REVIEW",
-      short: "Should some large projects receive faster environmental and court reviews?",
-      explanation: "The measure covers many housing, transportation, water, health, and clean-energy projects. It sets deadlines and limits some parts of environmental and court review.",
-      yes: "Qualifying projects use the new, faster review and court procedures.",
+      short: "Should some large projects get faster environmental and court reviews?",
+      explanation: "The measure covers some housing, transportation, water, health, and clean-energy projects. It sets deadlines and changes parts of environmental and court reviews.",
+      yes: "Qualifying projects use the new review and court deadlines.",
       no: "Projects continue using current environmental review and court procedures.",
       money: "Early government costs could reach or exceed $100 million each year. Longer-term costs or savings are uncertain.",
       featured: false,
