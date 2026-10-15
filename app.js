@@ -628,17 +628,6 @@
         <div><dt>BALLOTS MAILED BY</dt><dd>${electionData.ballotMailingDeadline}</dd></div>
       </dl>`;
 
-    const locationCard = document.createElement("section");
-    locationCard.className = "ballot-location";
-    const locationCopy = document.createElement("div");
-    locationCopy.innerHTML = `<h2 id="ballot-zip-title">BALLOT FOR ZIP CODE ${electionData.location.schoolZip}</h2>`;
-    const lookupLink = document.createElement("a");
-    lookupLink.href = electionData.location.lookupSource;
-    lookupLink.target = "_blank";
-    lookupLink.rel = "noopener";
-    lookupLink.textContent = "FIND MY EXACT BALLOT ↗";
-    locationCard.append(locationCopy, lookupLink);
-
     const races = document.createElement("section");
     races.className = "ballot-section";
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
@@ -766,7 +755,7 @@
       sources.appendChild(link);
     });
 
-    container.append(ballotHeader, locationCard, races, propositions, sources);
+    container.append(ballotHeader, races, propositions, sources);
   }
 
   function renderPresidents() {

@@ -792,11 +792,8 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .ballot-header dl div { padding: 1rem; color: var(--black); background: var(--white); }
 .ballot-header dt { font-size: .7rem; font-weight: 950; letter-spacing: .08em; }
 .ballot-header dd { margin: .35rem 0 0; font-weight: 900; }
-.ballot-location { margin-bottom: 2rem; padding: 1.2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--stone); border: 1px solid var(--stone-dark); border-left: 10px solid var(--black); }
-.ballot-location h2 { margin: .2rem 0 .45rem; font-size: clamp(1.35rem, 3vw, 2rem); }
-.ballot-location p { margin: 0; max-width: 720px; font-weight: 650; }
-.ballot-location a, .race-card > a, .ballot-sources a { color: var(--black); font-size: .72rem; font-weight: 950; }
-.ballot-location a, .race-card > a, .ballot-sources a,
+.race-card > a, .ballot-sources a { color: var(--black); font-size: .72rem; font-weight: 950; }
+.race-card > a, .ballot-sources a,
 .founding-story-chapter > a, .president-facts a {
   min-height: 44px; padding: .55rem 0; display: inline-flex; align-items: center;
 }
@@ -984,7 +981,6 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   .founding-column { grid-template-columns: 1fr 1fr; }
   .founding-column > h2 { grid-column: 1 / -1; min-height: auto; }
   .ballot-header, .race-grid, .proposition-grid, .more-propositions ul { grid-template-columns: 1fr; }
-  .ballot-location { align-items: flex-start; flex-direction: column; }
   .madison-side p { min-height: auto; }
   .admin-unlock-row { grid-template-columns: 1fr; }
   .admin-unit-unlock-row { grid-template-columns: auto 1fr; }
@@ -1120,9 +1116,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .ballot-header dl div + div { border-left: 1px solid #bdc9d4; }
 .ballot-header dt { color: #425466; font-family: Arial, Helvetica, sans-serif; }
 .ballot-header dd { font-size: .88rem; }
-.ballot-location { background: #f1f6fb; border: 1px solid #7890a8; border-left: 1px solid #7890a8; border-top: 4px solid #17365d; }
-.ballot-location h2 { color: #17365d; }
-.ballot-location a, .race-card > a, .ballot-sources a, .proposition-source { color: #17365d; }
+.race-card > a, .ballot-sources a, .proposition-source { color: #17365d; }
 .race-card, .proposition-card { border-color: #9aabba; border-top-color: #17365d; border-radius: 0; box-shadow: none; }
 .race-card.local-race { outline: 2px solid #17365d; outline-offset: -5px; }
 .race-card .local-label { color: #fff; background: #17365d; }

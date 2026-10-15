@@ -54,14 +54,6 @@
 #election-2026 .ballot-header dl div + div { border-color: #8593a0; }
 #election-2026 .ballot-header dl div { color: #111; background: #fff; }
 
-#election-2026 .ballot-location {
-  color: #111;
-  background: #f1f6fb;
-  border: 1px solid #8593a0;
-}
-
-#election-2026 .ballot-location h2,
-#election-2026 .ballot-location a,
 #election-2026 .race-card > a,
 #election-2026 .ballot-sources a,
 #election-2026 .proposition-source,

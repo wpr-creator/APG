@@ -279,16 +279,16 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-ballot-blue-type',
+    'styles.css?v=20261015-ballot-callout-removed',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261015-printed-ballot-clean-ink',
+    'ballot.css?v=20261015-no-zip-callout',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-student-friendly-copy',
-    'app.js?v=20261015-student-friendly-copy',
+    'app.js?v=20261015-ballot-callout-removed',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -400,12 +400,14 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT',
     'ballot-mark',
     'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
+  });
+  ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
+    if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
   });
   ['class="ballot-paper"', 'class="ballot-stock-line"', 'CALIFORNIA BALLOT', 'STUDENT VOTER GUIDE', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
