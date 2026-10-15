@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-plain-propositions',
+    'styles.css?v=20261015-uniform-open-units',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'ballot.css?v=20261015-plain-propositions',
@@ -288,7 +288,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261015-plain-propositions',
+    'app.js?v=20261015-uniform-open-units',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',

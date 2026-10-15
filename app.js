@@ -214,7 +214,7 @@
       card.className = "unit-card " + state;
       const top = document.createElement("div");
       top.className = "unit-top";
-      top.innerHTML = `<span class="unit-index">${unit.number}</span><span class="unit-state">${isClosedUnit ? "◇ CLOSED" : state === "locked" ? "◇ LOCKED" : state === "current" ? "● OPEN NOW" : "✓ OPEN"}</span>`;
+      top.innerHTML = `<span class="unit-index">${unit.number}</span><span class="unit-state">${isClosedUnit ? "◇ CLOSED" : state === "locked" ? "◇ LOCKED" : state === "current" ? "✓ OPEN · CURRENT" : "✓ OPEN"}</span>`;
       const title = document.createElement("h2");
       title.textContent = unit.title.toUpperCase();
       const question = document.createElement("p");
@@ -225,7 +225,7 @@
       const button = document.createElement("button");
       button.type = "button";
       button.disabled = state === "locked";
-      button.textContent = isClosedUnit ? "UNIT CLOSED" : state === "locked" ? "NOT OPEN YET" : state === "current" ? "START THIS UNIT →" : "OPEN UNIT →";
+      button.textContent = isClosedUnit ? "UNIT CLOSED" : state === "locked" ? "NOT OPEN YET" : "OPEN UNIT →";
       if (!button.disabled) button.addEventListener("click", () => { location.hash = unit.id; });
       card.append(top, title, question, standards, button);
       unitGrid.appendChild(card);

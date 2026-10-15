@@ -329,7 +329,7 @@ main { max-width: 1240px; margin: 0 auto; padding: 10px 24px 80px; }
 .election-progress span { width: 0; height: 100%; display: block; background: var(--black); transition: width .4s ease; }
 .unit-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
 .unit-card { min-height: 250px; padding: 1.5rem; display: flex; flex-direction: column; border-radius: var(--radius); border: 1px solid var(--line); background: var(--white); position: relative; }
-.unit-card.current { border: 4px solid var(--black); }
+.unit-card.current { border-color: var(--black); box-shadow: inset 0 0 0 1px var(--black); }
 .unit-card.locked { background: var(--locked); color: #56635f; }
 .unit-top { display: flex; justify-content: space-between; gap: 1rem; }
 .unit-index { color: var(--slate); font-size: .74rem; font-weight: 950; letter-spacing: .12em; text-transform: uppercase; }
