@@ -612,6 +612,64 @@
     }
   }
 
+  function annotateElectionTerms(root) {
+    const concepts = [
+      { terms: ["OFFICIAL VOTER GUIDE"], definition: "A state-published guide with official election information and candidate statements." },
+      { terms: ["ENDORSEMENTS"], definition: "Public support for a candidate from a person or organization." },
+      { terms: ["PROPOSITION", "PROPOSITIONS"], definition: "A proposal on the ballot that voters decide to approve or reject." },
+      { terms: ["NONPARTISAN"], definition: "Not formally connected to a political party." },
+      { terms: ["PRIORITIES"], definition: "Issues a candidate says deserve attention." },
+      { terms: ["CANDIDATE"], definition: "A person running for elected office." },
+      { terms: ["DISTRICT"], definition: "A geographic area represented by an elected official." },
+      { terms: ["RACES"], definition: "Contests in which candidates compete for elected offices." },
+      { terms: ["ELECTION", "ELECTIONS"], definition: "A process where voters choose candidates and decide ballot measures." },
+      { terms: ["MEASURES"], definition: "Proposals or questions placed on the ballot for voters to decide." },
+      { terms: ["PARTY"], definition: "A political organization whose members work to elect candidates who share their ideas." },
+      { terms: ["BALLOT"], definition: "The list of races and measures voters can decide." },
+      { terms: ["PLATFORM"], definition: "A candidate’s main goals and policy plans if elected." }
+    ];
+    const lookup = new Map();
+    concepts.forEach(concept => concept.terms.forEach(term => lookup.set(term, {
+      key: concept.terms[0],
+      definition: concept.definition
+    })));
+    const pattern = new RegExp(`\\b(${Array.from(lookup.keys()).sort((a, b) => b.length - a.length).join("|")})\\b`, "g");
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    const textNodes = [];
+    while (walker.nextNode()) {
+      if (walker.currentNode.parentElement?.closest("abbr.ballot-concept")) continue;
+      if (pattern.test(walker.currentNode.nodeValue)) textNodes.push(walker.currentNode);
+      pattern.lastIndex = 0;
+    }
+    const keyboardTerms = new Set();
+    textNodes.forEach(textNode => {
+      const fragment = document.createDocumentFragment();
+      let previous = 0;
+      pattern.lastIndex = 0;
+      let match;
+      while ((match = pattern.exec(textNode.nodeValue))) {
+        const term = match[0];
+        if (term !== term.toUpperCase()) continue;
+        fragment.append(textNode.nodeValue.slice(previous, match.index));
+        const concept = lookup.get(term);
+        if (keyboardTerms.has(concept.key)) continue;
+        const label = document.createElement("abbr");
+        label.className = "ballot-concept";
+        label.setAttribute("aria-label", `${term}: ${concept.definition}`);
+        label.dataset.definition = concept.definition;
+        label.textContent = term;
+        label.tabIndex = 0;
+        keyboardTerms.add(concept.key);
+        fragment.appendChild(label);
+        previous = match.index + term.length;
+      }
+      if (previous) {
+        fragment.append(textNode.nodeValue.slice(previous));
+        textNode.replaceWith(fragment);
+      }
+    });
+  }
+
   function renderElection2026() {
     const container = document.getElementById("election-2026-content");
     container.replaceChildren();
@@ -744,6 +802,7 @@
     });
 
     container.append(races, propositions, sources);
+    annotateElectionTerms(container.closest(".ballot-paper") || container);
   }
 
   function renderPresidents() {

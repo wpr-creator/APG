@@ -14,7 +14,7 @@ window.ELECTION_2026_DATA = {
       office: "CALIFORNIA GOVERNOR",
       question: "WHO SHOULD BE CALIFORNIA’S GOVERNOR?",
       note: "The governor leads California’s government, proposes the budget, and signs bills into law or vetoes (rejects) them. Terms last four years.",
-      priorityLabel: "CAMPAIGN PRIORITIES",
+      priorityLabel: "PLATFORM",
       candidates: [
         {
           name: "XAVIER BECERRA",

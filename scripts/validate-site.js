@@ -282,13 +282,13 @@ function validateSharedCourseExperience() {
     'styles.css?v=20261015-ballot-callout-removed',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261015-no-zip-callout',
+    'ballot.css?v=20261015-ballot-concepts',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-governor-priorities',
-    'app.js?v=20261015-ballot-date-panel-removed',
+    'election-2026-data.js?v=20261015-ballot-concepts',
+    'app.js?v=20261015-ballot-concepts',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -405,6 +405,21 @@ function validateSharedCourseExperience() {
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
+  });
+  [
+    'function annotateElectionTerms(root)',
+    'A candidate’s main goals and policy plans if elected.',
+    'Public support for a candidate from a person or organization.',
+    'A proposal on the ballot that voters decide to approve or reject.',
+    'Contests in which candidates compete for elected offices.',
+    'A process where voters choose candidates and decide ballot measures.',
+    'label.setAttribute("aria-label"',
+    'label.className = "ballot-concept"',
+    'outline-offset: 2px'
+  ].forEach(function (content) {
+    if (!homepageApp.includes(content) && !fs.readFileSync(path.join(root, 'ballot.css'), 'utf8').includes(content)) {
+      errors.push('Election vocabulary highlighting is missing: ' + content);
+    }
   });
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
