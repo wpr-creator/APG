@@ -279,16 +279,16 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261015-ballot-callout-removed',
+    'styles.css?v=20261015-plain-propositions',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261015-ballot-concepts',
+    'ballot.css?v=20261015-plain-propositions',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
-    'election-2026-data.js?v=20261015-ballot-concepts',
-    'app.js?v=20261015-ballot-concepts',
+    'election-2026-data.js?v=20261015-plain-propositions',
+    'app.js?v=20261015-plain-propositions',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -391,9 +391,10 @@ function validateSharedCourseExperience() {
     errors.push('Election tracker must include all 14 statewide propositions.');
   } else {
     electionData.propositions.forEach(function (proposition) {
-      ['number', 'title', 'short', 'explanation', 'yes', 'no', 'money', 'source'].forEach(function (field) {
+      ['number', 'title', 'short', 'explanation', 'yes', 'no', 'source'].forEach(function (field) {
         if (!proposition[field]) errors.push('Proposition ' + proposition.number + ' is missing ' + field + '.');
       });
+      if (Object.hasOwn(proposition, 'money')) errors.push('Proposition ' + proposition.number + ' still includes the removed cost/savings section data.');
       if (!/^https:\/\/voterguide\.sos\.ca\.gov\/propositions\//.test(proposition.source || '')) {
         errors.push('Proposition ' + proposition.number + ' must link to its official California voter-guide page.');
       }
@@ -401,11 +402,14 @@ function validateSharedCourseExperience() {
   }
   [
     'ballot-mark',
-    'WHAT CHANGES?', 'COST OR SAVINGS', 'READ THE OFFICIAL VOTER GUIDE',
+    'WHAT THIS MEASURE DOES', 'READ THE OFFICIAL VOTER GUIDE',
     'ALL 14 PROPOSITIONS'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
+  if (homepageApp.includes('COST OR SAVINGS') || homepageApp.includes('proposition-money')) {
+    errors.push('Removed proposition cost/savings content remains in the election renderer.');
+  }
   [
     'function annotateElectionTerms(root)',
     'A candidate’s main goals and policy plans if elected.',

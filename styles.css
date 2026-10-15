@@ -843,10 +843,9 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .proposition-choices { padding: 0 1rem 1rem; display: grid; grid-template-columns: 1fr 1fr; gap: .6rem; }
 .proposition-choices p { margin: 0; padding: .8rem; background: var(--stone); font-size: .8rem; font-weight: 650; line-height: 1.4; }
 .proposition-choices b { display: block; margin-bottom: .3rem; font-size: .72rem; letter-spacing: .08em; }
-.proposition-explanation, .proposition-money { margin: 0 1rem .75rem; padding: .85rem; font-size: .84rem; font-weight: 650; line-height: 1.5; }
+.proposition-explanation { margin: 0 1rem .75rem; padding: .85rem; font-size: .84rem; font-weight: 650; line-height: 1.5; }
 .proposition-explanation { background: var(--stone); }
-.proposition-money { border: 1px solid var(--line); }
-.proposition-explanation b, .proposition-money b { display: block; margin-bottom: .3rem; font-size: .7rem; letter-spacing: .08em; }
+.proposition-explanation b { display: block; margin-bottom: .3rem; font-size: .7rem; letter-spacing: .08em; }
 .proposition-source { min-height: 44px; margin: 0 1rem .75rem; display: inline-flex; align-items: center; color: var(--black); font-size: .72rem; font-weight: 900; }
 .more-propositions { margin-top: 1rem; padding: 1.2rem; background: var(--stone); border: 1px solid var(--stone-dark); }
 .more-propositions h3 { margin: 0 0 .8rem; }
@@ -1134,7 +1133,6 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .proposition-choices p { background: #f1f6fb; border: 1px solid #bdc9d4; }
 .proposition-choices b { display: flex; align-items: center; gap: .45rem; color: #17365d; }
 .proposition-explanation { background: #f1f6fb; }
-.proposition-money { border-color: #bdc9d4; }
 .proposition-card summary span { color: #fff; background: #17365d; border-radius: 0; }
 .more-propositions, .ballot-sources { background: #f1f6fb; border-color: #7890a8; border-radius: 0; }
 .more-propositions li { background: #fff; border-left-color: #17365d; }
