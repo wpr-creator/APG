@@ -282,6 +282,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20261015-ballot-blue-type',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
+    'ballot.css?v=20261015-printed-ballot-clean-ink',
     'course-data.js?v=20261014-unit2-01-congress-key',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
