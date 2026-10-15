@@ -1051,6 +1051,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   padding: clamp(1rem, 2.8vw, 2.1rem) clamp(1rem, 3vw, 2rem) clamp(1rem, 3vw, 2rem) clamp(2.4rem, 5vw, 4rem);
   overflow: hidden;
   color: #17191b;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #fff;
   background-image: none;
   border: 1px solid #b9b7b0;
@@ -1063,7 +1064,7 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   left: 1rem;
   width: 8px;
   content: "";
-  background: radial-gradient(circle, #17191b 2px, transparent 2.7px) center top / 8px 25px repeat-y;
+  background: radial-gradient(circle, #17365d 2px, transparent 2.7px) center top / 8px 25px repeat-y;
   pointer-events: none;
 }
 .ballot-stock-line {
@@ -1073,11 +1074,11 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  border-bottom: 1px dashed #77736a;
+  border-bottom: 1px dashed #75879a;
 }
 .ballot-stock-mark {
-  color: #303234;
-  font-family: var(--type-label);
+  color: #17365d;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: .63rem;
   font-weight: 700;
   letter-spacing: .11em;
@@ -1086,22 +1087,22 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   width: 112px;
   flex: 0 0 auto;
   display: block;
-  border: 1px solid #b9b6ac;
+  border: 1px solid #bdc9d4;
   background: #fff;
 }
 .ballot-california-seal img { display: block; width: 100%; height: auto; }
 .ballot-stock-barcode {
   width: min(23%, 150px);
   height: 24px;
-  background: repeating-linear-gradient(90deg, #17191b 0 2px, transparent 2px 4px, #17191b 4px 5px, transparent 5px 9px, #17191b 9px 13px, transparent 13px 16px);
+  background: repeating-linear-gradient(90deg, #17365d 0 2px, transparent 2px 4px, #17365d 4px 5px, transparent 5px 9px, #17365d 9px 13px, transparent 13px 16px);
 }
 .ballot-paper > .page-intro {
   max-width: none;
   padding: clamp(1.4rem, 3vw, 2.25rem) 0 1rem;
 }
-.ballot-paper > .page-intro .eyebrow { color: #825b38; }
-.ballot-paper > .page-intro h1 { color: #15191d; font-family: var(--type-display); letter-spacing: -.055em; }
-.ballot-paper > .page-intro > p:last-child { max-width: none; margin-top: .7rem; color: #4d5051; font-size: .88rem; font-weight: 700; letter-spacing: .045em; }
+.ballot-paper > .page-intro .eyebrow { color: #315b83; }
+.ballot-paper > .page-intro h1 { color: #17365d; font-family: Arial, Helvetica, sans-serif; font-weight: 800; letter-spacing: -.025em; }
+.ballot-paper > .page-intro > p:last-child { max-width: none; margin-top: .7rem; color: #425466; font-family: Arial, Helvetica, sans-serif; font-size: .88rem; font-weight: 600; letter-spacing: .015em; }
 .ballot-header {
   position: relative;
   padding: 1.15rem 1.35rem;
@@ -1109,41 +1110,40 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   align-items: center;
   color: #17191b;
   background: #fff;
-  border: 1px solid #27292b;
-  border-bottom: 4px solid #27292b;
+  border: 1px solid #17365d;
+  border-bottom: 4px solid #17365d;
 }
-.ballot-header .eyebrow { color: #655f52; }
+.ballot-header .eyebrow { color: #315b83; }
 .ballot-header h2 { margin: 0; font-size: clamp(1.35rem, 2.3vw, 2rem); }
-.ballot-header dl { gap: 0; border: 1px solid #353638; }
-.ballot-header dl div { padding: .75rem; background: transparent; }
-.ballot-header dl div + div { border-left: 1px solid #77736a; }
-.ballot-header dt { color: #565656; font-family: var(--type-label); }
+.ballot-header dl { gap: 0; border: 1px solid #7890a8; }
+.ballot-header dl div { padding: .75rem; background: #fff; }
+.ballot-header dl div + div { border-left: 1px solid #bdc9d4; }
+.ballot-header dt { color: #425466; font-family: Arial, Helvetica, sans-serif; }
 .ballot-header dd { font-size: .88rem; }
-.ballot-location { background: #fff; border: 1px solid #333; border-left: 1px solid #333; border-top: 4px solid #27292b; }
-.ballot-location h2 { color: #17191b; }
-.ballot-location .zip-change-button { color: #17191b; border-color: #17191b; }
-.ballot-location a, .race-card > a, .ballot-sources a, .proposition-source { color: #17191b; }
-.race-card, .proposition-card { border-color: #565656; border-top-color: #17191b; border-radius: 0; box-shadow: none; }
-.race-card.local-race { outline: 2px solid #17191b; outline-offset: -5px; }
-.race-card .local-label { color: #fffefa; background: #292b2d; }
-.candidate-list section { position: relative; padding-left: 3rem; background: #fff; border: 1px solid #8c8a83; }
+.ballot-location { background: #f1f6fb; border: 1px solid #7890a8; border-left: 1px solid #7890a8; border-top: 4px solid #17365d; }
+.ballot-location h2 { color: #17365d; }
+.ballot-location a, .race-card > a, .ballot-sources a, .proposition-source { color: #17365d; }
+.race-card, .proposition-card { border-color: #9aabba; border-top-color: #17365d; border-radius: 0; box-shadow: none; }
+.race-card.local-race { outline: 2px solid #17365d; outline-offset: -5px; }
+.race-card .local-label { color: #fff; background: #17365d; }
+.candidate-list section { position: relative; padding-left: 3rem; background: #fff; border: 1px solid #bdc9d4; }
 .ballot-mark {
   width: 1.08rem;
   height: .82rem;
   display: inline-block;
   flex: 0 0 auto;
-  border: 2px solid #17191b;
+  border: 2px solid #17365d;
   border-radius: 50%;
   vertical-align: -.1em;
 }
 .candidate-list .ballot-mark { position: absolute; top: 1.1rem; left: 1rem; }
-.proposition-choices p { background: #f7f7f5; border: 1px solid #a7a49b; }
-.proposition-choices b { display: flex; align-items: center; gap: .45rem; color: #17191b; }
-.proposition-explanation { background: #f7f7f5; }
-.proposition-money { border-color: #a7a49b; }
-.proposition-card summary span { color: #fffefa; background: #292b2d; border-radius: 0; }
-.more-propositions, .ballot-sources { background: #f7f7f5; border-color: #343638; border-radius: 0; }
-.more-propositions li { background: #fff; border-left-color: #343638; }
+.proposition-choices p { background: #f1f6fb; border: 1px solid #bdc9d4; }
+.proposition-choices b { display: flex; align-items: center; gap: .45rem; color: #17365d; }
+.proposition-explanation { background: #f1f6fb; }
+.proposition-money { border-color: #bdc9d4; }
+.proposition-card summary span { color: #fff; background: #17365d; border-radius: 0; }
+.more-propositions, .ballot-sources { background: #f1f6fb; border-color: #7890a8; border-radius: 0; }
+.more-propositions li { background: #fff; border-left-color: #17365d; }
 
 @media (max-width: 700px) {
   .ballot-paper { padding: 1rem .85rem 1rem 2.25rem; }
