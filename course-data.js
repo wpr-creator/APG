@@ -112,6 +112,7 @@ window.COURSE_DATA = {
         ["Checks and Balances in Action", "What happens when institutions disagree?", "AP Topic 2.15", "Connect institutional powers across a shared policy conflict.", "Trace one action through multiple checks"]
       ],
       resources: [
+        { id: "u2-21-22-concept-practice", lesson: "CONCEPT PRACTICE", title: "2.1–2.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit2-concept-practice.html" },
         { id: "ap-u2-overview", lesson: "UNIT 2 COURSE HUB", title: "UNIT 2 OVERVIEW", url: "unit2.html" },
         { id: "ap-u2-documents", lesson: "FOUNDATIONAL DOCUMENTS", title: "UNIT 2 DOCUMENTS", url: "unit2-docs.html" },
         { id: "ap-u2-cases", lesson: "SUPREME COURT CASES", title: "UNIT 2 CASES", url: "unit2-cases.html" },
