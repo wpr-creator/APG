@@ -661,7 +661,7 @@
     const quizLinks = document.createElement("section");
     quizLinks.className = "ballot-quiz-links";
     quizLinks.setAttribute("aria-labelledby", "ballot-quiz-title");
-    quizLinks.innerHTML = `<p class="eyebrow">KEEP EXPLORING</p><h2 id="ballot-quiz-title">FIND OUT WHERE YOU STAND</h2><p>Try a nonpartisan voter quiz, then compare your views with the candidates and measures.</p>`;
+    quizLinks.innerHTML = `<p class="eyebrow">OPTIONAL VOTER QUIZZES</p><h2 id="ballot-quiz-title">COMPARE YOUR VIEWS</h2>`;
     const quizButtonGrid = document.createElement("div");
     quizButtonGrid.className = "ballot-quiz-button-grid";
     [

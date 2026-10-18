@@ -279,16 +279,16 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261018-ballot-quiz-squares',
+    'styles.css?v=20261018-ballot-guide-layout',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261018-ballot-quiz-squares',
+    'ballot.css?v=20261018-ballot-guide-layout',
     'course-data.js?v=20261018-u2-concept-practice',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261018-ballot-quiz-squares',
+    'app.js?v=20261018-ballot-guide-layout',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -420,10 +420,10 @@ function validateSharedCourseExperience() {
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
   });
-  ['class="ballot-paper"', 'class="ballot-stock-line"', '<h1>STUDENT VOTER GUIDE</h1>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
+  ['class="ballot-paper"', 'class="ballot-stock-line"', '<h1>STUDENT VOTER GUIDE</h1>', '<p class="eyebrow">NOVEMBER 3, 2026</p>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
   });
-  if (homepage.includes('<span class="ballot-stock-mark">STUDENT VOTER GUIDE</span>')) {
+  if (homepage.includes('ballot-stock-mark') || homepage.includes('NOVEMBER 3, 2026 · STUDENT VOTER GUIDE')) {
     errors.push('Student Voter Guide should appear as the page title, not on the ballot stock line.');
   }
   if (homepage.includes('seal-bear') || homepage.includes('seal-star')) {
