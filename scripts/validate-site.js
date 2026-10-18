@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261018-ballot-quiz-logos-large',
+    'styles.css?v=20261018-midterm-label',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'ballot.css?v=20261018-ballot-quiz-logos',
@@ -422,7 +422,7 @@ function validateSharedCourseExperience() {
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
   });
-  ['class="ballot-paper"', 'class="ballot-stock-line"', '<h1>STUDENT VOTER GUIDE</h1>', '<p class="eyebrow">NOVEMBER 3, 2026</p>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
+  ['class="ballot-paper"', 'class="ballot-stock-line"', '2026 MIDTERM ELECTION', '<h1>STUDENT VOTER GUIDE</h1>', '<p class="eyebrow">NOVEMBER 3, 2026</p>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
   });
   if (homepage.includes('ballot-stock-mark') || homepage.includes('NOVEMBER 3, 2026 · STUDENT VOTER GUIDE')) {
