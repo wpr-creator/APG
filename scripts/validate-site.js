@@ -288,7 +288,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261018-ballot-quiz-logos',
+    'app.js?v=20261018-election-prep-label',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -406,6 +406,7 @@ function validateSharedCourseExperience() {
     'https://www.isidewith.com/2026-election-quiz',
     'https://calmatters.org/california-voter-guide-2026/propositions/quizzes/',
     'assets/isidewith-logo.svg', 'assets/calmatters-logo.jpg',
+    'PREPARE FOR ELECTION DAY', 'SEE WHERE YOUR VIEWS FALL',
     'ballot-quiz-button', 'container.append(quizLinks, races, sources)'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
