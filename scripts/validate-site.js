@@ -279,7 +279,7 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261018-ballot-quiz-logos',
+    'styles.css?v=20261018-ballot-quiz-logos-large',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'ballot.css?v=20261018-ballot-quiz-logos',

@@ -860,13 +860,13 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .ballot-quiz-links { margin: 1rem 0 1.25rem; padding: 0; color: #17365d; background: transparent; }
 .ballot-quiz-links > .eyebrow { margin: 0 0 .2rem; color: #315b83; }
 .ballot-quiz-links h2 { margin: 0 0 .5rem; font-size: .94rem; }
-.ballot-quiz-button-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 260px)); gap: .6rem; }
-.ballot-quiz-button { min-height: 94px; padding: .65rem .8rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: .55rem; color: #17365d !important; background: #fff; border: 1px solid #9aabba; text-decoration: none; }
+.ballot-quiz-button-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 520px)); gap: 1.2rem; }
+.ballot-quiz-button { min-height: 188px; padding: 1.3rem 1.6rem; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 1.1rem; color: #17365d !important; background: #fff; border: 1px solid #9aabba; text-decoration: none; }
 .ballot-quiz-button:hover { color: #17365d !important; background: #f1f6fb; border-color: #17365d; }
 .ballot-quiz-button:focus-visible { outline: 3px solid #111; outline-offset: 3px; }
-.ballot-quiz-button span { max-width: 34ch; font-size: .7rem; font-weight: 900; line-height: 1.25; letter-spacing: .025em; }
-.ballot-quiz-logo { width: 112px; height: 24px; display: block; object-fit: contain; object-position: left center; }
-.ballot-quiz-logo.calmatters-logo { width: 118px; height: 24px; object-fit: cover; object-position: center 50%; }
+.ballot-quiz-button span { max-width: 34ch; font-size: .88rem; font-weight: 900; line-height: 1.25; letter-spacing: .025em; }
+.ballot-quiz-logo { width: 224px; height: 48px; display: block; object-fit: contain; object-position: left center; }
+.ballot-quiz-logo.calmatters-logo { width: 236px; height: 48px; object-fit: cover; object-position: center 50%; }
 .admin-foundation-note { margin: 0; color: var(--muted); font-size: .72rem; font-weight: 650; }
 .admin-unlock-row { margin-top: .7rem; grid-template-columns: 1fr 190px; align-items: center; }
 .admin-unit-unlock-row, .admin-assignment-unlock-row { display: grid; grid-template-columns: auto 1fr; gap: .65rem; }
