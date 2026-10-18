@@ -662,6 +662,8 @@
     quizLinks.className = "ballot-quiz-links";
     quizLinks.setAttribute("aria-labelledby", "ballot-quiz-title");
     quizLinks.innerHTML = `<p class="eyebrow">KEEP EXPLORING</p><h2 id="ballot-quiz-title">FIND OUT WHERE YOU STAND</h2><p>Try a nonpartisan voter quiz, then compare your views with the candidates and measures.</p>`;
+    const quizButtonGrid = document.createElement("div");
+    quizButtonGrid.className = "ballot-quiz-button-grid";
     [
       ["TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz", "Answer questions about candidates and issues."],
       ["TAKE THE CALIFORNIA PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/", "Explore where you stand on statewide ballot measures."]
@@ -672,8 +674,9 @@
       link.target = "_blank";
       link.rel = "noopener noreferrer";
       link.innerHTML = `<span>${label} ↗</span><small>${description}</small>`;
-      quizLinks.appendChild(link);
+      quizButtonGrid.appendChild(link);
     });
+    quizLinks.appendChild(quizButtonGrid);
 
     const races = document.createElement("section");
     races.className = "ballot-section";

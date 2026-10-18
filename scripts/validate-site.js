@@ -279,16 +279,16 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261018-ballot-quizzes-top',
+    'styles.css?v=20261018-ballot-quiz-squares',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261018-ballot-quizzes-top',
+    'ballot.css?v=20261018-ballot-quiz-squares',
     'course-data.js?v=20261018-u2-concept-practice',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261018-ballot-quizzes-top',
+    'app.js?v=20261018-ballot-quiz-squares',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
