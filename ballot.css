@@ -97,52 +97,6 @@
 #election-2026 .ballot-mark { border-color: #111; }
 #election-2026 .ballot-paper :focus-visible { outline-color: #111; }
 
-#election-2026 .ballot-concept {
-  position: relative;
-  display: inline;
-  padding: 0 .12em;
-  color: #111;
-  background: #ffec99;
-  border-radius: 2px;
-  font-weight: 700;
-  text-decoration: underline dotted #111 1px;
-  text-underline-offset: 2px;
-  cursor: help;
-}
-
-#election-2026 .ballot-concept:focus-visible {
-  outline: 2px solid #111;
-  outline-offset: 2px;
-}
-
-#election-2026 .ballot-concept:hover::after,
-#election-2026 .ballot-concept:focus::after {
-  position: absolute;
-  z-index: 10;
-  top: auto;
-  bottom: calc(100% + .55rem);
-  left: 0;
-  width: max-content;
-  max-width: min(18rem, calc(100vw - 2rem));
-  padding: .65rem .75rem;
-  color: #111;
-  background: #fff;
-  border: 1px solid #111;
-  box-shadow: 0 3px 8px rgb(0 0 0 / 16%);
-  content: attr(data-definition);
-  font-size: .9rem;
-  font-weight: 400;
-  line-height: 1.4;
-  text-align: left;
-  text-transform: none;
-  white-space: normal;
-}
-
-@media print {
-  #election-2026 .ballot-concept { background: #eee; }
-  #election-2026 .ballot-concept::after { display: none; }
-}
-
 @media (max-width: 700px) {
   #election-2026 .ballot-paper { padding: 1rem .85rem 1rem 2.25rem; }
 }

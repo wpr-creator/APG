@@ -654,64 +654,6 @@
     }
   }
 
-  function annotateElectionTerms(root) {
-    const concepts = [
-      { terms: ["OFFICIAL VOTER GUIDE"], definition: "A state-published guide with official election information and candidate statements." },
-      { terms: ["ENDORSEMENTS"], definition: "Public support for a candidate from a person or organization." },
-      { terms: ["PROPOSITION", "PROPOSITIONS"], definition: "A proposal on the ballot that voters decide to approve or reject." },
-      { terms: ["NONPARTISAN"], definition: "Not formally connected to a political party." },
-      { terms: ["PRIORITIES"], definition: "Issues a candidate says deserve attention." },
-      { terms: ["CANDIDATE"], definition: "A person running for elected office." },
-      { terms: ["DISTRICT"], definition: "A geographic area represented by an elected official." },
-      { terms: ["RACES"], definition: "Contests in which candidates compete for elected offices." },
-      { terms: ["ELECTION", "ELECTIONS"], definition: "A process where voters choose candidates and decide ballot measures." },
-      { terms: ["MEASURES"], definition: "Proposals or questions placed on the ballot for voters to decide." },
-      { terms: ["PARTY"], definition: "A political organization whose members work to elect candidates who share their ideas." },
-      { terms: ["BALLOT"], definition: "The list of races and measures voters can decide." },
-      { terms: ["PLATFORM"], definition: "A candidate’s main goals and policy plans if elected." }
-    ];
-    const lookup = new Map();
-    concepts.forEach(concept => concept.terms.forEach(term => lookup.set(term, {
-      key: concept.terms[0],
-      definition: concept.definition
-    })));
-    const pattern = new RegExp(`\\b(${Array.from(lookup.keys()).sort((a, b) => b.length - a.length).join("|")})\\b`, "g");
-    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
-    const textNodes = [];
-    while (walker.nextNode()) {
-      if (walker.currentNode.parentElement?.closest("abbr.ballot-concept")) continue;
-      if (pattern.test(walker.currentNode.nodeValue)) textNodes.push(walker.currentNode);
-      pattern.lastIndex = 0;
-    }
-    const keyboardTerms = new Set();
-    textNodes.forEach(textNode => {
-      const fragment = document.createDocumentFragment();
-      let previous = 0;
-      pattern.lastIndex = 0;
-      let match;
-      while ((match = pattern.exec(textNode.nodeValue))) {
-        const term = match[0];
-        if (term !== term.toUpperCase()) continue;
-        fragment.append(textNode.nodeValue.slice(previous, match.index));
-        const concept = lookup.get(term);
-        if (keyboardTerms.has(concept.key)) continue;
-        const label = document.createElement("abbr");
-        label.className = "ballot-concept";
-        label.setAttribute("aria-label", `${term}: ${concept.definition}`);
-        label.dataset.definition = concept.definition;
-        label.textContent = term;
-        label.tabIndex = 0;
-        keyboardTerms.add(concept.key);
-        fragment.appendChild(label);
-        previous = match.index + term.length;
-      }
-      if (previous) {
-        fragment.append(textNode.nodeValue.slice(previous));
-        textNode.replaceWith(fragment);
-      }
-    });
-  }
-
   function renderElection2026() {
     const container = document.getElementById("election-2026-content");
     container.replaceChildren();
@@ -796,33 +738,6 @@
     });
     races.appendChild(raceGrid);
 
-    const propositions = document.createElement("section");
-    propositions.className = "ballot-section";
-    propositions.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STATEWIDE PROPOSITIONS</p><h2>ALL 14 PROPOSITIONS</h2><p>A proposition is a measure voters approve or reject.</p></div></div>`;
-    const propositionGrid = document.createElement("div");
-    propositionGrid.className = "proposition-grid";
-    electionData.propositions.forEach(proposition => {
-      const details = document.createElement("details");
-      details.className = "proposition-card";
-      const summary = document.createElement("summary");
-      summary.innerHTML = `<span>PROP ${proposition.number}</span><strong>${proposition.title}</strong><small>${proposition.short}</small>`;
-      const explanation = document.createElement("p");
-      explanation.className = "proposition-explanation";
-      explanation.innerHTML = `<b>WHAT THIS MEASURE DOES</b>${proposition.explanation}`;
-      const choices = document.createElement("div");
-      choices.className = "proposition-choices";
-      choices.innerHTML = `<p><b><span class="ballot-mark" aria-hidden="true"></span>YES</b>${proposition.yes}</p><p><b><span class="ballot-mark" aria-hidden="true"></span>NO</b>${proposition.no}</p>`;
-      const source = document.createElement("a");
-      source.className = "proposition-source";
-      source.href = proposition.source;
-      source.target = "_blank";
-      source.rel = "noopener";
-      source.textContent = "READ THE OFFICIAL VOTER GUIDE ↗";
-      details.append(summary, explanation, choices, source);
-      propositionGrid.appendChild(details);
-    });
-    propositions.appendChild(propositionGrid);
-
     const sources = document.createElement("footer");
     sources.className = "ballot-sources";
     sources.innerHTML = `<p><strong>CHECKED ${electionData.updated}</strong> · BALLOT INFORMATION CAN CHANGE BEFORE ELECTION DAY.</p>`;
@@ -840,8 +755,7 @@
       sources.appendChild(link);
     });
 
-    container.append(races, propositions, sources);
-    annotateElectionTerms(container.closest(".ballot-paper") || container);
+    container.append(races, sources);
   }
 
   function renderPresidents() {

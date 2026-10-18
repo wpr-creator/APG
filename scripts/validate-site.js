@@ -402,27 +402,16 @@ function validateSharedCourseExperience() {
   }
   [
     'ballot-mark',
-    'WHAT THIS MEASURE DOES', 'READ THE OFFICIAL VOTER GUIDE',
-    'ALL 14 PROPOSITIONS'
+    'CANDIDATE RACES', 'VIEWS ON LOCAL ISSUES'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
   if (homepageApp.includes('COST OR SAVINGS') || homepageApp.includes('proposition-money')) {
     errors.push('Removed proposition cost/savings content remains in the election renderer.');
   }
-  [
-    'function annotateElectionTerms(root)',
-    'A candidate’s main goals and policy plans if elected.',
-    'Public support for a candidate from a person or organization.',
-    'A proposal on the ballot that voters decide to approve or reject.',
-    'Contests in which candidates compete for elected offices.',
-    'A process where voters choose candidates and decide ballot measures.',
-    'label.setAttribute("aria-label"',
-    'label.className = "ballot-concept"',
-    'outline-offset: 2px'
-  ].forEach(function (content) {
-    if (!homepageApp.includes(content) && !fs.readFileSync(path.join(root, 'ballot.css'), 'utf8').includes(content)) {
-      errors.push('Election vocabulary highlighting is missing: ' + content);
+  ['annotateElectionTerms', 'ballot-concept', 'WHAT THIS MEASURE DOES', 'ALL 14 PROPOSITIONS'].forEach(function (content) {
+    if (homepageApp.includes(content) || fs.readFileSync(path.join(root, 'ballot.css'), 'utf8').includes(content)) {
+      errors.push('Removed election-guide highlighting or proposition content remains: ' + content);
     }
   });
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
