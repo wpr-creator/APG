@@ -420,9 +420,12 @@ function validateSharedCourseExperience() {
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
   });
-  ['class="ballot-paper"', 'class="ballot-stock-line"', 'CALIFORNIA BALLOT', 'STUDENT VOTER GUIDE', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
+  ['class="ballot-paper"', 'class="ballot-stock-line"', '<h1>STUDENT VOTER GUIDE</h1>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
     if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
   });
+  if (homepage.includes('<span class="ballot-stock-mark">STUDENT VOTER GUIDE</span>')) {
+    errors.push('Student Voter Guide should appear as the page title, not on the ballot stock line.');
+  }
   if (homepage.includes('seal-bear') || homepage.includes('seal-star')) {
     errors.push('The student ballot should use the supplied California flag image rather than the drawn bear seal.');
   }
