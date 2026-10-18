@@ -665,15 +665,23 @@
     const quizButtonGrid = document.createElement("div");
     quizButtonGrid.className = "ballot-quiz-button-grid";
     [
-      ["TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz", "Answer questions about candidates and issues."],
-      ["TAKE THE CALIFORNIA PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/", "Explore where you stand on statewide ballot measures."]
-    ].forEach(([label, url, description]) => {
+      ["iSideWith", "assets/isidewith-logo.svg", "TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz"],
+      ["CalMatters", "assets/calmatters-logo.jpg", "TAKE THE PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/"]
+    ].forEach(([siteName, logo, label, url]) => {
       const link = document.createElement("a");
       link.className = "ballot-quiz-button";
       link.href = url;
       link.target = "_blank";
       link.rel = "noopener noreferrer";
-      link.innerHTML = `<span>${label} ↗</span><small>${description}</small>`;
+      link.setAttribute("aria-label", `${label} at ${siteName} (opens in a new tab)`);
+      const image = document.createElement("img");
+      image.className = `ballot-quiz-logo ${siteName === "CalMatters" ? "calmatters-logo" : ""}`.trim();
+      image.src = logo;
+      image.alt = siteName;
+      image.loading = "lazy";
+      const linkLabel = document.createElement("span");
+      linkLabel.textContent = `${label} ↗`;
+      link.append(image, linkLabel);
       quizButtonGrid.appendChild(link);
     });
     quizLinks.appendChild(quizButtonGrid);

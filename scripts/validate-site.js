@@ -279,16 +279,16 @@ function validateSharedCourseExperience() {
     }
   });
   [
-    'styles.css?v=20261018-ballot-guide-layout',
+    'styles.css?v=20261018-ballot-quiz-logos',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261018-ballot-guide-layout',
+    'ballot.css?v=20261018-ballot-quiz-logos',
     'course-data.js?v=20261018-u2-concept-practice',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261018-ballot-guide-layout',
+    'app.js?v=20261018-ballot-quiz-logos',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -405,6 +405,7 @@ function validateSharedCourseExperience() {
     'CANDIDATE RACES', 'VIEWS ON LOCAL ISSUES',
     'https://www.isidewith.com/2026-election-quiz',
     'https://calmatters.org/california-voter-guide-2026/propositions/quizzes/',
+    'assets/isidewith-logo.svg', 'assets/calmatters-logo.jpg',
     'ballot-quiz-button', 'container.append(quizLinks, races, sources)'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
