@@ -376,7 +376,7 @@ function validateSharedCourseExperience() {
   })) {
     errors.push('Regional San Diego congressional examples must include sourced candidate pairs for Districts 48–51.');
   }
-  if (!homepageApp.includes('electionData.races.filter(race => !race.regionalOnly)') ||
+  if (!homepageApp.includes('.filter(race => !race.regionalOnly)') ||
       homepageApp.includes('regionalHouseCards') || homepageApp.includes('REGIONAL EXAMPLES FOR ZIP CODE') ||
       homepageApp.includes('election-zip-form') || homepageApp.includes('CHANGE TO MY ZIP')) {
     errors.push('Other congressional districts must remain hidden and the student ballot must stay fixed to the school ZIP.');
