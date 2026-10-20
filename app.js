@@ -693,7 +693,11 @@
     races.innerHTML = `<div class="guide-section-heading"><p class="eyebrow">Step 2 · Candidate races</p><h2>Meet the candidates</h2></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
-    electionData.races.filter(race => !race.regionalOnly).forEach(race => {
+    const raceOrder = ["CONGRESS", "STATE", "LOCAL"];
+    electionData.races
+      .filter(race => !race.regionalOnly)
+      .sort((left, right) => raceOrder.indexOf(left.category) - raceOrder.indexOf(right.category))
+      .forEach(race => {
       const article = document.createElement("article");
       article.className = `race-card race-card-${race.category.toLowerCase()}`;
       article.innerHTML = `<div class="race-card-kicker"><span class="race-category">${race.category}</span><span class="race-office">${race.office}</span></div><h3>${race.question}</h3><p class="race-description">${race.note}</p>`;
@@ -708,8 +712,8 @@
           portrait.className = "candidate-portrait";
           portrait.src = candidate.photo;
           portrait.alt = `Portrait of ${candidate.name}`;
-          portrait.width = 96;
-          portrait.height = 112;
+          portrait.width = 160;
+          portrait.height = 192;
           portrait.loading = "lazy";
           portrait.decoding = "async";
           if (candidate.photoSource) portrait.title = `Photo from ${candidate.photoSource}`;

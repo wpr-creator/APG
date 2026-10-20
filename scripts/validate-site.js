@@ -408,6 +408,7 @@ function validateSharedCourseExperience() {
     'Meet the candidates', 'Step 2 · Candidate races',
     'Explore California propositions', 'guide-action-button',
     'race-category', 'What the candidates say',
+    'const raceOrder = ["CONGRESS", "STATE", "LOCAL"]',
     'container.append(quizLinks, races, propositionQuizLinks, sources)'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);

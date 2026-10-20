@@ -15,7 +15,7 @@ window.ELECTION_2026_DATA = {
       office: "Governor of California",
       question: "Who should lead California?",
       note: "The governor leads California’s government, proposes the budget, and signs bills into law or vetoes (rejects) them. Terms last four years.",
-      priorityLabel: "Platform",
+      priorityLabel: "What they say they’ll work on",
       candidates: [
         {
           name: "Xavier Becerra",
@@ -23,7 +23,7 @@ window.ELECTION_2026_DATA = {
           photo: "assets/election-2026/candidates/becerra.jpg",
           photoSource: "https://www.hhs.gov/sites/default/files/fy-2023-hhs-agency-financial-report.pdf",
           fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress.",
-          priorities: ["Strengthen Medi-Cal and make health care more affordable", "Build more affordable housing", "Lower living costs and challenge price gouging"],
+          priorities: ["Improve Medi-Cal, California’s health insurance program, and make care more affordable", "Build more homes people can afford", "Lower everyday costs and stop unfair price hikes"],
           website: "https://www.xavierbecerra2026.com/priorities/"
         },
         {
@@ -32,7 +32,7 @@ window.ELECTION_2026_DATA = {
           photo: "assets/election-2026/candidates/hilton.jpg",
           photoSource: "https://www.fox.com/hub/talent/TAL0000292731/steve-hilton",
           fact: "Former policy adviser and TV host; he has not held elected office.",
-          priorities: ["Cut state income taxes and lower gas prices", "Build more starter homes by reducing fees and rules", "Lower energy costs by changing state energy regulations"],
+          priorities: ["Lower state income taxes and gas prices", "Make it easier and less costly to build starter homes", "Change state energy rules to lower energy bills"],
           website: "https://stevehiltonforgovernor.com/"
         }
       ],
@@ -164,6 +164,7 @@ window.ELECTION_2026_DATA = {
       question: "Who should represent District 52?",
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
+      priorityLabel: "What they say they’ll work on",
       candidates: [
         {
           name: "Juan Vargas",
@@ -171,7 +172,7 @@ window.ELECTION_2026_DATA = {
           photo: "assets/election-2026/candidates/vargas.jpg",
           photoSource: "https://vargas.house.gov/media/media-kit",
           fact: "First elected to Congress in 2012. Previously served in California’s Legislature and on the San Diego City Council; he also worked in business.",
-          priorities: ["Cleaning up Tijuana River Valley pollution", "Enforcing immigration laws", "Making life more affordable"],
+          priorities: ["Clean up pollution in the Tijuana River Valley", "Enforce immigration laws", "Make everyday life more affordable"],
           endorsements: ["California Democratic Party", "California Teachers Association", "California Federation of Labor Unions", "American Federation of Government Employees", "Equality California"],
           website: "https://www.votevargas.com/"
         },
@@ -181,7 +182,7 @@ window.ELECTION_2026_DATA = {
           photo: "assets/election-2026/candidates/belle.jpg",
           photoSource: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-52",
           fact: "Leads a San Diego investment firm; formerly served on the Contra Costa County school board.",
-          priorities: ["Faith", "Freedom", "Finances"],
+          priorities: ["Faith and religious freedom", "Personal freedom", "Financial issues"],
           endorsements: [],
           endorsementNote: "KPBS reported no major endorsements.",
           website: "https://www.belleforcongress.com/"
