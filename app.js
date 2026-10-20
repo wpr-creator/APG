@@ -688,10 +688,6 @@
     const quizLinks = makeQuizSection(1, "PREPARE FOR THE ELECTION", "SEE WHERE YOUR VIEWS FALL", [
       ["iSideWith", "assets/isidewith-logo.svg", "TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz"]
     ]);
-    const propositionQuizLinks = makeQuizSection(3, "CALIFORNIA PROPOSITIONS", "EXPLORE THE PROPOSITIONS", [
-      ["CalMatters", "assets/calmatters-logo.jpg", "TAKE THE PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/"]
-    ]);
-
     const races = document.createElement("section");
     races.className = "ballot-section";
     races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STEP 2 · CANDIDATE RACES</p><h2>MEET THE CANDIDATES</h2></div></div>`;
@@ -791,6 +787,10 @@
       raceGrid.appendChild(article);
     });
     races.appendChild(raceGrid);
+
+    const propositionQuizLinks = makeQuizSection(3, "CALIFORNIA PROPOSITIONS", "EXPLORE THE PROPOSITIONS", [
+      ["CalMatters", "assets/calmatters-logo.jpg", "TAKE THE PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/"]
+    ]);
 
     const sources = document.createElement("footer");
     sources.className = "ballot-sources";
