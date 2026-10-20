@@ -658,37 +658,43 @@
     const container = document.getElementById("election-2026-content");
     container.replaceChildren();
 
-    const quizLinks = document.createElement("section");
-    quizLinks.className = "ballot-quiz-links";
-    quizLinks.setAttribute("aria-labelledby", "ballot-quiz-title");
-    quizLinks.innerHTML = `<p class="eyebrow">PREPARE FOR ELECTION DAY</p><h2 id="ballot-quiz-title">SEE WHERE YOUR VIEWS FALL</h2>`;
-    const quizButtonGrid = document.createElement("div");
-    quizButtonGrid.className = "ballot-quiz-button-grid";
-    [
-      ["iSideWith", "assets/isidewith-logo.svg", "TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz"],
+    const makeQuizSection = (step, eyebrow, title, choices) => {
+      const section = document.createElement("section");
+      section.className = "ballot-quiz-links";
+      section.setAttribute("aria-labelledby", `ballot-quiz-title-${step}`);
+      section.innerHTML = `<p class="eyebrow">STEP ${step} · ${eyebrow}</p><h2 id="ballot-quiz-title-${step}">${title}</h2>`;
+      const buttonGrid = document.createElement("div");
+      buttonGrid.className = "ballot-quiz-button-grid";
+      choices.forEach(([siteName, logo, label, url]) => {
+        const link = document.createElement("a");
+        link.className = "ballot-quiz-button";
+        link.href = url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.setAttribute("aria-label", `${label} at ${siteName} (opens in a new tab)`);
+        const image = document.createElement("img");
+        image.className = `ballot-quiz-logo ${siteName === "CalMatters" ? "calmatters-logo" : ""}`.trim();
+        image.src = logo;
+        image.alt = siteName;
+        image.loading = "lazy";
+        const linkLabel = document.createElement("span");
+        linkLabel.textContent = `${label} ↗`;
+        link.append(image, linkLabel);
+        buttonGrid.appendChild(link);
+      });
+      section.appendChild(buttonGrid);
+      return section;
+    };
+    const quizLinks = makeQuizSection(1, "PREPARE FOR THE ELECTION", "SEE WHERE YOUR VIEWS FALL", [
+      ["iSideWith", "assets/isidewith-logo.svg", "TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz"]
+    ]);
+    const propositionQuizLinks = makeQuizSection(3, "CALIFORNIA PROPOSITIONS", "EXPLORE THE PROPOSITIONS", [
       ["CalMatters", "assets/calmatters-logo.jpg", "TAKE THE PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/"]
-    ].forEach(([siteName, logo, label, url]) => {
-      const link = document.createElement("a");
-      link.className = "ballot-quiz-button";
-      link.href = url;
-      link.target = "_blank";
-      link.rel = "noopener noreferrer";
-      link.setAttribute("aria-label", `${label} at ${siteName} (opens in a new tab)`);
-      const image = document.createElement("img");
-      image.className = `ballot-quiz-logo ${siteName === "CalMatters" ? "calmatters-logo" : ""}`.trim();
-      image.src = logo;
-      image.alt = siteName;
-      image.loading = "lazy";
-      const linkLabel = document.createElement("span");
-      linkLabel.textContent = `${label} ↗`;
-      link.append(image, linkLabel);
-      quizButtonGrid.appendChild(link);
-    });
-    quizLinks.appendChild(quizButtonGrid);
+    ]);
 
     const races = document.createElement("section");
     races.className = "ballot-section";
-    races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">CANDIDATE RACES</p><h2>WHO GETS THE JOB?</h2></div></div>`;
+    races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STEP 2 · CANDIDATE RACES</p><h2>MEET THE CANDIDATES</h2></div></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
     electionData.races.filter(race => !race.regionalOnly).forEach(race => {
@@ -803,7 +809,7 @@
       sources.appendChild(link);
     });
 
-    container.append(quizLinks, races, sources);
+    container.append(quizLinks, races, propositionQuizLinks, sources);
   }
 
   function renderPresidents() {

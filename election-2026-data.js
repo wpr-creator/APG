@@ -20,7 +20,7 @@ window.ELECTION_2026_DATA = {
           name: "XAVIER BECERRA",
           party: "DEMOCRATIC",
           photo: "assets/election-2026/candidates/becerra.jpg",
-          photoSource: "https://www.xavierbecerra2026.com/bio/",
+          photoSource: "https://www.hhs.gov/sites/default/files/fy-2023-hhs-agency-financial-report.pdf",
           fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress.",
           priorities: ["Strengthen Medi-Cal and make health care more affordable", "Build more affordable housing", "Lower living costs and challenge price gouging"],
           website: "https://www.xavierbecerra2026.com/priorities/"
@@ -29,7 +29,7 @@ window.ELECTION_2026_DATA = {
           name: "STEVE HILTON",
           party: "REPUBLICAN",
           photo: "assets/election-2026/candidates/hilton.jpg",
-          photoSource: "https://stevehiltonforgovernor.com/",
+          photoSource: "https://www.fox.com/hub/talent/TAL0000292731/steve-hilton",
           fact: "Former policy adviser and TV host; he has not held elected office.",
           priorities: ["Cut state income taxes and lower gas prices", "Build more starter homes by reducing fees and rules", "Lower energy costs by changing state energy regulations"],
           website: "https://stevehiltonforgovernor.com/"
@@ -171,8 +171,8 @@ window.ELECTION_2026_DATA = {
         {
           name: "JUAN VARGAS",
           party: "DEMOCRATIC",
-          photo: "assets/election-2026/candidates/vargas.webp",
-          photoSource: "https://www.votevargas.com/media",
+          photo: "assets/election-2026/candidates/vargas.jpg",
+          photoSource: "https://vargas.house.gov/media/media-kit",
           fact: "First elected to Congress in 2012. Previously served in California’s Legislature and on the San Diego City Council; he also worked in business.",
           priorities: ["Cleaning up Tijuana River Valley pollution", "Enforcing immigration laws", "Making life more affordable"],
           endorsements: ["California Democratic Party", "California Teachers Association", "California Federation of Labor Unions", "American Federation of Government Employees", "Equality California"],
@@ -209,7 +209,7 @@ window.ELECTION_2026_DATA = {
           name: "HENRY FOSTER III",
           party: "NONPARTISAN · NO PARTY LABEL",
           photo: "assets/election-2026/candidates/foster.jpg",
-          photoSource: "https://www.henryfoster4sd.com/",
+          photoSource: "https://webdocs.sandiego.gov/newsletters/cd4/cd4-newsletter-250325-1.html",
           fact: "The current councilmember. His statement highlights neighborhood services, jobs, small businesses, parks, streets, youth programs, and public safety.",
           website: "https://www.henryfoster4sd.com/"
         },
