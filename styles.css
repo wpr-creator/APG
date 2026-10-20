@@ -1128,14 +1128,36 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .ballot-header dd { font-size: .88rem; }
 .race-card > a, .ballot-sources a, .proposition-source { color: #17365d; }
 .race-card, .proposition-card { border-color: #9aabba; border-top-color: #17365d; border-radius: 0; box-shadow: none; }
-.race-card.local-race { outline: 2px solid #17365d; outline-offset: -5px; }
-.race-card .local-label { color: #fff; background: #17365d; }
-.candidate-list section { position: relative; padding-left: 3rem; background: #fff; border: 1px solid #bdc9d4; }
-.candidate-profile { display: grid; grid-template-columns: 5rem minmax(0, 1fr); align-items: start; gap: .85rem; }
-.candidate-portrait { width: 5rem; height: 6rem; display: block; object-fit: cover; object-position: center 30%; border: 1px solid #bdc9d4; background: #f1f6fb; }
+.race-card { padding: 2rem 0 2.3rem; background: transparent; border: 0; border-top: 3px solid #17365d; }
+.race-card.local-race { outline: 0; }
+.race-card .local-label { margin-bottom: .65rem; padding: 0; color: #315b83; background: transparent; font-size: .78rem; }
+.race-card > .eyebrow { margin-bottom: .5rem; font-size: .8rem; }
+.race-card h3 { margin: .35rem 0 .7rem; font-size: clamp(1.75rem, 2.6vw, 2.35rem); line-height: 1.12; }
+.race-card > p:not(.eyebrow) { max-width: 74ch; margin-bottom: 1.25rem; font-size: 1.08rem; line-height: 1.55; }
+.candidate-list { gap: 1.5rem; margin: 1.7rem 0; }
+.candidate-list section { position: relative; padding: 1.2rem 0 1.5rem 3.4rem; background: transparent; border: 0; border-top: 1px solid #bdc9d4; }
+.candidate-profile { display: grid; grid-template-columns: 6rem minmax(0, 1fr); align-items: start; gap: 1rem; }
+.candidate-portrait { width: 6rem; height: 7.2rem; display: block; object-fit: cover; object-position: center 30%; border: 1px solid #bdc9d4; background: #f1f6fb; }
 .candidate-identity { min-width: 0; }
 .candidate-identity h4 { overflow-wrap: anywhere; }
-.candidate-identity p { margin-top: .5rem; }
+.candidate-identity h4 { margin: 0 0 .4rem; font-size: clamp(1.2rem, 1.8vw, 1.55rem); line-height: 1.15; }
+.candidate-identity strong { font-size: .8rem; }
+.candidate-identity p { margin-top: .6rem; font-size: 1rem; line-height: 1.5; }
+.candidate-detail { margin-top: 1.15rem; padding-top: .9rem; border-top: 1px solid #d6dee6; }
+.candidate-detail h5, .race-issues > h4, .race-issue-row h5 { margin-bottom: .5rem; font-size: .78rem; }
+.candidate-detail ul { font-size: .98rem; line-height: 1.6; }
+.candidate-detail p { font-size: .98rem; line-height: 1.55; }
+.candidate-website { margin-top: .75rem; font-size: .78rem; }
+.race-issues { margin: 1.3rem 0 0; padding: 1.2rem 0 0; background: transparent; border: 0; border-top: 2px solid #9aabba; }
+.race-issues > h4 { margin-bottom: .6rem; color: #17365d; font-size: .9rem; }
+.race-issue-row { padding: 1rem 0; border-top: 1px solid #d6dee6; }
+.race-issue-row > div { gap: 1.5rem; }
+.race-issue-row section { padding: .2rem 0; background: transparent; }
+.race-issue-row section strong { font-size: .78rem; }
+.race-issue-row section p { margin-top: .4rem; font-size: .98rem; line-height: 1.55; }
+.race-card > a { font-size: .8rem; }
+.race-source-list summary { font-size: .78rem; }
+.race-source-list a { font-size: .84rem; }
 .ballot-mark {
   width: 1.08rem;
   height: .82rem;
@@ -1152,6 +1174,10 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .proposition-card summary span { color: #fff; background: #17365d; border-radius: 0; }
 .more-propositions, .ballot-sources { background: #f1f6fb; border-color: #7890a8; border-radius: 0; }
 .more-propositions li { background: #fff; border-left-color: #17365d; }
+
+@media (max-width: 900px) {
+  .candidate-list, .race-issue-row > div { grid-template-columns: 1fr; }
+}
 
 @media (max-width: 700px) {
   .ballot-paper { padding: 1rem .85rem 1rem 2.25rem; }
