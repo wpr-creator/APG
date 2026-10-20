@@ -704,7 +704,27 @@
       candidateList.className = "candidate-list";
       race.candidates.forEach(candidate => {
         const candidateCard = document.createElement("section");
-        candidateCard.innerHTML = `<span class="ballot-mark" aria-hidden="true"></span><h4>${candidate.name}</h4><strong>${candidate.party}</strong><p>${candidate.fact}</p>`;
+        candidateCard.innerHTML = `<span class="ballot-mark" aria-hidden="true"></span>`;
+        const profile = document.createElement("div");
+        profile.className = "candidate-profile";
+        if (candidate.photo) {
+          const portrait = document.createElement("img");
+          portrait.className = "candidate-portrait";
+          portrait.src = candidate.photo;
+          portrait.alt = `Portrait of ${candidate.name}`;
+          portrait.width = 96;
+          portrait.height = 112;
+          portrait.loading = "lazy";
+          portrait.decoding = "async";
+          if (candidate.photoSource) portrait.title = `Photo from ${candidate.photoSource}`;
+          portrait.addEventListener("error", () => portrait.remove(), { once: true });
+          profile.appendChild(portrait);
+        }
+        const identity = document.createElement("div");
+        identity.className = "candidate-identity";
+        identity.innerHTML = `<h4>${candidate.name}</h4><strong>${candidate.party}</strong><p>${candidate.fact}</p>`;
+        profile.appendChild(identity);
+        candidateCard.appendChild(profile);
         if (candidate.priorities?.length) {
           const priorities = document.createElement("div");
           priorities.className = "candidate-detail";

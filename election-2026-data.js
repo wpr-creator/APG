@@ -19,6 +19,8 @@ window.ELECTION_2026_DATA = {
         {
           name: "XAVIER BECERRA",
           party: "DEMOCRATIC",
+          photo: "assets/election-2026/candidates/becerra.jpg",
+          photoSource: "https://www.xavierbecerra2026.com/bio/",
           fact: "Former California attorney general, U.S. cabinet secretary, and member of Congress.",
           priorities: ["Strengthen Medi-Cal and make health care more affordable", "Build more affordable housing", "Lower living costs and challenge price gouging"],
           website: "https://www.xavierbecerra2026.com/priorities/"
@@ -26,6 +28,8 @@ window.ELECTION_2026_DATA = {
         {
           name: "STEVE HILTON",
           party: "REPUBLICAN",
+          photo: "assets/election-2026/candidates/hilton.jpg",
+          photoSource: "https://stevehiltonforgovernor.com/",
           fact: "Former policy adviser and TV host; he has not held elected office.",
           priorities: ["Cut state income taxes and lower gas prices", "Build more starter homes by reducing fees and rules", "Lower energy costs by changing state energy regulations"],
           website: "https://stevehiltonforgovernor.com/"
@@ -167,6 +171,8 @@ window.ELECTION_2026_DATA = {
         {
           name: "JUAN VARGAS",
           party: "DEMOCRATIC",
+          photo: "assets/election-2026/candidates/vargas.webp",
+          photoSource: "https://www.votevargas.com/media",
           fact: "First elected to Congress in 2012. Previously served in California’s Legislature and on the San Diego City Council; he also worked in business.",
           priorities: ["Cleaning up Tijuana River Valley pollution", "Enforcing immigration laws", "Making life more affordable"],
           endorsements: ["California Democratic Party", "California Teachers Association", "California Federation of Labor Unions", "American Federation of Government Employees", "Equality California"],
@@ -175,6 +181,8 @@ window.ELECTION_2026_DATA = {
         {
           name: "JEFF BELLE",
           party: "REPUBLICAN",
+          photo: "assets/election-2026/candidates/belle.jpg",
+          photoSource: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-52",
           fact: "Leads a San Diego investment firm; formerly served on the Contra Costa County school board.",
           priorities: ["Faith", "Freedom", "Finances"],
           endorsements: [],
@@ -200,12 +208,16 @@ window.ELECTION_2026_DATA = {
         {
           name: "HENRY FOSTER III",
           party: "NONPARTISAN · NO PARTY LABEL",
+          photo: "assets/election-2026/candidates/foster.jpg",
+          photoSource: "https://www.henryfoster4sd.com/",
           fact: "The current councilmember. His statement highlights neighborhood services, jobs, small businesses, parks, streets, youth programs, and public safety.",
           website: "https://www.henryfoster4sd.com/"
         },
         {
           name: "MARTHA ABRAHAM",
           party: "NONPARTISAN · NO PARTY LABEL",
+          photo: "assets/election-2026/candidates/martha.jpg",
+          photoSource: "https://martha4sandiego.com/",
           fact: "A nurse and small-business owner. Her statement emphasizes neighborhood investment, public health, listening to residents, and accountability.",
           website: "https://martha4sandiego.com/"
         }

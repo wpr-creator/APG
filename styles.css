@@ -1131,6 +1131,11 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
 .race-card.local-race { outline: 2px solid #17365d; outline-offset: -5px; }
 .race-card .local-label { color: #fff; background: #17365d; }
 .candidate-list section { position: relative; padding-left: 3rem; background: #fff; border: 1px solid #bdc9d4; }
+.candidate-profile { display: grid; grid-template-columns: 5rem minmax(0, 1fr); align-items: start; gap: .85rem; }
+.candidate-portrait { width: 5rem; height: 6rem; display: block; object-fit: cover; object-position: center 30%; border: 1px solid #bdc9d4; background: #f1f6fb; }
+.candidate-identity { min-width: 0; }
+.candidate-identity h4 { overflow-wrap: anywhere; }
+.candidate-identity p { margin-top: .5rem; }
 .ballot-mark {
   width: 1.08rem;
   height: .82rem;
