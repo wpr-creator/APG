@@ -406,11 +406,20 @@ function validateSharedCourseExperience() {
     'https://www.isidewith.com/2026-election-quiz',
     'https://calmatters.org/california-voter-guide-2026/propositions/quizzes/',
     'assets/isidewith-logo.svg', 'assets/calmatters-logo.jpg',
-    'PREPARE FOR ELECTION DAY', 'SEE WHERE YOUR VIEWS FALL',
-    'ballot-quiz-button', 'container.append(quizLinks, races, sources)'
+    'PREPARE FOR THE ELECTION', 'SEE WHERE YOUR VIEWS FALL',
+    'MEET THE CANDIDATES', 'STEP 2 · CANDIDATE RACES',
+    'EXPLORE THE PROPOSITIONS', 'ballot-quiz-button',
+    'container.append(quizLinks, races, propositionQuizLinks, sources)'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
+  const prepareStepIndex = homepageApp.indexOf('makeQuizSection(1, "PREPARE FOR THE ELECTION"');
+  const candidateStepIndex = homepageApp.indexOf('STEP 2 · CANDIDATE RACES');
+  const propositionStepIndex = homepageApp.indexOf('makeQuizSection(3, "CALIFORNIA PROPOSITIONS"');
+  if (prepareStepIndex < 0 || candidateStepIndex < 0 || propositionStepIndex < 0 ||
+      !(prepareStepIndex < candidateStepIndex && candidateStepIndex < propositionStepIndex)) {
+    errors.push('Election guide sections must appear in order: prepare, meet the candidates, propositions.');
+  }
   if (homepageApp.includes('COST OR SAVINGS') || homepageApp.includes('proposition-money')) {
     errors.push('Removed proposition cost/savings content remains in the election renderer.');
   }
