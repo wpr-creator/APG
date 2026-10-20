@@ -11,13 +11,14 @@ window.ELECTION_2026_DATA = {
   },
   races: [
     {
-      office: "CALIFORNIA GOVERNOR",
-      question: "WHO SHOULD BE CALIFORNIA’S GOVERNOR?",
+      category: "STATE",
+      office: "Governor of California",
+      question: "Who should lead California?",
       note: "The governor leads California’s government, proposes the budget, and signs bills into law or vetoes (rejects) them. Terms last four years.",
-      priorityLabel: "PLATFORM",
+      priorityLabel: "Platform",
       candidates: [
         {
-          name: "XAVIER BECERRA",
+          name: "Xavier Becerra",
           party: "DEMOCRATIC",
           photo: "assets/election-2026/candidates/becerra.jpg",
           photoSource: "https://www.hhs.gov/sites/default/files/fy-2023-hhs-agency-financial-report.pdf",
@@ -26,7 +27,7 @@ window.ELECTION_2026_DATA = {
           website: "https://www.xavierbecerra2026.com/priorities/"
         },
         {
-          name: "STEVE HILTON",
+          name: "Steve Hilton",
           party: "REPUBLICAN",
           photo: "assets/election-2026/candidates/hilton.jpg",
           photoSource: "https://www.fox.com/hub/talent/TAL0000292731/steve-hilton",
@@ -43,7 +44,6 @@ window.ELECTION_2026_DATA = {
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
-      localLabel: "DISTRICT 48 · SAN DIEGO AREA EXAMPLE",
       priorityLabel: "PRIORITIES REPORTED BY KPBS",
       candidates: [
         {
@@ -74,7 +74,6 @@ window.ELECTION_2026_DATA = {
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
-      localLabel: "DISTRICT 49 · SAN DIEGO AREA EXAMPLE",
       priorityLabel: "PRIORITIES REPORTED BY KPBS",
       candidates: [
         {
@@ -105,7 +104,6 @@ window.ELECTION_2026_DATA = {
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
-      localLabel: "DISTRICT 50 · SAN DIEGO AREA EXAMPLE",
       priorityLabel: "PRIORITIES REPORTED BY KPBS",
       candidates: [
         {
@@ -136,7 +134,6 @@ window.ELECTION_2026_DATA = {
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
       regionalOnly: true,
-      localLabel: "DISTRICT 51 · SAN DIEGO AREA EXAMPLE",
       priorityLabel: "PRIORITIES REPORTED BY KPBS",
       candidates: [
         {
@@ -162,14 +159,14 @@ window.ELECTION_2026_DATA = {
       ]
     },
     {
-      office: "U.S. HOUSE · DISTRICT 52",
-      question: "WHO SHOULD REPRESENT DISTRICT 52 IN CONGRESS?",
+      category: "CONGRESS",
+      office: "U.S. House of Representatives · District 52",
+      question: "Who should represent District 52?",
       note: "Representatives speak for their districts in Congress. They vote on national laws, taxes, and spending. Terms last two years.",
       local: true,
-      localLabel: "DISTRICT 52 EXAMPLE",
       candidates: [
         {
-          name: "JUAN VARGAS",
+          name: "Juan Vargas",
           party: "DEMOCRATIC",
           photo: "assets/election-2026/candidates/vargas.jpg",
           photoSource: "https://vargas.house.gov/media/media-kit",
@@ -179,7 +176,7 @@ window.ELECTION_2026_DATA = {
           website: "https://www.votevargas.com/"
         },
         {
-          name: "JEFF BELLE",
+          name: "Jeff Belle",
           party: "REPUBLICAN",
           photo: "assets/election-2026/candidates/belle.jpg",
           photoSource: "https://www.kpbs.org/news/politics/2026/09/29/2026-general-election-us-congressional-races-explainer-districts-48-49-50-51-52#district-52",
@@ -198,15 +195,15 @@ window.ELECTION_2026_DATA = {
       ]
     },
     {
-      office: "SAN DIEGO CITY COUNCIL · DISTRICT 4",
-      question: "WHICH PRIORITIES SHOULD GUIDE DISTRICT 4?",
+      category: "LOCAL",
+      office: "San Diego City Council · District 4",
+      question: "What should guide District 4’s future?",
       note: "The City Council makes city laws, approves the budget, and represents local districts. District 4 includes O’Farrell and ZIP code 92114.",
       local: true,
-      localLabel: "92114 LOCAL EXAMPLE",
       nonpartisan: true,
       candidates: [
         {
-          name: "HENRY FOSTER III",
+          name: "Henry Foster III",
           party: "NONPARTISAN · NO PARTY LABEL",
           photo: "assets/election-2026/candidates/foster.jpg",
           photoSource: "https://webdocs.sandiego.gov/newsletters/cd4/cd4-newsletter-250325-1.html",
@@ -214,7 +211,7 @@ window.ELECTION_2026_DATA = {
           website: "https://www.henryfoster4sd.com/"
         },
         {
-          name: "MARTHA ABRAHAM",
+          name: "Martha Abraham",
           party: "NONPARTISAN · NO PARTY LABEL",
           photo: "assets/election-2026/candidates/martha.jpg",
           photoSource: "https://martha4sandiego.com/",

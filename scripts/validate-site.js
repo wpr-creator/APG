@@ -282,7 +282,7 @@ function validateSharedCourseExperience() {
     'styles.css?v=20261018-midterm-label',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'ballot.css?v=20261018-ballot-quiz-logos',
+    'voter-guide.css?v=20261020-editorial-guide',
     'course-data.js?v=20261018-u2-concept-practice',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
@@ -381,8 +381,8 @@ function validateSharedCourseExperience() {
       homepageApp.includes('election-zip-form') || homepageApp.includes('CHANGE TO MY ZIP')) {
     errors.push('Other congressional districts must remain hidden and the student ballot must stay fixed to the school ZIP.');
   }
-  const district52 = electionData.races.find(function (race) { return race.office === 'U.S. HOUSE · DISTRICT 52'; });
-  const cityDistrict4 = electionData.races.find(function (race) { return race.office === 'SAN DIEGO CITY COUNCIL · DISTRICT 4'; });
+  const district52 = electionData.races.find(function (race) { return race.category === 'CONGRESS'; });
+  const cityDistrict4 = electionData.races.find(function (race) { return race.category === 'LOCAL'; });
   if (!district52?.candidates?.every(function (candidate) { return candidate.priorities?.length === 3 && candidate.website; }) ||
       !cityDistrict4?.local || !cityDistrict4?.issues?.length || !cityDistrict4.sources?.some(function (source) { return source.url.includes('sandiego.gov'); })) {
     errors.push('District 52 profiles and sourced San Diego City Council District 4 comparison are incomplete.');
@@ -401,21 +401,20 @@ function validateSharedCourseExperience() {
     });
   }
   [
-    'ballot-mark',
-    'CANDIDATE RACES', 'VIEWS ON LOCAL ISSUES',
     'https://www.isidewith.com/2026-election-quiz',
     'https://calmatters.org/california-voter-guide-2026/propositions/quizzes/',
     'assets/isidewith-logo.svg', 'assets/calmatters-logo.jpg',
-    'PREPARE FOR THE ELECTION', 'SEE WHERE YOUR VIEWS FALL',
-    'MEET THE CANDIDATES', 'STEP 2 · CANDIDATE RACES',
-    'EXPLORE THE PROPOSITIONS', 'ballot-quiz-button',
+    'Prepare for the election', 'See where your views fall',
+    'Meet the candidates', 'Step 2 · Candidate races',
+    'Explore California propositions', 'guide-action-button',
+    'race-category', 'What the candidates say',
     'container.append(quizLinks, races, propositionQuizLinks, sources)'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
-  const prepareStepIndex = homepageApp.indexOf('makeQuizSection(1, "PREPARE FOR THE ELECTION"');
-  const candidateStepIndex = homepageApp.indexOf('STEP 2 · CANDIDATE RACES');
-  const propositionStepIndex = homepageApp.indexOf('makeQuizSection(3, "CALIFORNIA PROPOSITIONS"');
+  const prepareStepIndex = homepageApp.indexOf('makeQuizSection(1, "Prepare for the election"');
+  const candidateStepIndex = homepageApp.indexOf('Step 2 · Candidate races');
+  const propositionStepIndex = homepageApp.indexOf('makeQuizSection(3, "Explore California propositions"');
   if (prepareStepIndex < 0 || candidateStepIndex < 0 || propositionStepIndex < 0 ||
       !(prepareStepIndex < candidateStepIndex && candidateStepIndex < propositionStepIndex)) {
     errors.push('Election guide sections must appear in order: prepare, meet the candidates, propositions.');
@@ -424,22 +423,21 @@ function validateSharedCourseExperience() {
     errors.push('Removed proposition cost/savings content remains in the election renderer.');
   }
   ['annotateElectionTerms', 'ballot-concept', 'WHAT THIS MEASURE DOES', 'ALL 14 PROPOSITIONS'].forEach(function (content) {
-    if (homepageApp.includes(content) || fs.readFileSync(path.join(root, 'ballot.css'), 'utf8').includes(content)) {
+    if (homepageApp.includes(content) || fs.readFileSync(path.join(root, 'voter-guide.css'), 'utf8').includes(content)) {
       errors.push('Removed election-guide highlighting or proposition content remains: ' + content);
     }
   });
   ['ballot-location', 'BALLOT FOR ZIP CODE', 'FIND MY EXACT BALLOT'].forEach(function (content) {
     if (homepageApp.includes(content)) errors.push('Election tracker must not render the removed ZIP-code callout: ' + content);
   });
-  ['class="ballot-paper"', 'class="ballot-stock-line"', '2026 MIDTERM ELECTION', '<h1>STUDENT VOTER GUIDE</h1>', '<p class="eyebrow">NOVEMBER 3, 2026</p>', 'assets/california-state-flag-20261015.webp'].forEach(function (content) {
-    if (!homepage.includes(content)) errors.push('Ballot-inspired election page is missing: ' + content);
+  ['class="voter-guide"', 'class="voter-guide-masthead"', '<h1>Student Voter Guide</h1>', '2026 Midterm Election · November 3, 2026'].forEach(function (content) {
+    if (!homepage.includes(content)) errors.push('Open student voter guide is missing: ' + content);
   });
-  if (homepage.includes('ballot-stock-mark') || homepage.includes('NOVEMBER 3, 2026 · STUDENT VOTER GUIDE')) {
-    errors.push('Student Voter Guide should appear as the page title, not on the ballot stock line.');
-  }
-  if (homepage.includes('seal-bear') || homepage.includes('seal-star')) {
-    errors.push('The student ballot should use the supplied California flag image rather than the drawn bear seal.');
-  }
+  ['DISTRICT 52 EXAMPLE', '92114 LOCAL EXAMPLE', 'ballot-paper', 'ballot-stock-line'].forEach(function (content) {
+    if (homepage.includes(content) || homepageApp.includes(content) || electionCode.includes(content) || fs.readFileSync(path.join(root, 'styles.css'), 'utf8').includes(content)) {
+      errors.push('Retired ballot-specific label or styling remains: ' + content);
+    }
+  });
   [
     'These short backgrounds describe public experience. They do not tell you whom to support.',
     'Open a card. Read the question, then compare Yes and No.',

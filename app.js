@@ -660,20 +660,20 @@
 
     const makeQuizSection = (step, eyebrow, title, choices) => {
       const section = document.createElement("section");
-      section.className = "ballot-quiz-links";
-      section.setAttribute("aria-labelledby", `ballot-quiz-title-${step}`);
-      section.innerHTML = `<p class="eyebrow">STEP ${step} · ${eyebrow}</p><h2 id="ballot-quiz-title-${step}">${title}</h2>`;
+      section.className = "guide-actions";
+      section.setAttribute("aria-labelledby", `guide-actions-title-${step}`);
+      section.innerHTML = `<p class="eyebrow">Step ${step} · ${eyebrow}</p><h2 id="guide-actions-title-${step}">${title}</h2>`;
       const buttonGrid = document.createElement("div");
-      buttonGrid.className = "ballot-quiz-button-grid";
+      buttonGrid.className = "guide-action-grid";
       choices.forEach(([siteName, logo, label, url]) => {
         const link = document.createElement("a");
-        link.className = "ballot-quiz-button";
+        link.className = "guide-action-button";
         link.href = url;
         link.target = "_blank";
         link.rel = "noopener noreferrer";
         link.setAttribute("aria-label", `${label} at ${siteName} (opens in a new tab)`);
         const image = document.createElement("img");
-        image.className = `ballot-quiz-logo ${siteName === "CalMatters" ? "calmatters-logo" : ""}`.trim();
+        image.className = `guide-action-logo ${siteName === "CalMatters" ? "calmatters-logo" : ""}`.trim();
         image.src = logo;
         image.alt = siteName;
         image.loading = "lazy";
@@ -685,28 +685,22 @@
       section.appendChild(buttonGrid);
       return section;
     };
-    const quizLinks = makeQuizSection(1, "PREPARE FOR THE ELECTION", "SEE WHERE YOUR VIEWS FALL", [
+    const quizLinks = makeQuizSection(1, "Prepare for the election", "See where your views fall", [
       ["iSideWith", "assets/isidewith-logo.svg", "TAKE THE 2026 ELECTION QUIZ", "https://www.isidewith.com/2026-election-quiz"]
     ]);
     const races = document.createElement("section");
-    races.className = "ballot-section";
-    races.innerHTML = `<div class="section-heading"><div><p class="eyebrow">STEP 2 · CANDIDATE RACES</p><h2>MEET THE CANDIDATES</h2></div></div>`;
+    races.className = "guide-section";
+    races.innerHTML = `<div class="guide-section-heading"><p class="eyebrow">Step 2 · Candidate races</p><h2>Meet the candidates</h2></div>`;
     const raceGrid = document.createElement("div");
     raceGrid.className = "race-grid";
     electionData.races.filter(race => !race.regionalOnly).forEach(race => {
       const article = document.createElement("article");
-      article.className = "race-card";
-      if (race.local) {
-        article.classList.add("local-race");
-        article.hidden = false;
-      }
-      const localLabel = race.local ? `<span class="local-label">${race.localLabel || "ZIP 92114 EXAMPLE"}</span>` : "";
-      article.innerHTML = `${localLabel}<p class="eyebrow">${race.office}</p><h3>${race.question}</h3><p>${race.note}</p>`;
+      article.className = `race-card race-card-${race.category.toLowerCase()}`;
+      article.innerHTML = `<div class="race-card-kicker"><span class="race-category">${race.category}</span><span class="race-office">${race.office}</span></div><h3>${race.question}</h3><p class="race-description">${race.note}</p>`;
       const candidateList = document.createElement("div");
       candidateList.className = "candidate-list";
       race.candidates.forEach(candidate => {
         const candidateCard = document.createElement("section");
-        candidateCard.innerHTML = `<span class="ballot-mark" aria-hidden="true"></span>`;
         const profile = document.createElement("div");
         profile.className = "candidate-profile";
         if (candidate.photo) {
@@ -730,7 +724,7 @@
         if (candidate.priorities?.length) {
           const priorities = document.createElement("div");
           priorities.className = "candidate-detail";
-          priorities.innerHTML = `<h5>${race.priorityLabel || "PRIORITIES"}</h5><ul>${candidate.priorities.map(item => `<li>${item}</li>`).join("")}</ul>`;
+          priorities.innerHTML = `<h5>${race.priorityLabel || "Priorities"}</h5><ul>${candidate.priorities.map(item => `<li>${item}</li>`).join("")}</ul>`;
           candidateCard.appendChild(priorities);
         }
         if (candidate.endorsements?.length || candidate.endorsementNote) {
@@ -745,7 +739,7 @@
           website.href = candidate.website;
           website.target = "_blank";
           website.rel = "noopener";
-          website.textContent = "CANDIDATE WEBSITE ↗";
+          website.textContent = "Candidate website ↗";
           candidateCard.appendChild(website);
         }
         candidateList.appendChild(candidateCard);
@@ -755,7 +749,7 @@
         const comparison = document.createElement("section");
         comparison.className = "race-issues";
         comparison.setAttribute("aria-label", "Candidate issue comparison");
-        comparison.innerHTML = `<h4>VIEWS ON LOCAL ISSUES</h4>`;
+        comparison.innerHTML = `<h4>What the candidates say</h4>`;
         race.issues.forEach(issue => {
           const row = document.createElement("div");
           row.className = "race-issue-row";
@@ -788,12 +782,12 @@
     });
     races.appendChild(raceGrid);
 
-    const propositionQuizLinks = makeQuizSection(3, "CALIFORNIA PROPOSITIONS", "EXPLORE THE PROPOSITIONS", [
+    const propositionQuizLinks = makeQuizSection(3, "Explore California propositions", "Compare your views on statewide measures", [
       ["CalMatters", "assets/calmatters-logo.jpg", "TAKE THE PROPOSITIONS QUIZ", "https://calmatters.org/california-voter-guide-2026/propositions/quizzes/"]
     ]);
 
     const sources = document.createElement("footer");
-    sources.className = "ballot-sources";
+    sources.className = "guide-sources";
     sources.innerHTML = `<p><strong>CHECKED ${electionData.updated}</strong> · BALLOT INFORMATION CAN CHANGE BEFORE ELECTION DAY.</p>`;
     [
       ["CALIFORNIA SECRETARY OF STATE · PROPOSITIONS", electionData.sources.officialMeasures],
