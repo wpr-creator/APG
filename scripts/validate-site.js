@@ -814,10 +814,13 @@ function validateSharedCourseExperience() {
       !courseData.includes('id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW"') ||
       !courseData.includes('url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes"') ||
       !fs.existsSync(path.join(root, 'assets/handouts/unit2/from-bill-to-law.pdf')) ||
+      !courseData.includes('id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY"') ||
+      !courseData.includes('url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes"') ||
+      !fs.existsSync(path.join(root, 'assets/handouts/unit2/follow-the-money.pdf')) ||
       !courseData.includes('"2.01": [') ||
       !unit2Landing.includes('const lessonResources = unit.lessonResources?.[number] || []') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
-    errors.push('The From Bill to Law notes PDF and Congress in Four Frames answer key must appear as counted 2.01 lesson resources.');
+    errors.push('The Unit 2.01 notes PDFs and Congress in Four Frames answer key must appear as counted lesson resources.');
   }
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');
