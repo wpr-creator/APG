@@ -101,6 +101,7 @@ window.COURSE_DATA = {
       ],
       lessonResources: {
         "2.01": [
+          { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "GUIDED NOTES · PDF", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
           { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "ANSWER KEY · 4 DIAGRAMS", url: "unit2-congress-in-four-frames.html", category: "guided-notes" }
         ]
       },
