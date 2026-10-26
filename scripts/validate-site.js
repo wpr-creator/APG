@@ -823,6 +823,11 @@ function validateSharedCourseExperience() {
       !fs.existsSync(path.join(root, 'assets/handouts/unit2/follow-the-money.pdf')) ||
       !courseData.includes('"2.01": [') ||
       !unit2Landing.includes('const lessonResources = unit.lessonResources?.[number] || []') ||
+      !unit2Landing.includes('const groupTitle = resource.group || "Guided Notes & Practice"') ||
+      !unit2Landing.includes('rowTitle.textContent = groupTitle.toUpperCase()') ||
+      !courseData.includes('group: "Guided Notes"') ||
+      !courseData.includes('group: "Lesson Slides"') ||
+      !courseData.includes('group: "Review & Answer Key"') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
     errors.push('The Unit 2.01 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
   }
