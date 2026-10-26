@@ -105,6 +105,7 @@ window.COURSE_DATA = {
           { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "PDF", group: "Guided Notes", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
           { id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY", note: "PDF", group: "Guided Notes", url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes" },
           { id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES", group: "Lesson Slides", url: "https://slides.com/westonrogers/apg-201-congress", category: "guided-notes" },
+          { id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", group: "Practice", category: "guided-notes", url: "unit2-concept-practice.html" },
           { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "4 DIAGRAMS · ANSWER KEY", group: "Review & Answer Key", url: "unit2-congress-in-four-frames.html", category: "guided-notes" }
         ]
       },
@@ -116,7 +117,6 @@ window.COURSE_DATA = {
         ["Checks and Balances in Action", "What happens when institutions disagree?", "AP Topic 2.15", "Connect institutional powers across a shared policy conflict.", "Trace one action through multiple checks"]
       ],
       resources: [
-        { id: "u2-21-22-concept-practice", lesson: "CONCEPT PRACTICE", title: "2.1–2.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit2-concept-practice.html" },
         { id: "ap-u2-overview", lesson: "UNIT 2 COURSE HUB", title: "UNIT 2 OVERVIEW", url: "unit2.html" },
         { id: "ap-u2-documents", lesson: "FOUNDATIONAL DOCUMENTS", title: "UNIT 2 DOCUMENTS", url: "unit2-docs.html" },
         { id: "ap-u2-cases", lesson: "SUPREME COURT CASES", title: "UNIT 2 CASES", url: "unit2-cases.html" },

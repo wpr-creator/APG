@@ -287,64 +287,6 @@
       resourceRow.appendChild(resourceGrid);
       unitResources.append(resourceSummary, resourceRow);
 
-      const practiceGroup = document.createElement("details");
-      practiceGroup.className = "unit-resource-group unit-resource-group-practice unit-lesson-group";
-      practiceGroup.id = "unit2-concept-practice";
-      const practiceSummary = document.createElement("summary");
-      practiceSummary.className = "unit-resource-summary";
-      const practiceTitle = document.createElement("h2");
-      practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE";
-      const practiceCount = document.createElement("span");
-      practiceCount.className = "unit-resource-count";
-      const practiceResources = (unit.resources || []).filter(resource => resource.lesson === "CONCEPT PRACTICE");
-      practiceCount.textContent = `${practiceResources.length} ${practiceResources.length === 1 ? "RESOURCE" : "RESOURCES"}`;
-      practiceSummary.append(practiceTitle, practiceCount);
-      practiceGroup.appendChild(practiceSummary);
-      if (practiceResources.length) {
-        const practiceRow = document.createElement("section");
-        practiceRow.className = "unit-resource-row unit-resource-row-guided-notes";
-        const practiceRowTitle = document.createElement("h3");
-        practiceRowTitle.textContent = "PRACTICE";
-        const practiceGrid = document.createElement("div");
-        practiceGrid.className = "unit-resource-grid";
-        practiceResources.forEach(resource => {
-          const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
-          const unlocked = Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
-          const card = document.createElement(unlocked ? "a" : "div");
-          card.className = "unit-resource unit-resource-guided-notes unit-resource-concept-practice";
-          if (unlocked) {
-            card.href = resourceUrl;
-            card.addEventListener("click", () => {
-              try { sessionStorage.setItem("apg-return-lesson", JSON.stringify({ unit: unit.id, lesson: practiceGroup.id, destination: new URL(resourceUrl, location.href).pathname })); } catch (_) {}
-            });
-          } else {
-            card.classList.add("placeholder");
-            card.setAttribute("aria-disabled", "true");
-          }
-          const title = document.createElement("strong");
-          title.textContent = resource.title;
-          const note = document.createElement("span");
-          note.textContent = resource.note || "PRACTICE · IMMEDIATE FEEDBACK";
-          card.append(title, note);
-          if (!unlocked) {
-            const status = document.createElement("span");
-            status.textContent = resource.status || "COMING SOON";
-            card.appendChild(status);
-          }
-          const item = document.createElement("div");
-          item.className = "unit-resource-item unit-resource-item-concept-practice";
-          item.append(createCompletionStar(resource, unlocked), card);
-          practiceGrid.appendChild(item);
-        });
-        practiceRow.append(practiceRowTitle, practiceGrid);
-        practiceGroup.appendChild(practiceRow);
-      } else {
-        const practiceEmpty = document.createElement("p");
-        practiceEmpty.className = "unit-lesson-empty";
-        practiceEmpty.textContent = "Concept practice will be added here.";
-        practiceGroup.appendChild(practiceEmpty);
-      }
-
       const pathHeading = document.createElement("div");
       pathHeading.className = "unit-path-heading";
       const pathTitle = document.createElement("h2");
@@ -361,6 +303,8 @@
         const item = document.createElement("li");
         const group = document.createElement("details");
         group.className = "unit-resource-group unit-lesson-group";
+        group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`;
+        group.open = id === "gov-2" && number === "2.01";
         const summary = document.createElement("summary");
         summary.className = "unit-resource-summary";
         const heading = document.createElement("h2");
@@ -385,18 +329,50 @@
             const resourceGrid = document.createElement("div");
             resourceGrid.className = "unit-resource-grid";
             resources.forEach(resource => {
-              const link = document.createElement("a");
-              link.className = "unit-resource unit-resource-guided-notes";
-              link.href = resource.url;
+              const isConceptPractice = resource.id === "u2-21-22-concept-practice";
+              const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
+              const unlocked = !isConceptPractice || Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
+              const card = document.createElement(unlocked ? "a" : "div");
+              card.className = "unit-resource unit-resource-guided-notes";
+              if (isConceptPractice) card.classList.add("unit-resource-concept-practice");
+              if (unlocked) {
+                card.href = resourceUrl;
+                const destination = new URL(resourceUrl, location.href);
+                const internal = destination.origin === location.origin && destination.pathname.startsWith(new URL("./", location.href).pathname);
+                if (!internal) {
+                  card.target = "_blank";
+                  card.rel = "noopener";
+                }
+                if (isConceptPractice) {
+                  card.addEventListener("click", () => {
+                    try { sessionStorage.setItem("apg-return-lesson", JSON.stringify({ unit: id, lesson: group.id, destination: destination.pathname })); } catch (_) {}
+                  });
+                }
+              } else {
+                card.classList.add("placeholder");
+                card.setAttribute("aria-disabled", "true");
+              }
               const resourceTitle = document.createElement("strong");
               resourceTitle.textContent = resource.title;
-              link.appendChild(resourceTitle);
+              card.appendChild(resourceTitle);
               if (resource.note) {
                 const resourceNote = document.createElement("span");
                 resourceNote.textContent = resource.note;
-                link.appendChild(resourceNote);
+                card.appendChild(resourceNote);
               }
-              resourceGrid.appendChild(link);
+              if (isConceptPractice && !unlocked) {
+                const status = document.createElement("span");
+                status.textContent = resource.status || "COMING SOON";
+                card.appendChild(status);
+              }
+              if (isConceptPractice) {
+                const resourceItem = document.createElement("div");
+                resourceItem.className = "unit-resource-item unit-resource-item-concept-practice";
+                resourceItem.append(createCompletionStar(resource, unlocked), card);
+                resourceGrid.appendChild(resourceItem);
+              } else {
+                resourceGrid.appendChild(card);
+              }
             });
             resourceRow.append(rowTitle, resourceGrid);
             group.appendChild(resourceRow);
@@ -411,7 +387,7 @@
         lessonList.appendChild(item);
       });
 
-      container.append(header, pathHeading, lessonList, unitResources, practiceGroup);
+      container.append(header, pathHeading, lessonList, unitResources);
       return;
     }
 

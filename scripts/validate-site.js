@@ -792,12 +792,18 @@ function validateSharedCourseExperience() {
       !unit2Landing.includes('index.html?unit=2#words') ||
       !unit2Landing.includes('https://slides.com/westonrogers/decks/apg-u2') ||
       !unit2Landing.includes('unitResources.append(resourceSummary, resourceRow)') ||
-      !unit2Landing.includes('container.append(header, pathHeading, lessonList, unitResources, practiceGroup)') ||
+      !unit2Landing.includes('container.append(header, pathHeading, lessonList, unitResources)') ||
       !unit2Landing.includes('resourceCount.textContent = "2 RESOURCES"') ||
-      !unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
+      unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
+      !unit2Landing.includes('group.open = id === "gov-2" && number === "2.01"') ||
+      !unit2Landing.includes('group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`') ||
+      !unit2Landing.includes('const isConceptPractice = resource.id === "u2-21-22-concept-practice"') ||
+      !unit2Landing.includes('resourceItem.append(createCompletionStar(resource, unlocked), card)') ||
+      !courseData.includes('id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE"') ||
+      !courseData.includes('group: "Practice"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
-    errors.push('The open Unit 2 page must separate Unit Resources (glossary and concept practice) from the lesson path.');
+    errors.push('Unit 2 must keep quick resources separate, place concept practice inside Lesson 2.01, and open that lesson by default.');
   }
   [
     ["2.01", "Two Houses, One Congress"],
