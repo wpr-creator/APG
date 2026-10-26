@@ -811,6 +811,10 @@ function validateSharedCourseExperience() {
   });
   if (!courseData.includes('id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES"') ||
       !courseData.includes('url: "unit2-congress-in-four-frames.html", category: "guided-notes"') ||
+      !courseData.includes('id: "u2-201-guided-notes", title: "2.01 GUIDED NOTES"') ||
+      !courseData.includes('https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa') ||
+      !courseData.includes('id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES"') ||
+      !courseData.includes('https://slides.com/westonrogers/apg-201-congress') ||
       !courseData.includes('id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW"') ||
       !courseData.includes('url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes"') ||
       !fs.existsSync(path.join(root, 'assets/handouts/unit2/from-bill-to-law.pdf')) ||
@@ -820,7 +824,7 @@ function validateSharedCourseExperience() {
       !courseData.includes('"2.01": [') ||
       !unit2Landing.includes('const lessonResources = unit.lessonResources?.[number] || []') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
-    errors.push('The Unit 2.01 notes PDFs and Congress in Four Frames answer key must appear as counted lesson resources.');
+    errors.push('The Unit 2.01 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
   }
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');

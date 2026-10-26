@@ -101,6 +101,8 @@ window.COURSE_DATA = {
       ],
       lessonResources: {
         "2.01": [
+          { id: "u2-201-guided-notes", title: "2.01 GUIDED NOTES", note: "GUIDED NOTES · GOOGLE DOC", url: "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa", category: "guided-notes" },
+          { id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES", note: "LESSON SLIDES", url: "https://slides.com/westonrogers/apg-201-congress", category: "guided-notes" },
           { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "GUIDED NOTES · PDF", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
           { id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY", note: "GUIDED NOTES · PDF", url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes" },
           { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "ANSWER KEY · 4 DIAGRAMS", url: "unit2-congress-in-four-frames.html", category: "guided-notes" }
