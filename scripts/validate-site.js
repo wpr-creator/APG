@@ -832,8 +832,11 @@ function validateSharedCourseExperience() {
       !unit2Landing.includes('const groupTitle = resource.group || "Guided Notes & Practice"') ||
       !unit2Landing.includes('rowTitle.textContent = groupTitle.toUpperCase()') ||
       !courseData.includes('group: "Guided Notes"') ||
-      !courseData.includes('group: "Lesson Slides"') ||
-      !courseData.includes('group: "Review & Answer Key"') ||
+      !courseData.includes('group: "Lesson Slides & Handouts"') ||
+      !courseData.includes('note: "SLIDESHOW HANDOUT · PDF"') ||
+      !courseData.includes('group: "Practice"') ||
+      courseData.includes('group: "Review & Answer Key"') ||
+      !courseData.includes('note: "GUIDED NOTES · ANSWER KEY · 4 DIAGRAMS", group: "Guided Notes"') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
     errors.push('The Unit 2.01 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
   }
