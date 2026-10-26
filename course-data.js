@@ -101,11 +101,11 @@ window.COURSE_DATA = {
       ],
       lessonResources: {
         "2.01": [
-          { id: "u2-201-guided-notes", title: "2.01 GUIDED NOTES", note: "GOOGLE DOC", group: "Guided Notes", url: "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa", category: "guided-notes" },
-          { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "SLIDESHOW HANDOUT · ANSWER KEY · 4 DIAGRAMS", group: "Lesson Slides & Handouts", url: "unit2-congress-in-four-frames.html", category: "guided-notes" },
-          { id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES", group: "Lesson Slides & Handouts", url: "https://slides.com/westonrogers/apg-201-congress", category: "guided-notes" },
-          { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "SLIDESHOW HANDOUT · PDF", group: "Lesson Slides & Handouts", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
-          { id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY", note: "SLIDESHOW HANDOUT · PDF", group: "Lesson Slides & Handouts", url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes" },
+          { id: "u2-201-guided-notes", title: "2.01 GUIDED NOTES", note: "GOOGLE DOC", group: "Guided Notes & Handouts", url: "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa", category: "guided-notes" },
+          { id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES", note: "GUIDED NOTES · ANSWER KEY · 4 DIAGRAMS", group: "Guided Notes & Handouts", url: "unit2-congress-in-four-frames.html", category: "guided-notes" },
+          { id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES", group: "Lesson Slides", url: "https://slides.com/westonrogers/apg-201-congress", category: "guided-notes" },
+          { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "FOCUSED LESSON · PDF", group: "Focused Lessons", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
+          { id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY", note: "FOCUSED LESSON · PDF", group: "Focused Lessons", url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes" },
           { id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", group: "Practice", category: "guided-notes", url: "unit2-concept-practice.html" }
         ]
       },
