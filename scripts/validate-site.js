@@ -788,6 +788,20 @@ function validateSharedCourseExperience() {
     unit2Landing.indexOf('if (id === "gov-2")'),
     unit2Landing.indexOf('const unitSources = document.createElement("section")')
   );
+  const unit2ConceptPractice = fs.readFileSync(path.join(root, 'unit2-concept-practice.js'), 'utf8');
+  const unit2ConceptPracticeHtml = fs.readFileSync(path.join(root, 'unit2-concept-practice.html'), 'utf8');
+  const requiredTestCoverage = [
+    'Madison in Federalist No. 57', 'Republicanism', 'Incumbency advantages',
+    'largest surplus', 'discretionary and mandatory', 'Speaker of the House',
+    'majority and minority whips', 'mandatory spending at 28% in 1968'
+  ];
+  if ((unit2ConceptPractice.match(/prompt: "/g) || []).length !== 45 ||
+      requiredTestCoverage.some(function (phrase) { return !unit2ConceptPractice.includes(phrase); }) ||
+      !unit2ConceptPracticeHtml.includes('QUESTION 1 OF 45') ||
+      !unit2ConceptPracticeHtml.includes('aria-valuemax="45"') ||
+      !unit2ConceptPracticeHtml.includes('unit2-concept-practice.js?v=20261026-congress-test-coverage')) {
+    errors.push('Topics 2.1–2.2 practice must retain its questions, cover the upcoming test topics, and report its 45-question progress accurately.');
+  }
   const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));
   if (unitDetailMarkup.includes('back-to-units') || unit2Landing.includes('getElementById("back-to-units")')) {
     errors.push('Unit detail pages must rely on the persistent Units navigation instead of a duplicate All Units button.');
