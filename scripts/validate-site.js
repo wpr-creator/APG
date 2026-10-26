@@ -784,6 +784,10 @@ function validateSharedCourseExperience() {
     errors.push('Unit 2 must be the current homepage unit.');
   }
   const unit2Landing = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
+  const unit2DetailRenderer = unit2Landing.slice(
+    unit2Landing.indexOf('if (id === "gov-2")'),
+    unit2Landing.indexOf('const unitSources = document.createElement("section")')
+  );
   const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));
   if (unitDetailMarkup.includes('back-to-units') || unit2Landing.includes('getElementById("back-to-units")')) {
     errors.push('Unit detail pages must rely on the persistent Units navigation instead of a duplicate All Units button.');
@@ -836,7 +840,8 @@ function validateSharedCourseExperience() {
       !courseData.includes('note: "SLIDESHOW HANDOUT · PDF"') ||
       !courseData.includes('group: "Practice"') ||
       courseData.includes('group: "Review & Answer Key"') ||
-      !courseData.includes('note: "GUIDED NOTES · ANSWER KEY · 4 DIAGRAMS", group: "Guided Notes"') ||
+      !courseData.includes('note: "SLIDESHOW HANDOUT · ANSWER KEY · 4 DIAGRAMS", group: "Lesson Slides & Handouts"') ||
+      unit2DetailRenderer.includes('unit-resource-concept-practice') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
     errors.push('The Unit 2.01 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
   }

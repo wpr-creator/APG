@@ -334,7 +334,6 @@
               const unlocked = !isConceptPractice || Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
               const card = document.createElement(unlocked ? "a" : "div");
               card.className = "unit-resource unit-resource-guided-notes";
-              if (isConceptPractice) card.classList.add("unit-resource-concept-practice");
               if (unlocked) {
                 card.href = resourceUrl;
                 const destination = new URL(resourceUrl, location.href);
