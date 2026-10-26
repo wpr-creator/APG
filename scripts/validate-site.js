@@ -798,7 +798,7 @@ function validateSharedCourseExperience() {
       !unit2Landing.includes('group.open = id === "gov-2" && number === "2.01"') ||
       !unit2Landing.includes('group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`') ||
       !unit2Landing.includes('const isConceptPractice = resource.id === "u2-21-22-concept-practice"') ||
-      !unit2Landing.includes('resourceItem.append(createCompletionStar(resource, unlocked), card)') ||
+      unit2Landing.includes('resourceItem.append(createCompletionStar(resource, unlocked), card)') ||
       !courseData.includes('id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE"') ||
       !courseData.includes('group: "Practice"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||

@@ -365,14 +365,7 @@
                 status.textContent = resource.status || "COMING SOON";
                 card.appendChild(status);
               }
-              if (isConceptPractice) {
-                const resourceItem = document.createElement("div");
-                resourceItem.className = "unit-resource-item unit-resource-item-concept-practice";
-                resourceItem.append(createCompletionStar(resource, unlocked), card);
-                resourceGrid.appendChild(resourceItem);
-              } else {
-                resourceGrid.appendChild(card);
-              }
+              resourceGrid.appendChild(card);
             });
             resourceRow.append(rowTitle, resourceGrid);
             group.appendChild(resourceRow);
