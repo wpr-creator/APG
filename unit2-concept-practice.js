@@ -45,6 +45,70 @@
     { lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE", prompt: "The idea that voters choose representatives to make public decisions is an example of which principle?", choices: ["Federalism", "Republicanism", "Separation of powers", "Checks and balances"], answer: 1, why: "Republicanism is a system in which people govern through elected representatives." },
     { lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE", prompt: "What could weaken Madison’s claim that frequent elections alone keep House members accountable?", choices: ["Incumbency advantages can help weak performers win reelection", "Short terms require House members to face voters often", "Frequent elections let voters replace unresponsive members", "Federal law limits representatives to one term"], answer: 0, why: "Incumbents may benefit from name recognition, fundraising networks, and constituent services, making reelection possible even when voters are dissatisfied." },
     { lesson: "TOPIC 2.2 · HOUSE AND SENATE", prompt: "Which comparison of discretionary and mandatory federal spending is accurate?", choices: ["Congress sets discretionary spending each year; existing laws guide mandatory spending", "Existing laws set discretionary spending each year; Congress guides mandatory spending", "Congress sets both spending types anew in each annual budget", "Neither spending type can be changed through new laws"], answer: 0, why: "Congress generally decides discretionary spending through annual appropriations. Mandatory spending is set by existing laws, though Congress can change those laws." },
+    {
+      lesson: "TOPIC 2.2 · HOUSE AND SENATE",
+      prompt: "Which institutional design best explains why senators consider statewide coalitions while representatives focus on smaller constituencies?",
+      table: { caption: "A comparison of the two chambers", headers: ["Feature", "House", "Senate"], rows: [["Constituency", "One district", "Entire state"], ["Term", "2 years", "6 years"], ["Representation", "Based on state population", "Two members per state"]] },
+      choices: ["Different constituencies and terms shape whom members represent", "Senators are appointed while representatives are elected", "House members represent states while senators represent districts", "The Constitution gives both chambers the same constituency"],
+      answer: 0,
+      why: "Representatives answer to voters in a single district and face election every two years. Senators represent the whole state and serve six-year terms, encouraging a broader statewide perspective."
+    },
+    {
+      lesson: "TOPIC 2.2 · HOUSE AND SENATE",
+      prompt: "A senator continues speaking to delay a vote, while House debate on the same bill is limited by a special rule. Which comparison best explains what is happening?",
+      table: { caption: "How floor debate is commonly structured", headers: ["House", "Senate"], rows: [["Formal rules often set debate time and amendments", "Debate is generally less restricted"], ["Large membership makes scheduling important", "Extended debate can give individual senators leverage"]] },
+      choices: ["Different debate rules give each chamber its own ways to shape bills", "Senate procedure sets the floor debate rules in both chambers", "House limits give individual representatives more leverage than senators", "The Senate can change the House Rules Committee’s debate limits"],
+      answer: 0,
+      why: "House rules often structure debate because the chamber is large. Senate debate is generally less restricted, so senators can use extended debate to delay action; supporters may seek cloture."
+    },
+    {
+      lesson: "TOPIC 2.2 · HOUSE AND SENATE",
+      prompt: "A bill would raise money through a new federal tax. Which route is consistent with the chamber responsibilities in the table?",
+      table: { caption: "Selected constitutional responsibilities", headers: ["House", "Senate"], rows: [["Revenue bills begin here", "Confirms many presidential nominees"], ["Approves articles of impeachment", "Conducts impeachment trials"]] },
+      choices: ["The House starts it; the Senate may amend the bill", "The Senate starts it; the House may amend the bill", "Either chamber may start it, but both must agree on amendments", "The president introduces it; the House sets the tax rate"],
+      answer: 0,
+      why: "Bills for raising federal revenue must originate in the House. The Senate can propose or concur with amendments after the bill reaches it."
+    },
+    {
+      lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE",
+      prompt: "The majority party has more committee seats than the minority party. Which conclusion is best supported by the table?",
+      table: { caption: "Membership on a 12-seat committee", headers: ["Party", "Seats"], rows: [["Majority party", "7"], ["Minority party", "5"]] },
+      choices: ["The majority party is positioned to shape committee decisions", "The majority party can advance every bill without a vote", "The committee’s party balance reflects each party’s share of voters", "The minority party controls the committee agenda despite fewer seats"],
+      answer: 0,
+      why: "The majority party generally holds more committee seats, which helps it influence hearings, amendments, and whether legislation advances. That advantage does not guarantee passage."
+    },
+    {
+      lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE",
+      prompt: "A House team is planning which bills to bring to the floor and checking how many members will support them. Which pairing matches each task to the leader’s role?",
+      table: { caption: "Selected House leadership responsibilities", headers: ["Leader", "Typical role"], rows: [["Speaker", "Presides and helps guide the chamber’s agenda"], ["Majority leader", "Coordinates the majority party’s floor schedule"], ["Whip", "Tracks votes and builds support"]] },
+      choices: ["The majority leader plans floor work; the whip checks support", "The whip presides over the House; the Speaker tracks votes", "The Speaker confirms nominees; the majority leader tries impeachments", "The majority leader chairs the Senate; the whip sets House rules"],
+      answer: 0,
+      why: "The majority leader helps coordinate the party’s floor schedule. Whips count likely votes and build support for party positions."
+    },
+    {
+      lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE",
+      prompt: "Which idea about representative government is best supported by the passage?",
+      source: { label: "Adapted summary of James Madison, Federalist No. 57", text: "Representatives must return to the people for approval at regular intervals. Because their authority depends on voters, elections can help keep public officials answerable to those they represent." },
+      choices: ["Frequent elections can encourage representatives to respond to voters", "Longer terms make representatives more responsive to voters", "Committees carry voters’ views into Congress better than elections", "Fixed terms keep representatives accountable between elections"],
+      answer: 0,
+      why: "Madison argues that representatives’ dependence on voters for reelection can check self-interest and make them accountable to the public."
+    },
+    {
+      lesson: "TOPIC 2.1 · CONGRESSIONAL STRUCTURE",
+      prompt: "A student argues that frequent elections always ensure that voters can remove a poorly performing representative. Which evidence most directly challenges that claim?",
+      source: { label: "A claim and counterevidence", text: "Claim: House members face voters every two years, so an ineffective member will be replaced. Counterevidence: Incumbents may have greater name recognition, fundraising networks, and records of constituent service than challengers." },
+      choices: ["Incumbency advantages can help some representatives win reelection", "House members face voters more often than senators", "Voters can learn about a representative’s actions", "House seats are apportioned according to population"],
+      answer: 0,
+      why: "Regular elections create accountability, but incumbency advantages can make reelection likely even when a representative’s performance is criticized."
+    },
+    {
+      lesson: "TOPIC 2.2 · HOUSE AND SENATE",
+      prompt: "A lawmaker is comparing two parts of the federal budget. Which statement follows from the distinctions shown?",
+      table: { caption: "Two types of federal spending", headers: ["Type", "How the amount is generally set"], rows: [["Discretionary", "Decided through annual appropriations"], ["Mandatory", "Guided by existing laws and eligibility rules"]] },
+      choices: ["Congress considers discretionary spending each year, while mandatory spending follows current law", "Mandatory spending is reviewed from scratch every year, while discretionary spending follows permanent law", "Only the president can change discretionary spending", "Congress cannot change either type of spending"],
+      answer: 0,
+      why: "Annual appropriations generally determine discretionary spending. Mandatory spending follows existing statutes, though Congress can revise those laws."
+    }
   ];
 
   function shuffle(items) {
@@ -70,6 +134,47 @@
   let answered = false;
   const $ = selector => document.querySelector(selector);
 
+  function renderStimulus(item) {
+    const container = $("#question-stimulus");
+    container.replaceChildren();
+    container.hidden = !item.table && !item.source;
+    if (item.table) {
+      const table = document.createElement("table");
+      const caption = document.createElement("caption");
+      caption.textContent = item.table.caption;
+      table.append(caption);
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+      item.table.headers.forEach(label => {
+        const cell = document.createElement("th");
+        cell.scope = "col";
+        cell.textContent = label;
+        headerRow.append(cell);
+      });
+      thead.append(headerRow);
+      table.append(thead);
+      const tbody = document.createElement("tbody");
+      item.table.rows.forEach(row => {
+        const tableRow = document.createElement("tr");
+        row.forEach(value => {
+          const cell = document.createElement("td");
+          cell.textContent = value;
+          tableRow.append(cell);
+        });
+        tbody.append(tableRow);
+      });
+      table.append(tbody);
+      container.append(table);
+    }
+    if (item.source) {
+      const label = document.createElement("p");
+      label.textContent = item.source.label;
+      const excerpt = document.createElement("blockquote");
+      excerpt.textContent = item.source.text;
+      container.append(label, excerpt);
+    }
+  }
+
   function render() {
     answered = false;
     const item = sessionQuestions[index];
@@ -78,6 +183,7 @@
     $(".progress-track").setAttribute("aria-valuenow", String(index));
     $("#progress-fill").style.width = `${(index / sessionQuestions.length) * 100}%`;
     $("#lesson-tag").textContent = item.lesson;
+    renderStimulus(item);
     $("#question-title").textContent = item.prompt;
     $("#feedback").hidden = true;
     $("#next-question").hidden = true;

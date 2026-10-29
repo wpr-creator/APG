@@ -792,14 +792,16 @@ function validateSharedCourseExperience() {
   const unit2ConceptPracticeHtml = fs.readFileSync(path.join(root, 'unit2-concept-practice.html'), 'utf8');
   const requiredTestCoverage = [
     'Madison in Federalist No. 57', 'Republicanism', 'Incumbency advantages',
-    'discretionary and mandatory'
+    'discretionary and mandatory', 'A comparison of the two chambers',
+    'Adapted summary of James Madison, Federalist No. 57', 'question-stimulus'
   ];
-  if ((unit2ConceptPractice.match(/prompt: "/g) || []).length !== 41 ||
+  if ((unit2ConceptPractice.match(/prompt: "/g) || []).length !== 49 ||
       requiredTestCoverage.some(function (phrase) { return !unit2ConceptPractice.includes(phrase); }) ||
-      !unit2ConceptPracticeHtml.includes('QUESTION 1 OF 41') ||
-      !unit2ConceptPracticeHtml.includes('aria-valuemax="41"') ||
-      !unit2ConceptPracticeHtml.includes('unit2-concept-practice.js?v=20261029-remove-visual-questions')) {
-    errors.push('Topics 2.1–2.2 practice must cover the upcoming test topics without image-dependent items and report its 41-question progress accurately.');
+      !unit2ConceptPracticeHtml.includes('QUESTION 1 OF 49') ||
+      !unit2ConceptPracticeHtml.includes('aria-valuemax="49"') ||
+      !unit2ConceptPracticeHtml.includes('unit2-concept-practice.css?v=20261029-source-comparison-practice') ||
+      !unit2ConceptPracticeHtml.includes('unit2-concept-practice.js?v=20261029-source-comparison-practice')) {
+    errors.push('Topics 2.1–2.2 practice must cover the upcoming test topics with source and comparison practice, without image-dependent items, and report its 49-question progress accurately.');
   }
   const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));
   if (unitDetailMarkup.includes('back-to-units') || unit2Landing.includes('getElementById("back-to-units")')) {

@@ -7,6 +7,14 @@
 .progress-track { height: 8px; margin: .75rem 0 2rem; overflow: hidden; background: var(--stone); }
 .progress-track span { width: 0; height: 100%; display: block; background: var(--slate); transition: width .2s ease; }
 .lesson-tag { margin: 0 0 .5rem; color: var(--slate); font-family: var(--type-label); font-size: var(--type-size-label); letter-spacing: .08em; text-transform: uppercase; }
+.question-stimulus { margin: 1rem 0 1.25rem; padding: 1rem; background: #f3f5f5; border-left: 4px solid var(--slate); }
+.question-stimulus[hidden] { display: none; }
+.question-stimulus > p:first-child { margin: 0 0 .65rem; color: var(--slate); font-family: var(--type-label); font-size: var(--type-size-label); letter-spacing: .08em; text-transform: uppercase; }
+.question-stimulus blockquote { margin: 0; font-size: 1.04rem; line-height: 1.55; }
+.question-stimulus table { width: 100%; border-collapse: collapse; background: #fff; }
+.question-stimulus caption { padding: 0 0 .6rem; color: var(--ink); font-weight: 800; text-align: left; }
+.question-stimulus th, .question-stimulus td { padding: .65rem .75rem; border: 1px solid var(--line); text-align: left; vertical-align: top; }
+.question-stimulus th { color: var(--black); background: #e7ecee; }
 .practice-card h2 { max-width: 820px; margin: .25rem 0 1.5rem; color: var(--black); font-size: clamp(1.4rem, 2.8vw, 2rem); line-height: 1.25; }
 .choices { display: grid; gap: .7rem; }
 .choices button { width: 100%; min-height: 54px; padding: 1rem 1.1rem; color: var(--black); background: var(--white); border: 1px solid var(--line); border-left: 4px solid var(--stone-dark); font: inherit; font-weight: 650; text-align: left; cursor: pointer; }
