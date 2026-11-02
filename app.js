@@ -402,7 +402,7 @@
       link.className = "unit-source";
       link.href = documentData.file;
       const label = document.createElement("strong");
-      label.textContent = documentData.title.toUpperCase();
+      label.textContent = documentData.title;
       const meta = document.createElement("span");
       meta.textContent = `${documentData.year} · DOCUMENT GUIDE`;
       link.append(label, meta);
@@ -950,7 +950,7 @@
       meta.className = "document-meta";
       meta.textContent = `${documentData.year} · ${documentData.author}`;
       const title = document.createElement("h3");
-      title.textContent = documentData.title.toUpperCase();
+      title.textContent = documentData.title;
       const idea = document.createElement("p");
       idea.textContent = documentData.bigIdea;
       const action = document.createElement("strong");
@@ -971,7 +971,7 @@
       meta.className = "document-meta";
       meta.textContent = `UNIT ${caseData.unit} · ${caseData.year} · ${caseData.tag}`;
       const title = document.createElement("h3");
-      title.textContent = caseData.title.toUpperCase();
+      title.textContent = caseData.title;
       const question = document.createElement("p");
       question.textContent = caseData.question;
       const link = document.createElement("a");
@@ -991,7 +991,7 @@
     eyebrow.textContent = `${documentData.year} · ${documentData.author}`;
     const title = document.createElement("h2");
     title.id = "foundation-dialog-title";
-    title.textContent = documentData.title.toUpperCase();
+    title.textContent = documentData.title;
     const blocks = [
       ["SUMMARY", documentData.bigIdea],
       ["EXCERPT", `“${documentData.excerpt}”`],
