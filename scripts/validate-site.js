@@ -837,6 +837,8 @@ function validateSharedCourseExperience() {
       !courseData.includes('id: "u2-202-guided-notes", title: "2.02 GUIDED NOTES · WHOSE CONGRESS?"') ||
       !courseData.includes('https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv') ||
       !courseData.includes('https://slides.com/westonrogers/apg-22-whose') ||
+      !courseData.includes('id: "u2-202-gerrymander-game", title: "GerryMander: A Voting District Puzzle Game"') ||
+      !courseData.includes('https://gametheorytest.com/gerry/game/') ||
       !courseData.includes('url: "unit2-topic-23-concept-practice.html"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
