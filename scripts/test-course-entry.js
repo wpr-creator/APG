@@ -51,3 +51,9 @@ function checkHeaders(directory) {
 }
 checkHeaders(root);
 console.log('All course pages load the shared header; lesson 2.1 resources and exit-ticket contract are intact.');
+
+for (const filename of ['lesson-2-1.html','lesson-2-2.html']) {
+ const html=fs.readFileSync(path.join(root,filename),'utf8');
+ const main=html.slice(html.indexOf('<main'),html.indexOf('</main>'));
+ assert(!main.includes('exit-ticket'), 'Exit tickets must remain course-wide, outside '+filename+' lesson content');
+}

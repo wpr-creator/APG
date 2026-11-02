@@ -77,3 +77,5 @@ The active course starts at `index.html`, with `units.html`, `unit2.html`, `less
 Use `course-data.js` for lesson titles and resource records, and `site-content.json` for availability, resource URL overrides, and the current unit and lesson. Keep lesson pages focused on finding materials. Essential questions must be copied exactly from the teacher’s guided notes; do not invent lesson explanations or scope. The current shared header uses the Capitol mark and includes the current lesson and Exit Ticket.
 
 All course pages load `course-header.js` and `course-header.css`. Exported slide decks keep their presentation layout. `exit-ticket.html` leads to the existing form in `course-tools.html`; `exit-ticket.css` changes its layout without changing its question, field IDs, or submission logic.
+
+Exit tickets are course-wide and change independently of lessons. Keep access in the shared header and homepage; do not put exit-ticket cards, questions, or links within individual lesson content.
