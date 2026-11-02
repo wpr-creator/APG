@@ -252,7 +252,7 @@ function validateSharedCourseExperience() {
   });
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    const isLessonPreview = relative(file) === 'whose-congress-preview.html' && html.includes('whose-congress-preview.css?v=2');
+    const isLessonPreview = relative(file) === 'whose-congress-preview.html' && html.includes('whose-congress-preview.css?v=3');
     const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
@@ -274,7 +274,7 @@ function validateSharedCourseExperience() {
   });
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    if (relative(file) === 'whose-congress-preview.html' && html.includes('href="whose-congress-preview.css?v=2"')) return;
+    if (relative(file) === 'whose-congress-preview.html' && html.includes('href="whose-congress-preview.css?v=3"')) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
     if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
