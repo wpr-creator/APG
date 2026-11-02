@@ -783,7 +783,17 @@
       sources.appendChild(link);
     });
 
-    container.append(quizLinks, races, propositionQuizLinks, sources);
+    const ballotCallout = document.createElement("section");
+    ballotCallout.className = "guide-ballot-cta";
+    ballotCallout.setAttribute("aria-labelledby", "guide-ballot-title");
+    ballotCallout.innerHTML = `
+      <p class="eyebrow">FINAL STEP · MAKE YOUR CHOICES</p>
+      <h2 id="guide-ballot-title">Cast your student ballot</h2>
+      <p>Use what you learned about the candidates and propositions to make your choices in our classroom ballot.</p>
+      <a class="guide-ballot-button" href="https://docs.google.com/forms/d/11_z5LW8oothWAdIEIh0EArcvhk1RrRu2hsWs2c7YCfw/viewform" target="_blank" rel="noopener noreferrer">OPEN THE STUDENT BALLOT <span aria-hidden="true">↗</span></a>
+    `;
+
+    container.append(quizLinks, races, propositionQuizLinks, sources, ballotCallout);
   }
 
   function renderPresidents() {

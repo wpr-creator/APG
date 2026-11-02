@@ -409,7 +409,10 @@ function validateSharedCourseExperience() {
     'Explore California propositions', 'guide-action-button',
     'race-category', 'What the candidates say',
     'const raceOrder = ["CONGRESS", "STATE", "LOCAL"]',
-    'container.append(quizLinks, races, propositionQuizLinks, sources)'
+    'container.append(quizLinks, races, propositionQuizLinks, sources, ballotCallout)',
+    'Cast your student ballot',
+    'https://docs.google.com/forms/d/11_z5LW8oothWAdIEIh0EArcvhk1RrRu2hsWs2c7YCfw/viewform',
+    'OPEN THE STUDENT BALLOT', 'guide-ballot-cta', 'guide-ballot-button'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
