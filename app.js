@@ -615,16 +615,75 @@
       const text = `${word[0]} ${glossaryDefinition(word)} ${word[3]}`.toLowerCase();
       return inUnit && inBranch && text.includes(glossaryQuery);
     });
+    const collections = new Map();
+    const unitIndex = Number(glossaryFilter.replace("gov-", "")) - 1;
+    const unitGroups = Object.keys(glossaryUnits[unitIndex]?.groups || {});
     matches.forEach(word => {
-      const button = document.createElement("button");
-      button.type = "button";
-      button.className = "word-card";
-      button.innerHTML = `<h2></h2><p></p><span class="word-arrow" aria-hidden="true">↗</span>`;
-      button.setAttribute("aria-haspopup", "dialog");
-      button.querySelector("h2").textContent = word[0];
-      button.querySelector("p").textContent = glossaryDefinition(word);
-      button.addEventListener("click", () => openWord(word, button));
-      wordGrid.appendChild(button);
+      const references = word[3].split(" · ");
+      const firstLetter = word[0].replace(/^(?:a|an|the)\s+/i, "").charAt(0).toUpperCase();
+      const alphabetGroup = firstLetter <= "C" ? "A–C" : firstLetter <= "H" ? "D–H" : firstLetter <= "P" ? "I–P" : "Q–Z";
+      const collection = unitGroups.find(group => references.includes(group)) ||
+        (glossaryFilter === "gov-2" && word[0].toLowerCase() === "bicameralism" ? "Congress" : "") ||
+        (glossaryFilter === "all" || glossaryFilter === "gov-0" ? alphabetGroup : "Course connections");
+      if (!collections.has(collection)) collections.set(collection, []);
+      collections.get(collection).push(word);
+    });
+    const collectionOrder = unitGroups.length ? [...unitGroups, "Course connections"] : ["A–C", "D–H", "I–P", "Q–Z"];
+    const visibleCollections = collectionOrder.filter(label => collections.has(label));
+    if (visibleCollections.length > 1) {
+      const jump = document.createElement("div");
+      jump.className = "glossary-collection-jump";
+      const label = document.createElement("label");
+      label.htmlFor = "glossary-collection-select";
+      label.textContent = "Jump to a collection";
+      const select = document.createElement("select");
+      select.id = "glossary-collection-select";
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = "Choose a collection";
+      select.appendChild(placeholder);
+      visibleCollections.forEach((name, index) => {
+        const option = document.createElement("option");
+        option.value = `glossary-collection-${index}`;
+        option.textContent = `${name} (${collections.get(name).length})`;
+        select.appendChild(option);
+      });
+      select.addEventListener("change", () => {
+        const target = document.getElementById(select.value);
+        if (target) { target.focus({ preventScroll: true }); target.scrollIntoView({ block: "start" }); }
+      });
+      jump.append(label, select);
+      wordGrid.appendChild(jump);
+    }
+    visibleCollections.forEach((label, index) => {
+      const terms = collections.get(label);
+      const section = document.createElement("section");
+      section.className = "glossary-collection";
+      section.id = `glossary-collection-${index}`;
+      section.tabIndex = -1;
+      const heading = document.createElement("div");
+      heading.className = "glossary-collection-heading";
+      const count = document.createElement("p");
+      count.className = "glossary-collection-count";
+      count.textContent = `0${index + 1} / ${terms.length} ${terms.length === 1 ? "TERM" : "TERMS"}`;
+      const title = document.createElement("h2");
+      title.textContent = label;
+      heading.append(count, title);
+      const cards = document.createElement("div");
+      cards.className = "glossary-collection-cards";
+      terms.forEach(word => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "word-card";
+        button.innerHTML = `<h3></h3><p></p><span class="word-arrow" aria-hidden="true">↗</span>`;
+        button.setAttribute("aria-haspopup", "dialog");
+        button.querySelector("h3").textContent = word[0];
+        button.querySelector("p").textContent = glossaryDefinition(word);
+        button.addEventListener("click", () => openWord(word, button));
+        cards.appendChild(button);
+      });
+      section.append(heading, cards);
+      wordGrid.appendChild(section);
     });
     const status = document.getElementById("glossary-status");
     const selectedFilter = document.querySelector(`[data-glossary-filter="${glossaryFilter}"]`);

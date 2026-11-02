@@ -291,7 +291,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-collections',
+    'app.js?v=20261102-glossary-collections',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -464,7 +464,7 @@ function validateSharedCourseExperience() {
       courseShell.includes('AP UNITED STATES GOVERNMENT</strong>') || courseShell.includes('apg-return-link')) {
     errors.push('Inner pages must match the homepage brand and must not add a duplicate return button.');
   }
-  if (!homepage.includes('<h1>Course glossary</h1>')) {
+  if (!homepage.includes('<h1>The course <em>glossary.</em></h1>')) {
     errors.push('APG glossary heading is missing.');
   }
   ['all', 'gov-0', 'gov-1', 'gov-2', 'gov-3', 'gov-4', 'gov-5'].forEach(function (filter) {
