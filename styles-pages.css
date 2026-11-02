@@ -264,6 +264,10 @@
 }
 
 /* ── CASE PAGE STYLES ── */
+/* Case pages use a semantic header inside the page. Keep it in normal document flow;
+   the global site header is sticky, but this content header must scroll away. */
+.case-page > .case-content > header.case-hero { position: relative; top: auto; z-index: auto; }
+
 .case-layout {
   display: grid;
   grid-template-columns: 1fr 280px;
