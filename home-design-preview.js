@@ -1,3 +1,18 @@
+(() => {
+  const label = window.ELECTION_2026_DATA?.electionDate;
+  const election = new Date(label);
+  if (!label || Number.isNaN(election.getTime())) return;
+  function updateElection() {
+    const today = new Date();
+    const days = Math.round((Date.UTC(election.getFullYear(), election.getMonth(), election.getDate()) - Date.UTC(today.getFullYear(), today.getMonth(), today.getDate())) / 86400000);
+    document.getElementById('election-countdown').textContent = days === 1 ? 'Election day is tomorrow' : days === 0 ? 'Election day is today' : days > 1 ? days + ' days until election day' : 'Election day has passed';
+    const date = document.getElementById('election-date');
+    date.textContent = label;
+    date.dateTime = [election.getFullYear(), String(election.getMonth()+1).padStart(2,'0'), String(election.getDate()).padStart(2,'0')].join('-');
+  }
+  updateElection();
+  setInterval(updateElection, 60000);
+})();
 (async () => {
   'use strict';
   try {
