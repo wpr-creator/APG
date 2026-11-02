@@ -790,6 +790,8 @@ function validateSharedCourseExperience() {
   );
   const unit2ConceptPractice = fs.readFileSync(path.join(root, 'unit2-concept-practice.js'), 'utf8');
   const unit2ConceptPracticeHtml = fs.readFileSync(path.join(root, 'unit2-concept-practice.html'), 'utf8');
+  const unit2Topic23Practice = fs.readFileSync(path.join(root, 'unit2-topic-23-concept-practice.js'), 'utf8');
+  const unit2Topic23PracticeHtml = fs.readFileSync(path.join(root, 'unit2-topic-23-concept-practice.html'), 'utf8');
   const requiredTestCoverage = [
     'Madison in Federalist No. 57', 'Republicanism', 'Incumbency advantages',
     'discretionary and mandatory', 'A comparison of the two chambers',
@@ -803,6 +805,14 @@ function validateSharedCourseExperience() {
       !unit2ConceptPracticeHtml.includes('unit2-concept-practice.js?v=20261029-source-comparison-practice')) {
     errors.push('Topics 2.1–2.2 practice must cover the upcoming test topics with source and comparison practice, without image-dependent items, and report its 49-question progress accurately.');
   }
+  const topic23Coverage = ['delegate', 'trustee', 'politico', 'Baker v. Carr', 'Shaw v. Reno', 'Federalist No. 10', 'reapportionment', 'redistricting', 'gerrymandering', 'party leader', 'gridlock'];
+  if ((unit2Topic23Practice.match(/prompt: "/g') || []).length !== 18 ||
+      topic23Coverage.some(function (phrase) { return !unit2Topic23Practice.toLowerCase().includes(phrase.toLowerCase()); }) ||
+      !unit2Topic23PracticeHtml.includes('QUESTION 1 OF 18') ||
+      !unit2Topic23PracticeHtml.includes('aria-valuemax="18"') ||
+      !unit2Topic23PracticeHtml.includes('unit2-topic-23-concept-practice.js?v=20261102-topic-23-practice')) {
+    errors.push('Topic 2.3 practice must cover representation models, districting concepts, required cases, and political behavior with accurate progress.');
+  }
   const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));
   if (unitDetailMarkup.includes('back-to-units') || unit2Landing.includes('getElementById("back-to-units")')) {
     errors.push('Unit detail pages must rely on the persistent Units navigation instead of a duplicate All Units button.');
@@ -814,15 +824,20 @@ function validateSharedCourseExperience() {
       !unit2Landing.includes('container.append(header, pathHeading, lessonList, unitResources)') ||
       !unit2Landing.includes('resourceCount.textContent = "2 RESOURCES"') ||
       unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
-      !unit2Landing.includes('group.open = id === "gov-2" && number === "2.01"') ||
+      !unit2Landing.includes('group.open = id === "gov-2" && number === "2.02"') ||
       !unit2Landing.includes('group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`') ||
-      !unit2Landing.includes('const isConceptPractice = resource.id === "u2-21-22-concept-practice"') ||
+      !unit2Landing.includes('const isConceptPractice = resource.id === "u2-21-22-concept-practice" || resource.category === "concept-practice"') ||
       unit2Landing.includes('resourceItem.append(createCompletionStar(resource, unlocked), card)') ||
       !courseData.includes('id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE"') ||
       !courseData.includes('group: "Practice"') ||
+      !courseData.includes('"2.02": [') ||
+      !courseData.includes('id: "u2-202-guided-notes", title: "2.02 GUIDED NOTES · WHOSE CONGRESS?"') ||
+      !courseData.includes('https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv') ||
+      !courseData.includes('https://slides.com/westonrogers/apg-22-whose') ||
+      !courseData.includes('url: "unit2-topic-23-concept-practice.html"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
-    errors.push('Unit 2 must keep quick resources separate, place concept practice inside Lesson 2.01, and open that lesson by default.');
+    errors.push('Unit 2 must keep quick resources separate, place lesson practice in the correct lesson groups, and open Lesson 2.02 by default.');
   }
   [
     ["2.01", "Two Houses, One Congress"],

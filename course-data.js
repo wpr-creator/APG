@@ -107,6 +107,11 @@ window.COURSE_DATA = {
           { id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW", note: "FOCUSED LESSON · PDF", group: "Focused Lessons", url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes" },
           { id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY", note: "FOCUSED LESSON · PDF", group: "Focused Lessons", url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes" },
           { id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", group: "Practice", category: "guided-notes", url: "unit2-concept-practice.html" }
+        ],
+        "2.02": [
+          { id: "u2-202-guided-notes", title: "2.02 GUIDED NOTES · WHOSE CONGRESS?", note: "GOOGLE DOC", group: "Guided Notes & Handouts", url: "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv", category: "guided-notes" },
+          { id: "u2-202-lesson-slides", title: "2.02 LESSON SLIDES · WHOSE CONGRESS?", group: "Lesson Slides", url: "https://slides.com/westonrogers/apg-22-whose", category: "guided-notes" },
+          { id: "u2-203-concept-practice", title: "TOPIC 2.3 CONCEPT PRACTICE", note: "PRACTICE · CASES · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-topic-23-concept-practice.html" }
         ]
       },
       lessons: [

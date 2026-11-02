@@ -304,7 +304,7 @@
         const group = document.createElement("details");
         group.className = "unit-resource-group unit-lesson-group";
         group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`;
-        group.open = id === "gov-2" && number === "2.01";
+        group.open = id === "gov-2" && number === "2.02";
         const summary = document.createElement("summary");
         summary.className = "unit-resource-summary";
         const heading = document.createElement("h2");
@@ -329,7 +329,7 @@
             const resourceGrid = document.createElement("div");
             resourceGrid.className = "unit-resource-grid";
             resources.forEach(resource => {
-              const isConceptPractice = resource.id === "u2-21-22-concept-practice";
+              const isConceptPractice = resource.id === "u2-21-22-concept-practice" || resource.category === "concept-practice";
               const resourceUrl = siteContent.assignmentUrls?.[resource.id] ?? resource.url;
               const unlocked = !isConceptPractice || Boolean(resourceUrl && assignmentIsUnlocked(resource.id));
               const card = document.createElement(unlocked ? "a" : "div");
