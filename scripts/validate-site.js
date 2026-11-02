@@ -754,10 +754,10 @@ function validateSharedCourseExperience() {
     errors.push('Published AP Addendum must be open with its assigned Google Doc URL.');
   }
   const parsedSiteContent = JSON.parse(siteContent);
-  const expectedExitQuestion = '';
+  const expectedExitQuestion = 'Imagine you’re a politician who can draw districts to help your party win more seats. Would you do it? Convince me.\n\nIf **no**, explain why you would give up that advantage and how you would draw the lines instead.\n\nIf **yes**, explain why helping your party win justifies the effect on voters. Use one move you made in *GerryMander* to support your answer.';
   const expectedExitQuestionDraft = 'CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.';
   if (parsedSiteContent.exitQuestion !== expectedExitQuestion || parsedSiteContent.exitQuestionDraft !== expectedExitQuestionDraft) {
-    errors.push('The homepage exit ticket must be closed while preserving its Prove Your Case draft.');
+    errors.push('The homepage exit ticket must show the GerryMander districting prompt while preserving its Prove Your Case draft.');
   }
   const expectedUpcoming = [
     { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },

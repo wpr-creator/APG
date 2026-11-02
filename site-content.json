@@ -8,7 +8,7 @@
     "gov-4": false,
     "gov-5": false
   },
-  "exitQuestion": "",
+  "exitQuestion": "Imagine you’re a politician who can draw districts to help your party win more seats. Would you do it? Convince me.\n\nIf **no**, explain why you would give up that advantage and how you would draw the lines instead.\n\nIf **yes**, explain why helping your party win justifies the effect on voters. Use one move you made in *GerryMander* to support your answer.",
   "exitQuestionDraft": "CASE CLOSED? ⚖\n• What case did your team investigate?\n• What did the Supreme Court decide?\n• Did the Court rule with you—or did you dissent?\n• Final call: Did the Court get it right? Why or why not? Use one fact from the case.",
   "upcoming": [
     {
