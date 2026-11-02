@@ -31,6 +31,9 @@ jobs:
       - name: Test glossary presentation
         run: node scripts/test-glossary-presentation.js
 
+      - name: Test election tracker
+        run: node scripts/test-election-tracker.js
+
       - name: Test library collections
         run: node scripts/test-library-collections.js
 
