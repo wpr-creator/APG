@@ -305,6 +305,7 @@
         group.className = "unit-resource-group unit-lesson-group";
         group.id = number === "2.1" ? "unit2-concept-practice" : `lesson-${number}`;
         group.open = id === "gov-2" && number === "2.2";
+        group.tabIndex = -1;
         const summary = document.createElement("summary");
         summary.className = "unit-resource-summary";
         const heading = document.createElement("h2");
@@ -342,7 +343,7 @@
                   card.target = "_blank";
                   card.rel = "noopener";
                 }
-                if (isConceptPractice) {
+                if (internal) {
                   card.addEventListener("click", () => {
                     try { sessionStorage.setItem("apg-return-lesson", JSON.stringify({ unit: id, lesson: group.id, destination: destination.pathname })); } catch (_) {}
                   });
@@ -380,6 +381,7 @@
       });
 
       container.append(header, pathHeading, lessonList, unitResources);
+      restoreRequestedLesson();
       return;
     }
 
@@ -574,6 +576,10 @@
       pathHeading.append(pathTitle, pathDescription);
       container.append(pathHeading, resources);
     }
+    restoreRequestedLesson();
+  }
+
+  function restoreRequestedLesson() {
     const requestedLesson = new URL(location.href).searchParams.get("lesson");
     if (requestedLesson) {
       const target = document.getElementById(requestedLesson);

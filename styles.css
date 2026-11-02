@@ -1000,3 +1000,13 @@ footer { max-width: 1240px; margin: 0 auto; padding: 1.5rem 24px 3rem; display: 
   *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition: none !important; }
   .portrait-rain span { transform: translateY(var(--rest)); }
 }
+
+/* Consistent lesson navigation across open units. */
+.unit-resource-summary h2 { font-family: var(--type-display); font-size: clamp(1.08rem, 1rem + .4vw, 1.35rem); line-height: 1.3; }
+.unit-resource-count { margin-left: auto; white-space: nowrap; }
+.unit-resource-row > h3 { font-size: .78rem; line-height: 1.5; padding-top: .5rem; }
+.unit-resource-grid { align-items: stretch; }
+@media (min-width: 761px) and (max-width: 1100px) {
+  .unit-resource-summary { padding: 1rem; }
+  .unit-resource-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}

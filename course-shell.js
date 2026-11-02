@@ -34,7 +34,7 @@
     let lesson = "";
     try {
       const saved = JSON.parse(sessionStorage.getItem("apg-return-lesson") || "null");
-      if (saved && saved.destination === location.pathname) { unit = saved.unit; lesson = saved.lesson; }
+      if (saved && /^gov-[0-5]$/.test(saved.unit) && saved.destination === location.pathname) { unit = saved.unit; lesson = saved.lesson; }
     } catch (_) {}
     document.querySelectorAll("body > header, body > nav, body > .course-header").forEach(el => {
       if (!el.matches("nav, .course-header, .course-shell, .page-header") && !el.querySelector(".header-brand, .header-inner")) return;
@@ -55,7 +55,11 @@
     button.setAttribute("aria-expanded", "false"); button.setAttribute("aria-controls", "apg-shared-nav");
     const nav = document.createElement("nav"); nav.id = "apg-shared-nav"; nav.setAttribute("aria-label", "Main navigation");
     [["HOME","home"],["UNITS","units"],["FOUNDATIONS","foundations"],["GLOSSARY","words"],["EXIT TICKET","exit-ticket"]].forEach(([label, hash]) => {
-      const a = document.createElement("a"); a.textContent = label; a.href = root.href + "#" + hash; nav.append(a);
+      const a = document.createElement("a");
+      const isLessonReturn = label === "UNITS" && /^gov-[0-5]$/.test(unit);
+      a.textContent = isLessonReturn ? (lesson ? "BACK TO LESSON" : "UNIT " + unit.slice(-1)) : label;
+      a.href = isLessonReturn ? root.href + (lesson ? "?lesson=" + encodeURIComponent(lesson) : "") + "#" + unit : root.href + "#" + hash;
+      nav.append(a);
     });
     button.addEventListener("click", () => { const open = button.getAttribute("aria-expanded") !== "true"; button.setAttribute("aria-expanded", String(open)); nav.classList.toggle("is-open", open); });
     header.addEventListener("keydown", event => { if (event.key === "Escape") { nav.classList.remove("is-open"); button.setAttribute("aria-expanded", "false"); button.focus(); } });

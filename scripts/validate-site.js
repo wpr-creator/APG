@@ -1520,7 +1520,7 @@ function validateSharedCourseExperience() {
   REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
     if (!page.includes('nav-render.js?v=20260929-clean-guides') ||
-        !page.includes('course-shell.js?v=20260929-home-editorial-system')) {
+        !page.includes('course-shell.js?v=20261102-lesson-navigation')) {
       errors.push('Document or case cannot load shared course navigation: ' + relative(file));
     }
     if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"|doc-margin-tag|doc-annotation-tags|doc-annotation-tag/.test(page)) {
