@@ -264,6 +264,22 @@
 }
 
 /* ── CASE PAGE STYLES ── */
+/* Shared reading template for the worksheet case pages. */
+.case-content { overflow-wrap: break-word; }
+.case-content > .case-hero { margin-bottom: 1.5rem; }
+.case-content .case-block { scroll-margin-top: 1.5rem; }
+.case-content .case-block-body p,
+.case-content .case-ruling-text { font-size: 1rem; line-height: 1.7; }
+.case-content .case-background p { margin-bottom: .85rem; }
+.case-content .case-hero-title { overflow-wrap: anywhere; }
+.case-content .case-step-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+.case-content :is(a, summary):focus-visible { outline: 3px solid var(--focus, #155eef); outline-offset: 4px; }
+.case-content .case-legacy-list li { flex-wrap: wrap; }
+@media print {
+  .case-content .case-step-nav { display: none; }
+  .case-content .case-block { break-inside: avoid; box-shadow: none; }
+}
+
 /* Case pages use a semantic header inside the page. Keep it in normal document flow;
    the global site header is sticky, but this content header must scroll away. */
 .case-page > .case-content > header.case-hero { position: relative; top: auto; z-index: auto; }
