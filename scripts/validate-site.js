@@ -252,6 +252,7 @@ function validateSharedCourseExperience() {
   });
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
+    const isLessonPreview = relative(file) === 'whose-congress-preview.html' && html.includes('whose-congress-preview.css?v=1');
     const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
@@ -261,7 +262,7 @@ function validateSharedCourseExperience() {
     const isHistoryHub = relative(file) === 'history-lesson.html' && html.includes('history-hub.css');
     const isHistoryReader = relative(file) === 'history-reader.html' && html.includes('history-reader-theme.css');
     const isHistoryPresenter = relative(file) === 'history-presenter.html' && html.includes('history-presenter.css');
-    if (!isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
+    if (!isLessonPreview && !isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
@@ -273,6 +274,7 @@ function validateSharedCourseExperience() {
   });
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
+    if (relative(file) === 'whose-congress-preview.html' && html.includes('href="whose-congress-preview.css?v=1"')) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
     if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
