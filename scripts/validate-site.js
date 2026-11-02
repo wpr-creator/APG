@@ -760,12 +760,12 @@ function validateSharedCourseExperience() {
     errors.push('The homepage exit ticket must show the GerryMander districting prompt while preserving its Prove Your Case draft.');
   }
   const expectedUpcoming = [
-    { title: '1.01 GUIDED NOTES', date: 'UNIT 1 · 1.01' },
-    { title: 'DECLARATION ANNOTATION', date: 'UNIT 1 · 1.01' },
-    { title: 'GETTYSBURG REDUX', date: 'UNIT 1 · 1.01' }
+    { title: '1.1 GUIDED NOTES', date: 'UNIT 1 · 1.1' },
+    { title: 'DECLARATION ANNOTATION', date: 'UNIT 1 · 1.1' },
+    { title: 'GETTYSBURG REDUX', date: 'UNIT 1 · 1.1' }
   ];
   if (JSON.stringify(parsedSiteContent.upcoming) !== JSON.stringify(expectedUpcoming)) {
-    errors.push('Upcoming Assignments must reflect the three Unit 1.01 assignments.');
+    errors.push('Upcoming Assignments must reflect the three Unit 1.1 assignments.');
   }
   const expectedUnitUnlocks = { 'gov-0': false, 'gov-1': true, 'gov-2': true, 'gov-3': false, 'gov-4': false, 'gov-5': false };
   if (JSON.stringify(parsedSiteContent.unitUnlocks) !== JSON.stringify(expectedUnitUnlocks)) {
@@ -827,14 +827,14 @@ function validateSharedCourseExperience() {
       !unit2Landing.includes('container.append(header, pathHeading, lessonList, unitResources)') ||
       !unit2Landing.includes('resourceCount.textContent = "2 RESOURCES"') ||
       unit2Landing.includes('practiceTitle.textContent = "UNIT 2 CONCEPT PRACTICE"') ||
-      !unit2Landing.includes('group.open = id === "gov-2" && number === "2.02"') ||
-      !unit2Landing.includes('group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`') ||
+      !unit2Landing.includes('group.open = id === "gov-2" && number === "2.2"') ||
+      !unit2Landing.includes('group.id = number === "2.1" ? "unit2-concept-practice" : `lesson-${number}`') ||
       !unit2Landing.includes('const isConceptPractice = resource.id === "u2-21-22-concept-practice" || resource.category === "concept-practice"') ||
       unit2Landing.includes('resourceItem.append(createCompletionStar(resource, unlocked), card)') ||
       !courseData.includes('id: "u2-21-22-concept-practice", title: "2.1–2.2 CONCEPT PRACTICE"') ||
       !courseData.includes('group: "Practice"') ||
-      !courseData.includes('"2.02": [') ||
-      !courseData.includes('id: "u2-202-guided-notes", title: "2.02 GUIDED NOTES · WHOSE CONGRESS?"') ||
+      !courseData.includes('"2.2": [') ||
+      !courseData.includes('id: "u2-202-guided-notes", title: "2.2 GUIDED NOTES · WHOSE CONGRESS?"') ||
       !courseData.includes('https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv') ||
       !courseData.includes('https://slides.com/westonrogers/apg-22-whose') ||
       !courseData.includes('id: "u2-202-gerrymander-game", title: "GERRYMANDER", note: "A Voting District Puzzle Game"') ||
@@ -842,23 +842,23 @@ function validateSharedCourseExperience() {
       !courseData.includes('url: "unit2-topic-23-concept-practice.html"') ||
       !unit2Landing.includes('className = "unit-lessons lesson-list unit-lesson-list"') ||
       !unit2Landing.includes('glossaryFilter = `gov-${requestedGlossaryUnit}`')) {
-    errors.push('Unit 2 must keep quick resources separate, place lesson practice in the correct lesson groups, and open Lesson 2.02 by default.');
+    errors.push('Unit 2 must keep quick resources separate, place lesson practice in the correct lesson groups, and open Lesson 2.2 by default.');
   }
   [
-    ["2.01", "Two Houses, One Congress"],
-    ["2.02", "Whose Congress?"],
-    ["2.03", "The Energetic Executive"],
-    ["2.04", "The Least Dangerous?"],
-    ["2.05", "The Fourth Branch"],
-    ["2.06", "Power in Motion"]
+    ["2.1", "Two Houses, One Congress"],
+    ["2.2", "Whose Congress?"],
+    ["2.3", "The Energetic Executive"],
+    ["2.4", "The Least Dangerous?"],
+    ["2.5", "The Fourth Branch"],
+    ["2.6", "Power in Motion"]
   ].forEach(function ([number, title]) {
     if (!courseData.includes(`["${number}", "${title}"]`)) errors.push('Unit 2 lesson title is missing or out of sync: ' + number + ' — ' + title);
   });
   if (!courseData.includes('id: "u2-201-congress-key", title: "CONGRESS IN FOUR FRAMES"') ||
       !courseData.includes('url: "unit2-congress-in-four-frames.html", category: "guided-notes"') ||
-      !courseData.includes('id: "u2-201-guided-notes", title: "2.01 GUIDED NOTES"') ||
+      !courseData.includes('id: "u2-201-guided-notes", title: "2.1 GUIDED NOTES"') ||
       !courseData.includes('https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa') ||
-      !courseData.includes('id: "u2-201-lesson-slides", title: "2.01 LESSON SLIDES"') ||
+      !courseData.includes('id: "u2-201-lesson-slides", title: "2.1 LESSON SLIDES"') ||
       !courseData.includes('https://slides.com/westonrogers/apg-201-congress') ||
       !courseData.includes('id: "u2-201-bill-to-law-notes", title: "FROM BILL TO LAW"') ||
       !courseData.includes('url: "assets/handouts/unit2/from-bill-to-law.pdf", category: "guided-notes"') ||
@@ -866,7 +866,7 @@ function validateSharedCourseExperience() {
       !courseData.includes('id: "u2-201-follow-the-money-notes", title: "FOLLOW THE MONEY"') ||
       !courseData.includes('url: "assets/handouts/unit2/follow-the-money.pdf", category: "guided-notes"') ||
       !fs.existsSync(path.join(root, 'assets/handouts/unit2/follow-the-money.pdf')) ||
-      !courseData.includes('"2.01": [') ||
+      !courseData.includes('"2.1": [') ||
       !unit2Landing.includes('const lessonResources = unit.lessonResources?.[number] || []') ||
       !unit2Landing.includes('const groupTitle = resource.group || "Guided Notes & Practice"') ||
       !unit2Landing.includes('rowTitle.textContent = groupTitle.toUpperCase()') ||
@@ -879,7 +879,7 @@ function validateSharedCourseExperience() {
       !courseData.includes('note: "GUIDED NOTES · ANSWER KEY · 4 DIAGRAMS", group: "Guided Notes & Handouts"') ||
       unit2DetailRenderer.includes('unit-resource-concept-practice') ||
       !unit2Landing.includes('count.textContent = `${lessonResources.length} ${lessonResources.length === 1 ? "RESOURCE" : "RESOURCES"}`')) {
-    errors.push('The Unit 2.01 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
+    errors.push('The Unit 2.1 notes, slides, PDFs, and Congress in Four Frames answer key must appear as counted lesson resources.');
   }
   if (!courseData.includes('question: "How did the Constitution shape democracy—and what did it leave unresolved?"')) {
     errors.push('Unit 1 essential question is missing or incorrect.');
@@ -901,11 +901,11 @@ function validateSharedCourseExperience() {
   };
   Object.entries(unit101Resources).forEach(function ([resourceId, url]) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
-      errors.push('Unit 1.01 resource must be open with its assigned URL: ' + resourceId);
+      errors.push('Unit 1.1 resource must be open with its assigned URL: ' + resourceId);
     }
   });
-  if (!courseData.includes('id: "u1-101-democratic-ideals-review", lesson: "1.01 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html"')) {
-    errors.push('The Democratic Ideals Review card is missing from Unit 1.01.');
+  if (!courseData.includes('id: "u1-101-democratic-ideals-review", lesson: "1.1 — THE FOUNDING PROMISE", title: "DEMOCRATIC IDEALS REVIEW", note: "INTERACTIVE REVIEW", url: "https://wpr-creator.github.io/GOV/founding-ideals-review.html"')) {
+    errors.push('The Democratic Ideals Review card is missing from Unit 1.1.');
   }
   const unit102Resources = {
     'u1-102-democracy-filtered': 'democracy-filtered.html',
@@ -915,16 +915,16 @@ function validateSharedCourseExperience() {
   };
   Object.entries(unit102Resources).forEach(function ([resourceId, url]) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
-      errors.push('Unit 1.02 resource must remain open with its assigned URL: ' + resourceId);
+      errors.push('Unit 1.2 resource must remain open with its assigned URL: ' + resourceId);
     }
   });
-  if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.02 — DEMOCRACY, FILTERED", title: "1.02 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
-    errors.push('Unit 1.02 Guided Notes card is missing or has the wrong URL.');
+  if (!courseData.includes('id: "u1-102-guided-notes", lesson: "1.2 — DEMOCRACY, FILTERED", title: "1.2 GUIDED NOTES", note: "GUIDED NOTES", url: "' + unit102Resources['u1-102-guided-notes'] + '"')) {
+    errors.push('Unit 1.2 Guided Notes card is missing or has the wrong URL.');
   }
   if (!courseData.includes('id: "u1-concept-practice", lesson: "CONCEPT PRACTICE", title: "1.1–1.2 CONCEPT PRACTICE", note: "PRACTICE · IMMEDIATE FEEDBACK", category: "guided-notes", url: "unit1-concept-practice.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-concept-practice'] !== true ||
       parsedSiteContent.assignmentUrls['u1-concept-practice'] !== 'unit1-concept-practice.html') {
-    errors.push('The open Unit 1.01 + 1.02 Concept Practice card is missing or incorrect.');
+    errors.push('The open Unit 1.1 + 1.2 Concept Practice card is missing or incorrect.');
   }
   const unit103Resources = {
     'u1-103-history-lesson': 'history-lesson.html',
@@ -934,16 +934,16 @@ function validateSharedCourseExperience() {
   };
   Object.entries(unit103Resources).forEach(function ([resourceId, url]) {
     if (parsedSiteContent.assignmentUnlocks[resourceId] !== true || parsedSiteContent.assignmentUrls[resourceId] !== url) {
-      errors.push('Unit 1.03 resource must be open with its assigned URL: ' + resourceId);
+      errors.push('Unit 1.3 resource must be open with its assigned URL: ' + resourceId);
     }
   });
   [
-    'id: "u1-103-history-lesson", lesson: "1.03 — THE HISTORY LESSON"',
-    'id: "u1-103-guided-notes", lesson: "1.03 — THE HISTORY LESSON", title: "1.03 GUIDED NOTES"',
-    'id: "u1-103-articles", lesson: "1.03 — THE HISTORY LESSON"',
-    'id: "u1-103-constitution", lesson: "1.03 — THE HISTORY LESSON"',
-    'id: "u1-102-federalist-10", lesson: "1.02 — DEMOCRACY, FILTERED"',
-    'id: "u1-102-brutus-1", lesson: "1.02 — DEMOCRACY, FILTERED"'
+    'id: "u1-103-history-lesson", lesson: "1.3 — THE HISTORY LESSON"',
+    'id: "u1-103-guided-notes", lesson: "1.3 — THE HISTORY LESSON", title: "1.3 GUIDED NOTES"',
+    'id: "u1-103-articles", lesson: "1.3 — THE HISTORY LESSON"',
+    'id: "u1-103-constitution", lesson: "1.3 — THE HISTORY LESSON"',
+    'id: "u1-102-federalist-10", lesson: "1.2 — DEMOCRACY, FILTERED"',
+    'id: "u1-102-brutus-1", lesson: "1.2 — DEMOCRACY, FILTERED"'
   ].forEach(function (requiredCard) {
     if (!courseData.includes(requiredCard)) errors.push('Unit 1 lesson card is missing: ' + requiredCard);
   });
@@ -952,17 +952,17 @@ function validateSharedCourseExperience() {
       Object.prototype.hasOwnProperty.call(parsedSiteContent.assignmentUrls, 'u1-103-madison-brutus')) {
     errors.push('The Madison vs. Brutus activity card must remain removed from Unit 1.');
   }
-  if (!courseData.includes('id: "u1-104-changing-constitution", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html"') ||
+  if (!courseData.includes('id: "u1-104-changing-constitution", lesson: "1.4 — AMBITION CHECKS AMBITION", title: "ARTICLE V EXPLAINED", note: "INTERACTIVE ACTIVITY", category: "guided-notes", url: "changing-the-constitution.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-104-changing-constitution'] !== true ||
       parsedSiteContent.assignmentUrls['u1-104-changing-constitution'] !== 'changing-the-constitution.html' ||
-      !courseData.includes('id: "u1-104-guided-notes", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "1.04 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c"') ||
+      !courseData.includes('id: "u1-104-guided-notes", lesson: "1.4 — AMBITION CHECKS AMBITION", title: "1.4 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c"') ||
       parsedSiteContent.assignmentUnlocks['u1-104-guided-notes'] !== true ||
       parsedSiteContent.assignmentUrls['u1-104-guided-notes'] !== 'https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c' ||
-      !courseData.includes('id: "u1-104-federalist-51", lesson: "1.04 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", visualType: "foundational-text", url: "docs/federalist-51.html"') ||
+      !courseData.includes('id: "u1-104-federalist-51", lesson: "1.4 — AMBITION CHECKS AMBITION", title: "FEDERALIST NO. 51", note: "READ THE TEXT", category: "reading", visualType: "foundational-text", url: "docs/federalist-51.html"') ||
       parsedSiteContent.assignmentUnlocks['u1-104-federalist-51'] !== true ||
       parsedSiteContent.assignmentUrls['u1-104-federalist-51'] !== 'docs/federalist-51.html' ||
       courseData.includes('id: "u1-103-changing-constitution"')) {
-    errors.push('Lesson 1.04 must contain Article V Explained, locked Guided Notes, and Federalist No. 51.');
+    errors.push('Lesson 1.4 must contain Article V Explained, locked Guided Notes, and Federalist No. 51.');
   }
   if (!courseData.includes('id: "u1-103-history-lesson"') ||
       courseData.includes('homepageAction: true, url: "history-lesson.html"') ||
@@ -1026,7 +1026,7 @@ function validateSharedCourseExperience() {
   const historyPresenter = fs.readFileSync(path.join(root, 'history-presenter.html'), 'utf8');
   const historyPresenterScript = fs.readFileSync(path.join(root, 'history-presenter.js'), 'utf8');
   ['history-reader-data.js?v=20260910-compromises', 'history-presenter.css?v=20260910-opening-slides', 'history-presenter.js?v=20260910-opening-slides', 'slide-title', 'slide-big-idea', 'slide-key-points', 'fullscreen-button', 'slide-dots',
-    'LESSON 1.03', 'HOW MANY OF YOU HAVE STRICT PARENTS?', 'Now imagine moving away to <strong>SDSU</strong>.', 'total freedom feels amazing.',
+    'LESSON 1.3', 'HOW MANY OF YOU HAVE STRICT PARENTS?', 'Now imagine moving away to <strong>SDSU</strong>.', 'total freedom feels amazing.',
     'Would you move back home and accept your parents’ rules—or what would you do?', 'THINK · PAIR · SHARE', 'assets/history-lesson/statue-liberty-hook.png',
     'FROM ONE EXTREME TO ANOTHER', 'Total freedom sounded perfect—until having almost no rules created new problems.',
     'ARTICLES OF CONFEDERATION', 'CONSTITUTION AND RATIFICATION'].forEach(function (requiredText) {
@@ -1172,7 +1172,7 @@ function validateSharedCourseExperience() {
     errors.push('Topics 1.7–1.9 Concept Practice must keep all 37 assessment-aligned, randomized questions and remain open.');
   }
   const unit105GuidedNotesUrl = 'https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY/edit?usp=sharing';
-  if (!courseData.includes('id: "u1-105-guided-notes", lesson: "1.05 — ...BUT A COMPOSITION OF BOTH.", title: "1.05 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "' + unit105GuidedNotesUrl + '"') ||
+  if (!courseData.includes('id: "u1-105-guided-notes", lesson: "1.5 — ...BUT A COMPOSITION OF BOTH.", title: "1.5 GUIDED NOTES", note: "GUIDED NOTES", category: "guided-notes", url: "' + unit105GuidedNotesUrl + '"') ||
       parsedSiteContent.assignmentUnlocks['u1-105-guided-notes'] !== true ||
       parsedSiteContent.assignmentUrls['u1-105-guided-notes'] !== unit105GuidedNotesUrl) {
     errors.push('Topic 1.5 Guided Notes must remain open with its assigned Google Doc URL.');
@@ -1301,8 +1301,8 @@ function validateSharedCourseExperience() {
   const gettysburgReduxUrl = 'https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0';
   if (parsedSiteContent.assignmentUnlocks['u1-101-gettysburg-redux'] !== true ||
       parsedSiteContent.assignmentUrls['u1-101-gettysburg-redux'] !== gettysburgReduxUrl ||
-      !courseData.includes('id: "u1-101-gettysburg-redux", lesson: "1.01 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "' + gettysburgReduxUrl + '"')) {
-    errors.push('Gettysburg Redux must be open in Unit 1.01 with its assigned Google Doc URL.');
+      !courseData.includes('id: "u1-101-gettysburg-redux", lesson: "1.1 — THE FOUNDING PROMISE", title: "GETTYSBURG REDUX", note: "PROJECT", url: "' + gettysburgReduxUrl + '"')) {
+    errors.push('Gettysburg Redux must be open in Unit 1.1 with its assigned Google Doc URL.');
   }
   if (!fs.existsSync(path.join(root, 'docs/constitution-preamble.html')) ||
       !fs.readFileSync(path.join(root, 'docs/constitution-preamble.html'), 'utf8').includes('We the People')) {
@@ -1343,11 +1343,11 @@ function validateSharedCourseExperience() {
     });
   });
   const unitOneSlideDecks = {
-    'u1-101-slides': ['slides/unit-1/lesson-01/', '1.01 — THE FOUNDING PROMISE'],
-    'u1-102-slides': ['slides/unit-1/lesson-02/', '1.02 — DEMOCRACY, FILTERED'],
-    'u1-103-slides': ['slides/unit-1/lesson-03/', '1.03 — THE HISTORY LESSON'],
-    'u1-104-slides': ['slides/unit-1/lesson-04/', '1.04 — AMBITION CHECKS AMBITION'],
-    'u1-105-slides': ['slides/unit-1/lesson-05/', '1.05 — ...BUT A COMPOSITION OF BOTH.']
+    'u1-101-slides': ['slides/unit-1/lesson-01/', '1.1 — THE FOUNDING PROMISE'],
+    'u1-102-slides': ['slides/unit-1/lesson-02/', '1.2 — DEMOCRACY, FILTERED'],
+    'u1-103-slides': ['slides/unit-1/lesson-03/', '1.3 — THE HISTORY LESSON'],
+    'u1-104-slides': ['slides/unit-1/lesson-04/', '1.4 — AMBITION CHECKS AMBITION'],
+    'u1-105-slides': ['slides/unit-1/lesson-05/', '1.5 — ...BUT A COMPOSITION OF BOTH.']
   };
   Object.entries(unitOneSlideDecks).forEach(function ([resourceId, [url, lesson]]) {
     const deckRoot = path.join(root, url);
@@ -1366,7 +1366,7 @@ function validateSharedCourseExperience() {
     errors.push('The retired Unit 1 AP Classroom join card must remain removed.');
   }
   if (courseData.indexOf('id: "u1-101-democratic-ideals-review"') > courseData.indexOf('id: "u1-101-declaration"')) {
-    errors.push('The centered Democratic Ideals Review must remain first in lesson 1.01.');
+    errors.push('The centered Democratic Ideals Review must remain first in lesson 1.1.');
   }
   const proveCaseFiles = [
     'prove-your-case.html',

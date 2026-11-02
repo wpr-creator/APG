@@ -303,8 +303,8 @@
         const item = document.createElement("li");
         const group = document.createElement("details");
         group.className = "unit-resource-group unit-lesson-group";
-        group.id = number === "2.01" ? "unit2-concept-practice" : `lesson-${number}`;
-        group.open = id === "gov-2" && number === "2.02";
+        group.id = number === "2.1" ? "unit2-concept-practice" : `lesson-${number}`;
+        group.open = id === "gov-2" && number === "2.2";
         const summary = document.createElement("summary");
         summary.className = "unit-resource-summary";
         const heading = document.createElement("h2");

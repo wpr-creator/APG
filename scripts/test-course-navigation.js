@@ -71,7 +71,7 @@ assert(homeLinks.indexOf("GOOGLE CLASSROOM") < homeLinks.indexOf("AP CLASSROOM")
 const app = fs.readFileSync(path.join(root, "app.js"), "utf8");
 const start = app.indexOf('    const lessonAction = document.getElementById("current-lesson-action");');
 const end = app.indexOf("    renderSiteContent();", start);
-const lessonAction = { href: "history-lesson.html", hidden: false, textContent: "OPEN 1.03", removeAttribute(name) { delete this[name]; } };
+const lessonAction = { href: "history-lesson.html", hidden: false, textContent: "OPEN 1.3", removeAttribute(name) { delete this[name]; } };
 const elements = { "current-lesson-action": lessonAction };
 vm.runInNewContext(app.slice(start, end), { document: { getElementById: id => elements[id] } });
 assert.equal(elements["current-lesson-action"].hidden, true);
