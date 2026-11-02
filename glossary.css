@@ -1,0 +1,38 @@
+/* Course-wide glossary: canonical terms and definitions, editorial reading layout. */
+body.glossary-page{background:#f3f0e8!important;color:#183630!important}
+#words{max-width:1240px;margin:0 auto;padding-bottom:50px}
+#words .page-intro{padding:28px 0 27px;margin-bottom:27px;border-bottom:1px solid #cbc9bc}
+#words .page-intro .eyebrow{color:#a9442e;font:500 10px/1.5 'IBM Plex Mono',monospace;letter-spacing:.07em;margin:0 0 18px}
+#words .page-intro h1{font-family:'Newsreader',Georgia,serif!important;font-size:clamp(50px,6vw,82px);font-weight:500;line-height:1;letter-spacing:-.05em;color:#183630;text-transform:none!important;margin:0}
+#words .glossary-tools{padding:0;margin:0 0 25px;background:transparent;border:0;border-radius:0}
+#words .glossary-tools label{font-family:'Public Sans',Arial,sans-serif!important;font-size:14px;font-weight:500;letter-spacing:0;color:#183630;margin-bottom:9px}
+#words .glossary-tools input{display:block;max-width:700px;min-height:56px;padding:13px 16px;border:1px solid #a8b3a1;border-radius:0;background:#fffdf8;color:#183630;font:400 17px/1.5 'Public Sans',Arial,sans-serif;box-shadow:none}
+#words .glossary-tools input::placeholder{color:#64705f;opacity:1}
+#words .glossary-filters{gap:8px;margin-top:20px}
+#words .glossary-filters button,#words .glossary-branch-filters button{min-height:44px;padding:10px 15px;border:1px solid #cbc9bc;border-radius:0;background:transparent;color:#183630;font:500 10px/1.4 'IBM Plex Mono',monospace!important;letter-spacing:.035em;box-shadow:none;cursor:pointer}
+#words .glossary-filters button:hover,#words .glossary-branch-filters button:hover{border-color:#226d61;background:#e7ebdf}
+#words .glossary-filters button[aria-pressed="true"]{color:#f3f0e8;background:#183630;border-color:#183630}
+#words .glossary-branch-filters{padding-top:15px;margin-top:15px;border-top:1px solid #cbc9bc;gap:8px}
+#words .glossary-branch-filters>span{font:500 9px/1.5 'IBM Plex Mono',monospace!important;letter-spacing:.05em;color:#a9442e;margin-right:10px}
+#words .glossary-branch-filters button[aria-pressed="true"]{color:#183630;background:#e2e8d9;border-color:#9eaf95}
+#words .glossary-status{margin:18px 0 0;color:#56665f;font:400 12px/1.6 'Public Sans',Arial,sans-serif!important;letter-spacing:0;min-height:20px}
+#words .word-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:45px;row-gap:0}
+#words .word-card{position:relative;min-width:0;min-height:0;padding:25px 30px 28px 0;text-align:left;background:transparent;border:0;border-top:1px solid #cbc9bc;border-radius:0;cursor:pointer;box-shadow:none;transform:none;align-self:stretch}
+#words .word-card:hover{background:#e7ebdf66;box-shadow:none;transform:none}
+#words .word-card h2{font-family:'Newsreader',Georgia,serif!important;font-size:clamp(25px,2vw,31px);font-weight:500;line-height:1.15;letter-spacing:-.025em;text-transform:none!important;color:#183630;margin:0 0 11px;overflow-wrap:break-word;text-wrap:pretty}
+#words .word-card p{font-family:'Public Sans',Arial,sans-serif!important;font-size:16px;font-weight:400;line-height:1.7;color:#46584e;margin:0;overflow-wrap:break-word}
+#words .word-arrow{position:absolute;right:0;top:26px;font-size:20px;color:#226d61}
+#words .empty-state{grid-column:1/-1;padding:24px 0;color:#56665f;font-size:17px}
+#words :is(input,button):focus-visible,#word-dialog button:focus-visible{outline:3px solid #226d61;outline-offset:4px}
+#word-dialog{background:rgba(15,37,31,.65);padding:24px}
+#word-dialog .dialog-card{width:min(700px,100%);max-height:calc(100dvh - 48px);overflow:auto;padding:38px;background:#f3f0e8;border:1px solid #cbc9bc;border-radius:0;box-shadow:0 20px 70px #10271f33}
+#word-dialog .dialog-close{top:14px;right:14px;min-width:44px;min-height:44px;color:#183630;background:transparent;border:1px solid #cbc9bc;border-radius:0}
+#word-dialog .eyebrow{color:#a9442e;font:500 10px/1.5 'IBM Plex Mono',monospace!important;letter-spacing:.07em;margin:0 0 22px;text-transform:uppercase}
+#word-dialog #dialog-term{font-family:'Newsreader',Georgia,serif!important;font-size:clamp(32px,4vw,46px);font-weight:500;line-height:1.1;letter-spacing:-.035em;text-transform:none!important;color:#183630;margin:0 35px 22px 0;overflow-wrap:break-word}
+#word-dialog #dialog-definition{font-family:'Public Sans',Arial,sans-serif!important;font-size:18px;font-weight:400;line-height:1.75;color:#183630}
+#word-dialog .example-box{background:transparent;border:0;border-top:1px solid #cbc9bc;border-radius:0;margin-top:28px;padding:20px 0 0;color:#56665f}
+#word-dialog .example-box strong{font:500 11px 'IBM Plex Mono',monospace!important;letter-spacing:.04em;text-transform:uppercase;color:#a9442e}
+#word-dialog #dialog-example{font-size:14px;line-height:1.6;margin-top:10px;font-weight:400}
+@media(max-width:800px){#words .word-grid{grid-template-columns:1fr}#words .glossary-branch-filters>span{width:100%}#word-dialog .dialog-card{padding:28px}#words .page-intro{padding-top:20px}}
+@media(max-width:450px){#words .glossary-filters button,#words .glossary-branch-filters button{padding:10px 12px;font-size:9px!important}#word-dialog{padding:15px}#word-dialog .dialog-card{padding:25px}#word-dialog #dialog-definition{font-size:17px}}
+@media print{#words .glossary-tools,#words .word-arrow{display:none}#words .word-grid{grid-template-columns:1fr 1fr;gap:20px}#words .word-card{break-inside:avoid}#words .word-card p{font-size:12px}}

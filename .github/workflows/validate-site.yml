@@ -28,6 +28,9 @@ jobs:
       - name: Test canonical course entry
         run: node scripts/test-course-entry.js
 
+      - name: Test glossary presentation
+        run: node scripts/test-glossary-presentation.js
+
       - name: Test course navigation
         run: node scripts/test-course-navigation.js
 

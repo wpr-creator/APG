@@ -150,6 +150,7 @@
   function showView(name) {
     const isUnit = data.units.some(unit => unit.id === name);
     const viewName = isUnit ? "unit-detail" : name;
+    document.body.classList.toggle("glossary-page", viewName === "words");
     views.forEach(view => { view.hidden = view.dataset.view !== viewName; });
     document.querySelectorAll("[data-view-link]").forEach(link => {
       const active = link.dataset.viewLink === (viewName === "unit-detail" ? "units" : viewName);
@@ -618,8 +619,9 @@
       const button = document.createElement("button");
       button.type = "button";
       button.className = "word-card";
-      button.innerHTML = `<h2></h2><p></p>`;
-      button.querySelector("h2").textContent = word[0].toUpperCase();
+      button.innerHTML = `<h2></h2><p></p><span class="word-arrow" aria-hidden="true">↗</span>`;
+      button.setAttribute("aria-haspopup", "dialog");
+      button.querySelector("h2").textContent = word[0];
       button.querySelector("p").textContent = glossaryDefinition(word);
       button.addEventListener("click", () => openWord(word, button));
       wordGrid.appendChild(button);
@@ -630,7 +632,7 @@
     const scope = glossaryFilter === "all" ? "ALL TERMS" :
       glossaryFilter === "gov-2" && glossaryBranchFilter !== "all" ? `UNIT 2 · ${branchButton?.textContent || "SELECTED BRANCH"}` :
       selectedFilter?.textContent || "SELECTED UNIT";
-    status.textContent = `${matches.length} ${matches.length === 1 ? "TERM" : "TERMS"} SHOWN · ${scope}`;
+    status.textContent = `${matches.length} ${matches.length === 1 ? "term" : "terms"} shown · ${scope}`;
     document.querySelectorAll("[data-glossary-filter]").forEach(button => {
       button.setAttribute("aria-pressed", String(button.dataset.glossaryFilter === glossaryFilter));
     });
@@ -640,7 +642,7 @@
     if (!matches.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "NO MATCH YET. TRY A SHORTER WORD OR CHOOSE ANOTHER UNIT.";
+      empty.textContent = "No matching terms. Try a shorter search or choose another unit.";
       wordGrid.appendChild(empty);
     }
   }
@@ -2026,7 +2028,7 @@
 
   function openWord(word, source) {
     lastFocused = source;
-    document.getElementById("dialog-term").textContent = word[0].toUpperCase();
+    document.getElementById("dialog-term").textContent = word[0];
     document.getElementById("dialog-definition").textContent = glossaryDefinition(word);
     document.getElementById("dialog-example").textContent = word[3];
     dialog.hidden = false;
