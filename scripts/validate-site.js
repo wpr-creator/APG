@@ -158,9 +158,9 @@ function validateSocialMetadata() {
   required.forEach(function (fragment) {
     if (!html.includes(fragment)) errors.push('Missing social metadata: ' + fragment);
   });
-  const socialImage = path.join(root, 'images', 'ap-government-social-card.png');
+  const socialImage = path.join(root, 'images', 'ap-government-social-card-2026.png');
   if (!fs.existsSync(socialImage) || fs.statSync(socialImage).size === 0) {
-    errors.push('Missing social-sharing image: images/ap-government-social-card.png');
+    errors.push('Missing social-sharing image: images/ap-government-social-card-2026.png');
   }
 }
 
@@ -205,7 +205,7 @@ function validateAccessibilityAndHygiene() {
   });
 
   const assetBudgets = {
-    'images/ap-government-social-card.png': 1000000,
+    'images/ap-government-social-card-2026.png': 1000000,
     'assets/assignments/presidential-yearbook-color-example.png': 1900000,
     'assets/assignments/presidential-yearbook-word-example.png': 1650000
   };
