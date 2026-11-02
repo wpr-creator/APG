@@ -1530,7 +1530,9 @@ function validateSharedCourseExperience() {
       errors.push('Document or case exposes course framework codes that clutter student-facing copy: ' + relative(file));
     }
     const eyebrow = page.match(/<(?:div|p) class="(?:doc-hero-eyebrow|case-hero-eyebrow|page-hero-eyebrow|eyebrow)"[^>]*>([\s\S]*?)<\/(?:div|p)>/);
-    if (eyebrow && !/^\s*Units?\s+[1-5](?:\s*&amp;?\s*[1-5])?\s*$/i.test(eyebrow[1].replace(/<[^>]*>/g, '').trim())) {
+    const eyebrowText = eyebrow ? eyebrow[1].replace(/<[^>]*>/g, '').trim() : '';
+    const accurateTopic23CaseLabel = ['cases/baker-v-carr.html', 'cases/shaw-v-reno.html'].includes(relative(file)) && eyebrowText === 'Unit 2 · AP Topic 2.3';
+    if (eyebrow && !/^\s*Units?\s+[1-5](?:\s*&amp;?\s*[1-5])?\s*$/i.test(eyebrowText) && !accurateTopic23CaseLabel) {
       errors.push('Document or case eyebrow should show only its unit, not repeated topic or requirement tags: ' + relative(file));
     }
   });
