@@ -235,3 +235,10 @@ window.COURSE_DATA = {
     ["Reasoning", "R", "The explanation connecting evidence to a claim.", "Reasoning explains why the evidence proves the argument.", "gov-0"]
   ]
 };
+
+// Canonical Unit 1 lesson navigation; resource URLs remain in the unit resource list.
+(() => {
+  const unit = window.COURSE_DATA.units.find(unit => unit.id === "gov-1");
+  unit.lessonTitles = [["1.1", "The founding promise"], ["1.2", "Democracy, filtered"], ["1.3", "The history lesson"], ["1.4", "Ambition checks ambition"], ["1.5", "…but a composition of both."]];
+  unit.lessonResources = Object.fromEntries(unit.lessonTitles.map(([number]) => [number, unit.resources.filter(resource => resource.lesson.startsWith(number + " —"))]));
+})();

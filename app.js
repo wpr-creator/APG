@@ -166,6 +166,10 @@
   function route() {
     const routeName = location.hash.slice(1) || "home";
     const requestedLesson = new URL(location.href).searchParams.get("lesson");
+    if (routeName === "gov-1") {
+      const number = requestedLesson?.match(/^lesson-1\.0?([1-5])$/)?.[1] || requestedLesson?.match(/^lesson-u1-10([1-5])-/)?.[1];
+      if (number || !requestedLesson) { location.replace(number ? `lesson-1-${number}.html` : "unit1.html"); return; }
+    }
     const canonical = routeName === "home" ? "index.html" : routeName === "units" ? "units.html" : routeName === "gov-2" && ["unit2-concept-practice","lesson-2.1","lesson-2.01"].includes(requestedLesson) ? "lesson-2-1.html" : routeName === "gov-2" && ["lesson-2.2","lesson-2.02"].includes(requestedLesson) ? "lesson-2-2.html" : routeName === "gov-2" && !requestedLesson ? "unit2.html" : null;
     if (canonical) { location.replace(canonical); return; }
     if (["agenda", "help"].includes(routeName)) {

@@ -14,7 +14,7 @@
     if (skip) document.body.prepend(skip);
   }
   header.querySelectorAll('.preview-exit').forEach(link => { link.href = new URL('exit-ticket.html',root).href; });
-  const routes = {'index.html':'Home','units.html':'Units','unit2.html':'Units','lesson-2-2.html':'Current lesson','lesson-2-1.html':'Lesson'};
+  const routes = {'index.html':'Home','units.html':'Units','unit1.html':'Units','unit2.html':'Units','lesson-2-2.html':'Current lesson','lesson-2-1.html':'Lesson'};
   const filename = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.preview-nav a').forEach(link => {
     if (routes[filename] === 'Units' && new URL(link.href,location.href).pathname.endsWith('/units.html')) link.setAttribute('aria-current','page');
@@ -32,13 +32,13 @@
       const saved = JSON.parse(sessionStorage.getItem('apg-return-lesson') || 'null');
       if (saved?.destination === location.pathname && /^gov-[0-5]$/.test(saved.unit)) {
         const sourceUnit = window.COURSE_DATA?.units.find(item => item.id === saved.unit);
-        const number = saved.lesson === 'unit2-concept-practice' ? '2.1' : saved.lesson?.replace(/^lesson-/, '');
+        const number = saved.unit === 'gov-1' && /^lesson-u1-10[1-5]-/.test(saved.lesson) ? '1.' + saved.lesson.match(/^lesson-u1-10([1-5])-/)[1] : saved.lesson === 'unit2-concept-practice' ? '2.1' : saved.lesson?.replace(/^lesson-/, '');
         const sourceLesson = sourceUnit?.lessonTitles?.find(item => item[0] === number);
         const sourceResource = sourceUnit?.resources?.find(item => 'lesson-' + item.id === saved.lesson);
         if (sourceLesson || sourceResource) {
           unit = sourceUnit; lesson = sourceLesson || [saved.lesson,sourceResource.lesson];
           contextLabel = 'BACK TO LESSON';
-          contextDestination = sourceLesson?.[0] === '2.1' ? 'lesson-2-1.html' : sourceLesson?.[0] === '2.2' ? 'lesson-2-2.html' : 'index.html?lesson=' + encodeURIComponent(saved.lesson) + '#' + saved.unit;
+          contextDestination = sourceUnit.id === 'gov-1' && sourceLesson ? 'lesson-' + sourceLesson[0].replace('.', '-') + '.html' : sourceLesson?.[0] === '2.1' ? 'lesson-2-1.html' : sourceLesson?.[0] === '2.2' ? 'lesson-2-2.html' : 'index.html?lesson=' + encodeURIComponent(saved.lesson) + '#' + saved.unit;
         }
       }
     } catch (_) {}
@@ -46,7 +46,7 @@
     if (!current) return;
     if (!lesson) { current.hidden = true; return; }
     current.querySelector('small').textContent = contextLabel;
-    const destination = contextDestination || (lesson[0] === '2.2' ? 'lesson-2-2.html' : lesson[0] === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent('lesson-' + lesson[0]) + '#' + unit.id);
+    const destination = contextDestination || (unit.id === 'gov-1' ? 'lesson-' + lesson[0].replace('.', '-') + '.html' : lesson[0] === '2.2' ? 'lesson-2-2.html' : lesson[0] === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent('lesson-' + lesson[0]) + '#' + unit.id);
     current.href = new URL(destination,root).href;
     current.hidden = false;
     const title = current.querySelector('span'); title.textContent = (lesson[0].startsWith('lesson-') ? lesson[1] : lesson[0] + ' · ' + lesson[1]) + ' ↗';

@@ -79,3 +79,5 @@ Use `course-data.js` for lesson titles and resource records, and `site-content.j
 All course pages load `course-header.js` and `course-header.css`. Exported slide decks keep their presentation layout. `exit-ticket.html` leads to the existing form in `course-tools.html`; `exit-ticket.css` changes its layout without changing its question, field IDs, or submission logic.
 
 Exit tickets are course-wide and change independently of lessons. Keep access in the shared header and homepage; do not put exit-ticket cards, questions, or links within individual lesson content.
+
+Unit 1 uses `unit1.html` and `lesson-1-1.html` through `lesson-1-5.html` for student navigation. Its former overview is preserved at `unit1-reference.html`, including original section anchors. The canonical lesson names come from `course-data.js`; lesson pages preserve existing notes/slides URLs and do not infer essential questions. Exit tickets remain course-wide.
