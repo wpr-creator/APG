@@ -71,10 +71,20 @@ for(const [number] of unit1.lessonTitles){
   assert(html.includes('data-resource-id="'+resource.id+'"'),resource.id+' must remain accessible in its lesson');
   assert(html.includes(resource.url.replaceAll('&','&amp;')),resource.id+' must retain its source URL');
  }
- assert(!html.includes('ESSENTIAL QUESTION'),'Do not infer Unit 1 EQs from lesson titles.');
+ assert(!html.includes('Your lesson materials, ready for class.'),'Remove lesson filler text.');
 }
 const unit1Page=fs.readFileSync(path.join(root,'unit1.html'),'utf8');
 for(const resource of unit1.resources.filter(item=>item.lesson==='CONCEPT PRACTICE'))assert(unit1Page.includes(resource.id));
 const archive=fs.readFileSync(path.join(root,'unit1-reference.html'),'utf8');
 for(const anchor of ['concepts','documents','amendments','examguide','frq'])assert(archive.includes('id="'+anchor+'"'));
 console.log('Unit 1 migration tests passed: all lesson resources, practice sets, archived references, and legacy lesson routes preserved.');
+
+const essentialQuestions=JSON.parse(fs.readFileSync(path.join(root,'lesson-essential-questions.json'),'utf8'));
+for(const [number,source] of Object.entries(essentialQuestions)){
+ const html=fs.readFileSync(path.join(root,'lesson-'+number.replace('.','-')+'.html'),'utf8');
+ assert(html.includes('<p class="eq">'+source.question+'</p>'),number+' must show its exact guided-notes EQ.');
+ assert(html.indexOf('<p class="eq">')>html.indexOf('<h1'),number+' EQ must follow the lesson title.');
+ assert(html.indexOf('<p class="eq">')<html.indexOf('<nav class="primary-materials"'),number+' EQ must be in the opening.');
+ assert(html.includes(source.source),number+' must retain its source notes link.');
+}
+console.log('All seven lesson pages show source-verified essential questions beneath their titles.');

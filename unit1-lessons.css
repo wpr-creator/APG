@@ -1,5 +1,4 @@
 body[data-unit="gov-1"] .opening h1{font-size:clamp(52px,6.3vw,88px);line-height:1;letter-spacing:-.05em}
-.lesson-material-note{margin-top:25px;font-size:16px;color:var(--muted)}
 body[data-unit="gov-1"] .activity-links{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:26px}
 body[data-unit="gov-1"] .activity-links>a{min-height:150px;border:0;border-bottom:1px solid var(--line);padding-bottom:38px}
 body[data-unit="gov-1"] .resource-type{font-size:9px;line-height:1.6}
