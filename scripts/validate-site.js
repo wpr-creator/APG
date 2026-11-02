@@ -288,7 +288,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-lesson-navigation',
+    'app.js?v=20261102-resource-groups',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1078,7 +1078,7 @@ function validateSharedCourseExperience() {
   }
   const unitResourceAppCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const unitResourceStyles = fs.readFileSync(path.join(root, 'styles.css'), 'utf8');
-  ['ASSESSMENTS', 'ASSIGNMENTS & PROJECTS', 'GUIDED NOTES & PRACTICE', 'READINGS & RESOURCES'].forEach(function (rowLabel) {
+  ['NOTES & HANDOUTS', 'LESSON SLIDES', 'ACTIVITIES & PROJECTS', 'READINGS & CASES', 'PRACTICE', 'ASSESSMENTS'].forEach(function (rowLabel) {
     if (!unitResourceAppCode.includes(`label: "${rowLabel}"`)) errors.push('Lesson resource row is missing: ' + rowLabel);
   });
   if (!unitResourceAppCode.includes('if (!categoryResources.length) return;') ||

@@ -465,10 +465,12 @@
         groupSummary.append(lessonTitle, lessonCount);
         group.appendChild(groupSummary);
         const categories = [
-          { key: "assessment", label: "ASSESSMENTS" },
-          { key: "assignment", label: "ASSIGNMENTS & PROJECTS" },
-          { key: "guided-notes", label: "GUIDED NOTES & PRACTICE" },
-          { key: "reading", label: "READINGS & RESOURCES" }
+          { key: "guided-notes", label: "NOTES & HANDOUTS" },
+          { key: "slides", label: "LESSON SLIDES" },
+          { key: "assignment", label: "ACTIVITIES & PROJECTS" },
+          { key: "reading", label: "READINGS & CASES" },
+          { key: "practice", label: "PRACTICE" },
+          { key: "assessment", label: "ASSESSMENTS" }
         ];
         const categorizedResources = new Map(categories.map(category => [category.key, []]));
         lessonResources.forEach(resource => {
@@ -477,6 +479,10 @@
           if (!resource.category && (lesson === "ASSESSMENTS" || resourceType.includes("ASSESSMENT") || resourceType.includes("TEST"))) category = "assessment";
           else if (!resource.category && (resourceType.includes("GUIDED NOTES") || resourceType.includes("PRACTICE") || resourceType.includes("REVIEW"))) category = "guided-notes";
           else if (!resource.category && (resourceType.includes("ASSIGNMENT") || resourceType.includes("PROJECT") || resourceType.includes("INTERACTIVE"))) category = "assignment";
+          // Separate teaching materials from practice even when older data groups both as notes.
+          if (lesson === "CONCEPT PRACTICE" || /CONCEPT.PRACTICE/.test(resource.id) || resourceType.includes("PRACTICE") || resourceType.includes("REVIEW")) category = "practice";
+          if (/LESSON SLIDES/.test(resource.title) || resourceType.includes("SLIDE REVIEW")) category = "slides";
+          else if (category === "guided-notes" && resourceType.includes("INTERACTIVE")) category = "assignment";
           categorizedResources.get(category).push(resource);
         });
         categories.forEach(category => {
