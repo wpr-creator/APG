@@ -939,47 +939,68 @@
     }
   }
 
-  function renderDocuments() {
-    const grid = document.getElementById("document-grid");
+  function renderLibraryGroups(grid, groups, items, kind) {
     grid.replaceChildren();
-    foundations.documents.forEach(documentData => {
-      const card = document.createElement("a");
-      card.className = "document-card document-card-link";
-      card.href = documentData.file;
-      const meta = document.createElement("p");
-      meta.className = "document-meta";
-      meta.textContent = `${documentData.year} · ${documentData.author}`;
+    groups.forEach(([label, description, matches], index) => {
+      const entries = items.filter(matches);
+      if (!entries.length) return;
+      const section = document.createElement("section");
+      section.className = "library-collection";
+      const heading = document.createElement("div");
+      heading.className = "library-collection-heading";
+      const number = document.createElement("p");
+      number.className = "library-collection-number";
+      number.textContent = `0${index + 1} / ${entries.length} ${kind === "document" ? "READINGS" : "CASES"}`;
       const title = document.createElement("h3");
-      title.textContent = documentData.title;
-      const idea = document.createElement("p");
-      idea.textContent = documentData.bigIdea;
-      const action = document.createElement("strong");
-      action.className = "document-card-action";
-      action.textContent = "READ DOCUMENT →";
-      card.append(meta, title, idea, action);
-      grid.appendChild(card);
+      title.textContent = label;
+      const note = document.createElement("p");
+      note.textContent = description;
+      heading.append(number, title, note);
+      const cards = document.createElement("div");
+      cards.className = "library-collection-cards";
+      entries.forEach(item => {
+        const card = document.createElement("a");
+        card.className = "library-resource";
+        card.href = item.file;
+        const meta = document.createElement("span");
+        meta.className = "library-resource-year";
+        meta.textContent = item.year;
+        const name = document.createElement("h4");
+        name.textContent = item.title;
+        const bottom = document.createElement("span");
+        bottom.className = "library-resource-bottom";
+        const context = document.createElement("span");
+        context.textContent = kind === "document" ? item.author : item.tag;
+        const arrow = document.createElement("span");
+        arrow.textContent = "↗";
+        arrow.setAttribute("aria-hidden", "true");
+        bottom.append(context, arrow);
+        card.append(meta, name, bottom);
+        cards.appendChild(card);
+      });
+      section.append(heading, cards);
+      grid.appendChild(section);
     });
   }
 
+  function renderDocuments() {
+    const founding = ["declaration", "articles", "constitution", "fed10", "brutus1"];
+    const design = ["fed39", "fed51", "fed70", "fed78"];
+    renderLibraryGroups(document.getElementById("document-grid"), [
+      ["Founding the republic", "Independence, the Constitution, and the debate over ratification.", item => founding.includes(item.id)],
+      ["Designing government", "Federalism, checks and balances, the presidency, and the courts.", item => design.includes(item.id)],
+      ["Rights, freedom, and the economy", "Readings on liberty, equality, civil rights, and markets.", item => !founding.includes(item.id) && !design.includes(item.id)]
+    ], foundations.documents, "document");
+  }
+
   function renderRequiredCases() {
-    const grid = document.getElementById("foundation-case-grid");
-    grid.replaceChildren();
-    (window.REQUIRED_CASES || []).forEach(caseData => {
-      const card = document.createElement("article");
-      card.className = "case-foundation-card";
-      const meta = document.createElement("p");
-      meta.className = "document-meta";
-      meta.textContent = `UNIT ${caseData.unit} · ${caseData.year} · ${caseData.tag}`;
-      const title = document.createElement("h3");
-      title.textContent = caseData.title;
-      const question = document.createElement("p");
-      question.textContent = caseData.question;
-      const link = document.createElement("a");
-      link.href = caseData.file;
-      link.textContent = "OPEN CASE GUIDE →";
-      card.append(meta, title, question, link);
-      grid.appendChild(card);
-    });
+    const power = ["marbury", "mcculloch", "lopez"];
+    const representation = ["baker", "shaw", "citizens-united"];
+    renderLibraryGroups(document.getElementById("foundation-case-grid"), [
+      ["Government power", "The authority of Congress, the courts, and the national government.", item => power.includes(item.id)],
+      ["Rights and liberties", "Speech, religion, equal protection, and the rights of the accused.", item => !power.includes(item.id) && !representation.includes(item.id)],
+      ["Representation and elections", "District lines, equal protection, and political spending.", item => representation.includes(item.id)]
+    ], window.REQUIRED_CASES || [], "case");
   }
 
   function openDocument(documentData, source) {

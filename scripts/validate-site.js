@@ -291,7 +291,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-library',
+    'app.js?v=20261102-collections',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -509,9 +509,9 @@ function validateSharedCourseExperience() {
       amendmentFilterCode.includes('currentUnitId') || amendmentFilterCode.includes('"current"') ||
       !amendmentFilterCode.includes('["all", "ALL 27"]') ||
       documentRenderCode.includes('foundations.documents.filter') ||
-      !documentRenderCode.includes('foundations.documents.forEach') ||
+      !documentRenderCode.includes('], foundations.documents, "document");') ||
       caseRenderCode.includes('REQUIRED_CASES || []).filter') ||
-      !caseRenderCode.includes('(window.REQUIRED_CASES || []).forEach')) {
+      !caseRenderCode.includes('], window.REQUIRED_CASES || [], "case");')) {
     errors.push('Foundations must show all documents, required cases, and all amendments by default—not only the current unit.');
   }
   const studentInterface = [
@@ -1594,7 +1594,7 @@ function validateSharedCourseExperience() {
       (declarationReader.match(/class="support"/g) || []).length < 8) {
     errors.push('The Declaration must use plain original text while retaining its side annotations.');
   }
-  if (!appCode.includes('card.href = documentData.file') ||
+  if (!appCode.includes('card.href = item.file') ||
       !appCode.includes('link.href = documentData.file') ||
       appCode.includes('button.addEventListener("click", () => openDocument(documentData, button))')) {
     errors.push('Foundational document cards must open the full reading page directly.');
