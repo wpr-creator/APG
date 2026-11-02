@@ -20,6 +20,7 @@
         } catch (_) {}
       }
     }, true);
+    if (document.querySelector(".preview-header")) return;
     const homeHeader = document.querySelector(".site-header");
     if (homeHeader) {
       homeHeader.classList.add("apg-shared-header");

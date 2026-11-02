@@ -14,7 +14,7 @@
       if (!resources.length) { upcoming.push([number,title]); return; }
       const link = document.createElement('a');
       link.className = 'lesson-row' + (settings.currentLesson === number ? ' available' : '');
-      link.href = number === '2.2' ? 'lesson-2-2.html' : 'course-tools.html?lesson=' + encodeURIComponent(number === '2.1' ? 'unit2-concept-practice' : 'lesson-' + number) + '#gov-2';
+      link.href = number === '2.2' ? 'lesson-2-2.html' : number === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent(number === '2.1' ? 'unit2-concept-practice' : 'lesson-' + number) + '#gov-2';
       const label = document.createElement('span'); label.className='lesson-no'; label.textContent=number;
       const copy = document.createElement('div'); const heading=document.createElement('h3');heading.textContent=title;
       const count=document.createElement('p');count.textContent=resources.length+' resources';copy.append(heading,count);

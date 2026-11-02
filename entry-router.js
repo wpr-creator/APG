@@ -6,6 +6,7 @@
   let destination;
   if (route === 'units') destination = new URL('units.html', url);
   else if (route === 'gov-2' && (lesson === 'lesson-2.2' || lesson === 'lesson-2.02')) destination = new URL('lesson-2-2.html', url);
+  else if (route === 'gov-2' && ['unit2-concept-practice','lesson-2.1','lesson-2.01'].includes(lesson)) destination = new URL('lesson-2-1.html', url);
   else if (route === 'gov-2' && !lesson) destination = new URL('unit2.html', url);
   else if (route && !['home','main'].includes(route)) destination = new URL('course-tools.html' + url.search + url.hash, url);
   if (destination) location.replace(destination.href);

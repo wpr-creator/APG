@@ -72,6 +72,8 @@ Pull the latest `main`, make the requested change, run `node scripts/validate-si
 
 ## Course entry pages
 
-The active course starts at `index.html`, with `units.html`, `unit2.html`, and `lesson-2-2.html` as the approved editorial layouts. `course-tools.html` retains the interactive glossary, foundations, voter guide, exit-ticket form, and other existing activities. `entry-router.js` preserves old index hash bookmarks and lesson query links. Historical design-preview URLs redirect to their canonical pages. `unit2-reference.html` preserves the older standalone Unit 2 reference.
+The active course starts at `index.html`, with `units.html`, `unit2.html`, `lesson-2-1.html`, and `lesson-2-2.html` as the approved editorial layouts. `course-tools.html` retains the interactive glossary, foundations, voter guide, exit-ticket form, and other existing activities. `entry-router.js` preserves old index hash bookmarks and lesson query links. Historical design-preview URLs redirect to their canonical pages. `unit2-reference.html` preserves the older standalone Unit 2 reference.
 
 Use `course-data.js` for lesson titles and resource records, and `site-content.json` for availability, resource URL overrides, and the current unit and lesson. Keep lesson pages focused on finding materials. Essential questions must be copied exactly from the teacher’s guided notes; do not invent lesson explanations or scope. The current shared header uses the Capitol mark and includes the current lesson and Exit Ticket.
+
+All course pages load `course-header.js` and `course-header.css`. Exported slide decks keep their presentation layout. `exit-ticket.html` leads to the existing form in `course-tools.html`; `exit-ticket.css` changes its layout without changing its question, field IDs, or submission logic.

@@ -253,7 +253,7 @@ function validateSharedCourseExperience() {
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
     if (/http-equiv=["']refresh/i.test(html)) return;
-    const isEditorialPage = ['index.html','units.html','unit2.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css');
+    const isEditorialPage = ['index.html','units.html','unit2.html','lesson-2-1.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css');
     const isNewShell = ['index.html', 'course-tools.html'].includes(relative(file)) && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
@@ -275,7 +275,7 @@ function validateSharedCourseExperience() {
   });
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit2.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
+    if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit2.html','lesson-2-1.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
     if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
@@ -291,7 +291,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-canonical-pages',
+    'app.js?v=20261102-lesson21',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1523,7 +1523,7 @@ function validateSharedCourseExperience() {
   REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
     if (!page.includes('nav-render.js?v=20260929-clean-guides') ||
-        !page.includes('course-shell.js?v=20261102-lesson-navigation')) {
+        !page.includes('course-shell.js?v=20261102-universal')) {
       errors.push('Document or case cannot load shared course navigation: ' + relative(file));
     }
     if (page.includes('data-required.js') || /AP ADDENDUM SUMMARY|addAddendumSummary\(|class="(?:doc|case|page)-hero-tags"|class="reading-path"|doc-margin-tag|doc-annotation-tags|doc-annotation-tag/.test(page)) {

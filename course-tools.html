@@ -35,12 +35,12 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20261007-case-summary-audit" defer></script>
-  <script src="app.js?v=20261102-canonical-pages" defer></script>
+  <script src="app.js?v=20261102-lesson21" defer></script>
 <link rel="stylesheet" href="course-shell.css?v=20260926-editorial-typography">
-<script src="course-shell.js?v=20261102-lesson-navigation" defer></script>
+<script src="course-shell.js?v=20261102-universal" defer></script>
 <link rel="stylesheet" href="styles-design-system.css?v=20260929-home-editorial-system">
 <link rel="stylesheet" href="voter-guide.css?v=20261102-student-ballot-cta">
-</head>
+<link rel="stylesheet" href="exit-ticket.css?v=20261102"><link rel="stylesheet" href="course-header.css?v=20261102-universal"><script src="course-header.js?v=20261102-universal" defer></script></head>
 <body>
   <a class="skip-link" href="#main">Skip to the course</a>
 
@@ -166,19 +166,19 @@
 
     <section class="view exit-ticket-view" id="exit-ticket" data-view="exit-ticket" hidden>
       <header class="exit-page-header">
-        <div><p class="eyebrow">END OF CLASS</p><h1>EXIT TICKET</h1></div>
+        <div><p class="eyebrow">END OF CLASS</p><h1>Exit ticket</h1></div>
         <span class="exit-page-number" aria-hidden="true">✎</span>
       </header>
       <article class="dashboard-card exit-card">
-        <div class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</div>
+        <section class="exit-prompt-panel" aria-labelledby="exit-question-title"><h2 id="exit-question-title">Your question</h2><div class="exit-question" id="exit-question">NO EXIT TICKET TODAY.</div></section>
         <form id="exit-ticket-form" class="exit-form" hidden>
-          <div class="exit-form-heading"><h2>YOUR RESPONSE</h2></div>
+          <div class="exit-form-heading"><h2>Your response</h2></div>
           <div class="exit-identity">
-            <label for="exit-period">CLASS PERIOD<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
-            <label for="exit-student">YOUR NAME<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
+            <label for="exit-period">Class period<select id="exit-period" required><option value="">CHOOSE YOUR PERIOD</option></select></label>
+            <label for="exit-student">Your name<select id="exit-student" required disabled><option value="">CHOOSE YOUR PERIOD FIRST</option></select></label>
           </div>
-          <label for="exit-response">YOUR RESPONSE</label>
-          <textarea id="exit-response" rows="5" placeholder="TYPE YOUR RESPONSE…" required minlength="5"></textarea>
+          <label for="exit-response">Your response</label>
+          <textarea id="exit-response" rows="5" placeholder="Write your response here…" required minlength="5"></textarea>
           <button class="exit-submit" type="submit" disabled>SUBMIT EXIT TICKET <span aria-hidden="true">→</span></button>
         </form>
         <figure class="exit-ticket-success" id="exit-ticket-success" hidden>
