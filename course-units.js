@@ -14,7 +14,7 @@
       if (available) {
         const link = document.createElement('a');
         link.className = 'unit-card' + (current ? ' current' : '');
-        link.href = unit.id === 'gov-2' ? 'unit2-design-preview.html' : 'index.html#' + unit.id;
+        link.href = unit.id === 'gov-2' ? 'unit2.html' : 'index.html#' + unit.id;
         const top = document.createElement('div'); top.className = 'unit-card-top';
         const label = document.createElement('span'); label.className = 'unit-number'; label.textContent = 'UNIT ' + number;
         const state = document.createElement('span'); state.className = 'unit-status'; state.textContent = current ? 'CURRENT UNIT' : 'OPEN';
@@ -39,6 +39,6 @@
     });
   } catch (_) {
     open.replaceChildren();
-    const link = document.createElement('a'); link.href = 'index.html#units'; link.textContent = 'Open the course unit list →'; open.appendChild(link);
+    const link = document.createElement('a'); link.href = 'index.html'; link.textContent = 'Course availability could not load. Return to course home →'; open.appendChild(link);
   }
 })();

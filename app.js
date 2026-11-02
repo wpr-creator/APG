@@ -164,6 +164,9 @@
 
   function route() {
     const routeName = location.hash.slice(1) || "home";
+    const requestedLesson = new URL(location.href).searchParams.get("lesson");
+    const canonical = routeName === "home" ? "index.html" : routeName === "units" ? "units.html" : routeName === "gov-2" && !requestedLesson ? "unit2.html" : null;
+    if (canonical) { location.replace(canonical); return; }
     if (["agenda", "help"].includes(routeName)) {
       location.hash = "home";
       return;
@@ -2458,6 +2461,7 @@
     });
     return {
       currentUnit: document.getElementById("admin-current-unit").value,
+      currentLesson: siteContent.currentLesson || "",
       unitUnlocks,
       exitQuestion: document.getElementById("admin-exit-question").value.trim(),
       upcoming,

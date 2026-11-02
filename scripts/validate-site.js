@@ -252,8 +252,9 @@ function validateSharedCourseExperience() {
   });
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    const isLessonPreview = ['whose-congress-preview.html', 'unit2-design-preview.html', 'units-design-preview.html', 'home-design-preview.html'].includes(relative(file)) && html.includes('whose-congress-preview.css?v=3');
-    const isNewShell = relative(file) === 'index.html' && html.includes('href="styles.css');
+    if (/http-equiv=["']refresh/i.test(html)) return;
+    const isEditorialPage = ['index.html','units.html','unit2.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css');
+    const isNewShell = ['index.html', 'course-tools.html'].includes(relative(file)) && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
     const isDemocracyFiltered = relative(file) === 'democracy-filtered.html' && html.includes('democracy-filtered.css');
@@ -262,19 +263,19 @@ function validateSharedCourseExperience() {
     const isHistoryHub = relative(file) === 'history-lesson.html' && html.includes('history-hub.css');
     const isHistoryReader = relative(file) === 'history-reader.html' && html.includes('history-reader-theme.css');
     const isHistoryPresenter = relative(file) === 'history-presenter.html' && html.includes('history-presenter.css');
-    if (!isLessonPreview && !isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
+    if (!isEditorialPage && !isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
 
-  const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const homepage = fs.readFileSync(path.join(root, 'course-tools.html'), 'utf8');
   const homepageApp = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   const typographyPages = files.filter(function (file) {
     return file.endsWith('.html') && !relative(file).startsWith('slides/');
   });
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    if (['whose-congress-preview.html', 'unit2-design-preview.html', 'units-design-preview.html', 'home-design-preview.html'].includes(relative(file)) && html.includes('href="whose-congress-preview.css?v=3"')) return;
+    if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit2.html','lesson-2-2.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
     if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
@@ -290,7 +291,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-resource-groups',
+    'app.js?v=20261102-canonical-pages',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1741,7 +1742,7 @@ function validateUnit2WorksheetGlossary() {
 function validateCalendarData() {
   const file = path.join(root, 'us-politics-events.json');
   const database = JSON.parse(fs.readFileSync(file, 'utf8'));
-  const homepage = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
+  const homepage = fs.readFileSync(path.join(root, 'course-tools.html'), 'utf8');
   const appCode = fs.readFileSync(path.join(root, 'app.js'), 'utf8');
   ['history-prev', 'history-next', 'history-controls'].forEach(function (control) {
     if (homepage.includes(control) || appCode.includes(control)) {
@@ -1856,7 +1857,7 @@ function validateCongressFourFrames() {
   const page = fs.readFileSync(pagePath, 'utf8');
   const styles = fs.readFileSync(stylePath, 'utf8');
   const script = fs.readFileSync(scriptPath, 'utf8');
-  const unit = fs.readFileSync(path.join(root, 'unit2.html'), 'utf8');
+  const unit = fs.readFileSync(path.join(root, 'unit2-reference.html'), 'utf8');
   if ((page.match(/class="diagram-sheet /g) || []).length !== 4 ||
       (page.match(/class="answer-slot" data-answer=/g) || []).length !== 44) {
     errors.push('Congress in Four Frames must keep all four answer-key diagrams and 44 matching response entries.');
