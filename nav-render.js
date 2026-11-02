@@ -20,7 +20,7 @@ function buildNavHTML(opts) {
   return [
     ["HOME", "#home"],
     ["UNITS", "#units"],
-    ["FOUNDATIONS", "#foundations"],
+    ["LIBRARY", "#foundations"],
     ["GLOSSARY", "#words"],
     ["EXIT TICKET", "#exit-ticket"]
   ].map(function ([label, hash]) {

@@ -189,11 +189,6 @@
       location.hash = "units";
       return;
     }
-    if (routeName === "presidents") {
-      showView("foundations");
-      switchFoundationTab("presidents");
-      return;
-    }
     showView(valid ? routeName : "home");
   }
 
@@ -1134,32 +1129,55 @@
     const grid = document.getElementById("amendment-grid");
     grid.replaceChildren();
     const matches = foundations.amendments.filter(amendmentMatches);
-    matches.forEach(amendment => {
-      const [number, titleText, plain, why] = amendment;
-      const card = document.createElement("article");
-      card.className = "amendment-card";
-      const numberEl = document.createElement("div");
-      numberEl.className = "amendment-number";
-      numberEl.textContent = number;
-      const content = document.createElement("div");
+    document.getElementById("amendment-status").textContent = `${matches.length} ${matches.length === 1 ? "amendment" : "amendments"} shown`;
+    const collections = [
+      ["The Bill of Rights", "01–10", number => number <= 10],
+      ["The early republic and Reconstruction", "11–15", number => number >= 11 && number <= 15],
+      ["The twentieth century", "16–27", number => number >= 16]
+    ];
+    collections.forEach(([label, range, includes]) => {
+      const entries = matches.filter(amendment => includes(amendment[0]));
+      if (!entries.length) return;
+      const section = document.createElement("section");
+      section.className = "library-collection amendment-collection";
+      const heading = document.createElement("div");
+      heading.className = "library-collection-heading";
+      const meta = document.createElement("p");
+      meta.className = "library-collection-number";
+      meta.textContent = `AMENDMENTS ${range}`;
       const title = document.createElement("h3");
-      title.textContent = `${ordinal(number)} AMENDMENT · ${titleText}`;
-      const description = document.createElement("p");
-      description.textContent = plain;
-      const details = document.createElement("details");
-      const summary = document.createElement("summary");
-      summary.textContent = "WHY IT MATTERS";
-      const whyText = document.createElement("p");
-      whyText.textContent = why;
-      details.append(summary, whyText);
-      content.append(title, description, details);
-      card.append(numberEl, content);
-      grid.appendChild(card);
+      title.textContent = label;
+      heading.append(meta, title);
+      const cards = document.createElement("div");
+      cards.className = "amendment-collection-cards";
+      entries.forEach(amendment => {
+        const [number, titleText, plain, why] = amendment;
+        const card = document.createElement("article");
+        card.className = "amendment-card";
+        const numberEl = document.createElement("p");
+        numberEl.className = "amendment-number";
+        numberEl.textContent = `${ordinal(number).toLowerCase()} AMENDMENT`;
+        const title = document.createElement("h4");
+        const sentenceTitle = titleText.charAt(0) + titleText.slice(1).toLowerCase();
+        title.textContent = sentenceTitle.replace(/d\.c\./i, "D.C.");
+        const description = document.createElement("p");
+        description.textContent = plain;
+        const details = document.createElement("details");
+        const summary = document.createElement("summary");
+        summary.textContent = "Why it matters";
+        const whyText = document.createElement("p");
+        whyText.textContent = why;
+        details.append(summary, whyText);
+        card.append(numberEl, title, description, details);
+        cards.appendChild(card);
+      });
+      section.append(heading, cards);
+      grid.appendChild(section);
     });
     if (!matches.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
-      empty.textContent = "NO AMENDMENTS ARE MAPPED TO THIS UNIT YET. CHOOSE ALL 27.";
+      empty.textContent = "No amendments are mapped to this unit yet. Choose All 27.";
       grid.appendChild(empty);
     }
   }

@@ -49,7 +49,7 @@ function runShell({ saved, homepage = false, readingPage = false } = {}) {
   assert(oldHeader.classes.has("apg-replaced-navigation"));
   assert(!lessonHero.classes.has("apg-replaced-navigation"), "Lesson heroes must stay visible");
   const header = body.children[0], button = header.children[1], nav = header.children[2];
-  assert.deepEqual(nav.children.map(a => a.textContent), ["HOME", saved?.destination === "/APG/democracy-filtered.html" ? "BACK TO LESSON" : "UNIT 1", "FOUNDATIONS", "GLOSSARY", "EXIT TICKET"]);
+  assert.deepEqual(nav.children.map(a => a.textContent), ["HOME", saved?.destination === "/APG/democracy-filtered.html" ? "BACK TO LESSON" : "UNIT 1", "LIBRARY", "GLOSSARY", "EXIT TICKET"]);
   const returnLink = nav.children[1];
   assert(returnLink.href.endsWith("#gov-1"));
   if (saved?.destination === "/APG/democracy-filtered.html") assert(returnLink.href.includes("?lesson=lesson-u1-102-democracy-filtered"));

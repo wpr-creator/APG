@@ -291,7 +291,7 @@ function validateSharedCourseExperience() {
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-glossary-collections',
+    'app.js?v=20261102-amendment-collections',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -1473,7 +1473,7 @@ function validateSharedCourseExperience() {
   [
     '["HOME", "#home"]',
     '["UNITS", "#units"]',
-    '["FOUNDATIONS", "#foundations"]',
+    '["LIBRARY", "#foundations"]',
     '["GLOSSARY", "#words"]',
     '["EXIT TICKET", "#exit-ticket"]'
   ].forEach(function (content) {

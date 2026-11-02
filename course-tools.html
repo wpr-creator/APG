@@ -35,12 +35,12 @@
   <script src="federalism-map-data.js?v=20260730-apg" defer></script>
   <script src="founding-power-data.js" defer></script>
   <script src="data-required.js?v=20261007-case-summary-audit" defer></script>
-  <script src="app.js?v=20261102-glossary-collections" defer></script>
+  <script src="app.js?v=20261102-amendment-collections" defer></script>
 <link rel="stylesheet" href="course-shell.css?v=20260926-editorial-typography">
 <script src="course-shell.js?v=20261102-universal" defer></script>
 <link rel="stylesheet" href="styles-design-system.css?v=20260929-home-editorial-system">
 <link rel="stylesheet" href="voter-guide.css?v=20261102-student-ballot-cta">
-<link rel="stylesheet" href="exit-ticket.css?v=20261102"><link rel="stylesheet" href="course-header.css?v=20261102-universal"><script src="course-header.js?v=20261102-universal" defer></script><link rel="stylesheet" href="glossary.css?v=20261102-collections"><link rel="stylesheet" href="library.css?v=20261102-collections">
+<link rel="stylesheet" href="exit-ticket.css?v=20261102"><link rel="stylesheet" href="course-header.css?v=20261102-universal"><script src="course-header.js?v=20261102-library-menu" defer></script><link rel="stylesheet" href="glossary.css?v=20261102-collections"><link rel="stylesheet" href="library.css?v=20261102-amendments">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to the course</a>
@@ -56,7 +56,7 @@
     <nav id="site-nav" aria-label="Main navigation">
       <a href="#home" data-view-link="home">HOME</a>
       <a href="#units" data-view-link="units">UNITS</a>
-      <a href="#foundations" data-view-link="foundations">FOUNDATIONS</a>
+      <a href="#foundations" data-view-link="foundations">LIBRARY</a>
       <a href="#words" data-view-link="words">GLOSSARY</a>
       <a href="#exit-ticket" data-view-link="exit-ticket">EXIT TICKET</a>
     </nav>
@@ -223,11 +223,10 @@
         <h1>The civic <em>library.</em></h1>
         <p>The texts and decisions behind the course. Choose a collection, then open the reading you need.</p>
       </div>
-      <div class="foundation-tabs" role="tablist" aria-label="Foundations tools">
+      <div class="foundation-tabs" role="tablist" aria-label="Library collections">
         <button type="button" role="tab" aria-selected="true" aria-controls="foundation-documents" data-foundation-tab="documents">DOCUMENTS</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="foundation-cases" data-foundation-tab="cases">REQUIRED CASES</button>
         <button type="button" role="tab" aria-selected="false" aria-controls="foundation-amendments" data-foundation-tab="amendments">AMENDMENTS</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="foundation-presidents" data-foundation-tab="presidents">PRESIDENTIAL LIBRARY</button>
       </div>
 
       <section class="foundation-panel" id="foundation-documents" role="tabpanel">
@@ -241,13 +240,16 @@
       </section>
 
       <section class="foundation-panel" id="foundation-amendments" role="tabpanel" hidden>
-        <div class="tool-heading"><div><h2>AMENDMENTS</h2></div></div>
+        <div class="tool-heading"><div><h2>Constitutional amendments</h2></div></div>
+        <p class="amendment-intro">All 27 amendments, in order. Read the plain-language summary, then expand a card to see why it matters.</p>
         <div class="amendment-filters" id="amendment-filters" aria-label="Filter amendments"></div>
+        <p id="amendment-status" role="status"></p>
         <div class="amendment-grid" id="amendment-grid"></div>
       </section>
+    </section>
 
-      <section class="foundation-panel" id="foundation-presidents" role="tabpanel" hidden>
-        <div class="tool-heading"><div><h2>PRESIDENTIAL LIBRARY</h2></div></div>
+    <section class="view" id="presidents" data-view="presidents" hidden>
+        <div class="page-intro"><h1>Presidential library</h1></div>
         <div class="president-tools">
           <label for="president-search">FIND A PRESIDENT</label>
           <input id="president-search" type="search" autocomplete="off" placeholder="TYPE A NAME">
@@ -255,8 +257,6 @@
         </div>
         <div class="president-grid" id="president-grid"></div>
       </section>
-
-    </section>
 
     <section class="view" id="words" data-view="words" hidden>
       <div class="page-intro">

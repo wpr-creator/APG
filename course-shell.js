@@ -55,7 +55,7 @@
     button.type = "button"; button.textContent = "☰ MENU";
     button.setAttribute("aria-expanded", "false"); button.setAttribute("aria-controls", "apg-shared-nav");
     const nav = document.createElement("nav"); nav.id = "apg-shared-nav"; nav.setAttribute("aria-label", "Main navigation");
-    [["HOME","home"],["UNITS","units"],["FOUNDATIONS","foundations"],["GLOSSARY","words"],["EXIT TICKET","exit-ticket"]].forEach(([label, hash]) => {
+    [["HOME","home"],["UNITS","units"],["LIBRARY","foundations"],["GLOSSARY","words"],["EXIT TICKET","exit-ticket"]].forEach(([label, hash]) => {
       const a = document.createElement("a");
       const isLessonReturn = label === "UNITS" && /^gov-[0-5]$/.test(unit);
       a.textContent = isLessonReturn ? (lesson ? "BACK TO LESSON" : "UNIT " + unit.slice(-1)) : label;
