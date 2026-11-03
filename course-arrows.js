@@ -28,13 +28,14 @@
     candidates.forEach(icon);
     // Legacy footer and menu links sometimes carry a plain-text arrow.
     const links = root.matches('a') ? [root] : [...root.querySelectorAll('a')];
-    links.forEach(link => [...link.childNodes].filter(node => node.nodeType === Node.TEXT_NODE).forEach(node => {
+    links.forEach(link => [link, ...link.querySelectorAll('*')].flatMap(parent => [...parent.childNodes]).filter(node => node.nodeType === Node.TEXT_NODE).forEach(node => {
       const text = node.textContent;
       const match = text.match(/^\s*([←→↗])\s*/) || text.match(/\s*([←→↗])\s*$/);
       if (!match) return;
       const span = document.createElement('span');span.textContent = match[1];
       node.textContent = text.slice(0, match.index) + text.slice(match.index + match[0].length);
-      if (match.index === 0) link.insertBefore(span, node); else link.insertBefore(span, node.nextSibling);
+      const parent = node.parentNode;
+      if (match.index === 0) parent.insertBefore(span, node); else parent.insertBefore(span, node.nextSibling);
       icon(span);
     }));
   }
