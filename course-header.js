@@ -49,7 +49,7 @@
     const destination = contextDestination || (unit.id === 'gov-1' ? 'lesson-' + lesson[0].replace('.', '-') + '.html' : lesson[0] === '2.2' ? 'lesson-2-2.html' : lesson[0] === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent('lesson-' + lesson[0]) + '#' + unit.id);
     current.href = new URL(destination,root).href;
     current.hidden = false;
-    const title = current.querySelector('span'); title.textContent = (lesson[0].startsWith('lesson-') ? lesson[1] : lesson[0] + ' · ' + lesson[1]) + ' ↗';
+    const title = current.querySelector('span'); title.textContent = (lesson[0].startsWith('lesson-') ? lesson[1] : lesson[0] + ' · ' + lesson[1]);const arrow=document.createElement('span');arrow.textContent=contextLabel === 'BACK TO LESSON' ? '←' : '→';arrow.setAttribute('aria-hidden','true');title.appendChild(arrow);
     if (filename === 'lesson-2-2.html' && lesson[0] === '2.2') current.setAttribute('aria-current','page');
   } catch (_) { /* Static navigation remains available. */ }
 })();
