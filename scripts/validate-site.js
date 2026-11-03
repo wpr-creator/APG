@@ -285,13 +285,13 @@ function validateSharedCourseExperience() {
     'styles.css?v=20261102-lesson-navigation',
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
-    'voter-guide.css?v=20261102-student-ballot-cta',
+    'voter-guide.css?v=20261103-ballot-moved',
     'course-data.js?v=20261102-unit1',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261102-unit1',
+    'app.js?v=20261103-ballot',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -412,10 +412,8 @@ function validateSharedCourseExperience() {
     'Explore California propositions', 'guide-action-button',
     'race-category', 'What the candidates say',
     'const raceOrder = ["CONGRESS", "STATE", "LOCAL"]',
-    'container.append(quizLinks, races, propositionQuizLinks, sources, ballotCallout)',
-    'Cast your student ballot',
-    'https://docs.google.com/forms/d/11_z5LW8oothWAdIEIh0EArcvhk1RrRu2hsWs2c7YCfw/viewform',
-    'OPEN THE STUDENT BALLOT', 'guide-ballot-cta', 'guide-ballot-button'
+    'container.append(quizLinks, races, propositionQuizLinks, sources)',
+    'guide-sources'
   ].forEach(function (content) {
     if (!homepageApp.includes(content)) errors.push('Updated election tracker is missing: ' + content);
   });
