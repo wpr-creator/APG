@@ -7,187 +7,86 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="../styles-base.css?v=20261102-shared-layout">
   <link rel="stylesheet" href="../styles-pages.css?v=20261102-shared-layout">
-  <style>
-    body{background:#f0f7f0;}
-    .case-page{max-width:960px;margin:0 auto;padding:24px 1.5rem 60px;}
-    .case-content{min-width:0;}
-    .case-hero{background:#1a1a1a;border-radius:14px;padding:24px 28px;margin-bottom:20px;}
-    .case-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#c98888;margin-bottom:8px;}
-    .case-hero-title{font-size:clamp(18px,2.8vw,26px);color:white;line-height:1.2;margin:0 0 6px;}
-    .case-hero-cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(154,35,35,0.5);margin-bottom:14px;}
-    .case-block{background:white;border-radius:12px;border:1px solid #d4d4d4;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(20,83,45,0.05);}
-    .case-block-label{margin:0;display:flex;align-items:center;gap:10px;padding:10px 16px;background:#ffffff;border-bottom:1px solid #d4d4d4;font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;}
-    .case-block-label-icon{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
-    .icon-bg{background:#f0f0f0;} .icon-q{background:#d1fae5;} .icon-r{background:#d4d4d4;}
-    .icon-t{background:#fef3cd;} .icon-d{background:#fee2e2;} .icon-l{background:#e0f2fe;}
-    .case-block-body{padding:16px 18px;}
-    .case-background p{font-size:14px;line-height:1.75;color:#374151;margin-bottom:10px;}
-    .case-background p:last-child{margin-bottom:0;}
-    .case-question-text{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.55;padding:4px 0;}
-    .case-ruling-verdict{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:800;margin-bottom:12px;}
-    .verdict-yes{background:#f0f0f0;color:#2b2b2b;} .verdict-no{background:#fee2e2;color:#991b1b;}
-    .case-vote-line{font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;margin-bottom:10px;}
-    .case-ruling-text{font-size:14px;line-height:1.75;color:#374151;}
-    .case-ruling-quote{font-size:14px;font-style:italic;color:#1a1a1a;border-left:3px solid #9a2323;padding:8px 14px;margin:12px 0;background:#ffffff;border-radius:0 8px 8px 0;line-height:1.6;}
-    .case-test-box{background:#1a1a1a;border-radius:10px;padding:14px 16px;}
-    .case-test-name{font-size:13px;font-weight:800;color:#c98888;margin-bottom:6px;}
-    .case-test-rule{font-size:13px;color:rgba(255,255,255,0.85);line-height:1.65;}
-    .case-dissent-box{background:#fffbeb;border:1px solid #f59e0b;border-radius:10px;padding:14px 16px;}
-    .case-dissent-who{font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#92400e;margin-bottom:6px;}
-    .case-dissent-text{font-size:13px;line-height:1.7;color:#78350f;}
-    .case-legacy-list{list-style:none;padding:0;margin:0;}
-    .case-legacy-list li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #d4d4d4;font-size:13px;line-height:1.6;color:#374151;}
-    .case-legacy-list li:last-child{border-bottom:none;}
-    .case-legacy-case{font-size:11px;font-weight:700;color:#1a1a1a;white-space:nowrap;flex-shrink:0;font-family:'JetBrains Mono',monospace;}
-    .rail-card{background:white;border-radius:12px;border:1px solid #d4d4d4;overflow:hidden;margin-bottom:12px;}
-    .rail-card-head{background:#1a1a1a;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(154,35,35,0.8);}
-    .rail-row{padding:8px 14px;border-bottom:1px solid #d4d4d4;font-size:12px;color:#374151;line-height:1.5;}
-    .rail-row:last-child{border-bottom:none;}
-    .rail-row strong{color:#1a1a1a;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
-    .rail-exam-tip{background:#1a1a1a;border-radius:12px;padding:14px 16px;margin-bottom:12px;}
-    .rail-exam-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#c98888;margin-bottom:8px;}
-    .rail-exam-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
-    .rail-mistake{display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid #d4d4d4;font-size:12px;line-height:1.5;}
-    .rail-mistake:last-child{border-bottom:none;}
-    .rail-mistake-x{color:#ef4444;font-weight:800;flex-shrink:0;}
-    .case-step-nav{margin:0 0 20px;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:#fff;border:1px solid #d4d4d4;border-radius:10px;}
-    .case-step-nav a{color:#263f55;font-size:12px;font-weight:800;text-decoration:underline;text-decoration-color:#c8a951;text-underline-offset:4px;}
-    .case-step-nav span{color:#87919a;font-size:12px;}
-    .case-term-note{margin:0 0 12px;padding:10px 12px;color:#364452;background:#f5f5f4;border-left:3px solid #c8a951;font-size:13px;line-height:1.55;}
-    .case-answer-label{margin:0 0 8px;color:#68727d;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
-    .case-deeper{margin-top:18px;background:#fff;border:1px solid #d4d4d4;border-radius:12px;overflow:hidden;}
-    .case-deeper>summary{padding:16px 18px;color:#1a1a1a;font-size:12px;font-weight:850;letter-spacing:.12em;cursor:pointer;}
-    .case-deeper[open]>summary{border-bottom:1px solid #d4d4d4;}
-    .case-deeper-content{padding:14px 16px 4px;}
-    .case-deeper-content .case-block{box-shadow:none;}
-    .case-deeper-content .case-rail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-    .case-deeper-content .rail-card,.case-deeper-content .rail-exam-tip{margin:0;}
-    @media(max-width:680px){.case-page{padding:18px 1rem 40px;}.case-step-nav{align-items:flex-start;}.case-step-nav span{display:none;}.case-step-nav a{padding:5px 0;}.case-deeper-content .case-rail{grid-template-columns:1fr;}}
-
-  </style>
-  <link rel="stylesheet" href="../styles-gov-theme.css?v=20261102-shared-layout">
+<link rel="stylesheet" href="../styles-gov-theme.css?v=20261102-shared-layout">
 <link rel="stylesheet" href="../course-shell.css?v=20260926-editorial-typography">
 <script src="../course-shell.js?v=20261102-universal" defer></script>
 <link rel="stylesheet" href="../styles-design-system.css?v=20260929-home-editorial-system">
 <link rel="stylesheet" href="../reading-progress.css?v=20260929-slim-reading-line">
 <script src="../course-data.js?v=20261102-unit1" defer></script><link rel="stylesheet" href="../course-header.css?v=20261102-universal"><script src="../course-header.js?v=20261103-arrows" defer></script><link rel="stylesheet" href="../library.css?v=20261102-library">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script></head>
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script><link rel="stylesheet" href="../case-reader.css?v=20261104-readable">
+</head>
 <body class="unit-2" data-library-reader>
   <div class="stars-stripe"></div>
-  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>The O’Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics (1962)</h1><p>The O’Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
   <nav>
     <div class="nav-inner" id="app-nav"></div>
   </nav>
   <script src="../nav-render.js?v=20260929-clean-guides"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "cases/baker-v-carr.html" });</script>
 
-  <main class="case-page">
+    <main class="case-page case-reader">
     <article class="case-content">
       <header class="case-hero">
-        <div class="case-hero-eyebrow">Unit 2 · AP Topic 2.3</div>
+        <p class="case-hero-eyebrow">Unit 2</p>
         <h1 class="case-hero-title">Baker v. Carr</h1>
-        <div class="case-hero-cite">369 U.S. 186 · March 26, 1962 · Justice William Brennan</div>
+        <p class="case-reader-lead">Federal courts can hear claims that unequal state legislative districts violate the Fourteenth Amendment.</p>
       </header>
 
-      <nav class="case-step-nav" aria-label="Case worksheet steps">
-        <a href="#case-situation">The situation</a><span aria-hidden="true">→</span>
-        <a href="#case-claim">The constitutional claim</a><span aria-hidden="true">→</span>
-        <a href="#case-decision">What the Court decided</a><span aria-hidden="true">→</span>
-        <a href="#case-not-decided">What it did not decide</a>
+      <nav class="case-reader-nav" aria-label="On this page">
+        <a href="#case-situation">What happened?</a>
+        <a href="#case-claim">Why did voters sue?</a>
+        <a href="#case-decision">What did the Court decide?</a>
+        <a href="#case-not-decided">What question did the Court leave open?</a>
+        <a href="#ap-scenario">Practice</a>
       </nav>
 
-      <section class="case-block" id="case-situation">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-bg" aria-hidden="true">📋</span>The situation</h2>
-        <div class="case-block-body case-background">
-          <p>Tennessee had not redrawn its legislative districts since 1901. Meanwhile, many people moved from rural areas to cities, but representation did not keep up. Some rural voters had much more representation per person than voters in growing urban areas.</p>
-          <p>Memphis resident Charles Baker sued Tennessee Secretary of State Joe Carr. He argued that the unequal districts weakened city residents’ voting influence.</p>
-        </div>
+      <section class="case-reader-section" id="case-situation">
+        <h2>What happened?</h2>
+        <p>Tennessee used the same state legislative districts for decades while cities grew. A district with many residents could elect the same number of lawmakers as a district with far fewer residents. City voters therefore had less influence per person.</p>
       </section>
 
-      <section class="case-block" id="case-claim">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-q" aria-hidden="true">❓</span>The constitutional claim</h2>
-        <div class="case-block-body">
-          <p class="case-term-note"><strong>Equal Protection</strong> is the Fourteenth Amendment’s promise that government treat people equally under the law.</p>
-          <p class="case-ruling-text">Baker argued that Tennessee’s outdated districts gave urban residents less voting influence than rural residents, violating the Equal Protection Clause of the Fourteenth Amendment.</p>
-          <p class="case-answer-label">Question for the Court</p>
-          <div class="case-question-text">Could a federal court hear Baker’s Equal Protection challenge?</div>
-        </div>
+      <section class="case-reader-section" id="case-claim">
+        <h2>Why did voters sue?</h2>
+        <p>Charles Baker, a Memphis voter, sued Tennessee’s secretary of state, Joe Carr. Baker argued that the outdated map violated the <strong>Equal Protection Clause</strong>, the part of the Fourteenth Amendment that requires states to treat people equally under the law.</p>
       </section>
 
-      <section class="case-block" id="case-decision">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-r" aria-hidden="true">⚖️</span>What the Court decided</h2>
-        <div class="case-block-body">
-          <div class="case-ruling-verdict verdict-yes">✓ Federal courts could hear the case — 6 to 2</div>
-          <p class="case-term-note"><strong>Justiciable</strong> means “a claim a court can hear.” The Court said Baker’s claim met that standard.</p>
-          <div class="case-vote-line">Majority: Brennan · Warren · Black · Douglas · Clark · Stewart &nbsp;|&nbsp; Dissent: Frankfurter · Harlan</div>
-          <div class="case-ruling-quote">"The right asserted is within the reach of judicial protection under the Fourteenth Amendment."</div>
-          <div class="case-ruling-text">The Court said federal courts could hear Baker’s claim. It did not decide whether Tennessee’s districts violated the Constitution. The ruling opened the courthouse door to this kind of Equal Protection challenge.</div>
-        </div>
+      <section class="case-reader-section" id="case-decision">
+        <h2>What did the Court decide?</h2>
+        <p>The Supreme Court ruled 6–2 that a federal court could hear Baker’s claim. Drawing districts involves politics, but judges can still hear a claim that a map violates a constitutional right. A claim a court can hear is called <strong>justiciable</strong>.</p>
       </section>
 
-      <section class="case-block" id="case-not-decided">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-t" aria-hidden="true">📐</span>What it did not decide</h2>
-        <div class="case-block-body">
-          <p class="case-ruling-text">Baker did not rule that Tennessee’s map was unconstitutional or require districts to have equal populations. The Court made the claim hearable; it did not decide whether the claim was right.</p>
-          <div class="case-test-box">
-            <div class="case-test-name">The later rule: Reynolds v. Sims (1964)</div>
-            <div class="case-test-rule">Two years later, Reynolds v. Sims established the "one person, one vote" rule and required state legislative districts to be apportioned by population. That population-equality rule came from Reynolds, not Baker.</div>
-          </div>
-        </div>
+      <section class="case-reader-section" id="case-not-decided">
+        <h2>What question did the Court leave open?</h2>
+        <p>The Court left the question of whether Tennessee’s map violated the Constitution for further proceedings. The rule requiring roughly equal populations in state legislative districts came two years later in <cite>Reynolds v. Sims</cite> (1964).</p>
       </section>
 
-      <section class="case-block" id="ap-scenario">
-        <h2 class="case-block-label">Try an AP-style scenario</h2>
-        <div class="case-block-body case-background">
-          <p>Two districts each elect one state representative. One now has four times as many residents as the other. The legislature has kept the same boundaries for decades. A federal judge says courts should stay out of disputes over maps.</p>
-          <p><strong>Comparison case.</strong> In <a href="https://supreme.justia.com/cases/federal/us/376/1/"><cite>Wesberry v. Sanders (1964)</cite></a>, Georgia voters challenged a U.S. House map because their district contained far more people than others. The Supreme Court agreed that the courts could hear the case. It held that Article I, Section 2 requires U.S. House districts to be as equal in population as practicable.</p>
-          <ol>
-            <li>Which required case helps you respond to the judge, and which fact matters most?</li>
-            <li>How did the type of district and the result differ between the two cases?</li>
-            <li>How did stare decisis, the practice of following precedent, shape the later decision?</li>
-          </ol>
-          <details class="case-deeper">
-            <summary>Check your reasoning</summary>
-            <div class="case-deeper-content"><p>Baker v. Carr applies because the voters allege unequal influence in state legislative districts. Baker allowed federal courts to hear the Equal Protection claim. Wesberry applied Baker’s precedent on court access to a U.S. House map, then used Article I, Section 2 to decide the population issue.</p></div>
-          </details>
-        </div>
+      <section class="case-reader-section" id="ap-scenario">
+        <h2>Practice applying the case</h2>
+        <p>Two districts each elect one state representative. One now has four times as many residents as the other. The legislature has kept the same boundaries for decades. A federal judge says courts should stay out of disputes over maps.</p>
+        <p><strong>Read this second case.</strong> In <a href="https://supreme.justia.com/cases/federal/us/376/1/"><cite>Wesberry v. Sanders (1964)</cite></a>, Georgia voters challenged a U.S. House map because their district contained far more people than others. The Supreme Court agreed that the courts could hear the case. It held that Article I, Section 2 requires U.S. House districts to be as equal in population as practicable.</p>
+        <ol>
+          <li>Which case helps you respond to the judge, and which fact matters most?</li>
+          <li>How did the type of district and the result differ between the two cases?</li>
+          <li>How did stare decisis, the practice of following precedent, shape the later decision?</li>
+        </ol>
+        <details class="case-reader-details">
+          <summary>Show a sample response</summary>
+          <div><p>Baker v. Carr applies because the voters allege unequal influence in state legislative districts. Baker allowed federal courts to hear the Equal Protection claim. Wesberry applied Baker’s precedent on court access to a U.S. House map, then used Article I, Section 2 to decide the population issue.</p></div>
+        </details>
       </section>
 
-      <details class="case-deeper">
-        <summary>Go deeper · court history, dissent, related cases, and exam notes</summary>
-        <div class="case-deeper-content">
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-q" aria-hidden="true">❓</span>Why courts had stayed out</h2>
-            <div class="case-block-body case-background">
-              <p>Before Baker, courts had often refused to hear apportionment cases, treating districting as a political question for elected officials. In Colegrove v. Green (1946), Justice Frankfurter warned courts to stay out of the "political thicket" of redistricting.</p>
-              <p>In Baker, Justice Brennan explained that courts can hear a political-question dispute when the Constitution does not assign it exclusively to another branch and judges have manageable standards for deciding it. He concluded Baker’s claim could be heard.</p>
-            </div>
-          </section>
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-d" aria-hidden="true">⚡</span>The dissent — Justice Frankfurter</h2>
-            <div class="case-block-body"><div class="case-dissent-box">
-              <div class="case-dissent-who">Justice Frankfurter (joined by Justice Harlan)</div>
-              <div class="case-dissent-text">Frankfurter's dissent was one of his most passionate — he had spent his career warning courts away from political questions. He argued the majority was dragging courts into the inherently political business of drawing district lines, a task for legislatures and voters, not judges. Courts have no manageable standards for apportionment and no democratic legitimacy to impose their own preferences. "There is not under our Constitution a judicial remedy for every political mischief." His warning proved partially prophetic — redistricting litigation has become one of the most contested and politically charged areas of constitutional law.</div>
-            </div></div>
-          </section>
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-l" aria-hidden="true">🔗</span>Legacy and connections</h2>
-            <div class="case-block-body"><ul class="case-legacy-list">
-              <li><span class="case-legacy-case">Reynolds v. Sims<br>1964</span>Built directly on Baker — held that both chambers of state legislatures must be apportioned by population. "Legislators represent people, not trees or acres." One person, one vote made explicit.</li>
-              <li><span class="case-legacy-case">Shaw v. Reno<br>1993</span>Applied Equal Protection to racial gerrymandering. When race predominates in drawing district lines, strict scrutiny applies; the map is not automatically unconstitutional and must be evaluated under that test.</li>
-              <li><span class="case-legacy-case">Rucho v. Common Cause<br>2019</span>The Court held that partisan-gerrymandering claims under the federal Constitution cannot be decided by federal courts. Rucho did not close off state-court claims under state constitutions or other political avenues. Baker’s ruling still applies to malapportionment claims.</li>
-              <li><span class="case-legacy-case">Modern impact</span>Every redistricting cycle following each census triggers Baker-based litigation. After the 2020 census, dozens of states faced legal challenges. Baker created an entire field of election law that fills federal dockets every decade.</li>
-            </ul></div>
-          </section>
-          <div class="case-rail">
-            <section class="rail-exam-tip"><div class="rail-exam-tip-label">Exam focus</div><div class="rail-exam-tip-text">Baker is often tested alongside Shaw v. Reno. Baker is about whether federal courts may hear a malapportionment claim; Reynolds established the later one-person, one-vote rule; Shaw addresses racial gerrymandering and strict scrutiny.</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Quick facts</h2><div class="rail-row"><strong>Vote</strong>6 to 2</div><div class="rail-row"><strong>Provision</strong>Equal Protection · Fourteenth Amendment</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">What Baker did and did not do</h2><div class="rail-row"><strong>Did</strong>Open federal courts to apportionment challenges.</div><div class="rail-row"><strong>Did not</strong>Require equal-population districts; that came from Reynolds v. Sims (1964).</div><div class="rail-row"><strong>Rucho · 2019</strong>Federal courts cannot decide partisan-gerrymandering claims under the federal Constitution; state-court claims and other avenues may remain available.</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Common mistakes</h2><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Saying Baker established "one person, one vote" — that was Reynolds v. Sims (1964).</div><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Thinking Baker ruled Tennessee's districts unconstitutional — it only said federal courts could hear the challenge.</div><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Confusing Baker’s ruling about whether a court can hear a claim with Shaw’s racial-gerrymandering claim.</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Related cases</h2><a href="/APG/cases/shaw-v-reno.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a1a;text-decoration:none;font-weight:600;border-bottom:1px solid #d4d4d4;">Shaw v. Reno (1993)<span style="display:block;font-size:10px;font-weight:400;color:#6b7280;">Racial gerrymandering limits</span></a><a href="/APG/cases/citizens-united-v-fec.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a1a;text-decoration:none;font-weight:600;">Citizens United (2010)<span style="display:block;font-size:10px;font-weight:400;color:#6b7280;">Campaign finance and participation</span></a></section>
-          </div>
-        </div>
+
+      <details class="case-reader-details case-reader-context">
+        <summary>Read more about the case</summary>
+        <p>Justice Felix Frankfurter dissented, meaning he disagreed with the ruling. He argued that elected officials should handle district boundaries and that judges lacked a clear standard for resolving the dispute.</p>
+        <p>For claims about maps drawn to favor a political party, <cite>Rucho v. Common Cause</cite> (2019) held that federal courts cannot decide partisan gerrymandering claims under the federal Constitution. Challenges under state constitutions may still go to state courts.</p>
+        <p><a href="https://supreme.justia.com/cases/federal/us/369/186/">Read the Supreme Court opinion in <cite>Baker v. Carr</cite></a></p>
       </details>
+
+      <nav class="case-reader-related" aria-label="Related resources">
+        <p><a href="shaw-v-reno.html">Shaw v. Reno</a><br>How courts review the use of race in drawing districts.</p>
+        <p><a href="../unit2-topic-23-concept-practice.html">Open Lesson 2.2 Concept Practice</a></p>
+      </nav>
     </article>
   </main>
 

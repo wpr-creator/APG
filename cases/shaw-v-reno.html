@@ -7,197 +7,86 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
   <link rel="stylesheet" href="../styles-base.css?v=20261102-shared-layout">
   <link rel="stylesheet" href="../styles-pages.css?v=20261102-shared-layout">
-  <style>
-    body{background:#f0f7f0;}
-    .case-page{max-width:960px;margin:0 auto;padding:24px 1.5rem 60px;}
-    .case-content{min-width:0;}
-    .case-hero{background:#1a1a1a;border-radius:14px;padding:24px 28px;margin-bottom:20px;}
-    .case-hero-eyebrow{font-size:10px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#c98888;margin-bottom:8px;}
-    .case-hero-title{font-size:clamp(18px,2.8vw,26px);color:white;line-height:1.2;margin:0 0 6px;}
-    .case-hero-cite{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(154,35,35,0.5);margin-bottom:14px;}
-    .case-block{background:white;border-radius:12px;border:1px solid #d4d4d4;overflow:hidden;margin-bottom:12px;box-shadow:0 1px 3px rgba(20,83,45,0.05);}
-    .case-block-label{margin:0;display:flex;align-items:center;gap:10px;padding:10px 16px;background:#ffffff;border-bottom:1px solid #d4d4d4;font-size:9px;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:#1a1a1a;}
-    .case-block-label-icon{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0;}
-    .icon-bg{background:#f0f0f0;} .icon-q{background:#d1fae5;} .icon-r{background:#d4d4d4;}
-    .icon-t{background:#fef3cd;} .icon-d{background:#fee2e2;} .icon-l{background:#e0f2fe;}
-    .case-block-body{padding:16px 18px;}
-    .case-background p{font-size:14px;line-height:1.75;color:#374151;margin-bottom:10px;}
-    .case-background p:last-child{margin-bottom:0;}
-    .case-question-text{font-size:16px;font-weight:700;color:#1a1a1a;line-height:1.55;padding:4px 0;}
-    .case-ruling-verdict{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;font-size:13px;font-weight:800;margin-bottom:12px;}
-    .verdict-yes{background:#f0f0f0;color:#2b2b2b;} .verdict-no{background:#fee2e2;color:#991b1b;}
-    .case-vote-line{font-family:'JetBrains Mono',monospace;font-size:11px;color:#9ca3af;margin-bottom:10px;}
-    .case-ruling-text{font-size:14px;line-height:1.75;color:#374151;}
-    .case-ruling-quote{font-size:14px;font-style:italic;color:#1a1a1a;border-left:3px solid #9a2323;padding:8px 14px;margin:12px 0;background:#ffffff;border-radius:0 8px 8px 0;line-height:1.6;}
-    .case-test-box{background:#1a1a1a;border-radius:10px;padding:14px 16px;}
-    .case-test-name{font-size:13px;font-weight:800;color:#c98888;margin-bottom:6px;}
-    .case-test-rule{font-size:13px;color:rgba(255,255,255,0.85);line-height:1.65;}
-    .case-dissent-box{background:#fffbeb;border:1px solid #f59e0b;border-radius:10px;padding:14px 16px;}
-    .case-dissent-who{font-size:11px;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;color:#92400e;margin-bottom:6px;}
-    .case-dissent-text{font-size:13px;line-height:1.7;color:#78350f;}
-    .case-legacy-list{list-style:none;padding:0;margin:0;}
-    .case-legacy-list li{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid #d4d4d4;font-size:13px;line-height:1.6;color:#374151;}
-    .case-legacy-list li:last-child{border-bottom:none;}
-    .case-legacy-case{font-size:11px;font-weight:700;color:#1a1a1a;white-space:nowrap;flex-shrink:0;font-family:'JetBrains Mono',monospace;}
-    .rail-card{background:white;border-radius:12px;border:1px solid #d4d4d4;overflow:hidden;margin-bottom:12px;}
-    .rail-card-head{background:#1a1a1a;padding:8px 14px;font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:rgba(154,35,35,0.8);}
-    .rail-row{padding:8px 14px;border-bottom:1px solid #d4d4d4;font-size:12px;color:#374151;line-height:1.5;}
-    .rail-row:last-child{border-bottom:none;}
-    .rail-row strong{color:#1a1a1a;font-size:10px;display:block;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:2px;}
-    .rail-exam-tip{background:#1a1a1a;border-radius:12px;padding:14px 16px;margin-bottom:12px;}
-    .rail-exam-tip-label{font-size:9px;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:#c98888;margin-bottom:8px;}
-    .rail-exam-tip-text{font-size:12px;line-height:1.7;color:rgba(255,255,255,0.82);}
-    .rail-mistake{display:flex;gap:8px;padding:8px 14px;border-bottom:1px solid #d4d4d4;font-size:12px;line-height:1.5;}
-    .rail-mistake:last-child{border-bottom:none;}
-    .rail-mistake-x{color:#ef4444;font-weight:800;flex-shrink:0;}
-    .case-step-nav{margin:0 0 20px;padding:12px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 10px;background:#fff;border:1px solid #d4d4d4;border-radius:10px;}
-    .case-step-nav a{color:#263f55;font-size:12px;font-weight:800;text-decoration:underline;text-decoration-color:#9a2323;text-underline-offset:4px;}
-    .case-step-nav span{color:#87919a;font-size:12px;}
-    .case-term-note{margin:0 0 12px;padding:10px 12px;color:#364452;background:#f5f5f4;border-left:3px solid #9a2323;font-size:13px;line-height:1.55;}
-    .case-answer-label{margin:0 0 8px;color:#68727d;font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;}
-    .case-outcome-pair{margin:0 0 14px;padding:14px 16px;background:#fff;border:1px solid #d4d4d4;border-radius:10px;}
-    .case-outcome-pair h3{margin:0 0 7px;color:#1a1a1a;font-size:15px;line-height:1.35;}
-    .case-outcome-pair p{margin:0;color:#374151;font-size:14px;line-height:1.7;}
-    .case-deeper{margin-top:18px;background:#fff;border:1px solid #d4d4d4;border-radius:12px;overflow:hidden;}
-    .case-deeper>summary{padding:16px 18px;color:#1a1a1a;font-size:12px;font-weight:850;letter-spacing:.12em;cursor:pointer;}
-    .case-deeper[open]>summary{border-bottom:1px solid #d4d4d4;}
-    .case-deeper-content{padding:14px 16px 4px;}
-    .case-deeper-content .case-block{box-shadow:none;}
-    .case-deeper-content .case-rail{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;}
-    .case-deeper-content .rail-card,.case-deeper-content .rail-exam-tip{margin:0;}
-    @media(max-width:680px){.case-page{padding:18px 1rem 40px;}.case-step-nav{align-items:flex-start;}.case-step-nav span{display:none;}.case-step-nav a{padding:5px 0;}.case-deeper-content .case-rail{grid-template-columns:1fr;}}
-
-  </style>
-  <link rel="stylesheet" href="../styles-gov-theme.css?v=20261102-shared-layout">
+<link rel="stylesheet" href="../styles-gov-theme.css?v=20261102-shared-layout">
 <link rel="stylesheet" href="../course-shell.css?v=20260926-editorial-typography">
 <script src="../course-shell.js?v=20261102-universal" defer></script>
 <link rel="stylesheet" href="../styles-design-system.css?v=20260929-home-editorial-system">
 <link rel="stylesheet" href="../reading-progress.css?v=20260929-slim-reading-line">
 <script src="../course-data.js?v=20261102-unit1" defer></script><link rel="stylesheet" href="../course-header.css?v=20261102-universal"><script src="../course-header.js?v=20261103-arrows" defer></script><link rel="stylesheet" href="../library.css?v=20261102-library">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script></head>
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script><link rel="stylesheet" href="../case-reader.css?v=20261104-readable">
+</head>
 <body class="unit-2" data-library-reader>
   <div class="stars-stripe"></div>
-  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics</h1><p>The O’Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
+  <header><div class="header-inner"><div class="header-brand"><div class="header-seal"><i class="ti ti-building-community"></i></div><div class="header-text"><h1>Mr. Rogers — AP Government &amp; Politics (1993)</h1><p>The O’Farrell High School · Advanced Placement · College Board</p></div></div><div class="header-right"><span class="header-year">2026–27</span></div></div></header>
   <nav>
     <div class="nav-inner" id="app-nav"></div>
   </nav>
   <script src="../nav-render.js?v=20260929-clean-guides"></script>
   <script>renderNav({ mountId: "app-nav", currentFile: "cases/shaw-v-reno.html" });</script>
 
-  <main class="case-page">
+    <main class="case-page case-reader">
     <article class="case-content">
       <header class="case-hero">
-        <div class="case-hero-eyebrow">Unit 2 · AP Topic 2.3</div>
+        <p class="case-hero-eyebrow">Unit 2</p>
         <h1 class="case-hero-title">Shaw v. Reno</h1>
-        <div class="case-hero-cite">509 U.S. 630 · June 28, 1993 · Justice Sandra Day O'Connor</div>
+        <p class="case-reader-lead">Voters can challenge a map under the Fourteenth Amendment when they allege that race drove the placement of district lines.</p>
       </header>
 
-      <nav class="case-step-nav" aria-label="Case worksheet steps">
-        <a href="#case-situation">The situation</a><span aria-hidden="true">→</span>
-        <a href="#case-claim">The constitutional claim</a><span aria-hidden="true">→</span>
-        <a href="#case-decision">What the Court decided</a><span aria-hidden="true">→</span>
-        <a href="#case-not-decided">What it did not decide</a>
+      <nav class="case-reader-nav" aria-label="On this page">
+        <a href="#case-situation">What happened?</a>
+        <a href="#case-claim">Why did voters sue?</a>
+        <a href="#case-decision">What did the Court decide?</a>
+        <a href="#case-not-decided">What question did the Court leave open?</a>
+        <a href="#ap-scenario">Practice</a>
       </nav>
 
-      <section class="case-block" id="case-situation">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-bg" aria-hidden="true">📋</span>The situation</h2>
-        <div class="case-block-body case-background">
-          <p>After the 1990 census, North Carolina gained an additional House seat, bringing its total to 12.</p>
-          <p>North Carolina drew District 12 as a <strong>majority-minority district</strong>—one where racial or ethnic minority groups make up more than half the residents. It stretched about 160 miles, in places no wider than Interstate 85, connecting Black neighborhoods across several counties. Critics said it looked like a "bug splattered on a windshield."</p>
-          <p>Ruth Shaw and four other North Carolina voters challenged District 12. They argued the lines had been drawn mainly around race and violated the Fourteenth Amendment.</p>
-        </div>
+      <section class="case-reader-section" id="case-situation">
+        <h2>What happened?</h2>
+        <p>After the 1990 census, North Carolina gained a seat in the U.S. House of Representatives and drew a new map. District 12 stretched about 160 miles, linking Black neighborhoods across several counties. It was a <strong>majority-minority district</strong>, where a racial or ethnic minority group makes up more than half the population.</p>
       </section>
 
-      <section class="case-block" id="case-claim">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-q" aria-hidden="true">❓</span>The constitutional claim</h2>
-        <div class="case-block-body">
-          <p class="case-term-note"><strong>Equal Protection</strong> is the Fourteenth Amendment’s promise that government treat people equally under the law.</p>
-          <p class="case-ruling-text">The voters argued that drawing district lines mainly to separate voters by race can violate Equal Protection, even when the state says it wants to improve minority representation.</p>
-          <p class="case-answer-label">Question for the Court</p>
-          <div class="case-question-text">Could the voters challenge a district they alleged was drawn mainly around race under the Equal Protection Clause?</div>
-        </div>
+      <section class="case-reader-section" id="case-claim">
+        <h2>Why did voters sue?</h2>
+        <p>Ruth Shaw and four other voters argued that North Carolina had drawn the district mainly to group voters by race. They sued under the <strong>Equal Protection Clause</strong>, the part of the Fourteenth Amendment that requires states to treat people equally under the law.</p>
       </section>
 
-      <section class="case-block" id="case-decision">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-r" aria-hidden="true">⚖️</span>What the Court decided</h2>
-        <div class="case-block-body">
-          <div class="case-outcome-pair">
-            <h3>The Court allowed the claim to proceed</h3>
-            <p>The Court ruled 5–4 that the voters had stated an Equal Protection claim. The case returned to the lower court for further review. The Court did not decide that District 12 was unconstitutional.</p>
-          </div>
-          <div class="case-vote-line">Majority: O'Connor · Rehnquist · Scalia · Kennedy · Thomas &nbsp;|&nbsp; Dissent: White · Blackmun · Stevens · Souter</div>
-          <div class="case-ruling-quote">"A reapportionment plan that includes in one district individuals who belong to the same race, but who are otherwise widely separated by geographical and political boundaries... bears an uncomfortable resemblance to political apartheid."</div>
-          <div class="case-outcome-pair">
-            <h3>A court must apply strict scrutiny if race predominates</h3>
-            <p class="case-term-note"><strong>Strict scrutiny</strong> is the Court’s toughest review: the state must show a compelling reason and a map closely fitted to that purpose.</p>
-            <p>When race predominates in drawing district lines, strict scrutiny applies. The district’s unusual shape may be evidence that race predominated, but shape alone does not decide whether a map is unconstitutional.</p>
-          </div>
-        </div>
+      <section class="case-reader-section" id="case-decision">
+        <h2>What did the Court decide?</h2>
+        <p>The Supreme Court ruled 5–4 that the voters’ claim could go forward. When race takes priority over ordinary criteria, such as keeping towns together, courts apply <strong>strict scrutiny</strong>. Under this demanding test, the state must show that it had a compelling reason and that the lines were drawn closely to serve that reason.</p>
       </section>
 
-      <section class="case-block" id="case-not-decided">
-        <h2 class="case-block-label"><span class="case-block-label-icon icon-t" aria-hidden="true">📐</span>What it did not decide</h2>
-        <div class="case-block-body">
-          <p class="case-ruling-text">In 1993, the Court did not finally rule District 12 unconstitutional. It did not ban all majority-minority districts, either. It allowed the voters’ claim to move forward; the lower court still had to evaluate the map under strict scrutiny.</p>
-          <div class="case-test-box">
-            <div class="case-test-name">Strict scrutiny is a test, not an automatic result</div>
-            <div class="case-test-rule">A map can survive strict scrutiny if the state proves a compelling government interest and shows the map is narrowly tailored — closely fitted — to serve it. For example, a state may have a compelling reason to follow federal voting-rights requirements. Race predominance triggers this review; it does not by itself settle the outcome.</div>
-          </div>
-        </div>
+      <section class="case-reader-section" id="case-not-decided">
+        <h2>What question did the Court leave open?</h2>
+        <p>The Court sent the case back for further review and left District 12’s constitutionality unresolved in 1993. A district’s shape or racial makeup can help explain why voters challenged it. The court looks at the evidence of how the map was drawn to decide whether race drove the boundaries.</p>
       </section>
 
-      <section class="case-block" id="ap-scenario">
-        <h2 class="case-block-label">Try an AP-style scenario</h2>
-        <div class="case-block-body case-background">
-          <p>A commission draws a compact congressional district with a majority of voters from one racial group. Its records show that it split several towns to reach a racial target.</p>
-          <p><strong>Comparison case.</strong> In <a href="https://supreme.justia.com/cases/federal/us/517/952/"><cite>Bush v. Vera (1996)</cite></a>, Texas used detailed racial data to draw congressional districts and departed from ordinary criteria such as keeping districts compact. The Supreme Court upheld the judgment that three challenged districts failed strict scrutiny under Equal Protection.</p>
-          <ol>
-            <li>Which required case helps you analyze the commission’s choices, and what evidence matters more than the district’s shape?</li>
-            <li>What constitutional concern do the two cases share? How do their outcomes differ?</li>
-            <li>What would another state need to show if race predominated in drawing a district?</li>
-          </ol>
-          <details class="case-deeper">
-            <summary>Check your reasoning</summary>
-            <div class="case-deeper-content"><p>Shaw v. Reno applies because the records suggest race took priority over ordinary districting criteria. Both cases involve Equal Protection. Shaw allowed a claim to proceed, while Bush upheld invalidation of the challenged Texas districts. If race predominates, the state must show a compelling interest and a map narrowly tailored to that interest.</p></div>
-          </details>
-        </div>
+      <section class="case-reader-section" id="ap-scenario">
+        <h2>Practice applying the case</h2>
+        <p>A commission draws a compact congressional district with a majority of voters from one racial group. Its records show that it split several towns to reach a racial target.</p>
+        <p><strong>Read this second case.</strong> In <a href="https://supreme.justia.com/cases/federal/us/517/952/"><cite>Bush v. Vera (1996)</cite></a>, Texas used detailed racial data to draw congressional districts and departed from ordinary criteria such as keeping districts compact. The Supreme Court upheld the judgment that three challenged districts failed strict scrutiny under Equal Protection.</p>
+        <ol>
+          <li>Which case helps you analyze the commission’s choices, and what evidence matters more than the district’s shape?</li>
+          <li>What constitutional concern do the two cases share? How do their outcomes differ?</li>
+          <li>What would another state need to show if race predominated in drawing a district?</li>
+        </ol>
+        <details class="case-reader-details">
+          <summary>Show a sample response</summary>
+          <div><p>Shaw v. Reno applies because the records suggest race took priority over ordinary districting criteria. Both cases involve Equal Protection. Shaw allowed a claim to proceed, while Bush upheld invalidation of the challenged Texas districts. If race predominates, the state must show a compelling interest and a map narrowly tailored to that interest.</p></div>
+        </details>
       </section>
 
-      <details class="case-deeper">
-        <summary>Go deeper · Voting Rights Act, dissent, related cases, and exam notes</summary>
-        <div class="case-deeper-content">
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-q" aria-hidden="true">❓</span>Why the state added District 12</h2>
-            <div class="case-block-body case-background">
-              <p>To comply with Section 5 of the Voting Rights Act, North Carolina submitted an initial map with one majority-Black district. The Justice Department objected, saying the state could create a second district to give Black voters in another region a better opportunity to elect candidates of their choice.</p>
-              <p>North Carolina revised its map and added a second majority-Black district in the north-central part of the state: District 12. The Justice Department’s objection and the Voting Rights Act help explain why the state drew it.</p>
-            </div>
-          </section>
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-d" aria-hidden="true">⚡</span>The dissent — Justice White</h2>
-            <div class="case-block-body"><div class="case-dissent-box">
-              <div class="case-dissent-who">Justice White (joined by Blackmun, Stevens, Souter)</div>
-              <div class="case-dissent-text">The dissenters argued the majority was ignoring the actual harm that apportionment cases involve. Traditional Equal Protection cases involve a majority group diluting minority voting strength — here, white voters were not denied the right to vote, not prevented from running for office, and not disadvantaged in any concrete way. The majority-Black district simply gave Black voters a better chance to elect their preferred candidate, which is exactly what the Voting Rights Act requires. The "political apartheid" rhetoric was inflammatory and unsupported — creating a majority-minority district is categorically different from enforcing racial segregation.</div>
-            </div></div>
-          </section>
-          <section class="case-block">
-            <h2 class="case-block-label"><span class="case-block-label-icon icon-l" aria-hidden="true">🔗</span>Legacy and connections</h2>
-            <div class="case-block-body"><ul class="case-legacy-list">
-              <li><span class="case-legacy-case">Baker v. Carr<br>1962</span>Baker allowed federal courts to hear some apportionment challenges. Shaw addressed a different claim: when race predominates in drawing a district, strict scrutiny applies under Equal Protection.</li>
-              <li><span class="case-legacy-case">Miller v. Johnson<br>1995</span>Clarified Shaw — race must be the "predominant" factor, not just a factor. States can consider race without triggering strict scrutiny as long as traditional redistricting principles (compactness, contiguity, community of interest) are the primary drivers.</li>
-              <li><span class="case-legacy-case">Rucho v. Common Cause<br>2019</span>The Court held that federal courts cannot decide partisan-gerrymandering claims under the federal Constitution. Rucho did not close off state-court claims under state constitutions or other political avenues.</li>
-              <li><span class="case-legacy-case">Voting Rights Act<br>Tension</span>The Voting Rights Act requires majority-minority districts in some circumstances. States must follow that law while also meeting Equal Protection requirements; how the rules apply depends on the map and the evidence.</li>
-            </ul></div>
-          </section>
-          <div class="case-rail">
-            <section class="rail-exam-tip"><div class="rail-exam-tip-label">Exam focus</div><div class="rail-exam-tip-text">Shaw is often paired with Baker v. Carr in redistricting questions. Baker opened federal courts to certain apportionment claims. Shaw held that when race predominates in drawing district lines, strict scrutiny applies; that alone does not decide whether the map is constitutional.</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Quick facts</h2><div class="rail-row"><strong>Vote</strong>5 to 4</div><div class="rail-row"><strong>Provision</strong>Equal Protection · Fourteenth Amendment</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">The key distinction</h2><div class="rail-row"><strong>Racial gerrymandering</strong>Race predominates → strict scrutiny; the map must pass the test</div><div class="rail-row"><strong>Partisan gerrymandering</strong>Federal courts cannot decide claims under the federal Constitution (Rucho, 2019); state-court claims and other avenues may remain</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Common mistakes</h2><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Saying Shaw automatically invalidated District 12 in 1993 — the Court allowed a claim and sent it back for further review.</div><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Thinking race can never be considered — the key question is whether it predominated and, if so, whether the map survives strict scrutiny.</div><div class="rail-mistake"><span class="rail-mistake-x" aria-hidden="true">✗</span>Thinking Rucho closed every legal avenue — it held that federal courts cannot decide partisan-gerrymandering claims under the federal Constitution.</div></section>
-            <section class="rail-card"><h2 class="rail-card-head">Related cases</h2><a href="/APG/cases/baker-v-carr.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a1a;text-decoration:none;font-weight:600;border-bottom:1px solid #d4d4d4;">Baker v. Carr (1962)<span style="display:block;font-size:10px;font-weight:400;color:#6b7280;">Courts can hear apportionment cases</span></a><a href="/APG/cases/citizens-united-v-fec.html" style="display:block;padding:8px 14px;font-size:12px;color:#1a1a1a;text-decoration:none;font-weight:600;">Citizens United (2010)<span style="display:block;font-size:10px;font-weight:400;color:#6b7280;">Political participation and money</span></a></section>
-          </div>
-        </div>
+
+      <details class="case-reader-details case-reader-context">
+        <summary>Read more about the case</summary>
+        <p>North Carolina drew District 12 after the U.S. Department of Justice objected to its first map under the Voting Rights Act. Justice Byron White dissented, meaning he disagreed with the ruling. He argued that the voters had not shown that the district reduced their ability to participate or elect candidates.</p>
+        <p>For claims about maps drawn to favor a political party, <cite>Rucho v. Common Cause</cite> (2019) held that federal courts cannot decide partisan gerrymandering claims under the federal Constitution. Challenges under state constitutions may still go to state courts.</p>
+        <p><a href="https://supreme.justia.com/cases/federal/us/509/630/">Read the Supreme Court opinion in <cite>Shaw v. Reno</cite></a></p>
       </details>
+
+      <nav class="case-reader-related" aria-label="Related resources">
+        <p><a href="baker-v-carr.html">Baker v. Carr</a><br>Why federal courts can hear some challenges to district maps.</p>
+        <p><a href="../unit2-topic-23-concept-practice.html">Open Lesson 2.2 Concept Practice</a></p>
+      </nav>
     </article>
   </main>
 
