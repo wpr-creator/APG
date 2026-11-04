@@ -810,11 +810,11 @@ function validateSharedCourseExperience() {
     errors.push('Topics 2.1–2.2 practice must cover the upcoming test topics with source and comparison practice, without image-dependent items, and report its 49-question progress accurately.');
   }
   const topic23Coverage = ['delegate', 'trustee', 'politico', 'Baker v. Carr', 'Shaw v. Reno', 'Federalist No. 10', 'reapportionment', 'redistricting', 'gerrymandering', 'party leader', 'gridlock'];
-  if ((unit2Topic23Practice.match(/prompt: "/g) || []).length !== 18 ||
+  if ((unit2Topic23Practice.match(/prompt: "/g) || []).length !== 27 ||
       topic23Coverage.some(function (phrase) { return !unit2Topic23Practice.toLowerCase().includes(phrase.toLowerCase()); }) ||
-      !unit2Topic23PracticeHtml.includes('QUESTION 1 OF 18') ||
-      !unit2Topic23PracticeHtml.includes('aria-valuemax="18"') ||
-      !unit2Topic23PracticeHtml.includes('unit2-topic-23-concept-practice.js?v=20261102-topic-23-practice')) {
+      !unit2Topic23PracticeHtml.includes('QUESTION 1 OF 27') ||
+      !unit2Topic23PracticeHtml.includes('aria-valuemax="27"') ||
+      !unit2Topic23PracticeHtml.includes('unit2-topic-23-concept-practice.js?v=20261104-districting-cases')) {
     errors.push('Topic 2.3 practice must cover representation models, districting concepts, required cases, and political behavior with accurate progress.');
   }
   const unitDetailMarkup = homepage.slice(homepage.indexOf('<section class="view" id="unit-detail"'), homepage.indexOf('<section class="view" id="foundations"'));

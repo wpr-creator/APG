@@ -135,6 +135,171 @@
       choices: ["Lame-duck presidency and potential gridlock", "Reapportionment and redistricting", "Delegate representation and logrolling", "Federalism and judicial review"],
       answer: 0,
       why: "A lame duck is an outgoing president nearing the end of the term. If disagreement prevents government action, it may contribute to gridlock; opposition alone does not always produce it."
+    },
+    {
+      lesson: "TOPIC 2.3 · BAKER v. CARR",
+      prompt: "Each district elects one state representative. Which inference best supports the voters’ claim?",
+      choices: [
+        "Residents of the smaller district have less influence per person.",
+        "Residents of the larger district have less influence per person.",
+        "Each resident has equal influence because each district elects one member.",
+        "Residents of the larger district are entitled to a second U.S. senator."
+      ],
+      answer: 1,
+      why: "When both districts elect one representative, more residents share that seat in the larger district. That disparity explains the Equal Protection claim in Baker, which the Court allowed federal courts to hear.",
+      table: {
+        caption: "Hypothetical state legislative districts",
+        headers: [
+          "District",
+          "Residents",
+          "Seats"
+        ],
+        rows: [
+          [
+            "River",
+            "40,000",
+            "1"
+          ],
+          [
+            "Harbor",
+            "160,000",
+            "1"
+          ]
+        ]
+      }
+    },
+    {
+      lesson: "TOPIC 2.3 · BAKER v. CARR",
+      prompt: "A judge dismisses a state districting challenge solely because drawing districts is political. Which argument best uses Baker?",
+      choices: [
+        "Federal judges should draw every map after a census.",
+        "State courts must review all maps before an election.",
+        "A districting dispute can present a claim federal courts may hear.",
+        "Any political dispute automatically belongs in federal court."
+      ],
+      answer: 2,
+      why: "Baker allowed a specific Equal Protection claim to proceed despite its political setting. It neither mandated a new map nor made every political dispute justiciable."
+    },
+    {
+      lesson: "TOPIC 2.3 · DISTRICT BOUNDARIES",
+      prompt: "The table describes two versions of a district. Which inference is best supported by the boundary changes alone?",
+      choices: [
+        "The state gained a House seat through reapportionment.",
+        "Race was the main factor in the mapmakers’ decisions.",
+        "Federal courts are required to strike down the new map.",
+        "The changes may strengthen Party A’s position in the district."
+      ],
+      answer: 3,
+      why: "Replacing a Party B area with a Party A area can make the district safer for Party A. The table does not establish a racial motive or constitutional violation. Baker opened review of certain equal-protection claims, while Rucho limits federal constitutional claims of partisan gerrymandering.",
+      table: {
+        caption: "Hypothetical before-and-after map, described by precinct",
+        headers: [
+          "Precinct",
+          "Voting tendency",
+          "Before",
+          "After"
+        ],
+        rows: [
+          [
+            "Central",
+            "Party A",
+            "Inside",
+            "Inside"
+          ],
+          [
+            "South",
+            "Party B",
+            "Inside",
+            "Outside"
+          ],
+          [
+            "North",
+            "Party A",
+            "Outside",
+            "Inside"
+          ]
+        ]
+      }
+    },
+    {
+      lesson: "TOPIC 2.3 · SHAW v. RENO",
+      prompt: "A district is compact and has a Latino majority. Meeting records show the commission split cities to meet a racial target. Which fact most directly supports a Shaw claim?",
+      choices: [
+        "Latino residents make up a majority of the district.",
+        "The district was redrawn after the latest census.",
+        "The commission subordinated ordinary criteria to a racial target.",
+        "The district’s overall shape is compact."
+      ],
+      answer: 2,
+      why: "The key inquiry is whether race predominated over ordinary criteria. A majority-minority population or an unusual shape can be evidence in context, but neither automatically determines the result."
+    },
+    {
+      lesson: "TOPIC 2.3 · SHAW v. RENO",
+      prompt: "Which issue best distinguishes the North Carolina voters’ allegation in Shaw from the Tennessee voters’ allegation in Baker?",
+      choices: [
+        "How heavily race influenced the placement of boundaries",
+        "How many state residents shared a legislative seat",
+        "Whether a state gained seats after reapportionment",
+        "Whether a representative followed constituent preferences"
+      ],
+      answer: 0,
+      why: "Shaw concerned race in drawing congressional boundaries. Baker concerned population disparities among state legislative districts and whether courts could hear the claim."
+    },
+    {
+      lesson: "TOPIC 2.3 · CASE COMPARISON",
+      prompt: "Which statement best explains how precedent connects the two decisions?",
+      choices: [
+        "Wesberry applied Baker’s ruling that all districts must have equal populations.",
+        "Wesberry followed Baker on court review and separately decided the population issue.",
+        "Wesberry overruled Baker by barring federal courts from hearing districting cases.",
+        "Wesberry applied Baker’s strict-scrutiny rule to Georgia’s population disparities."
+      ],
+      answer: 1,
+      why: "Stare decisis means following precedent on a legal issue. Wesberry relied on Baker to treat the challenge as justiciable. Its population rule for U.S. House districts rested on Article I, Section 2.",
+      source: {
+        label: "Supplied case · Wesberry v. Sanders (1964)",
+        text: "Georgia voters challenged population disparities among U.S. House districts. The Court decided that courts could hear the claim, then held that House districts must be as equal in population as practicable under Article I, Section 2."
+      }
+    },
+    {
+      lesson: "TOPIC 2.3 · CASE COMPARISON",
+      prompt: "Which comparison best distinguishes what the Court did in Shaw and Bush?",
+      choices: [
+        "Both rulings upheld the maps because the Voting Rights Act controlled.",
+        "Shaw resolved the map’s validity; Bush ruled only that voters could sue.",
+        "Shaw allowed the claim to proceed; Bush upheld invalidation of the challenged districts.",
+        "Both rulings required every majority-minority district to be redrawn."
+      ],
+      answer: 2,
+      why: "Both decisions address Equal Protection and race in districting. Shaw let the claim go forward. Bush upheld the judgment that the Texas districts failed strict scrutiny.",
+      source: {
+        label: "Supplied case · Bush v. Vera (1996)",
+        text: "Texas drew congressional districts using detailed racial data and departed from ordinary boundary criteria. The Supreme Court upheld the lower court’s judgment that three districts violated Equal Protection."
+      }
+    },
+    {
+      lesson: "TOPIC 2.3 · STRICT SCRUTINY",
+      prompt: "A court finds that race predominated in drawing a district. What must the state show for the district to survive strict scrutiny?",
+      choices: [
+        "A legitimate goal and a rational connection between the goal and the map",
+        "An important goal and a substantial connection between the goal and the map",
+        "A compelling goal and a map narrowly tailored to achieve that goal",
+        "A statewide majority and approval by both chambers of the legislature"
+      ],
+      answer: 2,
+      why: "Strict scrutiny requires a compelling governmental interest and narrow tailoring. A state’s stated goal alone does not establish that its use of race was justified."
+    },
+    {
+      lesson: "TOPIC 2.3 · JUDICIAL REVIEW",
+      prompt: "After a federal court agrees to hear an unequal-representation claim, legislators argue judges should leave map disputes to elected officials. What institutional tension does this illustrate?",
+      choices: [
+        "Federal review versus lawmakers’ discretion in drawing districts",
+        "Presidential veto power versus the Senate’s confirmation power",
+        "State lawmaking versus the federal power to conduct the census",
+        "Party leadership versus a representative’s independent judgment"
+      ],
+      answer: 0,
+      why: "Baker opened a route for judicial review of certain constitutional claims about maps drawn by legislatures. That raised questions about the judicial role without deciding that Tennessee must redraw its map."
     }
   ];
 
