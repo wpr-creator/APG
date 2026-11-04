@@ -56,3 +56,34 @@
 }
 
 .case-reader-context { margin-bottom: 1.5rem; }
+
+.case-reader :is(.case-evidence, .case-opinion-quote) {
+  margin: 1.25rem 0 .5rem;
+  padding: clamp(1rem, 3vw, 1.5rem);
+  background: #f5f6ee;
+  border-left: 4px solid #2d6a5b;
+}
+
+.case-evidence figcaption { margin-bottom: .75rem; }
+.case-evidence img { display: block; width: 100%; height: auto; }
+.case-reader .case-evidence p { margin: .75rem 0 0; }
+.case-evidence-bars { display: grid; gap: .75rem; }
+
+.case-evidence-track {
+  height: .75rem;
+  margin-top: .25rem;
+  background: #dce2d7;
+}
+
+.case-evidence-track span {
+  display: block;
+  height: 100%;
+  background: #2d6a5b;
+}
+
+.case-reader .case-opinion-quote blockquote {
+  margin: 0 0 .65rem;
+  font: 400 clamp(1.3rem, 3vw, 1.85rem)/1.35 Georgia, serif;
+}
+
+.case-opinion-quote figcaption { font-size: .9rem; }
