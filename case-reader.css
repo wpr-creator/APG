@@ -67,18 +67,18 @@
 .case-evidence figcaption { margin-bottom: .75rem; }
 .case-evidence img { display: block; width: 100%; height: auto; }
 .case-reader .case-evidence p { margin: .75rem 0 0; }
-.case-evidence-bars { display: grid; gap: .75rem; }
-
-.case-evidence-track {
-  height: .75rem;
-  margin-top: .25rem;
-  background: #dce2d7;
+.case-evidence-grids {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.75rem, 3vw, 2rem);
 }
 
-.case-evidence-track span {
+.case-evidence-grids strong { display: block; line-height: 1.3; }
+.case-evidence-grids svg {
   display: block;
-  height: 100%;
-  background: #2d6a5b;
+  width: min(100%, 10rem);
+  height: auto;
+  margin-top: .5rem;
 }
 
 .case-reader .case-opinion-quote blockquote {
