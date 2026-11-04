@@ -89,5 +89,4 @@ for(const [number,source] of Object.entries(essentialQuestions)){
 }
 console.log('All seven lesson pages show source-verified essential questions beneath their titles.');
 
-const homepage=fs.readFileSync(path.join(root,'index.html'),'utf8');
 assert(!fs.readFileSync(path.join(root,'app.js'),'utf8').includes('guide-ballot-cta'),'Move the ballot rather than duplicating it in the guide.');
