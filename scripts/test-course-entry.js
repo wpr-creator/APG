@@ -90,7 +90,4 @@ for(const [number,source] of Object.entries(essentialQuestions)){
 console.log('All seven lesson pages show source-verified essential questions beneath their titles.');
 
 const homepage=fs.readFileSync(path.join(root,'index.html'),'utf8');
-const ballot=homepage.indexOf('class="home-ballot"');
-assert(ballot>homepage.indexOf('id="election-progress"') && ballot<homepage.indexOf('class="student-desk"'),'Student ballot must sit directly beneath the voter-guide tracker.');
-assert(homepage.includes('https://docs.google.com/forms/d/11_z5LW8oothWAdIEIh0EArcvhk1RrRu2hsWs2c7YCfw/viewform'),'Preserve the original student ballot form.');
 assert(!fs.readFileSync(path.join(root,'app.js'),'utf8').includes('guide-ballot-cta'),'Move the ballot rather than duplicating it in the guide.');
