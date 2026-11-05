@@ -87,3 +87,18 @@
 }
 
 .case-opinion-quote figcaption { font-size: .9rem; }
+
+.case-reader .case-worksheet-note {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #6f8570;
+  background: #edf0e6;
+}
+
+.case-reader .case-key-point {
+  color: inherit;
+  background: #e4ebdb;
+  padding: .08em .15em;
+  border-radius: .15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
