@@ -18,8 +18,8 @@
   text-decoration: none;
 }
 .results-home-year {
-  font: 500 clamp(62px, 7vw, 96px)/.9 'Newsreader', Georgia, serif;
-  letter-spacing: -.065em;
+  font: 500 clamp(32px, 3.5vw, 46px)/1 'Newsreader', Georgia, serif;
+  letter-spacing: -.035em;
   color: var(--teal);
   padding-right: 30px;
   border-right: 1px solid #b6c2ac;
@@ -36,7 +36,7 @@
 }
 @media (max-width: 650px) {
   .results-home-link { gap: 16px; padding: 22px 20px; }
-  .results-home-year { grid-column: 1; padding-right: 0; border: 0; font-size: 62px; }
+  .results-home-year { grid-column: 1; padding-right: 0; border: 0; font-size: 34px; }
   .results-home-copy { grid-column: 1 / -1; grid-row: 2; }
   .results-home-arrow { grid-column: 3; grid-row: 1; width: 40px; height: 40px; }
   .results-home-link .label { font-size: 9px; }
