@@ -94,3 +94,75 @@
 }
 
 #races, #propositions { scroll-margin-top: 115px; }
+
+#present-results, .presentation-toolbar button {
+  border: 1px solid var(--ink);
+  padding: 10px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font: 600 14px 'Public Sans', Arial, sans-serif;
+  cursor: pointer;
+}
+#present-results:disabled, .presentation-toolbar button:disabled { opacity: .45; cursor: default; }
+.hero-bottom nav { flex-wrap: wrap; align-items: center; }
+.presentation-toolbar[hidden] { display: none; }
+.presenting-results { overflow: auto; }
+.presenting-results > .preview-header, .presenting-results .results-hero,
+.presenting-results .section-intro, .presenting-results .prop-controls,
+.presenting-results .filter-count, .presenting-results .results-footnote,
+.presenting-results .race, .presenting-results .tax-story, .presenting-results .proposition { display: none; }
+.presenting-results .results { max-width: 1700px; padding: 0 4%; }
+.presenting-results .presentation-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 20px; padding: 18px 0; border-bottom: 1px solid var(--line);
+  font: 500 12px 'IBM Plex Mono', monospace; letter-spacing: .03em;
+}
+.presentation-toolbar > div { display: flex; gap: 8px; }
+.presenting-results .race.active-slide {
+  display: grid; grid-template-columns: .85fr 1fr 1.3fr;
+  gap: 35px; border: 0; padding: 45px 0;
+}
+.presenting-results .race-heading h3 { font-size: clamp(36px, 4vw, 60px); }
+.presenting-results .race-leader { font-size: 21px; }
+.presenting-results .candidate h4 { font-size: 22px; }
+.presenting-results .comparison-label { font-size: clamp(20px, 2.2vw, 32px); }
+.presenting-results .comparison-label small { font-size: 12px; }
+.presenting-results .comparison-values { font-size: clamp(16px, 1.6vw, 23px); }
+.presenting-results .comparison + .comparison { margin-top: 32px; }
+.presenting-results .split-track { height: 25px; margin-block: 12px 8px; }
+.presenting-results .class-vote .split-track { height: 35px; }
+.presenting-results .source-link { font-size: 12px; }
+.presenting-results .prop-grid { display: block; }
+.presenting-results .proposition.active-slide {
+  display: grid; grid-template-columns: 1fr 1.2fr; gap: 15px 7%;
+  padding: 35px 0; border: 0;
+}
+.presenting-results .prop-top { grid-column: 1; grid-row: 1; }
+.presenting-results .prop-number { font-size: 100px; }
+.presenting-results .proposition h3 { grid-column: 1; grid-row: 2; margin: 0; font-size: clamp(36px, 4vw, 59px); }
+.presenting-results .prop-outcome { grid-column: 1; grid-row: 3; font-size: clamp(22px, 2.3vw, 32px); min-height: 0; }
+.presenting-results .prop-comparisons { grid-column: 2; grid-row: 1 / 4; margin: 15px 0 0; align-self: center; }
+.presenting-results .prop-gap { grid-column: 1 / -1; font-size: 20px; margin-top: 18px; border-top: 1px solid var(--line); padding-top: 20px; }
+.presenting-results .proposition details { display: none; }
+.presenting-results .tax-story.active-slide { display: block; margin: 25px 0 0; padding: 35px; }
+.presenting-results .tax-story h2 { font-size: 64px; }
+.presenting-results .tax-story .tax-steps p { font-size: 20px; }
+@media (max-width: 850px) {
+  .presenting-results .presentation-toolbar { flex-wrap: wrap; gap: 12px; }
+  .presenting-results .race.active-slide { grid-template-columns: 1fr 1.25fr; gap: 24px; padding-block: 24px; }
+  .presenting-results .race-heading { grid-column: 1 / -1; }
+  .presenting-results .proposition.active-slide { gap: 16px 5%; }
+  .presenting-results .prop-number { font-size: 76px; }
+  .presenting-results .proposition h3 { font-size: 34px; }
+  .presenting-results .prop-outcome { font-size: 22px; }
+  .presenting-results .comparison-values { font-size: 16px; }
+}
+@media (max-width: 550px) {
+  .presenting-results .proposition.active-slide, .presenting-results .race.active-slide { display: block; }
+  .presenting-results .candidate-pair, .presenting-results .race-comparisons { margin-block: 20px; }
+  .presenting-results .prop-comparisons { margin-block: 24px; }
+  .presenting-results .tax-story .tax-steps { display: block; }
+}
+@media print { .presentation-toolbar, #present-results { display: none; } }
+
+.presentation-toolbar strong small { display: block; margin-top: 5px; font: 400 10px 'Public Sans', Arial, sans-serif; letter-spacing: 0; color: var(--muted); }
