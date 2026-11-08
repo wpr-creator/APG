@@ -44,7 +44,7 @@
       const outcome = stateChoice === 'yes' ? prop.ifYes : prop.ifNo;
       const gap = studentShare - stateShare;
       return `<article class="proposition" data-match="${match}">
-        <div class="prop-top"><span class="prop-number"><small>PROP</small>${prop.number}</span><span class="result-label ${stateChoice}">${stateChoice.toUpperCase()} LEADS</span></div>
+        <div class="prop-top"><span class="prop-number"><small>PROP</small>${prop.number}</span><span class="result-label ${stateChoice}">${stateChoice.toUpperCase()}</span></div>
         <h3>${prop.title}</h3><p class="prop-outcome">${outcome}</p>
         <div class="prop-comparisons">
           ${comparison('Our school', [prop.student.yes, prop.student.no], 'yes', 'no', 'class-vote')}
@@ -56,7 +56,6 @@
       </article>`;
     }).join('');
     mount.innerHTML = `<section id="races" class="races-section"><div class="section-intro"><p class="label">01 / THE RACES</p><h2>Who gets<br>the job?</h2><p>Our school picked candidates for three offices. Here’s how those choices compare with the people voting in each race.</p></div>${races}</section>
-      <section class="tax-story" aria-labelledby="tax-title"><p class="label">PROPS 40 + 41 + 42 / READ THESE TOGETHER</p><h2 id="tax-title">No billionaire tax<br>from this vote.</h2><p>The proposed one-time tax is behind. A separate measure limiting new wealth taxes is ahead.</p><div class="tax-steps"><p><strong>40 <span>NO leads</span></strong>The billionaire tax would not take effect.</p><p><strong>41 <span>NO leads</span></strong>The extra tax audits and spending rules would not take effect.</p><p><strong>42 <span>YES leads</span></strong>California would add limits on new taxes for owning wealth, and on some taxes that reach into the past.</p></div><a href="https://voterguide.sos.ca.gov/propositions/40/analysis.htm">How these measures connect ↗</a></section>
       <section id="propositions" class="props-section"><div class="section-intro"><p class="label">02 / THE PROPOSITIONS</p><h2>What changes.<br>What stays.</h2><p>All 14 measures, in plain language. The bars show yes and no votes. Our school chose a different side from California on ${different} measures.</p></div>
       <div class="prop-controls" role="group" aria-label="Filter propositions"><button type="button" data-filter="all" aria-pressed="true">All 14</button><button type="button" data-filter="agree" aria-pressed="false">Same side</button><button type="button" data-filter="differ" aria-pressed="false">Different sides</button></div>
       <p id="prop-count" class="filter-count" aria-live="polite">Showing all 14 propositions</p>
@@ -66,7 +65,7 @@
     toolbar.hidden = true;
     toolbar.innerHTML = '<strong>2026 MIDTERM ELECTION RESULTS<small>Preliminary results · November 8, 2026</small></strong><span id="slide-count" aria-live="polite"></span><div><button type="button" id="previous-slide" aria-label="Previous result">← Previous</button><button type="button" id="next-slide" aria-label="Next result">Next →</button><button type="button" id="leave-presentation">Exit presentation</button></div>';
     mount.prepend(toolbar);
-    const slides = [...mount.querySelectorAll('.race, .tax-story, .proposition')];
+    const slides = [...mount.querySelectorAll('.race, .proposition')];
     const presentButton = document.getElementById('present-results');
     let presenting = false;
     let currentSlide = 0;
