@@ -3,32 +3,6 @@
   "ballots": 63,
   "races": [
     {
-      "title": "U.S. House \u00b7 District 52",
-      "level": "CONGRESS",
-      "names": [
-        "Juan Vargas",
-        "Jeff Belle"
-      ],
-      "photos": [
-        "vargas",
-        "belle"
-      ],
-      "parties": [
-        "Democrat",
-        "Republican"
-      ],
-      "student": [
-        59,
-        4
-      ],
-      "county": [
-        106561,
-        46266
-      ],
-      "electorate": "District 52",
-      "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
-    },
-    {
       "title": "Governor of California",
       "level": "STATE",
       "names": [
@@ -57,6 +31,32 @@
       ],
       "electorate": "San Diego County",
       "source": "https://media.sos.ca.gov/media/governor.json"
+    },
+    {
+      "title": "U.S. House \u00b7 District 52",
+      "level": "CONGRESS",
+      "names": [
+        "Juan Vargas",
+        "Jeff Belle"
+      ],
+      "photos": [
+        "vargas",
+        "belle"
+      ],
+      "parties": [
+        "Democrat",
+        "Republican"
+      ],
+      "student": [
+        59,
+        4
+      ],
+      "county": [
+        106561,
+        46266
+      ],
+      "electorate": "District 52",
+      "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
     },
     {
       "title": "San Diego City Council \u00b7 District 4",

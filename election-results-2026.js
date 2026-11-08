@@ -16,7 +16,7 @@
     </div>`;
   }
   try {
-    const response = await fetch('election-results-2026.json?v=20261108');
+    const response = await fetch('election-results-2026.json?v=20261108-race-order');
     if (!response.ok) throw new Error('Results unavailable');
     const data = await response.json();
     const races = data.races.map(race => {
