@@ -1,0 +1,356 @@
+{
+  "asOf": "November 8, 2026",
+  "ballots": 63,
+  "races": [
+    {
+      "title": "U.S. House \u00b7 District 52",
+      "level": "CONGRESS",
+      "names": [
+        "Juan Vargas",
+        "Jeff Belle"
+      ],
+      "photos": [
+        "vargas",
+        "belle"
+      ],
+      "parties": [
+        "Democrat",
+        "Republican"
+      ],
+      "student": [
+        59,
+        4
+      ],
+      "county": [
+        106561,
+        46266
+      ],
+      "electorate": "District 52",
+      "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
+    },
+    {
+      "title": "Governor of California",
+      "level": "STATE",
+      "names": [
+        "Xavier Becerra",
+        "Steve Hilton"
+      ],
+      "photos": [
+        "becerra",
+        "hilton"
+      ],
+      "parties": [
+        "Democrat",
+        "Republican"
+      ],
+      "student": [
+        55,
+        8
+      ],
+      "county": [
+        536035,
+        341840
+      ],
+      "california": [
+        6773781,
+        3575025
+      ],
+      "electorate": "San Diego County",
+      "source": "https://media.sos.ca.gov/media/governor.json"
+    },
+    {
+      "title": "San Diego City Council \u00b7 District 4",
+      "level": "LOCAL",
+      "names": [
+        "Henry Foster III",
+        "Martha Abraham"
+      ],
+      "photos": [
+        "foster",
+        "martha"
+      ],
+      "parties": [
+        "Nonpartisan",
+        "Nonpartisan"
+      ],
+      "student": [
+        33,
+        28
+      ],
+      "county": [
+        12301,
+        14080
+      ],
+      "electorate": "District 4",
+      "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
+    }
+  ],
+  "propositions": [
+    {
+      "number": 1,
+      "title": "Affordable homes",
+      "student": {
+        "yes": 48,
+        "no": 5
+      },
+      "california": {
+        "yes": 6123493,
+        "no": 3949569
+      },
+      "county": {
+        "yes": 475826,
+        "no": 378433
+      },
+      "ifYes": "California could borrow money to build affordable homes and help veterans buy homes.",
+      "ifNo": "This measure would not provide new housing bond money.",
+      "source": "https://voterguide.sos.ca.gov/propositions/1/analysis.htm"
+    },
+    {
+      "number": 2,
+      "title": "Save for a tough year",
+      "student": {
+        "yes": 27,
+        "no": 27
+      },
+      "california": {
+        "yes": 6147148,
+        "no": 3917757
+      },
+      "county": {
+        "yes": 472824,
+        "no": 379499
+      },
+      "ifYes": "California would save more during good years and keep paying down old debts for longer.",
+      "ifNo": "California would keep its current savings and debt-payment rules.",
+      "source": "https://voterguide.sos.ca.gov/propositions/2/analysis.htm"
+    },
+    {
+      "number": 3,
+      "title": "Keep the tax on top earners",
+      "student": {
+        "yes": 49,
+        "no": 8
+      },
+      "california": {
+        "yes": 6115806,
+        "no": 4034333
+      },
+      "county": {
+        "yes": 474231,
+        "no": 382134
+      },
+      "ifYes": "The extra income tax on top earners would keep going after 2030.",
+      "ifNo": "The extra income tax on top earners would still end in 2031.",
+      "source": "https://voterguide.sos.ca.gov/propositions/3/analysis.htm"
+    },
+    {
+      "number": 4,
+      "title": "Public money for campaigns",
+      "student": {
+        "yes": 29,
+        "no": 29
+      },
+      "california": {
+        "yes": 4913597,
+        "no": 5026371
+      },
+      "county": {
+        "yes": 377514,
+        "no": 454834
+      },
+      "ifYes": "State and local governments could choose to help fund election campaigns.",
+      "ifNo": "This measure would not open up new public campaign funding programs.",
+      "source": "https://voterguide.sos.ca.gov/propositions/4/analysis.htm"
+    },
+    {
+      "number": 5,
+      "title": "Choosing a replacement after a recall",
+      "student": {
+        "yes": 33,
+        "no": 18
+      },
+      "california": {
+        "yes": 5060763,
+        "no": 4710842
+      },
+      "county": {
+        "yes": 395990,
+        "no": 437595
+      },
+      "ifYes": "A recall ballot would ask whether to remove the official. A replacement would be chosen later.",
+      "ifNo": "Voters would keep choosing a replacement on the recall ballot.",
+      "source": "https://voterguide.sos.ca.gov/propositions/5/analysis.htm"
+    },
+    {
+      "number": 37,
+      "title": "Help buying a new home",
+      "student": {
+        "yes": 47,
+        "no": 10
+      },
+      "california": {
+        "yes": 6218448,
+        "no": 3799932
+      },
+      "county": {
+        "yes": 494154,
+        "no": 349637
+      },
+      "ifYes": "A new state loan program would help qualifying families buy newly built homes.",
+      "ifNo": "This new homebuyer loan program would not start.",
+      "source": "https://voterguide.sos.ca.gov/propositions/37/analysis.htm"
+    },
+    {
+      "number": 38,
+      "title": "Research to fight disease",
+      "student": {
+        "yes": 42,
+        "no": 13
+      },
+      "california": {
+        "yes": 5466488,
+        "no": 4580168
+      },
+      "county": {
+        "yes": 552351,
+        "no": 295702
+      },
+      "ifYes": "California could borrow money for research into how the body fights disease.",
+      "ifNo": "This measure would not provide the new research bond money.",
+      "source": "https://voterguide.sos.ca.gov/propositions/38/analysis.htm"
+    },
+    {
+      "number": 39,
+      "title": "Show ID when you vote",
+      "student": {
+        "yes": 26,
+        "no": 33
+      },
+      "california": {
+        "yes": 4057979,
+        "no": 6154067
+      },
+      "county": {
+        "yes": 382390,
+        "no": 479195
+      },
+      "ifYes": "Voters would need to provide government ID information when voting.",
+      "ifNo": "California would keep its current voting ID rules.",
+      "source": "https://voterguide.sos.ca.gov/propositions/39/analysis.htm"
+    },
+    {
+      "number": 40,
+      "title": "The billionaire tax",
+      "student": {
+        "yes": 54,
+        "no": 7
+      },
+      "california": {
+        "yes": 4768464,
+        "no": 5456978
+      },
+      "county": {
+        "yes": 379104,
+        "no": 483557
+      },
+      "ifYes": "Billionaires would owe a one-time 5% tax, mostly to fund health care.",
+      "ifNo": "The proposed one-time billionaire tax would not take effect.",
+      "source": "https://voterguide.sos.ca.gov/propositions/40/analysis.htm"
+    },
+    {
+      "number": 41,
+      "title": "New tax audits and spending rules",
+      "student": {
+        "yes": 13,
+        "no": 46
+      },
+      "california": {
+        "yes": 4579111,
+        "no": 5464614
+      },
+      "county": {
+        "yes": 425584,
+        "no": 422458
+      },
+      "ifYes": "Some new taxes would face extra audits and state spending limits.",
+      "ifNo": "This measure would not add the new tax audits and spending rules.",
+      "source": "https://voterguide.sos.ca.gov/propositions/41/analysis.htm"
+    },
+    {
+      "number": 42,
+      "title": "Limits on new wealth taxes",
+      "student": {
+        "yes": 16,
+        "no": 42
+      },
+      "california": {
+        "yes": 5290587,
+        "no": 4851517
+      },
+      "county": {
+        "yes": 475558,
+        "no": 376734
+      },
+      "ifYes": "California could not add certain new taxes just for owning stocks, investments, or other property. It would also limit taxes that reach into the past.",
+      "ifNo": "This measure would not add the new restrictions on wealth taxes.",
+      "source": "https://voterguide.sos.ca.gov/propositions/42/analysis.htm"
+    },
+    {
+      "number": 43,
+      "title": "A higher bar for some local taxes",
+      "student": {
+        "yes": 34,
+        "no": 19
+      },
+      "california": {
+        "yes": 4309938,
+        "no": 5669139
+      },
+      "county": {
+        "yes": 410711,
+        "no": 435528
+      },
+      "ifYes": "Some local taxes proposed by voters would need two-thirds approval.",
+      "ifNo": "Some voter-proposed local taxes could still pass with a simple majority.",
+      "source": "https://voterguide.sos.ca.gov/propositions/43/analysis.htm"
+    },
+    {
+      "number": 44,
+      "title": "A spending rule for health clinics",
+      "student": {
+        "yes": 43,
+        "no": 14
+      },
+      "california": {
+        "yes": 1788111,
+        "no": 8171275
+      },
+      "county": {
+        "yes": 135183,
+        "no": 710392
+      },
+      "ifYes": "Covered community clinics would have to spend at least 90% of their money on patient care and related services.",
+      "ifNo": "Clinics would not face this new 90% spending rule.",
+      "source": "https://voterguide.sos.ca.gov/propositions/44/analysis.htm"
+    },
+    {
+      "number": 45,
+      "title": "Faster reviews for building projects",
+      "student": {
+        "yes": 34,
+        "no": 22
+      },
+      "california": {
+        "yes": 4396414,
+        "no": 5533894
+      },
+      "county": {
+        "yes": 404343,
+        "no": 438654
+      },
+      "ifYes": "Some projects could use faster environmental reviews and shorter court deadlines.",
+      "ifNo": "This measure would not add the faster environmental review process.",
+      "source": "https://voterguide.sos.ca.gov/propositions/45/analysis.htm"
+    }
+  ]
+}
