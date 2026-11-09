@@ -112,7 +112,9 @@ window.COURSE_DATA = {
           { id: "u2-202-guided-notes", title: "2.2 GUIDED NOTES · WHOSE CONGRESS?", note: "GOOGLE DOC", group: "Guided Notes & Handouts", url: "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv", category: "guided-notes" },
           { id: "u2-202-lesson-slides", title: "2.2 LESSON SLIDES · WHOSE CONGRESS?", group: "Lesson Slides", url: "https://slides.com/westonrogers/apg-22-whose", category: "guided-notes" },
           { id: "u2-202-gerrymander-game", title: "GERRYMANDER", note: "A Voting District Puzzle Game", group: "Practice", url: "https://gametheorytest.com/gerry/game/", category: "interactive" },
-          { id: "u2-203-concept-practice", title: "TOPIC 2.3 CONCEPT PRACTICE", note: "PRACTICE · CASES · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-topic-23-concept-practice.html" }
+          { id: "u2-203-concept-practice", title: "TOPIC 2.3 CONCEPT PRACTICE", note: "PRACTICE · CASES · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-topic-23-concept-practice.html" },
+          { id: "u2-202-districting-frq", title: "DISTRICTING FRQ PRACTICE", note: "GOOGLE DOC · TWO CASE COMPARISONS", group: "Practice", category: "assessment", url: "https://docs.google.com/document/d/1eVUxrwW_t8AhvMXx8suKBGoQMMMcpuZrWkr5HRJcsqE/edit?tab=t.0" },
+          { id: "u2-202-districting-frq-scoring", title: "DISTRICTING FRQ SCORING GUIDE", note: "WEB GUIDE · SELF-CHECK", group: "Practice", category: "assessment", url: "unit2-districting-frq-scoring.html" }
         ]
       },
       lessons: [
