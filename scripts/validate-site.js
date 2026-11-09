@@ -253,7 +253,7 @@ function validateSharedCourseExperience() {
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
     if (/http-equiv=["']refresh/i.test(html)) return;
-    const isEditorialPage = ['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html'].includes(relative(file)) && html.includes('editorial-base.css');
+    const isEditorialPage = ['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html','unit2-districting-frq-scoring.html'].includes(relative(file)) && html.includes('editorial-base.css');
     const isNewShell = ['index.html', 'course-tools.html'].includes(relative(file)) && html.includes('href="styles.css');
     const isUnitZeroRedirect = relative(file) === 'unit0.html' && html.includes('url=./#gov-0');
     const isAgendaRedirect = relative(file) === 'agenda.html' && html.includes('url=./#home');
@@ -275,7 +275,7 @@ function validateSharedCourseExperience() {
   });
   typographyPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
-    if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
+    if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html','unit2-districting-frq-scoring.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
     if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
@@ -286,7 +286,7 @@ function validateSharedCourseExperience() {
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css?v=20260929-home-editorial-system',
     'voter-guide.css?v=20261103-ballot-moved',
-    'course-data.js?v=20261102-unit1',
+    'course-data.js?v=20261111-frq',
     'glossary-data.js?v=20261007-full-framework-audit',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
