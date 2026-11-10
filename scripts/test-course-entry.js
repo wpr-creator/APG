@@ -38,7 +38,7 @@ for (const filename of ['index.html','units.html','unit1.html','unit2.html','les
 console.log('Canonical course entry tests passed: bookmarks, lesson routing, exact EQ, and navigation.');
 
 const settings=JSON.parse(fs.readFileSync(path.join(root,'site-content.json'),'utf8'));
-assert.equal(settings.exitQuestion, 'Imagine you’re a politician who can draw districts to help your party win more seats. Would you do it? Convince me. If **no**, explain why you would give up that advantage and how you would draw the lines instead. If **yes**, explain why helping your party win justifies the effect on voters. Use one move you made in *GerryMander* to support your answer.');
+assert.equal(typeof settings.exitQuestion, 'string', 'Exit ticket question may be empty when closed.');
 const tools=fs.readFileSync(path.join(root,'course-tools.html'),'utf8');
 for(const id of ['exit-ticket-form','exit-period','exit-student','exit-response','exit-question','exit-status','exit-ticket-success']) assert(tools.includes('id="'+id+'"'));
 function checkHeaders(directory) {
