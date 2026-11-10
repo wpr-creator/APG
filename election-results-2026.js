@@ -16,7 +16,7 @@
     </div>`;
   }
   try {
-    const response = await fetch('election-results-2026.json?v=20261108-race-order');
+    const response = await fetch('election-results-2026.json?v=20261110-counts');
     if (!response.ok) throw new Error('Results unavailable');
     const data = await response.json();
     const races = data.races.map(race => {
@@ -63,7 +63,7 @@
     const toolbar = document.createElement('div');
     toolbar.className = 'presentation-toolbar';
     toolbar.hidden = true;
-    toolbar.innerHTML = '<strong>2026 MIDTERM ELECTION RESULTS<small>Preliminary results · November 8, 2026</small></strong><span id="slide-count" aria-live="polite"></span><div><button type="button" id="previous-slide" aria-label="Previous result">← Previous</button><button type="button" id="next-slide" aria-label="Next result">Next →</button><button type="button" id="leave-presentation">Exit presentation</button></div>';
+    toolbar.innerHTML = '<strong>2026 MIDTERM ELECTION RESULTS<small>Preliminary results · November 10, 2026</small></strong><span id="slide-count" aria-live="polite"></span><div><button type="button" id="previous-slide" aria-label="Previous result">← Previous</button><button type="button" id="next-slide" aria-label="Next result">Next →</button><button type="button" id="leave-presentation">Exit presentation</button></div>';
     mount.prepend(toolbar);
     const slides = [...mount.querySelectorAll('.race, .proposition')];
     const presentButton = document.getElementById('present-results');

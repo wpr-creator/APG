@@ -1,5 +1,5 @@
 {
-  "asOf": "November 8, 2026",
+  "asOf": "November 10, 2026",
   "ballots": 63,
   "races": [
     {
@@ -22,12 +22,12 @@
         8
       ],
       "county": [
-        536035,
-        341840
+        663978,
+        403802
       ],
       "california": [
-        6773781,
-        3575025
+        7452009,
+        3879450
       ],
       "electorate": "San Diego County",
       "source": "https://media.sos.ca.gov/media/governor.json"
@@ -52,8 +52,8 @@
         4
       ],
       "county": [
-        106561,
-        46266
+        134518,
+        54696
       ],
       "electorate": "District 52",
       "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
@@ -78,8 +78,8 @@
         28
       ],
       "county": [
-        12301,
-        14080
+        15770,
+        17854
       ],
       "electorate": "District 4",
       "source": "https://www.livevoterturnout.com/ENR/sandiegocaenr/25/en/Index_25.html"
@@ -94,12 +94,12 @@
         "no": 5
       },
       "california": {
-        "yes": 6123493,
-        "no": 3949569
+        "yes": 6733027,
+        "no": 4296574
       },
       "county": {
-        "yes": 475826,
-        "no": 378433
+        "yes": 590346,
+        "no": 448878
       },
       "ifYes": "California could borrow money to build affordable homes and help veterans buy homes.",
       "ifNo": "This measure would not provide new housing bond money.",
@@ -113,12 +113,12 @@
         "no": 27
       },
       "california": {
-        "yes": 6147148,
-        "no": 3917757
+        "yes": 6759767,
+        "no": 4260447
       },
       "county": {
-        "yes": 472824,
-        "no": 379499
+        "yes": 586877,
+        "no": 449781
       },
       "ifYes": "California would save more during good years and keep paying down old debts for longer.",
       "ifNo": "California would keep its current savings and debt-payment rules.",
@@ -132,12 +132,12 @@
         "no": 8
       },
       "california": {
-        "yes": 6115806,
-        "no": 4034333
+        "yes": 6733849,
+        "no": 4380460
       },
       "county": {
-        "yes": 474231,
-        "no": 382134
+        "yes": 591310,
+        "no": 451131
       },
       "ifYes": "The extra income tax on top earners would keep going after 2030.",
       "ifNo": "The extra income tax on top earners would still end in 2031.",
@@ -151,12 +151,12 @@
         "no": 29
       },
       "california": {
-        "yes": 4913597,
-        "no": 5026371
+        "yes": 5406205,
+        "no": 5474047
       },
       "county": {
-        "yes": 377514,
-        "no": 454834
+        "yes": 469737,
+        "no": 542882
       },
       "ifYes": "State and local governments could choose to help fund election campaigns.",
       "ifNo": "This measure would not open up new public campaign funding programs.",
@@ -170,12 +170,12 @@
         "no": 18
       },
       "california": {
-        "yes": 5060763,
-        "no": 4710842
+        "yes": 5562022,
+        "no": 5134433
       },
       "county": {
-        "yes": 395990,
-        "no": 437595
+        "yes": 491703,
+        "no": 521399
       },
       "ifYes": "A recall ballot would ask whether to remove the official. A replacement would be chosen later.",
       "ifNo": "Voters would keep choosing a replacement on the recall ballot.",
@@ -189,12 +189,12 @@
         "no": 10
       },
       "california": {
-        "yes": 6218448,
-        "no": 3799932
+        "yes": 6834106,
+        "no": 4132590
       },
       "county": {
-        "yes": 494154,
-        "no": 349637
+        "yes": 612489,
+        "no": 413765
       },
       "ifYes": "A new state loan program would help qualifying families buy newly built homes.",
       "ifNo": "This new homebuyer loan program would not start.",
@@ -208,12 +208,12 @@
         "no": 13
       },
       "california": {
-        "yes": 5466488,
-        "no": 4580168
+        "yes": 5963079,
+        "no": 5032758
       },
       "county": {
-        "yes": 552351,
-        "no": 295702
+        "yes": 661579,
+        "no": 369245
       },
       "ifYes": "California could borrow money for research into how the body fights disease.",
       "ifNo": "This measure would not provide the new research bond money.",
@@ -227,12 +227,12 @@
         "no": 33
       },
       "california": {
-        "yes": 4057979,
-        "no": 6154067
+        "yes": 4407227,
+        "no": 6774474
       },
       "county": {
-        "yes": 382390,
-        "no": 479195
+        "yes": 452965,
+        "no": 595745
       },
       "ifYes": "Voters would need to provide government ID information when voting.",
       "ifNo": "California would keep its current voting ID rules.",
@@ -246,12 +246,12 @@
         "no": 7
       },
       "california": {
-        "yes": 4768464,
-        "no": 5456978
+        "yes": 5288424,
+        "no": 5909899
       },
       "county": {
-        "yes": 379104,
-        "no": 483557
+        "yes": 480360,
+        "no": 569656
       },
       "ifYes": "Billionaires would owe a one-time 5% tax, mostly to fund health care.",
       "ifNo": "The proposed one-time billionaire tax would not take effect.",
@@ -265,12 +265,12 @@
         "no": 46
       },
       "california": {
-        "yes": 4579111,
-        "no": 5464614
+        "yes": 4961912,
+        "no": 6035499
       },
       "county": {
-        "yes": 425584,
-        "no": 422458
+        "yes": 500960,
+        "no": 530726
       },
       "ifYes": "Some new taxes would face extra audits and state spending limits.",
       "ifNo": "This measure would not add the new tax audits and spending rules.",
@@ -284,12 +284,12 @@
         "no": 42
       },
       "california": {
-        "yes": 5290587,
-        "no": 4851517
+        "yes": 5733734,
+        "no": 5371123
       },
       "county": {
-        "yes": 475558,
-        "no": 376734
+        "yes": 561038,
+        "no": 476355
       },
       "ifYes": "California could not add certain new taxes just for owning stocks, investments, or other property. It would also limit taxes that reach into the past.",
       "ifNo": "This measure would not add the new restrictions on wealth taxes.",
@@ -303,12 +303,12 @@
         "no": 19
       },
       "california": {
-        "yes": 4309938,
-        "no": 5669139
+        "yes": 4667905,
+        "no": 6257179
       },
       "county": {
-        "yes": 410711,
-        "no": 435528
+        "yes": 482551,
+        "no": 546663
       },
       "ifYes": "Some local taxes proposed by voters would need two-thirds approval.",
       "ifNo": "Some voter-proposed local taxes could still pass with a simple majority.",
@@ -322,12 +322,12 @@
         "no": 14
       },
       "california": {
-        "yes": 1788111,
-        "no": 8171275
+        "yes": 1955845,
+        "no": 8946122
       },
       "county": {
-        "yes": 135183,
-        "no": 710392
+        "yes": 164377,
+        "no": 863133
       },
       "ifYes": "Covered community clinics would have to spend at least 90% of their money on patient care and related services.",
       "ifNo": "Clinics would not face this new 90% spending rule.",
@@ -341,12 +341,12 @@
         "no": 22
       },
       "california": {
-        "yes": 4396414,
-        "no": 5533894
+        "yes": 4766652,
+        "no": 6103353
       },
       "county": {
-        "yes": 404343,
-        "no": 438654
+        "yes": 476286,
+        "no": 548047
       },
       "ifYes": "Some projects could use faster environmental reviews and shorter court deadlines.",
       "ifNo": "This measure would not add the faster environmental review process.",
