@@ -313,3 +313,6 @@ body[data-library-reader] :is(.doc-context,.context,.doc-context-box):first-of-t
 body[data-library-reader] .case-opinion-quote blockquote { font-family:'Newsreader',Georgia,serif; }
 body[data-library-reader] .doc-hero+.doc-context { border-top:0!important; }
 body[data-library-reader].document-explainer .doc-text { font:400 18px/1.8 'Public Sans',Arial,sans-serif!important; }
+body[data-library-reader] .reader-terms { margin:0; font:400 18px/1.75 'Public Sans',Arial,sans-serif; }
+body[data-library-reader] .reader-terms dt { font-weight:600; margin-top:16px; }
+body[data-library-reader] .reader-terms dd { margin:4px 0 0; }

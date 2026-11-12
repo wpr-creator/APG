@@ -37,6 +37,9 @@ jobs:
       - name: Test library collections
         run: node scripts/test-library-collections.js
 
+      - name: Check reader content coverage
+        run: node scripts/test-reader-coverage.js
+
       - name: Test course navigation
         run: node scripts/test-course-navigation.js
 
