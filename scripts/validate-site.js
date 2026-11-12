@@ -1560,7 +1560,7 @@ function validateSharedCourseExperience() {
     const newReaderFiles = ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'];
     const readerLink = file === 'federalist-70.html' ? 'executive-readers.css?v=20261112-simplified' : newReaderFiles.includes(file)
       ? 'document-reader.css?v=20260929-reader-cleanup'
-      : 'styles-document-reader.css?v=20260929-guide-cleanup';
+      : 'styles-document-reader.css?v=20261112-clear-reading';
     if (!page.includes(readerLink) || page.indexOf(readerLink) > page.indexOf('</head>')) {
       errors.push('Document does not load the student reader inside its head: docs/' + file);
     }
