@@ -119,7 +119,9 @@ window.COURSE_DATA = {
         "2.3": [
           { id: "u2-203-guided-notes", title: "2.3 GUIDED NOTES · THE ENERGETIC EXECUTIVE", note: "GOOGLE DOC", group: "Guided Notes & Handouts", category: "guided-notes", url: "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ/edit?tab=t.0" },
           { id: "u2-203-lesson-slides", title: "2.3 LESSON SLIDES · THE ENERGETIC EXECUTIVE", group: "Lesson Slides", category: "guided-notes", url: "https://slides.com/westonrogers/apg-23-the-energetic-executive" },
-          { id: "u2-203-executive-practice", title: "THE ENERGETIC EXECUTIVE CONCEPT PRACTICE", note: "53 QUESTIONS · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-executive-concept-practice.html" }
+          { id: "u2-203-executive-practice", title: "THE ENERGETIC EXECUTIVE CONCEPT PRACTICE", note: "53 QUESTIONS · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-executive-concept-practice.html" },
+          { id: "u2-203-federalist-70", title: "FEDERALIST NO. 70", note: "ENERGY · UNITY · ACCOUNTABILITY", group: "Readings & Explanations", category: "reading", url: "docs/federalist-70.html" },
+          { id: "u2-203-presidential-tools", title: "THE PRESIDENTIAL TOOLBOX", note: "POWERS · PROCEDURES · LIMITS", group: "Readings & Explanations", category: "reading", url: "presidential-tools.html" }
         ]
       },
       lessons: [
