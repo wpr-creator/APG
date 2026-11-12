@@ -1558,7 +1558,7 @@ function validateSharedCourseExperience() {
   }).forEach(function (file) {
     const page = fs.readFileSync(path.join(root, 'docs', file), 'utf8');
     const newReaderFiles = ['declaration-of-independence.html', 'constitution-preamble.html', 'gettysburg-address.html'];
-    const readerLink = file === 'federalist-70.html' ? 'executive-readers.css?v=20261112' : newReaderFiles.includes(file)
+    const readerLink = file === 'federalist-70.html' ? 'executive-readers.css?v=20261112-simplified' : newReaderFiles.includes(file)
       ? 'document-reader.css?v=20260929-reader-cleanup'
       : 'styles-document-reader.css?v=20260929-guide-cleanup';
     if (!page.includes(readerLink) || page.indexOf(readerLink) > page.indexOf('</head>')) {
