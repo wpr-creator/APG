@@ -30,4 +30,11 @@ sandbox.glossaryFilter='gov-1';vm.runInContext('renderWords()',sandbox);assert(g
 sandbox.glossaryFilter='all';sandbox.glossaryQuery='pac';vm.runInContext('renderWords()',sandbox);assert.equal(cards()[0].parts.h3.textContent,'Political action committee (PAC)');
 sandbox.glossaryFilter='gov-2';sandbox.glossaryQuery='';sandbox.glossaryBranchFilter='congress';vm.runInContext('renderWords()',sandbox);assert.equal(cards()[0].parts.h3.textContent,'Federalist No. 10');
 sandbox.glossaryFilter='all';sandbox.glossaryQuery='';sandbox.glossaryBranchFilter='all';vm.runInContext('renderWords()',sandbox);assert.equal(cards().length,2);assert.equal(new Set(cards().map(card=>card.parts.h3.textContent)).size,2);
-console.log('Glossary presentation tests passed: canonical names, acronyms, scoped definitions, search, and branch filters.');
+// Canonical definitions must also replace legacy quick-reference text in All units.
+const merge=app.slice(app.indexOf('  const glossaryEntries = new Map();'),app.indexOf('  function glossaryDefinition(word) {'));
+const merged={data:{words:[['Shared Term','','Outdated summary','Legacy','gov-1']]},glossaryUnits:[{groups:{Foundations:[['Shared Term','Current Unit 1 definition',[]]]}},{groups:{Congress:[['Shared Term','Current Unit 2 definition',[]]]}}]};
+vm.createContext(merged);vm.runInContext(merge+'; globalThis.result = glossaryWords;',merged);
+assert.equal(merged.result.length,1);
+assert.equal(merged.result[0][2],'Current Unit 1 definition');
+assert.equal(merged.result[0][5]['gov-2'],'Current Unit 2 definition');
+console.log('Glossary presentation tests passed: canonical names, acronyms, scoped definitions, search, branch filters, and canonical All-units definitions.');

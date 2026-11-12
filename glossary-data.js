@@ -35,7 +35,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Articles of Confederation",
-          "The first U.S. constitution, in effect from 1781 to 1789. Also formally called the Articles of Confederation and Perpetual Union, it created a weak national government and left most power with the states.",
+          "The first U.S. constitution, which left most power with the states. Congress could handle national responsibilities but could not tax directly, regulate interstate commerce, or reliably enforce its decisions. Its formal title was the Articles of Confederation and Perpetual Union.",
           [
             "1.2",
             "1.3"
@@ -50,7 +50,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Constitution",
-          "A document that sets out the fundamental principles of governance and establishes the institutions of a government.",
+          "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
           [
             "1.3"
           ]
@@ -71,7 +71,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Shays's Rebellion",
-          "A popular uprising against the government of Massachusetts that highlighted the weaknesses of the Articles of Confederation.",
+          "Armed unrest in Massachusetts that highlighted the national government’s difficulty raising money and troops under the Articles of Confederation and increased pressure for constitutional change.",
           [
             "1.2"
           ]
@@ -92,7 +92,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Great Compromise",
-          "An agreement that settled issues of state representation by calling for a bicameral legislature with a proportional House and an equal Senate.",
+          "The agreement creating a House with representation based on population and a Senate with two members from each state, resolving the large-state and small-state dispute.",
           [
             "1.3"
           ]
@@ -120,7 +120,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Compromise on Importation",
-          "Agreement at the Constitutional Convention that Congress could not restrict the slave trade until 1808.",
+          "The Slave Trade Compromise: Congress could not prohibit the international slave trade before 1808. It helped secure agreement at the convention while protecting slaveholding interests.",
           [
             "1.3"
           ]
@@ -129,7 +129,7 @@ window.APG_GLOSSARY_UNITS = [
       "Founding Principles and Documents": [
         [
           "Popular Sovereignty",
-          "The idea that the government's right to rule comes from the people. The Declaration of Independence, the Constitution, and the Gettysburg Address all reflect this principle.",
+          "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern.",
           [
             "1.1"
           ]
@@ -157,7 +157,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Republicanism",
-          "People govern through elected representatives.",
+          "A system in which citizens govern through elected representatives.",
           [
             "1.1"
           ]
@@ -178,14 +178,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Federalist No. 10",
-          "An essay by Madison arguing that the dangers of faction can be mitigated by a large republic and republican government.",
+          "James Madison’s argument that a large republic with many competing factions would make it harder for a majority faction to unite and violate the rights of others.",
           [
             "1.3"
           ]
         ],
         [
           "Federalist No. 51",
-          "An essay by Madison arguing that separation of powers and federalism will prevent tyranny.",
+          "James Madison’s argument that officials need both motives and constitutional means to resist other branches’ overreach. Institutional competition and divided power help protect liberty against abuses of power.",
           [
             "1.4"
           ]
@@ -206,49 +206,49 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Federalist No. 39",
-          "Madison argues that the Constitution creates a compound republic: national in some respects and federal, with states retaining a role, in others.",
+          "James Madison’s argument that the Constitution combines national features, such as laws acting directly on individuals, with federal features, such as state governments and equal state representation in the Senate.",
           [
             "1.7"
           ]
         ],
         [
           "Brutus No. 1",
-          "An Anti-Federalist paper arguing the country was too large to be governed as a republic and the Constitution gave too much power to the national government.",
+          "An Anti-Federalist argument that a large republic would distance representatives from the people and that the Necessary and Proper and Supremacy Clauses could expand national power at the states’ expense.",
           [
             "1.3"
           ]
         ],
         [
           "Federalist",
-          "Supporter of the proposed Constitution who called for a strong national government.",
+          "A supporter of ratifying the Constitution who argued that the Articles had made national action too difficult and that stronger national institutions were needed.",
           [
             "1.3"
           ]
         ],
         [
           "Anti-Federalists",
-          "A person opposed to the proposed Constitution who favored stronger state governments.",
+          "Opponents of ratifying the Constitution who feared broad national powers and distance from ordinary citizens would threaten liberty and weaken the states. They demanded explicit protections for individual rights.",
           [
             "1.3"
           ]
         ],
         [
           "Declaration of Independence",
-          "A document written in 1776 in which the American colonists proclaimed their independence from Great Britain.",
+          "The 1776 document explaining why separation from Britain was justified: people possess natural rights, government needs their consent, and people may alter or abolish a government that repeatedly violates its purpose.",
           [
             "1.1"
           ]
         ],
         [
           "Social Contract",
-          "An idea that government gets its authority from the people's consent and exists to protect their rights; people may change a government that violates that purpose.",
+          "An agreement among people to create government, accepting shared laws in exchange for order and protection of their rights. A government that abandons that purpose weakens its claim to authority.",
           [
             "1.1"
           ]
         ],
         [
           "Natural Rights",
-          "Basic rights people have by nature, not because government grants them. The Declaration names life, liberty, and the pursuit of happiness.",
+          "Rights people possess because they are human, before government exists. Government can violate these rights but does not create them.",
           [
             "1.1"
           ]
@@ -259,12 +259,54 @@ window.APG_GLOSSARY_UNITS = [
           [
             "1.1"
           ]
+        ],
+        [
+          "Limited Government",
+          "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
+          [
+            "1.1"
+          ]
+        ],
+        [
+          "Consent of the Governed",
+          "The idea that government can rule legitimately only because the people authorize it.",
+          [
+            "1.1"
+          ]
+        ],
+        [
+          "Equality",
+          "The democratic ideal that people possess equal political standing and that no person has a natural right to rule others.",
+          [
+            "1.1"
+          ]
+        ],
+        [
+          "Bill of Rights",
+          "The first ten constitutional amendments, adding explicit protections for individual liberty and written limits on national government power.",
+          [
+            "1.5"
+          ]
+        ],
+        [
+          "Separation of Powers",
+          "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
+          [
+            "1.6"
+          ]
+        ],
+        [
+          "Checks and Balances",
+          "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
+          [
+            "1.6"
+          ]
         ]
       ],
       "Federalism": [
         [
           "Federalism",
-          "Federalism, also called a federal system, divides power between the national and state governments.",
+          "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share.",
           [
             "1.2",
             "1.7"
@@ -286,14 +328,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Enumerated Powers",
-          "Powers specifically listed in the Constitution for the national government.",
+          "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
           [
             "1.7"
           ]
         ],
         [
           "Reserved Powers",
-          "Powers kept by the states under the Tenth Amendment.",
+          "Powers the Constitution neither delegates to the national government nor prohibits to the states. The Tenth Amendment reserves them to the states or the people.",
           [
             "1.7"
           ]
@@ -342,49 +384,49 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Supremacy Clause",
-          "Makes the Constitution and valid federal laws the supreme law of the land.",
+          "The Constitution, valid federal laws, and treaties take precedence over conflicting state law. Federal action must rest on constitutional authority to be supreme.",
           [
             "1.7"
           ]
         ],
         [
           "Tenth Amendment",
-          "Reserves powers not given to the national government to the states or the people.",
+          "The amendment reserving powers not delegated to the United States and not prohibited to the states to the states or the people. It does not cancel powers actually granted to the national government.",
           [
             "1.7"
           ]
         ],
         [
           "Concurrent Powers",
-          "Powers shared by more than one level of government.",
+          "Powers shared by national and state governments, such as taxing, borrowing, creating courts, and making and enforcing laws.",
           [
             "1.7"
           ]
         ],
         [
           "Necessary and Proper Clause",
-          "Allows Congress to make laws needed to carry out its enumerated powers.",
+          "The clause allowing Congress to choose reasonable means to carry out its enumerated powers. It supports implied powers, not a general power to legislate on any subject.",
           [
             "1.8"
           ]
         ],
         [
           "Implied Powers",
-          "Powers not specifically written in the Constitution but reasonably connected to an enumerated power.",
+          "Powers not listed word for word in the Constitution but reasonably connected to carrying out an enumerated power. The Necessary and Proper Clause supports these powers.",
           [
             "1.8"
           ]
         ],
         [
           "Elastic Clause",
-          "The Necessary and Proper Clause; enables the national government to make all Laws necessary and proper for carrying out its constitutional responsibilities.",
+          "Another name for the Necessary and Proper Clause, which allows Congress to choose reasonable means to carry out its enumerated powers.",
           [
             "1.2"
           ]
         ],
         [
           "Commerce Clause",
-          "Gives Congress power to regulate commerce among the states.",
+          "The clause giving Congress authority to regulate interstate commerce. Courts interpret how closely an activity must connect to commerce across state lines.",
           [
             "1.8"
           ]
@@ -405,14 +447,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Full Faith and Credit Clause",
-          "Requires states to recognize many official records and court decisions from other states.",
+          "The Article IV clause requiring states to recognize one another’s public acts, records, and court decisions. It does not require states to adopt identical laws.",
           [
             "1.9"
           ]
         ],
         [
           "Privileges and Immunities Clause",
-          "Protects citizens from being denied basic rights simply because they come from another state.",
+          "The Article IV clause generally preventing a state from denying citizens of other states basic rights or important economic opportunities simply because they come from elsewhere. Some resident–nonresident distinctions remain allowed.",
           [
             "1.9"
           ]
@@ -433,14 +475,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Categorical Grants",
-          "Federal money for a specific purpose with detailed federal requirements.",
+          "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
           [
             "1.9"
           ]
         ],
         [
           "Block Grants",
-          "Federal money for a broad purpose with greater state discretion.",
+          "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs.",
           [
             "1.9"
           ]
@@ -461,14 +503,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Federal Mandate",
-          "A federal requirement that state or local governments must follow.",
+          "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
           [
             "1.9"
           ]
         ],
         [
           "General Revenue Sharing",
-          "A type of federal grant that places minimal restrictions on how state and local governments spend the money.",
+          "Federal funds with almost no restrictions on state use, offering greater state flexibility than categorical or block grants.",
           [
             "1.2"
           ]
@@ -489,7 +531,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Extradition",
-          "Returning someone to the state where they have been charged with a crime.",
+          "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge.",
           [
             "1.9"
           ]
@@ -503,21 +545,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Access Point",
-          "A place in government where a stakeholder can try to influence policy.",
+          "A place where a person or group can try to influence a government decision. Access creates an opportunity to be heard, not a guaranteed result.",
           [
             "1.9"
           ]
         ],
         [
           "Multiple Access Points",
-          "The many institutions and levels of government where people can try to influence policy.",
+          "The different institutions and levels of government through which people and groups can try to influence policy. They create opportunities for participation as well as places where proposals can be delayed or stopped.",
           [
             "1.9"
           ]
         ],
         [
           "Policy Variation",
-          "Different states making different policy choices.",
+          "Differences in state policies that allow responses to local conditions and experimentation but can also produce unequal rules, benefits, or protections across state lines.",
           [
             "1.9"
           ]
@@ -527,6 +569,13 @@ window.APG_GLOSSARY_UNITS = [
           "Principle that provides local governments some degree of independence from the state government.",
           [
             "1.2"
+          ]
+        ],
+        [
+          "Exclusive Powers",
+          "Powers held by only one level of government. Some belong only to the national government; others are reserved to the states.",
+          [
+            "1.7"
           ]
         ]
       ],
@@ -596,7 +645,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Public Policy",
-          "The intentional use of governmental power to secure the health, welfare, opportunities, and national security of citizens.",
+          "Government decisions and actions intended to address public issues. Laws, spending programs, regulations, and oversight can all shape policy.",
           [
             "1.1"
           ]
@@ -610,60 +659,80 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Representative Democracy",
-          "Citizens elect officials to make public decisions for them.",
+          "A system in which citizens elect officials to make public decisions on their behalf rather than voting directly on every policy.",
           [
             "1.1"
           ]
         ],
         [
           "Participatory Democracy",
-          "A model that emphasizes broad and direct citizen involvement in political decisions.",
-          ["1.2"]
+          "A model emphasizing broad, direct involvement by ordinary citizens through voting, protests, petitions, town halls, and other political action. It does not mean citizens make every decision themselves.",
+          [
+            "1.2"
+          ]
         ],
         [
           "Political Participation",
           "Actions people take to influence government.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Pluralist Democracy",
-          "A model in which organized groups compete to influence public policy.",
-          ["1.2"]
+          "A model describing politics as competition among organized groups seeking to influence public policy. Groups do not necessarily have equal resources or influence.",
+          [
+            "1.2"
+          ]
         ],
         [
           "Interest Group",
           "An organized group that tries to influence government policy.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Lobbying",
           "Contacting public officials to persuade them about a policy.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Coalition",
           "Several groups working together toward the same goal.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Compromise",
           "An agreement in which each side gets some, but not all, of what it wants.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Elite Democracy",
-          "A model in which elected leaders and influential minorities have substantial policy influence.",
-          ["1.2"]
+          "A model emphasizing the influence of a smaller group of leaders, wealthy donors, experts, and other powerful decision makers who shape which choices reach the agenda. Elections and citizen participation still occur.",
+          [
+            "1.2"
+          ]
         ],
         [
           "Political Elites",
           "A small group of leaders, experts, wealthy people, or well-connected people with strong political influence.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Institutional Filter",
           "A part of government that separates immediate public preferences from final policy decisions.",
-          ["1.2"]
+          [
+            "1.2"
+          ]
         ],
         [
           "Eminent Domain",
@@ -697,7 +766,7 @@ window.APG_GLOSSARY_UNITS = [
       "Congress": [
         [
           "Bicameral Legislature",
-          "A legislature with two houses, such as the U.S. Congress.",
+          "A legislature with two chambers. In Congress, the House represents people by population and the Senate represents states equally; both must pass identical text for a bill to advance to the president.",
           [
             "2.1"
           ]
@@ -718,35 +787,35 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Reapportionment",
-          "The reallocation of House seats between the states to account for population changes.",
+          "Redistributing the 435 House seats among states after the census to reflect population changes. It changes how many seats a state has, not the district boundaries within it.",
           [
             "2.1"
           ]
         ],
         [
           "Redistricting",
-          "States' redrawing of boundaries of electoral districts following each census.",
+          "Redrawing electoral district boundaries within a state, usually after the census. State legislatures or commissions handle the process under rules that vary by state.",
           [
             "2.1"
           ]
         ],
         [
           "Gerrymandering",
-          "The intentional use of redistricting to benefit a specific interest or group of voters.",
+          "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering.",
           [
             "2.1"
           ]
         ],
         [
           "Malapportionment",
-          "The uneven distribution of the population between legislative districts.",
+          "Unequal populations across legislative districts that give voters in less-populated districts more representation per person.",
           [
             "2.1"
           ]
         ],
         [
           "Speaker of the House",
-          "The leader of the House of Representatives, chosen by an election of its members.",
+          "The leader elected by the full House, usually with majority-party support, who directs legislative work and helps set the agenda.",
           [
             "2.1"
           ]
@@ -774,42 +843,42 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Whip",
-          "A member of Congress whose job is to ensure party unity and discipline.",
+          "A party leader who counts votes and encourages members to support the party’s position.",
           [
             "2.1"
           ]
         ],
         [
           "Filibuster",
-          "A Senate tactic that prolongs debate to delay or prevent a vote on a bill.",
+          "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote.",
           [
             "2.1"
           ]
         ],
         [
           "Cloture",
-          "A procedure through which senators can end a filibuster, provided three-fifths of senators (60) agree.",
+          "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill.",
           [
             "2.1"
           ]
         ],
         [
           "House Rules Committee",
-          "A powerful committee that determines when a bill will be subject to debate and vote on the House floor.",
+          "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
           [
             "2.1"
           ]
         ],
         [
           "Conference Committee",
-          "A special joint committee that reconciles different bills passed in the House and Senate so a single bill results.",
+          "Members from both chambers who may negotiate a compromise when the House and Senate pass different bill versions. Each chamber must then approve the same final text.",
           [
             "2.1"
           ]
         ],
         [
           "Standing Committee",
-          "A permanent legislative committee that meets regularly.",
+          "A permanent legislative group focused on a policy area. It holds hearings, gathers information, and studies and revises bills before a chamber votes.",
           [
             "2.1"
           ]
@@ -830,14 +899,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Discharge Petition",
-          "A motion filed by a member of Congress to move a bill out of committee and onto the House floor.",
+          "A way to bring a bill out of a House committee with signatures from a majority of House members. It is difficult to use and does not itself pass the bill.",
           [
             "2.1"
           ]
         ],
         [
           "Logrolling",
-          "Trading of votes on legislation by members of Congress to get their earmarks passed.",
+          "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy.",
           [
             "2.1"
           ]
@@ -851,7 +920,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Pork-Barrel Politics",
-          "Federal spending intended to benefit a particular district or set of constituents.",
+          "Directing spending toward a member’s district or state, often within a larger spending bill. Local benefits can help build support for legislation.",
           [
             "2.1"
           ]
@@ -865,21 +934,21 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Unanimous Consent Agreement",
-          "An agreement in the Senate that sets the terms for consideration of a bill.",
+          "A Senate agreement to proceed without objection, often used to bring up bills and manage debate.",
           [
             "2.1"
           ]
         ],
         [
           "Hold",
-          "A delay placed on legislation by a senator who objects to a bill.",
+          "A senator’s signal that they may object to a unanimous-consent request, potentially delaying action.",
           [
             "2.1"
           ]
         ],
         [
           "Gridlock",
-          "A slowdown or halt in Congress's ability to legislate, especially due to partisanship.",
+          "A lack of consensus that prevents Congress from acting on legislation. Polarization and divided government can contribute, but opposition does not always produce gridlock.",
           [
             "2.1"
           ]
@@ -900,14 +969,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Mandatory Spending",
-          "Spending required by existing laws that is locked in the budget.",
+          "Spending that follows existing law, including programs such as Social Security, Medicare, and Medicaid. Congress must change the law to alter those commitments; they are not a permanently fixed share of the budget.",
           [
             "2.1"
           ]
         ],
         [
           "Discretionary Spending",
-          "Spending for programs and policies at the discretion of Congress and the president.",
+          "Spending set through annual appropriations, including funding for defense, education, and infrastructure.",
           [
             "2.1"
           ]
@@ -921,7 +990,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Appropriation",
-          "The process through which congressional committees allocate funds to executive branch agencies.",
+          "A funding law that provides money for government agencies and programs. Budget targets alone do not fund agencies.",
           [
             "2.1"
           ]
@@ -949,7 +1018,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Committee Chair",
-          "The member who leads a committee, schedules its work, and guides its hearings and consideration of bills.",
+          "The member who leads a committee and shapes its agenda, hearings, and which bills advance. The majority party controls committee chairs.",
           [
             "2.2"
           ]
@@ -963,7 +1032,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Committee of the Whole",
-          "A House procedure that lets representatives meet under less formal rules to consider legislation more quickly.",
+          "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
           [
             "2.2"
           ]
@@ -977,30 +1046,60 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Partisan Voting",
-          "Voting mainly in line with one's political party, which can make it harder for Congress to agree on legislation.",
+          "Voting based on party affiliation, which can conflict with constituents’ preferences or a member’s independent judgment.",
           [
             "2.3"
           ]
         ],
         [
           "Polarization",
-          "A sharp ideological distance between political parties.",
+          "The widening ideological distance between parties, which can make compromise and agreement harder.",
           [
             "2.3"
+          ]
+        ],
+        [
+          "Bicameralism",
+          "The two-chamber structure of Congress. House and Senate differences in representation and procedure affect which proposals can become law.",
+          [
+            "2.1",
+            "2.2"
+          ]
+        ],
+        [
+          "Census",
+          "The population count conducted every ten years, used to redistribute House seats among states and guide redistricting.",
+          [
+            "2.1",
+            "2.3"
+          ]
+        ],
+        [
+          "Budget Resolution",
+          "A congressional plan setting budget targets. It does not itself provide funding to agencies; that requires appropriations.",
+          [
+            "2.2"
+          ]
+        ],
+        [
+          "Net Interest",
+          "The federal government’s net cost of borrowing, which affects the money available for other budget choices.",
+          [
+            "2.2"
           ]
         ]
       ],
       "The Presidency": [
         [
           "Executive Branch",
-          "The institution responsible for carrying out laws passed by the legislative branch.",
+          "The branch led by the president that carries out federal laws through departments and agencies.",
           [
             "2.3"
           ]
         ],
         [
           "Executive Order",
-          "Policy directives issued by presidents that do not require congressional approval.",
+          "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have.",
           [
             "2.3"
           ]
@@ -1014,14 +1113,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Executive Agreement",
-          "An agreement between a president and another nation that does not require Senate ratification.",
+          "An international agreement made without the Senate’s treaty-approval vote. It remains subject to the president’s legal authority and may depend on cooperation or funding.",
           [
             "2.3"
           ]
         ],
         [
           "Bully Pulpit",
-          "Presidential appeals to the public to pressure other branches of government to support presidential policies.",
+          "The president’s prominent public platform for drawing attention to an issue and building support for an agenda. Attention alone does not pass a law.",
           [
             "2.3"
           ]
@@ -1063,7 +1162,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Signing Statement",
-          "Text issued by presidents while signing a bill that may include a president's interpretation of the law.",
+          "A written explanation issued when the president signs a bill, often describing how the administration interprets or plans to implement it. It does not rewrite the law.",
           [
             "2.3"
           ]
@@ -1077,14 +1176,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Cabinet",
-          "A group of advisors to the president, consisting of the most senior appointed officers of the executive branch.",
+          "The vice president and heads of executive departments who advise the president; presidents may also give other officials Cabinet rank. Department heads direct work in their policy areas.",
           [
             "2.3"
           ]
         ],
         [
           "Executive Office of the President",
-          "A collection of offices within the White House designed mainly to provide information to the president.",
+          "Offices that help the president with policy, budgets, and national security by bringing information together for presidential decisions.",
           [
             "2.3"
           ]
@@ -1098,7 +1197,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "State of the Union Address",
-          "The annual speech from the president to Congress updating that branch on the state of national affairs.",
+          "The modern presidential address that informs Congress about national affairs, recommends measures, and communicates policy priorities to the public. The Constitution requires information and recommendations, not a particular speech format.",
           [
             "2.3"
           ]
@@ -1112,7 +1211,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Informal Powers",
-          "Powers not laid out in the Constitution but used to carry out presidential duties.",
+          "Presidential tools developed through political practice and relationships, such as bargaining, executive agreements, and signing statements. They do not permit the president to ignore the law.",
           [
             "2.3"
           ]
@@ -1126,35 +1225,35 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Formal Powers",
-          "Those powers a president may exercise that are specifically outlined in the Constitution.",
+          "Presidential powers whose basic authority is written into the Constitution, including vetoes, commander-in-chief authority, and treaty-making.",
           [
             "2.3"
           ]
         ],
         [
           "Enumerated Powers",
-          "Powers explicitly granted to the national government through the Constitution; also called express powers.",
+          "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
           [
             "2.2"
           ]
         ],
         [
           "Implied Powers",
-          "Authority of the federal government beyond its expressed powers; considered necessary to carry out enumerated powers.",
+          "Powers not listed word for word in the Constitution but reasonably connected to carrying out an enumerated power. The Necessary and Proper Clause supports these powers.",
           [
             "2.2"
           ]
         ],
         [
           "Lame Duck Period",
-          "Period at the end of a presidential term when Congress may block presidential initiatives and nominees.",
+          "A period when a president is leaving office without another term ahead, such as after a successor is elected or when the president will not seek reelection. Lawmakers may become less responsive as they look toward the next president.",
           [
             "2.3"
           ]
         ],
         [
           "Treaty",
-          "An agreement with a foreign government negotiated by the president and requiring a two-thirds vote in the Senate to ratify.",
+          "A formal agreement with another nation negotiated by the president that requires approval by two-thirds of senators present.",
           [
             "2.3"
           ]
@@ -1168,14 +1267,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Commander in Chief",
-          "The president's constitutional role as the top civilian leader of the U.S. armed forces.",
+          "The president’s role leading the armed forces. Congress retains its powers to declare war, authorize action, and fund the military.",
           [
             "2.4"
           ]
         ],
         [
           "Bargaining and Persuasion",
-          "Informal presidential tools—such as negotiation, rewards, and appeals—used to gain support from members of Congress.",
+          "Informal presidential tools for seeking support from lawmakers or other officials. They can help advance an agenda but cannot force another branch to agree.",
           [
             "2.4"
           ]
@@ -1192,6 +1291,84 @@ window.APG_GLOSSARY_UNITS = [
           "The formal list of policies and bills Congress is considering at a given time.",
           [
             "2.5"
+          ]
+        ],
+        [
+          "Federalist No. 70",
+          "Alexander Hamilton’s defense of an energetic executive: unity supports speed and clear direction while making responsibility easier to identify. Energy also requires accountability to the people.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Unity",
+          "In Federalist No. 70, having one executive who can choose a course without waiting for several executives to agree and whose responsibility the public can identify.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Accountability",
+          "Officials can be identified, questioned, and held responsible for their decisions.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Tyranny",
+          "The use of power without effective limits or accountability.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Policy Agenda",
+          "The set of goals a president seeks to advance. Achieving those goals requires legal authority and often cooperation from others.",
+          [
+            "2.4",
+            "2.7"
+          ]
+        ],
+        [
+          "White House Staff",
+          "Close presidential advisers who help manage the president’s schedule, choices, and public message. Many do not require Senate confirmation.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Congressional Authorization",
+          "Permission Congress gives through a law. A broad delegation may leave implementation details to agencies, but a specific action still needs a legal basis.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Imperial Presidency",
+          "Arthur Schlesinger Jr.’s warning that presidential power can grow beyond effective checks, especially in war and foreign affairs.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Twenty-Second Amendment",
+          "The amendment generally limiting a person to being elected president twice. Someone who serves more than two years of another president’s term may be elected only once.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Agenda Setting",
+          "Influencing which problems officials and the public treat as priorities. A presidential address can draw attention to a proposal without itself making the proposal law.",
+          [
+            "2.7"
+          ]
+        ],
+        [
+          "Press Secretary",
+          "The White House official who helps communicate and defend the administration’s positions to the press and public.",
+          [
+            "2.7"
           ]
         ]
       ],
@@ -1589,28 +1766,28 @@ window.APG_GLOSSARY_UNITS = [
       "Separation of Powers and Checks and Balances": [
         [
           "Separation of Powers",
-          "A design of government that distributes powers across institutions in order to avoid making one branch too powerful.",
+          "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
           [
             "2.2"
           ]
         ],
         [
           "Checks and Balances",
-          "A design of government in which each branch has powers that can prevent the other branches from making policy.",
+          "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
           [
             "2.2"
           ]
         ],
         [
           "Reserved Powers",
-          "Powers not given to the national government, which are retained by the states and the people.",
+          "Powers the Constitution neither delegates to the national government nor prohibits to the states. The Tenth Amendment reserves them to the states or the people.",
           [
             "2.2"
           ]
         ],
         [
           "Exclusive Powers",
-          "Powers only the national government may exercise.",
+          "Powers held by only one level of government. Some belong only to the national government; others are reserved to the states.",
           [
             "2.2"
           ]
@@ -1624,7 +1801,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Divided Government",
-          "A situation when control of the presidency and one or both chambers of Congress is split between the two major parties.",
+          "A situation in which one party controls the presidency and another controls at least one chamber of Congress. It can make cooperation harder but does not make agreement impossible.",
           [
             "2.2"
           ]
@@ -1641,21 +1818,21 @@ window.APG_GLOSSARY_UNITS = [
       "Representation and Legislative Roles": [
         [
           "Delegate Model of Representation",
-          "A model in which representatives act on the specific stated wishes of their constituents.",
+          "An approach in which a representative follows constituents’ preferences, acting as their agent.",
           [
             "2.1"
           ]
         ],
         [
           "Trustee Model of Representation",
-          "A model in which representatives feel at liberty to act in the way they believe is best for their constituents.",
+          "An approach in which a representative uses independent judgment, even when some constituents disagree.",
           [
             "2.1"
           ]
         ],
         [
           "Politico Model of Representation",
-          "A model in which members of Congress act as either trustee or delegate, based on rational political calculations.",
+          "An approach combining delegate and trustee behavior, changing emphasis with the issue or situation rather than following one fixed rule.",
           [
             "2.1"
           ]
@@ -1669,7 +1846,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Constituency",
-          "A body of voters in a given area who elect a representative or senator.",
+          "The people a member of Congress represents: residents of a House district or an entire state for a senator. Eligible voters in that area elect the member.",
           [
             "2.1"
           ]
@@ -1679,6 +1856,62 @@ window.APG_GLOSSARY_UNITS = [
           "The relationship between Congress and the United States as a whole; whether the institution represents the American people.",
           [
             "2.1"
+          ]
+        ],
+        [
+          "Packing",
+          "Concentrating opposing voters in a few districts so their preferred candidates have fewer opportunities to win seats elsewhere.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Cracking",
+          "Splitting opposing voters across several districts to reduce their ability to elect their preferred candidates.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Safe Seat",
+          "A district where one party is strongly favored to win. Less competition may reduce pressure to respond to voters outside that party’s base.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Equal Protection Clause",
+          "The Fourteenth Amendment’s requirement that states provide equal protection of the laws. Voters used it to challenge unequal representation in Baker and race-based district boundaries in Shaw.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Strict Scrutiny",
+          "The Court’s toughest review: the state must show a compelling reason and a map closely fitted to it when race predominates in drawing district lines. Applying the test does not automatically invalidate the district.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Majority-Minority District",
+          "A district in which a racial or ethnic minority forms a majority of the population. Shaw did not ban every such district; the constitutional question concerns how race shaped the boundaries.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Baker v. Carr",
+          "The 1962 decision allowing federal courts to hear equal-protection challenges to state legislative districting. It did not itself establish “one person, one vote” or decide the challenged map was unconstitutional.",
+          [
+            "2.3"
+          ]
+        ],
+        [
+          "Shaw v. Reno",
+          "The 1993 decision allowing voters’ equal-protection challenge to a North Carolina congressional district allegedly drawn mainly by race to proceed. It did not finally rule District 12 unconstitutional.",
+          [
+            "2.3"
           ]
         ]
       ]
@@ -1700,32 +1933,49 @@ window.APG_GLOSSARY_UNITS = [
         [
           "First Amendment",
           "Protects freedom of religion, speech, press, assembly, and petition from government restrictions, subject to constitutional limits.",
-          ["3.2", "3.3", "3.4"]
+          [
+            "3.2",
+            "3.3",
+            "3.4"
+          ]
         ],
         [
           "Second Amendment",
           "Protects an individual right to keep and bear arms, which applies to state and local governments through the Fourteenth Amendment.",
-          ["3.5", "3.7"]
+          [
+            "3.5",
+            "3.7"
+          ]
         ],
         [
           "Fourth Amendment",
           "Protects people from unreasonable government searches and seizures and sets rules for warrants.",
-          ["3.6", "3.7"]
+          [
+            "3.6",
+            "3.7"
+          ]
         ],
         [
           "Fifth Amendment",
           "Protects rights including grand-jury indictment in federal cases, freedom from compelled self-incrimination, and due process; it also bars double jeopardy.",
-          ["3.6", "3.8"]
+          [
+            "3.6",
+            "3.8"
+          ]
         ],
         [
           "Sixth Amendment",
           "Protects rights of people accused of crimes, including a speedy public trial, an impartial jury, and assistance of counsel.",
-          ["3.8"]
+          [
+            "3.8"
+          ]
         ],
         [
           "Eighth Amendment",
           "Bars excessive bail and fines and cruel and unusual punishment.",
-          ["3.6"]
+          [
+            "3.6"
+          ]
         ],
         [
           "Civil Liberties",
@@ -2086,7 +2336,11 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Letter from Birmingham Jail",
           "Martin Luther King Jr.'s 1963 defense of nonviolent direct action and civil disobedience against unjust segregation laws.",
-          ["3.10", "3.11", "3.12"]
+          [
+            "3.10",
+            "3.11",
+            "3.12"
+          ]
         ],
         [
           "Tyranny of the Majority",
@@ -2184,7 +2438,10 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Political Values",
           "Core beliefs about what government should protect or promote, such as liberty, equality, individualism, and rule of law.",
-          ["4.1", "4.2"]
+          [
+            "4.1",
+            "4.2"
+          ]
         ],
         [
           "Conservatism",
@@ -3102,7 +3359,9 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Voter Registration",
           "The process eligible citizens use to enroll to vote; requirements and available methods vary by state.",
-          ["5.2"]
+          [
+            "5.2"
+          ]
         ],
         [
           "Twenty-Fourth Amendment",
@@ -3277,7 +3536,9 @@ window.APG_GLOSSARY_UNITS = [
         [
           "Selective Benefits",
           "Benefits an interest group offers only to its members to encourage people to join and help support the group.",
-          ["5.5"]
+          [
+            "5.5"
+          ]
         ],
         [
           "Social Movement",
