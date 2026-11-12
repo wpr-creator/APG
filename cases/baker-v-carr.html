@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="../styles-design-system.css?v=20260929-home-editorial-system">
 <link rel="stylesheet" href="../reading-progress.css?v=20260929-slim-reading-line">
 <script src="../course-data.js?v=20261102-unit1" defer></script><link rel="stylesheet" href="../course-header.css?v=20261102-universal"><script src="../course-header.js?v=20261103-arrows" defer></script><link rel="stylesheet" href="../library.css?v=20261102-library">
-<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script><link rel="stylesheet" href="../case-reader.css?v=20261105-worksheet-focus">
+<link rel="icon" href="../favicon.ico" sizes="any"><link rel="icon" href="../assets/favicon.svg?v=20261102" type="image/svg+xml"><link rel="icon" href="../assets/favicon-32.png" type="image/png" sizes="32x32"><link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" sizes="180x180"><link rel="stylesheet" href="../course-arrows.css?v=20261103"><script src="../course-arrows.js?v=20261103" defer></script><link rel="stylesheet" href="../case-reader.css?v=20261112-evidence">
 </head>
 <body class="unit-2" data-library-reader>
   <div class="stars-stripe"></div>
@@ -44,10 +44,22 @@
       <section class="case-reader-section" id="case-situation">
         <h2>What happened?</h2>
         <p>Tennessee used the same state legislative districts for decades while cities grew. These districts elected lawmakers to Tennessee’s own House and Senate. <mark class="case-key-point">A district with many residents could elect the same number of lawmakers as a district with far fewer residents.</mark> City voters therefore had less influence per person: more people had to share the same amount of representation.</p>
+        <figure class="case-evidence county-evidence">
+          <figcaption><strong>Two Tennessee counties: voters per state House representative</strong></figcaption>
+          <p>Both sides use the <strong>1950 voting population</strong>—people counted as eligible to vote, not total residents or votes cast.</p>
+          <div class="county-comparison">
+            <div><h3>Moore County</h3><p><strong class="county-number">2,340</strong> eligible voters per representative</p><p>2,340 eligible voters ÷ 1 House seat</p><div class="county-bar" aria-hidden="true"><span style="width:6%"></span></div></div>
+            <div><h3>Shelby County <small>(Memphis)</small></h3><p><strong class="county-number">39,043</strong> eligible voters per representative, approximately</p><p>312,345 eligible voters ÷ 8 House seats</p><div class="county-bar" aria-hidden="true"><span style="width:100%"></span></div></div>
+          </div>
+          <p class="case-evidence-question"><strong>If each lawmaker gets one vote, whose voters have more influence?</strong></p>
+          <p>Moore County’s voters shared one representative among far fewer people. Each Shelby County representative served about <strong>17 times as many eligible voters</strong>, giving Shelby voters less representation per person in the state House.</p>
+          <p class="case-source-note">This compares House seats only, not combined House-and-Senate representation. Shelby’s figure is a countywide average: its eight representatives were elected countywide. <a href="https://www.govinfo.gov/content/pkg/USREPORTS-369/pdf/USREPORTS-369-186.pdf#page=54">Sources: statutory House seats, opinion pp. 239–240</a>; <a href="https://www.govinfo.gov/content/pkg/USREPORTS-369/pdf/USREPORTS-369-186.pdf#page=77">1950 voting-population table in Justice Clark’s concurrence, pp. 262–264</a>.</p>
+        </figure>
         <figure class="case-evidence">
           <figcaption><strong>About 4 in 10 voters could elect nearly 2 in 3 representatives</strong></figcaption>
+          <p><strong>Dark dots = the voters in the districts being compared. Dark squares = the state House seats those districts could elect.</strong> Each grid shows shares out of 100.</p>
           <div class="case-evidence-grids">
-            <div><strong>40 out of 100 voters</strong>
+            <div><strong>40 out of 100 eligible voters</strong>
               <svg viewBox="0 0 100 100" aria-hidden="true" focusable="false">
                 <circle cx="5" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="15" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="25" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="35" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="45" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="55" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="65" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="75" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="85" cy="5" r="3.6" fill="#2d6a5b"/><circle cx="95" cy="5" r="3.6" fill="#2d6a5b"/>
                 <circle cx="5" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="15" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="25" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="35" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="45" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="55" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="65" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="75" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="85" cy="15" r="3.6" fill="#2d6a5b"/><circle cx="95" cy="15" r="3.6" fill="#2d6a5b"/>
@@ -76,8 +88,8 @@
               </svg>
             </div>
           </div>
-          <p>Dark dots show the share of voters living in those districts. Dark squares show the share of seats those districts could elect. Each grid shows shares out of 100.</p>
-          <p>The voters who sued said that districts containing about 40% of the voting population could elect 63 of the 99 seats in the state House. <a href="https://www.govinfo.gov/content/pkg/USREPORTS-369/pdf/USREPORTS-369-186.pdf#page=90">Source: the voters’ figures as recounted in the dissent, p. 275</a>.</p>
+
+          <p><strong>Voters in less populated areas could elect a disproportionate share of the state House.</strong> The voters who sued said that districts containing about 40% of the voting population could elect 63 of the 99 seats in the state House (about 64%). <a href="https://www.govinfo.gov/content/pkg/USREPORTS-369/pdf/USREPORTS-369-186.pdf#page=90">Source: the voters’ figures as recounted in the dissent, p. 275</a>.</p>
         </figure>
       </section>
 
@@ -88,6 +100,7 @@
 
       <section class="case-reader-section" id="case-decision">
         <h2>What did the Court decide?</h2>
+        <aside class="case-holding"><strong>The Court said judges could hear the claim; it did not rule the map unconstitutional.</strong></aside>
         <p><mark class="case-key-point">The Supreme Court ruled 6–2 that a federal court could hear Baker’s claim.</mark> Drawing districts involves politics, but judges can still hear a claim that a map violates a constitutional right. A claim a court can hear is called <strong>justiciable</strong>. For voters in a state that still uses decades-old lines, <cite>Baker</cite> made it possible to bring their Equal Protection challenge in federal court.</p>
         <p>The Court sent the case back to the lower court to consider the voters’ claim. This ruling became a <strong>precedent</strong>—an earlier decision that guides later cases. Following precedent is called <strong>stare decisis</strong>. In a later unequal-representation challenge, a court could rely on Baker when deciding whether it could hear the case.</p>
         <figure class="case-opinion-quote">
@@ -98,7 +111,7 @@
 
       <section class="case-reader-section" id="case-not-decided">
         <h2>What question did the Court leave open?</h2>
-        <p><mark class="case-key-point">The Court left the question of whether Tennessee’s map violated the Constitution for further proceedings.</mark> It did not itself require equal populations or order a new district map. Two years later, <cite>Reynolds v. Sims</cite> (1964) established the “one person, one vote” rule for state legislatures: state legislative districts must have roughly equal populations.</p>
+        <p><mark class="case-key-point">The Court left the question of whether Tennessee’s map violated the Constitution for further proceedings.</mark> It did not itself require equal populations or order a new district map. <strong>Later—not Baker’s ruling:</strong> <cite>Reynolds v. Sims</cite> (1964) established the “one person, one vote” rule for state legislatures: state legislative districts must have roughly equal populations.</p>
       </section>
 
 

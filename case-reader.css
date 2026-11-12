@@ -102,3 +102,8 @@
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
 }
+
+/* Districting evidence: consistent measures and explicit decision limits. */
+.county-comparison{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:22px}.county-comparison>div{border-top:1px solid #b7c3ae;padding-top:18px}.county-comparison h3{font:500 27px/1.2 'Newsreader',Georgia,serif;margin:0 0 18px}.county-comparison h3 small{font:400 15px 'Public Sans',sans-serif;display:block;margin-top:7px}.county-number{display:block;font:500 43px/1.1 'Newsreader',Georgia,serif;color:#183630}.county-bar{height:14px;margin:18px 0;background:#d9dfd0}.county-bar span{display:block;height:100%;background:#226d61}.case-reader .case-source-note{font-size:14px;line-height:1.6}.case-evidence-question{border-top:1px solid #b7c3ae;padding-top:18px}.case-holding{border-left:3px solid #226d61;background:#e4ebdb;padding:20px 24px;margin:20px 0;font-size:1.1rem;line-height:1.65}@media(max-width:600px){.county-comparison{grid-template-columns:1fr}.county-number{font-size:38px}}@media print{.county-evidence{break-inside:avoid}.county-number{font-size:25pt}.case-holding{break-inside:avoid}}
+
+@media(min-width:601px){.county-comparison h3{min-height:56px}.case-reader .county-comparison>div>p:first-of-type{min-height:115px}.case-reader .county-comparison>div>p:nth-of-type(2){min-height:50px}}
