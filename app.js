@@ -101,10 +101,16 @@
   const federalismVisited = new Set();
   const glossaryEntries = new Map();
 
-  function addGlossaryEntry(term, symbol, definition, reference, unitIds) {
+  function addGlossaryEntry(term, symbol, definition, reference, unitIds, canonical = false) {
     const key = term.trim().toLowerCase();
     const existing = glossaryEntries.get(key);
     if (existing) {
+      // The full glossary is authoritative; legacy quick-reference wording
+      // must not override it when students browse All units.
+      if (canonical && !existing.canonical) {
+        existing.definition = definition;
+        existing.canonical = true;
+      }
       unitIds.forEach(unitId => {
         existing.units.add(unitId);
         existing.definitions.set(unitId, definition);
@@ -116,6 +122,7 @@
       term,
       symbol: symbol || term.trim().charAt(0).toUpperCase(),
       definition,
+      canonical,
       units: new Set(unitIds),
       definitions: new Map(unitIds.map(unitId => [unitId, definition])),
       references: new Set(reference.split(" · ").filter(Boolean))
@@ -130,7 +137,7 @@
       // The 2026 College Board framework renumbered and split many topics.
       // Group labels stay useful to students without surfacing stale topic IDs.
       const references = group;
-      addGlossaryEntry(entry[0], "", entry[1], references, [`gov-${unitIndex + 1}`]);
+      addGlossaryEntry(entry[0], "", entry[1], references, [`gov-${unitIndex + 1}`], true);
     }));
   });
   const glossaryWords = Array.from(glossaryEntries.values())

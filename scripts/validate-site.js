@@ -287,11 +287,11 @@ function validateSharedCourseExperience() {
     'styles-design-system.css?v=20260929-home-editorial-system',
     'voter-guide.css?v=20261103-ballot-moved',
     'course-data.js?v=20261112-executive',
-    'glossary-data.js?v=20261007-full-framework-audit',
+    'glossary-data.js?v=20261112-guided-notes',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
-    'app.js?v=20261103-ballot',
+    'app.js?v=20261112-glossary-notes',
     'data-view-link="home"',
     'data-view-link="units"',
     'data-view-link="foundations"',
@@ -642,8 +642,8 @@ function validateSharedCourseExperience() {
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
   if (!apTools.includes('data-core.js?v=20261007-canonical-glossary') ||
-      !apTools.includes('glossary-data.js?v=20261007-full-framework-audit') ||
-      apTools.indexOf('glossary-data.js?v=20261007-full-framework-audit') > apTools.indexOf('data-core.js?v=20261007-canonical-glossary') ||
+      !apTools.includes('glossary-data.js?v=20261112-guided-notes') ||
+      apTools.indexOf('glossary-data.js?v=20261112-guided-notes') > apTools.indexOf('data-core.js?v=20261007-canonical-glossary') ||
       !dataCoreSource.includes('const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [')) {
     errors.push('AP study tools must load the canonical course glossary before their application data.');
   }
@@ -663,32 +663,32 @@ function validateSharedCourseExperience() {
   if (!homepageApp.includes('replace(/^(?:a|an|the)\\s+/i, "")')) errors.push('Glossary terms beginning with an article must sort by the next word.');
   const federalismTerms = Object.fromEntries(glossaryUnits[0].groups.Federalism.map(function (entry) { return [entry[0], entry[1]]; }));
   const expectedFederalismTerms = {
-    'Federalism': 'Federalism, also called a federal system, divides power between the national and state governments.',
-    'National Government': 'The government of the entire United States.',
-    'State Government': 'The government of an individual state.',
-    'Enumerated Powers': 'Powers specifically listed in the Constitution for the national government.',
-    'Reserved Powers': 'Powers kept by the states under the Tenth Amendment.',
-    'Concurrent Powers': 'Powers shared by more than one level of government.',
-    'Tenth Amendment': 'Reserves powers not given to the national government to the states or the people.',
-    'Supremacy Clause': 'Makes the Constitution and valid federal laws the supreme law of the land.',
-    'Necessary and Proper Clause': 'Allows Congress to make laws needed to carry out its enumerated powers.',
-    'Implied Powers': 'Powers not specifically written in the Constitution but reasonably connected to an enumerated power.',
-    'Commerce Clause': 'Gives Congress power to regulate commerce among the states.',
-    'Commerce': 'Buying, selling, and exchanging goods and services.',
-    'Judicial Review': 'The power of courts to determine whether government actions violate the Constitution.',
-    'Grants-in-Aid': 'Federal money given to state or local governments for public programs.',
-    'Categorical Grants': 'Federal money for a specific purpose with detailed federal requirements.',
-    'Block Grants': 'Federal money for a broad purpose with greater state discretion.',
-    'Discretion': 'Freedom to decide how something will be done or how money will be used.',
-    'Federal Mandate': 'A federal requirement that state or local governments must follow.',
-    'Unfunded Mandate': 'A federal requirement without enough federal money to cover its cost.',
-    'Full Faith and Credit Clause': 'Requires states to recognize many official records and court decisions from other states.',
-    'Privileges and Immunities Clause': 'Protects citizens from being denied basic rights simply because they come from another state.',
-    'Extradition': 'Returning someone to the state where they have been charged with a crime.',
-    'Stakeholder': 'A person or group affected by or interested in a policy.',
-    'Access Point': 'A place in government where a stakeholder can try to influence policy.',
-    'Multiple Access Points': 'The many institutions and levels of government where people can try to influence policy.',
-    'Policy Variation': 'Different states making different policy choices.'
+    'Federalism': "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share.",
+    'National Government': "The government of the entire United States.",
+    'State Government': "The government of an individual state.",
+    'Enumerated Powers': "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
+    'Reserved Powers': "Powers the Constitution neither delegates to the national government nor prohibits to the states. The Tenth Amendment reserves them to the states or the people.",
+    'Concurrent Powers': "Powers shared by national and state governments, such as taxing, borrowing, creating courts, and making and enforcing laws.",
+    'Tenth Amendment': "The amendment reserving powers not delegated to the United States and not prohibited to the states to the states or the people. It does not cancel powers actually granted to the national government.",
+    'Supremacy Clause': "The Constitution, valid federal laws, and treaties take precedence over conflicting state law. Federal action must rest on constitutional authority to be supreme.",
+    'Necessary and Proper Clause': "The clause allowing Congress to choose reasonable means to carry out its enumerated powers. It supports implied powers, not a general power to legislate on any subject.",
+    'Implied Powers': "Powers not listed word for word in the Constitution but reasonably connected to carrying out an enumerated power. The Necessary and Proper Clause supports these powers.",
+    'Commerce Clause': "The clause giving Congress authority to regulate interstate commerce. Courts interpret how closely an activity must connect to commerce across state lines.",
+    'Commerce': "Buying, selling, and exchanging goods and services.",
+    'Judicial Review': "The power of courts to determine whether government actions violate the Constitution.",
+    'Grants-in-Aid': "Federal money given to state or local governments for public programs.",
+    'Categorical Grants': "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
+    'Block Grants': "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs.",
+    'Discretion': "Freedom to decide how something will be done or how money will be used.",
+    'Federal Mandate': "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
+    'Unfunded Mandate': "A federal requirement without enough federal money to cover its cost.",
+    'Full Faith and Credit Clause': "The Article IV clause requiring states to recognize one another’s public acts, records, and court decisions. It does not require states to adopt identical laws.",
+    'Privileges and Immunities Clause': "The Article IV clause generally preventing a state from denying citizens of other states basic rights or important economic opportunities simply because they come from elsewhere. Some resident–nonresident distinctions remain allowed.",
+    'Extradition': "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge.",
+    'Stakeholder': "A person or group affected by or interested in a policy.",
+    'Access Point': "A place where a person or group can try to influence a government decision. Access creates an opportunity to be heard, not a guaranteed result.",
+    'Multiple Access Points': "The different institutions and levels of government through which people and groups can try to influence policy. They create opportunities for participation as well as places where proposals can be delayed or stopped.",
+    'Policy Variation': 'Differences in state policies that allow responses to local conditions and experimentation but can also produce unequal rules, benefits, or protections across state lines.'
   };
   Object.entries(expectedFederalismTerms).forEach(function ([term, definition]) {
     if (federalismTerms[term] !== definition) errors.push('Unit 1 federalism glossary entry missing or changed: ' + term);
@@ -1703,24 +1703,24 @@ function validateUnit2WorksheetGlossary() {
   }
   const entries = Object.values(unit2.groups || {}).flat();
   const expected = [
-    ['Bicameral Legislature', 'A legislature with two houses, such as the U.S. Congress.'],
-    ['Constituency', 'A body of voters in a given area who elect a representative or senator.'],
-    ['Filibuster', 'A Senate tactic that prolongs debate to delay or prevent a vote on a bill.'],
-    ['Standing Committee', 'A permanent legislative committee that meets regularly.'],
+    ['Bicameral Legislature', "A legislature with two chambers. In Congress, the House represents people by population and the Senate represents states equally; both must pass identical text for a bill to advance to the president."],
+    ['Constituency', "The people a member of Congress represents: residents of a House district or an entire state for a senator. Eligible voters in that area elect the member."],
+    ['Filibuster', "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote."],
+    ['Standing Committee', "A permanent legislative group focused on a policy area. It holds hearings, gathers information, and studies and revises bills before a chamber votes."],
     ['Executive Privilege', 'A right claimed by presidents to keep certain conversations, records, and transcripts confidential from outside scrutiny.'],
     ['Bureaucratic Discretion', 'The power to decide how a law is implemented.'],
-    ['Enumerated Powers', 'Powers explicitly granted to the national government through the Constitution; also called express powers.'],
-    ['Implied Powers', 'Authority of the federal government beyond its expressed powers; considered necessary to carry out enumerated powers.'],
+    ['Enumerated Powers', "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces."],
+    ['Implied Powers', "Powers not listed word for word in the Constitution but reasonably connected to carrying out an enumerated power. The Necessary and Proper Clause supports these powers."],
     ['Power of the Purse', "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs."],
-    ['Mandatory Spending', 'Spending required by existing laws that is locked in the budget.'],
-    ['Discretionary Spending', 'Spending for programs and policies at the discretion of Congress and the president.'],
-    ['Cloture', 'A procedure through which senators can end a filibuster, provided three-fifths of senators (60) agree.'],
+    ['Mandatory Spending', "Spending that follows existing law, including programs such as Social Security, Medicare, and Medicaid. Congress must change the law to alter those commitments; they are not a permanently fixed share of the budget."],
+    ['Discretionary Spending', "Spending set through annual appropriations, including funding for defense, education, and infrastructure."],
+    ['Cloture', "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill."],
     ['Markup', 'A committee meeting where members debate a bill and propose or vote on changes before it moves forward.'],
-    ['Conference Committee', 'A special joint committee that reconciles different bills passed in the House and Senate so a single bill results.'],
-    ['Appropriation', 'The process through which congressional committees allocate funds to executive branch agencies.'],
-    ['Logrolling', 'Trading of votes on legislation by members of Congress to get their earmarks passed.'],
-    ['Gridlock', "A slowdown or halt in Congress's ability to legislate, especially due to partisanship."],
-    ['Executive Order', 'Policy directives issued by presidents that do not require congressional approval.'],
+    ['Conference Committee', "Members from both chambers who may negotiate a compromise when the House and Senate pass different bill versions. Each chamber must then approve the same final text."],
+    ['Appropriation', "A funding law that provides money for government agencies and programs. Budget targets alone do not fund agencies."],
+    ['Logrolling', "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy."],
+    ['Gridlock', "A lack of consensus that prevents Congress from acting on legislation. Polarization and divided government can contribute, but opposition does not always produce gridlock."],
+    ['Executive Order', "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have."],
     ['Bureaucratic Adjudication', 'When the federal bureaucracy settles disputes between parties that arise over the implementation of federal laws.'],
     ['Judicial Review', 'The authority of the Supreme Court to strike down a law or executive action if it conflicts with the Constitution; established in Marbury v. Madison.']
   ];
