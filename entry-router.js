@@ -10,6 +10,7 @@
     const number = lesson.match(/^lesson-1\.0?([1-5])$/)?.[1] || lesson.match(/^lesson-u1-10([1-5])-/)?.[1];
     if (number) destination = new URL('lesson-1-' + number + '.html', url);
   }
+  else if (route === 'gov-2' && ['lesson-2.3','lesson-2.03'].includes(lesson)) destination = new URL('lesson-2-3.html', url);
   else if (route === 'gov-2' && (lesson === 'lesson-2.2' || lesson === 'lesson-2.02')) destination = new URL('lesson-2-2.html', url);
   else if (route === 'gov-2' && ['unit2-concept-practice','lesson-2.1','lesson-2.01'].includes(lesson)) destination = new URL('lesson-2-1.html', url);
   else if (route === 'gov-2' && !lesson) destination = new URL('unit2.html', url);

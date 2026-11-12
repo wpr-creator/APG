@@ -115,6 +115,11 @@ window.COURSE_DATA = {
           { id: "u2-203-concept-practice", title: "TOPIC 2.3 CONCEPT PRACTICE", note: "PRACTICE · CASES · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-topic-23-concept-practice.html" },
           { id: "u2-202-districting-frq", title: "DISTRICTING FRQ PRACTICE", note: "GOOGLE DOC · TWO CASE COMPARISONS", group: "Practice", category: "assessment", url: "https://docs.google.com/document/d/1eVUxrwW_t8AhvMXx8suKBGoQMMMcpuZrWkr5HRJcsqE/edit?tab=t.0" },
           { id: "u2-202-districting-frq-scoring", title: "DISTRICTING FRQ SCORING GUIDE", note: "WEB GUIDE · SELF-CHECK", group: "Practice", category: "assessment", url: "unit2-districting-frq-scoring.html" }
+        ],
+        "2.3": [
+          { id: "u2-203-guided-notes", title: "2.3 GUIDED NOTES · THE ENERGETIC EXECUTIVE", note: "GOOGLE DOC", group: "Guided Notes & Handouts", category: "guided-notes", url: "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ/edit?tab=t.0" },
+          { id: "u2-203-lesson-slides", title: "2.3 LESSON SLIDES · THE ENERGETIC EXECUTIVE", group: "Lesson Slides", category: "guided-notes", url: "https://slides.com/westonrogers/apg-23-the-energetic-executive" },
+          { id: "u2-203-executive-practice", title: "THE ENERGETIC EXECUTIVE CONCEPT PRACTICE", note: "53 QUESTIONS · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-executive-concept-practice.html" }
         ]
       },
       lessons: [

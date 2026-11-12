@@ -1,0 +1,26 @@
+:root {
+  --black: #183630;
+  --slate: #226d61;
+  --white: #fffdf8;
+  --stone: #e2e8d9;
+  --stone-dark: #b6c2ac;
+  --focus: #226d61;
+  --type-label: 'IBM Plex Mono', monospace;
+  --type-size-label: 11px;
+  --type-size-deck: 18px;
+}
+.practice-intro {
+  width: min(980px, calc(100% - 3rem));
+  padding: 30px 0;
+  border-top: 0;
+  background: transparent;
+}
+.practice-intro h1 { margin-top: 15px; font-size: clamp(36px, 5vw, 62px); line-height: 1.05; }
+.practice-intro h1 span { color: var(--teal); }
+.practice-intro .eyebrow { color: var(--muted); }
+.practice-back { display: inline-block; margin-top: 18px; font-size: 14px; text-underline-offset: 4px; }
+.practice-card, .results { border-top: 1px solid var(--line); box-shadow: none; }
+.practice-card h2 { font-family: 'Public Sans', Arial, sans-serif; font-size: clamp(22px, 2.3vw, 29px); font-weight: 500; letter-spacing: -.015em; line-height: 1.45; }
+.choices button { font-weight: 500; }
+.feedback { background: #e9edde; }
+@media(max-width:760px) { .practice-intro { width: calc(100% - 2rem); padding: 25px 0; } }
