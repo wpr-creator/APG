@@ -38,3 +38,6 @@
   .results a { margin-left: 0; }
 }
 @media (prefers-reduced-motion: reduce) { .progress-track span { transition: none; } }
+
+/* Author display rules must not expose inactive feedback or navigation. */
+#practice [hidden] { display: none !important; }

@@ -13,4 +13,4 @@ Reviewed November 12, 2026. Unit 1 and Unit 2 definitions in `glossary-data.js` 
 
 The review revised 91 existing definitions and added 30 unit entries. Shared concepts can have unit-specific definitions; the All units view uses the first canonical definition instead of legacy quick-reference text. New districting entries preserve the distinctions between allowing a claim to proceed, applying strict scrutiny, and finally invalidating a map.
 
-Lesson 2.3 remains staged on its own branch. Including its vocabulary here does not open the lesson or its practice.
+Lesson 2.3 and its practice are available. Lesson 2.2 remains the current lesson in the course navigation.
