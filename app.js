@@ -2151,7 +2151,7 @@
     glossaryQuery = requested;
     document.getElementById("glossary-search").value = word[0];
     renderWords();
-    const source = Array.from(wordGrid.querySelectorAll(".word-card")).find(card => card.querySelector("h2")?.textContent === word[0].toUpperCase());
+    const source = Array.from(wordGrid.querySelectorAll(".word-card")).find(card => card.querySelector("h3")?.textContent.trim().toLowerCase() === word[0].trim().toLowerCase());
     if (source) openWord(word, source);
     url.searchParams.delete("glossary");
     history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
