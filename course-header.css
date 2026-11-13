@@ -50,3 +50,40 @@ body #course-search .search-detail{font:400 13px/1.6 'Public Sans',Arial,sans-se
 body #course-search h2{text-transform:none;letter-spacing:-.035em}
 @media(max-width:650px){body .preview-header .preview-nav{gap:4px}body .preview-header .preview-nav a{font-size:8.5px!important}body .preview-header .preview-nav .preview-exit{padding:0 8px;gap:4px}body .preview-header .preview-nav .apg-arrow{width:16px!important;height:16px!important;min-width:16px;flex-basis:16px;margin-inline:2px}body .course-search-button{padding-inline:6px}}
 @media print{body #course-search,body .course-search-button{display:none!important}}
+
+/* One baseline for course links and search; only an open ticket is emphasized. */
+body .preview-header .preview-nav { gap:16px; }
+body .preview-header .course-search-button {
+  gap:7px; padding:0; border:0; border-radius:0; background:transparent;
+  font:500 10px/1.4 'IBM Plex Mono',monospace; letter-spacing:.035em;
+}
+body .preview-header .course-search-button svg { flex:none; width:15px; height:15px; }
+body .preview-header .course-search-button:is(:hover,:focus-visible) span {
+  text-decoration:underline; text-underline-offset:5px;
+}
+body .preview-header .preview-nav .preview-exit {
+  padding:0 0 0 16px; margin-left:2px; gap:8px; min-height:44px;
+  background:transparent!important; color:#56665f!important;
+  border:0; border-left:1px solid #cbc9bc; border-radius:0;
+  white-space:nowrap;
+}
+body .preview-header .preview-nav .preview-exit[data-ticket-state="open"] {
+  padding:0 12px; border:1px solid #183630; border-radius:2px;
+  background:#183630!important; color:#f3f0e8!important;
+}
+body .preview-header .preview-exit .apg-arrow { width:18px!important; height:18px!important; flex-basis:18px; margin:0; }
+@media(max-width:1250px) and (min-width:1101px) {
+  body .preview-header .preview-nav { gap:12px; }
+  body .preview-header .preview-nav .preview-exit { padding-left:12px; }
+}
+@media(max-width:800px) {
+  body .preview-header .preview-nav { gap:11px; }
+  body .preview-header .preview-nav .preview-exit { padding-left:11px; }
+}
+@media(max-width:650px) {
+  body .preview-header .course-search-button { font-size:9px; gap:5px; }
+  body .preview-header .course-search-button svg { width:13px; height:13px; }
+  body .preview-header .preview-nav { gap:7px; }
+  body .preview-header .preview-nav .preview-exit { padding:0 0 0 8px; margin-left:0; }
+  body .preview-header .preview-nav .preview-exit[data-ticket-state="open"] { padding:0 9px; }
+}

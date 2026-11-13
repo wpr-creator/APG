@@ -153,3 +153,8 @@ Search material results follow the current unit releases, resource releases, sch
 unlocks, and URL overrides in `site-content.json` when the palette opens. The Materials
 filter narrows to lesson resources. Reader rows reserve a second column only when an
 annotation is present; unannotated passages keep their full reading width.
+
+The header search uses the same text-control treatment as the navigation.
+Exit Ticket is emphasized only when `site-content.json` has a nonblank
+`exitQuestion`; drafts do not open a ticket. Otherwise the header shows a quiet
+closed status while retaining the link to the course-wide ticket page.

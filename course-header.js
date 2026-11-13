@@ -14,22 +14,37 @@
     if (skip) document.body.prepend(skip);
   }
   const searchScript = document.createElement('script');
-  searchScript.src = new URL('course-search.js?v=20261113-resource-search',root).href;
+  searchScript.src = new URL('course-search.js?v=20261113-header-refinement',root).href;
   document.head.appendChild(searchScript);
   const resourceScript = document.createElement('script');
   resourceScript.src = new URL('resource-navigation.js?v=20261113-complete',root).href;
   document.head.appendChild(resourceScript);
-  header.querySelectorAll('.preview-exit').forEach(link => { link.href = new URL('exit-ticket.html',root).href; });
+  header.querySelectorAll('.preview-exit').forEach(link => {
+    link.href = new URL('exit-ticket.html',root).href;
+    link.dataset.ticketState = 'unknown';
+    link.textContent = 'EXIT TICKET';
+  });
   const routes = {'index.html':'Home','units.html':'Units','unit1.html':'Units','unit2.html':'Units','lesson-2-2.html':'Current lesson','lesson-2-1.html':'Lesson'};
   const filename = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.preview-nav a').forEach(link => {
     if ((routes[filename] === 'Units' || /^lesson-[12]-\d\.html$/.test(filename)) && new URL(link.href,location.href).pathname.endsWith('/units.html')) link.setAttribute('aria-current','page');
   });
   try {
-    if (document.readyState !== 'complete') await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, {once:true}));
+    if (document.readyState === 'loading') await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, {once:true}));
     const response = await fetch(new URL('site-content.json',root), {cache:'no-store'});
     if (!response.ok) return;
     const settings = await response.json();
+    const ticketOpen = typeof settings.exitQuestion === 'string' && settings.exitQuestion.trim().length > 0;
+    header.querySelectorAll('.preview-exit').forEach(link => {
+      link.dataset.ticketState = ticketOpen ? 'open' : 'closed';
+      link.textContent = ticketOpen ? 'EXIT TICKET' : 'EXIT TICKET CLOSED';
+      link.setAttribute('aria-label', ticketOpen ? 'Exit ticket: open' : 'Exit ticket: closed');
+      if (ticketOpen) {
+        const arrow = document.createElement('span');
+        arrow.textContent = '→'; arrow.setAttribute('aria-hidden','true');
+        link.appendChild(arrow);
+      }
+    });
     let unit = window.COURSE_DATA?.units.find(item => item.id === settings.currentUnit);
     let lesson = unit?.lessonTitles?.find(item => item[0] === settings.currentLesson);
     let contextDestination = null;

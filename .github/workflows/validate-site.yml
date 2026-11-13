@@ -49,6 +49,9 @@ jobs:
       - name: Test course navigation
         run: node scripts/test-course-navigation.js
 
+      - name: Test header ticket availability
+        run: node scripts/test-header-ticket-state.js
+
       - name: Test Article V activity
         run: node scripts/test-article-v.js
 

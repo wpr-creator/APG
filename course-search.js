@@ -5,7 +5,8 @@
   if (!nav || document.getElementById('course-search')) return;
   const button = document.createElement('button');
   button.className = 'course-search-button'; button.type = 'button';
-  button.textContent = 'SEARCH'; button.setAttribute('aria-haspopup','dialog');
+  button.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m15.5 15.5 5 5"></path></svg><span>SEARCH</span>';
+  button.setAttribute('aria-haspopup','dialog');
   button.setAttribute('aria-keyshortcuts','/');
   nav.insertBefore(button,nav.querySelector('.preview-exit'));
   const dialog = document.createElement('dialog'); dialog.id = 'course-search';
