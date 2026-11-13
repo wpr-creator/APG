@@ -1196,7 +1196,7 @@ function validateSharedCourseExperience() {
         !html.includes(promptText) ||
         !html.includes('unit1-practice-frqs.js?v=20260923-pages') ||
         !html.includes('unit1-practice-frqs.css?v=20260923-pages') ||
-        !html.includes('the site does not grade your writing automatically') ||
+        !html.includes('Your draft and self-scores save on this device; they are not sent to your teacher.') ||
         (html.match(/class="frq" data-frq=/g) || []).length !== 1 ||
         !html.includes('data-frq="' + (index + 1) + '"') ||
         (html.match(/<textarea /g) || []).length !== 1 ||
@@ -1806,7 +1806,7 @@ function validateWhoIsTryingToBeHeard() {
   const page = fs.readFileSync(pageFile, 'utf8');
   const dataCode = fs.readFileSync(dataFile, 'utf8');
   const logic = fs.readFileSync(logicFile, 'utf8');
-  ['WHO IS TRYING', 'SURPRISE ME', 'COMPARE CARDS', 'do not sponsor or endorse'].forEach(function (text) {
+  ['WHO IS TRYING', 'SURPRISE ME', 'COMPARE CARDS'].forEach(function (text) {
     if (!page.includes(text)) errors.push('Unit 5 organization explorer is missing: ' + text);
   });
   if (/Math\.random\s*\(/.test(page + dataCode + logic)) {

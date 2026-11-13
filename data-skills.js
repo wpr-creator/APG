@@ -878,7 +878,7 @@ var CLOSEREADING_LEVEL0 = {
   passages: [
     {
       title: "A New School Lunch Bill",
-      source: "Example passage (simplified, for practice)",
+      source: "Practice passage",
       simplify: "A senator's bill about free school breakfast passed the Senate after a committee vote and two days of debate.",
       chunks: [
         "A senator wrote a new bill about school lunches.",
@@ -903,7 +903,7 @@ var CLOSEREADING_LEVEL0 = {
     },
     {
       title: "Lowering the Voting Age",
-      source: "Example passage (simplified, for practice)",
+      source: "Practice passage",
       simplify: "The voting age used to be 21. People thought this was unfair to young men fighting in the Vietnam War, so in 1971 the 26th Amendment lowered the voting age to 18.",
       chunks: [
         "For a long time, Americans had to be 21 years old to vote.",
@@ -927,7 +927,7 @@ var CLOSEREADING_LEVEL0 = {
     },
     {
       title: "A New Mayor for Springfield",
-      source: "Example passage (simplified, for practice)",
+      source: "Practice passage",
       simplify: "Springfield elected a new mayor, Maria Torres, who promised to fix roads and build a park, and residents were excited about her plans.",
       chunks: [
         "Every city has a mayor.",
@@ -952,7 +952,7 @@ var CLOSEREADING_LEVEL0 = {
     },
     {
       title: "Alex and the School Newspaper",
-      source: "Example passage (simplified, for practice)",
+      source: "Practice passage",
       simplify: "Alex wrote an article criticizing his school's cafeteria food, and his teacher confirmed this was protected under free speech, which made Alex feel relieved and proud.",
       chunks: [
         "The First Amendment gives Americans the right to free speech.",
@@ -976,7 +976,7 @@ var CLOSEREADING_LEVEL0 = {
     },
     {
       title: "Mr. Chen's Jury Duty",
-      source: "Example passage (simplified, for practice)",
+      source: "Practice passage",
       simplify: "Mr. Chen was called for jury duty, felt nervous at first, and felt confident by the end of the trial after the jury decided the case.",
       chunks: [
         "When someone is chosen for jury duty, they must go to court.",
@@ -1087,7 +1087,7 @@ var CLOSEREADING_LEVEL1 = {
     // ---- PASSAGE 4: REAL CONTENT — official government form (generic placeholder name used) ----
     {
       title: "Notice to Appear (Form I-862)",
-      source: "U.S. Department of Homeland Security, Form I-862 (Notice to Appear) — official boilerplate language. \"Jane Doe\" is used as a generic placeholder name for classroom purposes; this is not a real case.",
+      source: "Form I-862, Notice to Appear — sample with a placeholder name.",
       simplify: "This is the official government form that starts the legal process to remove someone from the country. It says: the government believes you're not a citizen, it's charging you with being removable, and it's ordering you to show up in immigration court. It also warns you that anything you say can be used against you, and that you can hire your own lawyer — but the government won't provide or pay for one.",
       chunks: [
         "NOTICE TO APPEAR — In removal proceedings under section 240 of the Immigration and Nationality Act.",
@@ -1268,7 +1268,7 @@ var CLOSEREADING_LEVEL2 = {
     // ---- PASSAGE 5: REAL CONTENT — generic federal legal template ----
     {
       title: "Federal Plea Agreement",
-      source: "Generic federal plea agreement structure, based on standard language required under Rule 11 of the Federal Rules of Criminal Procedure. \"John Smith\" is a placeholder name for classroom purposes; this is not a real case.",
+      source: "Sample federal plea agreement — Federal Rules of Criminal Procedure, Rule 11.",
       simplify: "This document is the deal between a defendant and the federal government: the defendant agrees to plead guilty instead of going to trial, and in exchange, the government agrees to recommend a lighter sentence. The document also spells out exactly what rights the defendant is giving up, and warns that the judge doesn't have to accept the deal's sentencing recommendation.",
       chunks: [
         "UNITED STATES OF AMERICA v. JOHN SMITH — PLEA AGREEMENT (pursuant to Rule 11, Federal Rules of Criminal Procedure)",
