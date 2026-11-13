@@ -2,6 +2,8 @@
 #stimulus{margin:0 0 20px;font-size:14px;line-height:1.65;border-left:2px solid #a38d78;padding-left:14px}.table-scroll{overflow-x:auto}#stimulus table{border-collapse:collapse;width:100%;font-size:12px}#stimulus caption{text-align:left;padding-bottom:8px}#stimulus th,#stimulus td{border:1px solid var(--line);padding:8px;text-align:left}.pool-header{color:#f4ecdf}.pool-header a{text-shadow:0 1px 6px #293044}.scene-title h1,.scene-title p{color:#fff0d9;text-shadow:0 2px 20px #283b4b80}body{background:#737f99}.vignette{background:linear-gradient(180deg,#28304720,transparent 40%,#192e3c40)}
 .pool-location{display:block;font:400 .42em/1.5 'Newsreader',Georgia,serif;letter-spacing:.01em;margin-bottom:4px}
 
-.sound-toggle{display:flex;align-items:center;gap:8px;background:#faf5e6e6;color:var(--ink);border:1px solid #fff8;border-radius:30px;padding:7px 14px;font-size:12px;cursor:pointer}.sound-toggle input{width:16px;height:16px;margin:0;accent-color:var(--teal)}
+.sound-toggle{display:flex;align-items:center;gap:8px;background:#faf5e6e6;color:var(--ink);border:1px solid #fff8;border-radius:30px;padding:7px 14px;font-size:12px;cursor:pointer}
 
-.pool-controls #journal-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}.sound-toggle{min-height:44px;padding:8px 12px}.sound-toggle:has(input:checked){background:#dce8d5;border-color:#73927f}.sound-toggle svg{flex:none}
+.pool-controls #journal-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}.sound-toggle{min-height:44px;padding:8px 12px}.sound-toggle[aria-pressed="true"]{background:#dce8d5;border-color:#73927f}.sound-toggle svg{flex:none}
+
+.pool-controls .sound-toggle{width:44px;height:44px;padding:0;justify-content:center}.sound-toggle[aria-pressed="false"] .sound-waves,.sound-toggle[aria-pressed="true"] .sound-slash{display:none}
