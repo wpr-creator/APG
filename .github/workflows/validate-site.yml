@@ -60,3 +60,6 @@ jobs:
 
       - name: Test reading progress indicator
         run: node scripts/test-reading-progress.js
+
+      - name: Test Reflecting Pool question bank
+        run: node scripts/test-pool-questions.js
