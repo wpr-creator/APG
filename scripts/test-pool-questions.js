@@ -12,4 +12,4 @@ for(const [id,count] of Object.entries(expected)){assert.equal(practices[id].len
 const game=fs.readFileSync('reflecting-pool.js','utf8');assert(!game.includes('createOscillator'));assert(game.includes('park-ambience.m4a'));assert(!fs.readFileSync('reflecting-pool.html','utf8').includes('id="motion"'));
 console.log('Lesson pool routes passed: all seven complete banks, stimulus tables, field-recorded audio, and no pause control.');
 
-const poolHtml=fs.readFileSync('reflecting-pool.html','utf8');assert(!poolHtml.includes('id="sound"'));assert(poolHtml.includes('value="0"'));assert(game.includes('fieldAudio.volume=0'));
+const poolHtml=fs.readFileSync('reflecting-pool.html','utf8');assert(!poolHtml.includes('id="sound"'));assert(poolHtml.includes('id="ambient-sound" type="checkbox"'));assert(!poolHtml.includes('type="range"'));assert(!poolHtml.includes('type="checkbox" checked>Ambient sound'));assert(game.includes('fieldAudio.volume=0'));
