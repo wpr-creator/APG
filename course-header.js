@@ -8,7 +8,7 @@
     });
     header = document.createElement('header');
     header.className = 'preview-header';
-    header.innerHTML = `<div class="preview-header-inner"><a class="preview-brand" href="${new URL('index.html',root)}"><img src="${new URL('assets/capitol-mark.svg',root)}" width="38" height="38" alt=""><span><strong>Mr. Rogers</strong><small>AP Government &amp; Politics</small></span></a><a class="preview-current" hidden><small>CURRENT LESSON</small><span></span></a><nav class="preview-nav" aria-label="Course navigation"><a href="${new URL('units.html',root)}">UNITS</a><a href="${new URL('index.html#foundations',root)}">LIBRARY</a><a href="${new URL('index.html#words',root)}">GLOSSARY</a><a class="preview-exit" href="${new URL('exit-ticket.html',root)}">EXIT TICKET <span aria-hidden="true">↗</span></a></nav></div>`;
+    header.innerHTML = `<div class="preview-header-inner"><a class="preview-brand" href="${new URL('index.html',root)}"><img src="${new URL('assets/capitol-mark.svg',root)}" width="38" height="38" alt=""><span><strong>Mr. Rogers</strong><small>AP Government &amp; Politics</small></span></a><a class="preview-current" hidden><small>CURRENT LESSON</small><span></span></a><nav class="preview-nav" aria-label="Course navigation"><a href="${new URL('units.html',root)}">UNITS</a><a href="${new URL('index.html#foundations',root)}">LIBRARY</a><a href="${new URL('index.html#words',root)}">GLOSSARY</a><a href="${new URL('reflecting-pool.html',root)}">REVIEW</a><a class="preview-exit" href="${new URL('exit-ticket.html',root)}">EXIT TICKET <span aria-hidden="true">↗</span></a></nav></div>`;
     document.body.prepend(header);
     const skip = document.querySelector('.skip-link, .skip');
     if (skip) document.body.prepend(skip);

@@ -13,3 +13,5 @@ const game=fs.readFileSync('reflecting-pool.js','utf8');assert(!game.includes('c
 console.log('Lesson pool routes passed: all seven complete banks, stimulus tables, field-recorded audio, and no pause control.');
 
 const poolHtml=fs.readFileSync('reflecting-pool.html','utf8');assert(!poolHtml.includes('id="sound"'));assert(poolHtml.includes('id="ambient-sound" type="checkbox"'));assert(!poolHtml.includes('type="range"'));assert(!poolHtml.includes('type="checkbox" checked>Ambient sound'));assert(game.includes('fieldAudio.volume=0'));
+
+assert(!/<input[^>]*\bchecked\b/.test(poolHtml),'Review chooser starts with no selections');assert(poolHtml.includes('Unit 1 scenarios')&&poolHtml.includes('Unit 2 scenarios'));assert(!poolHtml.includes('Scenarios · Units 1–2'));

@@ -3,3 +3,5 @@
 .pool-location{display:block;font:400 .42em/1.5 'Newsreader',Georgia,serif;letter-spacing:.01em;margin-bottom:4px}
 
 .sound-toggle{display:flex;align-items:center;gap:8px;background:#faf5e6e6;color:var(--ink);border:1px solid #fff8;border-radius:30px;padding:7px 14px;font-size:12px;cursor:pointer}.sound-toggle input{width:16px;height:16px;margin:0;accent-color:var(--teal)}
+
+.pool-controls #journal-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}.sound-toggle{min-height:44px;padding:8px 12px}.sound-toggle:has(input:checked){background:#dce8d5;border-color:#73927f}.sound-toggle svg{flex:none}
