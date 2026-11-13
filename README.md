@@ -106,3 +106,17 @@ presentation. Gold highlights retain their meaning on annotated documents.
 headings and provides a brief native cross-document fade in supporting browsers.
 Reduced-motion preferences disable the fade and smooth scrolling. Other browsers
 continue to use normal links; no navigation interception or new dependency is used.
+
+## Resource cards and wayfinding
+
+`resource-navigation.js`, loaded by the shared header, adds breadcrumbs to units,
+lessons, and readers, and section shortcuts to the eight canonical lesson pages.
+Lesson resource cards show their actual destination type and tab behavior.
+Destination labels follow resource URL overrides and availability changes;
+unavailable cards retain their release controls. External lesson resources open
+in a new tab; internal resources stay in the same tab. Styling lives in
+`resource-navigation.css`. This enhancement does not save student preferences.
+
+The unit lesson list summarizes resource types and marks the current lesson
+using `site-content.json`. The shared header also preserves canonical Lesson 2.3
+links for current-lesson and contextual return navigation.

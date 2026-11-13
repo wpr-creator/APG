@@ -16,11 +16,14 @@
   const searchScript = document.createElement('script');
   searchScript.src = new URL('course-search.js?v=20261113',root).href;
   document.head.appendChild(searchScript);
+  const resourceScript = document.createElement('script');
+  resourceScript.src = new URL('resource-navigation.js?v=20261113-resources',root).href;
+  document.head.appendChild(resourceScript);
   header.querySelectorAll('.preview-exit').forEach(link => { link.href = new URL('exit-ticket.html',root).href; });
   const routes = {'index.html':'Home','units.html':'Units','unit1.html':'Units','unit2.html':'Units','lesson-2-2.html':'Current lesson','lesson-2-1.html':'Lesson'};
   const filename = location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.preview-nav a').forEach(link => {
-    if (routes[filename] === 'Units' && new URL(link.href,location.href).pathname.endsWith('/units.html')) link.setAttribute('aria-current','page');
+    if ((routes[filename] === 'Units' || /^lesson-[12]-\d\.html$/.test(filename)) && new URL(link.href,location.href).pathname.endsWith('/units.html')) link.setAttribute('aria-current','page');
   });
   try {
     if (document.readyState !== 'complete') await new Promise(resolve => document.addEventListener('DOMContentLoaded', resolve, {once:true}));
@@ -41,7 +44,7 @@
         if (sourceLesson || sourceResource) {
           unit = sourceUnit; lesson = sourceLesson || [saved.lesson,sourceResource.lesson];
           contextLabel = 'BACK TO LESSON';
-          contextDestination = sourceUnit.id === 'gov-1' && sourceLesson ? 'lesson-' + sourceLesson[0].replace('.', '-') + '.html' : sourceLesson?.[0] === '2.1' ? 'lesson-2-1.html' : sourceLesson?.[0] === '2.2' ? 'lesson-2-2.html' : 'index.html?lesson=' + encodeURIComponent(saved.lesson) + '#' + saved.unit;
+          contextDestination = sourceUnit.id === 'gov-1' && sourceLesson ? 'lesson-' + sourceLesson[0].replace('.', '-') + '.html' : sourceLesson?.[0] === '2.1' ? 'lesson-2-1.html' : sourceLesson?.[0] === '2.2' ? 'lesson-2-2.html' : sourceLesson?.[0] === '2.3' ? 'lesson-2-3.html' : 'index.html?lesson=' + encodeURIComponent(saved.lesson) + '#' + saved.unit;
         }
       }
     } catch (_) {}
@@ -49,10 +52,10 @@
     if (!current) return;
     if (!lesson) { current.hidden = true; return; }
     current.querySelector('small').textContent = contextLabel;
-    const destination = contextDestination || (unit.id === 'gov-1' ? 'lesson-' + lesson[0].replace('.', '-') + '.html' : lesson[0] === '2.2' ? 'lesson-2-2.html' : lesson[0] === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent('lesson-' + lesson[0]) + '#' + unit.id);
+    const destination = contextDestination || (unit.id === 'gov-1' ? 'lesson-' + lesson[0].replace('.', '-') + '.html' : lesson[0] === '2.2' ? 'lesson-2-2.html' : lesson[0] === '2.1' ? 'lesson-2-1.html' : lesson[0] === '2.3' ? 'lesson-2-3.html' : 'course-tools.html?lesson=' + encodeURIComponent('lesson-' + lesson[0]) + '#' + unit.id);
     current.href = new URL(destination,root).href;
     current.hidden = false;
     const title = current.querySelector('span'); title.textContent = (lesson[0].startsWith('lesson-') ? lesson[1] : lesson[0] + ' · ' + lesson[1]);const arrow=document.createElement('span');arrow.textContent=contextLabel === 'BACK TO LESSON' ? '←' : '→';arrow.setAttribute('aria-hidden','true');title.appendChild(arrow);
-    if (filename === 'lesson-2-2.html' && lesson[0] === '2.2') current.setAttribute('aria-current','page');
+    if (filename === 'lesson-' + lesson[0].replace('.', '-') + '.html') current.setAttribute('aria-current','page');
   } catch (_) { /* Static navigation remains available. */ }
 })();

@@ -30,7 +30,14 @@
       link.href = unitId === 'gov-1' ? 'lesson-' + number.replace('.', '-') + '.html' : ['2.2','2.3'].includes(number) ? 'lesson-' + number.replace('.', '-') + '.html' : number === '2.1' ? 'lesson-2-1.html' : 'course-tools.html?lesson=' + encodeURIComponent(number === '2.1' ? 'unit2-concept-practice' : 'lesson-' + number) + '#gov-2';
       const label = document.createElement('span'); label.className='lesson-no'; label.textContent=number;
       const copy = document.createElement('div'); const heading=document.createElement('h3');heading.textContent=title;
-      const count=document.createElement('p');count.textContent=resources.length+' resources';copy.append(heading,count);
+      const count=document.createElement('p');
+      const labels=[];
+      if(resources.some(r=>/notes|handout/i.test(r.title)))labels.push('Notes');
+      if(resources.some(r=>/slides/i.test(r.title)))labels.push('Slides');
+      if(resources.some(r=>/docs\/|cases\//.test(r.url||'')))labels.push('Readings');
+      if(resources.some(r=>/practice|frq/i.test(r.title)))labels.push('Practice');
+      count.textContent=labels.join(' · ') || 'Lesson materials';copy.append(heading,count);
+      if(settings.currentUnit===unitId && settings.currentLesson===number){const badge=document.createElement('span');badge.className='lesson-current-badge';badge.textContent='CURRENT LESSON';copy.prepend(badge);}
       const action=document.createElement('span');action.className='open-label';action.textContent='OPEN LESSON →';copy.appendChild(action);
       const arrow=document.createElement('span');arrow.className='lesson-arrow';arrow.setAttribute('aria-hidden','true');arrow.textContent='↗';link.append(label,copy,arrow);index.appendChild(link);
     });
