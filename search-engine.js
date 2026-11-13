@@ -19,10 +19,21 @@
       const title=normalize(entry.title),all=title+' '+normalize(entry.detail),words=title.split(' '),terms=[];let approximate=false;
       for(const token of tokens){if(all.includes(token)){terms.push(token);continue;}const correction=words.find(word=>near(token,word));if(!correction)return null;terms.push(correction);approximate=true;}
       const rankedQuery=approximate?terms.join(' '):query;
-      const score=(title===rankedQuery?100:title.startsWith(rankedQuery)&&rankedQuery?60:title.includes(rankedQuery)&&rankedQuery?40:10)-(approximate?8:0);
+      const score=(title===rankedQuery?100:title.startsWith(rankedQuery)&&rankedQuery?60:title.includes(rankedQuery)&&rankedQuery?40:10)-(approximate?8:0)+(entry.type==='Lesson'&&/^\d\.\d$/.test(query)&&title.startsWith(query+' ')?20:0);
       return {entry,score,approximate,terms};
     }).filter(Boolean).sort((a,b)=>b.score-a.score||a.entry.title.localeCompare(b.entry.title));
   }
-  root.APG_SEARCH={search,normalize};
+  // Resolve releases and teacher URL overrides when the search is opened.
+  function availableEntries(entries,settings,now=Date.now()) {
+    return entries.flatMap(entry=>{
+      if(entry.type!=='Resource')return [entry];
+      if(settings.currentUnit!==entry.unitId&&!settings.unitUnlocks?.[entry.unitId])return [];
+      const scheduled=Date.parse(settings.assignmentUnlockAt?.[entry.resourceId]||'');
+      if(entry.releaseControlled&&!settings.assignmentUnlocks?.[entry.resourceId]&&!(Number.isFinite(scheduled)&&scheduled<=now))return [];
+      const url=settings.assignmentUrls?.[entry.resourceId]??entry.url;
+      return url?[{...entry,url}]:[];
+    });
+  }
+  root.APG_SEARCH={search,normalize,availableEntries};
   if(typeof module!=='undefined')module.exports=root.APG_SEARCH;
 })(typeof window!=='undefined'?window:globalThis);

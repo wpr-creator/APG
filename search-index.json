@@ -6,10 +6,160 @@
     "detail": "How do founding texts express democratic ideals?"
   },
   {
+    "type": "Resource",
+    "title": "1.1 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0/edit?usp=sharing",
+    "detail": "The founding promise · GUIDED NOTES",
+    "resourceId": "u1-101-guided-notes",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · LESSON SLIDES",
+    "url": "slides/unit-1/lesson-01/",
+    "detail": "The founding promise · SLIDE REVIEW",
+    "resourceId": "u1-101-slides",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · DEMOCRATIC IDEALS REVIEW",
+    "url": "https://wpr-creator.github.io/GOV/founding-ideals-review.html",
+    "detail": "The founding promise · INTERACTIVE REVIEW",
+    "resourceId": "u1-101-democratic-ideals-review",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · DECLARATION ANNOTATION",
+    "url": "https://docs.google.com/document/d/1mo5aAq_GjYzHbtitMIpRZPDsaUxx3Fvbg-jzP_i5JEU/edit?tab=t.0",
+    "detail": "The founding promise · ASSIGNMENT",
+    "resourceId": "u1-101-declaration-annotation",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · GETTYSBURG REDUX",
+    "url": "https://docs.google.com/document/d/124osPO5NyPwIFD2SI5m4Lf9iAJffpMUndl-8gOKrUug/edit?tab=t.0",
+    "detail": "The founding promise · PROJECT",
+    "resourceId": "u1-101-gettysburg-redux",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · 1.1–1.2 CONCEPT PRACTICE",
+    "url": "unit1-concept-practice.html",
+    "detail": "The founding promise · PRACTICE · IMMEDIATE FEEDBACK",
+    "resourceId": "u1-concept-practice",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · DECLARATION OF INDEPENDENCE",
+    "url": "docs/declaration-of-independence.html",
+    "detail": "The founding promise · READ THE TEXT",
+    "resourceId": "u1-101-declaration",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · PREAMBLE TO THE CONSTITUTION",
+    "url": "docs/constitution-preamble.html",
+    "detail": "The founding promise · READ THE TEXT",
+    "resourceId": "u1-101-preamble",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.1 · GETTYSBURG ADDRESS",
+    "url": "docs/gettysburg-address.html",
+    "detail": "The founding promise · READ THE TEXT",
+    "resourceId": "u1-101-gettysburg",
+    "unitId": "gov-1",
+    "lesson": "1.1",
+    "releaseControlled": true
+  },
+  {
     "type": "Lesson",
     "title": "1.2 · Democracy, filtered",
     "url": "lesson-1-2.html",
     "detail": "How does representative democracy decide whose voices matter?"
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs/edit?usp=sharing",
+    "detail": "Democracy, filtered · GUIDED NOTES",
+    "resourceId": "u1-102-guided-notes",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · LESSON SLIDES",
+    "url": "slides/unit-1/lesson-02/",
+    "detail": "Democracy, filtered · SLIDE REVIEW",
+    "resourceId": "u1-102-slides",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · DEMOCRACY, FILTERED",
+    "url": "democracy-filtered.html",
+    "detail": "Democracy, filtered · ASSIGNMENT · INTERACTIVE LESSON",
+    "resourceId": "u1-102-democracy-filtered",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · 1.1–1.2 CONCEPT PRACTICE",
+    "url": "unit1-concept-practice.html",
+    "detail": "Democracy, filtered · PRACTICE · IMMEDIATE FEEDBACK",
+    "resourceId": "u1-concept-practice",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · FEDERALIST NO. 10",
+    "url": "docs/federalist-10.html",
+    "detail": "Democracy, filtered · READ THE TEXT",
+    "resourceId": "u1-102-federalist-10",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.2 · BRUTUS NO. 1",
+    "url": "docs/brutus-1.html",
+    "detail": "Democracy, filtered · READ THE TEXT",
+    "resourceId": "u1-102-brutus-1",
+    "unitId": "gov-1",
+    "lesson": "1.2",
+    "releaseControlled": true
   },
   {
     "type": "Lesson",
@@ -18,10 +168,130 @@
     "detail": "How did the United States replace a weak national government without creating another tyranny?"
   },
   {
+    "type": "Resource",
+    "title": "1.3 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs/edit?tab=t.0#heading=h.5rj5ikozzn3j",
+    "detail": "The history lesson · GUIDED NOTES",
+    "resourceId": "u1-103-guided-notes",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.3 · LESSON SLIDES",
+    "url": "slides/unit-1/lesson-03/",
+    "detail": "The history lesson · SLIDE REVIEW",
+    "resourceId": "u1-103-slides",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.3 · THE HISTORY LESSON",
+    "url": "history-lesson.html",
+    "detail": "The history lesson · INTERACTIVE LESSON",
+    "resourceId": "u1-103-history-lesson",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.3 · 1.3–1.5 CONCEPT PRACTICE",
+    "url": "unit1-history-concept-practice.html",
+    "detail": "The history lesson · PRACTICE · IMMEDIATE FEEDBACK",
+    "resourceId": "u1-103-105-concept-practice",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.3 · ARTICLES OF CONFEDERATION",
+    "url": "docs/articles-of-confederation.html",
+    "detail": "The history lesson · READ THE TEXT",
+    "resourceId": "u1-103-articles",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.3 · UNITED STATES CONSTITUTION",
+    "url": "docs/constitution.html",
+    "detail": "The history lesson · READ THE TEXT",
+    "resourceId": "u1-103-constitution",
+    "unitId": "gov-1",
+    "lesson": "1.3",
+    "releaseControlled": true
+  },
+  {
     "type": "Lesson",
     "title": "1.4 · Ambition checks ambition",
     "url": "lesson-1-4.html",
     "detail": "How does constitutional friction prevent tyranny?"
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI/edit?tab=t.0#heading=h.9ydiq983ft3c",
+    "detail": "Ambition checks ambition · GUIDED NOTES",
+    "resourceId": "u1-104-guided-notes",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · LESSON SLIDES",
+    "url": "slides/unit-1/lesson-04/",
+    "detail": "Ambition checks ambition · SLIDE REVIEW",
+    "resourceId": "u1-104-slides",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · ARTICLE V EXPLAINED",
+    "url": "changing-the-constitution.html",
+    "detail": "Ambition checks ambition · INTERACTIVE ACTIVITY",
+    "resourceId": "u1-104-changing-constitution",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · CONCEPT PRACTICE",
+    "url": "unit1-topic-16-concept-practice.html",
+    "detail": "Ambition checks ambition · PRACTICE · IMMEDIATE FEEDBACK",
+    "resourceId": "u1-16-concept-practice",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · CONSTITUTIONAL AMENDMENTS",
+    "url": "unit1-practice-frqs.html",
+    "detail": "Ambition checks ambition · CONCEPT APPLICATION · WRITE & SELF-SCORE",
+    "resourceId": "u1-practice-frqs",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.4 · FEDERALIST NO. 51",
+    "url": "docs/federalist-51.html",
+    "detail": "Ambition checks ambition · READ THE TEXT",
+    "resourceId": "u1-104-federalist-51",
+    "unitId": "gov-1",
+    "lesson": "1.4",
+    "releaseControlled": true
   },
   {
     "type": "Lesson",
@@ -30,10 +300,170 @@
     "detail": "What is federalism, and how is government power divided?"
   },
   {
+    "type": "Resource",
+    "title": "1.5 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY/edit?usp=sharing",
+    "detail": "…but a composition of both. · GUIDED NOTES",
+    "resourceId": "u1-105-guided-notes",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · LESSON SLIDES",
+    "url": "slides/unit-1/lesson-05/",
+    "detail": "…but a composition of both. · SLIDE REVIEW",
+    "resourceId": "u1-105-slides",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · 1.7–1.9 CONCEPT PRACTICE",
+    "url": "unit1-topic-17-19-concept-practice.html",
+    "detail": "…but a composition of both. · PRACTICE · IMMEDIATE FEEDBACK",
+    "resourceId": "u1-17-19-concept-practice",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · THE FEDERAL ROLE IN EDUCATION",
+    "url": "unit1-education-frq.html",
+    "detail": "…but a composition of both. · ARGUMENT ESSAY · WRITE & SELF-SCORE",
+    "resourceId": "u1-education-frq",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · FEDERALISM'S DESIGN",
+    "url": "unit1-federalism-frq.html",
+    "detail": "…but a composition of both. · ARGUMENT ESSAY · WRITE & SELF-SCORE",
+    "resourceId": "u1-federalism-frq",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · FEDERALIST NO. 39",
+    "url": "docs/federalist-39.html",
+    "detail": "…but a composition of both. · READ THE TEXT",
+    "resourceId": "u1-105-federalist-39",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · THE CONSTITUTIONAL BOUNDARY",
+    "url": "docs/federalism-clauses.html",
+    "detail": "…but a composition of both. · ARTICLE I · ARTICLE VI · TENTH AMENDMENT",
+    "resourceId": "u1-105-federalism-clauses",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · DIVISION OF POWERS",
+    "url": "division-of-powers.html",
+    "detail": "…but a composition of both. · TEXTBOOK DIAGRAM · NATIONAL · CONCURRENT · STATE",
+    "resourceId": "u1-105-division-of-powers",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · MCCULLOCH v. MARYLAND",
+    "url": "cases/mcculloch-v-maryland.html",
+    "detail": "…but a composition of both. · REQUIRED CASE · NATIONAL POWER",
+    "resourceId": "u1-105-mcculloch",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "1.5 · UNITED STATES v. LOPEZ",
+    "url": "cases/us-v-lopez.html",
+    "detail": "…but a composition of both. · REQUIRED CASE · LIMITS ON NATIONAL POWER",
+    "resourceId": "u1-105-lopez",
+    "unitId": "gov-1",
+    "lesson": "1.5",
+    "releaseControlled": true
+  },
+  {
     "type": "Lesson",
     "title": "2.1 · Two houses, one Congress",
     "url": "lesson-2-1.html",
     "detail": "How does the structure of Congress shape the way national policy is made?"
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · GUIDED NOTES",
+    "url": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU/edit?tab=t.0#heading=h.ysjymt4wwmxa",
+    "detail": "Two houses, one Congress · GOOGLE DOC · Guided Notes & Handouts",
+    "resourceId": "u2-201-guided-notes",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · LESSON SLIDES",
+    "url": "https://slides.com/westonrogers/apg-201-congress",
+    "detail": "Two houses, one Congress · Lesson Slides",
+    "resourceId": "u2-201-lesson-slides",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · CONGRESS IN FOUR FRAMES",
+    "url": "unit2-congress-in-four-frames.html",
+    "detail": "Two houses, one Congress · GUIDED NOTES · ANSWER KEY · 4 DIAGRAMS · Guided Notes & Handouts",
+    "resourceId": "u2-201-congress-key",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · 2.1–2.2 CONCEPT PRACTICE",
+    "url": "unit2-concept-practice.html",
+    "detail": "Two houses, one Congress · PRACTICE · IMMEDIATE FEEDBACK · Practice",
+    "resourceId": "u2-21-22-concept-practice",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · FROM BILL TO LAW",
+    "url": "assets/handouts/unit2/from-bill-to-law.pdf",
+    "detail": "Two houses, one Congress · FOCUSED LESSON · PDF · Focused Lessons",
+    "resourceId": "u2-201-bill-to-law-notes",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.1 · FOLLOW THE MONEY",
+    "url": "assets/handouts/unit2/follow-the-money.pdf",
+    "detail": "Two houses, one Congress · FOCUSED LESSON · PDF · Focused Lessons",
+    "resourceId": "u2-201-follow-the-money-notes",
+    "unitId": "gov-2",
+    "lesson": "2.1",
+    "releaseControlled": false
   },
   {
     "type": "Lesson",
@@ -42,10 +472,120 @@
     "detail": "How do districts and political pressures shape representation in Congress?"
   },
   {
+    "type": "Resource",
+    "title": "2.2 · GUIDED NOTES · WHOSE CONGRESS?",
+    "url": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4/edit?pli=1&tab=t.0#heading=h.pbzv3ae5cdsv",
+    "detail": "Whose Congress? · GOOGLE DOC · Guided Notes & Handouts",
+    "resourceId": "u2-202-guided-notes",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.2 · LESSON SLIDES · WHOSE CONGRESS?",
+    "url": "https://slides.com/westonrogers/apg-22-whose",
+    "detail": "Whose Congress? · Lesson Slides",
+    "resourceId": "u2-202-lesson-slides",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.2 · TOPIC 2.3 CONCEPT PRACTICE",
+    "url": "unit2-topic-23-concept-practice.html",
+    "detail": "Whose Congress? · PRACTICE · CASES · IMMEDIATE FEEDBACK · Practice",
+    "resourceId": "u2-203-concept-practice",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": true
+  },
+  {
+    "type": "Resource",
+    "title": "2.2 · GERRYMANDER",
+    "url": "https://gametheorytest.com/gerry/game/",
+    "detail": "Whose Congress? · A Voting District Puzzle Game · Practice",
+    "resourceId": "u2-202-gerrymander-game",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.2 · DISTRICTING FRQ PRACTICE",
+    "url": "https://docs.google.com/document/d/1eVUxrwW_t8AhvMXx8suKBGoQMMMcpuZrWkr5HRJcsqE/edit?tab=t.0",
+    "detail": "Whose Congress? · GOOGLE DOC · TWO CASE COMPARISONS · Practice",
+    "resourceId": "u2-202-districting-frq",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.2 · DISTRICTING FRQ SCORING GUIDE",
+    "url": "unit2-districting-frq-scoring.html",
+    "detail": "Whose Congress? · WEB GUIDE · SELF-CHECK · Practice",
+    "resourceId": "u2-202-districting-frq-scoring",
+    "unitId": "gov-2",
+    "lesson": "2.2",
+    "releaseControlled": false
+  },
+  {
     "type": "Lesson",
     "title": "2.3 · The Energetic Executive.",
     "url": "lesson-2-3.html",
     "detail": "How can a president lead decisively without opening the door to tyranny?"
+  },
+  {
+    "type": "Resource",
+    "title": "2.3 · GUIDED NOTES · THE ENERGETIC EXECUTIVE",
+    "url": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ/edit?tab=t.0",
+    "detail": "The Energetic Executive. · GOOGLE DOC · Guided Notes & Handouts",
+    "resourceId": "u2-203-guided-notes",
+    "unitId": "gov-2",
+    "lesson": "2.3",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.3 · LESSON SLIDES · THE ENERGETIC EXECUTIVE",
+    "url": "https://slides.com/westonrogers/apg-23-the-energetic-executive",
+    "detail": "The Energetic Executive. · Lesson Slides",
+    "resourceId": "u2-203-lesson-slides",
+    "unitId": "gov-2",
+    "lesson": "2.3",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.3 · FEDERALIST NO. 70",
+    "url": "docs/federalist-70.html",
+    "detail": "The Energetic Executive. · ENERGY · UNITY · ACCOUNTABILITY · Readings & Explanations",
+    "resourceId": "u2-203-federalist-70",
+    "unitId": "gov-2",
+    "lesson": "2.3",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.3 · THE PRESIDENTIAL TOOLBOX",
+    "url": "presidential-tools.html",
+    "detail": "The Energetic Executive. · POWERS · PROCEDURES · LIMITS · Readings & Explanations",
+    "resourceId": "u2-203-presidential-tools",
+    "unitId": "gov-2",
+    "lesson": "2.3",
+    "releaseControlled": false
+  },
+  {
+    "type": "Resource",
+    "title": "2.3 · THE ENERGETIC EXECUTIVE CONCEPT PRACTICE",
+    "url": "unit2-executive-concept-practice.html",
+    "detail": "The Energetic Executive. · 53 QUESTIONS · IMMEDIATE FEEDBACK · Practice",
+    "resourceId": "u2-203-executive-practice",
+    "unitId": "gov-2",
+    "lesson": "2.3",
+    "releaseControlled": true
   },
   {
     "type": "Case",

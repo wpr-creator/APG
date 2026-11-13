@@ -86,10 +86,11 @@ Unit 1 uses `unit1.html` and `lesson-1-1.html` through `lesson-1-5.html` for stu
 
 Use SEARCH in the shared header or press `/` outside a form field. Arrow keys
 move through results, Enter opens a result, and Escape closes the palette. Search
-covers lesson pages, case guides, document readers, and glossary terms. It loads
+covers lesson pages, their notes/slides/practice and other resource cards, case
+guides, document readers, and glossary terms. It loads
 its index on demand and does not store queries or student progress.
 
-After changing lesson titles, reader titles, or glossary data, run
+After changing lesson titles, resource cards, course data, reader titles, or glossary data, run
 `node scripts/build-search-index.js`. CI checks index freshness and destinations
 with `node scripts/build-search-index.js --check`. Shared search code lives in
 `course-search.js`; styling is in `course-header.css`. `editorial-polish.css`
@@ -147,3 +148,8 @@ is included in the printed output by `resource-navigation.js`.
 Readers without an existing contents menu also get links to their section headings
 when at least three sections are present, including the ten amendments reader.
 Generated anchors avoid collisions and keep existing anchors intact.
+
+Search material results follow the current unit releases, resource releases, scheduled
+unlocks, and URL overrides in `site-content.json` when the palette opens. The Materials
+filter narrows to lesson resources. Reader rows reserve a second column only when an
+annotation is present; unannotated passages keep their full reading width.

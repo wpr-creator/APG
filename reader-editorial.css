@@ -80,3 +80,6 @@ body[data-library-reader] .explainer{display:grid;grid-template-columns:1fr 1fr}
 }
 body[data-library-reader] [id^="reader-section-"]{scroll-margin-top:145px}
 @media(max-width:760px){body[data-library-reader] [id^="reader-section-"]{scroll-margin-top:24px}}
+
+/* Reserve annotation space only when a passage actually has an annotation. */
+body[data-library-reader] :is(.doc-passage-row,.doc-row,.doc-paragraph,.passage):not(:has(>.doc-margin,>.doc-annotation,>.support)){grid-template-columns:minmax(0,1fr)!important}

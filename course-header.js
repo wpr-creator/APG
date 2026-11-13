@@ -14,7 +14,7 @@
     if (skip) document.body.prepend(skip);
   }
   const searchScript = document.createElement('script');
-  searchScript.src = new URL('course-search.js?v=20261113-complete',root).href;
+  searchScript.src = new URL('course-search.js?v=20261113-resource-search',root).href;
   document.head.appendChild(searchScript);
   const resourceScript = document.createElement('script');
   resourceScript.src = new URL('resource-navigation.js?v=20261113-complete',root).href;
