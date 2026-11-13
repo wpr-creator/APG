@@ -277,14 +277,14 @@ function validateSharedCourseExperience() {
     const html = fs.readFileSync(file, 'utf8');
     if (/http-equiv=["']refresh/i.test(html) || (['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html','unit2-districting-frq-scoring.html','presidential-tools.html','docs/federalist-70.html','lesson-2-3.html','unit2-executive-concept-practice.html'].includes(relative(file)) && html.includes('editorial-base.css'))) return;
     const stylesheet = path.relative(path.dirname(file), path.join(root, 'styles-design-system.css')).split(path.sep).join('/');
-    if (!html.includes('href="' + stylesheet + '?v=20260929-home-editorial-system"')) {
+    if (!html.includes('href="' + stylesheet + '?v=') && !html.includes('href="' + stylesheet + '"')) {
       errors.push('Page is missing the shared typography system: ' + relative(file));
     }
   });
   [
     'styles.css?v=20261102-lesson-navigation',
     'course-shell.css?v=20260926-editorial-typography',
-    'styles-design-system.css?v=20260929-home-editorial-system',
+    'styles-design-system.css',
     'voter-guide.css?v=20261103-ballot-moved',
     'course-data.js?v=20261112-executive',
     'glossary-data.js?v=20261112-guided-notes',

@@ -28,6 +28,9 @@ jobs:
       - name: Check search index coverage and freshness
         run: node scripts/build-search-index.js --check
 
+      - name: Test search aliases and spelling
+        run: node scripts/test-site-search.js
+
       - name: Test canonical course entry
         run: node scripts/test-course-entry.js
 

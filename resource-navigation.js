@@ -2,12 +2,22 @@
 (() => {
   'use strict';
   const root = new URL('./',document.currentScript.src);
+  const filename = location.pathname.split('/').pop() || 'index.html';
+  if(/^unit[3-5]\.html$/.test(filename)||/^unit[12]-reference\.html$/.test(filename)||['agenda.html','extensions.html','presidential-library.html','presidential-yearbook.html'].includes(filename)) document.body.classList.add('course-reference-page');
   const main = document.querySelector('main,.doc-page');
   if (!main) return;
-  const filename = location.pathname.split('/').pop() || 'index.html';
   const lessonMatch = filename.match(/^lesson-([12])-(\d)\.html$/);
   const unitMatch = filename.match(/^unit([12])\.html$/);
   const reader = document.body.hasAttribute('data-library-reader');
+  if(reader){const source=document.createElement('p');source.className='reader-print-source';source.textContent='Mr. Rogers · AP Government & Politics · '+new URL(location.pathname,location.origin).href;main.append(source);}
+
+  if(reader && !main.querySelector('.document-contents,.case-reader-nav,.reader-nav,.route')){
+    const headings=[...main.querySelectorAll('h2[id],section[id]>h2,section[id]>h3,.doc-section[id]>h2,section.amendment>h3')].filter(h=>!/(?:source|context|before you read)/i.test(h.textContent));
+    if(headings.length>=3){const contents=document.createElement('nav');contents.className='document-contents';contents.setAttribute('aria-label','On this page');
+      headings.slice(0,12).forEach((h,number)=>{let id=h.id||h.parentElement.id;if(!id){id='reader-section-'+(number+1);while(document.getElementById(id))id+='-reading';h.id=id;}const link=document.createElement('a');link.href='#'+id;link.textContent=h.parentElement.querySelector('.amendment-number')?.textContent.trim()||h.textContent.trim();contents.append(link);});
+      const hero=main.querySelector('.doc-hero,.page-hero,.document-hero,.reader-hero,.case-hero');if(hero)hero.after(contents);
+    }
+  }
   if (lessonMatch || unitMatch || reader || filename === 'units.html') {
     const breadcrumb=document.createElement('nav');breadcrumb.className='course-breadcrumb';breadcrumb.setAttribute('aria-label','Breadcrumb');
     const list=document.createElement('ol');

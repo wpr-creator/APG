@@ -73,3 +73,10 @@ body[data-library-reader] :is(.doc-passage-text,.doc-text,.doc-paragraph-text,.o
 body[data-library-reader] :is(.doc-margin-text,.doc-annotation-text,.support p,.support dd,.support li){font-size:15px!important}
 body[data-library-reader] .explainer{display:grid;grid-template-columns:1fr 1fr}
 @media(max-width:760px){body[data-library-reader] :is(.doc-passage-row,.doc-row,.doc-paragraph,.passage){grid-template-columns:minmax(0,1fr)!important}body[data-library-reader] .explainer{grid-template-columns:1fr}}
+
+@media(min-width:950px){
+ body[data-library-reader] :is(.doc-hero,.page-hero,.document-hero,.reader-hero,.case-hero,.reader>.hero){background-image:url('assets/reader-art/archive.svg')!important;background-position:right top!important;background-repeat:no-repeat!important;background-size:100px 110px!important;padding-right:125px!important}
+ body[data-library-reader] .case-reader .case-hero{background-image:url('assets/unit-art/unit-3.svg')!important;background-size:115px 95px!important}
+}
+body[data-library-reader] [id^="reader-section-"]{scroll-margin-top:145px}
+@media(max-width:760px){body[data-library-reader] [id^="reader-section-"]{scroll-margin-top:24px}}

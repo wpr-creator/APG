@@ -18,6 +18,7 @@
       artwork.width = 180; artwork.height = 140;
       if (available) {
         const link = document.createElement('a');
+        link.dataset.unit = unit.id;
         link.className = 'unit-card' + (current ? ' current' : '');
         link.href = unit.id === 'gov-1' ? 'unit1.html' : unit.id === 'gov-2' ? 'unit2.html' : 'index.html#' + unit.id;
         const top = document.createElement('div'); top.className = 'unit-card-top';

@@ -1,0 +1,16 @@
+const assert=require('node:assert/strict');
+const {search}=require('../search-engine.js');
+const index=require('../search-index.json');
+assert(search(index,'SCOTUS').every(x=>x.entry.type==='Case'));
+assert.equal(search(index,'SCOTUS').length,14);
+assert.equal(search(index,'','Case').length,14);
+assert(search(index,'fed 10','Document').some(x=>x.entry.title==='Federalist No. 10'));
+assert.equal(search(index,'federalsim','Term')[0].entry.title,'Federalism');
+assert(search(index,'federalsim','Term')[0].approximate);
+assert(search(index,'Bkaer','Case').some(x=>x.entry.title.includes('Baker')));
+assert.equal(search(index,'2.2')[0].entry.url,'lesson-2-2.html');
+assert(search(index,'Baker','Document').length===0);
+assert(search(index,'POTUS').some(x=>/president/i.test(x.entry.title+' '+x.entry.detail)));
+assert.equal(search(index,'zzzzzzzzzz').length,0);
+assert(search(index,'federalism','Term')[0].terms.includes('federalism'));
+console.log('Search regression checks passed: aliases, categories, spelling, ranking, and match terms.');

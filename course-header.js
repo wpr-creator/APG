@@ -14,10 +14,10 @@
     if (skip) document.body.prepend(skip);
   }
   const searchScript = document.createElement('script');
-  searchScript.src = new URL('course-search.js?v=20261113',root).href;
+  searchScript.src = new URL('course-search.js?v=20261113-complete',root).href;
   document.head.appendChild(searchScript);
   const resourceScript = document.createElement('script');
-  resourceScript.src = new URL('resource-navigation.js?v=20261113-resources',root).href;
+  resourceScript.src = new URL('resource-navigation.js?v=20261113-complete',root).href;
   document.head.appendChild(resourceScript);
   header.querySelectorAll('.preview-exit').forEach(link => { link.href = new URL('exit-ticket.html',root).href; });
   const routes = {'index.html':'Home','units.html':'Units','unit1.html':'Units','unit2.html':'Units','lesson-2-2.html':'Current lesson','lesson-2-1.html':'Lesson'};

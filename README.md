@@ -120,3 +120,30 @@ in a new tab; internal resources stay in the same tab. Styling lives in
 The unit lesson list summarizes resource types and marks the current lesson
 using `site-content.json`. The shared header also preserves canonical Lesson 2.3
 links for current-lesson and contextual return navigation.
+
+## Search, fonts, images, and print finishing
+
+Search categories can narrow results or browse a category. `search-engine.js`
+supports SCOTUS (cases), POTUS (president), BOR (Bill of Rights), Fed + a number,
+and conservative one-edit/transposed-letter title matching. Matching text is
+highlighted with DOM-created marks. Search code and the index load on demand;
+queries are not stored. Run `node scripts/test-site-search.js` for regression checks.
+
+`course-fonts.css` serves the existing Newsreader, Public Sans, and IBM Plex Mono
+families as WOFF2 files from `assets/fonts/`, with `font-display:swap`. Original
+licenses and source details are included there. Main site styles no longer request
+these families from Google Fonts; exported slide decks retain their own styling.
+
+Three large illustration examples use WebP picture sources with original PNG
+fallbacks: 5,611,110 original bytes versus 1,315,200 WebP bytes (about 77% smaller).
+The yearbook examples reserve image dimensions and load lazily. Original asset
+URLs remain intact. This is an asset-size measurement, not a page-speed benchmark.
+
+`course-finish.css` coordinates older reference-page styling, search filters, and
+unit accents. `reader-editorial.css` adds small decorative document/case engravings
+on wide screens. All 30 readers load `reader-print.css` last for print layout;
+source sections remain visible, navigation is hidden, and a canonical page URL
+is included in the printed output by `resource-navigation.js`.
+Readers without an existing contents menu also get links to their section headings
+when at least three sections are present, including the ten amendments reader.
+Generated anchors avoid collisions and keep existing anchors intact.
