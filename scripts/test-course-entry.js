@@ -49,6 +49,11 @@ function checkHeaders(directory) {
   else if(filename.endsWith('.html')) {
    const html=fs.readFileSync(filename,'utf8');
    if(/http-equiv=["']refresh/i.test(html))continue;
+   if (entry.name === 'reflecting-pool.html') {
+    assert(html.includes('class="pool-header"') && html.includes('href="index.html"'), 'Immersive pool must retain its course return link.');
+    assert(html.includes('course-fonts.css'), 'Immersive pool must use course fonts.');
+    continue;
+   }
    assert(/src=["'][^"']*course-header\.js/.test(html), filename+' must load the shared header');
    assert(/href=["'][^"']*course-header\.css/.test(html), filename+' must load shared header styles');
   }
