@@ -20,3 +20,11 @@ assert(!/<input[^>]*\bchecked\b/.test(poolHtml),'Review chooser starts with no s
 const vm=require('node:vm');const chooser=game.match(/function selected\(\)\{[^\n]+/)[0];
 for(const units of [[1],[2],[1,2],[3,4,5]]){const result=vm.runInNewContext(chooser+';selected()',{practiceId:null,practices:{},bank,selection:()=>({units,categories:['Scenarios']})});assert(result.every(q=>units.includes(q.unit)&&q.category==='Scenarios'));if(units[0]<3)assert(result.length>0);else assert.equal(result.length,0);if(units.length===2)assert(result.some(q=>q.unit===1)&&result.some(q=>q.unit===2));}
 console.log('Scenario chooser passed: selected units control the single Scenarios category.');
+
+const landscape=fs.readFileSync('pool-scene.js','utf8');
+const scaleCode=landscape.match(/const poolLength=110,[^;]+;/)[0]+landscape.match(/const baseWidth=monumentHeight[^;]+;/)[0];
+const dimensions=vm.runInNewContext(scaleCode+';({poolLength,poolWidth,monumentHeight,baseWidth})');
+assert(Math.abs(dimensions.poolLength/dimensions.poolWidth-2029/167)<1e-9);
+assert(Math.abs(dimensions.monumentHeight/dimensions.poolLength-555/2029)<1e-9);
+assert(Math.abs(dimensions.monumentHeight/dimensions.baseWidth-555/55)<1e-9);
+console.log('Landscape scale passed: pool aspect ratio and monument height/base share one scale.');
