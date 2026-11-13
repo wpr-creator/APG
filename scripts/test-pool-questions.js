@@ -14,4 +14,9 @@ console.log('Lesson pool routes passed: all seven complete banks, stimulus table
 
 const poolHtml=fs.readFileSync('reflecting-pool.html','utf8');assert(!poolHtml.includes('id="sound"'));assert(poolHtml.includes('aria-label="Sound" aria-pressed="false"'));assert(poolHtml.includes('class="sound-slash"'));assert(game.includes('let soundEnabled=false')); assert(!poolHtml.includes('type="range"'));assert(!poolHtml.includes('type="checkbox" checked>Ambient sound'));assert(game.includes('fieldAudio.volume=0'));
 
-assert(!/<input[^>]*\bchecked\b/.test(poolHtml),'Review chooser starts with no selections');assert(poolHtml.includes('Unit 1 scenarios')&&poolHtml.includes('Unit 2 scenarios'));assert(!poolHtml.includes('Scenarios · Units 1–2'));
+assert(!/<input[^>]*\bchecked\b/.test(poolHtml),'Review chooser starts with no selections');assert(poolHtml.includes('value="Scenarios">Scenarios'));assert(!poolHtml.includes('Scenarios1')&&!poolHtml.includes('Scenarios2'));
+
+// Exercise the actual chooser filter for single-unit, mixed-unit, and unavailable scenarios.
+const vm=require('node:vm');const chooser=game.match(/function selected\(\)\{[^\n]+/)[0];
+for(const units of [[1],[2],[1,2],[3,4,5]]){const result=vm.runInNewContext(chooser+';selected()',{practiceId:null,practices:{},bank,selection:()=>({units,categories:['Scenarios']})});assert(result.every(q=>units.includes(q.unit)&&q.category==='Scenarios'));if(units[0]<3)assert(result.length>0);else assert.equal(result.length,0);if(units.length===2)assert(result.some(q=>q.unit===1)&&result.some(q=>q.unit===2));}
+console.log('Scenario chooser passed: selected units control the single Scenarios category.');
