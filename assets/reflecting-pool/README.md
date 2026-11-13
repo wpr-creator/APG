@@ -1,6 +1,8 @@
 # Reflecting Pool
 
-Three.js 0.170.0 is vendored unchanged from its npm build. Its MIT license is in THREE-LICENSE.txt. The scene, journal, shaders, and synthesized audio are APG source files; the game needs no CDN or audio downloads.
+Three.js 0.170.0 is vendored unchanged from its npm build. Its MIT license is in THREE-LICENSE.txt. Reflector.js is also from Three.js 0.170.0; only its import path is changed. The scene, journal, and water animation are APG source files. All assets are self-hosted.
+
+Audio: “Park ambiences” by Thimras (2022), https://opengameart.org/content/park-ambiences — CC0 1.0, https://creativecommons.org/publicdomain/zero/1.0/. The birds recording was converted from WAV to AAC for browser playback. This is an outdoor park recording, not a recording made at the Washington Reflecting Pool.
 
 To refresh the reviewed question bank after course content changes, run:
 
