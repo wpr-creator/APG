@@ -4,7 +4,7 @@ export function createPoolScene(canvas){
  const scene=new THREE.Scene();scene.background=new THREE.Color('#9c9dba');scene.fog=new THREE.FogExp2('#b2a2b0',.004);
  const sky=new THREE.Mesh(new THREE.SphereGeometry(200,24,16),new THREE.ShaderMaterial({side:THREE.BackSide,depthWrite:false,vertexShader:'varying vec3 v;void main(){v=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',fragmentShader:'varying vec3 v;void main(){float h=normalize(v).y;vec3 low=vec3(.94,.62,.49);vec3 mid=vec3(.63,.55,.72);vec3 high=vec3(.23,.34,.53);vec3 c=mix(low,mid,smoothstep(-.05,.28,h));c=mix(c,high,smoothstep(.15,.85,h));gl_FragColor=vec4(c,1.);}'}));scene.add(sky);
  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false});renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
- const camera=new THREE.PerspectiveCamera(43,1,.1,250);camera.position.set(6,4,26);camera.lookAt(10,7,-22);
+ const camera=new THREE.PerspectiveCamera(36,1,.1,300);camera.position.set(0,3,31);camera.lookAt(0,5.6,-75);
  const sun=new THREE.DirectionalLight('#ffc99a',1.7);sun.position.set(-25,45,20);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-60,right:60,top:60,bottom:-80,far:180});sun.shadow.bias=-.0004;sun.shadow.normalBias=.08;sun.shadow.radius=4;sun.target.position.set(0,0,-35);scene.add(sun,sun.target,new THREE.HemisphereLight('#9aaed6','#3d5146',1.2));
  const colors=['#283f34','#63865a','#a7b879'];const gradient=new THREE.DataTexture(new Uint8Array([75,150,245]),3,1,THREE.RedFormat);gradient.needsUpdate=true;gradient.minFilter=gradient.magFilter=THREE.NearestFilter;
  const mat=c=>new THREE.MeshToonMaterial({color:c,gradientMap:gradient});const stone=new THREE.MeshToonMaterial({color:'#f2d7a1',emissive:'#c78e3c',emissiveIntensity:.32,gradientMap:gradient}),grass=mat('#839c60'),path=mat('#d5ccae'),trunk=mat('#756443');
@@ -18,8 +18,41 @@ export function createPoolScene(canvas){
  const water=new Reflector(new THREE.PlaneGeometry(poolWidth,poolLength),{color:0x9bafb9,textureWidth:768,textureHeight:768,clipBias:.003,shader});water.position.set(0,.03,-36);water.rotation.x=-Math.PI/2;scene.add(water);
  // The monument is a tapered shaft with a four-sided pyramidion.
  const stoneCanvas=document.createElement('canvas');stoneCanvas.width=256;stoneCanvas.height=1024;const sc=stoneCanvas.getContext('2d');sc.fillStyle='#e6d5ad';sc.fillRect(0,0,256,1024);for(let row=0;row<100;row++){sc.fillStyle=row%3===0?'#decca6':'#e9d8b3';sc.fillRect(0,row*10,256,10);sc.strokeStyle='#c9ba9b';sc.globalAlpha=.28;sc.beginPath();sc.moveTo(0,row*10);sc.lineTo(256,row*10);sc.stroke();sc.beginPath();sc.moveTo(row%2?64:128,row*10);sc.lineTo(row%2?64:128,row*10+10);sc.stroke();sc.globalAlpha=1;}const stoneMap=new THREE.CanvasTexture(stoneCanvas);stoneMap.colorSpace=THREE.SRGBColorSpace;const monumentStone=stone.clone();monumentStone.map=stoneMap;
- const shaft=mesh(new THREE.CylinderGeometry(topWidth/Math.SQRT2,baseWidth/Math.SQRT2,shaftHeight,4,1),monumentStone,0,shaftHeight/2,-101);shaft.rotation.y=Math.PI/4;
- const peak=mesh(new THREE.ConeGeometry(topWidth/Math.SQRT2,pyramidHeight,4),stone,0,shaftHeight+pyramidHeight/2,-101);peak.rotation.y=Math.PI/4;box(baseWidth*1.5,.6,baseWidth*1.5,stone,0,.1,-101);
+ const shaft=mesh(new THREE.CylinderGeometry(topWidth/Math.SQRT2,baseWidth/Math.SQRT2,shaftHeight,4,1),monumentStone,0,shaftHeight/2,-140);shaft.rotation.y=Math.PI/4;
+ const peak=mesh(new THREE.ConeGeometry(topWidth/Math.SQRT2,pyramidHeight,4),stone,0,shaftHeight+pyramidHeight/2,-140);peak.rotation.y=Math.PI/4;box(baseWidth*1.5,.6,baseWidth*1.5,stone,0,.1,-140);
+ // WWII Memorial: a low elliptical plaza and Rainbow Pool between the two landmarks.
+ const memorialZ=-105,memorialStone=mat('#c6c2b3'),memorialBronze=mat('#667461');
+ const plaza=mesh(new THREE.CircleGeometry(1,64),memorialStone,0,-.04,memorialZ);plaza.rotation.x=-Math.PI/2;plaza.scale.set(9.2,6.5,1);
+ const rainbowPool=mesh(new THREE.CircleGeometry(1,64),new THREE.MeshStandardMaterial({color:'#9aabba',roughness:.28,metalness:.4}),0,-.015,memorialZ);rainbowPool.rotation.x=-Math.PI/2;rainbowPool.scale.set(6.7,4,1);
+ // Four curved groups preserve the central approaches and the pavilion openings.
+ for(let quadrant=0;quadrant<4;quadrant++)for(let i=0;i<14;i++){
+  const angle=quadrant*Math.PI/2+.16+i*(Math.PI/2-.32)/13;
+  const x=Math.cos(angle)*8.7,z=memorialZ+Math.sin(angle)*6;
+  const pillar=box(.34,.87,.25,memorialStone,x,.4,z);pillar.rotation.y=-angle;
+  const wreath=mesh(new THREE.TorusGeometry(.085,.023,4,10),memorialBronze,x,.57,z+.14);wreath.rotation.y=-angle;
+ }
+ for(const side of [-1,1]){
+  const x=side*9;
+  for(const dx of [-.85,.85])for(const dz of [-.58,.58])box(.28,2.1,.28,memorialStone,x+dx,1.0,memorialZ+dz);
+  box(2.2,.38,1.6,memorialStone,x,2.17,memorialZ);
+  mesh(new THREE.TorusGeometry(.66,.13,4,16,Math.PI),memorialStone,x,1.35,memorialZ+.65);
+ }
+ // Thin parabolic streams and moving droplets read as distant spray, not tall columns.
+ const fountainCurves=[],jetMaterial=new THREE.MeshBasicMaterial({color:'#e5edf1',transparent:true,opacity:.55,depthWrite:false});
+ for(const side of [-1,1])for(let i=0;i<12;i++){
+  const angle=i*Math.PI*2/12,x=side*4.5,z=memorialZ;
+  const from=new THREE.Vector3(x+Math.cos(angle)*.85,.04,z+Math.sin(angle)*.85);
+  const to=new THREE.Vector3(x+Math.cos(angle)*.18,.04,z+Math.sin(angle)*.18);
+  const top=new THREE.Vector3(x+Math.cos(angle)*.65,2.0+(i%3)*.13,z+Math.sin(angle)*.65);
+  const curve=new THREE.QuadraticBezierCurve3(from,top,to);fountainCurves.push(curve);
+  scene.add(new THREE.Mesh(new THREE.TubeGeometry(curve,12,.025,3,false),jetMaterial));
+ }
+ const sprayGeometry=new THREE.BufferGeometry(),sprayPositions=new Float32Array(288*3);
+ sprayGeometry.setAttribute('position',new THREE.BufferAttribute(sprayPositions,3));
+ const spray=new THREE.Points(sprayGeometry,new THREE.PointsMaterial({color:'#fff3da',size:.1,transparent:true,opacity:.7,depthWrite:false}));spray.frustumCulled=false;scene.add(spray);
+ const drop=new THREE.Vector3();function animateFountains(t){for(let i=0;i<288;i++){fountainCurves[i%24].getPoint((t*.27+i*.618)%1,drop);sprayPositions[i*3]=drop.x;sprayPositions[i*3+1]=drop.y;sprayPositions[i*3+2]=drop.z;}sprayGeometry.attributes.position.needsUpdate=true;}animateFountains(0);
+ // A little terrace stone establishes the view from the Lincoln Memorial end.
+ box(27,.15,10,path,0,-.18,29);
  const trees=[];let seed=42;function rand(){seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;}
  // Detailed, seeded foliage keeps the avenue consistent across visits.
  const leafShape=new THREE.Shape();leafShape.moveTo(0,-.5);leafShape.quadraticCurveTo(.32,-.1,.19,.25);leafShape.lineTo(0,.58);leafShape.quadraticCurveTo(-.30,.1,0,-.5);
@@ -85,7 +118,7 @@ export function createPoolScene(canvas){
  const distantTrees=new THREE.InstancedMesh(new THREE.PlaneGeometry(1,1),forestMaterial,240);
  for(let i=0;i<240;i++){
   const side=i%2?-1:1,back=i>=140;
-  const x=back?(rand()-.5)*195:side*(29+rand()*62);
+  let x=back?(rand()-.5)*195:side*(29+rand()*62);if(back&&Math.abs(x)<12)x=(x<0?-1:1)*(12+rand()*8);
   const z=back?-133-rand()*23:5-rand()*145;
   const height=back?5+rand()*4:7+rand()*5;
   dummy.position.set(x,height*.5-.3,z);dummy.rotation.set(0,(rand()-.5)*.25,0);dummy.scale.set(height*(.65+rand()*.25),height,1);dummy.updateMatrix();distantTrees.setMatrixAt(i,dummy.matrix);
@@ -97,6 +130,6 @@ export function createPoolScene(canvas){
  box(poolWidth+3,.5,1.1,stone,0,.1,19.7);box(3,.5,2,stone,-14,.25,23);
  let running=!matchMedia('(prefers-reduced-motion: reduce)').matches,frame=0,last=0;const clock=new THREE.Clock();
  function resize(){renderer.setSize(innerWidth,innerHeight,false);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.render(scene,camera);}addEventListener('resize',resize);resize();
- function draw(ms){frame=requestAnimationFrame(draw);if(document.hidden||!running||ms-last<40)return;last=ms;const t=clock.getElapsedTime();water.material.uniforms.time.value=t;breezeTime.value=t;clouds.forEach(c=>{c.position.x=c.userData.startX+Math.sin(t*.006)*12*c.userData.speed/.06;});dust.position.y=Math.sin(t*.12)*.5;dust.position.x=Math.sin(t*.08)*.45;renderer.render(scene,camera);}frame=requestAnimationFrame(draw);
+ function draw(ms){frame=requestAnimationFrame(draw);if(document.hidden||!running||ms-last<40)return;last=ms;const t=clock.getElapsedTime();water.material.uniforms.time.value=t;breezeTime.value=t;animateFountains(t);clouds.forEach(c=>{c.position.x=c.userData.startX+Math.sin(t*.006)*12*c.userData.speed/.06;});dust.position.y=Math.sin(t*.12)*.5;dust.position.x=Math.sin(t*.08)*.45;renderer.render(scene,camera);}frame=requestAnimationFrame(draw);
  return {setMotion(value){running=value;if(!value)renderer.render(scene,camera);},dispose(){cancelAnimationFrame(frame);removeEventListener('resize',resize);renderer.dispose();}};
 }
