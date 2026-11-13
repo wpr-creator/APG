@@ -252,6 +252,7 @@ function validateSharedCourseExperience() {
   });
   rootPages.forEach(function (file) {
     const html = fs.readFileSync(file, 'utf8');
+    if (relative(file) === 'reflecting-pool.html' && html.includes('course-fonts.css') && html.includes('reflecting-pool.css')) return;
     if (/http-equiv=["']refresh/i.test(html)) return;
     const isEditorialPage = ['index.html','units.html','unit1.html','unit2.html','lesson-1-1.html','lesson-1-2.html','lesson-1-3.html','lesson-1-4.html','lesson-1-5.html','lesson-2-1.html','lesson-2-2.html','election-results-2026.html','unit2-districting-frq-scoring.html','presidential-tools.html','docs/federalist-70.html','lesson-2-3.html','unit2-executive-concept-practice.html'].includes(relative(file)) && html.includes('editorial-base.css');
     const isNewShell = ['index.html', 'course-tools.html'].includes(relative(file)) && html.includes('href="styles.css');
@@ -263,7 +264,8 @@ function validateSharedCourseExperience() {
     const isHistoryHub = relative(file) === 'history-lesson.html' && html.includes('history-hub.css');
     const isHistoryReader = relative(file) === 'history-reader.html' && html.includes('history-reader-theme.css');
     const isHistoryPresenter = relative(file) === 'history-presenter.html' && html.includes('history-presenter.css');
-    if (!isEditorialPage && !isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
+    const isPoolGame = relative(file) === 'reflecting-pool.html' && html.includes('reflecting-pool.css') && html.includes('course-fonts.css');
+    if (!isPoolGame && !isEditorialPage && !isNewShell && !isUnitZeroRedirect && !isAgendaRedirect && !isDemocracyFiltered && !isHeardExplorer && !isArticleVActivity && !isHistoryHub && !isHistoryReader && !isHistoryPresenter && !html.includes('styles-gov-theme.css')) {
       errors.push('Root page is missing the shared visual theme: ' + relative(file));
     }
   });
