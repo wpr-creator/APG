@@ -28,3 +28,5 @@ assert(Math.abs(dimensions.poolLength/dimensions.poolWidth-2029/167)<1e-9);
 assert(Math.abs(dimensions.monumentHeight/dimensions.poolLength-555/2029)<1e-9);
 assert(Math.abs(dimensions.monumentHeight/dimensions.baseWidth-555/55)<1e-9);
 console.log('Landscape scale passed: pool aspect ratio and monument height/base share one scale.');
+
+assert.equal(bank.filter(q=>q.category==='Cases'&&q.href?.startsWith('cases/')).length,14,'All required case descriptions are included');for(const [unit,title] of [[1,'McCulloch v. Maryland'],[1,'United States v. Lopez'],[2,'Baker v. Carr'],[2,'Shaw v. Reno']])assert(bank.some(q=>q.category==='Cases'&&q.unit===unit&&q.correct===title));

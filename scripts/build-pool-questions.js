@@ -8,7 +8,7 @@ for(const u of ctx.window.APG_GLOSSARY_UNITS)for(const [group,entries] of Object
  bank.push({unit:Number(u.key.replace('unit','')),category,prompt:definition,correct:term,group,why:definition});
 }
 for(const d of ctx.window.FOUNDATIONS_DATA.documents)for(const key of d.units)bank.push({unit:Number(key.replace('gov-','')),category:'Documents',prompt:'Which document makes this argument? '+d.bigIdea,correct:d.title,why:d.plain,href:d.file});
-for(const c of cases)bank.push({unit:c.unit,category:'Cases',prompt:'Which case matches this description? '+c.blurb,correct:c.title,why:c.blurb,href:c.file});
+for(const c of cases){const unit=['mcculloch','lopez'].includes(c.id)?1:['baker','shaw'].includes(c.id)?2:c.unit;bank.push({unit,category:'Cases',prompt:'Which case addressed this question? '+c.question,correct:c.title,why:c.holding.replace('N&P Clause','Necessary and Proper Clause'),href:c.file});}
 const files={1:['unit1-concept-practice.js','unit1-history-concept-practice.js','unit1-topic-16-concept-practice.js','unit1-topic-17-19-concept-practice.js'],2:['unit2-concept-practice.js','unit2-topic-23-concept-practice.js','unit2-executive-concept-practice.js']};
 for(const [unit,list] of Object.entries(files))for(const file of list){
  const src=fs.readFileSync(file,'utf8');let start=src.indexOf('const questions = [');if(start<0)start=src.indexOf('window.startConceptPractice([');start=src.indexOf('[',start);let questions;
