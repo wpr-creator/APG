@@ -11,6 +11,11 @@
       const current = settings.currentUnit === unit.id;
       const available = current || settings.unitUnlocks?.[unit.id] === true;
       const number = unit.number.replace('Unit ', '');
+      const artwork = document.createElement('img');
+      artwork.className = 'unit-art';
+      artwork.src = 'assets/unit-art/unit-' + number + '.svg';
+      artwork.alt = ''; // Decorative: adjacent text identifies the unit.
+      artwork.width = 180; artwork.height = 140;
       if (available) {
         const link = document.createElement('a');
         link.className = 'unit-card' + (current ? ' current' : '');
@@ -23,7 +28,7 @@
         const bottom = document.createElement('div'); bottom.className = 'unit-card-bottom';
         const action = document.createElement('span'); action.textContent = 'OPEN UNIT';
         const arrow = document.createElement('span'); arrow.textContent = '↗'; arrow.setAttribute('aria-hidden','true');
-        bottom.append(action,arrow); link.append(top,title,bottom); open.appendChild(link);
+        bottom.append(action,arrow); link.append(top,artwork,title,bottom); open.appendChild(link);
       } else if (unit.id === 'gov-0') {
         const row = document.createElement('div'); row.className = 'launch-row';
         const title = document.createElement('strong'); title.textContent = 'UNIT 0 / ' + unit.title;
@@ -34,7 +39,7 @@
         const label = document.createElement('span'); label.className = 'unit-number'; label.textContent = '0' + number;
         const title = document.createElement('h3'); title.textContent = unit.title;
         const state = document.createElement('span'); state.className = 'unit-status'; state.textContent = 'NOT OPEN YET';
-        row.append(label,title,state); document.getElementById('later-units').appendChild(row);
+        row.append(label,artwork,title,state); document.getElementById('later-units').appendChild(row);
       }
     });
   } catch (_) {

@@ -25,6 +25,9 @@ jobs:
       - name: Validate site
         run: node scripts/validate-site.js
 
+      - name: Check search index coverage and freshness
+        run: node scripts/build-search-index.js --check
+
       - name: Test canonical course entry
         run: node scripts/test-course-entry.js
 

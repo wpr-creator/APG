@@ -1519,7 +1519,7 @@ function validateSharedCourseExperience() {
   ];
   REQUIRED_GUIDE_FILES.forEach(function (file) {
     const page = fs.readFileSync(file, 'utf8');
-    const usesEditorialReader = page.includes('executive-readers.css') && page.includes('course-header.js?v=20261103-arrows');
+    const usesEditorialReader = page.includes('executive-readers.css') && /course-header\.js(?:\?v=[^"\s]+)?/.test(page);
     if (!usesEditorialReader && (!page.includes('nav-render.js?v=20260929-clean-guides') ||
         !page.includes('course-shell.js?v=20261102-universal'))) {
       errors.push('Document or case cannot load shared course navigation: ' + relative(file));

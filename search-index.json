@@ -1,0 +1,3272 @@
+[
+  {
+    "type": "Lesson",
+    "title": "1.1 · The founding promise",
+    "url": "lesson-1-1.html",
+    "detail": "How do founding texts express democratic ideals?"
+  },
+  {
+    "type": "Lesson",
+    "title": "1.2 · Democracy, filtered",
+    "url": "lesson-1-2.html",
+    "detail": "How does representative democracy decide whose voices matter?"
+  },
+  {
+    "type": "Lesson",
+    "title": "1.3 · The history lesson",
+    "url": "lesson-1-3.html",
+    "detail": "How did the United States replace a weak national government without creating another tyranny?"
+  },
+  {
+    "type": "Lesson",
+    "title": "1.4 · Ambition checks ambition",
+    "url": "lesson-1-4.html",
+    "detail": "How does constitutional friction prevent tyranny?"
+  },
+  {
+    "type": "Lesson",
+    "title": "1.5 · …but a composition of both.",
+    "url": "lesson-1-5.html",
+    "detail": "What is federalism, and how is government power divided?"
+  },
+  {
+    "type": "Lesson",
+    "title": "2.1 · Two houses, one Congress",
+    "url": "lesson-2-1.html",
+    "detail": "How does the structure of Congress shape the way national policy is made?"
+  },
+  {
+    "type": "Lesson",
+    "title": "2.2 · Whose Congress?",
+    "url": "lesson-2-2.html",
+    "detail": "How do districts and political pressures shape representation in Congress?"
+  },
+  {
+    "type": "Lesson",
+    "title": "2.3 · The Energetic Executive.",
+    "url": "lesson-2-3.html",
+    "detail": "How can a president lead decisively without opening the door to tyranny?"
+  },
+  {
+    "type": "Case",
+    "title": "Baker v. Carr (1962)",
+    "url": "cases/baker-v-carr.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Brown v. Board of Education (1954)",
+    "url": "cases/brown-v-board.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Citizens United v. FEC (2010)",
+    "url": "cases/citizens-united-v-fec.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Engel v. Vitale (1962)",
+    "url": "cases/engel-v-vitale.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Gideon v. Wainwright (1963)",
+    "url": "cases/gideon-v-wainwright.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Marbury v. Madison (1803)",
+    "url": "cases/marbury-v-madison.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "McCulloch v. Maryland (1819)",
+    "url": "cases/mcculloch-v-maryland.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "McDonald v. City of Chicago (2010)",
+    "url": "cases/mcdonald-v-chicago.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "New York Times v. United States (1971)",
+    "url": "cases/nyt-v-us.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Schenck v. United States (1919)",
+    "url": "cases/schenck-v-us.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Shaw v. Reno (1993)",
+    "url": "cases/shaw-v-reno.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Tinker v. Des Moines (1969)",
+    "url": "cases/tinker-v-des-moines.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "U.S. v. Lopez (1995)",
+    "url": "cases/us-v-lopez.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Case",
+    "title": "Wisconsin v. Yoder (1972)",
+    "url": "cases/wisconsin-v-yoder.html",
+    "detail": "Supreme Court case guide"
+  },
+  {
+    "type": "Document",
+    "title": "Articles of Confederation",
+    "url": "docs/articles-of-confederation.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Bill of Rights",
+    "url": "docs/bill-of-rights.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Brutus No. 1",
+    "url": "docs/brutus-1.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Preamble to the Constitution",
+    "url": "docs/constitution-preamble.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "U.S. Constitution",
+    "url": "docs/constitution.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Declaration of Independence",
+    "url": "docs/declaration-of-independence.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Emancipation Proclamation",
+    "url": "docs/emancipation-proclamation.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "The Constitutional Boundary",
+    "url": "docs/federalism-clauses.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Federalist No. 10",
+    "url": "docs/federalist-10.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Federalist No. 39",
+    "url": "docs/federalist-39.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Federalist No. 51",
+    "url": "docs/federalist-51.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Federalist No. 70",
+    "url": "docs/federalist-70.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Federalist No. 78",
+    "url": "docs/federalist-78.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Gettysburg Address",
+    "url": "docs/gettysburg-address.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Letter from Birmingham Jail",
+    "url": "docs/letter-birmingham-jail.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Document",
+    "title": "Core Principles from The Wealth of Nations",
+    "url": "docs/wealth-of-nations.html",
+    "detail": "Foundational document reader"
+  },
+  {
+    "type": "Term",
+    "title": "Article V",
+    "detail": "The part of the Constitution that establishes the formal process for proposing and ratifying amendments.",
+    "url": "course-tools.html?glossary=Article%20V#words"
+  },
+  {
+    "type": "Term",
+    "title": "Ratification",
+    "detail": "Formal approval. Under Article V, an amendment must be ratified by three-fourths of the states.",
+    "url": "course-tools.html?glossary=Ratification#words"
+  },
+  {
+    "type": "Term",
+    "title": "Supermajority",
+    "detail": "A voting requirement greater than a simple majority, such as two-thirds or three-fourths.",
+    "url": "course-tools.html?glossary=Supermajority#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unanimity",
+    "detail": "Complete agreement by everyone involved. The Articles of Confederation required all thirteen states to approve an amendment.",
+    "url": "course-tools.html?glossary=Unanimity#words"
+  },
+  {
+    "type": "Term",
+    "title": "Articles of Confederation",
+    "detail": "The first U.S. constitution, which left most power with the states. Congress could handle national responsibilities but could not tax directly, regulate interstate commerce, or reliably enforce its decisions. Its formal title was the Articles of Confederation and Perpetual Union.",
+    "url": "course-tools.html?glossary=Articles%20of%20Confederation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Constitutional Convention",
+    "detail": "A meeting of state delegates in 1787 that began as an effort to revise the Articles of Confederation and produced a new Constitution instead.",
+    "url": "course-tools.html?glossary=Constitutional%20Convention#words"
+  },
+  {
+    "type": "Term",
+    "title": "Constitution",
+    "detail": "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
+    "url": "course-tools.html?glossary=Constitution#words"
+  },
+  {
+    "type": "Term",
+    "title": "Constitutional Republic",
+    "detail": "A democratic system with elected representatives in which the constitution is the supreme law.",
+    "url": "course-tools.html?glossary=Constitutional%20Republic#words"
+  },
+  {
+    "type": "Term",
+    "title": "Three-Fifths Compromise",
+    "detail": "An agreement that counted three-fifths of each state's enslaved population when apportioning House seats and direct federal taxes; enslaved people could not vote.",
+    "url": "course-tools.html?glossary=Three-Fifths%20Compromise#words"
+  },
+  {
+    "type": "Term",
+    "title": "Shays's Rebellion",
+    "detail": "Armed unrest in Massachusetts that highlighted the national government’s difficulty raising money and troops under the Articles of Confederation and increased pressure for constitutional change.",
+    "url": "course-tools.html?glossary=Shays's%20Rebellion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bill of Attainder",
+    "detail": "When the legislature declares someone guilty without a trial; prohibited by the Constitution.",
+    "url": "course-tools.html?glossary=Bill%20of%20Attainder#words"
+  },
+  {
+    "type": "Term",
+    "title": "Ex Post Facto Law",
+    "detail": "A law punishing people for acts that were not crimes at the time they were committed; prohibited by the Constitution.",
+    "url": "course-tools.html?glossary=Ex%20Post%20Facto%20Law#words"
+  },
+  {
+    "type": "Term",
+    "title": "Great Compromise",
+    "detail": "The agreement creating a House with representation based on population and a Senate with two members from each state, resolving the large-state and small-state dispute.",
+    "url": "course-tools.html?glossary=Great%20Compromise#words"
+  },
+  {
+    "type": "Term",
+    "title": "Virginia Plan",
+    "detail": "A plan of government calling for a three-branch government with a bicameral legislature, where more populous states would have more representation.",
+    "url": "course-tools.html?glossary=Virginia%20Plan#words"
+  },
+  {
+    "type": "Term",
+    "title": "New Jersey Plan",
+    "detail": "A plan of government that provided for a unicameral legislature with equal votes for each state.",
+    "url": "course-tools.html?glossary=New%20Jersey%20Plan#words"
+  },
+  {
+    "type": "Term",
+    "title": "Writ of Habeas Corpus",
+    "detail": "A court order requiring the government to bring a detained person before a judge and justify the detention.",
+    "url": "course-tools.html?glossary=Writ%20of%20Habeas%20Corpus#words"
+  },
+  {
+    "type": "Term",
+    "title": "Compromise on Importation",
+    "detail": "The Slave Trade Compromise: Congress could not prohibit the international slave trade before 1808. It helped secure agreement at the convention while protecting slaveholding interests.",
+    "url": "course-tools.html?glossary=Compromise%20on%20Importation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Popular Sovereignty",
+    "detail": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern.",
+    "url": "course-tools.html?glossary=Popular%20Sovereignty#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rule of Law",
+    "detail": "The principle that no one, including public officials, is above the law.",
+    "url": "course-tools.html?glossary=Rule%20of%20Law#words"
+  },
+  {
+    "type": "Term",
+    "title": "Democracy",
+    "detail": "A system of government where power is held by the people.",
+    "url": "course-tools.html?glossary=Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Republic",
+    "detail": "A government ruled by representatives of the people.",
+    "url": "course-tools.html?glossary=Republic#words"
+  },
+  {
+    "type": "Term",
+    "title": "Republicanism",
+    "detail": "A system in which citizens govern through elected representatives.",
+    "url": "course-tools.html?glossary=Republicanism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Individualism",
+    "detail": "A political value that emphasizes individual liberty, independence, and the importance of each person's rights and choices.",
+    "url": "course-tools.html?glossary=Individualism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Faction",
+    "detail": "A group united by a shared interest that may conflict with the rights or interests of others.",
+    "url": "course-tools.html?glossary=Faction#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist No. 10",
+    "detail": "James Madison’s argument that a large republic with many competing factions would make it harder for a majority faction to unite and violate the rights of others.",
+    "url": "course-tools.html?glossary=Federalist%20No.%2010#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist No. 51",
+    "detail": "James Madison’s argument that officials need both motives and constitutional means to resist other branches’ overreach. Institutional competition and divided power help protect liberty against abuses of power.",
+    "url": "course-tools.html?glossary=Federalist%20No.%2051#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist Papers",
+    "detail": "A series of eighty-five essays by Hamilton, Madison, and Jay published 1787-1788 that lay out the theory behind the Constitution.",
+    "url": "course-tools.html?glossary=Federalist%20Papers#words"
+  },
+  {
+    "type": "Term",
+    "title": "The Gettysburg Address",
+    "detail": "A speech Abraham Lincoln delivered during the Civil War, reaffirming equality and popular sovereignty as foundations of democracy.",
+    "url": "course-tools.html?glossary=The%20Gettysburg%20Address#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist No. 39",
+    "detail": "James Madison’s argument that the Constitution combines national features, such as laws acting directly on individuals, with federal features, such as state governments and equal state representation in the Senate.",
+    "url": "course-tools.html?glossary=Federalist%20No.%2039#words"
+  },
+  {
+    "type": "Term",
+    "title": "Brutus No. 1",
+    "detail": "An Anti-Federalist argument that a large republic would distance representatives from the people and that the Necessary and Proper and Supremacy Clauses could expand national power at the states’ expense.",
+    "url": "course-tools.html?glossary=Brutus%20No.%201#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist",
+    "detail": "A supporter of ratifying the Constitution who argued that the Articles had made national action too difficult and that stronger national institutions were needed.",
+    "url": "course-tools.html?glossary=Federalist#words"
+  },
+  {
+    "type": "Term",
+    "title": "Anti-Federalists",
+    "detail": "Opponents of ratifying the Constitution who feared broad national powers and distance from ordinary citizens would threaten liberty and weaken the states. They demanded explicit protections for individual rights.",
+    "url": "course-tools.html?glossary=Anti-Federalists#words"
+  },
+  {
+    "type": "Term",
+    "title": "Declaration of Independence",
+    "detail": "The 1776 document explaining why separation from Britain was justified: people possess natural rights, government needs their consent, and people may alter or abolish a government that repeatedly violates its purpose.",
+    "url": "course-tools.html?glossary=Declaration%20of%20Independence#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Contract",
+    "detail": "An agreement among people to create government, accepting shared laws in exchange for order and protection of their rights. A government that abandons that purpose weakens its claim to authority.",
+    "url": "course-tools.html?glossary=Social%20Contract#words"
+  },
+  {
+    "type": "Term",
+    "title": "Natural Rights",
+    "detail": "Rights people possess because they are human, before government exists. Government can violate these rights but does not create them.",
+    "url": "course-tools.html?glossary=Natural%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Inalienable Rights",
+    "detail": "Rights the government cannot take away; foundational to the Declaration of Independence.",
+    "url": "course-tools.html?glossary=Inalienable%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Limited Government",
+    "detail": "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
+    "url": "course-tools.html?glossary=Limited%20Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "Consent of the Governed",
+    "detail": "The idea that government can rule legitimately only because the people authorize it.",
+    "url": "course-tools.html?glossary=Consent%20of%20the%20Governed#words"
+  },
+  {
+    "type": "Term",
+    "title": "Equality",
+    "detail": "The democratic ideal that people possess equal political standing and that no person has a natural right to rule others.",
+    "url": "course-tools.html?glossary=Equality#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bill of Rights",
+    "detail": "The first ten constitutional amendments, adding explicit protections for individual liberty and written limits on national government power.",
+    "url": "course-tools.html?glossary=Bill%20of%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Separation of Powers",
+    "detail": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
+    "url": "course-tools.html?glossary=Separation%20of%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Checks and Balances",
+    "detail": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
+    "url": "course-tools.html?glossary=Checks%20and%20Balances#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalism",
+    "detail": "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share.",
+    "url": "course-tools.html?glossary=Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "National Government",
+    "detail": "The government of the entire United States.",
+    "url": "course-tools.html?glossary=National%20Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "State Government",
+    "detail": "The government of an individual state.",
+    "url": "course-tools.html?glossary=State%20Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "Enumerated Powers",
+    "detail": "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
+    "url": "course-tools.html?glossary=Enumerated%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Reserved Powers",
+    "detail": "Powers the Constitution neither delegates to the national government nor prohibits to the states. The Tenth Amendment reserves them to the states or the people.",
+    "url": "course-tools.html?glossary=Reserved%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unitary System",
+    "detail": "A system where the central government has all of the power over subnational governments.",
+    "url": "course-tools.html?glossary=Unitary%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Confederal System",
+    "detail": "A system in which state or regional governments hold most governing power and the national government is weak.",
+    "url": "course-tools.html?glossary=Confederal%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Dual Federalism",
+    "detail": "A form of American federalism in which the states and the nation operate independently in their own areas; \"layer cake.\"",
+    "url": "course-tools.html?glossary=Dual%20Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Cooperative Federalism",
+    "detail": "A form of American federalism in which the states and the national government work together; \"marble cake.\"",
+    "url": "course-tools.html?glossary=Cooperative%20Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "New Federalism",
+    "detail": "A style of federalism premised on the idea that decentralization of policies enhances administrative efficiency.",
+    "url": "course-tools.html?glossary=New%20Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fiscal Federalism",
+    "detail": "The federal government's use of grants-in-aid to influence policies in the states.",
+    "url": "course-tools.html?glossary=Fiscal%20Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Supremacy Clause",
+    "detail": "The Constitution, valid federal laws, and treaties take precedence over conflicting state law. Federal action must rest on constitutional authority to be supreme.",
+    "url": "course-tools.html?glossary=Supremacy%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Tenth Amendment",
+    "detail": "The amendment reserving powers not delegated to the United States and not prohibited to the states to the states or the people. It does not cancel powers actually granted to the national government.",
+    "url": "course-tools.html?glossary=Tenth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Concurrent Powers",
+    "detail": "Powers shared by national and state governments, such as taxing, borrowing, creating courts, and making and enforcing laws.",
+    "url": "course-tools.html?glossary=Concurrent%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Necessary and Proper Clause",
+    "detail": "The clause allowing Congress to choose reasonable means to carry out its enumerated powers. It supports implied powers, not a general power to legislate on any subject.",
+    "url": "course-tools.html?glossary=Necessary%20and%20Proper%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Implied Powers",
+    "detail": "Powers not listed word for word in the Constitution but reasonably connected to carrying out an enumerated power. The Necessary and Proper Clause supports these powers.",
+    "url": "course-tools.html?glossary=Implied%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Elastic Clause",
+    "detail": "Another name for the Necessary and Proper Clause, which allows Congress to choose reasonable means to carry out its enumerated powers.",
+    "url": "course-tools.html?glossary=Elastic%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Commerce Clause",
+    "detail": "The clause giving Congress authority to regulate interstate commerce. Courts interpret how closely an activity must connect to commerce across state lines.",
+    "url": "course-tools.html?glossary=Commerce%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Commerce",
+    "detail": "Buying, selling, and exchanging goods and services.",
+    "url": "course-tools.html?glossary=Commerce#words"
+  },
+  {
+    "type": "Term",
+    "title": "Judicial Review",
+    "detail": "The power of courts to determine whether government actions violate the Constitution.",
+    "url": "course-tools.html?glossary=Judicial%20Review#words"
+  },
+  {
+    "type": "Term",
+    "title": "Full Faith and Credit Clause",
+    "detail": "The Article IV clause requiring states to recognize one another’s public acts, records, and court decisions. It does not require states to adopt identical laws.",
+    "url": "course-tools.html?glossary=Full%20Faith%20and%20Credit%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Privileges and Immunities Clause",
+    "detail": "The Article IV clause generally preventing a state from denying citizens of other states basic rights or important economic opportunities simply because they come from elsewhere. Some resident–nonresident distinctions remain allowed.",
+    "url": "course-tools.html?glossary=Privileges%20and%20Immunities%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Nullification",
+    "detail": "A doctrine asserting that if a state deems a federal law unconstitutional, it can nullify it within its borders; rejected after the Civil War.",
+    "url": "course-tools.html?glossary=Nullification#words"
+  },
+  {
+    "type": "Term",
+    "title": "Devolution",
+    "detail": "Returning more authority to state or local governments.",
+    "url": "course-tools.html?glossary=Devolution#words"
+  },
+  {
+    "type": "Term",
+    "title": "Categorical Grants",
+    "detail": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
+    "url": "course-tools.html?glossary=Categorical%20Grants#words"
+  },
+  {
+    "type": "Term",
+    "title": "Block Grants",
+    "detail": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs.",
+    "url": "course-tools.html?glossary=Block%20Grants#words"
+  },
+  {
+    "type": "Term",
+    "title": "Grants-in-Aid",
+    "detail": "Federal money given to state or local governments for public programs.",
+    "url": "course-tools.html?glossary=Grants-in-Aid#words"
+  },
+  {
+    "type": "Term",
+    "title": "Discretion",
+    "detail": "Freedom to decide how something will be done or how money will be used.",
+    "url": "course-tools.html?glossary=Discretion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federal Mandate",
+    "detail": "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
+    "url": "course-tools.html?glossary=Federal%20Mandate#words"
+  },
+  {
+    "type": "Term",
+    "title": "General Revenue Sharing",
+    "detail": "Federal funds with almost no restrictions on state use, offering greater state flexibility than categorical or block grants.",
+    "url": "course-tools.html?glossary=General%20Revenue%20Sharing#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unfunded Mandate",
+    "detail": "A federal requirement without enough federal money to cover its cost.",
+    "url": "course-tools.html?glossary=Unfunded%20Mandate#words"
+  },
+  {
+    "type": "Term",
+    "title": "Immigration Federalism",
+    "detail": "The gradual movement of states into the immigration policy domain traditionally handled by the federal government.",
+    "url": "course-tools.html?glossary=Immigration%20Federalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Extradition",
+    "detail": "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge.",
+    "url": "course-tools.html?glossary=Extradition#words"
+  },
+  {
+    "type": "Term",
+    "title": "Stakeholder",
+    "detail": "A person or group affected by or interested in a policy.",
+    "url": "course-tools.html?glossary=Stakeholder#words"
+  },
+  {
+    "type": "Term",
+    "title": "Access Point",
+    "detail": "A place where a person or group can try to influence a government decision. Access creates an opportunity to be heard, not a guaranteed result.",
+    "url": "course-tools.html?glossary=Access%20Point#words"
+  },
+  {
+    "type": "Term",
+    "title": "Multiple Access Points",
+    "detail": "The different institutions and levels of government through which people and groups can try to influence policy. They create opportunities for participation as well as places where proposals can be delayed or stopped.",
+    "url": "course-tools.html?glossary=Multiple%20Access%20Points#words"
+  },
+  {
+    "type": "Term",
+    "title": "Policy Variation",
+    "detail": "Differences in state policies that allow responses to local conditions and experimentation but can also produce unequal rules, benefits, or protections across state lines.",
+    "url": "course-tools.html?glossary=Policy%20Variation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Home Rule",
+    "detail": "Principle that provides local governments some degree of independence from the state government.",
+    "url": "course-tools.html?glossary=Home%20Rule#words"
+  },
+  {
+    "type": "Term",
+    "title": "Exclusive Powers",
+    "detail": "Powers held by only one level of government. Some belong only to the national government; others are reserved to the states.",
+    "url": "course-tools.html?glossary=Exclusive%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Monarchy",
+    "detail": "A form of government where one ruler, usually a hereditary one, holds political power.",
+    "url": "course-tools.html?glossary=Monarchy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Oligarchy",
+    "detail": "A form of government where a handful of elite society members hold political power.",
+    "url": "course-tools.html?glossary=Oligarchy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Totalitarianism",
+    "detail": "A form of government where government is all-powerful and citizens have no rights.",
+    "url": "course-tools.html?glossary=Totalitarianism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Elite Theory",
+    "detail": "Theory of democracy that elites have a disproportionate amount of influence in the policymaking process.",
+    "url": "course-tools.html?glossary=Elite%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pluralism",
+    "detail": "A theory that views the distribution of political power among many competing groups as serving to keep any one group in check.",
+    "url": "course-tools.html?glossary=Pluralism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Culture",
+    "detail": "The shared set of beliefs, customs, traditions, and values that define the relationship between citizens and government.",
+    "url": "course-tools.html?glossary=Political%20Culture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Moralistic Political Culture",
+    "detail": "A culture that views the government as a means to better society and promote the general welfare.",
+    "url": "course-tools.html?glossary=Moralistic%20Political%20Culture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Traditionalistic Political Culture",
+    "detail": "A culture that views the government as necessary to maintaining the existing social order.",
+    "url": "course-tools.html?glossary=Traditionalistic%20Political%20Culture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Individualistic Political Culture",
+    "detail": "A culture that views the government as a mechanism for addressing issues that matter to individual citizens.",
+    "url": "course-tools.html?glossary=Individualistic%20Political%20Culture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Public Policy",
+    "detail": "Government decisions and actions intended to address public issues. Laws, spending programs, regulations, and oversight can all shape policy.",
+    "url": "course-tools.html?glossary=Public%20Policy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Direct Democracy",
+    "detail": "Citizens vote directly on a law or policy.",
+    "url": "course-tools.html?glossary=Direct%20Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Representative Democracy",
+    "detail": "A system in which citizens elect officials to make public decisions on their behalf rather than voting directly on every policy.",
+    "url": "course-tools.html?glossary=Representative%20Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Participatory Democracy",
+    "detail": "A model emphasizing broad, direct involvement by ordinary citizens through voting, protests, petitions, town halls, and other political action. It does not mean citizens make every decision themselves.",
+    "url": "course-tools.html?glossary=Participatory%20Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Participation",
+    "detail": "Actions people take to influence government.",
+    "url": "course-tools.html?glossary=Political%20Participation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pluralist Democracy",
+    "detail": "A model describing politics as competition among organized groups seeking to influence public policy. Groups do not necessarily have equal resources or influence.",
+    "url": "course-tools.html?glossary=Pluralist%20Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Interest Group",
+    "detail": "An organized group that tries to influence government policy.",
+    "url": "course-tools.html?glossary=Interest%20Group#words"
+  },
+  {
+    "type": "Term",
+    "title": "Lobbying",
+    "detail": "Contacting public officials to persuade them about a policy.",
+    "url": "course-tools.html?glossary=Lobbying#words"
+  },
+  {
+    "type": "Term",
+    "title": "Coalition",
+    "detail": "Several groups working together toward the same goal.",
+    "url": "course-tools.html?glossary=Coalition#words"
+  },
+  {
+    "type": "Term",
+    "title": "Compromise",
+    "detail": "An agreement in which each side gets some, but not all, of what it wants.",
+    "url": "course-tools.html?glossary=Compromise#words"
+  },
+  {
+    "type": "Term",
+    "title": "Elite Democracy",
+    "detail": "A model emphasizing the influence of a smaller group of leaders, wealthy donors, experts, and other powerful decision makers who shape which choices reach the agenda. Elections and citizen participation still occur.",
+    "url": "course-tools.html?glossary=Elite%20Democracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Elites",
+    "detail": "A small group of leaders, experts, wealthy people, or well-connected people with strong political influence.",
+    "url": "course-tools.html?glossary=Political%20Elites#words"
+  },
+  {
+    "type": "Term",
+    "title": "Institutional Filter",
+    "detail": "A part of government that separates immediate public preferences from final policy decisions.",
+    "url": "course-tools.html?glossary=Institutional%20Filter#words"
+  },
+  {
+    "type": "Term",
+    "title": "Eminent Domain",
+    "detail": "The power of government to take or use property for a public purpose after compensating its owner; also known as the takings clause of the Fifth Amendment.",
+    "url": "course-tools.html?glossary=Eminent%20Domain#words"
+  },
+  {
+    "type": "Term",
+    "title": "Statute",
+    "detail": "A written law established by a legislative body.",
+    "url": "course-tools.html?glossary=Statute#words"
+  },
+  {
+    "type": "Term",
+    "title": "Common Law",
+    "detail": "The pattern of law developed by judges through case decisions largely based on precedent.",
+    "url": "course-tools.html?glossary=Common%20Law#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bicameral Legislature",
+    "detail": "A legislature with two chambers. In Congress, the House represents people by population and the Senate represents states equally; both must pass identical text for a bill to advance to the president.",
+    "url": "course-tools.html?glossary=Bicameral%20Legislature#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unicameral Legislature",
+    "detail": "A legislature with only one house.",
+    "url": "course-tools.html?glossary=Unicameral%20Legislature#words"
+  },
+  {
+    "type": "Term",
+    "title": "Apportionment",
+    "detail": "The process of determining the number of representatives for each state using census data.",
+    "url": "course-tools.html?glossary=Apportionment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Reapportionment",
+    "detail": "Redistributing the 435 House seats among states after the census to reflect population changes. It changes how many seats a state has, not the district boundaries within it.",
+    "url": "course-tools.html?glossary=Reapportionment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Redistricting",
+    "detail": "Redrawing electoral district boundaries within a state, usually after the census. State legislatures or commissions handle the process under rules that vary by state.",
+    "url": "course-tools.html?glossary=Redistricting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Gerrymandering",
+    "detail": "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering.",
+    "url": "course-tools.html?glossary=Gerrymandering#words"
+  },
+  {
+    "type": "Term",
+    "title": "Malapportionment",
+    "detail": "Unequal populations across legislative districts that give voters in less-populated districts more representation per person.",
+    "url": "course-tools.html?glossary=Malapportionment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Speaker of the House",
+    "detail": "The leader elected by the full House, usually with majority-party support, who directs legislative work and helps set the agenda.",
+    "url": "course-tools.html?glossary=Speaker%20of%20the%20House#words"
+  },
+  {
+    "type": "Term",
+    "title": "House Majority Leader",
+    "detail": "A leader of the House majority party who helps set its legislative priorities and build support for bills.",
+    "url": "course-tools.html?glossary=House%20Majority%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "Senate Majority Leader",
+    "detail": "The elected leader of the Senate's majority party, who helps set the chamber's schedule and legislative priorities.",
+    "url": "course-tools.html?glossary=Senate%20Majority%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "President Pro Tempore",
+    "detail": "The senator who acts in the absence of the vice president; usually the most senior senator of the majority party.",
+    "url": "course-tools.html?glossary=President%20Pro%20Tempore#words"
+  },
+  {
+    "type": "Term",
+    "title": "Whip",
+    "detail": "A party leader who counts votes and encourages members to support the party’s position.",
+    "url": "course-tools.html?glossary=Whip#words"
+  },
+  {
+    "type": "Term",
+    "title": "Filibuster",
+    "detail": "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote.",
+    "url": "course-tools.html?glossary=Filibuster#words"
+  },
+  {
+    "type": "Term",
+    "title": "Cloture",
+    "detail": "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill.",
+    "url": "course-tools.html?glossary=Cloture#words"
+  },
+  {
+    "type": "Term",
+    "title": "House Rules Committee",
+    "detail": "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
+    "url": "course-tools.html?glossary=House%20Rules%20Committee#words"
+  },
+  {
+    "type": "Term",
+    "title": "Conference Committee",
+    "detail": "Members from both chambers who may negotiate a compromise when the House and Senate pass different bill versions. Each chamber must then approve the same final text.",
+    "url": "course-tools.html?glossary=Conference%20Committee#words"
+  },
+  {
+    "type": "Term",
+    "title": "Standing Committee",
+    "detail": "A permanent legislative group focused on a policy area. It holds hearings, gathers information, and studies and revises bills before a chamber votes.",
+    "url": "course-tools.html?glossary=Standing%20Committee#words"
+  },
+  {
+    "type": "Term",
+    "title": "Select Committee",
+    "detail": "A small legislative committee created to fulfill a specific purpose and then disbanded.",
+    "url": "course-tools.html?glossary=Select%20Committee#words"
+  },
+  {
+    "type": "Term",
+    "title": "Joint Committee",
+    "detail": "A legislative committee consisting of members from both chambers.",
+    "url": "course-tools.html?glossary=Joint%20Committee#words"
+  },
+  {
+    "type": "Term",
+    "title": "Discharge Petition",
+    "detail": "A way to bring a bill out of a House committee with signatures from a majority of House members. It is difficult to use and does not itself pass the bill.",
+    "url": "course-tools.html?glossary=Discharge%20Petition#words"
+  },
+  {
+    "type": "Term",
+    "title": "Logrolling",
+    "detail": "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy.",
+    "url": "course-tools.html?glossary=Logrolling#words"
+  },
+  {
+    "type": "Term",
+    "title": "Earmark",
+    "detail": "An addition to a piece of legislation that directs specific funds to projects within districts or states.",
+    "url": "course-tools.html?glossary=Earmark#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pork-Barrel Politics",
+    "detail": "Directing spending toward a member’s district or state, often within a larger spending bill. Local benefits can help build support for legislation.",
+    "url": "course-tools.html?glossary=Pork-Barrel%20Politics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Roll-Call Vote",
+    "detail": "A recorded vote on a bill.",
+    "url": "course-tools.html?glossary=Roll-Call%20Vote#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unanimous Consent Agreement",
+    "detail": "A Senate agreement to proceed without objection, often used to bring up bills and manage debate.",
+    "url": "course-tools.html?glossary=Unanimous%20Consent%20Agreement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Hold",
+    "detail": "A senator’s signal that they may object to a unanimous-consent request, potentially delaying action.",
+    "url": "course-tools.html?glossary=Hold#words"
+  },
+  {
+    "type": "Term",
+    "title": "Gridlock",
+    "detail": "A lack of consensus that prevents Congress from acting on legislation. Polarization and divided government can contribute, but opposition does not always produce gridlock.",
+    "url": "course-tools.html?glossary=Gridlock#words"
+  },
+  {
+    "type": "Term",
+    "title": "Impeachment",
+    "detail": "The act of charging a government official with serious wrongdoing, which may lead to removal from office.",
+    "url": "course-tools.html?glossary=Impeachment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Oversight",
+    "detail": "Efforts by Congress to ensure executive branch agencies and officials are acting legally and in accordance with congressional goals.",
+    "url": "course-tools.html?glossary=Oversight#words"
+  },
+  {
+    "type": "Term",
+    "title": "Mandatory Spending",
+    "detail": "Spending that follows existing law, including programs such as Social Security, Medicare, and Medicaid. Congress must change the law to alter those commitments; they are not a permanently fixed share of the budget.",
+    "url": "course-tools.html?glossary=Mandatory%20Spending#words"
+  },
+  {
+    "type": "Term",
+    "title": "Discretionary Spending",
+    "detail": "Spending set through annual appropriations, including funding for defense, education, and infrastructure.",
+    "url": "course-tools.html?glossary=Discretionary%20Spending#words"
+  },
+  {
+    "type": "Term",
+    "title": "Deficit",
+    "detail": "The annual amount by which expenditures are greater than revenues.",
+    "url": "course-tools.html?glossary=Deficit#words"
+  },
+  {
+    "type": "Term",
+    "title": "Appropriation",
+    "detail": "A funding law that provides money for government agencies and programs. Budget targets alone do not fund agencies.",
+    "url": "course-tools.html?glossary=Appropriation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Congressional Budget Office (CBO)",
+    "detail": "The federal agency tasked with producing independent analyses of budgetary and economic issues.",
+    "url": "course-tools.html?glossary=Congressional%20Budget%20Office%20(CBO)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bipartisanship",
+    "detail": "Agreement between the parties to work together in Congress to pass legislation.",
+    "url": "course-tools.html?glossary=Bipartisanship#words"
+  },
+  {
+    "type": "Term",
+    "title": "Incumbency Advantage",
+    "detail": "Institutional advantages held by those already in office trying to fend off challengers.",
+    "url": "course-tools.html?glossary=Incumbency%20Advantage#words"
+  },
+  {
+    "type": "Term",
+    "title": "Committee Chair",
+    "detail": "The member who leads a committee and shapes its agenda, hearings, and which bills advance. The majority party controls committee chairs.",
+    "url": "course-tools.html?glossary=Committee%20Chair#words"
+  },
+  {
+    "type": "Term",
+    "title": "Markup",
+    "detail": "A committee meeting where members debate a bill and propose or vote on changes before it moves forward.",
+    "url": "course-tools.html?glossary=Markup#words"
+  },
+  {
+    "type": "Term",
+    "title": "Committee of the Whole",
+    "detail": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
+    "url": "course-tools.html?glossary=Committee%20of%20the%20Whole#words"
+  },
+  {
+    "type": "Term",
+    "title": "Revenue Bill",
+    "detail": "A bill that raises money through taxes; the Constitution requires these bills to begin in the House of Representatives.",
+    "url": "course-tools.html?glossary=Revenue%20Bill#words"
+  },
+  {
+    "type": "Term",
+    "title": "Partisan Voting",
+    "detail": "Voting based on party affiliation, which can conflict with constituents’ preferences or a member’s independent judgment.",
+    "url": "course-tools.html?glossary=Partisan%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Polarization",
+    "detail": "The widening ideological distance between parties, which can make compromise and agreement harder.",
+    "url": "course-tools.html?glossary=Polarization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bicameralism",
+    "detail": "The two-chamber structure of Congress. House and Senate differences in representation and procedure affect which proposals can become law.",
+    "url": "course-tools.html?glossary=Bicameralism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Census",
+    "detail": "The population count conducted every ten years, used to redistribute House seats among states and guide redistricting.",
+    "url": "course-tools.html?glossary=Census#words"
+  },
+  {
+    "type": "Term",
+    "title": "Budget Resolution",
+    "detail": "A congressional plan setting budget targets. It does not itself provide funding to agencies; that requires appropriations.",
+    "url": "course-tools.html?glossary=Budget%20Resolution#words"
+  },
+  {
+    "type": "Term",
+    "title": "Net Interest",
+    "detail": "The federal government’s net cost of borrowing, which affects the money available for other budget choices.",
+    "url": "course-tools.html?glossary=Net%20Interest#words"
+  },
+  {
+    "type": "Term",
+    "title": "Executive Branch",
+    "detail": "The branch led by the president that carries out federal laws through departments and agencies.",
+    "url": "course-tools.html?glossary=Executive%20Branch#words"
+  },
+  {
+    "type": "Term",
+    "title": "Executive Order",
+    "detail": "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have.",
+    "url": "course-tools.html?glossary=Executive%20Order#words"
+  },
+  {
+    "type": "Term",
+    "title": "Executive Privilege",
+    "detail": "A right claimed by presidents to keep certain conversations, records, and transcripts confidential from outside scrutiny.",
+    "url": "course-tools.html?glossary=Executive%20Privilege#words"
+  },
+  {
+    "type": "Term",
+    "title": "Executive Agreement",
+    "detail": "An international agreement made without the Senate’s treaty-approval vote. It remains subject to the president’s legal authority and may depend on cooperation or funding.",
+    "url": "course-tools.html?glossary=Executive%20Agreement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bully Pulpit",
+    "detail": "The president’s prominent public platform for drawing attention to an issue and building support for an agenda. Attention alone does not pass a law.",
+    "url": "course-tools.html?glossary=Bully%20Pulpit#words"
+  },
+  {
+    "type": "Term",
+    "title": "Going Public",
+    "detail": "A tactic through which presidents reach out directly to the American people to pressure Congress on policy goals.",
+    "url": "course-tools.html?glossary=Going%20Public#words"
+  },
+  {
+    "type": "Term",
+    "title": "Veto",
+    "detail": "Formal rejection by the president of a bill that has passed both houses of Congress.",
+    "url": "course-tools.html?glossary=Veto#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pocket Veto",
+    "detail": "A veto that occurs when the president does not sign a bill within ten days (excluding Sundays) and Congress adjourns so the bill cannot be returned; the bill does not become law and Congress cannot override this veto.",
+    "url": "course-tools.html?glossary=Pocket%20Veto#words"
+  },
+  {
+    "type": "Term",
+    "title": "Line-Item Veto",
+    "detail": "A proposed power to cancel specific parts of a law. The Supreme Court struck down the federal line-item veto in 1998, so the president cannot use it today.",
+    "url": "course-tools.html?glossary=Line-Item%20Veto#words"
+  },
+  {
+    "type": "Term",
+    "title": "Presidential Pardon",
+    "detail": "Presidential authority to forgive an individual and set aside punishment for a crime.",
+    "url": "course-tools.html?glossary=Presidential%20Pardon#words"
+  },
+  {
+    "type": "Term",
+    "title": "Signing Statement",
+    "detail": "A written explanation issued when the president signs a bill, often describing how the administration interprets or plans to implement it. It does not rewrite the law.",
+    "url": "course-tools.html?glossary=Signing%20Statement#words"
+  },
+  {
+    "type": "Term",
+    "title": "War Powers Resolution",
+    "detail": "A 1973 law requiring the president to notify Congress within 48 hours of sending U.S. forces into hostilities and generally withdraw them within 60 days unless Congress authorizes the action, with up to 30 additional days for withdrawal.",
+    "url": "course-tools.html?glossary=War%20Powers%20Resolution#words"
+  },
+  {
+    "type": "Term",
+    "title": "Cabinet",
+    "detail": "The vice president and heads of executive departments who advise the president; presidents may also give other officials Cabinet rank. Department heads direct work in their policy areas.",
+    "url": "course-tools.html?glossary=Cabinet#words"
+  },
+  {
+    "type": "Term",
+    "title": "Executive Office of the President",
+    "detail": "Offices that help the president with policy, budgets, and national security by bringing information together for presidential decisions.",
+    "url": "course-tools.html?glossary=Executive%20Office%20of%20the%20President#words"
+  },
+  {
+    "type": "Term",
+    "title": "Office of Management and Budget (OMB)",
+    "detail": "The executive branch office that assists the president in setting national spending priorities.",
+    "url": "course-tools.html?glossary=Office%20of%20Management%20and%20Budget%20(OMB)#words"
+  },
+  {
+    "type": "Term",
+    "title": "State of the Union Address",
+    "detail": "The modern presidential address that informs Congress about national affairs, recommends measures, and communicates policy priorities to the public. The Constitution requires information and recommendations, not a particular speech format.",
+    "url": "course-tools.html?glossary=State%20of%20the%20Union%20Address#words"
+  },
+  {
+    "type": "Term",
+    "title": "Two Presidencies Thesis",
+    "detail": "Wildavsky's thesis that there are two distinct presidencies one for foreign and one for domestic policy, and presidents are more successful in foreign policy.",
+    "url": "course-tools.html?glossary=Two%20Presidencies%20Thesis#words"
+  },
+  {
+    "type": "Term",
+    "title": "Informal Powers",
+    "detail": "Presidential tools developed through political practice and relationships, such as bargaining, executive agreements, and signing statements. They do not permit the president to ignore the law.",
+    "url": "course-tools.html?glossary=Informal%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Inherent Powers",
+    "detail": "Powers neither enumerated nor implied but assumed to exist as a direct result of the country's existence.",
+    "url": "course-tools.html?glossary=Inherent%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Formal Powers",
+    "detail": "Presidential powers whose basic authority is written into the Constitution, including vetoes, commander-in-chief authority, and treaty-making.",
+    "url": "course-tools.html?glossary=Formal%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Lame Duck Period",
+    "detail": "A period when a president is leaving office without another term ahead, such as after a successor is elected or when the president will not seek reelection. Lawmakers may become less responsive as they look toward the next president.",
+    "url": "course-tools.html?glossary=Lame%20Duck%20Period#words"
+  },
+  {
+    "type": "Term",
+    "title": "Treaty",
+    "detail": "A formal agreement with another nation negotiated by the president that requires approval by two-thirds of senators present.",
+    "url": "course-tools.html?glossary=Treaty#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rally Around the Flag Effect",
+    "detail": "A spike in presidential popularity during international crises.",
+    "url": "course-tools.html?glossary=Rally%20Around%20the%20Flag%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "Commander in Chief",
+    "detail": "The president’s role leading the armed forces. Congress retains its powers to declare war, authorize action, and fund the military.",
+    "url": "course-tools.html?glossary=Commander%20in%20Chief#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bargaining and Persuasion",
+    "detail": "Informal presidential tools for seeking support from lawmakers or other officials. They can help advance an agenda but cannot force another branch to agree.",
+    "url": "course-tools.html?glossary=Bargaining%20and%20Persuasion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Senate Confirmation",
+    "detail": "The Senate's approval of many presidential nominees, including Cabinet officers, ambassadors, and federal judges.",
+    "url": "course-tools.html?glossary=Senate%20Confirmation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Congressional Agenda",
+    "detail": "The formal list of policies and bills Congress is considering at a given time.",
+    "url": "course-tools.html?glossary=Congressional%20Agenda#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist No. 70",
+    "detail": "Alexander Hamilton’s defense of an energetic executive: unity supports speed and clear direction while making responsibility easier to identify. Energy also requires accountability to the people.",
+    "url": "course-tools.html?glossary=Federalist%20No.%2070#words"
+  },
+  {
+    "type": "Term",
+    "title": "Unity",
+    "detail": "In Federalist No. 70, having one executive who can choose a course without waiting for several executives to agree and whose responsibility the public can identify.",
+    "url": "course-tools.html?glossary=Unity#words"
+  },
+  {
+    "type": "Term",
+    "title": "Accountability",
+    "detail": "Officials can be identified, questioned, and held responsible for their decisions.",
+    "url": "course-tools.html?glossary=Accountability#words"
+  },
+  {
+    "type": "Term",
+    "title": "Tyranny",
+    "detail": "The use of power without effective limits or accountability.",
+    "url": "course-tools.html?glossary=Tyranny#words"
+  },
+  {
+    "type": "Term",
+    "title": "Policy Agenda",
+    "detail": "The set of goals a president seeks to advance. Achieving those goals requires legal authority and often cooperation from others.",
+    "url": "course-tools.html?glossary=Policy%20Agenda#words"
+  },
+  {
+    "type": "Term",
+    "title": "White House Staff",
+    "detail": "Close presidential advisers who help manage the president’s schedule, choices, and public message. Many do not require Senate confirmation.",
+    "url": "course-tools.html?glossary=White%20House%20Staff#words"
+  },
+  {
+    "type": "Term",
+    "title": "Congressional Authorization",
+    "detail": "Permission Congress gives through a law. A broad delegation may leave implementation details to agencies, but a specific action still needs a legal basis.",
+    "url": "course-tools.html?glossary=Congressional%20Authorization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Imperial Presidency",
+    "detail": "Arthur Schlesinger Jr.’s warning that presidential power can grow beyond effective checks, especially in war and foreign affairs.",
+    "url": "course-tools.html?glossary=Imperial%20Presidency#words"
+  },
+  {
+    "type": "Term",
+    "title": "Twenty-Second Amendment",
+    "detail": "The amendment generally limiting a person to being elected president twice. Someone who serves more than two years of another president’s term may be elected only once.",
+    "url": "course-tools.html?glossary=Twenty-Second%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Agenda Setting",
+    "detail": "Influencing which problems officials and the public treat as priorities. A presidential address can draw attention to a proposal without itself making the proposal law.",
+    "url": "course-tools.html?glossary=Agenda%20Setting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Press Secretary",
+    "detail": "The White House official who helps communicate and defend the administration’s positions to the press and public.",
+    "url": "course-tools.html?glossary=Press%20Secretary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bureaucracy",
+    "detail": "An administrative group of nonelected officials charged with carrying out functions connected to policies and programs.",
+    "url": "course-tools.html?glossary=Bureaucracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federal Bureaucracy",
+    "detail": "The departments and agencies within the executive branch that carry out the laws of the nation.",
+    "url": "course-tools.html?glossary=Federal%20Bureaucracy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bureaucratic Discretion",
+    "detail": "The power to decide how a law is implemented.",
+    "url": "course-tools.html?glossary=Bureaucratic%20Discretion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bureaucratic Adjudication",
+    "detail": "When the federal bureaucracy settles disputes between parties that arise over the implementation of federal laws.",
+    "url": "course-tools.html?glossary=Bureaucratic%20Adjudication#words"
+  },
+  {
+    "type": "Term",
+    "title": "Implementation",
+    "detail": "The bureaucracy's role in putting into action the laws that Congress has passed.",
+    "url": "course-tools.html?glossary=Implementation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rulemaking",
+    "detail": "The process through which the federal bureaucracy fills in critical details of a law.",
+    "url": "course-tools.html?glossary=Rulemaking#words"
+  },
+  {
+    "type": "Term",
+    "title": "Regulation",
+    "detail": "The process through which the federal bureaucracy makes rules that have the force of law.",
+    "url": "course-tools.html?glossary=Regulation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Independent Regulatory Agency",
+    "detail": "Organization that exists outside of the major cabinet departments whose job is to monitor and regulate specific sectors of the economy.",
+    "url": "course-tools.html?glossary=Independent%20Regulatory%20Agency#words"
+  },
+  {
+    "type": "Term",
+    "title": "Independent Executive Agency",
+    "detail": "Agency similar to cabinet departments but existing outside the cabinet structure and usually having a narrower mission.",
+    "url": "course-tools.html?glossary=Independent%20Executive%20Agency#words"
+  },
+  {
+    "type": "Term",
+    "title": "Agency Capture",
+    "detail": "When agencies tasked with regulating businesses are populated by individuals with close ties to the very firms they are supposed to regulate.",
+    "url": "course-tools.html?glossary=Agency%20Capture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Whistleblower",
+    "detail": "A person who publicizes misdeeds committed within a bureaucracy or other organization.",
+    "url": "course-tools.html?glossary=Whistleblower#words"
+  },
+  {
+    "type": "Term",
+    "title": "Civil Servants",
+    "detail": "The individuals who fill nonelected positions in government and make up the bureaucracy.",
+    "url": "course-tools.html?glossary=Civil%20Servants#words"
+  },
+  {
+    "type": "Term",
+    "title": "Merit System",
+    "detail": "A system of hiring and promotion based on competitive testing results, education, and other qualifications.",
+    "url": "course-tools.html?glossary=Merit%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Spoils System",
+    "detail": "A system that rewards political loyalties with bureaucratic appointments after victory.",
+    "url": "course-tools.html?glossary=Spoils%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Patronage",
+    "detail": "The use of government positions to reward individuals for their political support.",
+    "url": "course-tools.html?glossary=Patronage#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pendleton Act",
+    "detail": "An act of Congress that created the first United States Civil Service Commission to draw up and enforce rules on hiring in the civil service.",
+    "url": "course-tools.html?glossary=Pendleton%20Act#words"
+  },
+  {
+    "type": "Term",
+    "title": "Iron Triangle",
+    "detail": "Coordinated and mutually beneficial activities of the bureaucracy, Congress, and interest groups to achieve shared policy goals.",
+    "url": "course-tools.html?glossary=Iron%20Triangle#words"
+  },
+  {
+    "type": "Term",
+    "title": "Issue Network",
+    "detail": "Webs of influence between interest groups, policymakers, and policy advocates.",
+    "url": "course-tools.html?glossary=Issue%20Network#words"
+  },
+  {
+    "type": "Term",
+    "title": "Revolving Door",
+    "detail": "The movement of individuals between government and lobbying positions.",
+    "url": "course-tools.html?glossary=Revolving%20Door#words"
+  },
+  {
+    "type": "Term",
+    "title": "Red Tape",
+    "detail": "The mechanisms, procedures, and rules that must be followed to get something done.",
+    "url": "course-tools.html?glossary=Red%20Tape#words"
+  },
+  {
+    "type": "Term",
+    "title": "Freedom of Information Act (FOIA)",
+    "detail": "A federal statute that requires public agencies to provide certain types of information requested by citizens.",
+    "url": "course-tools.html?glossary=Freedom%20of%20Information%20Act%20(FOIA)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sunshine Laws",
+    "detail": "Laws that require government documents and proceedings to be made public.",
+    "url": "course-tools.html?glossary=Sunshine%20Laws#words"
+  },
+  {
+    "type": "Term",
+    "title": "Top-Down Implementation",
+    "detail": "A strategy in which the federal government dictates the specifics of public policy and each state implements it the same way.",
+    "url": "course-tools.html?glossary=Top-Down%20Implementation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bottom-Up Implementation",
+    "detail": "A strategy in which the federal government allows local areas some flexibility to meet their specific challenges.",
+    "url": "course-tools.html?glossary=Bottom-Up%20Implementation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Government Corporation",
+    "detail": "A government-owned organization that provides a public service and operates somewhat like a business.",
+    "url": "course-tools.html?glossary=Government%20Corporation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Delegated Discretionary Authority",
+    "detail": "Room Congress gives an agency to interpret a law and decide how to carry it out within legal limits.",
+    "url": "course-tools.html?glossary=Delegated%20Discretionary%20Authority#words"
+  },
+  {
+    "type": "Term",
+    "title": "Compliance Monitoring",
+    "detail": "Checking whether agencies, organizations, or recipients are following rules and using public funds as required.",
+    "url": "course-tools.html?glossary=Compliance%20Monitoring#words"
+  },
+  {
+    "type": "Term",
+    "title": "Judicial Branch",
+    "detail": "The institution responsible for hearing and deciding cases through federal courts.",
+    "url": "course-tools.html?glossary=Judicial%20Branch#words"
+  },
+  {
+    "type": "Term",
+    "title": "Judicial Activism",
+    "detail": "An approach that supports using judicial review to overturn precedent or invalidate laws and executive actions when judges find them unconstitutional.",
+    "url": "course-tools.html?glossary=Judicial%20Activism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Judicial Restraint",
+    "detail": "An approach that favors limiting judicial review and generally following constitutional and legal precedent.",
+    "url": "course-tools.html?glossary=Judicial%20Restraint#words"
+  },
+  {
+    "type": "Term",
+    "title": "Precedent",
+    "detail": "A judicial decision that guides future courts in handling similar cases.",
+    "url": "course-tools.html?glossary=Precedent#words"
+  },
+  {
+    "type": "Term",
+    "title": "Stare Decisis",
+    "detail": "The practice of letting a previous legal decision stand.",
+    "url": "course-tools.html?glossary=Stare%20Decisis#words"
+  },
+  {
+    "type": "Term",
+    "title": "Supreme Court",
+    "detail": "The highest level of the federal judiciary, established in Article III of the Constitution.",
+    "url": "course-tools.html?glossary=Supreme%20Court#words"
+  },
+  {
+    "type": "Term",
+    "title": "Original Jurisdiction",
+    "detail": "The authority of a court to act as the first court to hear a case.",
+    "url": "course-tools.html?glossary=Original%20Jurisdiction#words"
+  },
+  {
+    "type": "Term",
+    "title": "Appellate Jurisdiction",
+    "detail": "The authority of a court to hear and review decisions made by lower courts.",
+    "url": "course-tools.html?glossary=Appellate%20Jurisdiction#words"
+  },
+  {
+    "type": "Term",
+    "title": "Appellate Court",
+    "detail": "A court that reviews cases already decided by a lower or trial court.",
+    "url": "course-tools.html?glossary=Appellate%20Court#words"
+  },
+  {
+    "type": "Term",
+    "title": "Circuit Courts",
+    "detail": "The appeals courts of the federal court system; also called courts of appeals.",
+    "url": "course-tools.html?glossary=Circuit%20Courts#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federal District Courts",
+    "detail": "The lowest level of the federal judiciary where cases are tried and evidence is presented.",
+    "url": "course-tools.html?glossary=Federal%20District%20Courts#words"
+  },
+  {
+    "type": "Term",
+    "title": "Dual Court System",
+    "detail": "The division of the courts into two separate systems, one federal and one state.",
+    "url": "course-tools.html?glossary=Dual%20Court%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Writ of Certiorari",
+    "detail": "An order of the Supreme Court calling up the records of the lower court so a case may be reviewed.",
+    "url": "course-tools.html?glossary=Writ%20of%20Certiorari#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rule of Four",
+    "detail": "A Supreme Court custom in which a case will be heard when four justices decide to do so.",
+    "url": "course-tools.html?glossary=Rule%20of%20Four#words"
+  },
+  {
+    "type": "Term",
+    "title": "Docket",
+    "detail": "The list of cases pending on a court's calendar.",
+    "url": "course-tools.html?glossary=Docket#words"
+  },
+  {
+    "type": "Term",
+    "title": "Oral Argument",
+    "detail": "Presentation made by plaintiffs and attorneys before the Supreme Court.",
+    "url": "course-tools.html?glossary=Oral%20Argument#words"
+  },
+  {
+    "type": "Term",
+    "title": "Majority Opinion",
+    "detail": "Binding Supreme Court opinions, which serve as precedent for future cases.",
+    "url": "course-tools.html?glossary=Majority%20Opinion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Concurring Opinion",
+    "detail": "An opinion that agrees with the majority decision but offers different reasoning; does not serve as precedent.",
+    "url": "course-tools.html?glossary=Concurring%20Opinion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Dissenting Opinion",
+    "detail": "An opinion that disagrees with the majority opinion and does not serve as precedent.",
+    "url": "course-tools.html?glossary=Dissenting%20Opinion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Standing",
+    "detail": "The legal ability to bring a case in court.",
+    "url": "course-tools.html?glossary=Standing#words"
+  },
+  {
+    "type": "Term",
+    "title": "Amicus Curiae Brief",
+    "detail": "A \"friend of the court\" brief filed by a person or organization that is not a party to a case, offering information or an argument for the court to consider.",
+    "url": "course-tools.html?glossary=Amicus%20Curiae%20Brief#words"
+  },
+  {
+    "type": "Term",
+    "title": "Senatorial Courtesy",
+    "detail": "An unwritten custom by which the president consults senators in the state before nominating a federal court candidate.",
+    "url": "course-tools.html?glossary=Senatorial%20Courtesy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federalist No. 78",
+    "detail": "Argument by Hamilton that the federal judiciary would serve as a check on the other two branches.",
+    "url": "course-tools.html?glossary=Federalist%20No.%2078#words"
+  },
+  {
+    "type": "Term",
+    "title": "Solicitor General",
+    "detail": "The lawyer who represents the federal government and argues cases before the Supreme Court.",
+    "url": "course-tools.html?glossary=Solicitor%20General#words"
+  },
+  {
+    "type": "Term",
+    "title": "Judicial Independence",
+    "detail": "The ability of courts to decide cases without direct control by the president or Congress; life tenure helps protect this independence for federal judges.",
+    "url": "course-tools.html?glossary=Judicial%20Independence#words"
+  },
+  {
+    "type": "Term",
+    "title": "Life Tenure",
+    "detail": "Federal judges may serve for life during good behavior, helping them make decisions independent of short-term political pressure.",
+    "url": "course-tools.html?glossary=Life%20Tenure#words"
+  },
+  {
+    "type": "Term",
+    "title": "Court-Curbing",
+    "detail": "Actions other branches can take to limit the Supreme Court's influence, such as changing jurisdiction by law, amending the Constitution, or shaping the Court through appointments.",
+    "url": "course-tools.html?glossary=Court-Curbing#words"
+  },
+  {
+    "type": "Term",
+    "title": "Police Powers",
+    "detail": "A category of reserved powers that includes the protection of people's health, safety, and welfare.",
+    "url": "course-tools.html?glossary=Police%20Powers#words"
+  },
+  {
+    "type": "Term",
+    "title": "Divided Government",
+    "detail": "A situation in which one party controls the presidency and another controls at least one chamber of Congress. It can make cooperation harder but does not make agreement impossible.",
+    "url": "course-tools.html?glossary=Divided%20Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "Power of the Purse",
+    "detail": "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs.",
+    "url": "course-tools.html?glossary=Power%20of%20the%20Purse#words"
+  },
+  {
+    "type": "Term",
+    "title": "Delegate Model of Representation",
+    "detail": "An approach in which a representative follows constituents’ preferences, acting as their agent.",
+    "url": "course-tools.html?glossary=Delegate%20Model%20of%20Representation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Trustee Model of Representation",
+    "detail": "An approach in which a representative uses independent judgment, even when some constituents disagree.",
+    "url": "course-tools.html?glossary=Trustee%20Model%20of%20Representation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Politico Model of Representation",
+    "detail": "An approach combining delegate and trustee behavior, changing emphasis with the issue or situation rather than following one fixed rule.",
+    "url": "course-tools.html?glossary=Politico%20Model%20of%20Representation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Descriptive Representation",
+    "detail": "The degree to which a legislature reflects the diversity of that nation's identities and lived experiences.",
+    "url": "course-tools.html?glossary=Descriptive%20Representation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Constituency",
+    "detail": "The people a member of Congress represents: residents of a House district or an entire state for a senator. Eligible voters in that area elect the member.",
+    "url": "course-tools.html?glossary=Constituency#words"
+  },
+  {
+    "type": "Term",
+    "title": "Collective Representation",
+    "detail": "The relationship between Congress and the United States as a whole; whether the institution represents the American people.",
+    "url": "course-tools.html?glossary=Collective%20Representation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Packing",
+    "detail": "Concentrating opposing voters in a few districts so their preferred candidates have fewer opportunities to win seats elsewhere.",
+    "url": "course-tools.html?glossary=Packing#words"
+  },
+  {
+    "type": "Term",
+    "title": "Cracking",
+    "detail": "Splitting opposing voters across several districts to reduce their ability to elect their preferred candidates.",
+    "url": "course-tools.html?glossary=Cracking#words"
+  },
+  {
+    "type": "Term",
+    "title": "Safe Seat",
+    "detail": "A district where one party is strongly favored to win. Less competition may reduce pressure to respond to voters outside that party’s base.",
+    "url": "course-tools.html?glossary=Safe%20Seat#words"
+  },
+  {
+    "type": "Term",
+    "title": "Equal Protection Clause",
+    "detail": "The Fourteenth Amendment’s requirement that states provide equal protection of the laws. Voters used it to challenge unequal representation in Baker and race-based district boundaries in Shaw.",
+    "url": "course-tools.html?glossary=Equal%20Protection%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Strict Scrutiny",
+    "detail": "The Court’s toughest review: the state must show a compelling reason and a map closely fitted to it when race predominates in drawing district lines. Applying the test does not automatically invalidate the district.",
+    "url": "course-tools.html?glossary=Strict%20Scrutiny#words"
+  },
+  {
+    "type": "Term",
+    "title": "Majority-Minority District",
+    "detail": "A district in which a racial or ethnic minority forms a majority of the population. Shaw did not ban every such district; the constitutional question concerns how race shaped the boundaries.",
+    "url": "course-tools.html?glossary=Majority-Minority%20District#words"
+  },
+  {
+    "type": "Term",
+    "title": "Baker v. Carr",
+    "detail": "The 1962 decision allowing federal courts to hear equal-protection challenges to state legislative districting. It did not itself establish “one person, one vote” or decide the challenged map was unconstitutional.",
+    "url": "course-tools.html?glossary=Baker%20v.%20Carr#words"
+  },
+  {
+    "type": "Term",
+    "title": "Shaw v. Reno",
+    "detail": "The 1993 decision allowing voters’ equal-protection challenge to a North Carolina congressional district allegedly drawn mainly by race to proceed. It did not finally rule District 12 unconstitutional.",
+    "url": "course-tools.html?glossary=Shaw%20v.%20Reno#words"
+  },
+  {
+    "type": "Term",
+    "title": "First Amendment",
+    "detail": "Protects freedom of religion, speech, press, assembly, and petition from government restrictions, subject to constitutional limits.",
+    "url": "course-tools.html?glossary=First%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Second Amendment",
+    "detail": "Protects an individual right to keep and bear arms, which applies to state and local governments through the Fourteenth Amendment.",
+    "url": "course-tools.html?glossary=Second%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fourth Amendment",
+    "detail": "Protects people from unreasonable government searches and seizures and sets rules for warrants.",
+    "url": "course-tools.html?glossary=Fourth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fifth Amendment",
+    "detail": "Protects rights including grand-jury indictment in federal cases, freedom from compelled self-incrimination, and due process; it also bars double jeopardy.",
+    "url": "course-tools.html?glossary=Fifth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sixth Amendment",
+    "detail": "Protects rights of people accused of crimes, including a speedy public trial, an impartial jury, and assistance of counsel.",
+    "url": "course-tools.html?glossary=Sixth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Eighth Amendment",
+    "detail": "Bars excessive bail and fines and cruel and unusual punishment.",
+    "url": "course-tools.html?glossary=Eighth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Civil Liberties",
+    "detail": "Fundamental rights and freedoms protected from infringement by the government.",
+    "url": "course-tools.html?glossary=Civil%20Liberties#words"
+  },
+  {
+    "type": "Term",
+    "title": "Freedom of Expression",
+    "detail": "A fundamental right affirmed in the First Amendment to speak, publish, and protest.",
+    "url": "course-tools.html?glossary=Freedom%20of%20Expression#words"
+  },
+  {
+    "type": "Term",
+    "title": "Establishment Clause",
+    "detail": "First Amendment protection against the government requiring citizens to join or support a religion; separation of church and state.",
+    "url": "course-tools.html?glossary=Establishment%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free Exercise Clause",
+    "detail": "The First Amendment protection for religious belief and practice. Government may still enforce neutral laws that apply generally, subject to constitutional limits.",
+    "url": "course-tools.html?glossary=Free%20Exercise%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Prior Restraint",
+    "detail": "Government action that stops speech or publication before it occurs. Courts presume it is unconstitutional, though the rule is not absolute.",
+    "url": "course-tools.html?glossary=Prior%20Restraint#words"
+  },
+  {
+    "type": "Term",
+    "title": "Clear and Present Danger Test",
+    "detail": "The historical standard used in Schenck v. United States (1919) to uphold limits on speech that posed a clear and present danger. Later decisions replaced it with a more speech-protective test; it is not the current standard.",
+    "url": "course-tools.html?glossary=Clear%20and%20Present%20Danger%20Test#words"
+  },
+  {
+    "type": "Term",
+    "title": "Symbolic Speech",
+    "detail": "Protected expression in the form of images, signs, and other symbols.",
+    "url": "course-tools.html?glossary=Symbolic%20Speech#words"
+  },
+  {
+    "type": "Term",
+    "title": "Libel",
+    "detail": "An untrue written statement that injures a person's reputation.",
+    "url": "course-tools.html?glossary=Libel#words"
+  },
+  {
+    "type": "Term",
+    "title": "Slander",
+    "detail": "An untrue spoken expression that injures a person's reputation.",
+    "url": "course-tools.html?glossary=Slander#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sherbert Test",
+    "detail": "A strict-scrutiny approach used in Sherbert v. Verner (1963) for some Free Exercise claims. Later Supreme Court decisions changed how courts generally review neutral laws that burden religion.",
+    "url": "course-tools.html?glossary=Sherbert%20Test#words"
+  },
+  {
+    "type": "Term",
+    "title": "Reporter's Privilege",
+    "detail": "The right of a journalist to keep a source confidential.",
+    "url": "course-tools.html?glossary=Reporter's%20Privilege#words"
+  },
+  {
+    "type": "Term",
+    "title": "Miranda Rights",
+    "detail": "Rights explained before custodial interrogation, including the right to remain silent and the right to an attorney; established in Miranda v. Arizona.",
+    "url": "course-tools.html?glossary=Miranda%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Miranda Warning",
+    "detail": "The warning police give before custodial interrogation to explain Miranda rights, including the right to remain silent and the right to an attorney.",
+    "url": "course-tools.html?glossary=Miranda%20Warning#words"
+  },
+  {
+    "type": "Term",
+    "title": "Exclusionary Rule",
+    "detail": "A rule that can keep evidence obtained through a constitutional violation from being used in court; applied to the states through Mapp v. Ohio.",
+    "url": "course-tools.html?glossary=Exclusionary%20Rule#words"
+  },
+  {
+    "type": "Term",
+    "title": "Due Process Clause",
+    "detail": "The clause in the Fourteenth Amendment restricting state governments from denying citizens life, liberty, or property without legal safeguards.",
+    "url": "course-tools.html?glossary=Due%20Process%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Procedural Due Process",
+    "detail": "The requirement that government follow fair procedures before depriving a person of life, liberty, or property.",
+    "url": "course-tools.html?glossary=Procedural%20Due%20Process#words"
+  },
+  {
+    "type": "Term",
+    "title": "Self-Incrimination",
+    "detail": "An action or statement that admits guilt; the 5th Amendment protects against compelled self-incrimination.",
+    "url": "course-tools.html?glossary=Self-Incrimination#words"
+  },
+  {
+    "type": "Term",
+    "title": "Plea Bargaining",
+    "detail": "A legal process in which the defendant agrees to an outcome before the handing out of a verdict.",
+    "url": "course-tools.html?glossary=Plea%20Bargaining#words"
+  },
+  {
+    "type": "Term",
+    "title": "Probable Cause",
+    "detail": "Reasonable belief that a crime has been committed or that there is evidence indicating so.",
+    "url": "course-tools.html?glossary=Probable%20Cause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Grand Jury",
+    "detail": "A group of citizens who decide whether or not a person should be indicted and tried in court.",
+    "url": "course-tools.html?glossary=Grand%20Jury#words"
+  },
+  {
+    "type": "Term",
+    "title": "Double Jeopardy",
+    "detail": "Protects an individual acquitted of a crime from being charged with the same crime again in the same jurisdiction.",
+    "url": "course-tools.html?glossary=Double%20Jeopardy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Selective Incorporation",
+    "detail": "The process through which the Supreme Court applies fundamental rights in the Bill of Rights to the states on a case-by-case basis via the 14th Amendment.",
+    "url": "course-tools.html?glossary=Selective%20Incorporation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Right to Privacy",
+    "detail": "A constitutional interest recognized in Supreme Court decisions that protects some personal decisions from unjustified government interference.",
+    "url": "course-tools.html?glossary=Right%20to%20Privacy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Common-Law Right",
+    "detail": "A right of the people rooted in legal tradition and past court rulings, rather than the Constitution.",
+    "url": "course-tools.html?glossary=Common-Law%20Right#words"
+  },
+  {
+    "type": "Term",
+    "title": "Emancipation Proclamation",
+    "detail": "Lincoln's 1863 order declared enslaved people free in areas rebelling against the United States. It did not end slavery everywhere; the Thirteenth Amendment abolished slavery nationwide in 1865.",
+    "url": "course-tools.html?glossary=Emancipation%20Proclamation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Civil Rights",
+    "detail": "Protections from discrimination as a member of a particular group.",
+    "url": "course-tools.html?glossary=Civil%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fourteenth Amendment",
+    "detail": "Grants citizenship to people born or naturalized in the United States and bars states from denying any person due process or equal protection of the laws.",
+    "url": "course-tools.html?glossary=Fourteenth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Thirteenth Amendment",
+    "detail": "Abolished slavery and involuntary servitude, except as punishment for a crime, throughout the United States.",
+    "url": "course-tools.html?glossary=Thirteenth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fifteenth Amendment",
+    "detail": "Prohibits the federal and state governments from denying or abridging a citizen's right to vote because of race, color, or previous condition of servitude.",
+    "url": "course-tools.html?glossary=Fifteenth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Nineteenth Amendment",
+    "detail": "Prohibits the federal and state governments from denying or abridging a citizen's right to vote on account of sex.",
+    "url": "course-tools.html?glossary=Nineteenth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Twenty-Sixth Amendment",
+    "detail": "Prohibits the federal and state governments from denying citizens who are 18 or older the right to vote because of age.",
+    "url": "course-tools.html?glossary=Twenty-Sixth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Twenty-Fourth Amendment",
+    "detail": "Prohibits poll taxes as a condition for voting in federal elections.",
+    "url": "course-tools.html?glossary=Twenty-Fourth%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Civil Rights Act of 1964",
+    "detail": "Federal law prohibiting discrimination in several areas, including public accommodations, employment, and federally funded programs; it also strengthened enforcement against school segregation.",
+    "url": "course-tools.html?glossary=Civil%20Rights%20Act%20of%201964#words"
+  },
+  {
+    "type": "Term",
+    "title": "Voting Rights Act of 1965",
+    "detail": "Federal law that prohibits racial discrimination in voting and banned literacy tests. Its original federal oversight rules were later limited by the Supreme Court.",
+    "url": "course-tools.html?glossary=Voting%20Rights%20Act%20of%201965#words"
+  },
+  {
+    "type": "Term",
+    "title": "Affirmative Action",
+    "detail": "A policy designed to address the consequences of previous discrimination by providing special consideration to individuals.",
+    "url": "course-tools.html?glossary=Affirmative%20Action#words"
+  },
+  {
+    "type": "Term",
+    "title": "Intermediate Scrutiny",
+    "detail": "The standard used for cases of discrimination based on gender; burden of proof is on the government to show an important governmental interest.",
+    "url": "course-tools.html?glossary=Intermediate%20Scrutiny#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rational Basis Test",
+    "detail": "The standard used by courts for most other forms of discrimination; challengers must show there is no good reason for treating them differently.",
+    "url": "course-tools.html?glossary=Rational%20Basis%20Test#words"
+  },
+  {
+    "type": "Term",
+    "title": "Separate But Equal",
+    "detail": "The doctrine that racial segregation was constitutional so long as the facilities for blacks and whites were equal; Plessy v. Ferguson, overturned by Brown.",
+    "url": "course-tools.html?glossary=Separate%20But%20Equal#words"
+  },
+  {
+    "type": "Term",
+    "title": "Disenfranchisement",
+    "detail": "The revocation of someone's right to vote.",
+    "url": "course-tools.html?glossary=Disenfranchisement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Black Codes",
+    "detail": "Laws passed immediately after the Civil War that discriminated against freed people and deprived them of their rights.",
+    "url": "course-tools.html?glossary=Black%20Codes#words"
+  },
+  {
+    "type": "Term",
+    "title": "Reconstruction",
+    "detail": "The period from 1865 to 1877 during which the governments of Confederate states were reorganized prior to being readmitted to the Union.",
+    "url": "course-tools.html?glossary=Reconstruction#words"
+  },
+  {
+    "type": "Term",
+    "title": "De Facto Segregation",
+    "detail": "A separation of individuals based on characteristics that arises not by law but because of other factors such as residential housing patterns.",
+    "url": "course-tools.html?glossary=De%20Facto%20Segregation#words"
+  },
+  {
+    "type": "Term",
+    "title": "De Jure Segregation",
+    "detail": "The separation by law of individuals based on their race.",
+    "url": "course-tools.html?glossary=De%20Jure%20Segregation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Civil Disobedience",
+    "detail": "The intentional refusal to obey a law to call attention to its injustice.",
+    "url": "course-tools.html?glossary=Civil%20Disobedience#words"
+  },
+  {
+    "type": "Term",
+    "title": "Letter from Birmingham Jail",
+    "detail": "Martin Luther King Jr.'s 1963 defense of nonviolent direct action and civil disobedience against unjust segregation laws.",
+    "url": "course-tools.html?glossary=Letter%20from%20Birmingham%20Jail#words"
+  },
+  {
+    "type": "Term",
+    "title": "Tyranny of the Majority",
+    "detail": "When a large number of citizens use the power of their majority to trample on the rights of a smaller group.",
+    "url": "course-tools.html?glossary=Tyranny%20of%20the%20Majority#words"
+  },
+  {
+    "type": "Term",
+    "title": "Tyranny of the Minority",
+    "detail": "When a small number of citizens trample on the rights of the larger population.",
+    "url": "course-tools.html?glossary=Tyranny%20of%20the%20Minority#words"
+  },
+  {
+    "type": "Term",
+    "title": "Equal Rights Amendment",
+    "detail": "A proposed but not ratified amendment to the Constitution that sought to guarantee equality of rights based upon sex.",
+    "url": "course-tools.html?glossary=Equal%20Rights%20Amendment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Title IX",
+    "detail": "The section of the U.S. Education Amendments of 1972 that prohibits discrimination in education on the basis of sex.",
+    "url": "course-tools.html?glossary=Title%20IX#words"
+  },
+  {
+    "type": "Term",
+    "title": "Minority Rights",
+    "detail": "Protections for those who are not part of the majority.",
+    "url": "course-tools.html?glossary=Minority%20Rights#words"
+  },
+  {
+    "type": "Term",
+    "title": "Jim Crow Laws",
+    "detail": "State and local laws that promoted racial segregation and undermined Black voting rights in the South after Reconstruction.",
+    "url": "course-tools.html?glossary=Jim%20Crow%20Laws#words"
+  },
+  {
+    "type": "Term",
+    "title": "Literacy Tests",
+    "detail": "Tests requiring the prospective voter to read a passage and answer questions; used to disenfranchise minorities.",
+    "url": "course-tools.html?glossary=Literacy%20Tests#words"
+  },
+  {
+    "type": "Term",
+    "title": "Grandfather Clause",
+    "detail": "A provision in some southern states that allowed illiterate White people to vote because their ancestors had voted before the Fifteenth Amendment.",
+    "url": "course-tools.html?glossary=Grandfather%20Clause#words"
+  },
+  {
+    "type": "Term",
+    "title": "Majority Rule",
+    "detail": "A fundamental principle of democracy; the majority should have the power to make decisions binding upon the whole.",
+    "url": "course-tools.html?glossary=Majority%20Rule#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Ideology",
+    "detail": "An individual's coherent set of beliefs about government and politics.",
+    "url": "course-tools.html?glossary=Political%20Ideology#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free Enterprise",
+    "detail": "The belief that people and businesses should be free to make economic choices, with competition and limited government regulation shaping the market.",
+    "url": "course-tools.html?glossary=Free%20Enterprise#words"
+  },
+  {
+    "type": "Term",
+    "title": "American Political Culture",
+    "detail": "The set of beliefs, customs, traditions, and values that Americans share.",
+    "url": "course-tools.html?glossary=American%20Political%20Culture#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Values",
+    "detail": "Core beliefs about what government should protect or promote, such as liberty, equality, individualism, and rule of law.",
+    "url": "course-tools.html?glossary=Political%20Values#words"
+  },
+  {
+    "type": "Term",
+    "title": "Conservatism",
+    "detail": "A broad ideology that generally values tradition and social order and tends to favor less economic regulation; specific positions vary across time and groups.",
+    "url": "course-tools.html?glossary=Conservatism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Liberalism",
+    "detail": "A broad ideology emphasizing individual rights and government action to address social or economic problems; its meaning varies by country and historical period.",
+    "url": "course-tools.html?glossary=Liberalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Modern Conservatism",
+    "detail": "A major U.S. political outlook that often favors lower taxes and less economic regulation and supports traditional social values; views differ among conservatives.",
+    "url": "course-tools.html?glossary=Modern%20Conservatism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Modern Liberalism",
+    "detail": "A major U.S. political outlook that often supports government action to address economic inequality and protect civil rights and individual freedoms; views differ among liberals.",
+    "url": "course-tools.html?glossary=Modern%20Liberalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Libertarianism",
+    "detail": "An ideology favoring very little government intervention beyond protecting private property and individual liberty.",
+    "url": "course-tools.html?glossary=Libertarianism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Neoconservatism",
+    "detail": "A conservative outlook especially associated with an assertive U.S. role in world affairs and the promotion of U.S. interests abroad.",
+    "url": "course-tools.html?glossary=Neoconservatism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Classical Liberalism",
+    "detail": "A political tradition emphasizing individual rights, limited government, private property, and free markets.",
+    "url": "course-tools.html?glossary=Classical%20Liberalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Ideology",
+    "detail": "The beliefs and ideals that help to shape political opinion and eventually policy.",
+    "url": "course-tools.html?glossary=Ideology#words"
+  },
+  {
+    "type": "Term",
+    "title": "The American Dream",
+    "detail": "The idea that individuals should be able to achieve prosperity through hard work, sacrifice, and their own talents.",
+    "url": "course-tools.html?glossary=The%20American%20Dream#words"
+  },
+  {
+    "type": "Term",
+    "title": "Liberty",
+    "detail": "Social, political, and economic freedoms.",
+    "url": "course-tools.html?glossary=Liberty#words"
+  },
+  {
+    "type": "Term",
+    "title": "Economic Liberty",
+    "detail": "The right of individuals to obtain, use, and trade things of value for their own benefit.",
+    "url": "course-tools.html?glossary=Economic%20Liberty#words"
+  },
+  {
+    "type": "Term",
+    "title": "Pluralist Theory",
+    "detail": "A theory of democracy that emphasizes the role of groups in the policymaking process.",
+    "url": "course-tools.html?glossary=Pluralist%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Elite Critique",
+    "detail": "The proposition that wealthy and elite interests are advantaged over those without resources.",
+    "url": "course-tools.html?glossary=Elite%20Critique#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Socialization",
+    "detail": "The experiences and factors that shape our political values, attitudes, and behaviors.",
+    "url": "course-tools.html?glossary=Political%20Socialization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Agent of Political Socialization",
+    "detail": "A person, group, or institution—such as family, school, peers, or media—that helps shape political beliefs and behavior.",
+    "url": "course-tools.html?glossary=Agent%20of%20Political%20Socialization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Generational Effect",
+    "detail": "The impact of historical events experienced by a generation upon their political views.",
+    "url": "course-tools.html?glossary=Generational%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "Life-Cycle Effect",
+    "detail": "The impact of a person's age and stage in life on his or her political views.",
+    "url": "course-tools.html?glossary=Life-Cycle%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Capital",
+    "detail": "Connections with others and the willingness to interact and aid them.",
+    "url": "course-tools.html?glossary=Social%20Capital#words"
+  },
+  {
+    "type": "Term",
+    "title": "Socioeconomic Status (SES)",
+    "detail": "A measure of an individual's wealth, income, occupation, and educational attainment.",
+    "url": "course-tools.html?glossary=Socioeconomic%20Status%20(SES)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Efficacy",
+    "detail": "A person's belief that he or she can make effective political change.",
+    "url": "course-tools.html?glossary=Political%20Efficacy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Gender Gap",
+    "detail": "A recurring difference between the political preferences of women and men in the United States; its size and direction can vary by election and issue.",
+    "url": "course-tools.html?glossary=Gender%20Gap#words"
+  },
+  {
+    "type": "Term",
+    "title": "Heuristics",
+    "detail": "Shortcuts or generalizations for decision making used by voters to simplify complex choices.",
+    "url": "course-tools.html?glossary=Heuristics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Public Opinion",
+    "detail": "The sum of individual attitudes about government, policies, and issues.",
+    "url": "course-tools.html?glossary=Public%20Opinion#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sample",
+    "detail": "A group of individuals from a larger population used to measure public opinion.",
+    "url": "course-tools.html?glossary=Sample#words"
+  },
+  {
+    "type": "Term",
+    "title": "Random Sample",
+    "detail": "A limited number of people selected so that each has an equal chance of being chosen.",
+    "url": "course-tools.html?glossary=Random%20Sample#words"
+  },
+  {
+    "type": "Term",
+    "title": "Representative Sample",
+    "detail": "A sample that reflects the demographics of the population.",
+    "url": "course-tools.html?glossary=Representative%20Sample#words"
+  },
+  {
+    "type": "Term",
+    "title": "Scientific Poll",
+    "detail": "A survey designed to estimate public opinion using a sound sampling method, clear and neutral questions, and transparent information about how it was conducted.",
+    "url": "course-tools.html?glossary=Scientific%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Margin of Error",
+    "detail": "A range around a poll estimate that describes sampling uncertainty at a stated confidence level; it does not account for every possible source of error.",
+    "url": "course-tools.html?glossary=Margin%20of%20Error#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sampling Error",
+    "detail": "The difference between a poll's estimate and the true population value that can occur because the poll surveys a sample rather than everyone.",
+    "url": "course-tools.html?glossary=Sampling%20Error#words"
+  },
+  {
+    "type": "Term",
+    "title": "Exit Poll",
+    "detail": "A survey conducted outside a polling place in which individuals are asked who or what they just voted for.",
+    "url": "course-tools.html?glossary=Exit%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Push Poll",
+    "detail": "Politically biased campaign information presented as a poll in order to change minds.",
+    "url": "course-tools.html?glossary=Push%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Benchmark Poll",
+    "detail": "A survey taken at the beginning of a political campaign to gauge support and determine which issues are important to voters.",
+    "url": "course-tools.html?glossary=Benchmark%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Tracking Poll",
+    "detail": "A survey determining the level of support for a candidate or an issue throughout a campaign.",
+    "url": "course-tools.html?glossary=Tracking%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Straw Poll",
+    "detail": "An informal and unofficial election poll conducted with a non-random population.",
+    "url": "course-tools.html?glossary=Straw%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Favorability Poll",
+    "detail": "A public opinion poll that measures a public's positive feelings about a candidate or politician.",
+    "url": "course-tools.html?glossary=Favorability%20Poll#words"
+  },
+  {
+    "type": "Term",
+    "title": "Mass Survey",
+    "detail": "A survey that asks a sample of people questions to estimate the views of a larger population; accuracy depends on how it is designed and conducted, not a fixed sample size.",
+    "url": "course-tools.html?glossary=Mass%20Survey#words"
+  },
+  {
+    "type": "Term",
+    "title": "Question Order",
+    "detail": "The sequencing of questions in public opinion polls.",
+    "url": "course-tools.html?glossary=Question%20Order#words"
+  },
+  {
+    "type": "Term",
+    "title": "Question Wording",
+    "detail": "The phrasing of a question in a public opinion poll.",
+    "url": "course-tools.html?glossary=Question%20Wording#words"
+  },
+  {
+    "type": "Term",
+    "title": "Leading Question",
+    "detail": "A question worded to lead a respondent to give a desired answer.",
+    "url": "course-tools.html?glossary=Leading%20Question#words"
+  },
+  {
+    "type": "Term",
+    "title": "Latent Preferences",
+    "detail": "Beliefs and preferences people are not deeply committed to and that change over time.",
+    "url": "course-tools.html?glossary=Latent%20Preferences#words"
+  },
+  {
+    "type": "Term",
+    "title": "Intense Preferences",
+    "detail": "Beliefs and preferences based on strong feelings regarding an issue that someone adheres to over time.",
+    "url": "course-tools.html?glossary=Intense%20Preferences#words"
+  },
+  {
+    "type": "Term",
+    "title": "Weighting",
+    "detail": "A procedure in which the survey is adjusted according to the demographics of the larger population.",
+    "url": "course-tools.html?glossary=Weighting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Demographic Characteristics",
+    "detail": "Measurable characteristics of a population, such as economic status, education, age, race or ethnicity, gender, and partisan attachment.",
+    "url": "course-tools.html?glossary=Demographic%20Characteristics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Focus Group",
+    "detail": "A small group of individuals assembled for a conversation about specific issues.",
+    "url": "course-tools.html?glossary=Focus%20Group#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bradley Effect",
+    "detail": "A proposed explanation for a gap between polling and election results, in which some voters may give a socially acceptable answer rather than state their actual choice; it is not a universal or automatic pattern.",
+    "url": "course-tools.html?glossary=Bradley%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "Bandwagon Effect",
+    "detail": "A tendency for some people to support a candidate or position because it appears popular or likely to win.",
+    "url": "course-tools.html?glossary=Bandwagon%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "The Wealth of Nations",
+    "detail": "Adam Smith argues that self-interest and competition can organize economic activity through free markets, with limited government interference.",
+    "url": "course-tools.html?glossary=The%20Wealth%20of%20Nations#words"
+  },
+  {
+    "type": "Term",
+    "title": "Equality of Opportunity",
+    "detail": "The belief that everyone should have a fair chance to succeed, even though people may have different outcomes.",
+    "url": "course-tools.html?glossary=Equality%20of%20Opportunity#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fiscal Policy",
+    "detail": "Government use of taxes and spending to attempt to lower unemployment, support economic activity, and stabilize the economy.",
+    "url": "course-tools.html?glossary=Fiscal%20Policy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Monetary Policy",
+    "detail": "A set of economic policy tools designed to regulate the amount of money in the economy.",
+    "url": "course-tools.html?glossary=Monetary%20Policy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Keynesian Economics",
+    "detail": "An approach arguing that government can use spending and taxes to support demand and reduce the effects of economic downturns.",
+    "url": "course-tools.html?glossary=Keynesian%20Economics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Supply-Side Economics",
+    "detail": "An approach that seeks to increase production and investment, often by reducing taxes or regulations that supporters argue discourage economic activity.",
+    "url": "course-tools.html?glossary=Supply-Side%20Economics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Laissez-Faire",
+    "detail": "An economic policy that assumes the key to economic growth is for the government to allow private markets to operate efficiently without interference.",
+    "url": "course-tools.html?glossary=Laissez-Faire#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free-Market Economics",
+    "detail": "A school of thought that believes the forces of supply and demand, working without government intervention, are most effective.",
+    "url": "course-tools.html?glossary=Free-Market%20Economics#words"
+  },
+  {
+    "type": "Term",
+    "title": "Capitalist System",
+    "detail": "A way of structuring economic activity in which private firms are allowed to make most decisions involving production and distribution of goods.",
+    "url": "course-tools.html?glossary=Capitalist%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Mixed Economy",
+    "detail": "Economic policy in which many economic decisions are left to individuals and businesses with the federal government regulating economic activity.",
+    "url": "course-tools.html?glossary=Mixed%20Economy#words"
+  },
+  {
+    "type": "Term",
+    "title": "Socialism",
+    "detail": "A family of political and economic ideas that supports public or social ownership or control of some important parts of the economy; forms and policies vary.",
+    "url": "course-tools.html?glossary=Socialism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Communism",
+    "detail": "A political and economic ideology that calls for collective ownership of the means of production and, in theory, a classless society.",
+    "url": "course-tools.html?glossary=Communism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Economic Recession",
+    "detail": "A significant decline in economic activity across the economy that lasts more than a few months; economists consider several indicators, not only GDP.",
+    "url": "course-tools.html?glossary=Economic%20Recession#words"
+  },
+  {
+    "type": "Term",
+    "title": "Gross Domestic Product (GDP)",
+    "detail": "The total value of goods and services produced by an economy.",
+    "url": "course-tools.html?glossary=Gross%20Domestic%20Product%20(GDP)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Inflation",
+    "detail": "The rise in the prices of goods and services.",
+    "url": "course-tools.html?glossary=Inflation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Budget Deficit",
+    "detail": "The difference when a government takes in less money than it spends.",
+    "url": "course-tools.html?glossary=Budget%20Deficit#words"
+  },
+  {
+    "type": "Term",
+    "title": "Budget Surplus",
+    "detail": "The amount of money remaining when the government takes in more money than it spends.",
+    "url": "course-tools.html?glossary=Budget%20Surplus#words"
+  },
+  {
+    "type": "Term",
+    "title": "National Debt",
+    "detail": "The total amount of money owed by the federal government.",
+    "url": "course-tools.html?glossary=National%20Debt#words"
+  },
+  {
+    "type": "Term",
+    "title": "Federal Reserve System",
+    "detail": "The U.S. central banking system, which conducts monetary policy and helps support a stable financial system.",
+    "url": "course-tools.html?glossary=Federal%20Reserve%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Progressive Tax",
+    "detail": "A tax that increases the effective tax rate as the wealth or income of the taxpayer increases.",
+    "url": "course-tools.html?glossary=Progressive%20Tax#words"
+  },
+  {
+    "type": "Term",
+    "title": "Safety Net",
+    "detail": "A way to provide for members of society experiencing economic hardship.",
+    "url": "course-tools.html?glossary=Safety%20Net#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Welfare Policies",
+    "detail": "Governmental efforts designed to improve or protect the health, safety, education, and opportunities for citizens.",
+    "url": "course-tools.html?glossary=Social%20Welfare%20Policies#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Insurance Programs",
+    "detail": "Programs such as Social Security that are financed by payroll taxes paid by individuals.",
+    "url": "course-tools.html?glossary=Social%20Insurance%20Programs#words"
+  },
+  {
+    "type": "Term",
+    "title": "Medicare",
+    "detail": "A federal program that provides health insurance to seniors and the disabled.",
+    "url": "course-tools.html?glossary=Medicare#words"
+  },
+  {
+    "type": "Term",
+    "title": "Medicaid",
+    "detail": "A federal-state health coverage program for eligible people with low incomes and other qualifying groups.",
+    "url": "course-tools.html?glossary=Medicaid#words"
+  },
+  {
+    "type": "Term",
+    "title": "Entitlement",
+    "detail": "A program that guarantees benefits to members of a specific group or segment of the population.",
+    "url": "course-tools.html?glossary=Entitlement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free Trade",
+    "detail": "A policy in which a country allows the unfettered flow of goods and services between itself and other countries.",
+    "url": "course-tools.html?glossary=Free%20Trade#words"
+  },
+  {
+    "type": "Term",
+    "title": "Protectionism",
+    "detail": "A policy in which a country charges very high tariffs or does not permit other countries to sell goods within its borders.",
+    "url": "course-tools.html?glossary=Protectionism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Globalization",
+    "detail": "The increasing interconnectedness of people, businesses, and countries throughout the world.",
+    "url": "course-tools.html?glossary=Globalization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Economic Sanction",
+    "detail": "A situation in which countries suspend trade or other financial relationships with another country to signal displeasure.",
+    "url": "course-tools.html?glossary=Economic%20Sanction#words"
+  },
+  {
+    "type": "Term",
+    "title": "Need-Based Assistance",
+    "detail": "Social welfare programs whose benefits are allocated to individuals demonstrating specific needs.",
+    "url": "course-tools.html?glossary=Need-Based%20Assistance#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Party",
+    "detail": "An organized group of party leaders, officeholders, and voters who work together to elect candidates to political office.",
+    "url": "course-tools.html?glossary=Political%20Party#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Identification",
+    "detail": "An individual's attachment to a political party.",
+    "url": "course-tools.html?glossary=Party%20Identification#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Ideology",
+    "detail": "A party's philosophy about the proper role of government and its consistent set of positions on major issues.",
+    "url": "course-tools.html?glossary=Party%20Ideology#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Platform",
+    "detail": "A set of positions and policy objectives that members of a political party agree to.",
+    "url": "course-tools.html?glossary=Party%20Platform#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Realignment",
+    "detail": "A shifting of party alliances within the electorate.",
+    "url": "course-tools.html?glossary=Party%20Realignment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Coalition",
+    "detail": "Interest groups and like-minded voters who support a political party over time.",
+    "url": "course-tools.html?glossary=Party%20Coalition#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Polarization",
+    "detail": "The shift of party positions from moderate towards ideological extremes.",
+    "url": "course-tools.html?glossary=Party%20Polarization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Partisanship",
+    "detail": "Strong support, or even blind allegiance, for a particular political party.",
+    "url": "course-tools.html?glossary=Partisanship#words"
+  },
+  {
+    "type": "Term",
+    "title": "Two-Party System",
+    "detail": "A system in which two political parties dominate politics, winning almost all elections.",
+    "url": "course-tools.html?glossary=Two-Party%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Third Party",
+    "detail": "A minor political party in competition with the two major parties.",
+    "url": "course-tools.html?glossary=Third%20Party#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Organization",
+    "detail": "The formal structure of the political party and the active members responsible for coordinating party behavior.",
+    "url": "course-tools.html?glossary=Party%20Organization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party-in-Government",
+    "detail": "Party identifiers who have been elected to office and are responsible for fulfilling the party's promises.",
+    "url": "course-tools.html?glossary=Party-in-Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party-in-the-Electorate",
+    "detail": "Members of the voting public who consider themselves part of a political party.",
+    "url": "course-tools.html?glossary=Party-in-the-Electorate#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Era",
+    "detail": "Time period when one party wins most national elections.",
+    "url": "course-tools.html?glossary=Party%20Era#words"
+  },
+  {
+    "type": "Term",
+    "title": "Critical Election",
+    "detail": "A major national election that signals a change in the balance of power between the two parties.",
+    "url": "course-tools.html?glossary=Critical%20Election#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Machine",
+    "detail": "An organization that secures votes for a party's candidates, usually in exchange for political favors.",
+    "url": "course-tools.html?glossary=Political%20Machine#words"
+  },
+  {
+    "type": "Term",
+    "title": "Sorting",
+    "detail": "The process in which voters change party allegiances in response to shifts in party position.",
+    "url": "course-tools.html?glossary=Sorting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Majority Party",
+    "detail": "The legislative party with over half the seats in a legislative body.",
+    "url": "course-tools.html?glossary=Majority%20Party#words"
+  },
+  {
+    "type": "Term",
+    "title": "Minority Party",
+    "detail": "The legislative party with less than half the seats in a legislative body.",
+    "url": "course-tools.html?glossary=Minority%20Party#words"
+  },
+  {
+    "type": "Term",
+    "title": "Majority Party Leader",
+    "detail": "The head of the party with the most seats in Congress.",
+    "url": "course-tools.html?glossary=Majority%20Party%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "Minority Leader",
+    "detail": "The head of the party with the second-highest number of seats in Congress.",
+    "url": "course-tools.html?glossary=Minority%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "Electoral College",
+    "detail": "A constitutionally required process for selecting the president through slates of electors chosen in each state.",
+    "url": "course-tools.html?glossary=Electoral%20College#words"
+  },
+  {
+    "type": "Term",
+    "title": "Winner-Take-All System",
+    "detail": "A system in which the candidate who wins the plurality of votes within a state receives all of that state's Electoral College votes.",
+    "url": "course-tools.html?glossary=Winner-Take-All%20System#words"
+  },
+  {
+    "type": "Term",
+    "title": "Suffrage",
+    "detail": "The right to vote in political elections; also called the franchise.",
+    "url": "course-tools.html?glossary=Suffrage#words"
+  },
+  {
+    "type": "Term",
+    "title": "Voter Turnout",
+    "detail": "The number of eligible voters who participate in an election as a percentage of the total number of eligible voters.",
+    "url": "course-tools.html?glossary=Voter%20Turnout#words"
+  },
+  {
+    "type": "Term",
+    "title": "Closed Primary",
+    "detail": "A primary election in which only those who have registered as a member of a political party may vote.",
+    "url": "course-tools.html?glossary=Closed%20Primary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Open Primary",
+    "detail": "A primary election in which all eligible voters may vote, regardless of their party affiliation.",
+    "url": "course-tools.html?glossary=Open%20Primary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Top-Two Primary",
+    "detail": "A primary election in which the two candidates with the most votes, regardless of party, become the nominees.",
+    "url": "course-tools.html?glossary=Top-Two%20Primary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Midterm Elections",
+    "detail": "The congressional elections that occur in the even-numbered years between presidential election years.",
+    "url": "course-tools.html?glossary=Midterm%20Elections#words"
+  },
+  {
+    "type": "Term",
+    "title": "Primary Election",
+    "detail": "An election in which voters choose delegates for a presidential candidate or a party's nominee for Congress.",
+    "url": "course-tools.html?glossary=Primary%20Election#words"
+  },
+  {
+    "type": "Term",
+    "title": "National Convention",
+    "detail": "A meeting where delegates officially select their party's nominee for the presidency.",
+    "url": "course-tools.html?glossary=National%20Convention#words"
+  },
+  {
+    "type": "Term",
+    "title": "Superdelegate",
+    "detail": "Usually a party leader or activist who is not pledged to a candidate based on state primary or caucus outcomes.",
+    "url": "course-tools.html?glossary=Superdelegate#words"
+  },
+  {
+    "type": "Term",
+    "title": "Partisan Gerrymandering",
+    "detail": "Drawing of district boundaries into strange shapes to benefit a political party.",
+    "url": "course-tools.html?glossary=Partisan%20Gerrymandering#words"
+  },
+  {
+    "type": "Term",
+    "title": "Swing State",
+    "detail": "A state where levels of support for the parties are similar and elections swing back and forth between Democrats and Republicans.",
+    "url": "course-tools.html?glossary=Swing%20State#words"
+  },
+  {
+    "type": "Term",
+    "title": "Motor Voter Law",
+    "detail": "The National Voter Registration Act of 1993, which requires voter-registration opportunities at motor-vehicle agencies and certain public agencies.",
+    "url": "course-tools.html?glossary=Motor%20Voter%20Law#words"
+  },
+  {
+    "type": "Term",
+    "title": "Absentee Ballots",
+    "detail": "A ballot cast by a voter who is not voting in person at their assigned polling place; rules for requesting and returning one vary by state.",
+    "url": "course-tools.html?glossary=Absentee%20Ballots#words"
+  },
+  {
+    "type": "Term",
+    "title": "Early Voting",
+    "detail": "Casting a ballot in person before Election Day; the dates and availability depend on state law.",
+    "url": "course-tools.html?glossary=Early%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Voter Fatigue",
+    "detail": "The result when voters grow tired of voting and stay home from the polls.",
+    "url": "course-tools.html?glossary=Voter%20Fatigue#words"
+  },
+  {
+    "type": "Term",
+    "title": "Ballot Fatigue",
+    "detail": "The result when a voter stops voting for offices and initiatives at the bottom of a long ballot.",
+    "url": "course-tools.html?glossary=Ballot%20Fatigue#words"
+  },
+  {
+    "type": "Term",
+    "title": "Retrospective Voting",
+    "detail": "Voting based on an assessment of an incumbent's past performance.",
+    "url": "course-tools.html?glossary=Retrospective%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Prospective Voting",
+    "detail": "Casting a ballot for a candidate who promises to enact policies favored by the voter in the future.",
+    "url": "course-tools.html?glossary=Prospective%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Rational Choice Voting",
+    "detail": "Voting based on what a citizen believes is in his or her best interest.",
+    "url": "course-tools.html?glossary=Rational%20Choice%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Split-Ticket Voting",
+    "detail": "Voting for candidates from different parties in the same election.",
+    "url": "course-tools.html?glossary=Split-Ticket%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Straight-Ticket Voting",
+    "detail": "Voting for all of the candidates on the ballot from one political party.",
+    "url": "course-tools.html?glossary=Straight-Ticket%20Voting#words"
+  },
+  {
+    "type": "Term",
+    "title": "Coattail Effect",
+    "detail": "The result when a popular presidential candidate helps candidates from the same party win their own elections.",
+    "url": "course-tools.html?glossary=Coattail%20Effect#words"
+  },
+  {
+    "type": "Term",
+    "title": "Incumbent",
+    "detail": "A political official who is currently in office.",
+    "url": "course-tools.html?glossary=Incumbent#words"
+  },
+  {
+    "type": "Term",
+    "title": "Get Out the Vote (GOTV)",
+    "detail": "Efforts to mobilize voters.",
+    "url": "course-tools.html?glossary=Get%20Out%20the%20Vote%20(GOTV)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Mobilization",
+    "detail": "Efforts by political parties to encourage their members to vote.",
+    "url": "course-tools.html?glossary=Political%20Mobilization#words"
+  },
+  {
+    "type": "Term",
+    "title": "Voter Registration",
+    "detail": "The process eligible citizens use to enroll to vote; requirements and available methods vary by state.",
+    "url": "course-tools.html?glossary=Voter%20Registration#words"
+  },
+  {
+    "type": "Term",
+    "title": "White Primary",
+    "detail": "A primary election in which only White people are allowed to vote.",
+    "url": "course-tools.html?glossary=White%20Primary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Caucus",
+    "detail": "A process through which a state's eligible voters meet to select delegates for the nomination process.",
+    "url": "course-tools.html?glossary=Caucus#words"
+  },
+  {
+    "type": "Term",
+    "title": "Nomination",
+    "detail": "The formal process through which parties choose their candidates for political office.",
+    "url": "course-tools.html?glossary=Nomination#words"
+  },
+  {
+    "type": "Term",
+    "title": "Lobbyist",
+    "detail": "A person who represents an organization before government in an attempt to influence policy.",
+    "url": "course-tools.html?glossary=Lobbyist#words"
+  },
+  {
+    "type": "Term",
+    "title": "Political Action Committee (PAC)",
+    "detail": "A political committee that raises and spends money to influence elections, subject to campaign-finance rules; contribution limits depend on the committee type.",
+    "url": "course-tools.html?glossary=Political%20Action%20Committee%20(PAC)#words"
+  },
+  {
+    "type": "Term",
+    "title": "Super PAC",
+    "detail": "An independent-expenditure-only political committee that may raise and spend unlimited amounts, but may not contribute directly to candidates or coordinate spending with their campaigns.",
+    "url": "course-tools.html?glossary=Super%20PAC#words"
+  },
+  {
+    "type": "Term",
+    "title": "Citizens United",
+    "detail": "Citizens United v. FEC (2010), which held that the government may not bar corporations and unions from making independent political expenditures. It did not remove limits on direct contributions to candidates.",
+    "url": "course-tools.html?glossary=Citizens%20United#words"
+  },
+  {
+    "type": "Term",
+    "title": "Soft Money",
+    "detail": "Historically, money given to political parties outside federal candidate-contribution limits. The Bipartisan Campaign Reform Act of 2002 barred national party committees from raising or spending this type of money.",
+    "url": "course-tools.html?glossary=Soft%20Money#words"
+  },
+  {
+    "type": "Term",
+    "title": "Inside Lobbying",
+    "detail": "The act of contacting and taking the organization's message directly to lawmakers.",
+    "url": "course-tools.html?glossary=Inside%20Lobbying#words"
+  },
+  {
+    "type": "Term",
+    "title": "Outside Lobbying",
+    "detail": "The act of lobbying indirectly by taking the organization's message to the public, often through the media.",
+    "url": "course-tools.html?glossary=Outside%20Lobbying#words"
+  },
+  {
+    "type": "Term",
+    "title": "Grassroots Lobbying",
+    "detail": "Mobilizing interest group members to pressure their representatives by contacting them directly.",
+    "url": "course-tools.html?glossary=Grassroots%20Lobbying#words"
+  },
+  {
+    "type": "Term",
+    "title": "Astroturf Movement",
+    "detail": "A political movement that resembles a grassroots movement but is often supported or facilitated by wealthy interests.",
+    "url": "course-tools.html?glossary=Astroturf%20Movement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Venue Shopping",
+    "detail": "A strategy in which interest groups select the level and branch of government most receptive to their policy goals.",
+    "url": "course-tools.html?glossary=Venue%20Shopping#words"
+  },
+  {
+    "type": "Term",
+    "title": "Disturbance Theory",
+    "detail": "The theory that an external event can lead to interest group mobilization.",
+    "url": "course-tools.html?glossary=Disturbance%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free Rider",
+    "detail": "Individual who enjoys collective goods and benefits from the actions of an interest group without joining.",
+    "url": "course-tools.html?glossary=Free%20Rider#words"
+  },
+  {
+    "type": "Term",
+    "title": "Free Rider Problem",
+    "detail": "The situation that occurs when some individuals receive benefits without helping to bear the cost.",
+    "url": "course-tools.html?glossary=Free%20Rider%20Problem#words"
+  },
+  {
+    "type": "Term",
+    "title": "Selective Benefits",
+    "detail": "Benefits an interest group offers only to its members to encourage people to join and help support the group.",
+    "url": "course-tools.html?glossary=Selective%20Benefits#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Movement",
+    "detail": "Large groups of citizens organizing for political change.",
+    "url": "course-tools.html?glossary=Social%20Movement#words"
+  },
+  {
+    "type": "Term",
+    "title": "Collective Action",
+    "detail": "Political action that occurs when individuals contribute their energy, time, or money to a larger group goal.",
+    "url": "course-tools.html?glossary=Collective%20Action#words"
+  },
+  {
+    "type": "Term",
+    "title": "Single-Issue Group",
+    "detail": "Association focusing on one specific area of public policy, often a moral issue about which they are unwilling to compromise.",
+    "url": "course-tools.html?glossary=Single-Issue%20Group#words"
+  },
+  {
+    "type": "Term",
+    "title": "Solidary Incentives",
+    "detail": "Benefits based on the concept that people like to associate with those who are similar to them.",
+    "url": "course-tools.html?glossary=Solidary%20Incentives#words"
+  },
+  {
+    "type": "Term",
+    "title": "Material Incentives",
+    "detail": "Substantive monetary or physical benefits given to group members.",
+    "url": "course-tools.html?glossary=Material%20Incentives#words"
+  },
+  {
+    "type": "Term",
+    "title": "Purposive Incentives",
+    "detail": "Benefits that appeal to people's support of the issue or cause.",
+    "url": "course-tools.html?glossary=Purposive%20Incentives#words"
+  },
+  {
+    "type": "Term",
+    "title": "Mass Media",
+    "detail": "Sources of information that appeal to a wide audience, including newspapers, radio, television, and Internet outlets.",
+    "url": "course-tools.html?glossary=Mass%20Media#words"
+  },
+  {
+    "type": "Term",
+    "title": "Linkage Institutions",
+    "detail": "Channels that connect individuals with government, including elections, political parties, interest groups, and the media.",
+    "url": "course-tools.html?glossary=Linkage%20Institutions#words"
+  },
+  {
+    "type": "Term",
+    "title": "Media Effects",
+    "detail": "The power of the news media in shaping individuals' political knowledge, preferences, and political behavior.",
+    "url": "course-tools.html?glossary=Media%20Effects#words"
+  },
+  {
+    "type": "Term",
+    "title": "Framing",
+    "detail": "The process of giving a news story a specific context or background.",
+    "url": "course-tools.html?glossary=Framing#words"
+  },
+  {
+    "type": "Term",
+    "title": "Priming",
+    "detail": "The process of predisposing readers or viewers to think a particular way.",
+    "url": "course-tools.html?glossary=Priming#words"
+  },
+  {
+    "type": "Term",
+    "title": "Media Consolidation",
+    "detail": "The concentration of ownership of the media into fewer corporations.",
+    "url": "course-tools.html?glossary=Media%20Consolidation#words"
+  },
+  {
+    "type": "Term",
+    "title": "Social Media",
+    "detail": "Forms of electronic communication that enable users to create and share content or to participate in social networking.",
+    "url": "course-tools.html?glossary=Social%20Media#words"
+  },
+  {
+    "type": "Term",
+    "title": "Partisan Bias",
+    "detail": "The slanting of political news coverage in support of a particular political party or ideology.",
+    "url": "course-tools.html?glossary=Partisan%20Bias#words"
+  },
+  {
+    "type": "Term",
+    "title": "Horse-Race Journalism",
+    "detail": "Coverage of political campaigns that focuses more on the drama of the campaign than on policy issues.",
+    "url": "course-tools.html?glossary=Horse-Race%20Journalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Citizen Journalism",
+    "detail": "Video and print news posted to the Internet or social media by citizens rather than the news media.",
+    "url": "course-tools.html?glossary=Citizen%20Journalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Investigative Journalism",
+    "detail": "An approach to newsgathering in which reporters dig into stories, often looking for instances of wrongdoing.",
+    "url": "course-tools.html?glossary=Investigative%20Journalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Muckraking",
+    "detail": "News coverage focusing on exposing corrupt business and government practices.",
+    "url": "course-tools.html?glossary=Muckraking#words"
+  },
+  {
+    "type": "Term",
+    "title": "Minimal Effects Theory",
+    "detail": "The idea that the media have little effect on citizens.",
+    "url": "course-tools.html?glossary=Minimal%20Effects%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Cultivation Theory",
+    "detail": "The idea that media affect a citizen's worldview through the information presented.",
+    "url": "course-tools.html?glossary=Cultivation%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Hypodermic Theory",
+    "detail": "The idea that information is placed in a citizen's brain and accepted.",
+    "url": "course-tools.html?glossary=Hypodermic%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Soft News",
+    "detail": "News presented in an entertaining style.",
+    "url": "course-tools.html?glossary=Soft%20News#words"
+  },
+  {
+    "type": "Term",
+    "title": "Overt Content",
+    "detail": "Political information whose author makes clear that only one side is presented.",
+    "url": "course-tools.html?glossary=Overt%20Content#words"
+  },
+  {
+    "type": "Term",
+    "title": "Covert Content",
+    "detail": "Ideologically slanted information presented as unbiased information in order to influence public opinion.",
+    "url": "course-tools.html?glossary=Covert%20Content#words"
+  },
+  {
+    "type": "Term",
+    "title": "Yellow Journalism",
+    "detail": "Sensationalized coverage of scandals and human interest stories.",
+    "url": "course-tools.html?glossary=Yellow%20Journalism#words"
+  },
+  {
+    "type": "Term",
+    "title": "Fairness Doctrine",
+    "detail": "A 1949 FCC policy (now defunct) that required holders of broadcast licenses to cover controversial issues in a balanced manner.",
+    "url": "course-tools.html?glossary=Fairness%20Doctrine#words"
+  },
+  {
+    "type": "Term",
+    "title": "Equal-Time Rule",
+    "detail": "An FCC policy that all candidates running for office must be given the same radio and television airtime opportunities.",
+    "url": "course-tools.html?glossary=Equal-Time%20Rule#words"
+  },
+  {
+    "type": "Term",
+    "title": "Digital Divide",
+    "detail": "Divisions in society driven by access to and knowledge about technologies.",
+    "url": "course-tools.html?glossary=Digital%20Divide#words"
+  },
+  {
+    "type": "Term",
+    "title": "Net Neutrality",
+    "detail": "The principle that internet service providers should not unfairly block, slow, or favor online content. Whether and how federal rules enforce it has changed over time.",
+    "url": "course-tools.html?glossary=Net%20Neutrality#words"
+  },
+  {
+    "type": "Term",
+    "title": "Aggregating",
+    "detail": "A process through which internet news providers relay news as reported by journalists and other sources.",
+    "url": "course-tools.html?glossary=Aggregating#words"
+  },
+  {
+    "type": "Term",
+    "title": "Protest",
+    "detail": "A public demonstration designed to call attention to the need for change.",
+    "url": "course-tools.html?glossary=Protest#words"
+  },
+  {
+    "type": "Term",
+    "title": "Candidate-Centered Campaign",
+    "detail": "A trend in which candidates develop their own strategies and raise money with less influence from the party elite.",
+    "url": "course-tools.html?glossary=Candidate-Centered%20Campaign#words"
+  },
+  {
+    "type": "Term",
+    "title": "Shadow Campaign",
+    "detail": "A campaign run by political action committees and other organizations without the coordination of the candidate.",
+    "url": "course-tools.html?glossary=Shadow%20Campaign#words"
+  },
+  {
+    "type": "Term",
+    "title": "Surge-And-Decline Theory",
+    "detail": "A theory proposing that the surge of stimulation during presidential elections subsides during midterm elections.",
+    "url": "course-tools.html?glossary=Surge-And-Decline%20Theory#words"
+  },
+  {
+    "type": "Term",
+    "title": "Policy Advocates",
+    "detail": "People who actively work to propose or maintain public policy.",
+    "url": "course-tools.html?glossary=Policy%20Advocates#words"
+  },
+  {
+    "type": "Term",
+    "title": "Front-Loading",
+    "detail": "A decision by a state to push its primary or caucus as early as possible to gain more influence.",
+    "url": "course-tools.html?glossary=Front-Loading#words"
+  },
+  {
+    "type": "Term",
+    "title": "Recruitment",
+    "detail": "The process through which political parties identify potential candidates.",
+    "url": "course-tools.html?glossary=Recruitment#words"
+  },
+  {
+    "type": "Term",
+    "title": "Era of Divided Government",
+    "detail": "A trend since 1969 in which one party controls one or both houses of Congress while the president is from the opposing party.",
+    "url": "course-tools.html?glossary=Era%20of%20Divided%20Government#words"
+  },
+  {
+    "type": "Term",
+    "title": "Voting Cues",
+    "detail": "Sources that lawmakers use to help them decide how to vote, especially on unfamiliar issues.",
+    "url": "course-tools.html?glossary=Voting%20Cues#words"
+  }
+]

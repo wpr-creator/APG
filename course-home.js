@@ -33,6 +33,8 @@
     if (unit) {
       document.getElementById('current-label').textContent = 'CURRENT UNIT / ' + unit.number.toUpperCase();
       document.getElementById('current-title').textContent = unit.title;
+      const artwork = document.querySelector('.current-unit-art');
+      if (artwork) artwork.src = 'assets/unit-art/unit-' + unit.id.replace('gov-', '') + '.svg';
       document.getElementById('current-unit').href = unit.id === 'gov-1' ? 'unit1.html' : unit.id === 'gov-2' ? 'unit2.html' : 'index.html#' + unit.id;
     }
     if (settings.classroomUrl) {

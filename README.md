@@ -81,3 +81,16 @@ All course pages load `course-header.js` and `course-header.css`. Exported slide
 Exit tickets are course-wide and change independently of lessons. Keep access in the shared header and homepage; do not put exit-ticket cards, questions, or links within individual lesson content.
 
 Unit 1 uses `unit1.html` and `lesson-1-1.html` through `lesson-1-5.html` for student navigation. Its former overview is preserved at `unit1-reference.html`, including original section anchors. The canonical lesson names come from `course-data.js`; lesson pages preserve existing notes/slides URLs and do not infer essential questions. Exit tickets remain course-wide.
+
+## Course search and visual polish
+
+Use SEARCH in the shared header or press `/` outside a form field. Arrow keys
+move through results, Enter opens a result, and Escape closes the palette. Search
+covers lesson pages, case guides, document readers, and glossary terms. It loads
+its index on demand and does not store queries or student progress.
+
+After changing lesson titles, reader titles, or glossary data, run
+`node scripts/build-search-index.js`. CI checks index freshness and destinations
+with `node scripts/build-search-index.js --check`. Shared search code lives in
+`course-search.js`; styling is in `course-header.css`. `editorial-polish.css`
+contains the editorial artwork layouts and motion, with reduced-motion support.
