@@ -1,0 +1,17 @@
+/* Typography enhancements preserve each page's content and layout. */
+body main :is(h1,h2,h3),body .doc-main :is(h1,h2,h3){text-wrap:balance}
+body main :is(p,li),body .doc-main p{text-wrap:pretty}
+body main :is(.label,.unit-status,.resource-type){line-height:1.6}
+/* Native navigation stays immediate; capable browsers blend the page change. */
+@media(prefers-reduced-motion:no-preference){
+ @view-transition{navigation:auto}
+ ::view-transition-old(root){animation:apg-page-out 100ms ease-out both}
+ ::view-transition-new(root){animation:apg-page-in 160ms ease-out both}
+ @keyframes apg-page-out{to{opacity:0}}
+ @keyframes apg-page-in{from{opacity:0}to{opacity:1}}
+}
+@media(prefers-reduced-motion:reduce){
+ @view-transition{navigation:none}
+ html{scroll-behavior:auto!important}
+ ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}

@@ -94,3 +94,15 @@ After changing lesson titles, reader titles, or glossary data, run
 with `node scripts/build-search-index.js --check`. Shared search code lives in
 `course-search.js`; styling is in `course-header.css`. `editorial-polish.css`
 contains the editorial artwork layouts and motion, with reduced-motion support.
+
+## Reader presentation and page transitions
+
+All 30 case/document readers load `reader-editorial.css` after their existing
+styles. Keep source passages and teaching annotations in their existing HTML;
+the shared layer supplies title, passage, annotation, navigation, and mobile
+presentation. Gold highlights retain their meaning on annotated documents.
+
+`course-typography.css` is imported by the shared header stylesheet. It balances
+headings and provides a brief native cross-document fade in supporting browsers.
+Reduced-motion preferences disable the fade and smooth scrolling. Other browsers
+continue to use normal links; no navigation interception or new dependency is used.
