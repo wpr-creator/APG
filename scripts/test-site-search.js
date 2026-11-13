@@ -36,3 +36,5 @@ assert.equal(availableEntries([notes],{currentUnit:'gov-1'}).length,0,'Closed un
 assert.equal(availableEntries([notes],{...locked,assignmentUrls:{[notes.resourceId]:'https://example.org/updated-notes'}})[0].url,'https://example.org/updated-notes');
 assert.equal(availableEntries([notes],{...locked,assignmentUrls:{[notes.resourceId]:''}}).length,0,'An empty URL disables the resource');
 console.log('Lesson material search passed: notes, slides, practice, tools, release controls, schedules, and URL overrides.');
+
+for(const query of ['2026 election results','midterm results','school votes']) assert(search(available,query).some(x=>x.entry.url==='election-results-2026.html'),`Missing archived results: ${query}`);

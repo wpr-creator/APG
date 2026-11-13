@@ -34,6 +34,9 @@ for (const [folder,type] of [['cases','Case'],['docs','Document']]) {
   entries.push({type,title,url:folder+'/'+file,detail:type==='Case'?'Supreme Court case guide':'Foundational document reader'});
  }
 }
+// Archived course pages remain discoverable after leaving the homepage.
+entries.push({type:'Page',title:'2026 Midterm election results',url:'election-results-2026.html',
+ detail:'School votes · San Diego · California · Governor · Congress · City · propositions'});
 const terms = new Map();
 for (const unit of context.window.APG_GLOSSARY_UNITS) for (const group of Object.values(unit.groups)) for (const [title,detail] of group) {
  if (!terms.has(title.toLowerCase())) terms.set(title.toLowerCase(),{type:'Term',title,detail,url:'course-tools.html?glossary='+encodeURIComponent(title)+'#words'});

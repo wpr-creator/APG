@@ -53,7 +53,7 @@
     opener=document.activeElement===document.body?button:document.activeElement;dialog.showModal();input.focus();
     settings=null;results.replaceChildren();status.textContent='Loading search…';
     try {
-      request ||= fetch(new URL('search-index.json?v=20261113-resource-search',root)).then(response=>{if(!response.ok)throw Error();return response.json();});
+      request ||= fetch(new URL('search-index.json?v=20261113-election-archive',root),{cache:'no-store'}).then(response=>{if(!response.ok)throw Error();return response.json();});
       [index,settings]=await Promise.all([request,fetch(new URL('site-content.json',root),{cache:'no-store'}).then(response=>{if(!response.ok)throw Error();return response.json();}),loadEngine()]);render();
     } catch (_) {request=null;status.textContent='Search could not load. Close and reopen to retry, or use Units, Library, and Glossary in the navigation.';}
   }
