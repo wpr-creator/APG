@@ -36,3 +36,8 @@
   .scoring-guide { padding: 0; }
   .rubric-row { break-inside: avoid; }
 }
+
+.rubric-row details .example-label { font-family: var(--font-mono, monospace); font-size: 12px; letter-spacing: .06em; color: var(--teal); margin-top: 22px; }
+.rubric-row blockquote { margin: 8px 0; padding: 0 0 0 15px; border-left: 2px solid var(--teal); font: inherit; color: var(--ink); }
+.rubric-row .example-reason, .rubric-row .needs-work { font-size: 15px; line-height: 1.65; }
+.rubric-row .needs-work { border-top: 1px solid var(--line); padding-top: 14px; margin-top: 20px; }
