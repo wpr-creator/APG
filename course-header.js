@@ -17,7 +17,7 @@
   searchScript.src = new URL('course-search.js?v=20261113-election-archive',root).href;
   document.head.appendChild(searchScript);
   const resourceScript = document.createElement('script');
-  resourceScript.src = new URL('resource-navigation.js?v=20261113-complete',root).href;
+  resourceScript.src = new URL('resource-navigation.js?v=20261115-current-lesson',root).href;
   document.head.appendChild(resourceScript);
   header.querySelectorAll('.preview-exit').forEach(link => {
     link.href = new URL('exit-ticket.html',root).href;

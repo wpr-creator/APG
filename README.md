@@ -158,3 +158,7 @@ The header search uses the same text-control treatment as the navigation.
 Exit Ticket is emphasized only when `site-content.json` has a nonblank
 `exitQuestion`; drafts do not open a ticket. Otherwise the header shows a quiet
 closed status while retaining the link to the course-wide ticket page.
+
+Unit 2 opens the current canonical lesson directly when it is the active unit.
+Use `unit2.html?overview=1` for the lesson overview; the current lesson appears
+first there, and lesson breadcrumbs/footer links preserve access to that list.

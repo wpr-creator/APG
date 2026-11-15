@@ -23,7 +23,7 @@
     const list=document.createElement('ol');
     const add=(label,path)=>{const li=document.createElement('li');if(path){const a=document.createElement('a');a.href=new URL(path,root).href;a.textContent=label;li.append(a);}else{const span=document.createElement('span');span.textContent=label;span.setAttribute('aria-current','page');li.append(span);}list.append(li);};
     add('Course','index.html');
-    if(lessonMatch || unitMatch){add('Units','units.html');const n=(lessonMatch||unitMatch)[1];add('Unit '+n,lessonMatch?'unit'+n+'.html':null);if(lessonMatch)add('Lesson '+n+'.'+lessonMatch[2]);}
+    if(lessonMatch || unitMatch){add('Units','units.html');const n=(lessonMatch||unitMatch)[1];add('Unit '+n,lessonMatch?'unit'+n+'.html'+(n==='2'?'?overview=1':''):null);if(lessonMatch)add('Lesson '+n+'.'+lessonMatch[2]);}
     else if(reader){add('Library','course-tools.html#foundations');const title=main.querySelector('h1');add(title?.textContent.trim()||'Reading');}
     else add('Units');
     breadcrumb.append(list);main.prepend(breadcrumb);

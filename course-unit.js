@@ -9,6 +9,11 @@
     if (unitId === 'gov-1') {
       if (['concepts','documents','amendments','examguide','frq'].includes(location.hash.slice(1))) { location.replace('unit1-reference.html' + location.hash); return; }
     }
+    // Unit 2 opens its current lesson; the overview remains available explicitly.
+    if (unitId === 'gov-2' && settings.currentUnit === unitId && !new URL(location.href).searchParams.has('overview') && !location.hash && ['2.1','2.2','2.3'].includes(settings.currentLesson)) {
+      location.replace('lesson-' + settings.currentLesson.replace('.', '-') + '.html');
+      return;
+    }
     const unit = window.COURSE_DATA.units.find(item => item.id === unitId);
     document.querySelectorAll('[data-resource-id]').forEach(link => {
       const id = link.dataset.resourceId;
@@ -22,7 +27,8 @@
     const index = document.querySelector('.lesson-index');
     index.querySelectorAll('.lesson-row,.upcoming').forEach(item => item.remove());
     const upcoming = [];
-    unit.lessonTitles.forEach(([number,title]) => {
+    const orderedLessons = [...unit.lessonTitles].sort(([a],[b]) => Number(settings.currentUnit === unitId && b === settings.currentLesson) - Number(settings.currentUnit === unitId && a === settings.currentLesson));
+    orderedLessons.forEach(([number,title]) => {
       const resources = unit.lessonResources?.[number] || [];
       if (!resources.length) { upcoming.push([number,title]); return; }
       const link = document.createElement('a');
