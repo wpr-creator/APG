@@ -288,7 +288,7 @@ function validateSharedCourseExperience() {
     'course-shell.css?v=20260926-editorial-typography',
     'styles-design-system.css',
     'voter-guide.css?v=20261103-ballot-moved',
-    'course-data.js?v=20261112-executive',
+    'course-data.js?v=20261117-presidential-roles',
     'glossary-data.js?v=20261112-guided-notes',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
