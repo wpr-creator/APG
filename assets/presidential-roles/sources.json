@@ -21,14 +21,14 @@
     "role": "Chief diplomat",
     "definition": "The president leads U.S. relations with other countries, working with foreign leaders and negotiating international agreements.",
     "example": "Negotiating an agreement with another country.",
-    "image": "diplomat.jpg",
-    "caption": "Theodore Roosevelt with Russian and Japanese representatives aboard the Mayflower, 1905. Photograph by Underwood & Underwood.",
-    "source": "https://commons.wikimedia.org/wiki/File:Witte,_Roosevelt_and_Komura.jpg",
-    "rights": "Public domain historical work / Library of Congress: no known restrictions on publication."
+    "image": "reagan-treaty.jpg",
+    "caption": "Ronald Reagan and Soviet leader Mikhail Gorbachev sign the Intermediate-Range Nuclear Forces Treaty at the White House, 1987. Official White House photograph.",
+    "source": "https://www.reaganlibrary.gov/archives/audiovisual/white-house-photo-collection-galleries/summits-mikhail-gorbachev",
+    "rights": "Official U.S. government photograph; public domain."
   },
   {
     "role": "Legislative leader",
-    "definition": "The president proposes policy goals and works to persuade Congress to pass laws that advance those goals.",
+    "definition": "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals.",
     "example": "Urging Congress to pass an education bill.",
     "image": "legislative.jpg",
     "caption": "Woodrow Wilson addresses Congress seeking authorization to use military force against Mexico, 1914. Bain News Service photograph.",
@@ -37,7 +37,7 @@
   },
   {
     "role": "Party leader",
-    "definition": "The president promotes the political party\u2019s goals and helps its candidates win elections.",
+    "definition": "The president promotes the goals of the president\u2019s political party and helps its candidates win elections.",
     "example": "Campaigning for a candidate from the president\u2019s party.",
     "image": "party.jpg",
     "caption": "Franklin D. Roosevelt attends a Democratic Party fundraising dinner with Eleanor Roosevelt and party chairman James Farley, 1937. Harris & Ewing photograph.",
@@ -48,9 +48,9 @@
     "role": "Head of state",
     "definition": "The president represents the United States at ceremonies, celebrations, and moments of national mourning.",
     "example": "Speaking at a memorial after a national tragedy.",
-    "image": "state.jpg",
-    "caption": "Warren G. Harding and Chief Justice William Howard Taft pay respects to the Unknown Soldier in the Capitol, 1921. National Photo Company photograph.",
-    "source": "https://commons.wikimedia.org/wiki/File:Harding_and_Taft_at_casket_of_unknown.jpg",
-    "rights": "Public domain historical work / Library of Congress: no known restrictions on publication."
+    "image": "obama-memorial.jpg",
+    "caption": "Barack Obama delivers the eulogy for Reverend Clementa Pinckney in Charleston, South Carolina, 2015. Official White House photograph by Lawrence Jackson.",
+    "source": "https://obamawhitehouse.archives.gov/photos-and-video/photo/2015/06/president-obama-delivers-eulogy-funeral-reverend-clementa-pinckney",
+    "rights": "Official U.S. government photograph; public domain."
   }
 ]
