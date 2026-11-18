@@ -232,7 +232,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Investigates passport and visa fraud and protects diplomats.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "office",
                   "id": "diplomatic-security-service",
                   "source": "https://www.state.gov/bureaus-offices/"
                 }
@@ -271,13 +271,18 @@ window.EXECUTIVE_BRANCH_DATA = {
               "source": "https://www.state.gov/bureaus-offices/"
             },
             {
-              "title": "Economic and Business Affairs",
-              "desc": "Works on trade, investment, and economic diplomacy.",
+              "title": "Economic, Energy, and Business Affairs",
+              "desc": "Works on trade, investment, energy, and economic diplomacy.",
               "children": [],
               "url": "",
               "kind": "office",
               "id": "economic-and-business-affairs",
-              "source": "https://www.state.gov/bureaus-offices/"
+              "source": "https://fam.state.gov/fam/04fah01/04fah010420.html",
+              "aliases": [
+                "Economic and Business Affairs",
+                "EB",
+                "EEB"
+              ]
             },
             {
               "title": "International Organization Affairs",
@@ -324,7 +329,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations with sub-Saharan Africa.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "african-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 },
@@ -333,7 +338,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations in East Asia and the Pacific.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "east-asian-and-pacific-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 },
@@ -342,7 +347,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations with Europe and Eurasia.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "european-and-eurasian-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 },
@@ -351,7 +356,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations with much of the Middle East and North Africa.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "near-eastern-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 },
@@ -360,7 +365,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations with South and Central Asia.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "south-and-central-asian-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 },
@@ -369,7 +374,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "U.S. relations with the Americas.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "bureau",
                   "id": "western-hemisphere-affairs",
                   "source": "https://www.state.gov/bureaus-offices/"
                 }
@@ -416,7 +421,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Helps taxpayers resolve problems with the IRS.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "office",
                   "id": "taxpayer-advocate-service",
                   "source": "https://www.irs.gov/about-irs"
                 }
@@ -568,7 +573,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "desc": "State-based forces that can serve federal missions.",
                       "children": [],
                       "url": "",
-                      "kind": "program",
+                      "kind": "military-component",
                       "id": "army-national-guard",
                       "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                     },
@@ -577,13 +582,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "desc": "Federal reserve forces.",
                       "children": [],
                       "url": "",
-                      "kind": "program",
+                      "kind": "military-component",
                       "id": "army-reserve",
                       "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                     }
                   ],
                   "url": "",
-                  "kind": "office",
+                  "kind": "military-service",
                   "id": "u-s-army",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -608,7 +613,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                 }
               ],
               "url": "",
-              "kind": "office",
+              "kind": "military-department",
               "id": "department-of-the-army",
               "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
             },
@@ -625,7 +630,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "desc": "Organizes and prepares naval forces.",
                       "children": [],
                       "url": "",
-                      "kind": "program",
+                      "kind": "military-command",
                       "id": "u-s-fleet-forces-command",
                       "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                     },
@@ -634,13 +639,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "desc": "Prepares naval forces in the Pacific.",
                       "children": [],
                       "url": "",
-                      "kind": "program",
+                      "kind": "military-command",
                       "id": "u-s-pacific-fleet",
                       "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                     }
                   ],
                   "url": "",
-                  "kind": "office",
+                  "kind": "military-service",
                   "id": "u-s-navy",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -649,13 +654,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Maritime expeditionary forces.",
                   "children": [],
                   "url": "",
-                  "kind": "office",
+                  "kind": "military-service",
                   "id": "u-s-marine-corps",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 }
               ],
               "url": "",
-              "kind": "office",
+              "kind": "military-department",
               "id": "department-of-the-navy",
               "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
             },
@@ -668,7 +673,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Air forces.",
                   "children": [],
                   "url": "",
-                  "kind": "office",
+                  "kind": "military-service",
                   "id": "u-s-air-force",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -677,13 +682,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military space forces.",
                   "children": [],
                   "url": "",
-                  "kind": "office",
+                  "kind": "military-service",
                   "id": "u-s-space-force",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 }
               ],
               "url": "",
-              "kind": "office",
+              "kind": "military-department",
               "id": "department-of-the-air-force",
               "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
             },
@@ -705,7 +710,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in its assigned Middle East and Central/South Asia region.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-central-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -714,7 +719,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in its assigned European region.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-european-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -723,7 +728,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in its assigned Indo-Pacific region.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-indo-pacific-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -732,7 +737,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Homeland defense and support to civil authorities.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-northern-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -741,7 +746,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in its assigned Latin American and Caribbean region.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-southern-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -750,7 +755,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in its assigned African region.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-africa-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -759,7 +764,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military cyberspace operations.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-cyber-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -768,7 +773,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Special operations forces.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-special-operations-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -777,7 +782,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Strategic deterrence and related missions.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-strategic-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -786,7 +791,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Global military transportation.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-transportation-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 },
@@ -795,7 +800,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Military operations in space.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "military-command",
                   "id": "u-s-space-command",
                   "source": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/"
                 }
@@ -924,7 +929,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Investigate cases in regions across the country.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "field-offices",
                   "id": "field-offices",
                   "source": "https://www.fbi.gov/about"
                 },
@@ -933,7 +938,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Examines physical evidence.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "division",
                   "id": "laboratory-division",
                   "source": "https://www.fbi.gov/about"
                 },
@@ -942,7 +947,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Maintains shared criminal-justice information systems.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "division",
                   "id": "criminal-justice-information-services",
                   "source": "https://www.fbi.gov/about"
                 }
@@ -1072,7 +1077,7 @@ window.EXECUTIVE_BRANCH_DATA = {
             },
             {
               "title": "Criminal Division",
-              "desc": "Develops and carries out federal criminal-law enforcement.",
+              "desc": "Develops federal criminal-law enforcement, including criminal tax cases.",
               "children": [],
               "url": "",
               "kind": "office",
@@ -1082,7 +1087,20 @@ window.EXECUTIVE_BRANCH_DATA = {
             {
               "title": "Civil Division",
               "desc": "Represents the United States in civil lawsuits.",
-              "children": [],
+              "children": [
+                {
+                  "title": "Tax Litigation Branch",
+                  "desc": "Represents the United States in civil tax cases.",
+                  "children": [],
+                  "url": "https://www.justice.gov/civil/tax-litigation-branch",
+                  "kind": "office",
+                  "id": "tax-division",
+                  "source": "https://www.justice.gov/civil/tax-litigation-branch",
+                  "aliases": [
+                    "Tax Division"
+                  ]
+                }
+              ],
               "url": "",
               "kind": "office",
               "id": "civil-division",
@@ -1104,15 +1122,6 @@ window.EXECUTIVE_BRANCH_DATA = {
               "url": "",
               "kind": "office",
               "id": "environment-and-natural-resources-division",
-              "source": "https://www.justice.gov/agencies/chart"
-            },
-            {
-              "title": "Tax Division",
-              "desc": "Handles federal tax litigation.",
-              "children": [],
-              "url": "",
-              "kind": "office",
-              "id": "tax-division",
               "source": "https://www.justice.gov/agencies/chart"
             },
             {
@@ -1189,7 +1198,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "desc": "Cares for many monuments and parks in Washington, D.C.",
                   "children": [],
                   "url": "",
-                  "kind": "program",
+                  "kind": "park-unit",
                   "id": "national-mall-and-memorial-parks",
                   "source": "https://www.doi.gov/bureaus"
                 }
@@ -1365,8 +1374,8 @@ window.EXECUTIVE_BRANCH_DATA = {
               "source": "https://www.usda.gov/about-usda/general-information/agencies"
             },
             {
-              "title": "Food and Nutrition Service",
-              "desc": "Administers federal nutrition assistance.",
+              "title": "Food and Nutrition Administration (FNA)",
+              "desc": "Administers federal nutrition assistance. Formerly the Food and Nutrition Service (FNS).",
               "children": [
                 {
                   "title": "SNAP",
@@ -1375,7 +1384,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "url": "",
                   "kind": "program",
                   "id": "snap",
-                  "source": "https://www.usda.gov/about-usda/general-information/agencies"
+                  "source": "https://www.fna.usda.gov/"
                 },
                 {
                   "title": "National School Lunch Program",
@@ -1384,7 +1393,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "url": "",
                   "kind": "program",
                   "id": "national-school-lunch-program",
-                  "source": "https://www.usda.gov/about-usda/general-information/agencies"
+                  "source": "https://www.fna.usda.gov/"
                 },
                 {
                   "title": "School Breakfast Program",
@@ -1393,7 +1402,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "url": "",
                   "kind": "program",
                   "id": "school-breakfast-program",
-                  "source": "https://www.usda.gov/about-usda/general-information/agencies"
+                  "source": "https://www.fna.usda.gov/"
                 },
                 {
                   "title": "WIC",
@@ -1402,7 +1411,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "url": "",
                   "kind": "program",
                   "id": "wic",
-                  "source": "https://www.usda.gov/about-usda/general-information/agencies"
+                  "source": "https://www.fna.usda.gov/"
                 },
                 {
                   "title": "Summer Food Service Program",
@@ -1411,13 +1420,17 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "url": "",
                   "kind": "program",
                   "id": "summer-food-service-program",
-                  "source": "https://www.usda.gov/about-usda/general-information/agencies"
+                  "source": "https://www.fna.usda.gov/"
                 }
               ],
-              "url": "",
+              "url": "https://www.fna.usda.gov/",
               "kind": "office",
               "id": "food-and-nutrition-service",
-              "source": "https://www.usda.gov/about-usda/general-information/agencies"
+              "source": "https://www.fna.usda.gov/",
+              "aliases": [
+                "Food and Nutrition Service",
+                "FNS"
+              ]
             },
             {
               "title": "Food Safety and Inspection Service",
@@ -3231,7 +3244,7 @@ window.EXECUTIVE_BRANCH_DATA = {
                 }
               ],
               "url": "",
-              "kind": "office",
+              "kind": "military-service",
               "id": "u-s-coast-guard",
               "source": "https://www.dhs.gov/operational-and-support-components"
             },
@@ -3812,40 +3825,40 @@ window.EXECUTIVE_BRANCH_DATA = {
         },
         {
           "title": "Federal Reserve System",
-          "desc": "The central bank; monetary-policy decisions are independent.",
+          "desc": "The central bank combines a federal Board of Governors with regional Reserve Banks. Monetary-policy decisions are independent.",
           "children": [
             {
               "title": "Board of Governors",
-              "desc": "Oversees the Federal Reserve System.",
+              "desc": "Federal agency that governs the Federal Reserve System; accountable to Congress.",
               "children": [],
               "url": "",
-              "kind": "office",
+              "kind": "federal-agency",
               "id": "board-of-governors",
-              "source": "https://www.federalreserve.gov/aboutthefed.htm"
+              "source": "https://www.federalreserve.gov/aboutthefed/fedexplained/who-we-are.htm"
             },
             {
               "title": "12 Federal Reserve Banks",
-              "desc": "Carry out regional central-bank functions.",
+              "desc": "Regional operating arms of the central bank. The Reserve Banks are not federal agencies.",
               "children": [],
               "url": "",
-              "kind": "office",
+              "kind": "reserve-banks",
               "id": "12-federal-reserve-banks",
-              "source": "https://www.federalreserve.gov/aboutthefed.htm"
+              "source": "https://www.gao.gov/assets/gao-12-18.pdf"
             },
             {
               "title": "Federal Open Market Committee",
-              "desc": "Makes specified monetary-policy decisions.",
+              "desc": "Board governors and Reserve Bank presidents participate in decisions on monetary policy.",
               "children": [],
               "url": "",
-              "kind": "office",
+              "kind": "policy-committee",
               "id": "federal-open-market-committee",
-              "source": "https://www.federalreserve.gov/aboutthefed.htm"
+              "source": "https://www.federalreserve.gov/aboutthefed/fedexplained/who-we-are.htm"
             }
           ],
           "url": "https://www.federalreserve.gov/aboutthefed.htm",
-          "kind": "office",
+          "kind": "central-bank-system",
           "id": "federal-reserve-system",
-          "source": "https://www.federalreserve.gov/aboutthefed.htm"
+          "source": "https://www.federalreserve.gov/aboutthefed/fedexplained/who-we-are.htm"
         },
         {
           "title": "Federal Deposit Insurance Corporation (FDIC)",
