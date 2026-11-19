@@ -2,8 +2,8 @@
 export function createRotundaScene(canvas,{reduced=false}={}){
  const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)throw Error('Canvas unavailable');
  const C={sky:'#8fbfca',skyLight:'#bad9d4',cloud:'#f6ebd0',cloudShade:'#bdc9bc',navy:'#172b3b',deep:'#11222e',ink:'#26494d',stone:'#c3ba9e',shade:'#8c958b',darkStone:'#667e7b',cream:'#f0e1b8',light:'#fff1cf',gold:'#d9ab64',darkGold:'#ad7e49',grass:'#4e7770',grassLight:'#6c9180',rose:'#cf8876',blue:'#6e919c',wood:'#9b7057'};
- let width=480,height=320,stage='welcome',progress=0,target=0,pan=0,panTarget=0,vertical=0,verticalTarget=0,zoom=1.15,zoomTarget=1.15,rewardAt=-10000,rewardPoints=0,rewardRank='',flight=null,frame,last=0,active=!document.hidden,disposed=false;
- const motion=matchMedia('(prefers-reduced-motion: reduce)');
+ let width=480,height=320,stage='welcome',progress=0,target=0,pan=0,panTarget=0,vertical=0,verticalTarget=0,zoom=1.15,zoomTarget=1.15,rewardAt=-10000,rewardPoints=0,rewardRank='',flight=null,eagleX=.17,frame,last=0,active=!document.hidden,disposed=false;
+ const budget=createFrameBudget();
  const art=new Image();art.src='assets/rotunda/apotheosis.webp';let fresco=null;
  art.onload=()=>{if(disposed)return;const off=document.createElement('canvas');off.width=96;off.height=64;const x=off.getContext('2d');x.drawImage(art,0,0,96,64);const image=x.getImageData(0,0,96,64);for(let i=0;i<image.data.length;i+=4){for(let c=0;c<3;c++)image.data[i+c]=Math.round(image.data[i+c]/40)*40;}x.putImageData(image,0,0);fresco=off;};
  const r=(x,y,w,h,c)=>{ctx.fillStyle=c;ctx.fillRect(Math.round(x),Math.round(y),Math.ceil(w),Math.ceil(h));};
@@ -46,6 +46,10 @@ export function createRotundaScene(canvas,{reduced=false}={}){
   // Upper vault continues beyond the viewport; reaching the canopy never reveals an empty void.
   for(let y=-700;y<90;y+=42){for(let x=-228;x<228;x+=50){r(x,y,44,34,C.shade);r(x+3,y+3,38,28,C.stone);r(x,y,44,2,C.cream);r(x,y,2,34,C.cream);}}
   const centerGlow=ctx.createLinearGradient(-240,0,240,0);centerGlow.addColorStop(0,C.darkStone);centerGlow.addColorStop(.23,C.stone);centerGlow.addColorStop(.5,C.cream);centerGlow.addColorStop(.77,C.stone);centerGlow.addColorStop(1,C.darkStone);ctx.fillStyle=centerGlow;ctx.fillRect(-236,320,472,1050);
+  // Distant stonework moves more slowly than the main architectural layer.
+  ctx.save();ctx.globalAlpha=.14;
+  for(let y=-1300;y<1500;y+=74){const yy=y+camera*.22;r(-236,yy,472,1,C.darkStone);for(let x=-220;x<236;x+=65)r(x,yy,1,73,C.shade);}
+  ctx.restore();
   // Ground-level galleries and pilasters.
   for(let i=-3;i<=3;i++){
    const x=i*70;r(x-5,1040,10,277,C.cream);r(x+5,1040,4,277,C.shade);r(x-8,1035,20,8,C.light);r(x-9,1317,22,9,C.shade);
@@ -83,14 +87,18 @@ export function createRotundaScene(canvas,{reduced=false}={}){
   oval(0,1390,52,16,C.ink);oval(0,1390,45,12,C.stone);poly([[0,1376],[8,1387],[35,1390],[8,1393],[0,1403],[-8,1393],[-35,1390],[-8,1387]],C.grass);
   // Window light shafts and slow square dust, with no flashing.
   ctx.globalAlpha=.11;poly([[58,635],[76,635],[-110,1330],[-215,1330]],C.light);poly([[-74,635],[-58,635],[160,1330],[255,1330]],C.light);ctx.globalAlpha=1;
-  if(!quiet){for(let i=0;i<28;i++){const x=-220+(i*73)%440,y=70+((i*131+time*.004)%1260);r(x,y,1,1,C.light);}}
+  if(!quiet){for(let i=0;i<28;i++){const x=-220+(i*73)%440,y=70+((i*131+time*.004)%1260)+camera*.32;r(x,y,1,1,C.light);}}
   ctx.restore();
+  // Near pilasters and motes pass faster, creating depth without changing rank height.
+  const nearCamera=1130-progress*1045*1.18+vertical*1.1;
+  for(const side of [0,1]){const x=side?width-10+pan*scale*.1:-4+pan*scale*.1;r(x,0,13,height,C.darkStone);r(x+2,0,3,height,C.cream);r(x+8,0,2,height,C.shade);for(let y=-900;y<1500;y+=118){const sy=height/2+(y-nearCamera)*scale;if(sy>-12&&sy<height+12){r(x-3,sy,19,4,C.cream);r(x-2,sy+4,17,3,C.shade);}}}
+  if(!quiet){for(let i=0;i<14;i++){const x=(i*97+37)%width,y=(i*71+progress*1450+time*.009)%height;r(x,y,i%3?1:2,i%3?1:2,C.cream);}}
   // Rank milestones use the same score-to-height scale as the player camera.
   ctx.save();ctx.font='8px monospace';ctx.textAlign='right';
   for(const rank of window.RotundaEngine.ranks){const y=height/2+(progress-rank.points/700)*1045*scale;if(y<65||y>height-65)continue;const current=window.RotundaEngine.rankFor(progress*700).title===rank.title;ctx.fillStyle=current?C.gold:C.light;ctx.fillText(rank.short.toUpperCase(),width-17,y);r(width-13,y-4,9,2,current?C.gold:C.shade);}
   ctx.restore();
   // A small pixel eagle is the player's marker; answer tiers add stronger upward trails.
-  const age=(time-rewardAt)/1000,bob=quiet?0:Math.round(Math.sin(time*.003)*1.5),ex=Math.round(width*(flight?.5:.17)),ey=Math.round(height*.5+bob);
+  const age=(time-rewardAt)/1000,bob=quiet?0:Math.round(Math.sin(time*.003)*1.5),ex=Math.round(width*eagleX),ey=Math.round(height*.5+bob);
   if(flight&&!quiet){for(let i=0;i<20;i++){const x=(i*83+11)%width,y=(time*.12+i*41)%height;r(x,y,1,7+rewardPoints/12,C.light);}r(ex+6,ey+13,3,12+Math.sin(time*.03)*4,C.gold);}
   const sprite=['....WWWW........','...WWWWYY.......','..WWWNN.........','TTTTNNNNNTTTT...','.TTTNNNNNTTT....','...TNNNNT.......','....NNNN........','....Y..Y........'];
   const colors={W:C.light,Y:C.gold,N:C.ink,T:C.darkStone};
@@ -100,7 +108,18 @@ export function createRotundaScene(canvas,{reduced=false}={}){
  }
  function resize(){const rect=canvas.getBoundingClientRect();const density=stage==='welcome'?3.2:2.8;width=Math.max(200,Math.min(640,Math.round(rect.width/density)));height=Math.max(160,Math.round(rect.height*width/rect.width));canvas.width=width;canvas.height=height;ctx.imageSmoothingEnabled=false;}
  const observer=new ResizeObserver(resize);observer.observe(canvas);resize();
- function draw(time){frame=requestAnimationFrame(draw);if(!active||time-last<1000/30)return;const dt=Math.min((time-last)/1000,.25);last=time;const quiet=reduced||motion.matches,ease=1-Math.exp(-dt/.55);if(flight){const f=flight,t=quiet?1:Math.min(1,(time-f.started)/f.duration),e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;progress=f.from+(f.to-f.from)*e;canvas.dataset.ascent=String(Math.round(t*100));const points=progress*700,rank=window.RotundaEngine.rankFor(points+.01),crossed=rank.points>f.lastRank;if(crossed)f.lastRank=rank.points;canvas.dispatchEvent(new CustomEvent('rotunda-ascent',{detail:{points,rank,crossed,done:t===1}}));if(t===1){flight=null;f.resolve();}}else progress=quiet?target:progress+(target-progress)*ease;pan=quiet?panTarget:pan+(panTarget-pan)*ease;vertical=quiet?verticalTarget:vertical+(verticalTarget-vertical)*ease;zoom=quiet?zoomTarget:zoom+(zoomTarget-zoom)*ease;const z=Math.round(zoom*100);if(canvas.dataset.zoom!==String(z)){canvas.dataset.zoom=String(z);canvas.dispatchEvent(new CustomEvent('rotunda-zoom',{detail:z}));}ctx.imageSmoothingEnabled=false;if(stage==='welcome')exterior(time,quiet);else interior(time,quiet);}
+ function draw(time){
+  frame=requestAnimationFrame(draw);if(!active||time-last<1000/budget.fps-1)return;
+  const started=performance.now(),dt=Math.min((time-last)/1000,.25);last=time;
+  const quiet=reduced,ease=1-Math.exp(-dt/.55),spriteEase=1-Math.exp(-dt/.22);
+  if(flight){const f=flight,t=quiet?1:Math.min(1,(time-f.started)/f.duration),e=t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;progress=f.from+(f.to-f.from)*e;canvas.dataset.ascent=String(Math.round(t*100));const points=progress*700,rank=window.RotundaEngine.rankFor(points+.01),crossed=rank.points>f.lastRank;if(crossed)f.lastRank=rank.points;canvas.dispatchEvent(new CustomEvent('rotunda-ascent',{detail:{points,rank,crossed,done:t===1}}));if(t===1){flight=null;f.resolve();}}
+  else progress=quiet?target:progress+(target-progress)*ease;
+  eagleX=quiet?.17:eagleX+((flight?.5:.17)-eagleX)*spriteEase;
+  pan=quiet?panTarget:pan+(panTarget-pan)*ease;vertical=quiet?verticalTarget:vertical+(verticalTarget-vertical)*ease;zoom=quiet?zoomTarget:zoom+(zoomTarget-zoom)*ease;
+  const z=Math.round(zoom*100);if(canvas.dataset.zoom!==String(z)){canvas.dataset.zoom=String(z);canvas.dispatchEvent(new CustomEvent('rotunda-zoom',{detail:z}));}
+  ctx.imageSmoothingEnabled=false;if(stage==='welcome')exterior(time,quiet);else interior(time,quiet);
+  budget.sample(performance.now()-started);canvas.dataset.renderFps=String(budget.fps);canvas.dataset.eagleX=eagleX.toFixed(3);
+ }
  frame=requestAnimationFrame(draw);const visibility=()=>{active=!document.hidden;};document.addEventListener('visibilitychange',visibility);
  const pointers=new Map();let pinchDistance=null;
  const down=e=>{if(stage==='welcome')return;canvas.setPointerCapture(e.pointerId);pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});pinchDistance=null;};
@@ -110,3 +129,6 @@ export function createRotundaScene(canvas,{reduced=false}={}){
  canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointermove',move);canvas.addEventListener('pointerup',up);canvas.addEventListener('pointercancel',up);canvas.addEventListener('wheel',wheel,{passive:false});
  return{ascend(from,to,points){if(flight){flight.resolve();flight=null;}progress=Math.max(0,from/700);target=Math.min(1,to/700);panTarget=verticalTarget=0;rewardPoints=points;rewardAt=performance.now();return new Promise(resolve=>{flight={from:progress,to:target,started:performance.now(),duration:2300+points*25,lastRank:window.RotundaEngine.rankFor(from).points,resolve};});},skipAscent(){if(flight){progress=target=flight.to;flight.resolve();flight=null;}},reward(points,rank=''){rewardPoints=points;rewardRank=rank;rewardAt=performance.now();},setProgress(p){const value=Math.max(0,Math.min(1,p));if(value!==target)verticalTarget=0;target=value;},setStage(value){if(stage!==value){stage=value;panTarget=verticalTarget=0;resize();}},setReduced(value){reduced=value;},look(dir){panTarget=Math.max(-170,Math.min(170,panTarget-dir*50));},zoom(factor){zoomTarget=Math.max(.8,Math.min(3,zoomTarget*factor));},resetView(){panTarget=verticalTarget=0;zoomTarget=1.15;},dispose(){if(flight){flight.resolve();flight=null;}disposed=true;cancelAnimationFrame(frame);observer.disconnect();document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointermove',move);canvas.removeEventListener('pointerup',up);canvas.removeEventListener('pointercancel',up);canvas.removeEventListener('wheel',wheel);}};
 }
+
+// Frame cost changes quality, never elapsed-time animation speed or the game timer.
+export function createFrameBudget(){let fps=60,average=0,slow=0,fast=0;return{get fps(){return fps;},sample(ms){average=average*.9+Math.max(0,ms)*.1;if(fps===60){slow=average>10?slow+1:Math.max(0,slow-2);if(slow>=30){fps=30;fast=0;}}else{fast=average<6?fast+1:0;if(fast>=180){fps=60;slow=0;}}return fps;}};}
