@@ -20,7 +20,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "staff-office",
               "id": "chief-of-staff",
               "source": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
-              "linkType": "staff-directory"
+              "linkType": "staff-directory",
+              "topics": [
+                "presidential advisers",
+                "White House staff",
+                "presidential priorities"
+              ]
             },
             {
               "title": "White House Counsel",
@@ -30,7 +35,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "staff-office",
               "id": "white-house-counsel",
               "source": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
-              "linkType": "staff-directory"
+              "linkType": "staff-directory",
+              "topics": [
+                "presidential legal advice",
+                "White House lawyers"
+              ]
             },
             {
               "title": "Press Secretary and communications staff",
@@ -40,7 +49,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "staff-office",
               "id": "press-secretary-and-communications-staff",
               "source": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
-              "linkType": "staff-directory"
+              "linkType": "staff-directory",
+              "topics": [
+                "press",
+                "news",
+                "media",
+                "presidential announcements"
+              ]
             },
             {
               "title": "Office of Legislative Affairs",
@@ -50,7 +65,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-legislative-affairs",
               "source": "https://www.whitehouse.gov/internships/presidential-departments/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "Congress",
+                "legislation",
+                "lawmakers"
+              ]
             },
             {
               "title": "Office of Presidential Personnel",
@@ -60,14 +80,24 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-presidential-personnel",
               "source": "https://www.whitehouse.gov/internships/presidential-departments/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "presidential appointments",
+                "hiring",
+                "political appointees"
+              ]
             }
           ],
           "url": "https://www.whitehouse.gov/internships/presidential-departments/",
           "kind": "office",
           "id": "white-house-office",
           "source": "https://www.whitehouse.gov/internships/presidential-departments/",
-          "linkType": "organization-listing"
+          "linkType": "organization-listing",
+          "topics": [
+            "presidency",
+            "executive leadership",
+            "presidential decisions"
+          ]
         },
         {
           "title": "Office of Management and Budget (OMB)",
@@ -81,7 +111,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-information-and-regulatory-affairs-oira",
               "source": "https://www.reginfo.gov/public/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "regulations",
+                "rule review",
+                "paperwork"
+              ]
             },
             {
               "title": "Office of Federal Procurement Policy",
@@ -91,7 +126,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-federal-procurement-policy",
               "source": "https://www.govinfo.gov/content/pkg/CFR-2026-title5-vol3/xhtml/CFR-2026-title5-vol3.html",
-              "linkType": "organization-listing"
+              "linkType": "organization-listing",
+              "topics": [
+                "government purchasing",
+                "buying supplies",
+                "contracts"
+              ]
             },
             {
               "title": "Office of Federal Financial Management",
@@ -101,14 +141,25 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-federal-financial-management",
               "source": "https://www.govinfo.gov/content/pkg/CFR-2026-title5-vol3/xhtml/CFR-2026-title5-vol3.html",
-              "linkType": "organization-listing"
+              "linkType": "organization-listing",
+              "topics": [
+                "financial reporting",
+                "federal accounting",
+                "government money"
+              ]
             }
           ],
           "url": "https://www.whitehouse.gov/omb/",
           "kind": "office",
           "id": "office-of-management-and-budget-omb",
           "source": "https://www.usa.gov/agencies/office-of-management-and-budget",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "budget",
+            "spending",
+            "presidential budget",
+            "agency oversight"
+          ]
         },
         {
           "title": "National Security Council",
@@ -118,7 +169,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-security-council",
           "source": "https://www.usa.gov/agencies/national-security-council",
-          "linkType": "official-profile"
+          "linkType": "official-profile",
+          "topics": [
+            "national security",
+            "foreign policy",
+            "presidential security advice"
+          ]
         },
         {
           "title": "Council of Economic Advisers",
@@ -128,7 +184,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "council-of-economic-advisers",
           "source": "https://www.usa.gov/agencies/council-of-economic-advisers",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "economy",
+            "economic advice",
+            "economic research"
+          ]
         },
         {
           "title": "Office of the U.S. Trade Representative",
@@ -138,7 +199,13 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-the-u-s-trade-representative",
           "source": "https://ustr.gov/",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "trade deals",
+            "international trade",
+            "imports",
+            "exports"
+          ]
         },
         {
           "title": "Office of Science and Technology Policy",
@@ -148,7 +215,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-science-and-technology-policy",
           "source": "https://www.usa.gov/agencies/office-of-science-and-technology-policy",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "science policy",
+            "technology policy",
+            "research advice"
+          ]
         },
         {
           "title": "Council on Environmental Quality",
@@ -158,7 +230,11 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "council-on-environmental-quality",
           "source": "https://www.usa.gov/agencies/council-on-environmental-quality",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "environmental policy",
+            "environmental review"
+          ]
         },
         {
           "title": "Office of National Drug Control Policy",
@@ -168,7 +244,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-national-drug-control-policy",
           "source": "https://www.usa.gov/agencies/office-of-national-drug-control-policy",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "drugs",
+            "addiction",
+            "drug policy"
+          ]
         },
         {
           "title": "Office of Administration",
@@ -178,7 +259,11 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-administration",
           "source": "https://usgovernmentmanual.gov/Agency?EType=%2FsbLHImeIYk%3D&EntityId=%2FF21Us0F6DU%3D&ParentEId=p0fnvDxExmY%3D",
-          "linkType": "official-profile"
+          "linkType": "official-profile",
+          "topics": [
+            "White House support",
+            "administrative services"
+          ]
         },
         {
           "title": "Office of the National Cyber Director",
@@ -188,14 +273,24 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-the-national-cyber-director",
           "source": "https://www.whitehouse.gov/eop/",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "cybersecurity",
+            "cyber policy",
+            "computer security"
+          ]
         }
       ],
       "url": "https://www.whitehouse.gov/eop/",
       "kind": "eop",
       "id": "executive-office-of-the-president",
       "source": "https://www.whitehouse.gov/eop/",
-      "linkType": "website"
+      "linkType": "website",
+      "topics": [
+        "presidency",
+        "executive leadership",
+        "presidential decisions"
+      ]
     },
     {
       "title": "15 executive departments",
@@ -217,7 +312,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "passport-services",
                   "source": "https://travel.state.gov/content/travel/en/passports.html",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "passports",
+                    "travel documents",
+                    "international travel",
+                    "Americans abroad"
+                  ]
                 },
                 {
                   "title": "Visa Services",
@@ -227,7 +328,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "visa-services",
                   "source": "https://travel.state.gov/content/travel/en/us-visas.html",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "visas",
+                    "foreign visitors",
+                    "travel permission"
+                  ]
                 },
                 {
                   "title": "Overseas Citizens Services",
@@ -237,7 +343,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "overseas-citizens-services",
                   "source": "https://travel.state.gov/content/travel/en/international-travel/emergencies.html",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "Americans abroad",
+                    "overseas emergencies",
+                    "help abroad"
+                  ]
                 }
               ],
               "url": "https://travel.state.gov/",
@@ -247,7 +358,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Consular Affairs"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "passports",
+                "travel documents",
+                "international travel",
+                "Americans abroad"
+              ]
             },
             {
               "title": "Bureau of Diplomatic Security",
@@ -261,7 +378,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "diplomatic-security-service",
                   "source": "https://www.state.gov/bureaus-offices/under-secretary-for-management/bureau-of-diplomatic-security/",
-                  "linkType": "organization-listing"
+                  "linkType": "organization-listing",
+                  "topics": [
+                    "embassy security",
+                    "diplomats",
+                    "overseas protection"
+                  ]
                 }
               ],
               "url": "https://www.state.gov/bureaus-offices/under-secretary-for-management/bureau-of-diplomatic-security/",
@@ -271,7 +393,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Diplomatic Security"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "embassy security",
+                "diplomats",
+                "overseas protection"
+              ]
             },
             {
               "title": "Bureau of Educational and Cultural Affairs",
@@ -285,7 +412,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "fulbright-program",
                   "source": "https://www.usa.gov/agencies/fulbright-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "cultural exchange",
+                    "studying abroad",
+                    "international exchange"
+                  ]
                 },
                 {
                   "title": "International Visitor Leadership Program",
@@ -295,7 +427,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "international-visitor-leadership-program",
                   "source": "https://exchanges.state.gov/non-us/program/international-visitor-leadership-program-ivlp",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "cultural exchange",
+                    "studying abroad",
+                    "international exchange"
+                  ]
                 }
               ],
               "url": "https://www.state.gov/bureau-of-educational-and-cultural-affairs/about-us-bureau-of-educational-and-cultural-affairs",
@@ -305,7 +442,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Educational and Cultural Affairs"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "cultural exchange",
+                "studying abroad",
+                "international exchange"
+              ]
             },
             {
               "title": "Bureau of Economic, Energy, and Business Affairs",
@@ -321,7 +463,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                 "EEB",
                 "Economic, Energy, and Business Affairs"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "economic diplomacy",
+                "international business",
+                "energy diplomacy"
+              ]
             },
             {
               "title": "Bureau of International Organizations",
@@ -334,7 +481,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "International Organization Affairs"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "United Nations",
+                "UN",
+                "international organizations"
+              ]
             },
             {
               "title": "Bureau of Democracy, Human Rights, and Labor",
@@ -347,7 +499,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Democracy, Human Rights, and Labor"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "human rights",
+                "democracy",
+                "rights abroad"
+              ]
             },
             {
               "title": "Bureau of Population, Refugees, and Migration",
@@ -360,7 +517,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Population, Refugees, and Migration"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "refugees",
+                "displaced people",
+                "migration"
+              ]
             },
             {
               "title": "Bureau of International Narcotics and Law Enforcement Affairs",
@@ -373,7 +535,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "International Narcotics and Law Enforcement Affairs"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "international crime",
+                "drug trafficking",
+                "police cooperation"
+              ]
             },
             {
               "title": "Regional bureaus",
@@ -390,7 +557,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "African Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Africa",
+                    "African countries"
+                  ]
                 },
                 {
                   "title": "Bureau of East Asian and Pacific Affairs",
@@ -403,7 +574,15 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "East Asian and Pacific Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "East Asia",
+                    "Pacific",
+                    "China",
+                    "Japan",
+                    "Korea",
+                    "Australia"
+                  ]
                 },
                 {
                   "title": "Bureau of European and Eurasian Affairs",
@@ -416,7 +595,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "European and Eurasian Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Europe",
+                    "Eurasia",
+                    "European countries"
+                  ]
                 },
                 {
                   "title": "Bureau of Near Eastern Affairs",
@@ -429,7 +613,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "Near Eastern Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Middle East",
+                    "North Africa"
+                  ]
                 },
                 {
                   "title": "Bureau of South and Central Asian Affairs",
@@ -442,7 +630,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "South and Central Asian Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "South Asia",
+                    "Central Asia",
+                    "India",
+                    "Pakistan"
+                  ]
                 },
                 {
                   "title": "Bureau of Western Hemisphere Affairs",
@@ -455,21 +649,37 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "Western Hemisphere Affairs"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Canada",
+                    "Mexico",
+                    "Latin America",
+                    "Caribbean"
+                  ]
                 }
               ],
               "url": "https://www.state.gov/bureaus-offices/",
               "kind": "grouping",
               "id": "regional-bureaus",
               "source": "https://www.state.gov/bureaus-offices/",
-              "linkType": "directory"
+              "linkType": "directory",
+              "topics": []
             }
           ],
           "url": "https://www.state.gov/",
           "kind": "department",
           "id": "department-of-state",
           "source": "https://www.usa.gov/agencies/u-s-department-of-state",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "diplomacy",
+            "foreign affairs",
+            "other countries",
+            "embassies",
+            "passports",
+            "visas",
+            "international relations"
+          ]
         },
         {
           "title": "Department of the Treasury",
@@ -487,7 +697,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "taxpayer-assistance",
                   "source": "https://www.irs.gov/compliance/criminal-investigation",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "taxes",
+                    "tax returns",
+                    "income tax",
+                    "refunds",
+                    "taxpayers"
+                  ]
                 },
                 {
                   "title": "Criminal Investigation",
@@ -497,7 +714,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "criminal-investigation",
                   "source": "https://www.irs.gov/compliance/criminal-investigation",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "tax fraud",
+                    "tax crimes",
+                    "financial crime"
+                  ]
                 },
                 {
                   "title": "Taxpayer Advocate Service",
@@ -507,14 +729,28 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "taxpayer-advocate-service",
                   "source": "https://www.taxpayeradvocate.irs.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "taxes",
+                    "tax returns",
+                    "income tax",
+                    "refunds",
+                    "taxpayers"
+                  ]
                 }
               ],
               "url": "https://www.irs.gov",
               "kind": "office",
               "id": "internal-revenue-service-irs",
               "source": "https://www.usa.gov/agencies/internal-revenue-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "taxes",
+                "tax returns",
+                "income tax",
+                "refunds",
+                "taxpayers"
+              ]
             },
             {
               "title": "Bureau of the Fiscal Service",
@@ -528,7 +764,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "treasurydirect",
                   "source": "https://fiscal.treasury.gov/payment-integrity/do-not-pay-dnp",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "savings bonds",
+                    "Treasury securities",
+                    "government borrowing"
+                  ]
                 },
                 {
                   "title": "Do Not Pay",
@@ -538,14 +779,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "do-not-pay",
                   "source": "https://fiscal.treasury.gov/payment-integrity/do-not-pay-dnp",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "improper payments",
+                    "payment errors",
+                    "payment fraud"
+                  ]
                 }
               ],
               "url": "https://fiscal.treasury.gov/",
               "kind": "office",
               "id": "bureau-of-the-fiscal-service",
               "source": "https://www.usa.gov/agencies/bureau-of-the-fiscal-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "government payments",
+                "federal accounting",
+                "national debt"
+              ]
             },
             {
               "title": "U.S. Mint",
@@ -559,7 +810,20 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "circulating-coins",
                   "source": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "coin",
+                    "coins",
+                    "pennies",
+                    "nickels",
+                    "dimes",
+                    "quarters",
+                    "minting",
+                    "penny",
+                    "nickel",
+                    "dime",
+                    "quarter"
+                  ]
                 },
                 {
                   "title": "Commemorative and bullion coins",
@@ -569,14 +833,36 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "commemorative-and-bullion-coins",
                   "source": "https://www.usmint.gov/learn/coin-and-medal-programs",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "coin",
+                    "coins",
+                    "pennies",
+                    "nickels",
+                    "dimes",
+                    "quarters",
+                    "minting"
+                  ]
                 }
               ],
               "url": "https://www.usmint.gov",
               "kind": "office",
               "id": "u-s-mint",
               "source": "https://www.usa.gov/agencies/u-s-mint",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "coin",
+                "coins",
+                "pennies",
+                "nickels",
+                "dimes",
+                "quarters",
+                "minting",
+                "penny",
+                "nickel",
+                "dime",
+                "quarter"
+              ]
             },
             {
               "title": "Bureau of Engraving and Printing",
@@ -586,7 +872,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-engraving-and-printing",
               "source": "https://www.usa.gov/agencies/bureau-of-engraving-and-printing",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "paper money",
+                "dollar bills",
+                "banknotes",
+                "printing currency"
+              ]
             },
             {
               "title": "Office of the Comptroller of the Currency (OCC)",
@@ -596,7 +888,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-the-comptroller-of-the-currency-occ",
               "source": "https://www.usa.gov/agencies/office-of-the-comptroller-of-the-currency",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "national banks",
+                "banking supervision",
+                "bank regulation"
+              ]
             },
             {
               "title": "Financial Crimes Enforcement Network (FinCEN)",
@@ -606,7 +903,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "financial-crimes-enforcement-network-fincen",
               "source": "https://www.fincen.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "money laundering",
+                "suspicious transactions",
+                "financial crime"
+              ]
             },
             {
               "title": "Alcohol and Tobacco Tax and Trade Bureau (TTB)",
@@ -616,7 +918,14 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "alcohol-and-tobacco-tax-and-trade-bureau-ttb",
               "source": "https://www.usa.gov/agencies/alcohol-and-tobacco-tax-and-trade-bureau",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "alcohol taxes",
+                "tobacco taxes",
+                "beer",
+                "wine",
+                "product labels"
+              ]
             },
             {
               "title": "Community Development Financial Institutions Fund",
@@ -626,7 +935,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "community-development-financial-institutions-fund",
               "source": "https://www.cdfifund.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "community lending",
+                "underserved communities",
+                "financial access"
+              ]
             },
             {
               "title": "Office of Foreign Assets Control (OFAC)",
@@ -636,14 +950,28 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-foreign-assets-control-ofac",
               "source": "https://ofac.treasury.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "economic sanctions",
+                "blocked assets",
+                "restricted transactions"
+              ]
             }
           ],
           "url": "https://home.treasury.gov/",
           "kind": "department",
           "id": "department-of-the-treasury",
           "source": "https://www.usa.gov/agencies/u-s-department-of-the-treasury",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "money",
+            "federal finances",
+            "taxes",
+            "currency",
+            "coins",
+            "national debt",
+            "government payments"
+          ]
         },
         {
           "title": "Department of Defense",
@@ -657,7 +985,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-the-secretary-of-defense",
               "source": "https://uscode.house.gov/us/usc/119-118/t10/s111/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "military leadership",
+                "defense planning",
+                "military advice"
+              ]
             },
             {
               "title": "Department of the Army",
@@ -675,7 +1008,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "kind": "military-component",
                       "id": "army-national-guard",
                       "source": "https://www.nationalguard.mil/About-the-Guard/Army-National-Guard/",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "soldiers",
+                        "land warfare",
+                        "ground forces"
+                      ]
                     },
                     {
                       "title": "Army Reserve",
@@ -685,14 +1023,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "kind": "military-component",
                       "id": "army-reserve",
                       "source": "https://www.usar.army.mil/",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "soldiers",
+                        "land warfare",
+                        "ground forces"
+                      ]
                     }
                   ],
                   "url": "https://www.army.mil/",
                   "kind": "military-service",
                   "id": "u-s-army",
                   "source": "https://www.usa.gov/agencies/u-s-army",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "soldiers",
+                    "land warfare",
+                    "ground forces"
+                  ]
                 },
                 {
                   "title": "U.S. Army Corps of Engineers",
@@ -706,21 +1054,38 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "kind": "program",
                       "id": "civil-works",
                       "source": "https://www.usace.army.mil/Missions/Civil-Works/",
-                      "linkType": "program-page"
+                      "linkType": "program-page",
+                      "topics": [
+                        "dams",
+                        "flood control",
+                        "waterways",
+                        "navigation"
+                      ]
                     }
                   ],
                   "url": "https://www.usace.army.mil/",
                   "kind": "office",
                   "id": "u-s-army-corps-of-engineers",
                   "source": "https://www.usa.gov/agencies/u-s-army-corps-of-engineers",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "dams",
+                    "flood control",
+                    "waterways",
+                    "navigation"
+                  ]
                 }
               ],
               "url": "https://www.army.mil/",
               "kind": "military-department",
               "id": "department-of-the-army",
               "source": "https://www.usa.gov/agency-index",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "soldiers",
+                "land warfare",
+                "ground forces"
+              ]
             },
             {
               "title": "Department of the Navy",
@@ -738,7 +1103,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "kind": "military-command",
                       "id": "u-s-fleet-forces-command",
                       "source": "https://www.usa.gov/agencies/u-s-fleet-forces-command",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "sailors",
+                        "warships",
+                        "naval forces",
+                        "sea defense"
+                      ]
                     },
                     {
                       "title": "U.S. Pacific Fleet",
@@ -748,14 +1119,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "kind": "military-command",
                       "id": "u-s-pacific-fleet",
                       "source": "https://www.cpf.navy.mil/",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "sailors",
+                        "warships",
+                        "naval forces",
+                        "sea defense"
+                      ]
                     }
                   ],
                   "url": "https://www.navy.mil/",
                   "kind": "military-service",
                   "id": "u-s-navy",
                   "source": "https://www.usa.gov/agencies/u-s-navy",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "sailors",
+                    "warships",
+                    "naval forces",
+                    "sea defense"
+                  ]
                 },
                 {
                   "title": "U.S. Marine Corps",
@@ -765,14 +1148,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-service",
                   "id": "u-s-marine-corps",
                   "source": "https://www.usa.gov/agencies/u-s-marine-corps",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Marines",
+                    "amphibious operations",
+                    "expeditionary forces"
+                  ]
                 }
               ],
               "url": "https://www.navy.mil/Leadership/Secretary-of-the-Navy/",
               "kind": "military-department",
               "id": "department-of-the-navy",
               "source": "https://www.navy.mil/Leadership/Secretary-of-the-Navy/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "sailors",
+                "warships",
+                "naval forces",
+                "sea defense"
+              ]
             },
             {
               "title": "Department of the Air Force",
@@ -786,7 +1180,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-service",
                   "id": "u-s-air-force",
                   "source": "https://www.usa.gov/agencies/u-s-air-force",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military aircraft",
+                    "pilots",
+                    "air defense"
+                  ]
                 },
                 {
                   "title": "U.S. Space Force",
@@ -796,14 +1195,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-service",
                   "id": "u-s-space-force",
                   "source": "https://www.spaceforce.mil/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military satellites",
+                    "space defense",
+                    "space operations"
+                  ]
                 }
               ],
               "url": "https://www.af.mil/About-Us/",
               "kind": "military-department",
               "id": "department-of-the-air-force",
               "source": "https://www.af.mil/About-Us/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "military aircraft",
+                "pilots",
+                "air defense"
+              ]
             },
             {
               "title": "Joint Chiefs of Staff",
@@ -813,7 +1222,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "joint-chiefs-of-staff",
               "source": "https://www.usa.gov/agencies/joint-chiefs-of-staff",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "military leadership",
+                "defense planning",
+                "military advice"
+              ]
             },
             {
               "title": "Combatant commands",
@@ -827,7 +1241,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-central-command",
                   "source": "https://www.usa.gov/agencies/u-s-central-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Middle East",
+                    "Central Asia",
+                    "military operations"
+                  ]
                 },
                 {
                   "title": "U.S. European Command",
@@ -837,7 +1256,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-european-command",
                   "source": "https://www.usa.gov/agencies/u-s-european-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Europe",
+                    "military operations"
+                  ]
                 },
                 {
                   "title": "U.S. Indo-Pacific Command",
@@ -847,7 +1270,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-indo-pacific-command",
                   "source": "https://www.usa.gov/agencies/u-s-indo-pacific-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Indo-Pacific",
+                    "Pacific Ocean",
+                    "military operations"
+                  ]
                 },
                 {
                   "title": "U.S. Northern Command",
@@ -857,7 +1285,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-northern-command",
                   "source": "https://www.usa.gov/agencies/u-s-northern-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "North America",
+                    "homeland defense",
+                    "military support"
+                  ]
                 },
                 {
                   "title": "U.S. Southern Command",
@@ -867,7 +1300,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-southern-command",
                   "source": "https://www.usa.gov/agencies/u-s-southern-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Latin America",
+                    "Caribbean",
+                    "military operations"
+                  ]
                 },
                 {
                   "title": "U.S. Africa Command",
@@ -877,7 +1315,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-africa-command",
                   "source": "https://www.usa.gov/agencies/u-s-africa-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "Africa",
+                    "military operations"
+                  ]
                 },
                 {
                   "title": "U.S. Cyber Command",
@@ -887,7 +1329,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-cyber-command",
                   "source": "https://www.usa.gov/agencies/u-s-cyber-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military cyber operations",
+                    "computer networks",
+                    "cyber defense"
+                  ]
                 },
                 {
                   "title": "U.S. Special Operations Command",
@@ -897,7 +1344,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-special-operations-command",
                   "source": "https://www.usa.gov/agencies/u-s-special-operations-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "special operations",
+                    "military missions"
+                  ]
                 },
                 {
                   "title": "U.S. Strategic Command",
@@ -907,7 +1358,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-strategic-command",
                   "source": "https://www.usa.gov/agencies/u-s-strategic-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "nuclear deterrence",
+                    "strategic forces"
+                  ]
                 },
                 {
                   "title": "U.S. Transportation Command",
@@ -917,7 +1372,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-transportation-command",
                   "source": "https://www.usa.gov/agencies/u-s-transportation-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military supplies",
+                    "military transportation",
+                    "logistics"
+                  ]
                 },
                 {
                   "title": "U.S. Space Command",
@@ -927,14 +1387,20 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "military-command",
                   "id": "u-s-space-command",
                   "source": "https://www.usa.gov/agencies/u-s-space-command",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military satellites",
+                    "space defense",
+                    "space operations"
+                  ]
                 }
               ],
               "url": "https://www.defense.gov/About/Combatant-Commands/",
               "kind": "grouping",
               "id": "combatant-commands",
               "source": "https://uscode.house.gov/us/usc/119-118/t10/s111/",
-              "linkType": "directory"
+              "linkType": "directory",
+              "topics": []
             },
             {
               "title": "Defense agencies",
@@ -948,7 +1414,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-advanced-research-projects-agency-darpa",
                   "source": "https://www.usa.gov/agencies/defense-advanced-research-projects-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "defense research",
+                    "experimental technology",
+                    "military innovation"
+                  ]
                 },
                 {
                   "title": "Defense Logistics Agency",
@@ -958,7 +1429,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-logistics-agency",
                   "source": "https://www.usa.gov/agencies/defense-logistics-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military supplies",
+                    "military transportation",
+                    "logistics"
+                  ]
                 },
                 {
                   "title": "Defense Health Agency",
@@ -968,7 +1444,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-health-agency",
                   "source": "https://www.usa.gov/agencies/defense-health-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military health care",
+                    "military hospitals",
+                    "service members"
+                  ]
                 },
                 {
                   "title": "Missile Defense Agency",
@@ -978,7 +1459,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "missile-defense-agency",
                   "source": "https://www.usa.gov/agencies/missile-defense-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "missile defense",
+                    "missile threats",
+                    "interceptors"
+                  ]
                 },
                 {
                   "title": "Defense Intelligence Agency",
@@ -988,7 +1474,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-intelligence-agency",
                   "source": "https://www.usa.gov/agencies/defense-intelligence-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military intelligence",
+                    "foreign military forces"
+                  ]
                 },
                 {
                   "title": "National Security Agency (NSA)",
@@ -998,7 +1488,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-security-agency-nsa",
                   "source": "https://www.usa.gov/agencies/national-security-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "signals intelligence",
+                    "electronic intelligence",
+                    "cryptography"
+                  ]
                 },
                 {
                   "title": "National Geospatial-Intelligence Agency",
@@ -1008,7 +1503,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-geospatial-intelligence-agency",
                   "source": "https://www.usa.gov/agencies/national-geospatial-intelligence-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "satellite imagery",
+                    "maps",
+                    "geospatial intelligence"
+                  ]
                 },
                 {
                   "title": "Defense Information Systems Agency",
@@ -1018,7 +1518,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-information-systems-agency",
                   "source": "https://www.usa.gov/agencies/defense-information-systems-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "military communications",
+                    "defense networks"
+                  ]
                 },
                 {
                   "title": "Defense Counterintelligence and Security Agency",
@@ -1028,7 +1532,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-counterintelligence-and-security-agency",
                   "source": "https://www.usa.gov/agencies/defense-counterintelligence-and-security-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "security clearances",
+                    "background checks",
+                    "industrial security"
+                  ]
                 },
                 {
                   "title": "Defense Threat Reduction Agency",
@@ -1038,21 +1547,37 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "defense-threat-reduction-agency",
                   "source": "https://www.usa.gov/agencies/defense-threat-reduction-agency",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "weapons of mass destruction",
+                    "chemical threats",
+                    "biological threats",
+                    "nuclear threats"
+                  ]
                 }
               ],
               "url": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/",
               "kind": "grouping",
               "id": "defense-agencies",
               "source": "https://files.gao.gov/reports/GAO-26-107781/index.html",
-              "linkType": "directory"
+              "linkType": "directory",
+              "topics": []
             }
           ],
           "url": "https://www.defense.gov/",
           "kind": "department",
           "id": "department-of-defense",
           "source": "https://www.usa.gov/agencies/u-s-department-of-defense",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "military",
+            "armed forces",
+            "national defense",
+            "war",
+            "soldiers",
+            "sailors",
+            "pilots"
+          ]
         },
         {
           "title": "Department of Justice",
@@ -1070,7 +1595,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "field-offices",
                   "id": "field-offices",
                   "source": "https://www.fbi.gov/contact-us/field-offices",
-                  "linkType": "directory"
+                  "linkType": "directory",
+                  "topics": [
+                    "federal investigations",
+                    "federal crimes",
+                    "terrorism",
+                    "organized crime"
+                  ]
                 },
                 {
                   "title": "Laboratory Division",
@@ -1080,7 +1611,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "division",
                   "id": "laboratory-division",
                   "source": "https://www.fbi.gov/services/laboratory",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "forensics",
+                    "crime evidence",
+                    "crime laboratory"
+                  ]
                 },
                 {
                   "title": "Criminal Justice Information Services Division",
@@ -1093,14 +1629,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "Criminal Justice Information Services"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "fingerprints",
+                    "criminal records",
+                    "police databases"
+                  ]
                 }
               ],
               "url": "https://www.fbi.gov",
               "kind": "office",
               "id": "federal-bureau-of-investigation-fbi",
               "source": "https://www.usa.gov/agencies/federal-bureau-of-investigation",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "federal investigations",
+                "federal crimes",
+                "terrorism",
+                "organized crime"
+              ]
             },
             {
               "title": "Drug Enforcement Administration (DEA)",
@@ -1110,7 +1657,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "drug-enforcement-administration-dea",
               "source": "https://www.usa.gov/agencies/drug-enforcement-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "illegal drugs",
+                "drug trafficking",
+                "controlled substances"
+              ]
             },
             {
               "title": "Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF)",
@@ -1120,7 +1672,14 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-alcohol-tobacco-firearms-and-explosives-atf",
               "source": "https://www.usa.gov/agencies/bureau-of-alcohol-tobacco-firearms-and-explosives",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "guns",
+                "firearms",
+                "explosives",
+                "arson",
+                "illegal weapons"
+              ]
             },
             {
               "title": "U.S. Marshals Service",
@@ -1130,7 +1689,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "u-s-marshals-service",
               "source": "https://www.usa.gov/agencies/u-s-marshals-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "fugitives",
+                "witness protection",
+                "court security",
+                "prisoner transport"
+              ]
             },
             {
               "title": "Federal Bureau of Prisons",
@@ -1140,7 +1705,16 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-bureau-of-prisons",
               "source": "https://www.usa.gov/agencies/federal-bureau-of-prisons",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "prison",
+                "prisons",
+                "inmates",
+                "incarceration",
+                "corrections",
+                "federal prisoners",
+                "rehabilitation"
+              ]
             },
             {
               "title": "U.S. Attorneys",
@@ -1150,7 +1724,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "u-s-attorneys",
               "source": "https://www.justice.gov/usao",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "prosecutors",
+                "prosecution",
+                "federal criminal cases"
+              ]
             },
             {
               "title": "Office of Justice Programs",
@@ -1164,7 +1743,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "bureau-of-justice-assistance",
                   "source": "https://bjs.ojp.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "criminal justice funding",
+                    "police grants",
+                    "public safety"
+                  ]
                 },
                 {
                   "title": "Bureau of Justice Statistics",
@@ -1174,7 +1758,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "bureau-of-justice-statistics",
                   "source": "https://www.usa.gov/agencies/bureau-of-justice-statistics",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "crime data",
+                    "prison statistics",
+                    "criminal justice statistics"
+                  ]
                 },
                 {
                   "title": "National Institute of Justice",
@@ -1184,7 +1773,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-institute-of-justice",
                   "source": "https://www.usa.gov/agencies/national-institute-of-justice",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "crime research",
+                    "criminal justice research"
+                  ]
                 },
                 {
                   "title": "Office of Juvenile Justice and Delinquency Prevention",
@@ -1194,7 +1787,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-juvenile-justice-and-delinquency-prevention",
                   "source": "https://www.usa.gov/agencies/office-of-juvenile-justice-and-delinquency-prevention",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "youth crime",
+                    "juvenile justice",
+                    "young offenders"
+                  ]
                 },
                 {
                   "title": "Office for Victims of Crime",
@@ -1204,14 +1802,23 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-for-victims-of-crime",
                   "source": "https://bjs.ojp.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "crime victims",
+                    "victim assistance"
+                  ]
                 }
               ],
               "url": "https://www.ojp.gov/",
               "kind": "office",
               "id": "office-of-justice-programs",
               "source": "https://www.usa.gov/agencies/office-of-justice-programs",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "criminal justice funding",
+                "police grants",
+                "public safety"
+              ]
             },
             {
               "title": "Antitrust Division",
@@ -1221,7 +1828,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "antitrust-division",
               "source": "https://www.usa.gov/agencies/antitrust-division",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "monopolies",
+                "business competition",
+                "mergers",
+                "antitrust"
+              ]
             },
             {
               "title": "Civil Rights Division",
@@ -1231,7 +1844,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "civil-rights-division",
               "source": "https://www.justice.gov/crt",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "discrimination",
+                "voting rights",
+                "civil rights enforcement"
+              ]
             },
             {
               "title": "Criminal Division",
@@ -1241,7 +1859,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "criminal-division",
               "source": "https://www.justice.gov/criminal",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "prosecutors",
+                "prosecution",
+                "federal criminal cases"
+              ]
             },
             {
               "title": "Civil Division",
@@ -1258,14 +1881,22 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "Tax Division"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "tax lawsuits",
+                    "civil tax cases"
+                  ]
                 }
               ],
               "url": "https://www.justice.gov/civil",
               "kind": "office",
               "id": "civil-division",
               "source": "https://www.justice.gov/civil",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "government lawsuits",
+                "civil litigation"
+              ]
             },
             {
               "title": "National Security Division",
@@ -1275,7 +1906,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "national-security-division",
               "source": "https://www.justice.gov/nsd",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "terrorism prosecutions",
+                "espionage cases",
+                "national security law"
+              ]
             },
             {
               "title": "Energy and Natural Resources Division",
@@ -1288,7 +1924,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Environment and Natural Resources Division"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "environmental lawsuits",
+                "public lands litigation",
+                "energy litigation"
+              ]
             },
             {
               "title": "Executive Office for Immigration Review",
@@ -1302,7 +1943,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "immigration-courts",
                   "source": "https://www.justice.gov/eoir/immigration-court-administrative-control-list",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "immigration courts",
+                    "immigration hearings",
+                    "deportation appeals"
+                  ]
                 },
                 {
                   "title": "Board of Immigration Appeals",
@@ -1312,14 +1958,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "board-of-immigration-appeals",
                   "source": "https://www.justice.gov/eoir/board-of-immigration-appeals",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "immigration courts",
+                    "immigration hearings",
+                    "deportation appeals"
+                  ]
                 }
               ],
               "url": "https://www.justice.gov/eoir",
               "kind": "office",
               "id": "executive-office-for-immigration-review",
               "source": "https://www.usa.gov/agencies/executive-office-for-immigration-review",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "immigration courts",
+                "immigration hearings",
+                "deportation appeals"
+              ]
             },
             {
               "title": "Office of the Solicitor General",
@@ -1329,14 +1985,28 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-the-solicitor-general",
               "source": "https://www.justice.gov/osg",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "Supreme Court",
+                "federal appeals",
+                "government lawyers"
+              ]
             }
           ],
           "url": "https://www.justice.gov/",
           "kind": "department",
           "id": "department-of-justice",
           "source": "https://www.usa.gov/agencies/u-s-department-of-justice",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "federal law enforcement",
+            "crime",
+            "courts",
+            "prosecution",
+            "prison",
+            "prisons",
+            "civil rights"
+          ]
         },
         {
           "title": "Department of the Interior",
@@ -1354,7 +2024,17 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-parks",
                   "source": "https://www.nps.gov/index.htm",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "national parks",
+                    "monuments",
+                    "historic places",
+                    "memorials",
+                    "park visitors",
+                    "camping",
+                    "hiking",
+                    "outdoor recreation"
+                  ]
                 },
                 {
                   "title": "National monuments and historic sites",
@@ -1364,7 +2044,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-monuments-and-historic-sites",
                   "source": "https://www.nps.gov/aboutus/national-park-system.htm",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "national parks",
+                    "monuments",
+                    "historic places",
+                    "memorials",
+                    "park visitors"
+                  ]
                 },
                 {
                   "title": "National Mall and Memorial Parks",
@@ -1374,14 +2061,31 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "park-unit",
                   "id": "national-mall-and-memorial-parks",
                   "source": "https://www.nps.gov/aboutus/national-park-system.htm",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "national parks",
+                    "monuments",
+                    "historic places",
+                    "memorials",
+                    "park visitors"
+                  ]
                 }
               ],
               "url": "https://www.nps.gov/index.htm",
               "kind": "office",
               "id": "national-park-service",
               "source": "https://www.usa.gov/agencies/national-park-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "national parks",
+                "monuments",
+                "historic places",
+                "memorials",
+                "park visitors",
+                "camping",
+                "hiking",
+                "outdoor recreation"
+              ]
             },
             {
               "title": "U.S. Geological Survey (USGS)",
@@ -1395,7 +2099,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "earthquake-hazards-program",
                   "source": "https://www.usgs.gov/programs/earthquake-hazards",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "earthquakes",
+                    "seismic hazards"
+                  ]
                 },
                 {
                   "title": "Water Resources",
@@ -1405,7 +2113,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "water-resources",
                   "source": "https://www.usgs.gov/mission-areas/water-resources",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "groundwater",
+                    "rivers",
+                    "streams",
+                    "water science"
+                  ]
                 },
                 {
                   "title": "Volcano Hazards Program",
@@ -1415,14 +2129,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "volcano-hazards-program",
                   "source": "https://www.usgs.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "volcanoes",
+                    "eruptions",
+                    "volcanic hazards"
+                  ]
                 }
               ],
               "url": "https://www.usgs.gov/",
               "kind": "office",
               "id": "u-s-geological-survey-usgs",
               "source": "https://www.usa.gov/agencies/u-s-geological-survey",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "earthquakes",
+                "rocks",
+                "geology",
+                "volcanoes",
+                "water data"
+              ]
             },
             {
               "title": "Bureau of Land Management",
@@ -1432,7 +2158,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-land-management",
               "source": "https://www.usa.gov/agencies/bureau-of-land-management",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "public lands",
+                "grazing",
+                "federal land use"
+              ]
             },
             {
               "title": "U.S. Fish and Wildlife Service",
@@ -1446,7 +2177,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-wildlife-refuge-system",
                   "source": "https://www.fws.gov/places-go/national-wildlife-refuge-system",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "wildlife",
+                    "endangered species",
+                    "habitats",
+                    "animal conservation"
+                  ]
                 },
                 {
                   "title": "Ecological Services",
@@ -1456,14 +2193,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "ecological-services",
                   "source": "https://www.fws.gov/program/ecological-services",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "wildlife",
+                    "endangered species",
+                    "habitats",
+                    "animal conservation"
+                  ]
                 }
               ],
               "url": "https://www.fws.gov/",
               "kind": "office",
               "id": "u-s-fish-and-wildlife-service",
               "source": "https://www.usa.gov/agencies/fish-and-wildlife-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "wildlife",
+                "endangered species",
+                "habitats",
+                "animal conservation"
+              ]
             },
             {
               "title": "Bureau of Reclamation",
@@ -1473,7 +2222,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-reclamation",
               "source": "https://www.usa.gov/agencies/bureau-of-reclamation",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "dams",
+                "reservoirs",
+                "irrigation",
+                "western water supplies"
+              ]
             },
             {
               "title": "Bureau of Indian Affairs",
@@ -1483,7 +2238,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-indian-affairs",
               "source": "https://www.usa.gov/agencies/bureau-of-indian-affairs",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "tribal governments",
+                "Native Americans",
+                "tribal services"
+              ]
             },
             {
               "title": "Bureau of Indian Education",
@@ -1493,7 +2253,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-indian-education",
               "source": "https://www.bia.gov/bie",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "tribal schools",
+                "Native American education"
+              ]
             },
             {
               "title": "Bureau of Ocean Energy Management",
@@ -1503,7 +2267,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-ocean-energy-management",
               "source": "https://www.usa.gov/agencies/bureau-of-ocean-energy-management",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "offshore energy",
+                "offshore leasing",
+                "ocean resources"
+              ]
             },
             {
               "title": "Bureau of Safety and Environmental Enforcement",
@@ -1513,7 +2282,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-safety-and-environmental-enforcement",
               "source": "https://www.usa.gov/agencies/bureau-of-safety-and-environmental-enforcement",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "offshore drilling safety",
+                "offshore inspections"
+              ]
             },
             {
               "title": "Office of Surface Mining Reclamation and Enforcement",
@@ -1523,14 +2296,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-surface-mining-reclamation-and-enforcement",
               "source": "https://www.usa.gov/agencies/office-of-surface-mining-reclamation-and-enforcement",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "coal mining",
+                "mine cleanup",
+                "land reclamation"
+              ]
             }
           ],
           "url": "https://www.doi.gov/",
           "kind": "department",
           "id": "department-of-the-interior",
           "source": "https://www.usa.gov/agencies/u-s-department-of-the-interior",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "public lands",
+            "national parks",
+            "wildlife",
+            "tribal affairs",
+            "natural resources"
+          ]
         },
         {
           "title": "Department of Agriculture",
@@ -1544,7 +2329,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "farm-service-agency",
               "source": "https://www.usa.gov/agencies/farm-service-agency",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farmers",
+                "farm support",
+                "agricultural assistance"
+              ]
             },
             {
               "title": "Natural Resources Conservation Service",
@@ -1554,7 +2344,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "natural-resources-conservation-service",
               "source": "https://www.usa.gov/agencies/natural-resources-conservation-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "soil",
+                "farmland conservation",
+                "agricultural water"
+              ]
             },
             {
               "title": "Risk Management Agency",
@@ -1564,7 +2359,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "risk-management-agency",
               "source": "https://www.usa.gov/agencies/risk-management-agency",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farmers",
+                "farm support",
+                "agricultural assistance"
+              ]
             },
             {
               "title": "Food and Nutrition Administration (FNA)",
@@ -1578,7 +2378,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "snap",
                   "source": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "food assistance",
+                    "hunger",
+                    "nutrition benefits",
+                    "food stamps"
+                  ]
                 },
                 {
                   "title": "National School Lunch Program",
@@ -1588,7 +2394,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-school-lunch-program",
                   "source": "https://www.fna.usda.gov/nslp",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "school meals",
+                    "student meals",
+                    "children nutrition"
+                  ]
                 },
                 {
                   "title": "School Breakfast Program",
@@ -1598,7 +2409,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "school-breakfast-program",
                   "source": "https://www.fna.usda.gov/sbp/school-breakfast-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "school meals",
+                    "student meals",
+                    "children nutrition"
+                  ]
                 },
                 {
                   "title": "WIC",
@@ -1608,7 +2424,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "wic",
                   "source": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "food assistance",
+                    "hunger",
+                    "nutrition benefits",
+                    "food stamps"
+                  ]
                 },
                 {
                   "title": "Summer Food Service Program",
@@ -1618,7 +2440,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "summer-food-service-program",
                   "source": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "school meals",
+                    "student meals",
+                    "children nutrition"
+                  ]
                 }
               ],
               "url": "https://www.fna.usda.gov/",
@@ -1629,7 +2456,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                 "Food and Nutrition Service",
                 "FNS"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "food assistance",
+                "hunger",
+                "nutrition benefits",
+                "food stamps"
+              ]
             },
             {
               "title": "Food Safety and Inspection Service",
@@ -1639,7 +2472,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "food-safety-and-inspection-service",
               "source": "https://www.usa.gov/agencies/food-safety-and-inspection-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "meat safety",
+                "poultry safety",
+                "egg products",
+                "food inspection"
+              ]
             },
             {
               "title": "U.S. Forest Service",
@@ -1653,7 +2492,18 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-forest-system",
                   "source": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "forests",
+                    "trees",
+                    "forestry",
+                    "national forests",
+                    "camping",
+                    "hiking",
+                    "outdoor recreation",
+                    "wildfires",
+                    "forest fires"
+                  ]
                 },
                 {
                   "title": "Research and Development",
@@ -1663,7 +2513,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "research-and-development",
                   "source": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "forests",
+                    "trees",
+                    "forestry",
+                    "national forests"
+                  ]
                 },
                 {
                   "title": "State, Private, and Tribal Forestry",
@@ -1673,14 +2529,31 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "state-private-and-tribal-forestry",
                   "source": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "forests",
+                    "trees",
+                    "forestry",
+                    "national forests"
+                  ]
                 }
               ],
               "url": "https://www.fs.usda.gov/",
               "kind": "office",
               "id": "u-s-forest-service",
               "source": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "forests",
+                "trees",
+                "forestry",
+                "national forests",
+                "camping",
+                "hiking",
+                "outdoor recreation",
+                "wildfires",
+                "forest fires"
+              ]
             },
             {
               "title": "Agricultural Marketing Service",
@@ -1690,7 +2563,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "agricultural-marketing-service",
               "source": "https://www.usa.gov/agencies/agricultural-marketing-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farm markets",
+                "agricultural standards",
+                "food grading"
+              ]
             },
             {
               "title": "Animal and Plant Health Inspection Service",
@@ -1704,7 +2582,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "animal-care",
                   "source": "https://www.aphis.usda.gov/animal-welfare",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "animal welfare",
+                    "animal treatment",
+                    "animal inspections"
+                  ]
                 },
                 {
                   "title": "Veterinary Services",
@@ -1714,7 +2597,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "veterinary-services",
                   "source": "https://www.aphis.usda.gov/animal-health",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "livestock diseases",
+                    "farm animal health"
+                  ]
                 },
                 {
                   "title": "Plant Protection and Quarantine",
@@ -1724,14 +2611,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "plant-protection-and-quarantine",
                   "source": "https://www.aphis.usda.gov/plant-health",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "crop pests",
+                    "invasive plant pests",
+                    "agricultural quarantine"
+                  ]
                 }
               ],
               "url": "https://www.aphis.usda.gov/aphis/home/",
               "kind": "office",
               "id": "animal-and-plant-health-inspection-service",
               "source": "https://www.usa.gov/agencies/animal-and-plant-health-inspection-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "animal health",
+                "plant health",
+                "agricultural pests"
+              ]
             },
             {
               "title": "Agricultural Research Service",
@@ -1741,7 +2638,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "agricultural-research-service",
               "source": "https://www.usa.gov/agencies/agricultural-research-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farming research",
+                "agricultural science",
+                "food research"
+              ]
             },
             {
               "title": "Economic Research Service",
@@ -1751,7 +2653,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "economic-research-service",
               "source": "https://www.usa.gov/agencies/economic-research-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farm economy",
+                "agriculture data",
+                "crop statistics"
+              ]
             },
             {
               "title": "National Agricultural Statistics Service",
@@ -1761,7 +2668,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "national-agricultural-statistics-service",
               "source": "https://www.usa.gov/agencies/national-agricultural-statistics-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farm economy",
+                "agriculture data",
+                "crop statistics"
+              ]
             },
             {
               "title": "National Institute of Food and Agriculture",
@@ -1771,7 +2683,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "national-institute-of-food-and-agriculture",
               "source": "https://www.usa.gov/agencies/national-institute-of-food-and-agriculture",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "farming research",
+                "agricultural science",
+                "food research"
+              ]
             },
             {
               "title": "Foreign Agricultural Service",
@@ -1781,7 +2698,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "foreign-agricultural-service",
               "source": "https://www.usa.gov/agencies/foreign-agricultural-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "agricultural exports",
+                "farm trade",
+                "overseas markets"
+              ]
             },
             {
               "title": "Rural Development",
@@ -1795,7 +2717,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "rural-housing-service",
                   "source": "https://www.usa.gov/agencies/rural-housing-service",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "rural housing",
+                    "rural home loans",
+                    "rural rental assistance"
+                  ]
                 },
                 {
                   "title": "Rural Utilities Service",
@@ -1805,7 +2732,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "rural-utilities-service",
                   "source": "https://www.usa.gov/agencies/rural-utilities-service",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "rural electricity",
+                    "rural water",
+                    "rural broadband"
+                  ]
                 },
                 {
                   "title": "Rural Business-Cooperative Service",
@@ -1815,21 +2747,40 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "rural-business-cooperative-service",
                   "source": "https://www.usa.gov/agencies/rural-business-and-cooperative-service",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "rural business",
+                    "rural cooperatives",
+                    "rural jobs"
+                  ]
                 }
               ],
               "url": "https://www.rd.usda.gov/",
               "kind": "office",
               "id": "rural-development",
               "source": "https://www.usa.gov/agencies/rural-development",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "rural communities",
+                "rural housing",
+                "rural infrastructure",
+                "rural business"
+              ]
             }
           ],
           "url": "https://www.usda.gov/",
           "kind": "department",
           "id": "department-of-agriculture",
           "source": "https://www.usa.gov/agencies/u-s-department-of-agriculture",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "farming",
+            "farms",
+            "food",
+            "nutrition",
+            "forests",
+            "rural communities"
+          ]
         },
         {
           "title": "Department of Commerce",
@@ -1847,7 +2798,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "decennial-census",
                   "source": "https://www.census.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "population",
+                    "counting people",
+                    "demographics",
+                    "communities"
+                  ]
                 },
                 {
                   "title": "American Community Survey",
@@ -1857,7 +2814,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "american-community-survey",
                   "source": "https://www.census.gov/programs-surveys/acs.html",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "population",
+                    "counting people",
+                    "demographics",
+                    "communities"
+                  ]
                 },
                 {
                   "title": "Economic Census",
@@ -1867,14 +2830,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "economic-census",
                   "source": "https://www.census.gov/programs-surveys/acs.html",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "business statistics",
+                    "economic data"
+                  ]
                 }
               ],
               "url": "https://www.census.gov/",
               "kind": "office",
               "id": "u-s-census-bureau",
               "source": "https://www.usa.gov/agencies/u-s-census-bureau",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "population",
+                "counting people",
+                "demographics",
+                "communities"
+              ]
             },
             {
               "title": "National Oceanic and Atmospheric Administration (NOAA)",
@@ -1888,7 +2861,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-weather-service",
                   "source": "https://www.usa.gov/agencies/national-weather-service",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "weather forecasts",
+                    "hurricanes",
+                    "tornadoes",
+                    "storms",
+                    "weather warnings"
+                  ]
                 },
                 {
                   "title": "National Ocean Service",
@@ -1898,7 +2878,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-ocean-service",
                   "source": "https://www.usa.gov/agencies/national-ocean-service",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "coasts",
+                    "coastal waters",
+                    "ocean navigation"
+                  ]
                 },
                 {
                   "title": "NOAA Fisheries",
@@ -1908,7 +2893,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "noaa-fisheries",
                   "source": "https://www.usa.gov/agencies/noaa-fisheries",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "fishing",
+                    "fisheries",
+                    "marine life",
+                    "marine mammals"
+                  ]
                 },
                 {
                   "title": "National Environmental Satellite, Data, and Information Service",
@@ -1921,7 +2912,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "aliases": [
                     "Satellite and Information Service"
                   ],
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "weather satellites",
+                    "satellite data",
+                    "environmental observations"
+                  ]
                 },
                 {
                   "title": "Oceanic and Atmospheric Research",
@@ -1931,14 +2927,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "oceanic-and-atmospheric-research",
                   "source": "https://research.noaa.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "climate research",
+                    "ocean research",
+                    "atmosphere"
+                  ]
                 }
               ],
               "url": "https://www.noaa.gov/",
               "kind": "office",
               "id": "national-oceanic-and-atmospheric-administration-noaa",
               "source": "https://www.usa.gov/agencies/national-oceanic-and-atmospheric-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "oceans",
+                "weather",
+                "climate",
+                "fisheries",
+                "coastal science"
+              ]
             },
             {
               "title": "National Institute of Standards and Technology (NIST)",
@@ -1948,7 +2956,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "national-institute-of-standards-and-technology-nist",
               "source": "https://www.usa.gov/agencies/national-institute-of-standards-and-technology",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "measurement",
+                "technical standards",
+                "technology",
+                "cybersecurity standards"
+              ]
             },
             {
               "title": "U.S. Patent and Trademark Office",
@@ -1958,7 +2972,14 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "u-s-patent-and-trademark-office",
               "source": "https://www.usa.gov/agencies/u-s-patent-and-trademark-office",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "inventions",
+                "patents",
+                "trademarks",
+                "logos",
+                "brand names"
+              ]
             },
             {
               "title": "Bureau of Economic Analysis",
@@ -1968,7 +2989,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-economic-analysis",
               "source": "https://www.usa.gov/agencies/bureau-of-economic-analysis",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "GDP",
+                "economic growth",
+                "national income",
+                "economy data"
+              ]
             },
             {
               "title": "Bureau of Industry and Security",
@@ -1978,7 +3005,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-industry-and-security",
               "source": "https://www.usa.gov/agencies/bureau-of-industry-and-security",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "export controls",
+                "sensitive technology",
+                "trade security"
+              ]
             },
             {
               "title": "International Trade Administration",
@@ -1988,7 +3020,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "international-trade-administration",
               "source": "https://www.usa.gov/agencies/international-trade-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "exports",
+                "international business",
+                "trade assistance"
+              ]
             },
             {
               "title": "Economic Development Administration",
@@ -1998,7 +3035,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "economic-development-administration",
               "source": "https://www.usa.gov/agencies/economic-development-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "regional jobs",
+                "economic development",
+                "community investment"
+              ]
             },
             {
               "title": "National Telecommunications and Information Administration",
@@ -2008,14 +3050,28 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "national-telecommunications-and-information-administration",
               "source": "https://www.usa.gov/agencies/national-telecommunications-and-information-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "broadband",
+                "internet access",
+                "federal radio spectrum"
+              ]
             }
           ],
           "url": "https://www.commerce.gov/",
           "kind": "department",
           "id": "department-of-commerce",
           "source": "https://www.usa.gov/agencies/u-s-department-of-commerce",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "business",
+            "trade",
+            "economy",
+            "population",
+            "weather",
+            "inventions",
+            "economic growth"
+          ]
         },
         {
           "title": "Department of Labor",
@@ -2029,7 +3085,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "occupational-safety-and-health-administration-osha",
               "source": "https://www.usa.gov/agencies/occupational-safety-and-health-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "workplace safety",
+                "unsafe jobs",
+                "job hazards",
+                "worker injuries"
+              ]
             },
             {
               "title": "Wage and Hour Division",
@@ -2043,7 +3105,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "minimum-wage-and-overtime",
                   "source": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "paychecks",
+                    "minimum wage",
+                    "overtime pay",
+                    "unpaid wages"
+                  ]
                 },
                 {
                   "title": "Child labor protections",
@@ -2053,7 +3121,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "child-labor-protections",
                   "source": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "child labor",
+                    "teen jobs",
+                    "young workers"
+                  ]
                 },
                 {
                   "title": "Family and Medical Leave Act",
@@ -2063,14 +3136,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "family-and-medical-leave-act",
                   "source": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "family leave",
+                    "medical leave",
+                    "time off work"
+                  ]
                 }
               ],
               "url": "https://www.dol.gov/agencies/whd",
               "kind": "office",
               "id": "wage-and-hour-division",
               "source": "https://www.usa.gov/agencies/wage-and-hour-division",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "paychecks",
+                "minimum wage",
+                "overtime pay",
+                "unpaid wages"
+              ]
             },
             {
               "title": "Bureau of Labor Statistics",
@@ -2084,7 +3168,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "consumer-price-index",
                   "source": "https://www.bls.gov/cpi/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "inflation",
+                    "prices",
+                    "cost of living",
+                    "labor statistics"
+                  ]
                 },
                 {
                   "title": "Employment and unemployment statistics",
@@ -2094,14 +3184,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "employment-and-unemployment-statistics",
                   "source": "https://www.bls.gov/cps/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "jobs data",
+                    "unemployment rate",
+                    "employment numbers"
+                  ]
                 }
               ],
               "url": "https://stats.bls.gov/",
               "kind": "office",
               "id": "bureau-of-labor-statistics",
               "source": "https://www.usa.gov/agencies/bureau-of-labor-statistics",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "inflation",
+                "prices",
+                "cost of living",
+                "labor statistics"
+              ]
             },
             {
               "title": "Employment and Training Administration",
@@ -2115,7 +3216,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "job-corps",
                   "source": "https://www.usa.gov/agencies/job-corps",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "job training",
+                    "apprenticeships",
+                    "learning job skills"
+                  ]
                 },
                 {
                   "title": "Unemployment insurance",
@@ -2125,7 +3231,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "unemployment-insurance",
                   "source": "https://www.dol.gov/agencies/eta/unemployment-insurance",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "unemployment benefits",
+                    "losing a job"
+                  ]
                 },
                 {
                   "title": "Registered Apprenticeship",
@@ -2135,14 +3245,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "registered-apprenticeship",
                   "source": "https://www.apprenticeship.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "job training",
+                    "apprenticeships",
+                    "learning job skills"
+                  ]
                 }
               ],
               "url": "https://www.doleta.gov/",
               "kind": "office",
               "id": "employment-and-training-administration",
               "source": "https://www.usa.gov/agencies/employment-and-training-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "job training",
+                "apprenticeships",
+                "learning job skills"
+              ]
             },
             {
               "title": "Employee Benefits Security Administration",
@@ -2152,7 +3272,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "employee-benefits-security-administration",
               "source": "https://www.usa.gov/agencies/employee-benefits-security-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "retirement plans",
+                "employee benefits",
+                "workplace health plans"
+              ]
             },
             {
               "title": "Mine Safety and Health Administration",
@@ -2162,7 +3287,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "mine-safety-and-health-administration",
               "source": "https://www.usa.gov/agencies/mine-safety-and-health-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "miner safety",
+                "mining hazards"
+              ]
             },
             {
               "title": "Office of Workers’ Compensation Programs",
@@ -2172,7 +3301,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-workers-compensation-programs",
               "source": "https://www.dol.gov/index.php/general/dol-agencies",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "injured federal workers",
+                "work injury benefits"
+              ]
             },
             {
               "title": "Office of Labor-Management Standards",
@@ -2182,7 +3315,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-labor-management-standards",
               "source": "https://www.dol.gov/index.php/general/dol-agencies",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "labor unions",
+                "union finances",
+                "union elections"
+              ]
             },
             {
               "title": "Veterans’ Employment and Training Service",
@@ -2192,14 +3330,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "veterans-employment-and-training-service",
               "source": "https://www.usa.gov/agencies/veterans-employment-and-training-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "veteran jobs",
+                "military employment rights"
+              ]
             }
           ],
           "url": "https://www.dol.gov/",
           "kind": "department",
           "id": "department-of-labor",
           "source": "https://www.usa.gov/agencies/u-s-department-of-labor",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "jobs",
+            "workers",
+            "pay",
+            "wages",
+            "workplace safety",
+            "labor rights"
+          ]
         },
         {
           "title": "Department of Health and Human Services",
@@ -2217,7 +3367,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "center-for-drug-evaluation-and-research",
                   "source": "https://www.fda.gov/about-fda/fda-organization/center-drug-evaluation-and-research-cder",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "prescription medicines",
+                    "drug approval",
+                    "medications"
+                  ]
                 },
                 {
                   "title": "Center for Biologics Evaluation and Research",
@@ -2227,7 +3382,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "center-for-biologics-evaluation-and-research",
                   "source": "https://www.fda.gov/about-fda/fda-organization/center-biologics-evaluation-and-research-cber",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "vaccines",
+                    "blood products",
+                    "biological medicines"
+                  ]
                 },
                 {
                   "title": "Center for Devices and Radiological Health",
@@ -2237,7 +3397,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "center-for-devices-and-radiological-health",
                   "source": "https://www.fda.gov/about-fda/fda-organization/center-devices-and-radiological-health",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "medical devices",
+                    "medical equipment",
+                    "radiation safety"
+                  ]
                 },
                 {
                   "title": "Center for Tobacco Products",
@@ -2247,14 +3412,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "center-for-tobacco-products",
                   "source": "https://www.fda.gov/about-fda/fda-organization/center-biologics-evaluation-and-research-cber",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "cigarettes",
+                    "vaping",
+                    "tobacco products"
+                  ]
                 }
               ],
               "url": "https://www.fda.gov/",
               "kind": "office",
               "id": "food-and-drug-administration-fda",
               "source": "https://www.usa.gov/agencies/food-and-drug-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "medicine safety",
+                "drug approval",
+                "medical devices",
+                "food safety",
+                "tobacco"
+              ]
             },
             {
               "title": "Centers for Disease Control and Prevention (CDC)",
@@ -2268,7 +3445,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "center",
                   "id": "disease-surveillance",
                   "source": "https://www.cdc.gov/about/organization/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "health statistics",
+                    "birth records",
+                    "death records",
+                    "health surveys"
+                  ]
                 },
                 {
                   "title": "National Center for Emerging and Zoonotic Infectious Diseases",
@@ -2282,7 +3465,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-global-migration-health",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "travel health",
+                        "migration health",
+                        "infectious diseases"
+                      ]
                     },
                     {
                       "title": "Division of Foodborne, Waterborne, and Environmental Diseases",
@@ -2292,7 +3480,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-foodborne-waterborne-and-environmental-diseases",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "food poisoning",
+                        "unsafe water",
+                        "foodborne illness"
+                      ]
                     },
                     {
                       "title": "Division of High-Consequence Pathogens and Pathology",
@@ -2302,7 +3495,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-high-consequence-pathogens-and-pathology",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "Ebola",
+                        "anthrax",
+                        "dangerous infections"
+                      ]
                     },
                     {
                       "title": "Division of Healthcare Quality Promotion",
@@ -2312,7 +3510,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-healthcare-quality-promotion",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "hospital infections",
+                        "patient safety",
+                        "health care infections"
+                      ]
                     },
                     {
                       "title": "Division of Infectious Disease Readiness and Innovation",
@@ -2322,7 +3525,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-infectious-disease-readiness-and-innovation",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "public health laboratories",
+                        "outbreak readiness"
+                      ]
                     },
                     {
                       "title": "Division of Parasitic Diseases and Malaria",
@@ -2332,7 +3539,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-parasitic-diseases-and-malaria",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "parasites",
+                        "malaria",
+                        "parasitic infections"
+                      ]
                     },
                     {
                       "title": "Division of Vector-borne Diseases",
@@ -2342,7 +3554,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "division",
                       "id": "division-of-vector-borne-diseases",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "mosquito",
+                        "mosquitoes",
+                        "ticks",
+                        "bug bites",
+                        "mosquito borne diseases"
+                      ]
                     },
                     {
                       "title": "One Health Office",
@@ -2352,21 +3571,36 @@ window.EXECUTIVE_BRANCH_DATA = {
                       "source": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
                       "kind": "office",
                       "id": "one-health-office",
-                      "linkType": "website"
+                      "linkType": "website",
+                      "topics": [
+                        "human animal environment connections",
+                        "One Health"
+                      ]
                     }
                   ],
                   "url": "https://www.cdc.gov/ncezid/",
                   "kind": "center",
                   "id": "public-health-laboratories",
                   "source": "https://www.cdc.gov/about/organization/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "emerging infections",
+                    "animal diseases",
+                    "outbreaks"
+                  ]
                 }
               ],
               "url": "https://www.cdc.gov/",
               "kind": "office",
               "id": "centers-for-disease-control-and-prevention-cdc",
               "source": "https://www.usa.gov/agencies/centers-for-disease-control-and-prevention",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "disease outbreaks",
+                "infections",
+                "public health",
+                "disease prevention"
+              ]
             },
             {
               "title": "Centers for Medicare & Medicaid Services (CMS)",
@@ -2380,7 +3614,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "medicare",
                   "source": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "health insurance",
+                    "older adults",
+                    "Medicare coverage"
+                  ]
                 },
                 {
                   "title": "Medicaid",
@@ -2390,7 +3629,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "medicaid",
                   "source": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "health insurance",
+                    "low income health coverage",
+                    "Medicaid coverage"
+                  ]
                 },
                 {
                   "title": "Children’s Health Insurance Program (CHIP)",
@@ -2400,14 +3644,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "children-s-health-insurance-program-chip",
                   "source": "https://www.medicaid.gov/chip",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "children health insurance",
+                    "kids health coverage",
+                    "CHIP"
+                  ]
                 }
               ],
               "url": "https://www.cms.gov/",
               "kind": "office",
               "id": "centers-for-medicare-medicaid-services-cms",
               "source": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "health insurance",
+                "medical coverage",
+                "health care benefits"
+              ]
             },
             {
               "title": "National Institutes of Health (NIH)",
@@ -2421,7 +3675,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-cancer-institute",
                   "source": "https://www.usa.gov/agencies/national-cancer-institute",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "cancer",
+                    "tumors",
+                    "cancer research"
+                  ]
                 },
                 {
                   "title": "National Heart, Lung, and Blood Institute",
@@ -2431,7 +3690,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-heart-lung-and-blood-institute",
                   "source": "https://www.usa.gov/agencies/national-heart-lung-and-blood-institute",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "heart disease",
+                    "lung disease",
+                    "blood disorders"
+                  ]
                 },
                 {
                   "title": "National Institute of Allergy and Infectious Diseases",
@@ -2441,7 +3705,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-institute-of-allergy-and-infectious-diseases",
                   "source": "https://www.usa.gov/agencies/national-institute-of-allergy-and-infectious-diseases",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "allergies",
+                    "infectious diseases",
+                    "immune system"
+                  ]
                 },
                 {
                   "title": "National Institute of Mental Health",
@@ -2451,7 +3720,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-institute-of-mental-health",
                   "source": "https://www.usa.gov/agencies/national-institute-of-mental-health",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "mental illness",
+                    "mental health research"
+                  ]
                 },
                 {
                   "title": "National Library of Medicine",
@@ -2461,14 +3734,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-library-of-medicine",
                   "source": "https://www.usa.gov/agencies/national-library-of-medicine",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "medical information",
+                    "health information",
+                    "medical publications"
+                  ]
                 }
               ],
               "url": "https://www.nih.gov/",
               "kind": "office",
               "id": "national-institutes-of-health-nih",
               "source": "https://www.usa.gov/agencies/national-institutes-of-health",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "medical research",
+                "disease research",
+                "biomedical science"
+              ]
             },
             {
               "title": "Indian Health Service",
@@ -2478,7 +3761,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "indian-health-service",
               "source": "https://www.usa.gov/agencies/indian-health-service",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "Native American health care",
+                "tribal health"
+              ]
             },
             {
               "title": "Health Resources and Services Administration",
@@ -2488,7 +3775,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "health-resources-and-services-administration",
               "source": "https://www.usa.gov/agencies/health-resources-and-services-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "health clinics",
+                "health workforce",
+                "underserved patients"
+              ]
             },
             {
               "title": "Administration for Children and Families",
@@ -2502,7 +3794,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-head-start",
                   "source": "https://www.usa.gov/agency-index",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "preschool",
+                    "early learning",
+                    "young children"
+                  ]
                 },
                 {
                   "title": "Office of Child Care",
@@ -2512,7 +3809,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-child-care",
                   "source": "https://acf.gov/ofa/programs-services/TANF/state",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "daycare",
+                    "child care assistance"
+                  ]
                 },
                 {
                   "title": "Office of Refugee Resettlement",
@@ -2522,7 +3823,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-refugee-resettlement",
                   "source": "https://www.usa.gov/agencies/office-of-refugee-resettlement",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "refugee services",
+                    "resettlement",
+                    "refugee families"
+                  ]
                 },
                 {
                   "title": "Temporary Assistance for Needy Families (TANF)",
@@ -2532,14 +3838,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "temporary-assistance-for-needy-families-tanf",
                   "source": "https://acf.gov/ofa/programs-services/TANF/state",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "cash assistance",
+                    "family support",
+                    "welfare"
+                  ]
                 }
               ],
               "url": "https://acf.gov/",
               "kind": "office",
               "id": "administration-for-children-and-families",
               "source": "https://www.usa.gov/agencies/administration-for-children-and-families",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "children",
+                "families",
+                "family assistance"
+              ]
             },
             {
               "title": "Administration for Community Living",
@@ -2549,7 +3865,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "administration-for-community-living",
               "source": "https://www.usa.gov/agencies/administration-for-community-living",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "older adults",
+                "disabilities",
+                "independent living"
+              ]
             },
             {
               "title": "Substance Abuse and Mental Health Services Administration",
@@ -2559,7 +3880,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "substance-abuse-and-mental-health-services-administration",
               "source": "https://www.usa.gov/agencies/substance-abuse-and-mental-health-services-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "addiction",
+                "substance use",
+                "mental health services"
+              ]
             },
             {
               "title": "Agency for Healthcare Research and Quality",
@@ -2569,7 +3895,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "agency-for-healthcare-research-and-quality",
               "source": "https://www.usa.gov/agencies/agency-for-healthcare-research-and-quality",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "health care quality",
+                "patient safety",
+                "health care research"
+              ]
             },
             {
               "title": "Administration for Strategic Preparedness and Response",
@@ -2579,7 +3910,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "administration-for-strategic-preparedness-and-response",
               "source": "https://www.aspr.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "public health emergencies",
+                "medical preparedness"
+              ]
             },
             {
               "title": "Advanced Research Projects Agency for Health (ARPA-H)",
@@ -2589,14 +3924,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "advanced-research-projects-agency-for-health-arpa-h",
               "source": "https://arpa-h.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "health innovation",
+                "biomedical breakthroughs"
+              ]
             }
           ],
           "url": "https://www.hhs.gov/",
           "kind": "department",
           "id": "department-of-health-and-human-services",
           "source": "https://www.usa.gov/agencies/u-s-department-of-health-and-human-services",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "health care",
+            "healthcare",
+            "medicine",
+            "diseases",
+            "public health",
+            "families"
+          ]
         },
         {
           "title": "Department of Housing and Urban Development",
@@ -2614,7 +3961,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "fha-mortgage-insurance",
                   "source": "https://www.hud.gov/program_offices/housing/fhahistory",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "home loans",
+                    "mortgage insurance",
+                    "buying a home"
+                  ]
                 },
                 {
                   "title": "Multifamily housing programs",
@@ -2624,14 +3976,23 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "multifamily-housing-programs",
                   "source": "https://www.hud.gov/program_offices/housing/mfh",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "apartments",
+                    "rental housing"
+                  ]
                 }
               ],
               "url": "https://www.hud.gov/program_offices/housing",
               "kind": "office",
               "id": "office-of-housing-federal-housing-administration",
               "source": "https://www.hud.gov/program_offices/housing/mfh",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "home loans",
+                "mortgage insurance",
+                "buying a home"
+              ]
             },
             {
               "title": "Ginnie Mae",
@@ -2641,7 +4002,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "ginnie-mae",
               "source": "https://www.usa.gov/agencies/ginnie-mae",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "mortgage backed securities",
+                "housing finance"
+              ]
             },
             {
               "title": "Public and Indian Housing",
@@ -2655,7 +4020,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "public-housing",
                   "source": "https://www.hud.gov/program_offices/public_indian_housing/programs/ph",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "public housing",
+                    "subsidized apartments",
+                    "low income housing"
+                  ]
                 },
                 {
                   "title": "Housing Choice Vouchers",
@@ -2665,7 +4035,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "housing-choice-vouchers",
                   "source": "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "Section 8",
+                    "rent assistance",
+                    "rental vouchers"
+                  ]
                 },
                 {
                   "title": "Native American housing programs",
@@ -2675,14 +4050,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "native-american-housing-programs",
                   "source": "https://www.hud.gov/program_offices/public_indian_housing/ih",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "tribal housing",
+                    "Native American homes"
+                  ]
                 }
               ],
               "url": "https://www.hud.gov/program_offices/public_indian_housing",
               "kind": "office",
               "id": "public-and-indian-housing",
               "source": "https://www.usa.gov/agencies/public-and-indian-housing",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "rent assistance",
+                "public housing",
+                "Section 8",
+                "rental vouchers"
+              ]
             },
             {
               "title": "Community Planning and Development",
@@ -2696,7 +4081,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "community-development-block-grants",
                   "source": "https://www.hud.gov/program_offices/comm_planning/cdbg",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "affordable housing",
+                    "community improvement",
+                    "neighborhood grants"
+                  ]
                 },
                 {
                   "title": "HOME Investment Partnerships",
@@ -2706,7 +4096,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "home-investment-partnerships",
                   "source": "https://www.hud.gov/hud-partners/community-affordable-housing-programs",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "affordable housing",
+                    "community improvement",
+                    "neighborhood grants"
+                  ]
                 },
                 {
                   "title": "Continuum of Care Program",
@@ -2716,14 +4111,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "homeless-assistance-grants",
                   "source": "https://www.hud.gov/hud-partners/community-coc",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "homelessness",
+                    "housing for homeless people",
+                    "rehousing"
+                  ]
                 }
               ],
               "url": "https://www.hud.gov/program_offices/comm_planning",
               "kind": "office",
               "id": "community-planning-and-development",
               "source": "https://www.usa.gov/agencies/office-of-community-planning-and-development",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "affordable housing",
+                "community improvement",
+                "neighborhood grants"
+              ]
             },
             {
               "title": "Fair Housing and Equal Opportunity",
@@ -2733,7 +4138,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "fair-housing-and-equal-opportunity",
               "source": "https://www.usa.gov/agencies/office-of-fair-housing-and-equal-opportunity",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "housing discrimination",
+                "fair housing",
+                "equal housing rights"
+              ]
             },
             {
               "title": "Policy Development and Research",
@@ -2743,7 +4153,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "policy-development-and-research",
               "source": "https://www.usa.gov/agencies/office-of-policy-development-and-research",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "housing research",
+                "housing data"
+              ]
             },
             {
               "title": "Office of Lead Hazard Control and Healthy Homes",
@@ -2756,14 +4170,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Office of Healthy Homes and Lead Hazard Control"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "lead paint",
+                "unhealthy homes",
+                "lead poisoning"
+              ]
             }
           ],
           "url": "https://www.hud.gov/",
           "kind": "department",
           "id": "department-of-housing-and-urban-development",
           "source": "https://www.usa.gov/agencies/u-s-department-of-housing-and-urban-development",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "housing",
+            "homes",
+            "renting",
+            "homelessness",
+            "affordable housing"
+          ]
         },
         {
           "title": "Department of Transportation",
@@ -2781,7 +4207,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "air-traffic-organization",
                   "source": "https://www.faa.gov/about/office_org/headquarters_offices/ato",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "airplanes",
+                    "flying",
+                    "aviation",
+                    "air travel",
+                    "flight safety"
+                  ]
                 },
                 {
                   "title": "Aviation Safety",
@@ -2791,7 +4224,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "aviation-safety",
                   "source": "https://www.faa.gov/about/office_org/headquarters_offices/avs",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "airplanes",
+                    "flying",
+                    "aviation",
+                    "air travel",
+                    "flight safety"
+                  ]
                 },
                 {
                   "title": "Airports",
@@ -2801,7 +4241,14 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "airports",
                   "source": "https://www.faa.gov/about/office_org/headquarters_offices/arp",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "airplanes",
+                    "flying",
+                    "aviation",
+                    "air travel",
+                    "flight safety"
+                  ]
                 },
                 {
                   "title": "Commercial Space Transportation",
@@ -2811,14 +4258,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "commercial-space-transportation",
                   "source": "https://www.faa.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "commercial rockets",
+                    "space launches"
+                  ]
                 }
               ],
               "url": "https://www.faa.gov/",
               "kind": "office",
               "id": "federal-aviation-administration-faa",
               "source": "https://www.usa.gov/agencies/federal-aviation-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "airplanes",
+                "flying",
+                "aviation",
+                "air travel",
+                "flight safety"
+              ]
             },
             {
               "title": "Federal Highway Administration",
@@ -2828,7 +4286,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-highway-administration",
               "source": "https://www.usa.gov/agencies/federal-highway-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "highways",
+                "roads",
+                "bridges"
+              ]
             },
             {
               "title": "National Highway Traffic Safety Administration",
@@ -2842,7 +4305,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "vehicle-safety-standards",
                   "source": "https://www.nhtsa.gov/laws-regulations",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "car safety",
+                    "vehicle recalls",
+                    "airbags",
+                    "seat belts"
+                  ]
                 },
                 {
                   "title": "Defect investigations and recalls",
@@ -2852,14 +4321,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "defect-investigations-and-recalls",
                   "source": "https://www.nhtsa.gov/recalls",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "car safety",
+                    "vehicle recalls",
+                    "airbags",
+                    "seat belts"
+                  ]
                 }
               ],
               "url": "https://www.nhtsa.gov",
               "kind": "office",
               "id": "national-highway-traffic-safety-administration",
               "source": "https://www.usa.gov/agencies/national-highway-traffic-safety-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "car safety",
+                "vehicle recalls",
+                "airbags",
+                "seat belts"
+              ]
             },
             {
               "title": "Federal Motor Carrier Safety Administration",
@@ -2869,7 +4350,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-motor-carrier-safety-administration",
               "source": "https://www.usa.gov/agencies/federal-motor-carrier-safety-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "trucks",
+                "commercial buses",
+                "truck driver safety"
+              ]
             },
             {
               "title": "Federal Railroad Administration",
@@ -2879,7 +4365,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-railroad-administration",
               "source": "https://www.usa.gov/agencies/federal-railroad-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "trains",
+                "railroads",
+                "railroad safety"
+              ]
             },
             {
               "title": "Federal Transit Administration",
@@ -2889,7 +4380,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-transit-administration",
               "source": "https://www.usa.gov/agencies/federal-transit-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "public transit",
+                "city buses",
+                "subways",
+                "light rail"
+              ]
             },
             {
               "title": "Maritime Administration",
@@ -2899,7 +4396,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "maritime-administration",
               "source": "https://www.usa.gov/agencies/maritime-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "merchant ships",
+                "shipping",
+                "commercial vessels"
+              ]
             },
             {
               "title": "Pipeline and Hazardous Materials Safety Administration",
@@ -2909,7 +4411,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "pipeline-and-hazardous-materials-safety-administration",
               "source": "https://www.usa.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "pipelines",
+                "hazardous materials",
+                "dangerous cargo"
+              ]
             },
             {
               "title": "Great Lakes St. Lawrence Seaway Development Corporation",
@@ -2919,7 +4426,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "great-lakes-st-lawrence-seaway-development-corporation",
               "source": "https://www.seaway.dot.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "Great Lakes shipping",
+                "seaway",
+                "navigation locks"
+              ]
             },
             {
               "title": "Bureau of Transportation Statistics",
@@ -2929,14 +4441,28 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-transportation-statistics",
               "source": "https://www.usa.gov/agencies/bureau-of-transportation-statistics",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "transportation data",
+                "travel statistics"
+              ]
             }
           ],
           "url": "https://www.transportation.gov",
           "kind": "department",
           "id": "department-of-transportation",
           "source": "https://www.usa.gov/agencies/u-s-department-of-transportation",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "travel",
+            "transportation",
+            "cars",
+            "roads",
+            "airplanes",
+            "trains",
+            "buses",
+            "ships"
+          ]
         },
         {
           "title": "Department of Energy",
@@ -2954,7 +4480,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "defense-programs",
                   "source": "https://www.energy.gov/nnsa/us-nuclear-weapons-stockpile",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "nuclear weapons stockpile",
+                    "nuclear deterrence",
+                    "weapons maintenance"
+                  ]
                 },
                 {
                   "title": "Defense Nuclear Nonproliferation",
@@ -2964,7 +4495,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "defense-nuclear-nonproliferation",
                   "source": "https://www.energy.gov/nnsa/nonproliferation",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "preventing nuclear weapons spread",
+                    "nuclear material security",
+                    "nonproliferation"
+                  ]
                 },
                 {
                   "title": "Naval Reactors",
@@ -2974,14 +4510,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "naval-reactors",
                   "source": "https://www.energy.gov/nnsa/powering-navy",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "nuclear propulsion",
+                    "Navy nuclear reactors",
+                    "submarine power",
+                    "nuclear powered ships"
+                  ]
                 }
               ],
               "url": "https://www.energy.gov/nnsa/national-nuclear-security-administration",
               "kind": "office",
               "id": "national-nuclear-security-administration-nnsa",
               "source": "https://www.usa.gov/agencies/national-nuclear-security-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "nuclear security",
+                "nuclear weapons stockpile",
+                "nuclear materials"
+              ]
             },
             {
               "title": "Office of Science",
@@ -2995,7 +4542,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-laboratory-research",
                   "source": "https://www.energy.gov/science/office-science-national-laboratories",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "scientific research",
+                    "national laboratories",
+                    "research facilities"
+                  ]
                 },
                 {
                   "title": "Scientific user facilities",
@@ -3005,14 +4557,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "scientific-user-facilities",
                   "source": "https://www.energy.gov/national-laboratories",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "research equipment",
+                    "shared scientific facilities",
+                    "scientific instruments"
+                  ]
                 }
               ],
               "url": "https://www.energy.gov/science/office-science",
               "kind": "office",
               "id": "office-of-science",
               "source": "https://www.energy.gov/science/office-science-user-facilities",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "scientific research",
+                "national laboratories",
+                "research facilities"
+              ]
             },
             {
               "title": "Energy Information Administration",
@@ -3022,7 +4584,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "energy-information-administration",
               "source": "https://www.usa.gov/agencies/energy-information-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "energy data",
+                "energy prices",
+                "fuel statistics"
+              ]
             },
             {
               "title": "Office of Nuclear Energy",
@@ -3032,7 +4599,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-nuclear-energy",
               "source": "https://www.usa.gov/agencies/office-of-nuclear-energy",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "nuclear power",
+                "civilian nuclear reactors"
+              ]
             },
             {
               "title": "Office of Electricity",
@@ -3042,7 +4613,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-electricity",
               "source": "https://www.energy.gov/oe/office-electricity",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "electric grid",
+                "electricity reliability",
+                "power systems"
+              ]
             },
             {
               "title": "Office of Environmental Management",
@@ -3052,7 +4628,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-environmental-management",
               "source": "https://www.usa.gov/agencies/office-of-environmental-management",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "nuclear waste cleanup",
+                "radioactive contamination"
+              ]
             },
             {
               "title": "Office of Energy Dominance Financing (formerly Loan Programs Office)",
@@ -3062,7 +4642,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "loan-programs-office",
               "source": "https://www.energy.gov/EDF",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "energy financing",
+                "energy project loans"
+              ]
             },
             {
               "title": "Power Marketing Administrations",
@@ -3076,7 +4660,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "bonneville-power-administration",
                   "source": "https://www.usa.gov/agencies/bonneville-power-administration",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "electricity sales",
+                    "federal hydropower",
+                    "power transmission"
+                  ]
                 },
                 {
                   "title": "Western Area Power Administration",
@@ -3086,7 +4675,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "western-area-power-administration",
                   "source": "https://www.usa.gov/agencies/western-area-power-administration",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "electricity sales",
+                    "federal hydropower",
+                    "power transmission"
+                  ]
                 },
                 {
                   "title": "Southeastern Power Administration",
@@ -3096,7 +4690,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "southeastern-power-administration",
                   "source": "https://www.usa.gov/agencies/southeastern-power-administration",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "electricity sales",
+                    "federal hydropower",
+                    "power transmission"
+                  ]
                 },
                 {
                   "title": "Southwestern Power Administration",
@@ -3106,14 +4705,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "southwestern-power-administration",
                   "source": "https://www.usa.gov/agencies/southwestern-power-administration",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "electricity sales",
+                    "federal hydropower",
+                    "power transmission"
+                  ]
                 }
               ],
               "url": "https://www.energy.gov/oe/power-marketing-administrations",
               "kind": "grouping",
               "id": "power-marketing-administrations",
               "source": "https://www.energy.gov/oe/power-marketing-administrations",
-              "linkType": "directory"
+              "linkType": "directory",
+              "topics": [
+                "electricity sales",
+                "federal hydropower",
+                "power transmission"
+              ]
             },
             {
               "title": "Federal Energy Regulatory Commission (FERC)",
@@ -3127,7 +4736,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "electric-power",
                   "source": "https://www.ferc.gov/electric",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "energy regulation",
+                    "interstate energy markets",
+                    "hydropower"
+                  ]
                 },
                 {
                   "title": "Natural gas",
@@ -3137,7 +4751,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "natural-gas",
                   "source": "https://www.ferc.gov/natural-gas",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "energy regulation",
+                    "interstate energy markets",
+                    "hydropower"
+                  ]
                 },
                 {
                   "title": "Hydropower licensing",
@@ -3147,21 +4766,38 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "hydropower-licensing",
                   "source": "https://www.ferc.gov/hydropower",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "energy regulation",
+                    "interstate energy markets",
+                    "hydropower"
+                  ]
                 }
               ],
               "url": "https://www.ferc.gov/",
               "kind": "office",
               "id": "federal-energy-regulatory-commission-ferc",
               "source": "https://www.usa.gov/agencies/federal-energy-regulatory-commission",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "energy regulation",
+                "interstate energy markets",
+                "hydropower"
+              ]
             }
           ],
           "url": "https://www.energy.gov/",
           "kind": "department",
           "id": "department-of-energy",
           "source": "https://www.usa.gov/agencies/u-s-department-of-energy",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "energy",
+            "electricity",
+            "power",
+            "nuclear security",
+            "scientific research"
+          ]
         },
         {
           "title": "Department of Education",
@@ -3179,7 +4815,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "fafsa",
                   "source": "https://studentaid.gov/h/apply-for-aid/fafsa",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "college aid application",
+                    "financial aid forms",
+                    "paying for college"
+                  ]
                 },
                 {
                   "title": "Federal Pell Grants",
@@ -3189,7 +4830,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "federal-pell-grants",
                   "source": "https://studentaid.gov/understand-aid/types/grants/pell",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "college grants",
+                    "financial aid",
+                    "paying for college"
+                  ]
                 },
                 {
                   "title": "Direct Loan Program",
@@ -3199,7 +4845,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "direct-loan-program",
                   "source": "https://studentaid.gov/understand-aid/types/loans",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "student loans",
+                    "borrowing for college",
+                    "federal education loans"
+                  ]
                 },
                 {
                   "title": "Federal Work-Study",
@@ -3209,14 +4860,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "federal-work-study",
                   "source": "https://studentaid.gov/understand-aid/types/work-study",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "student jobs",
+                    "college jobs",
+                    "financial aid"
+                  ]
                 }
               ],
               "url": "https://studentaid.gov/",
               "kind": "office",
               "id": "federal-student-aid",
               "source": "https://studentaid.gov/understand-aid/types/work-study",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "college costs",
+                "financial aid",
+                "student loans",
+                "college grants"
+              ]
             },
             {
               "title": "Office for Civil Rights",
@@ -3226,7 +4888,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-for-civil-rights",
               "source": "https://www.ed.gov/about/ed-offices/ocr",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "school discrimination",
+                "education civil rights",
+                "equal education access"
+              ]
             },
             {
               "title": "Institute of Education Sciences",
@@ -3240,7 +4907,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-center-for-education-statistics",
                   "source": "https://nces.ed.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "school data",
+                    "student statistics",
+                    "education statistics"
+                  ]
                 },
                 {
                   "title": "National Center for Education Research",
@@ -3250,7 +4922,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-center-for-education-research",
                   "source": "https://ies.ed.gov/about/national-center-education-research-ncer",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "education research",
+                    "student learning",
+                    "learning research"
+                  ]
                 },
                 {
                   "title": "National Center for Special Education Research",
@@ -3260,7 +4937,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-center-for-special-education-research",
                   "source": "https://ies.ed.gov/about/national-center-special-education-research-ncser",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "special education research",
+                    "disability education research"
+                  ]
                 },
                 {
                   "title": "National Center for Education Evaluation and Regional Assistance",
@@ -3270,14 +4951,23 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "national-center-for-education-evaluation-and-regional-assistance",
                   "source": "https://ies.ed.gov/about/national-center-education-evaluation-regional-assistance-ncee",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "education program evaluation",
+                    "school improvement research"
+                  ]
                 }
               ],
               "url": "https://ies.ed.gov/",
               "kind": "office",
               "id": "institute-of-education-sciences",
               "source": "https://www.usa.gov/agencies/institute-of-education-sciences",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "education research",
+                "school data",
+                "student learning"
+              ]
             },
             {
               "title": "Office of Elementary and Secondary Education",
@@ -3287,7 +4977,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-elementary-and-secondary-education",
               "source": "https://www.usa.gov/agencies/office-of-elementary-and-secondary-education",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "K12",
+                "public schools",
+                "school funding"
+              ]
             },
             {
               "title": "Office of Special Education and Rehabilitative Services",
@@ -3301,7 +4996,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-special-education-programs",
                   "source": "https://sites.ed.gov/idea/connect-with-osep/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "special education",
+                    "students with disabilities",
+                    "disability education"
+                  ]
                 },
                 {
                   "title": "Rehabilitation Services Administration",
@@ -3311,14 +5011,23 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "rehabilitation-services-administration",
                   "source": "https://www.usa.gov/agencies/rehabilitation-services-administration",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "disability employment",
+                    "vocational rehabilitation"
+                  ]
                 }
               ],
               "url": "https://www.ed.gov/about/ed-offices/osers",
               "kind": "office",
               "id": "office-of-special-education-and-rehabilitative-services",
               "source": "https://www.usa.gov/agencies/office-of-special-education-and-rehabilitative-services",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "special education",
+                "students with disabilities",
+                "disability education"
+              ]
             },
             {
               "title": "Office of Postsecondary Education",
@@ -3328,7 +5037,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-postsecondary-education",
               "source": "https://www.usa.gov/agencies/office-of-postsecondary-education",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "college policy",
+                "higher education"
+              ]
             },
             {
               "title": "Office of Career, Technical, and Adult Education",
@@ -3338,7 +5051,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-career-technical-and-adult-education",
               "source": "https://www.usa.gov/agencies/office-of-career-technical-and-adult-education",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "career education",
+                "technical training",
+                "adult learning"
+              ]
             },
             {
               "title": "Office of English Language Acquisition",
@@ -3348,14 +5066,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-english-language-acquisition",
               "source": "https://www.usa.gov/agencies/english-language-acquisition-office",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "English learners",
+                "language learning"
+              ]
             }
           ],
           "url": "https://www.ed.gov/",
           "kind": "department",
           "id": "department-of-education",
           "source": "https://www.usa.gov/agencies/u-s-department-of-education",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "schools",
+            "students",
+            "learning",
+            "college",
+            "education funding",
+            "student loans"
+          ]
         },
         {
           "title": "Department of Veterans Affairs",
@@ -3373,7 +5103,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "va-medical-centers",
                   "source": "https://department.va.gov/vha/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran hospitals",
+                    "veterans medical care"
+                  ]
                 },
                 {
                   "title": "Community-based outpatient clinics",
@@ -3383,7 +5117,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "community-based-outpatient-clinics",
                   "source": "https://department.va.gov/vha/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran clinics",
+                    "outpatient health care"
+                  ]
                 },
                 {
                   "title": "Vet Centers",
@@ -3393,14 +5131,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "vet-centers",
                   "source": "https://www.vetcenter.va.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran counseling",
+                    "readjustment counseling",
+                    "military transition"
+                  ]
                 }
               ],
               "url": "https://department.va.gov/vha/",
               "kind": "office",
               "id": "veterans-health-administration",
               "source": "https://www.usa.gov/agencies/veterans-health-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "veterans health care",
+                "veteran hospitals",
+                "veteran counseling"
+              ]
             },
             {
               "title": "Veterans Benefits Administration",
@@ -3414,7 +5162,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "disability-compensation",
                   "source": "https://department.va.gov/vha/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veterans disability benefits",
+                    "service connected injuries"
+                  ]
                 },
                 {
                   "title": "GI Bill education benefits",
@@ -3424,7 +5176,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "gi-bill-education-benefits",
                   "source": "https://department.va.gov/vha/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran college benefits",
+                    "military education benefits",
+                    "paying for school"
+                  ]
                 },
                 {
                   "title": "VA home loan guaranty",
@@ -3434,7 +5191,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "va-home-loan-guaranty",
                   "source": "https://www.va.gov/housing-assistance/home-loans/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran home loans",
+                    "military mortgage benefits",
+                    "buying a house"
+                  ]
                 },
                 {
                   "title": "Veteran Readiness and Employment",
@@ -3444,7 +5206,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "veteran-readiness-and-employment",
                   "source": "https://www.va.gov/careers-employment/vocational-rehabilitation/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran job training",
+                    "veteran rehabilitation",
+                    "disabled veteran employment"
+                  ]
                 },
                 {
                   "title": "Pension benefits",
@@ -3454,14 +5221,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "pension-benefits",
                   "source": "https://department.va.gov/vha/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran pensions",
+                    "wartime veterans",
+                    "low income veteran benefits"
+                  ]
                 }
               ],
               "url": "https://www.benefits.va.gov/",
               "kind": "office",
               "id": "veterans-benefits-administration",
               "source": "https://www.usa.gov/agencies/veterans-benefits-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "veterans benefits",
+                "former service members",
+                "military benefits"
+              ]
             },
             {
               "title": "National Cemetery Administration",
@@ -3475,7 +5252,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-cemeteries",
                   "source": "https://www.cem.va.gov/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran burials",
+                    "military cemeteries",
+                    "grave markers"
+                  ]
                 },
                 {
                   "title": "Headstones, markers, and medallions",
@@ -3485,14 +5267,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "headstones-markers-and-medallions",
                   "source": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "veteran burials",
+                    "military cemeteries",
+                    "grave markers"
+                  ]
                 }
               ],
               "url": "https://www.cem.va.gov/",
               "kind": "office",
               "id": "national-cemetery-administration",
               "source": "https://www.usa.gov/agencies/national-cemetery-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "veteran burials",
+                "military cemeteries",
+                "grave markers"
+              ]
             },
             {
               "title": "Board of Veterans’ Appeals",
@@ -3502,7 +5294,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "board-of-veterans-appeals",
               "source": "https://department.va.gov/board-of-veterans-appeals/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "veteran benefit appeals",
+                "benefits disputes"
+              ]
             },
             {
               "title": "Office of Inspector General",
@@ -3512,14 +5308,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-inspector-general",
               "source": "https://www.cem.va.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "VA oversight",
+                "VA fraud",
+                "VA investigations"
+              ]
             }
           ],
           "url": "https://www.va.gov/",
           "kind": "department",
           "id": "department-of-veterans-affairs",
           "source": "https://www.usa.gov/agencies/u-s-department-of-veterans-affairs",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "veterans",
+            "former service members",
+            "military benefits",
+            "health care",
+            "burials"
+          ]
         },
         {
           "title": "Department of Homeland Security",
@@ -3537,7 +5345,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "disaster-assistance",
                   "source": "https://www.fema.gov/assistance/individual",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "disasters",
+                    "emergency help",
+                    "disaster recovery",
+                    "disaster preparedness"
+                  ]
                 },
                 {
                   "title": "National Flood Insurance Program",
@@ -3547,7 +5361,11 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "national-flood-insurance-program",
                   "source": "https://www.usa.gov/agencies/national-flood-insurance-program",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "flood insurance",
+                    "flood damage"
+                  ]
                 },
                 {
                   "title": "Preparedness grants",
@@ -3557,14 +5375,26 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "preparedness-grants",
                   "source": "https://www.fema.gov/grants/preparedness",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "disasters",
+                    "emergency help",
+                    "disaster recovery",
+                    "disaster preparedness"
+                  ]
                 }
               ],
               "url": "https://www.fema.gov/",
               "kind": "office",
               "id": "federal-emergency-management-agency-fema",
               "source": "https://www.usa.gov/agencies/federal-emergency-management-agency",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "disasters",
+                "emergency help",
+                "disaster recovery",
+                "disaster preparedness"
+              ]
             },
             {
               "title": "Transportation Security Administration (TSA)",
@@ -3578,7 +5408,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "airport-screening",
                   "source": "https://www.tsa.gov",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "airport security",
+                    "airplane security",
+                    "passenger screening"
+                  ]
                 },
                 {
                   "title": "Federal Air Marshal Service",
@@ -3588,14 +5423,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "federal-air-marshal-service",
                   "source": "https://www.tsa.gov/about/tsa-leadership",
-                  "linkType": "organization-listing"
+                  "linkType": "organization-listing",
+                  "topics": [
+                    "air marshals",
+                    "airplane security",
+                    "armed flight protection",
+                    "airline security"
+                  ]
                 }
               ],
               "url": "https://www.tsa.gov",
               "kind": "office",
               "id": "transportation-security-administration-tsa",
               "source": "https://www.usa.gov/agencies/transportation-security-administration",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "airport security",
+                "airplane security",
+                "passenger screening"
+              ]
             },
             {
               "title": "U.S. Customs and Border Protection (CBP)",
@@ -3609,7 +5455,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "u-s-border-patrol",
                   "source": "https://www.cbp.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "border security",
+                    "customs",
+                    "ports of entry"
+                  ]
                 },
                 {
                   "title": "Office of Field Operations",
@@ -3619,7 +5470,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "office-of-field-operations",
                   "source": "https://www.cbp.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "border security",
+                    "customs",
+                    "ports of entry"
+                  ]
                 },
                 {
                   "title": "Air and Marine Operations",
@@ -3629,14 +5485,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "air-and-marine-operations",
                   "source": "https://www.cbp.gov/border-security/air-sea",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "border security",
+                    "customs",
+                    "ports of entry"
+                  ]
                 }
               ],
               "url": "https://www.cbp.gov/",
               "kind": "office",
               "id": "u-s-customs-and-border-protection-cbp",
               "source": "https://www.usa.gov/agencies/u-s-customs-and-border-protection",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "border security",
+                "customs",
+                "ports of entry"
+              ]
             },
             {
               "title": "U.S. Immigration and Customs Enforcement (ICE)",
@@ -3650,7 +5516,13 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "homeland-security-investigations",
                   "source": "https://www.ice.gov/hsi",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "smuggling",
+                    "human trafficking",
+                    "customs investigations",
+                    "transnational crime"
+                  ]
                 },
                 {
                   "title": "Enforcement and Removal Operations",
@@ -3660,14 +5532,23 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "office",
                   "id": "enforcement-and-removal-operations",
                   "source": "https://www.ice.gov/",
-                  "linkType": "website"
+                  "linkType": "website",
+                  "topics": [
+                    "deportation",
+                    "immigration detention",
+                    "immigration enforcement"
+                  ]
                 }
               ],
               "url": "https://www.ice.gov/",
               "kind": "office",
               "id": "u-s-immigration-and-customs-enforcement-ice",
               "source": "https://www.usa.gov/agencies/u-s-immigration-and-customs-enforcement",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "immigration enforcement",
+                "immigration investigations"
+              ]
             },
             {
               "title": "U.S. Citizenship and Immigration Services (USCIS)",
@@ -3681,7 +5562,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "naturalization",
                   "source": "https://www.uscis.gov/citizenship",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "becoming a citizen",
+                    "citizenship applications",
+                    "citizenship tests"
+                  ]
                 },
                 {
                   "title": "Immigration petitions and applications",
@@ -3691,14 +5577,25 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "immigration-petitions-and-applications",
                   "source": "https://www.uscis.gov/forms/all-forms",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "green cards",
+                    "immigration forms",
+                    "immigration applications"
+                  ]
                 }
               ],
               "url": "https://www.uscis.gov",
               "kind": "office",
               "id": "u-s-citizenship-and-immigration-services-uscis",
               "source": "https://www.usa.gov/agencies/u-s-citizenship-and-immigration-services",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "citizenship",
+                "green cards",
+                "immigration applications",
+                "becoming a citizen"
+              ]
             },
             {
               "title": "U.S. Coast Guard",
@@ -3712,7 +5609,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "search-and-rescue",
                   "source": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Response-Policy-CG-5R/Office-of-Incident-Management-Preparedness-CG-5RI/US-Coast-Guard-Office-of-Search-and-Rescue-CG-SAR/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "ocean rescue",
+                    "missing boaters",
+                    "water rescue"
+                  ]
                 },
                 {
                   "title": "Maritime safety and law enforcement",
@@ -3722,14 +5624,24 @@ window.EXECUTIVE_BRANCH_DATA = {
                   "kind": "program",
                   "id": "maritime-safety-and-law-enforcement",
                   "source": "https://www.uscg.mil/What-We-Do/",
-                  "linkType": "program-page"
+                  "linkType": "program-page",
+                  "topics": [
+                    "boating safety",
+                    "maritime law enforcement",
+                    "ship safety"
+                  ]
                 }
               ],
               "url": "https://www.uscg.mil/",
               "kind": "military-service",
               "id": "u-s-coast-guard",
               "source": "https://www.usa.gov/agencies/u-s-coast-guard",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "ocean rescue",
+                "boating safety",
+                "maritime law enforcement"
+              ]
             },
             {
               "title": "U.S. Secret Service",
@@ -3739,7 +5651,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "u-s-secret-service",
               "source": "https://www.secretservice.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "president protection",
+                "protective security",
+                "counterfeiting",
+                "financial crimes"
+              ]
             },
             {
               "title": "Cybersecurity and Infrastructure Security Agency (CISA)",
@@ -3749,7 +5667,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "cybersecurity-and-infrastructure-security-agency-cisa",
               "source": "https://www.usa.gov/agencies/cybersecurity-and-infrastructure-security-agency",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "cybersecurity",
+                "hacking",
+                "critical infrastructure",
+                "cyber defense"
+              ]
             },
             {
               "title": "Federal Law Enforcement Training Centers",
@@ -3759,7 +5683,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-law-enforcement-training-centers",
               "source": "https://www.usa.gov/agencies/federal-law-enforcement-training-center",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "police training",
+                "federal officer training"
+              ]
             },
             {
               "title": "Science and Technology Directorate",
@@ -3769,7 +5697,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "science-and-technology-directorate",
               "source": "https://www.dhs.gov/countering-weapons-mass-destruction-office",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "homeland security research",
+                "security technology"
+              ]
             },
             {
               "title": "Countering Weapons of Mass Destruction Office",
@@ -3779,21 +5711,34 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "countering-weapons-of-mass-destruction-office",
               "source": "https://www.dhs.gov/countering-weapons-mass-destruction-office",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "chemical threats",
+                "biological threats",
+                "radiological threats"
+              ]
             }
           ],
           "url": "https://www.dhs.gov/",
           "kind": "department",
           "id": "department-of-homeland-security",
           "source": "https://www.usa.gov/agencies/u-s-department-of-homeland-security",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "border security",
+            "immigration",
+            "disasters",
+            "airport security",
+            "cybersecurity"
+          ]
         }
       ],
       "url": "https://uscode.house.gov/us/usc/t5/s101/",
       "kind": "departments",
       "id": "15-executive-departments",
       "source": "https://uscode.house.gov/us/usc/t5/s101/",
-      "linkType": "directory"
+      "linkType": "directory",
+      "topics": []
     },
     {
       "title": "Outside the departments",
@@ -3811,7 +5756,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-air-and-radiation",
               "source": "https://www.epa.gov/aboutepa/about-office-air-and-radiation",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "air pollution",
+                "emissions",
+                "radiation"
+              ]
             },
             {
               "title": "Office of Water",
@@ -3821,7 +5771,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-water",
               "source": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "drinking water",
+                "water pollution",
+                "clean water"
+              ]
             },
             {
               "title": "Office of Chemical Safety and Pollution Prevention",
@@ -3831,7 +5786,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-chemical-safety-and-pollution-prevention",
               "source": "https://www.epa.gov/aboutepa/about-office-chemical-safety-and-pollution-prevention",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "pesticides",
+                "toxic chemicals",
+                "chemical safety"
+              ]
             },
             {
               "title": "Office of Land and Emergency Management",
@@ -3841,7 +5801,16 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-land-and-emergency-management",
               "source": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "hazardous waste",
+                "contaminated land",
+                "Superfund",
+                "cleanup",
+                "trash",
+                "garbage",
+                "solid waste"
+              ]
             },
             {
               "title": "Office of Enforcement and Compliance Assurance",
@@ -3851,14 +5820,27 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-enforcement-and-compliance-assurance",
               "source": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "environmental enforcement",
+                "pollution violations"
+              ]
             }
           ],
           "url": "https://www.epa.gov/",
           "kind": "office",
           "id": "environmental-protection-agency-epa",
           "source": "https://www.usa.gov/agencies/environmental-protection-agency",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "pollution",
+            "clean air",
+            "clean water",
+            "environmental protection",
+            "trash",
+            "garbage",
+            "solid waste"
+          ]
         },
         {
           "title": "National Aeronautics and Space Administration (NASA)",
@@ -3872,7 +5854,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "kennedy-space-center",
               "source": "https://www.nasa.gov/johnson/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "rocket launches",
+                "spacecraft launch operations"
+              ]
             },
             {
               "title": "Johnson Space Center",
@@ -3882,7 +5868,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "johnson-space-center",
               "source": "https://www.nasa.gov/johnson/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "astronauts",
+                "human spaceflight",
+                "mission control"
+              ]
             },
             {
               "title": "Goddard Space Flight Center",
@@ -3892,7 +5883,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "goddard-space-flight-center",
               "source": "https://www.nasa.gov/goddard/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "space science",
+                "satellites",
+                "Earth observation"
+              ]
             },
             {
               "title": "Marshall Space Flight Center",
@@ -3902,7 +5898,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "marshall-space-flight-center",
               "source": "https://www.nasa.gov/johnson/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "rocket propulsion",
+                "space systems"
+              ]
             },
             {
               "title": "Ames Research Center",
@@ -3912,7 +5912,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "ames-research-center",
               "source": "https://www.nasa.gov/langley/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "aeronautics",
+                "aviation research",
+                "space technology"
+              ]
             },
             {
               "title": "Langley Research Center",
@@ -3922,7 +5927,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "langley-research-center",
               "source": "https://www.nasa.gov/langley/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "aeronautics",
+                "aviation research",
+                "space technology"
+              ]
             },
             {
               "title": "Glenn Research Center",
@@ -3932,14 +5942,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "glenn-research-center",
               "source": "https://www.nasa.gov/langley/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "aeronautics",
+                "aviation research",
+                "space technology"
+              ]
             }
           ],
           "url": "https://www.nasa.gov/",
           "kind": "office",
           "id": "national-aeronautics-and-space-administration-nasa",
           "source": "https://www.usa.gov/agencies/national-aeronautics-and-space-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "space exploration",
+            "astronauts",
+            "rockets",
+            "planets",
+            "space science"
+          ]
         },
         {
           "title": "Central Intelligence Agency (CIA)",
@@ -3953,7 +5975,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "directorate-of-operations",
               "source": "https://www.cia.gov/about/organization/directorate-of-operations/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "foreign intelligence",
+                "spies",
+                "espionage",
+                "intelligence analysis"
+              ]
             },
             {
               "title": "Directorate of Analysis",
@@ -3963,7 +5991,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "directorate-of-analysis",
               "source": "https://www.cia.gov/about/organization/directorate-of-analysis/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "foreign intelligence",
+                "spies",
+                "espionage",
+                "intelligence analysis"
+              ]
             },
             {
               "title": "Directorate of Science and Technology",
@@ -3973,7 +6007,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "directorate-of-science-and-technology",
               "source": "https://www.cia.gov/about/organization/directorate-of-science-and-technology/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "intelligence technology",
+                "technical intelligence"
+              ]
             },
             {
               "title": "Directorate of Mission Systems",
@@ -3986,7 +6024,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "aliases": [
                 "Directorate of Digital Innovation"
               ],
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "intelligence data",
+                "digital technology",
+                "CIA cybersecurity"
+              ]
             },
             {
               "title": "Directorate of Support",
@@ -3996,14 +6039,24 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "directorate-of-support",
               "source": "https://www.cia.gov/about/organization/directorate-of-support/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "intelligence support",
+                "CIA logistics"
+              ]
             }
           ],
           "url": "https://www.cia.gov/",
           "kind": "office",
           "id": "central-intelligence-agency-cia",
           "source": "https://www.usa.gov/agencies/central-intelligence-agency",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "foreign intelligence",
+            "spies",
+            "espionage",
+            "intelligence analysis"
+          ]
         },
         {
           "title": "Office of the Director of National Intelligence",
@@ -4013,7 +6066,11 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-the-director-of-national-intelligence",
           "source": "https://www.usa.gov/agencies/office-of-the-director-of-national-intelligence",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "intelligence coordination",
+            "intelligence community"
+          ]
         },
         {
           "title": "Social Security Administration",
@@ -4027,7 +6084,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "retirement-benefits",
               "source": "https://www.ssa.gov/retirement",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "Social Security retirement",
+                "retirement checks",
+                "retired workers"
+              ]
             },
             {
               "title": "Survivors benefits",
@@ -4037,7 +6099,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "survivors-benefits",
               "source": "https://www.ssa.gov/survivor",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "survivors benefits",
+                "family benefits after a death",
+                "deceased workers"
+              ]
             },
             {
               "title": "Disability Insurance",
@@ -4047,7 +6114,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "disability-insurance",
               "source": "https://www.ssa.gov/disability",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "Social Security disability",
+                "disability insurance",
+                "SSDI"
+              ]
             },
             {
               "title": "Supplemental Security Income (SSI)",
@@ -4057,14 +6129,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "supplemental-security-income-ssi",
               "source": "https://www.ssa.gov/ssi",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "SSI",
+                "low income assistance",
+                "disability assistance",
+                "older adults"
+              ]
             }
           ],
           "url": "https://www.ssa.gov/",
           "kind": "office",
           "id": "social-security-administration",
           "source": "https://www.usa.gov/agencies/social-security-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "Social Security",
+            "retirement benefits",
+            "disability benefits",
+            "survivor benefits"
+          ]
         },
         {
           "title": "Small Business Administration",
@@ -4078,7 +6162,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "7-a-loan-program",
               "source": "https://www.sba.gov/loans/7a-loans/",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "small business loans",
+                "business financing"
+              ]
             },
             {
               "title": "Disaster assistance",
@@ -4088,7 +6176,11 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "disaster-assistance-2",
               "source": "https://www.sba.gov/disaster/",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "business disaster loans",
+                "disaster recovery loans"
+              ]
             },
             {
               "title": "Small Business Development Centers",
@@ -4098,7 +6190,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "small-business-development-centers",
               "source": "https://www.sba.gov/counseling/local-assistance/resource-partners/#sbdcs",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "business counseling",
+                "entrepreneur advice",
+                "starting a business"
+              ]
             },
             {
               "title": "Government contracting assistance",
@@ -4108,14 +6205,25 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "government-contracting-assistance",
               "source": "https://www.sba.gov/certifications/",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "small business contracts",
+                "selling to government",
+                "federal contracting"
+              ]
             }
           ],
           "url": "https://www.sba.gov/",
           "kind": "office",
           "id": "small-business-administration",
           "source": "https://www.usa.gov/agencies/small-business-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "small businesses",
+            "business loans",
+            "entrepreneurs",
+            "business assistance"
+          ]
         },
         {
           "title": "General Services Administration",
@@ -4129,7 +6237,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "public-buildings-service",
               "source": "https://www.gsa.gov/real-estate",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "federal buildings",
+                "government offices",
+                "federal workspace"
+              ]
             },
             {
               "title": "Federal Acquisition Service",
@@ -4139,14 +6252,24 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "federal-acquisition-service",
               "source": "https://www.gsa.gov/about-gsa/organization",
-              "linkType": "organization-listing"
+              "linkType": "organization-listing",
+              "topics": [
+                "government purchasing",
+                "federal supplies",
+                "acquisition contracts"
+              ]
             }
           ],
           "url": "https://www.gsa.gov/",
           "kind": "office",
           "id": "general-services-administration",
           "source": "https://www.usa.gov/agencies/general-services-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "government buildings",
+            "government purchasing",
+            "federal supplies"
+          ]
         },
         {
           "title": "Office of Personnel Management",
@@ -4156,7 +6279,13 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "office-of-personnel-management",
           "source": "https://www.usa.gov/agencies/office-of-personnel-management",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "federal employees",
+            "civil service",
+            "federal hiring",
+            "government jobs"
+          ]
         },
         {
           "title": "National Archives and Records Administration",
@@ -4170,7 +6299,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "program",
               "id": "national-archives",
               "source": "https://www.archives.gov/",
-              "linkType": "program-page"
+              "linkType": "program-page",
+              "topics": [
+                "historical records",
+                "government records",
+                "archives research"
+              ]
             },
             {
               "title": "Office of the Federal Register",
@@ -4180,7 +6314,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "office-of-the-federal-register",
               "source": "https://www.usa.gov/agencies/office-of-the-federal-register",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "published regulations",
+                "federal rules",
+                "government notices"
+              ]
             },
             {
               "title": "Presidential Libraries",
@@ -4190,14 +6329,25 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "presidential-libraries",
               "source": "https://www.archives.gov/",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "presidential history",
+                "presidential records",
+                "presidential museums"
+              ]
             }
           ],
           "url": "https://www.archives.gov/",
           "kind": "office",
           "id": "national-archives-and-records-administration",
           "source": "https://www.usa.gov/agencies/national-archives-and-records-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "historical records",
+            "government records",
+            "archives",
+            "presidential history"
+          ]
         },
         {
           "title": "National Science Foundation",
@@ -4207,7 +6357,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-science-foundation",
           "source": "https://www.usa.gov/agencies/national-science-foundation",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "science funding",
+            "research grants",
+            "basic research"
+          ]
         },
         {
           "title": "Peace Corps",
@@ -4217,7 +6372,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "peace-corps",
           "source": "https://www.usa.gov/agencies/peace-corps",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "volunteering abroad",
+            "overseas service",
+            "international development"
+          ]
         },
         {
           "title": "Federal Trade Commission (FTC)",
@@ -4231,7 +6391,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-competition",
               "source": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-competition",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "monopolies",
+                "business competition",
+                "mergers",
+                "antitrust"
+              ]
             },
             {
               "title": "Bureau of Consumer Protection",
@@ -4241,7 +6407,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-consumer-protection",
               "source": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "scams",
+                "consumer fraud",
+                "unfair business practices",
+                "consumer protection"
+              ]
             },
             {
               "title": "Bureau of Economics",
@@ -4251,14 +6423,25 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "bureau-of-economics",
               "source": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-economics",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "competition research",
+                "consumer markets",
+                "economic analysis"
+              ]
             }
           ],
           "url": "https://www.ftc.gov/",
           "kind": "office",
           "id": "federal-trade-commission-ftc",
           "source": "https://www.usa.gov/agencies/federal-trade-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "scams",
+            "consumer fraud",
+            "unfair business practices",
+            "consumer protection"
+          ]
         },
         {
           "title": "Federal Communications Commission (FCC)",
@@ -4272,7 +6455,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "media-bureau",
               "source": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "television",
+                "radio",
+                "cable TV",
+                "broadcasting"
+              ]
             },
             {
               "title": "Wireless Telecommunications Bureau",
@@ -4282,7 +6471,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "wireless-telecommunications-bureau",
               "source": "https://www.usa.gov/agencies/wireless-telecommunications-bureau",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "wireless communications",
+                "cell phones",
+                "mobile networks",
+                "radio licenses"
+              ]
             },
             {
               "title": "Space Bureau",
@@ -4292,7 +6487,12 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "space-bureau",
               "source": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "satellite communications",
+                "satellite licenses",
+                "space communications"
+              ]
             },
             {
               "title": "Enforcement Bureau",
@@ -4302,14 +6502,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "enforcement-bureau",
               "source": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "communications enforcement",
+                "illegal broadcasts",
+                "FCC violations"
+              ]
             }
           ],
           "url": "https://www.fcc.gov/",
           "kind": "office",
           "id": "federal-communications-commission-fcc",
           "source": "https://www.usa.gov/agencies/federal-communications-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "communications",
+            "radio",
+            "television",
+            "wireless",
+            "telecommunications"
+          ]
         },
         {
           "title": "Securities and Exchange Commission (SEC)",
@@ -4323,7 +6535,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "division-of-corporation-finance",
               "source": "https://www.sec.gov/about/divisions-offices/division-corporation-finance",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "investing",
+                "stock market",
+                "securities",
+                "investor protection"
+              ]
             },
             {
               "title": "Division of Trading and Markets",
@@ -4333,7 +6551,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "division-of-trading-and-markets",
               "source": "https://www.sec.gov/about/divisions-offices/division-trading-markets",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "investing",
+                "stock market",
+                "securities",
+                "investor protection"
+              ]
             },
             {
               "title": "Division of Investment Management",
@@ -4343,7 +6567,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "division-of-investment-management",
               "source": "https://www.sec.gov/about/divisions-offices/division-investment-management",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "investing",
+                "stock market",
+                "securities",
+                "investor protection"
+              ]
             },
             {
               "title": "Division of Enforcement",
@@ -4353,14 +6583,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "office",
               "id": "division-of-enforcement",
               "source": "https://www.sec.gov/about/divisions-offices/division-enforcement",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "investing",
+                "stock market",
+                "securities",
+                "investor protection"
+              ]
             }
           ],
           "url": "https://www.sec.gov/",
           "kind": "office",
           "id": "securities-and-exchange-commission-sec",
           "source": "https://www.usa.gov/agencies/securities-and-exchange-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "investing",
+            "stock market",
+            "securities",
+            "investor protection"
+          ]
         },
         {
           "title": "Commodity Futures Trading Commission",
@@ -4370,7 +6612,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "commodity-futures-trading-commission",
           "source": "https://www.usa.gov/agencies/u-s-commodity-futures-trading-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "futures markets",
+            "derivatives",
+            "commodity trading"
+          ]
         },
         {
           "title": "Federal Reserve System",
@@ -4384,7 +6631,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "federal-agency",
               "id": "board-of-governors",
               "source": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "interest rates",
+                "central bank",
+                "monetary policy",
+                "money supply"
+              ]
             },
             {
               "title": "12 Federal Reserve Banks",
@@ -4394,7 +6647,13 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "reserve-banks",
               "id": "12-federal-reserve-banks",
               "source": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
-              "linkType": "directory"
+              "linkType": "directory",
+              "topics": [
+                "interest rates",
+                "central bank",
+                "monetary policy",
+                "money supply"
+              ]
             },
             {
               "title": "Federal Open Market Committee",
@@ -4404,14 +6663,26 @@ window.EXECUTIVE_BRANCH_DATA = {
               "kind": "policy-committee",
               "id": "federal-open-market-committee",
               "source": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
-              "linkType": "website"
+              "linkType": "website",
+              "topics": [
+                "interest rates",
+                "central bank",
+                "monetary policy",
+                "money supply"
+              ]
             }
           ],
           "url": "https://www.federalreserve.gov/",
           "kind": "central-bank-system",
           "id": "federal-reserve-system",
           "source": "https://www.usa.gov/agencies/federal-reserve-system",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "interest rates",
+            "central bank",
+            "monetary policy",
+            "money supply"
+          ]
         },
         {
           "title": "Federal Deposit Insurance Corporation (FDIC)",
@@ -4421,7 +6692,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "federal-deposit-insurance-corporation-fdic",
           "source": "https://www.usa.gov/agencies/federal-deposit-insurance-corporation",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "bank deposits",
+            "deposit insurance",
+            "bank failures"
+          ]
         },
         {
           "title": "National Credit Union Administration",
@@ -4431,7 +6707,11 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-credit-union-administration",
           "source": "https://www.usa.gov/agencies/national-credit-union-administration",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "credit unions",
+            "credit union insurance"
+          ]
         },
         {
           "title": "Consumer Financial Protection Bureau",
@@ -4441,7 +6721,13 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "consumer-financial-protection-bureau",
           "source": "https://www.usa.gov/agencies/consumer-financial-protection-bureau",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "consumer finance",
+            "mortgages",
+            "credit cards",
+            "lending complaints"
+          ]
         },
         {
           "title": "National Labor Relations Board",
@@ -4451,7 +6737,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-labor-relations-board",
           "source": "https://www.usa.gov/agencies/national-labor-relations-board",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "unions",
+            "collective bargaining",
+            "unfair labor practices"
+          ]
         },
         {
           "title": "Equal Employment Opportunity Commission",
@@ -4461,7 +6752,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "equal-employment-opportunity-commission",
           "source": "https://www.usa.gov/agencies/equal-employment-opportunity-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "job discrimination",
+            "workplace discrimination",
+            "equal employment"
+          ]
         },
         {
           "title": "Consumer Product Safety Commission",
@@ -4471,7 +6767,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "consumer-product-safety-commission",
           "source": "https://www.usa.gov/agencies/consumer-product-safety-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "product safety",
+            "dangerous toys",
+            "consumer product recalls"
+          ]
         },
         {
           "title": "Nuclear Regulatory Commission",
@@ -4481,7 +6782,11 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "nuclear-regulatory-commission",
           "source": "https://www.usa.gov/agencies/u-s-nuclear-regulatory-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "nuclear power plant safety",
+            "nuclear licensing"
+          ]
         },
         {
           "title": "National Transportation Safety Board",
@@ -4491,7 +6796,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-transportation-safety-board",
           "source": "https://www.usa.gov/agencies/national-transportation-safety-board",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "accident investigations",
+            "plane crashes",
+            "transportation accidents"
+          ]
         },
         {
           "title": "Federal Election Commission",
@@ -4501,7 +6811,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "federal-election-commission",
           "source": "https://www.usa.gov/agencies/federal-election-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "campaign money",
+            "campaign finance",
+            "political donations"
+          ]
         },
         {
           "title": "Election Assistance Commission",
@@ -4511,7 +6826,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "election-assistance-commission",
           "source": "https://www.usa.gov/agencies/u-s-election-assistance-commission",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "election administration",
+            "voting systems",
+            "voting equipment"
+          ]
         },
         {
           "title": "U.S. Postal Service",
@@ -4521,7 +6841,14 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "u-s-postal-service",
           "source": "https://www.usa.gov/agencies/u-s-postal-service",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "mail",
+            "letters",
+            "packages",
+            "stamps",
+            "post office"
+          ]
         },
         {
           "title": "Tennessee Valley Authority",
@@ -4531,7 +6858,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "tennessee-valley-authority",
           "source": "https://www.usa.gov/agencies/tennessee-valley-authority",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "regional electricity",
+            "Tennessee Valley",
+            "power generation"
+          ]
         },
         {
           "title": "Export-Import Bank",
@@ -4541,7 +6873,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "export-import-bank",
           "source": "https://www.usa.gov/agencies/export-import-bank-of-the-united-states",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "export financing",
+            "American exports",
+            "export loans"
+          ]
         },
         {
           "title": "National Endowment for the Arts",
@@ -4551,7 +6888,12 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-endowment-for-the-arts",
           "source": "https://www.usa.gov/agencies/national-endowment-for-the-arts",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "arts funding",
+            "artists",
+            "art grants"
+          ]
         },
         {
           "title": "National Endowment for the Humanities",
@@ -4561,19 +6903,30 @@ window.EXECUTIVE_BRANCH_DATA = {
           "kind": "office",
           "id": "national-endowment-for-the-humanities",
           "source": "https://www.usa.gov/agencies/national-endowment-for-the-humanities",
-          "linkType": "website"
+          "linkType": "website",
+          "topics": [
+            "history",
+            "humanities funding",
+            "cultural research"
+          ]
         }
       ],
       "url": "https://www.usa.gov/agency-index",
       "kind": "independent",
       "id": "outside-the-departments",
       "source": "https://www.usa.gov/agency-index",
-      "linkType": "directory"
+      "linkType": "directory",
+      "topics": []
     }
   ],
   "url": "https://www.whitehouse.gov/",
   "kind": "president",
   "id": "president-of-the-united-states",
   "source": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
-  "linkType": "website"
+  "linkType": "website",
+  "topics": [
+    "presidency",
+    "executive leadership",
+    "presidential decisions"
+  ]
 };

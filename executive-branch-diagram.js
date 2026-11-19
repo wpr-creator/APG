@@ -145,9 +145,26 @@
   const guide='Drag to move · Scroll or pinch to zoom';
   function home(){jump.value='';document.getElementById('diagram-help').textContent=guide;scale=.65;resize();vp.scrollLeft=Math.max(0,(stageWidth*scale-vp.clientWidth)/2);vp.scrollTop=0;}
   function overview(){jump.value='';document.getElementById('diagram-help').textContent=guide;scale=Math.min(1,(vp.clientWidth-30)/stageWidth);resize();vp.scrollTo(0,0);}
-  function highlight(){const q=search.value.trim().toLowerCase();elements.forEach((el,id)=>{const hit=found.includes(id);el.classList.toggle('hit',hit);el.classList.toggle('dim',!!q&&!hit);});}
+  function highlight(){const q=searchText(search.value);elements.forEach((el,id)=>{const hit=found.includes(id);el.classList.toggle('hit',hit);el.classList.toggle('dim',!!q&&!hit);});}
   function focusMatch(){if(!found.length)return;focusNode(found[matchIndex]);matches.textContent=(matchIndex+1)+' of '+found.length+' matches';}
-  function searchMap(){jump.value='';const q=search.value.trim().toLowerCase();found=[];if(q)nodes.forEach(item=>{if((item.title+' '+item.desc+' '+(item.aliases||[]).join(' ')).toLowerCase().includes(q))found.push(item.id);});matchIndex=0;if(!q)document.getElementById('diagram-help').textContent=guide;next.hidden=found.length<2;matches.textContent=q&&!found.length?'No matches':'';highlight();if(found.length)focusMatch();}
+  function searchText(value){return value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/\./g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
+  function searchMap(){
+    jump.value='';const q=searchText(search.value);found=[];
+    if(q){
+      const words=q.split(/\s+/),hits=[];
+      nodes.forEach(item=>{
+        const title=searchText(item.title),aliases=searchText((item.aliases||[]).join(' '));
+        const description=searchText(item.desc),topics=searchText((item.topics||[]).join(' '));
+        const text=[title,aliases,description,topics].join(' ');
+        if(words.every(word=>text.includes(word))){
+          const score=title===q?120:title.includes(q)?100:aliases.includes(q)?90:topics.includes(q)?70:description.includes(q)?60:40;
+          hits.push({id:item.id,score});
+        }
+      });
+      hits.sort((a,b)=>b.score-a.score);found=hits.map(hit=>hit.id);
+    }
+    matchIndex=0;if(!q)document.getElementById('diagram-help').textContent=guide;next.hidden=found.length<2;matches.textContent=q&&!found.length?'No matches':'';highlight();if(found.length)focusMatch();
+  }
   document.getElementById('plus').addEventListener('click',()=>zoomTo(scale*1.4));document.getElementById('minus').addEventListener('click',()=>zoomTo(scale/1.4));
   document.getElementById('fit').addEventListener('click',overview);
   zoomRange.addEventListener('input',()=>zoomTo(minScale*Math.pow(maxScale/minScale,Number(zoomRange.value)/100)));
