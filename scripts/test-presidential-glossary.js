@@ -13,9 +13,11 @@ const expected = new Map();
 for (const row of read('presidential-tools.html').matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g)) {
   const title = row[1].match(/<th\b[^>]*>([\s\S]*?)<\/th>/);
   const cells = [...row[1].matchAll(/<td\b[^>]*>([\s\S]*?)<\/td>/g)];
-  if (!title || cells.length !== 2) continue;
+  if (!title || !cells.length) continue;
   const term = plain(title[1]).toLowerCase().replace(/^regular veto$/, 'veto');
-  expected.set(term, cells.map(c => plain(c[1])).join(' '));
+  const parts = cells.length === 2 ? cells.map(c => plain(c[1])) : [...cells[0][1].matchAll(/<p class="tool-(?:action|limit)">([\s\S]*?)<\/p>/g)].map(c => plain(c[1].replace(/<span class="limit-label">[\s\S]*?<\/span>/, '')));
+  assert.equal(parts.length, 2);
+  expected.set(term, parts.join(' '));
 }
 for (const term of ['Formal powers', 'Informal powers']) {
   const match = read('presidential-tools.html').match(new RegExp('<h[23][^>]*>\\s*' + term + '\\s*</h[23]>\\s*<p[^>]*>([\\s\\S]*?)</p>', 'i'));
