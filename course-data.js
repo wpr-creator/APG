@@ -122,7 +122,8 @@ window.COURSE_DATA = {
           { id: "u2-203-executive-practice", title: "THE ENERGETIC EXECUTIVE CONCEPT PRACTICE", note: "53 QUESTIONS · IMMEDIATE FEEDBACK", group: "Practice", category: "concept-practice", url: "unit2-executive-concept-practice.html" },
           { id: "u2-203-federalist-70", title: "FEDERALIST NO. 70", note: "ENERGY · UNITY · ACCOUNTABILITY", group: "Readings & Explanations", category: "reading", url: "docs/federalist-70.html" },
           { id: "u2-203-presidential-tools", title: "THE PRESIDENTIAL TOOLBOX", note: "POWERS · PROCEDURES · LIMITS", group: "Readings & Explanations", category: "reading", url: "presidential-tools.html" },
-          { id: "u2-203-presidential-roles", title: "PRESIDENTIAL ROLES", note: "CLASS DEFINITIONS · EXAMPLES · HISTORICAL IMAGES", group: "Readings & Explanations", category: "reading", url: "presidential-roles.html" }
+          { id: "u2-203-presidential-roles", title: "PRESIDENTIAL ROLES", note: "CLASS DEFINITIONS · EXAMPLES · HISTORICAL IMAGES", group: "Readings & Explanations", category: "reading", url: "presidential-roles.html" },
+          { id: "u2-203-executive-branch", title: "THE EXECUTIVE BRANCH", note: "INTERACTIVE DIAGRAM · DEPARTMENTS · AGENCIES", group: "Readings & Explanations", category: "interactive", url: "executive-branch-diagram.html" }
         ]
       },
       lessons: [
