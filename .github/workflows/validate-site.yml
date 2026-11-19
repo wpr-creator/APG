@@ -63,3 +63,9 @@ jobs:
 
       - name: Test Reflecting Pool question bank
         run: node scripts/test-pool-questions.js
+
+      - name: Check Rotunda trivia generation
+        run: node scripts/build-rotunda-bank.js --check
+
+      - name: Test Rotunda answers and daily sets
+        run: node scripts/test-rotunda.js

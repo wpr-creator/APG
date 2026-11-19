@@ -37,7 +37,7 @@ for (const [folder,type] of [['cases','Case'],['docs','Document']]) {
 // Archived course pages remain discoverable after leaving the homepage.
 entries.push({type:'Page',title:'2026 Midterm election results',url:'election-results-2026.html',
  detail:'School votes · San Diego · California · Governor · Congress · City · propositions'});
-entries.push({type:'Page',title:'Rotunda · daily class competition',url:'rotunda.html',detail:'Monday–Friday · Class leaderboard · Current lessons · Typed answers · Capitol dome'});
+entries.push({type:'Page',title:'Rotunda · daily class competition',url:'rotunda.html',detail:'Monday–Friday · Government and civics trivia · Presidents · Rights · AP concepts · Class leaderboard'});
 const terms = new Map();
 for (const unit of context.window.APG_GLOSSARY_UNITS) for (const group of Object.values(unit.groups)) for (const [title,detail] of group) {
  if (!terms.has(title.toLowerCase())) terms.set(title.toLowerCase(),{type:'Term',title,detail,url:'course-tools.html?glossary='+encodeURIComponent(title)+'#words'});

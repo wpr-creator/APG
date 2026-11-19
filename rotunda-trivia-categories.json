@@ -1,0 +1,4886 @@
+[
+  {
+    "id": "trivia-branches",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name one of the three branches of the U.S. government.",
+    "hint": "Name one thing that fits.",
+    "href": "course-tools.html#glossary",
+    "answers": [
+      {
+        "id": "legislative-branch",
+        "label": "Legislative branch",
+        "aliases": [
+          "legislative",
+          "Congress",
+          "legislature",
+          "lawmaking branch"
+        ],
+        "basePoints": 20,
+        "explanation": "Legislative branch."
+      },
+      {
+        "id": "executive-branch",
+        "label": "Executive branch",
+        "aliases": [
+          "executive",
+          "president",
+          "presidency"
+        ],
+        "basePoints": 20,
+        "explanation": "Executive branch."
+      },
+      {
+        "id": "judicial-branch",
+        "label": "Judicial branch",
+        "aliases": [
+          "judicial",
+          "judiciary",
+          "courts",
+          "court system"
+        ],
+        "basePoints": 40,
+        "explanation": "Judicial branch."
+      }
+    ],
+    "difficulty": 1,
+    "family": "institutions",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "Course concepts"
+    }
+  },
+  {
+    "id": "trivia-presidents",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4"
+    ],
+    "prompt": "Name a U.S. president.",
+    "hint": "Name one thing that fits.",
+    "href": "presidential-roles.html",
+    "answers": [
+      {
+        "id": "george-washington",
+        "label": "George Washington",
+        "aliases": [
+          "Washington",
+          "President George Washington",
+          "President Washington"
+        ],
+        "basePoints": 20,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "john-adams",
+        "label": "John Adams",
+        "aliases": [
+          "Adams",
+          "President John Adams",
+          "President Adams"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "thomas-jefferson",
+        "label": "Thomas Jefferson",
+        "aliases": [
+          "Jefferson",
+          "President Thomas Jefferson",
+          "President Jefferson"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "james-madison",
+        "label": "James Madison",
+        "aliases": [
+          "Madison",
+          "President James Madison",
+          "President Madison"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "james-monroe",
+        "label": "James Monroe",
+        "aliases": [
+          "Monroe",
+          "President James Monroe",
+          "President Monroe"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "john-quincy-adams",
+        "label": "John Quincy Adams",
+        "aliases": [
+          "Adams",
+          "John Q Adams",
+          "JQ Adams",
+          "President John Quincy Adams",
+          "President Adams",
+          "President John Q Adams",
+          "President JQ Adams"
+        ],
+        "basePoints": 80,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "andrew-jackson",
+        "label": "Andrew Jackson",
+        "aliases": [
+          "Jackson",
+          "President Andrew Jackson",
+          "President Jackson"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "martin-van-buren",
+        "label": "Martin Van Buren",
+        "aliases": [
+          "Buren",
+          "Van Buren",
+          "President Martin Van Buren",
+          "President Buren",
+          "President Van Buren"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "william-henry-harrison",
+        "label": "William Henry Harrison",
+        "aliases": [
+          "Harrison",
+          "William Harrison",
+          "President William Henry Harrison",
+          "President Harrison",
+          "President William Harrison"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "john-tyler",
+        "label": "John Tyler",
+        "aliases": [
+          "Tyler",
+          "President John Tyler",
+          "President Tyler"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "james-k-polk",
+        "label": "James K. Polk",
+        "aliases": [
+          "Polk",
+          "James Polk",
+          "President James K. Polk",
+          "President Polk",
+          "President James Polk"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "zachary-taylor",
+        "label": "Zachary Taylor",
+        "aliases": [
+          "Taylor",
+          "President Zachary Taylor",
+          "President Taylor"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "millard-fillmore",
+        "label": "Millard Fillmore",
+        "aliases": [
+          "Fillmore",
+          "President Millard Fillmore",
+          "President Fillmore"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "franklin-pierce",
+        "label": "Franklin Pierce",
+        "aliases": [
+          "Pierce",
+          "President Franklin Pierce",
+          "President Pierce"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "james-buchanan",
+        "label": "James Buchanan",
+        "aliases": [
+          "Buchanan",
+          "President James Buchanan",
+          "President Buchanan"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "abraham-lincoln",
+        "label": "Abraham Lincoln",
+        "aliases": [
+          "Lincoln",
+          "President Abraham Lincoln",
+          "President Lincoln",
+          "Abe Lincoln",
+          "Honest Abe"
+        ],
+        "basePoints": 20,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "andrew-johnson",
+        "label": "Andrew Johnson",
+        "aliases": [
+          "Johnson",
+          "President Andrew Johnson",
+          "President Johnson"
+        ],
+        "basePoints": 80,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "ulysses-s-grant",
+        "label": "Ulysses S. Grant",
+        "aliases": [
+          "Grant",
+          "Ulysses Grant",
+          "US Grant",
+          "U S Grant",
+          "President Ulysses S. Grant",
+          "President Grant",
+          "President Ulysses Grant",
+          "President US Grant",
+          "President U S Grant"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "rutherford-b-hayes",
+        "label": "Rutherford B. Hayes",
+        "aliases": [
+          "Hayes",
+          "Rutherford Hayes",
+          "President Rutherford B. Hayes",
+          "President Hayes",
+          "President Rutherford Hayes"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "james-a-garfield",
+        "label": "James A. Garfield",
+        "aliases": [
+          "Garfield",
+          "James Garfield",
+          "President James A. Garfield",
+          "President Garfield",
+          "President James Garfield"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "chester-a-arthur",
+        "label": "Chester A. Arthur",
+        "aliases": [
+          "Arthur",
+          "Chester Arthur",
+          "President Chester A. Arthur",
+          "President Arthur",
+          "President Chester Arthur"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "grover-cleveland",
+        "label": "Grover Cleveland",
+        "aliases": [
+          "Cleveland",
+          "President Grover Cleveland",
+          "President Cleveland"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "benjamin-harrison",
+        "label": "Benjamin Harrison",
+        "aliases": [
+          "Harrison",
+          "President Benjamin Harrison",
+          "President Harrison"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "william-mckinley",
+        "label": "William McKinley",
+        "aliases": [
+          "McKinley",
+          "President William McKinley",
+          "President McKinley"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "theodore-roosevelt",
+        "label": "Theodore Roosevelt",
+        "aliases": [
+          "Roosevelt",
+          "Teddy Roosevelt",
+          "Teddy",
+          "President Theodore Roosevelt",
+          "President Roosevelt",
+          "President Teddy Roosevelt",
+          "President Teddy",
+          "TR",
+          "T R Roosevelt"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "william-howard-taft",
+        "label": "William Howard Taft",
+        "aliases": [
+          "Taft",
+          "President William Howard Taft",
+          "President Taft"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "woodrow-wilson",
+        "label": "Woodrow Wilson",
+        "aliases": [
+          "Wilson",
+          "President Woodrow Wilson",
+          "President Wilson"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "warren-g-harding",
+        "label": "Warren G. Harding",
+        "aliases": [
+          "Harding",
+          "Warren Harding",
+          "President Warren G. Harding",
+          "President Harding",
+          "President Warren Harding"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "calvin-coolidge",
+        "label": "Calvin Coolidge",
+        "aliases": [
+          "Coolidge",
+          "President Calvin Coolidge",
+          "President Coolidge"
+        ],
+        "basePoints": 100,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "herbert-hoover",
+        "label": "Herbert Hoover",
+        "aliases": [
+          "Hoover",
+          "President Herbert Hoover",
+          "President Hoover"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "franklin-d-roosevelt",
+        "label": "Franklin D. Roosevelt",
+        "aliases": [
+          "Roosevelt",
+          "Franklin Roosevelt",
+          "FDR",
+          "Franklin Delano Roosevelt",
+          "President Franklin D. Roosevelt",
+          "President Roosevelt",
+          "President Franklin Roosevelt",
+          "President FDR",
+          "President Franklin Delano Roosevelt"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "harry-s-truman",
+        "label": "Harry S. Truman",
+        "aliases": [
+          "Truman",
+          "Harry Truman",
+          "President Harry S. Truman",
+          "President Truman",
+          "President Harry Truman"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "dwight-d-eisenhower",
+        "label": "Dwight D. Eisenhower",
+        "aliases": [
+          "Eisenhower",
+          "Dwight Eisenhower",
+          "Ike",
+          "President Dwight D. Eisenhower",
+          "President Eisenhower",
+          "President Dwight Eisenhower",
+          "President Ike"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "john-f-kennedy",
+        "label": "John F. Kennedy",
+        "aliases": [
+          "Kennedy",
+          "John Kennedy",
+          "JFK",
+          "John Fitzgerald Kennedy",
+          "President John F. Kennedy",
+          "President Kennedy",
+          "President John Kennedy",
+          "President JFK",
+          "President John Fitzgerald Kennedy"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "lyndon-b-johnson",
+        "label": "Lyndon B. Johnson",
+        "aliases": [
+          "Johnson",
+          "Lyndon Johnson",
+          "LBJ",
+          "President Lyndon B. Johnson",
+          "President Johnson",
+          "President Lyndon Johnson",
+          "President LBJ"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "richard-nixon",
+        "label": "Richard Nixon",
+        "aliases": [
+          "Nixon",
+          "President Richard Nixon",
+          "President Nixon"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "gerald-ford",
+        "label": "Gerald Ford",
+        "aliases": [
+          "Ford",
+          "President Gerald Ford",
+          "President Ford"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "jimmy-carter",
+        "label": "Jimmy Carter",
+        "aliases": [
+          "Carter",
+          "James Carter",
+          "James Earl Carter",
+          "James Earl Carter Jr",
+          "President Jimmy Carter",
+          "President Carter",
+          "President James Carter",
+          "President James Earl Carter",
+          "President James Earl Carter Jr"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "ronald-reagan",
+        "label": "Ronald Reagan",
+        "aliases": [
+          "Reagan",
+          "President Ronald Reagan",
+          "President Reagan"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "george-h-w-bush",
+        "label": "George H. W. Bush",
+        "aliases": [
+          "Bush",
+          "George Bush",
+          "HW Bush",
+          "George HW Bush",
+          "George H Bush",
+          "Bush 41",
+          "George Herbert Walker Bush",
+          "President George H. W. Bush",
+          "President Bush",
+          "President George Bush",
+          "President HW Bush",
+          "President George HW Bush",
+          "President George H Bush",
+          "President Bush 41",
+          "President George Herbert Walker Bush",
+          "H W Bush"
+        ],
+        "basePoints": 60,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "bill-clinton",
+        "label": "Bill Clinton",
+        "aliases": [
+          "Clinton",
+          "William Clinton",
+          "William Jefferson Clinton",
+          "President Bill Clinton",
+          "President Clinton",
+          "President William Clinton",
+          "President William Jefferson Clinton"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "george-w-bush",
+        "label": "George W. Bush",
+        "aliases": [
+          "Bush",
+          "George Bush",
+          "Dubya",
+          "W Bush",
+          "Bush 43",
+          "George Walker Bush",
+          "President George W. Bush",
+          "President Bush",
+          "President George Bush",
+          "President Dubya",
+          "President W Bush",
+          "President Bush 43",
+          "President George Walker Bush"
+        ],
+        "basePoints": 40,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "barack-obama",
+        "label": "Barack Obama",
+        "aliases": [
+          "Obama",
+          "President Barack Obama",
+          "President Obama"
+        ],
+        "basePoints": 20,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "donald-trump",
+        "label": "Donald Trump",
+        "aliases": [
+          "Trump",
+          "Donald J Trump",
+          "Donald John Trump",
+          "President Donald Trump",
+          "President Trump",
+          "President Donald J Trump",
+          "President Donald John Trump"
+        ],
+        "basePoints": 20,
+        "explanation": "A president of the United States."
+      },
+      {
+        "id": "joe-biden",
+        "label": "Joe Biden",
+        "aliases": [
+          "Biden",
+          "Joseph Biden",
+          "Joseph R Biden",
+          "Joseph Robinette Biden",
+          "President Joe Biden",
+          "President Biden",
+          "President Joseph Biden",
+          "President Joseph R Biden",
+          "President Joseph Robinette Biden"
+        ],
+        "basePoints": 20,
+        "explanation": "A president of the United States."
+      }
+    ],
+    "difficulty": 1,
+    "family": "presidents",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://www.archives.gov/research/census/presidents",
+      "additional": "https://www.whitehouse.gov/walk-of-fame/",
+      "section": "Presidents"
+    },
+    "allowAmbiguous": true
+  },
+  {
+    "id": "trivia-bill-of-rights",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a right or protection in the Bill of Rights.",
+    "hint": "Name one thing that fits.",
+    "href": "docs/bill-of-rights.html",
+    "answers": [
+      {
+        "id": "freedom-of-speech",
+        "label": "Freedom of speech",
+        "aliases": [
+          "speech",
+          "free speech",
+          "expression",
+          "freedom of expression"
+        ],
+        "basePoints": 20,
+        "explanation": "Freedom of speech is a protection in the Bill of Rights."
+      },
+      {
+        "id": "freedom-of-religion",
+        "label": "Freedom of religion",
+        "aliases": [
+          "religion",
+          "religious freedom",
+          "religious liberty",
+          "free exercise",
+          "free exercise of religion"
+        ],
+        "basePoints": 20,
+        "explanation": "Freedom of religion is a protection in the Bill of Rights."
+      },
+      {
+        "id": "freedom-of-the-press",
+        "label": "Freedom of the press",
+        "aliases": [
+          "press",
+          "free press"
+        ],
+        "basePoints": 40,
+        "explanation": "Freedom of the press is a protection in the Bill of Rights."
+      },
+      {
+        "id": "peaceful-assembly",
+        "label": "Peaceful assembly",
+        "aliases": [
+          "assembly",
+          "freedom of assembly",
+          "protest",
+          "peaceful protest",
+          "right to protest"
+        ],
+        "basePoints": 40,
+        "explanation": "Peaceful assembly is a protection in the Bill of Rights."
+      },
+      {
+        "id": "petition-the-government",
+        "label": "Petition the government",
+        "aliases": [
+          "petition",
+          "petitioning",
+          "right to petition"
+        ],
+        "basePoints": 60,
+        "explanation": "Petition the government is a protection in the Bill of Rights."
+      },
+      {
+        "id": "keep-and-bear-arms",
+        "label": "Keep and bear arms",
+        "aliases": [
+          "bear arms",
+          "bearing arms",
+          "guns",
+          "gun rights",
+          "right to bear arms",
+          "own a gun",
+          "own guns"
+        ],
+        "basePoints": 20,
+        "explanation": "Keep and bear arms is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-from-forced-quartering",
+        "label": "Protection from forced quartering",
+        "aliases": [
+          "quartering",
+          "no quartering",
+          "quartering soldiers",
+          "no forced quartering",
+          "no soldiers in your house"
+        ],
+        "basePoints": 100,
+        "explanation": "Protection from forced quartering is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-from-unreasonable-searches-and-seizures",
+        "label": "Protection from unreasonable searches and seizures",
+        "aliases": [
+          "search and seizure",
+          "searches and seizures",
+          "unreasonable searches",
+          "unreasonable search and seizure",
+          "search warrant",
+          "warrant",
+          "privacy from unreasonable searches"
+        ],
+        "basePoints": 40,
+        "explanation": "Protection from unreasonable searches and seizures is a protection in the Bill of Rights."
+      },
+      {
+        "id": "grand-jury-indictment",
+        "label": "Grand-jury indictment",
+        "aliases": [
+          "grand jury",
+          "grand jury indictment",
+          "indictment"
+        ],
+        "basePoints": 100,
+        "explanation": "The Fifth Amendment provides grand-jury indictment for federal capital or infamous crimes, with stated exceptions."
+      },
+      {
+        "id": "protection-against-double-jeopardy",
+        "label": "Protection against double jeopardy",
+        "aliases": [
+          "double jeopardy",
+          "not tried twice",
+          "no double jeopardy",
+          "cannot be tried twice for the same crime"
+        ],
+        "basePoints": 60,
+        "explanation": "Protection against double jeopardy is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-against-self-incrimination",
+        "label": "Protection against self-incrimination",
+        "aliases": [
+          "self incrimination",
+          "self-incrimination",
+          "remain silent",
+          "right to remain silent",
+          "silence",
+          "plead the fifth",
+          "taking the fifth"
+        ],
+        "basePoints": 20,
+        "explanation": "Protection against self-incrimination is a protection in the Bill of Rights."
+      },
+      {
+        "id": "due-process",
+        "label": "Due process",
+        "aliases": [
+          "due process of law",
+          "fair legal process",
+          "fair procedures",
+          "fair trial",
+          "right to a fair trial"
+        ],
+        "basePoints": 40,
+        "explanation": "Due process is a protection in the Bill of Rights."
+      },
+      {
+        "id": "compensation-for-property-taken-for-public-use",
+        "label": "Compensation for property taken for public use",
+        "aliases": [
+          "just compensation",
+          "compensation",
+          "takings",
+          "takings clause",
+          "eminent domain compensation"
+        ],
+        "basePoints": 100,
+        "explanation": "The Fifth Amendment requires just compensation when private property is taken for public use."
+      },
+      {
+        "id": "speedy-trial",
+        "label": "Speedy trial",
+        "aliases": [
+          "a speedy trial",
+          "quick trial",
+          "prompt trial"
+        ],
+        "basePoints": 60,
+        "explanation": "Speedy trial is a protection in the Bill of Rights."
+      },
+      {
+        "id": "public-trial",
+        "label": "Public trial",
+        "aliases": [
+          "open trial",
+          "trial open to the public"
+        ],
+        "basePoints": 80,
+        "explanation": "Public trial is a protection in the Bill of Rights."
+      },
+      {
+        "id": "jury-trial",
+        "label": "Jury trial",
+        "aliases": [
+          "jury",
+          "trial by jury",
+          "impartial jury",
+          "criminal jury trial",
+          "civil jury trial"
+        ],
+        "basePoints": 20,
+        "explanation": "The Sixth Amendment protects criminal jury trials; the Seventh protects juries in certain federal civil suits."
+      },
+      {
+        "id": "notice-of-criminal-charges",
+        "label": "Notice of criminal charges",
+        "aliases": [
+          "know the charges",
+          "informed of charges",
+          "know what you are accused of",
+          "notice of charges"
+        ],
+        "basePoints": 80,
+        "explanation": "Notice of criminal charges is a protection in the Bill of Rights."
+      },
+      {
+        "id": "confront-witnesses",
+        "label": "Confront witnesses",
+        "aliases": [
+          "confrontation",
+          "confrontation clause",
+          "face your accuser",
+          "question witnesses",
+          "cross examine witnesses",
+          "cross examination"
+        ],
+        "basePoints": 80,
+        "explanation": "Confront witnesses is a protection in the Bill of Rights."
+      },
+      {
+        "id": "call-defense-witnesses",
+        "label": "Call defense witnesses",
+        "aliases": [
+          "call witnesses",
+          "compulsory process",
+          "subpoena witnesses",
+          "defense witnesses"
+        ],
+        "basePoints": 100,
+        "explanation": "Call defense witnesses is a protection in the Bill of Rights."
+      },
+      {
+        "id": "assistance-of-counsel",
+        "label": "Assistance of counsel",
+        "aliases": [
+          "lawyer",
+          "a lawyer",
+          "attorney",
+          "an attorney",
+          "counsel",
+          "right to counsel",
+          "right to a lawyer",
+          "legal counsel",
+          "free lawyer",
+          "public defender",
+          "free attorney"
+        ],
+        "basePoints": 20,
+        "explanation": "The Sixth Amendment protects assistance of counsel in criminal prosecutions."
+      },
+      {
+        "id": "protection-against-excessive-bail",
+        "label": "Protection against excessive bail",
+        "aliases": [
+          "bail",
+          "reasonable bail",
+          "excessive bail",
+          "no excessive bail"
+        ],
+        "basePoints": 60,
+        "explanation": "The Eighth Amendment prohibits excessive bail; it does not guarantee release in every case."
+      },
+      {
+        "id": "protection-against-excessive-fines",
+        "label": "Protection against excessive fines",
+        "aliases": [
+          "fines",
+          "excessive fines",
+          "no excessive fines"
+        ],
+        "basePoints": 80,
+        "explanation": "Protection against excessive fines is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-against-cruel-and-unusual-punishment",
+        "label": "Protection against cruel and unusual punishment",
+        "aliases": [
+          "cruel and unusual punishment",
+          "no cruel and unusual punishment",
+          "cruel punishment",
+          "inhumane punishment",
+          "torture",
+          "no torture",
+          "protection from torture"
+        ],
+        "basePoints": 40,
+        "explanation": "Protection against cruel and unusual punishment is a protection in the Bill of Rights."
+      },
+      {
+        "id": "unenumerated-rights",
+        "label": "Protection of rights not listed",
+        "aliases": [
+          "unenumerated rights",
+          "ninth amendment",
+          "9th amendment",
+          "other rights",
+          "rights not listed"
+        ],
+        "explanation": "The Ninth Amendment says listing some rights does not deny other rights retained by the people.",
+        "basePoints": 100
+      }
+    ],
+    "difficulty": 1,
+    "family": "rights",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://www.archives.gov/founding-docs/bill-of-rights-transcript",
+      "section": "Amendments I–VIII"
+    }
+  },
+  {
+    "id": "trivia-accused-rights",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a constitutional protection for someone accused of a crime.",
+    "hint": "Name one thing that fits.",
+    "href": "docs/bill-of-rights.html",
+    "answers": [
+      {
+        "id": "protection-from-unreasonable-searches-and-seizures",
+        "label": "Protection from unreasonable searches and seizures",
+        "aliases": [
+          "search and seizure",
+          "searches and seizures",
+          "unreasonable searches",
+          "unreasonable search and seizure",
+          "search warrant",
+          "warrant",
+          "privacy from unreasonable searches"
+        ],
+        "basePoints": 40,
+        "explanation": "Protection from unreasonable searches and seizures is a protection in the Bill of Rights."
+      },
+      {
+        "id": "grand-jury-indictment",
+        "label": "Grand-jury indictment",
+        "aliases": [
+          "grand jury",
+          "grand jury indictment",
+          "indictment"
+        ],
+        "basePoints": 100,
+        "explanation": "The Fifth Amendment provides grand-jury indictment for federal capital or infamous crimes, with stated exceptions."
+      },
+      {
+        "id": "protection-against-double-jeopardy",
+        "label": "Protection against double jeopardy",
+        "aliases": [
+          "double jeopardy",
+          "not tried twice",
+          "no double jeopardy",
+          "cannot be tried twice for the same crime"
+        ],
+        "basePoints": 60,
+        "explanation": "Protection against double jeopardy is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-against-self-incrimination",
+        "label": "Protection against self-incrimination",
+        "aliases": [
+          "self incrimination",
+          "self-incrimination",
+          "remain silent",
+          "right to remain silent",
+          "silence",
+          "plead the fifth",
+          "taking the fifth"
+        ],
+        "basePoints": 20,
+        "explanation": "Protection against self-incrimination is a protection in the Bill of Rights."
+      },
+      {
+        "id": "due-process",
+        "label": "Due process",
+        "aliases": [
+          "due process of law",
+          "fair legal process",
+          "fair procedures",
+          "fair trial",
+          "right to a fair trial"
+        ],
+        "basePoints": 40,
+        "explanation": "Due process is a protection in the Bill of Rights."
+      },
+      {
+        "id": "speedy-trial",
+        "label": "Speedy trial",
+        "aliases": [
+          "a speedy trial",
+          "quick trial",
+          "prompt trial"
+        ],
+        "basePoints": 60,
+        "explanation": "Speedy trial is a protection in the Bill of Rights."
+      },
+      {
+        "id": "public-trial",
+        "label": "Public trial",
+        "aliases": [
+          "open trial",
+          "trial open to the public"
+        ],
+        "basePoints": 80,
+        "explanation": "Public trial is a protection in the Bill of Rights."
+      },
+      {
+        "id": "jury-trial",
+        "label": "Jury trial",
+        "aliases": [
+          "jury",
+          "trial by jury",
+          "impartial jury",
+          "criminal jury trial"
+        ],
+        "basePoints": 20,
+        "explanation": "The Sixth Amendment protects an impartial jury in criminal prosecutions."
+      },
+      {
+        "id": "notice-of-criminal-charges",
+        "label": "Notice of criminal charges",
+        "aliases": [
+          "know the charges",
+          "informed of charges",
+          "know what you are accused of",
+          "notice of charges"
+        ],
+        "basePoints": 80,
+        "explanation": "Notice of criminal charges is a protection in the Bill of Rights."
+      },
+      {
+        "id": "confront-witnesses",
+        "label": "Confront witnesses",
+        "aliases": [
+          "confrontation",
+          "confrontation clause",
+          "face your accuser",
+          "question witnesses",
+          "cross examine witnesses",
+          "cross examination"
+        ],
+        "basePoints": 80,
+        "explanation": "Confront witnesses is a protection in the Bill of Rights."
+      },
+      {
+        "id": "call-defense-witnesses",
+        "label": "Call defense witnesses",
+        "aliases": [
+          "call witnesses",
+          "compulsory process",
+          "subpoena witnesses",
+          "defense witnesses"
+        ],
+        "basePoints": 100,
+        "explanation": "Call defense witnesses is a protection in the Bill of Rights."
+      },
+      {
+        "id": "assistance-of-counsel",
+        "label": "Assistance of counsel",
+        "aliases": [
+          "lawyer",
+          "a lawyer",
+          "attorney",
+          "an attorney",
+          "counsel",
+          "right to counsel",
+          "right to a lawyer",
+          "legal counsel",
+          "free lawyer",
+          "public defender",
+          "free attorney"
+        ],
+        "basePoints": 20,
+        "explanation": "The Sixth Amendment protects assistance of counsel in criminal prosecutions."
+      },
+      {
+        "id": "protection-against-excessive-bail",
+        "label": "Protection against excessive bail",
+        "aliases": [
+          "bail",
+          "reasonable bail",
+          "excessive bail",
+          "no excessive bail"
+        ],
+        "basePoints": 60,
+        "explanation": "The Eighth Amendment prohibits excessive bail; it does not guarantee release in every case."
+      },
+      {
+        "id": "protection-against-excessive-fines",
+        "label": "Protection against excessive fines",
+        "aliases": [
+          "fines",
+          "excessive fines",
+          "no excessive fines"
+        ],
+        "basePoints": 80,
+        "explanation": "Protection against excessive fines is a protection in the Bill of Rights."
+      },
+      {
+        "id": "protection-against-cruel-and-unusual-punishment",
+        "label": "Protection against cruel and unusual punishment",
+        "aliases": [
+          "cruel and unusual punishment",
+          "no cruel and unusual punishment",
+          "cruel punishment",
+          "inhumane punishment",
+          "torture",
+          "no torture",
+          "protection from torture"
+        ],
+        "basePoints": 40,
+        "explanation": "Protection against cruel and unusual punishment is a protection in the Bill of Rights."
+      },
+      {
+        "id": "presumption-of-innocence",
+        "label": "Presumption of innocence",
+        "aliases": [
+          "innocent until proven guilty",
+          "presumed innocent",
+          "presumption of being innocent",
+          "innocence"
+        ],
+        "basePoints": 40,
+        "explanation": "The government must prove guilt; the accused does not have to prove innocence."
+      },
+      {
+        "id": "proof-beyond-a-reasonable-doubt",
+        "label": "Proof beyond a reasonable doubt",
+        "aliases": [
+          "beyond reasonable doubt",
+          "reasonable doubt",
+          "beyond a reasonable doubt"
+        ],
+        "basePoints": 60,
+        "explanation": "A criminal conviction requires proof beyond a reasonable doubt."
+      }
+    ],
+    "difficulty": 2,
+    "family": "rights",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://www.uscourts.gov/about-federal-courts/types-cases/criminal-cases",
+      "additional": "https://www.archives.gov/founding-docs/bill-of-rights-transcript",
+      "section": "Criminal defendants and constitutional protections"
+    }
+  },
+  {
+    "id": "trivia-elected-offices",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a public office that voters can elect someone to.",
+    "hint": "Name one thing that fits.",
+    "href": "course-tools.html#glossary",
+    "answers": [
+      {
+        "id": "president",
+        "label": "President",
+        "aliases": [
+          "president of the united states",
+          "POTUS"
+        ],
+        "basePoints": 20,
+        "explanation": "President."
+      },
+      {
+        "id": "vice-president",
+        "label": "Vice president",
+        "aliases": [
+          "vp",
+          "vice-president"
+        ],
+        "basePoints": 40,
+        "explanation": "Vice president."
+      },
+      {
+        "id": "senator",
+        "label": "Senator",
+        "aliases": [
+          "US senator",
+          "United States senator",
+          "state senator"
+        ],
+        "basePoints": 20,
+        "explanation": "Senator."
+      },
+      {
+        "id": "representative",
+        "label": "Representative",
+        "aliases": [
+          "congressperson",
+          "congressman",
+          "congresswoman",
+          "House member",
+          "member of congress",
+          "state representative",
+          "assembly member"
+        ],
+        "basePoints": 20,
+        "explanation": "Representative."
+      },
+      {
+        "id": "governor",
+        "label": "Governor",
+        "aliases": [],
+        "basePoints": 40,
+        "explanation": "Governor."
+      },
+      {
+        "id": "mayor",
+        "label": "Mayor",
+        "aliases": [],
+        "basePoints": 40,
+        "explanation": "Mayor."
+      },
+      {
+        "id": "city-council-member",
+        "label": "City council member",
+        "aliases": [
+          "councilmember",
+          "city council",
+          "councilor",
+          "councillor"
+        ],
+        "basePoints": 60,
+        "explanation": "City council member."
+      },
+      {
+        "id": "school-board-member",
+        "label": "School board member",
+        "aliases": [
+          "school board"
+        ],
+        "basePoints": 80,
+        "explanation": "School board member."
+      },
+      {
+        "id": "sheriff",
+        "label": "Sheriff",
+        "aliases": [],
+        "basePoints": 80,
+        "explanation": "Sheriff."
+      },
+      {
+        "id": "district-attorney",
+        "label": "District attorney",
+        "aliases": [
+          "DA",
+          "prosecutor"
+        ],
+        "basePoints": 100,
+        "explanation": "District attorney."
+      },
+      {
+        "id": "attorney-general",
+        "label": "Attorney general",
+        "aliases": [
+          "state attorney general"
+        ],
+        "basePoints": 100,
+        "explanation": "Attorney general."
+      },
+      {
+        "id": "judge",
+        "label": "Judge",
+        "aliases": [
+          "judges",
+          "elected judge"
+        ],
+        "explanation": "Voters elect judges in some state and local court systems.",
+        "basePoints": 80
+      },
+      {
+        "id": "comptroller",
+        "label": "Comptroller",
+        "aliases": [
+          "controller",
+          "state controller"
+        ],
+        "explanation": "Some governments elect an official who oversees public finances.",
+        "basePoints": 100
+      },
+      {
+        "id": "treasurer",
+        "label": "Treasurer",
+        "aliases": [
+          "state treasurer"
+        ],
+        "explanation": "Some state and local governments elect a treasurer to oversee public funds.",
+        "basePoints": 80
+      }
+    ],
+    "difficulty": 1,
+    "family": "public-offices",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "Course concepts"
+    }
+  },
+  {
+    "id": "trivia-government-institutions",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name an institution or office in the federal government.",
+    "hint": "Name one thing that fits.",
+    "href": "course-tools.html#glossary",
+    "answers": [
+      {
+        "id": "president",
+        "label": "President",
+        "aliases": [
+          "presidency",
+          "White House",
+          "executive branch"
+        ],
+        "basePoints": 20,
+        "explanation": "President."
+      },
+      {
+        "id": "house-of-representatives",
+        "label": "House of Representatives",
+        "aliases": [
+          "House",
+          "US House"
+        ],
+        "basePoints": 20,
+        "explanation": "House of Representatives."
+      },
+      {
+        "id": "senate",
+        "label": "Senate",
+        "aliases": [
+          "US Senate"
+        ],
+        "basePoints": 20,
+        "explanation": "Senate."
+      },
+      {
+        "id": "supreme-court",
+        "label": "Supreme Court",
+        "aliases": [
+          "SCOTUS",
+          "US Supreme Court"
+        ],
+        "basePoints": 20,
+        "explanation": "Supreme Court."
+      },
+      {
+        "id": "congress",
+        "label": "Congress",
+        "aliases": [
+          "legislative branch"
+        ],
+        "basePoints": 20,
+        "explanation": "Congress."
+      },
+      {
+        "id": "cabinet",
+        "label": "Cabinet",
+        "aliases": [],
+        "basePoints": 40,
+        "explanation": "Cabinet."
+      },
+      {
+        "id": "federal-courts",
+        "label": "Federal courts",
+        "aliases": [
+          "judicial branch",
+          "judiciary",
+          "federal judiciary"
+        ],
+        "basePoints": 60,
+        "explanation": "Federal courts."
+      },
+      {
+        "id": "federal-departments-and-agencies",
+        "label": "Federal departments and agencies",
+        "aliases": [
+          "federal agency",
+          "agency",
+          "federal agencies",
+          "executive agencies",
+          "executive department"
+        ],
+        "basePoints": 80,
+        "explanation": "Federal departments and agencies."
+      },
+      {
+        "id": "executive-office-of-the-president",
+        "label": "Executive Office of the President",
+        "aliases": [
+          "EOP",
+          "executive office"
+        ],
+        "basePoints": 100,
+        "explanation": "Executive Office of the President."
+      }
+    ],
+    "difficulty": 1,
+    "family": "institutions",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "Course concepts"
+    }
+  },
+  {
+    "id": "trivia-levels-of-government",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a level of government in the United States.",
+    "hint": "Name one thing that fits.",
+    "href": "course-tools.html#glossary",
+    "answers": [
+      {
+        "id": "national-government",
+        "label": "National government",
+        "aliases": [
+          "national",
+          "federal",
+          "federal government"
+        ],
+        "basePoints": 20,
+        "explanation": "National government."
+      },
+      {
+        "id": "state-government",
+        "label": "State government",
+        "aliases": [
+          "state",
+          "states"
+        ],
+        "basePoints": 20,
+        "explanation": "State government."
+      },
+      {
+        "id": "local-government",
+        "label": "Local government",
+        "aliases": [
+          "local",
+          "municipal",
+          "county",
+          "city",
+          "town government"
+        ],
+        "basePoints": 40,
+        "explanation": "Local government."
+      }
+    ],
+    "difficulty": 1,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "Course concepts"
+    }
+  },
+  {
+    "id": "trivia-citizen-actions",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a way people can participate in U.S. civic life.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Voting",
+        "aliases": [
+          "vote"
+        ],
+        "explanation": "Voting lets citizens help choose officials or decide ballot questions.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Protesting",
+        "aliases": [
+          "protest",
+          "demonstrate",
+          "demonstration"
+        ],
+        "explanation": "Public demonstrations communicate demands directly.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Petitioning",
+        "aliases": [
+          "petition"
+        ],
+        "explanation": "Petitions ask officials to address a concern.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Attending a town hall",
+        "aliases": [
+          "town hall",
+          "town halls",
+          "public meeting"
+        ],
+        "explanation": "Public meetings give citizens a chance to raise concerns.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Referendum",
+        "aliases": [
+          "referendums",
+          "referenda"
+        ],
+        "explanation": "A referendum lets voters decide a policy question directly.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Ballot initiative",
+        "aliases": [
+          "initiative",
+          "initiatives"
+        ],
+        "explanation": "A ballot initiative lets citizens seek a direct vote on a proposal under the rules of their state.",
+        "basePoints": 60
+      },
+      {
+        "id": "contact-elected-officials",
+        "label": "Contact elected officials",
+        "aliases": [
+          "contact representatives",
+          "write to congress",
+          "call a representative",
+          "contact lawmakers"
+        ],
+        "basePoints": 40,
+        "explanation": "Contact elected officials."
+      },
+      {
+        "id": "campaign-for-a-candidate",
+        "label": "Campaign for a candidate",
+        "aliases": [
+          "campaigning",
+          "campaign",
+          "volunteer for a campaign"
+        ],
+        "basePoints": 60,
+        "explanation": "Campaign for a candidate."
+      },
+      {
+        "id": "run-for-public-office",
+        "label": "Run for public office",
+        "aliases": [
+          "run for office",
+          "be a candidate"
+        ],
+        "basePoints": 60,
+        "explanation": "Run for public office."
+      },
+      {
+        "id": "donate-to-a-political-campaign",
+        "label": "Donate to a political campaign",
+        "aliases": [
+          "donating",
+          "donate",
+          "campaign donation"
+        ],
+        "basePoints": 80,
+        "explanation": "Donate to a political campaign."
+      },
+      {
+        "id": "join-an-interest-group",
+        "label": "Join an interest group",
+        "aliases": [
+          "join an advocacy group",
+          "join a political group"
+        ],
+        "basePoints": 80,
+        "explanation": "Join an interest group."
+      },
+      {
+        "id": "serve-on-a-jury",
+        "label": "Serve on a jury",
+        "aliases": [
+          "jury duty",
+          "jury service"
+        ],
+        "basePoints": 80,
+        "explanation": "Serve on a jury."
+      }
+    ],
+    "difficulty": 1,
+    "family": "participation",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "2. PARTICIPATORY DEMOCRACY"
+    }
+  },
+  {
+    "id": "trivia-roles",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4"
+    ],
+    "prompt": "Name a role a U.S. president performs.",
+    "hint": "Name one thing that fits.",
+    "href": "presidential-roles.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Chief executive",
+        "aliases": [
+          "executive",
+          "leads the executive branch",
+          "directs federal agencies"
+        ],
+        "explanation": "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Commander in chief",
+        "aliases": [
+          "commander-in-chief",
+          "commander of the armed forces",
+          "leads the armed forces",
+          "military leader"
+        ],
+        "explanation": "The president leads the armed forces; Congress declares war and controls military funding.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Chief diplomat",
+        "aliases": [
+          "diplomat",
+          "conducting diplomacy",
+          "leads foreign relations",
+          "foreign policy leader"
+        ],
+        "explanation": "The president leads relations with other countries and negotiates international agreements.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Legislative leader",
+        "aliases": [
+          "chief legislator",
+          "proposes laws",
+          "pushes congress to pass laws"
+        ],
+        "explanation": "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Party leader",
+        "aliases": [
+          "chief of party",
+          "leader of the presidents party",
+          "leader of their political party"
+        ],
+        "explanation": "The president promotes the goals of the president’s political party and helps its candidates win elections.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Head of state",
+        "aliases": [
+          "chief of state",
+          "ceremonial leader",
+          "represents the nation at ceremonies"
+        ],
+        "explanation": "The president represents the nation at ceremonies, celebrations, and moments of mourning.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "presidency",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-declaration-rights",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a right listed in the Declaration of Independence.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Life",
+        "aliases": [],
+        "explanation": "The Declaration names life as an unalienable right.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Liberty",
+        "aliases": [
+          "freedom"
+        ],
+        "explanation": "The Declaration names liberty as an unalienable right.",
+        "basePoints": 20
+      },
+      {
+        "id": "2",
+        "label": "Pursuit of happiness",
+        "aliases": [
+          "happiness",
+          "the pursuit of happiness"
+        ],
+        "explanation": "The Declaration names the pursuit of happiness; it does not promise that government will make everyone happy.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "rights",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "2. The Declaration Stated the Ideals"
+    }
+  },
+  {
+    "id": "trivia-founding-ideas",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a democratic ideal or founding principle.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Natural Rights",
+        "aliases": [
+          "natural right",
+          "rights people are born with",
+          "rights that exist before government",
+          "inherent rights"
+        ],
+        "explanation": "Rights people possess because they are human, before government exists. Government can violate these rights but does not create them.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Social Contract",
+        "aliases": [
+          "agreement between people and government",
+          "people give up some freedom for protection",
+          "agreement to form a government"
+        ],
+        "explanation": "An agreement among people to create government, accepting shared laws in exchange for order and protection of their rights. A government that abandons that purpose weakens its claim to authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "2",
+        "label": "Consent of the Governed",
+        "aliases": [
+          "consent",
+          "permission of the people",
+          "government needs the consent of the people"
+        ],
+        "explanation": "The idea that government can rule legitimately only because the people authorize it.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Limited Government",
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
+        "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "4",
+        "label": "Popular Sovereignty",
+        "aliases": [
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
+        ],
+        "explanation": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern.",
+        "basePoints": 20
+      },
+      {
+        "id": "5",
+        "label": "Republicanism",
+        "aliases": [],
+        "explanation": "A system in which citizens govern through elected representatives.",
+        "basePoints": 60
+      },
+      {
+        "id": "equality",
+        "label": "Equality",
+        "aliases": [
+          "equal political standing"
+        ],
+        "basePoints": 40,
+        "explanation": "Equality."
+      },
+      {
+        "id": "rule-of-law",
+        "label": "Rule of law",
+        "aliases": [
+          "no one is above the law"
+        ],
+        "basePoints": 60,
+        "explanation": "Rule of law."
+      }
+    ],
+    "difficulty": 1,
+    "family": "principles",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-democracy-models",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a model of democracy from our course.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Participatory Democracy",
+        "aliases": [
+          "participatory",
+          "participation model",
+          "direct citizen participation",
+          "broad citizen participation",
+          "citizens participate directly"
+        ],
+        "explanation": "A model emphasizing broad, direct involvement by ordinary citizens through voting, protests, petitions, town halls, and other political action. It does not mean citizens make every decision themselves.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Pluralist Democracy",
+        "aliases": [
+          "pluralism",
+          "pluralist",
+          "groups compete to influence policy",
+          "competing interest groups",
+          "competition among groups"
+        ],
+        "explanation": "A model describing politics as competition among organized groups seeking to influence public policy. Groups do not necessarily have equal resources or influence.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Elite Democracy",
+        "aliases": [
+          "elite",
+          "elite theory",
+          "a small group holds power",
+          "power held by a small group",
+          "power concentrated among elites"
+        ],
+        "explanation": "A model emphasizing the influence of a smaller group of leaders, wealthy donors, experts, and other powerful decision makers who shape which choices reach the agenda. Elections and citizen participation still occur.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "democracy",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-pluralist-organizations",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a type of group that tries to influence government policy.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Interest group",
+        "aliases": [
+          "interest groups"
+        ],
+        "explanation": "Interest groups organize people around shared policy goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Labor union",
+        "aliases": [
+          "union",
+          "unions"
+        ],
+        "explanation": "Unions can carry workers’ shared demands to officials.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Professional association",
+        "aliases": [
+          "professional associations"
+        ],
+        "explanation": "Professional associations organize people in an occupation.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Advocacy organization",
+        "aliases": [
+          "advocacy group",
+          "advocacy organizations"
+        ],
+        "explanation": "Advocacy organizations pursue shared public-policy goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Business group",
+        "aliases": [
+          "business groups",
+          "business association"
+        ],
+        "explanation": "Business groups can seek policies favorable to their members.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Environmental group",
+        "aliases": [
+          "environmental groups"
+        ],
+        "explanation": "Environmental groups can seek different versions of a policy than business organizations support.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "political-groups",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "3. PLURALIST DEMOCRACY"
+    }
+  },
+  {
+    "id": "trivia-presidential-duties",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4"
+    ],
+    "prompt": "Name a power or duty of the U.S. president.",
+    "hint": "Name one thing that fits.",
+    "href": "presidential-tools.html",
+    "answers": [
+      {
+        "id": "veto-a-bill",
+        "label": "Veto a bill",
+        "aliases": [
+          "veto",
+          "reject a bill"
+        ],
+        "basePoints": 20,
+        "explanation": "Veto a bill."
+      },
+      {
+        "id": "sign-a-bill-into-law",
+        "label": "Sign a bill into law",
+        "aliases": [
+          "sign bills",
+          "sign laws",
+          "sign legislation"
+        ],
+        "basePoints": 20,
+        "explanation": "Sign a bill into law."
+      },
+      {
+        "id": "lead-the-executive-branch",
+        "label": "Lead the executive branch",
+        "aliases": [
+          "chief executive",
+          "direct federal agencies",
+          "carry out laws",
+          "enforce laws"
+        ],
+        "basePoints": 20,
+        "explanation": "Lead the executive branch."
+      },
+      {
+        "id": "command-the-armed-forces",
+        "label": "Command the armed forces",
+        "aliases": [
+          "commander in chief",
+          "lead the military",
+          "direct military operations"
+        ],
+        "basePoints": 20,
+        "explanation": "Command the armed forces."
+      },
+      {
+        "id": "nominate-federal-judges",
+        "label": "Nominate federal judges",
+        "aliases": [
+          "appoint judges",
+          "nominate judges",
+          "appoint supreme court justices"
+        ],
+        "basePoints": 40,
+        "explanation": "Nominate federal judges."
+      },
+      {
+        "id": "nominate-executive-officials",
+        "label": "Nominate executive officials",
+        "aliases": [
+          "appoint cabinet members",
+          "appoint department heads",
+          "nominate cabinet secretaries"
+        ],
+        "basePoints": 60,
+        "explanation": "Nominate executive officials."
+      },
+      {
+        "id": "negotiate-treaties",
+        "label": "Negotiate treaties",
+        "aliases": [
+          "treaty",
+          "make treaties",
+          "negotiate a treaty"
+        ],
+        "basePoints": 40,
+        "explanation": "Negotiate treaties."
+      },
+      {
+        "id": "grant-federal-pardons",
+        "label": "Grant federal pardons",
+        "aliases": [
+          "pardon",
+          "pardons",
+          "grant pardons"
+        ],
+        "basePoints": 40,
+        "explanation": "Grant federal pardons."
+      },
+      {
+        "id": "issue-executive-orders",
+        "label": "Issue executive orders",
+        "aliases": [
+          "executive order",
+          "executive orders"
+        ],
+        "basePoints": 40,
+        "explanation": "Issue executive orders."
+      },
+      {
+        "id": "make-executive-agreements",
+        "label": "Make executive agreements",
+        "aliases": [
+          "executive agreement",
+          "executive agreements"
+        ],
+        "basePoints": 80,
+        "explanation": "Make executive agreements."
+      },
+      {
+        "id": "recommend-legislation",
+        "label": "Recommend legislation",
+        "aliases": [
+          "propose laws",
+          "propose policies",
+          "propose legislation",
+          "policy agenda"
+        ],
+        "basePoints": 60,
+        "explanation": "Recommend legislation."
+      },
+      {
+        "id": "give-the-state-of-the-union",
+        "label": "Give the State of the Union",
+        "aliases": [
+          "state of the union",
+          "SOTU",
+          "address congress"
+        ],
+        "basePoints": 60,
+        "explanation": "Give the State of the Union."
+      },
+      {
+        "id": "receive-ambassadors",
+        "label": "Receive ambassadors",
+        "aliases": [
+          "receive foreign diplomats",
+          "receive diplomats"
+        ],
+        "basePoints": 100,
+        "explanation": "Receive ambassadors."
+      },
+      {
+        "id": "call-congress-into-special-session",
+        "label": "Call Congress into special session",
+        "aliases": [
+          "call a special session",
+          "convene congress"
+        ],
+        "basePoints": 100,
+        "explanation": "Call Congress into special session."
+      }
+    ],
+    "difficulty": 1,
+    "family": "presidency",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://www.archives.gov/founding-docs/constitution-transcript",
+      "section": "Article II"
+    }
+  },
+  {
+    "id": "trivia-national-powers",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7",
+      "1.8"
+    ],
+    "prompt": "Name an enumerated power of Congress.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Tax",
+        "aliases": [
+          "taxation",
+          "taxing",
+          "levy taxes",
+          "collect taxes"
+        ],
+        "explanation": "Article I gives Congress the power to lay and collect taxes.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Borrow money",
+        "aliases": [
+          "borrowing",
+          "borrow"
+        ],
+        "explanation": "Congress may borrow money on the credit of the United States.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Coin money",
+        "aliases": [
+          "coin",
+          "coinage",
+          "mint money"
+        ],
+        "explanation": "Congress has the constitutional power to coin money and regulate its value.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Regulate interstate commerce",
+        "aliases": [
+          "regulate commerce",
+          "regulate trade",
+          "interstate commerce",
+          "commerce"
+        ],
+        "explanation": "Congress may regulate commerce among the states, with foreign nations, and with Indian tribes.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Declare war",
+        "aliases": [
+          "war",
+          "declaration of war"
+        ],
+        "explanation": "Congress has the power to declare war; the president commands the armed forces.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Raise and support armies",
+        "aliases": [
+          "raise an army",
+          "raise armies",
+          "fund the military",
+          "military funding",
+          "army"
+        ],
+        "explanation": "Congress raises and supports armies and controls military funding.",
+        "basePoints": 60
+      },
+      {
+        "id": "6",
+        "label": "Establish post offices",
+        "aliases": [
+          "post offices",
+          "postal service",
+          "post office"
+        ],
+        "explanation": "Congress can establish post offices and post roads.",
+        "basePoints": 60
+      },
+      {
+        "id": "navy",
+        "label": "Provide and maintain a navy",
+        "aliases": [
+          "navy",
+          "maintain navy",
+          "create a navy"
+        ],
+        "explanation": "Article I gives Congress the power to provide and maintain a navy.",
+        "basePoints": 80
+      },
+      {
+        "id": "naturalization",
+        "label": "Set naturalization rules",
+        "aliases": [
+          "naturalization",
+          "citizenship rules",
+          "set rules for citizenship"
+        ],
+        "explanation": "Congress sets uniform rules for becoming a U.S. citizen.",
+        "basePoints": 80
+      },
+      {
+        "id": "bankruptcy",
+        "label": "Set bankruptcy laws",
+        "aliases": [
+          "bankruptcy",
+          "bankruptcy laws"
+        ],
+        "explanation": "Congress can establish uniform bankruptcy laws.",
+        "basePoints": 80
+      },
+      {
+        "id": "patents",
+        "label": "Protect inventions and writings",
+        "aliases": [
+          "patents",
+          "copyrights",
+          "copyright",
+          "patent"
+        ],
+        "explanation": "Congress can secure limited exclusive rights for inventors and authors.",
+        "basePoints": 80
+      },
+      {
+        "id": "lower-courts",
+        "label": "Establish lower federal courts",
+        "aliases": [
+          "create courts",
+          "lower courts",
+          "federal courts"
+        ],
+        "explanation": "Congress can establish federal courts below the Supreme Court.",
+        "basePoints": 80
+      },
+      {
+        "id": "weights",
+        "label": "Set weights and measures",
+        "aliases": [
+          "weights and measures",
+          "weights",
+          "measures"
+        ],
+        "explanation": "Congress can set national standards for weights and measures.",
+        "basePoints": 100
+      },
+      {
+        "id": "counterfeiting",
+        "label": "Punish counterfeiting",
+        "aliases": [
+          "counterfeiting",
+          "punish counterfeiters"
+        ],
+        "explanation": "Congress can punish counterfeiting of U.S. securities and coin.",
+        "basePoints": 100
+      },
+      {
+        "id": "necessary-proper",
+        "label": "Make necessary and proper laws",
+        "aliases": [
+          "necessary and proper",
+          "necessary and proper clause",
+          "elastic clause"
+        ],
+        "explanation": "Congress can make laws needed to carry out its enumerated powers.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "congress",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-presidential-team",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4"
+    ],
+    "prompt": "Name part of the team that helps the president do the job.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Vice president",
+        "aliases": [
+          "vp"
+        ],
+        "explanation": "The vice president supports the president and may take on policy or diplomatic work.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Cabinet",
+        "aliases": [],
+        "explanation": "The vice president and heads of executive departments who advise the president; presidents may also give other officials Cabinet rank. Department heads direct work in their policy areas.",
+        "basePoints": 20
+      },
+      {
+        "id": "2",
+        "label": "Executive Office of the President",
+        "aliases": [
+          "eop",
+          "executive office"
+        ],
+        "explanation": "Offices that help the president with policy, budgets, and national security by bringing information together for presidential decisions.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "White House Staff",
+        "aliases": [],
+        "explanation": "Close presidential advisers who help manage the president’s schedule, choices, and public message. Many do not require Senate confirmation.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 1,
+    "family": "presidency",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 2 — The Presidential Toolbox"
+    }
+  },
+  {
+    "id": "trivia-founding-documents",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.1",
+      "1.3",
+      "1.4"
+    ],
+    "prompt": "Name a founding document or political essay from our lessons.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Declaration of Independence",
+        "aliases": [
+          "declaration"
+        ],
+        "explanation": "The 1776 document explaining why separation from Britain was justified: people possess natural rights, government needs their consent, and people may alter or abolish a government that repeatedly violates its purpose.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Articles of Confederation",
+        "aliases": [
+          "articles"
+        ],
+        "explanation": "The first U.S. constitution, which left most power with the states. Congress could handle national responsibilities but could not tax directly, regulate interstate commerce, or reliably enforce its decisions. Its formal title was the Articles of Confederation and Perpetual Union.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Constitution",
+        "aliases": [
+          "us constitution",
+          "united states constitution"
+        ],
+        "explanation": "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Brutus No. 1",
+        "aliases": [
+          "brutus",
+          "brutus 1",
+          "brutus one"
+        ],
+        "explanation": "An Anti-Federalist argument that a large republic would distance representatives from the people and that the Necessary and Proper and Supremacy Clauses could expand national power at the states’ expense.",
+        "basePoints": 60
+      },
+      {
+        "id": "bill-of-rights",
+        "label": "Bill of Rights",
+        "aliases": [
+          "first ten amendments"
+        ],
+        "basePoints": 20,
+        "explanation": "Bill of Rights."
+      },
+      {
+        "id": "federalist-no-10",
+        "label": "Federalist No. 10",
+        "aliases": [
+          "Federalist 10",
+          "Federalist paper 10",
+          "Fed 10"
+        ],
+        "basePoints": 40,
+        "explanation": "Federalist No. 10."
+      },
+      {
+        "id": "federalist-no-51",
+        "label": "Federalist No. 51",
+        "aliases": [
+          "Federalist 51",
+          "Federalist paper 51",
+          "Fed 51"
+        ],
+        "basePoints": 60,
+        "explanation": "Federalist No. 51."
+      },
+      {
+        "id": "federalist-no-70",
+        "label": "Federalist No. 70",
+        "aliases": [
+          "Federalist 70",
+          "Federalist paper 70",
+          "Fed 70"
+        ],
+        "basePoints": 80,
+        "explanation": "Federalist No. 70."
+      },
+      {
+        "id": "federalist-no-39",
+        "label": "Federalist No. 39",
+        "aliases": [
+          "Federalist 39",
+          "Federalist paper 39",
+          "Fed 39"
+        ],
+        "basePoints": 100,
+        "explanation": "Federalist No. 39."
+      }
+    ],
+    "difficulty": 1,
+    "family": "documents",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-articles-weaknesses",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a weakness of the Articles of Confederation.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "No independent taxing power",
+        "aliases": [
+          "could not tax",
+          "no taxes",
+          "cannot tax",
+          "no power to tax",
+          "taxation"
+        ],
+        "explanation": "Congress depended on state contributions rather than collecting national taxes directly.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "No power to regulate interstate commerce",
+        "aliases": [
+          "could not regulate trade",
+          "no commerce power",
+          "could not regulate commerce",
+          "trade",
+          "interstate commerce"
+        ],
+        "explanation": "Congress lacked a general power to regulate trade among the states.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "No separate national executive",
+        "aliases": [
+          "no executive",
+          "no president",
+          "lack of executive"
+        ],
+        "explanation": "There was no separate national executive branch to carry out Congress’s decisions.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "No general national judiciary",
+        "aliases": [
+          "no national courts",
+          "no federal courts",
+          "no judiciary"
+        ],
+        "explanation": "The Articles did not establish a general national court system to resolve federal legal disputes.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Unanimous consent to amend",
+        "aliases": [
+          "unanimity",
+          "unanimous amendments",
+          "all 13 states",
+          "13 states",
+          "unanimous consent"
+        ],
+        "explanation": "Changing the Articles required approval from all thirteen states, making reform difficult.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "articles",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-articles-could-do",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a power Congress had under the Articles of Confederation.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Declare war",
+        "aliases": [
+          "war",
+          "declaration of war"
+        ],
+        "explanation": "Congress could declare war even though it lacked dependable taxing and enforcement power.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Make peace",
+        "aliases": [
+          "peace"
+        ],
+        "explanation": "Congress could make peace.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Conduct foreign relations",
+        "aliases": [
+          "foreign relations",
+          "diplomacy"
+        ],
+        "explanation": "Congress could conduct foreign relations.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Coin money",
+        "aliases": [
+          "coinage",
+          "coin"
+        ],
+        "explanation": "Congress could coin money.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Request money",
+        "aliases": [
+          "request funds",
+          "ask states for money"
+        ],
+        "explanation": "Congress could request state contributions rather than collect taxes directly.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Request troops",
+        "aliases": [
+          "ask states for troops",
+          "request soldiers"
+        ],
+        "explanation": "Congress depended on the states when requesting troops.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "articles",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "2. The ARTICLES OF CONFEDERATION Protected the States"
+    }
+  },
+  {
+    "id": "trivia-articles-repairs",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a constitutional power or institution that addressed an Articles-era weakness.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Direct taxation",
+        "aliases": [
+          "taxation",
+          "tax",
+          "collect taxes"
+        ],
+        "explanation": "Congress gained power to collect taxes directly.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Regulate interstate commerce",
+        "aliases": [
+          "interstate commerce",
+          "commerce power"
+        ],
+        "explanation": "Congress gained power to address conflicting state trade rules.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Executive branch",
+        "aliases": [
+          "president",
+          "presidency"
+        ],
+        "explanation": "A separate president could carry out federal laws.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Federal courts",
+        "aliases": [
+          "national courts",
+          "judicial branch",
+          "judiciary"
+        ],
+        "explanation": "A national judiciary could resolve federal legal disputes.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Federal supremacy",
+        "aliases": [
+          "supremacy clause"
+        ],
+        "explanation": "Valid federal law took precedence over conflicting state law.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "articles",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "4. The Constitution Created Usable Power"
+    }
+  },
+  {
+    "id": "trivia-convention-plans",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.5"
+    ],
+    "prompt": "Name a representation plan or compromise from the Constitutional Convention.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Virginia Plan",
+        "aliases": [
+          "virginia"
+        ],
+        "explanation": "A plan of government calling for a three-branch government with a bicameral legislature, where more populous states would have more representation.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "New Jersey Plan",
+        "aliases": [
+          "new jersey"
+        ],
+        "explanation": "A plan of government that provided for a unicameral legislature with equal votes for each state.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Great Compromise",
+        "aliases": [
+          "connecticut compromise"
+        ],
+        "explanation": "The agreement creating a House with representation based on population and a Senate with two members from each state, resolving the large-state and small-state dispute.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "convention",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-government-levels",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a category of government power: national, state, or shared.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Delegated powers",
+        "aliases": [
+          "delegated",
+          "enumerated powers",
+          "enumerated",
+          "expressed powers",
+          "express powers",
+          "powers given to the federal government"
+        ],
+        "explanation": "Delegated powers belong to the national government. Enumerated powers are those expressly listed in the Constitution.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Reserved powers",
+        "aliases": [
+          "reserved",
+          "powers kept by the states"
+        ],
+        "explanation": "Powers neither delegated to the United States nor prohibited to states are reserved to the states or the people under the Tenth Amendment.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Concurrent powers",
+        "aliases": [
+          "concurrent",
+          "shared powers",
+          "powers shared by state and federal governments"
+        ],
+        "explanation": "Both national and state governments can exercise concurrent powers, such as taxation.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-federalism-forms",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7",
+      "1.9"
+    ],
+    "prompt": "Name a form of federalism from our course.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Dual Federalism",
+        "aliases": [
+          "dual"
+        ],
+        "explanation": "A form of American federalism in which the states and the nation operate independently in their own areas; \"layer cake.\"",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Cooperative Federalism",
+        "aliases": [
+          "cooperative"
+        ],
+        "explanation": "A form of American federalism in which the states and the national government work together; \"marble cake.\"",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Fiscal Federalism",
+        "aliases": [
+          "fiscal"
+        ],
+        "explanation": "The federal government's use of grants-in-aid to influence policies in the states.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-concurrent-examples",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a power both national and state governments can exercise.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Tax",
+        "aliases": [
+          "taxation",
+          "taxing"
+        ],
+        "explanation": "Both levels collect taxes.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Borrow money",
+        "aliases": [
+          "borrowing",
+          "borrow"
+        ],
+        "explanation": "Both levels can borrow money.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Create courts",
+        "aliases": [
+          "courts",
+          "establish courts"
+        ],
+        "explanation": "Both levels have court systems.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Make laws",
+        "aliases": [
+          "lawmaking",
+          "legislate"
+        ],
+        "explanation": "Both levels make laws within their authority.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Enforce laws",
+        "aliases": [
+          "law enforcement"
+        ],
+        "explanation": "Both levels carry out and enforce laws.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Spend for public purposes",
+        "aliases": [
+          "spending",
+          "spend"
+        ],
+        "explanation": "Both levels spend to carry out public responsibilities.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "2. The Constitutional Power Map"
+    }
+  },
+  {
+    "id": "trivia-reserved-examples",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a responsibility state governments commonly handle.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Education",
+        "aliases": [
+          "schools",
+          "public education"
+        ],
+        "explanation": "States have a major role in education, even though federal authority can also affect schools.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Professional licensing",
+        "aliases": [
+          "licensing",
+          "licenses"
+        ],
+        "explanation": "States license many professions.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Local government",
+        "aliases": [
+          "create local governments",
+          "local governments"
+        ],
+        "explanation": "States establish and structure local governments.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Public safety",
+        "aliases": [
+          "police",
+          "policing"
+        ],
+        "explanation": "States exercise broad public-safety responsibilities.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Election administration",
+        "aliases": [
+          "elections",
+          "administer elections"
+        ],
+        "explanation": "States administer elections subject to constitutional and federal legal requirements.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "2. The Constitutional Power Map"
+    }
+  },
+  {
+    "id": "trivia-national-policy-influence",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.9"
+    ],
+    "prompt": "Name a way the national government influences state policy.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Categorical Grants",
+        "aliases": [
+          "categorical grant",
+          "categorical",
+          "money for a specific purpose",
+          "grants for specific purposes"
+        ],
+        "explanation": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Block Grants",
+        "aliases": [
+          "block grant",
+          "block",
+          "money for a broad purpose",
+          "grants for broad purposes"
+        ],
+        "explanation": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Federal Mandate",
+        "aliases": [
+          "mandates",
+          "mandate"
+        ],
+        "explanation": "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Unfunded Mandate",
+        "aliases": [
+          "unfunded mandates",
+          "a requirement without funding",
+          "federal requirement without funding"
+        ],
+        "explanation": "A federal requirement without enough federal money to cover its cost.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "federalism",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "5. Money Connected the Levels"
+    }
+  },
+  {
+    "id": "trivia-federalism-access-points",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.9"
+    ],
+    "prompt": "Name an institution people can approach to influence public policy.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Congress",
+        "aliases": [],
+        "explanation": "People can seek federal legislation through Congress.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Federal agencies",
+        "aliases": [
+          "federal agency"
+        ],
+        "explanation": "People can seek action from agencies implementing national law.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Federal courts",
+        "aliases": [
+          "federal court"
+        ],
+        "explanation": "People can bring appropriate legal claims in federal court.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Governor",
+        "aliases": [
+          "governors"
+        ],
+        "explanation": "People can seek action from a state executive.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "State legislature",
+        "aliases": [
+          "state legislatures"
+        ],
+        "explanation": "People can seek state laws through elected state legislators.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "State agencies",
+        "aliases": [
+          "state agency"
+        ],
+        "explanation": "People can seek action from state administrative institutions.",
+        "basePoints": 60
+      },
+      {
+        "id": "6",
+        "label": "State courts",
+        "aliases": [
+          "state court"
+        ],
+        "explanation": "People can bring appropriate legal claims in state court.",
+        "basePoints": 60
+      },
+      {
+        "id": "7",
+        "label": "Local government",
+        "aliases": [
+          "local governments",
+          "city council",
+          "county government"
+        ],
+        "explanation": "People can seek policy changes through local institutions.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "access",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "7. FEDERALISM in Action"
+    }
+  },
+  {
+    "id": "trivia-committee-types",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a type of congressional committee or committee arrangement.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Standing Committee",
+        "aliases": [
+          "standing"
+        ],
+        "explanation": "A permanent legislative group focused on a policy area. It holds hearings, gathers information, and studies and revises bills before a chamber votes.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Conference Committee",
+        "aliases": [
+          "conference"
+        ],
+        "explanation": "Members from both chambers who may negotiate a compromise when the House and Senate pass different bill versions. Each chamber must then approve the same final text.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "House Rules Committee",
+        "aliases": [
+          "rules committee",
+          "house rules"
+        ],
+        "explanation": "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Committee of the Whole",
+        "aliases": [
+          "whole"
+        ],
+        "explanation": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
+        "basePoints": 60
+      },
+      {
+        "id": "select-committee",
+        "label": "Select committee",
+        "aliases": [
+          "select",
+          "special committee",
+          "special"
+        ],
+        "explanation": "A temporary committee formed for a particular issue or investigation.",
+        "basePoints": 80
+      },
+      {
+        "id": "joint-committee",
+        "label": "Joint committee",
+        "aliases": [
+          "joint"
+        ],
+        "explanation": "A committee with members from both the House and Senate.",
+        "basePoints": 80
+      }
+    ],
+    "difficulty": 2,
+    "family": "committees",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-congress-leaders",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.1",
+      "2.2"
+    ],
+    "prompt": "Name a congressional leadership position.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Speaker of the House",
+        "aliases": [
+          "speaker"
+        ],
+        "explanation": "The leader elected by the full House, usually with majority-party support, who directs legislative work and helps set the agenda.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "House Majority Leader",
+        "aliases": [],
+        "explanation": "A leader of the House majority party who helps set its legislative priorities and build support for bills.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Senate Majority Leader",
+        "aliases": [],
+        "explanation": "The elected leader of the Senate's majority party, who helps set the chamber's schedule and legislative priorities.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Whip",
+        "aliases": [
+          "party whip",
+          "majority whip",
+          "minority whip"
+        ],
+        "explanation": "A party leader who counts votes and encourages members to support the party’s position.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "President Pro Tempore",
+        "aliases": [
+          "president pro tem",
+          "pro tempore",
+          "pro tem"
+        ],
+        "explanation": "The senator who acts in the absence of the vice president; usually the most senior senator of the majority party.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "congress-leadership",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-congress-representation",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a model for how representatives decide to vote.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Delegate Model of Representation",
+        "aliases": [
+          "delegate",
+          "delegate model",
+          "vote as constituents want",
+          "follow constituent preferences"
+        ],
+        "explanation": "An approach in which a representative follows constituents’ preferences, acting as their agent.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Trustee Model of Representation",
+        "aliases": [
+          "trustee",
+          "trustee model",
+          "use their own judgment",
+          "use personal judgment"
+        ],
+        "explanation": "An approach in which a representative uses independent judgment, even when some constituents disagree.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Politico Model of Representation",
+        "aliases": [
+          "politico",
+          "politico model",
+          "combine delegate and trustee",
+          "mix delegate and trustee models"
+        ],
+        "explanation": "An approach combining delegate and trustee behavior, changing emphasis with the issue or situation rather than following one fixed rule.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "representation",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-representative-pressures",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a pressure that can influence a member of Congress’s vote.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Constituents",
+        "aliases": [
+          "constituency",
+          "voters",
+          "district interests"
+        ],
+        "explanation": "Members consider the people they represent.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Personal judgment",
+        "aliases": [
+          "own judgment",
+          "independent judgment"
+        ],
+        "explanation": "Members may use their own assessment of the public interest.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Reelection",
+        "aliases": [
+          "election",
+          "winning reelection"
+        ],
+        "explanation": "Members consider whether their choices help or hurt their chances of remaining in office.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Party goals",
+        "aliases": [
+          "party",
+          "party leadership"
+        ],
+        "explanation": "Party priorities may conflict with local preferences.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "representation",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Part 4 — Interfering Interests"
+    }
+  },
+  {
+    "id": "trivia-budget-categories",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a major category of federal spending.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Mandatory Spending",
+        "aliases": [
+          "mandatory"
+        ],
+        "explanation": "Spending that follows existing law, including programs such as Social Security, Medicare, and Medicaid. Congress must change the law to alter those commitments; they are not a permanently fixed share of the budget.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Discretionary Spending",
+        "aliases": [
+          "discretionary"
+        ],
+        "explanation": "Spending set through annual appropriations, including funding for defense, education, and infrastructure.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Net Interest",
+        "aliases": [
+          "interest",
+          "interest payments"
+        ],
+        "explanation": "The federal government’s net cost of borrowing, which affects the money available for other budget choices.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "budget",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-bill-stopping-points",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a point where a bill can be stopped before becoming law.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Committee",
+        "aliases": [
+          "committee rejection",
+          "committee inaction"
+        ],
+        "explanation": "A committee may refuse to advance a bill.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "House floor",
+        "aliases": [
+          "house vote",
+          "house rejection"
+        ],
+        "explanation": "The full House may reject the proposal.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Senate floor",
+        "aliases": [
+          "senate vote",
+          "senate rejection"
+        ],
+        "explanation": "The Senate may reject or fail to advance a proposal.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Presidential veto",
+        "aliases": [
+          "veto"
+        ],
+        "explanation": "A regular veto blocks enactment unless both chambers override it.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "lawmaking",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Part 3 — Easier Said Than Done"
+    }
+  },
+  {
+    "id": "trivia-cooperation-obstacles",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a political condition that can make cooperation between the branches harder.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Divided Government",
+        "aliases": [
+          "different parties control congress and the presidency",
+          "opposing parties control the branches"
+        ],
+        "explanation": "A situation in which one party controls the presidency and another controls at least one chamber of Congress. It can make cooperation harder but does not make agreement impossible.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Polarization",
+        "aliases": [
+          "parties move further apart",
+          "growing ideological distance between parties"
+        ],
+        "explanation": "The widening ideological distance between parties, which can make compromise and agreement harder.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Lame Duck Period",
+        "aliases": [
+          "lame duck",
+          "lame duck presidency"
+        ],
+        "explanation": "A period when a president is leaving office without another term ahead, such as after a successor is elected or when the president will not seek reelection. Lawmakers may become less responsive as they look toward the next president.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "cooperation",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Part 5 — The Public Good"
+    }
+  },
+  {
+    "id": "trivia-tools",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4",
+      "2.5"
+    ],
+    "prompt": "Name a presidential tool for carrying out policy.",
+    "hint": "Name one thing that fits.",
+    "href": "presidential-tools.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Regular veto",
+        "aliases": [
+          "veto",
+          "reject a bill",
+          "rejecting a bill",
+          "reject a bill and return it to congress",
+          "presidential veto"
+        ],
+        "explanation": "The president rejects a bill and returns it to Congress. Two-thirds of each chamber can override the veto.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Pocket veto",
+        "aliases": [
+          "leaving a bill unsigned when congress prevents its return",
+          "pocket veto power"
+        ],
+        "explanation": "A bill fails after 10 days, excluding Sundays, if Congress’s adjournment prevents its return and the president has not signed it.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Treaty",
+        "aliases": [
+          "treaties",
+          "formal international agreement",
+          "formal agreement with another country"
+        ],
+        "explanation": "The president negotiates a formal international agreement; two-thirds of senators present must consent before presidential ratification.",
+        "basePoints": 20
+      },
+      {
+        "id": "3",
+        "label": "Executive agreement",
+        "aliases": [
+          "international agreement without a senate treaty vote",
+          "agreement without senate treaty approval"
+        ],
+        "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Executive order",
+        "aliases": [
+          "written instructions to executive officials",
+          "written directions to executive agencies"
+        ],
+        "explanation": "Written directions to executive officials must follow existing law and stay within presidential authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "5",
+        "label": "Signing statement",
+        "aliases": [
+          "statement when signing a law",
+          "explains how the president interprets a law"
+        ],
+        "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law.",
+        "basePoints": 60
+      },
+      {
+        "id": "6",
+        "label": "Bargaining and persuasion",
+        "aliases": [
+          "bargaining",
+          "persuasion",
+          "negotiating with lawmakers",
+          "negotiation and persuasion",
+          "persuading congress"
+        ],
+        "explanation": "Presidents negotiate for support. Lawmakers still choose how to vote.",
+        "basePoints": 60
+      },
+      {
+        "id": "7",
+        "label": "Bully pulpit",
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
+        "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation.",
+        "basePoints": 20
+      }
+    ],
+    "difficulty": 2,
+    "family": "presidency",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-congress-checks-president",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.5"
+    ],
+    "prompt": "Name a way Congress can check the president.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Override a veto",
+        "aliases": [
+          "veto override",
+          "override veto",
+          "overriding a veto",
+          "overrule a presidential veto"
+        ],
+        "explanation": "Two-thirds of each chamber can override a regular presidential veto.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Power of the Purse",
+        "aliases": [
+          "funding",
+          "appropriations",
+          "withhold funding",
+          "control funding",
+          "control government spending",
+          "control the money",
+          "control appropriations"
+        ],
+        "explanation": "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Oversight",
+        "aliases": [
+          "investigate",
+          "investigations",
+          "congressional investigations",
+          "monitor executive agencies",
+          "investigating the executive branch"
+        ],
+        "explanation": "Efforts by Congress to ensure executive branch agencies and officials are acting legally and in accordance with congressional goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Impeachment",
+        "aliases": [
+          "impeach",
+          "impeach the president",
+          "bringing charges against an official",
+          "charge the president with misconduct"
+        ],
+        "explanation": "The House can impeach the president; conviction and removal require a two-thirds vote of senators present in a Senate trial.",
+        "basePoints": 20
+      },
+      {
+        "id": "4",
+        "label": "Senate Confirmation",
+        "aliases": [
+          "confirmation",
+          "reject nominees",
+          "reject appointments",
+          "confirmation of appointments",
+          "senate approval of appointments",
+          "approve presidential nominees"
+        ],
+        "explanation": "The Senate's approval of many presidential nominees, including Cabinet officers, ambassadors, and federal judges.",
+        "basePoints": 60
+      },
+      {
+        "id": "5",
+        "label": "Consent to treaties",
+        "aliases": [
+          "treaty consent",
+          "treaty approval",
+          "reject treaties",
+          "approve a treaty",
+          "approving treaties",
+          "senate treaty approval"
+        ],
+        "explanation": "Treaties require consent from two-thirds of senators present before the president ratifies them.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "checks",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-presidential-communication",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.7"
+    ],
+    "prompt": "Name a way presidents communicate or build public support.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "State of the Union Address",
+        "aliases": [
+          "state of the union",
+          "sotu"
+        ],
+        "explanation": "The modern presidential address that informs Congress about national affairs, recommends measures, and communicates policy priorities to the public. The Constitution requires information and recommendations, not a particular speech format.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Bully Pulpit",
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
+        "explanation": "Use public attention to highlight issues and build support for proposals. Public support does not guarantee action; Congress still decides whether to pass legislation.",
+        "basePoints": 20
+      },
+      {
+        "id": "2",
+        "label": "Going Public",
+        "aliases": [
+          "go public"
+        ],
+        "explanation": "A tactic through which presidents reach out directly to the American people to pressure Congress on policy goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Agenda Setting",
+        "aliases": [
+          "setting the agenda"
+        ],
+        "explanation": "Influencing which problems officials and the public treat as priorities. A presidential address can draw attention to a proposal without itself making the proposal law.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "communication",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-power-expansion-forces",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name something that has contributed to the growth of presidential power.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Crises",
+        "aliases": [
+          "crisis",
+          "emergencies"
+        ],
+        "explanation": "Crises can create pressure for fast presidential action.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "International responsibilities",
+        "aliases": [
+          "foreign affairs",
+          "international affairs"
+        ],
+        "explanation": "International responsibilities can encourage a stronger executive role.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Public expectations",
+        "aliases": [
+          "expectations"
+        ],
+        "explanation": "The public may expect the president to solve national problems.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Larger executive branch",
+        "aliases": [
+          "growth of executive branch",
+          "bigger executive branch"
+        ],
+        "explanation": "A larger executive organization provides more capacity for presidential action.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Congressional delegation",
+        "aliases": [
+          "delegation",
+          "broad laws"
+        ],
+        "explanation": "Broad laws can give the executive room to choose implementation details.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "presidency",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 4 — The Expanding Presidency"
+    }
+  },
+  {
+    "id": "trivia-energy-purposes",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name a responsibility Hamilton connected with executive energy.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "National defense",
+        "aliases": [
+          "defense",
+          "defend the nation",
+          "protecting the nation",
+          "defending the country"
+        ],
+        "explanation": "Energy helps government respond when the country faces attack.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Enforcing laws",
+        "aliases": [
+          "enforce laws",
+          "law enforcement",
+          "carrying out the laws",
+          "execute the laws",
+          "faithful execution of laws"
+        ],
+        "explanation": "Energy helps government carry federal law into effect.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Protecting property",
+        "aliases": [
+          "property",
+          "property rights",
+          "protection of property",
+          "protect property rights"
+        ],
+        "explanation": "Energy supports protection of people’s possessions and property rights.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Securing liberty",
+        "aliases": [
+          "liberty",
+          "freedom",
+          "protecting rights",
+          "protecting liberty",
+          "secure freedom"
+        ],
+        "explanation": "Energy can help protect people’s freedom and rights.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "hamilton",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "WHY GOVERNMENT NEEDS ENERGY"
+    }
+  },
+  {
+    "id": "trivia-participation-inequality",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a resource that can make political influence unequal.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Time",
+        "aliases": [
+          "free time"
+        ],
+        "explanation": "People differ in how much time they can spend participating.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Information",
+        "aliases": [
+          "knowledge"
+        ],
+        "explanation": "Access to political information can affect participation.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Money",
+        "aliases": [
+          "financial resources",
+          "wealth",
+          "resources"
+        ],
+        "explanation": "Money can support organizing, advocacy, and access.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Access",
+        "aliases": [
+          "institutional access",
+          "connections"
+        ],
+        "explanation": "Some people and groups have more direct access to decision makers.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Organization",
+        "aliases": [
+          "organizational resources"
+        ],
+        "explanation": "Organized groups can coordinate action more effectively.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "participation",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "2. PARTICIPATORY DEMOCRACY"
+    }
+  },
+  {
+    "id": "trivia-elite-actors",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a type of person or group with political influence.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Elected leaders",
+        "aliases": [
+          "elected officials",
+          "politicians"
+        ],
+        "explanation": "Elected leaders can filter which proposals receive official consideration.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Wealthy donors",
+        "aliases": [
+          "donors",
+          "wealthy people"
+        ],
+        "explanation": "Financial resources can increase political access and influence.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Major organizations",
+        "aliases": [
+          "large organizations"
+        ],
+        "explanation": "Large organizations can have resources and institutional access unavailable to ordinary individuals.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Policy experts",
+        "aliases": [
+          "experts"
+        ],
+        "explanation": "Specialized knowledge can give policy experts influence.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Party leaders",
+        "aliases": [
+          "party leadership"
+        ],
+        "explanation": "Party leaders can help decide which proposals reach the legislative agenda.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 2,
+    "family": "political-groups",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "4. ELITE DEMOCRACY"
+    }
+  },
+  {
+    "id": "trivia-energy",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name an ingredient of executive energy in Federalist No. 70.",
+    "hint": "Name one thing that fits.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Unity",
+        "aliases": [
+          "one president",
+          "single executive",
+          "one executive",
+          "single president",
+          "one person leads the executive branch",
+          "a single person leads the executive",
+          "leadership by one president"
+        ],
+        "explanation": "One president leads the executive branch. Advisers help, but do not share equal executive authority.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Duration",
+        "aliases": [
+          "time in office",
+          "tenure",
+          "term in office",
+          "enough time in office",
+          "time to carry out plans",
+          "a long enough term"
+        ],
+        "explanation": "A president needs time in office to carry out decisions and follow through on plans.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Adequate support",
+        "aliases": [
+          "financial support",
+          "adequate provision for its support",
+          "salary",
+          "compensation",
+          "financial independence",
+          "reliable financial support",
+          "enough financial support",
+          "a reliable salary",
+          "financial resources"
+        ],
+        "explanation": "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Competent powers",
+        "aliases": [
+          "sufficient legal authority",
+          "competent power",
+          "sufficient powers",
+          "legal authority",
+          "enough legal authority",
+          "enough authority to do the job",
+          "sufficient authority",
+          "powers suited to the job"
+        ],
+        "explanation": "The president needs enough legal authority to carry out the responsibilities of the office.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "hamilton",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-unity",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name an advantage Hamilton associated with one president.",
+    "hint": "Name one thing that fits.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Decision",
+        "aliases": [
+          "decisiveness",
+          "choosing a course of action",
+          "making a decision",
+          "choose a course of action",
+          "choosing what to do"
+        ],
+        "explanation": "Choosing a course of action.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Activity",
+        "aliases": [
+          "action",
+          "putting decisions into action",
+          "carrying out decisions",
+          "putting a decision into action",
+          "put a choice into action"
+        ],
+        "explanation": "Putting that choice into action.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Secrecy",
+        "aliases": [
+          "confidentiality",
+          "keeping plans confidential",
+          "keeping sensitive plans confidential",
+          "keep sensitive plans secret"
+        ],
+        "explanation": "Keeping sensitive plans confidential when necessary.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Dispatch",
+        "aliases": [
+          "despatch",
+          "prompt action",
+          "speed",
+          "acting promptly",
+          "acting quickly",
+          "act promptly",
+          "quick action",
+          "acting without delay"
+        ],
+        "explanation": "Acting promptly when delay could cause harm.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "hamilton",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-senate-debate",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a Senate procedure used to delay, end, or organize debate.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Filibuster",
+        "aliases": [
+          "extend debate to delay a vote",
+          "prolonging senate debate",
+          "delaying a vote through debate"
+        ],
+        "explanation": "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Cloture",
+        "aliases": [
+          "end senate debate",
+          "ending debate",
+          "vote to end debate"
+        ],
+        "explanation": "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Hold",
+        "aliases": [],
+        "explanation": "A senator’s signal that they may object to a unanimous-consent request, potentially delaying action.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Unanimous Consent Agreement",
+        "aliases": [
+          "unanimous consent"
+        ],
+        "explanation": "A Senate agreement to proceed without objection, often used to bring up bills and manage debate.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "congress-procedures",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-house-floor-tools",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a House procedure or committee that affects how bills reach a vote.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "House Rules Committee",
+        "aliases": [],
+        "explanation": "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Committee of the Whole",
+        "aliases": [
+          "whole"
+        ],
+        "explanation": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Discharge Petition",
+        "aliases": [
+          "discharge"
+        ],
+        "explanation": "A way to bring a bill out of a House committee with signatures from a majority of House members. It is difficult to use and does not itself pass the bill.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "congress-procedures",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "HOUSE FLOOR RULES"
+    }
+  },
+  {
+    "id": "trivia-house-senate",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.1"
+    ],
+    "prompt": "Name a power the Senate has that the House does not.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Confirm appointments",
+        "aliases": [
+          "confirmation",
+          "confirm presidential appointments",
+          "confirm nominees",
+          "confirmation of appointments",
+          "advice and consent on appointments",
+          "approve appointments",
+          "approving nominees",
+          "confirming presidential nominees"
+        ],
+        "explanation": "The Senate provides advice and consent on presidential nominations to offices that require confirmation.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Consent to treaties",
+        "aliases": [
+          "approve treaties",
+          "ratify treaties",
+          "treaty approval",
+          "treaty ratification",
+          "approve a treaty",
+          "approving treaties",
+          "senate treaty approval"
+        ],
+        "explanation": "Two-thirds of senators present must consent to a treaty before the president ratifies it.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Try impeachments",
+        "aliases": [
+          "impeachment trial",
+          "hold impeachment trials",
+          "try impeachment",
+          "convict impeached officials",
+          "conviction",
+          "conduct impeachment trials",
+          "hold an impeachment trial"
+        ],
+        "explanation": "The House impeaches; the Senate holds the trial. Conviction requires two-thirds of senators present.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "chamber-powers",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-house-only",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.1"
+    ],
+    "prompt": "Name a power the House has that the Senate does not.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Impeachment",
+        "aliases": [
+          "impeach",
+          "impeach officials",
+          "impeach the president",
+          "bring impeachment charges",
+          "bringing charges against an official",
+          "charge the president with misconduct"
+        ],
+        "explanation": "The House brings formal charges. Impeachment alone does not remove an official; conviction in a Senate trial does.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Originate revenue bills",
+        "aliases": [
+          "revenue bills",
+          "initiate revenue bills",
+          "tax bills",
+          "origination of revenue bills",
+          "introduce tax bills",
+          "start revenue bills"
+        ],
+        "explanation": "Bills for raising revenue must begin in the House. The Senate may propose amendments.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Choose the president in a contingent election",
+        "aliases": [
+          "choose president",
+          "elect the president",
+          "contingent election",
+          "choose the president"
+        ],
+        "explanation": "If no candidate wins an Electoral College majority, the House chooses the president from the top three, with each state delegation casting one vote.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "chamber-powers",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-federalism-clauses",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7",
+      "1.8"
+    ],
+    "prompt": "Name a clause or amendment that helps define national and state power.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Supremacy Clause",
+        "aliases": [
+          "supremacy"
+        ],
+        "explanation": "The Constitution, valid federal laws, and treaties take precedence over conflicting state law. Federal action must rest on constitutional authority to be supreme.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Necessary and Proper Clause",
+        "aliases": [
+          "elastic clause",
+          "necessary and proper"
+        ],
+        "explanation": "The clause allowing Congress to choose reasonable means to carry out its enumerated powers. It supports implied powers, not a general power to legislate on any subject.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Commerce Clause",
+        "aliases": [
+          "commerce"
+        ],
+        "explanation": "The clause giving Congress authority to regulate interstate commerce. Courts interpret how closely an activity must connect to commerce across state lines.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Tenth Amendment",
+        "aliases": [
+          "10th amendment",
+          "10th",
+          "tenth",
+          "amendment 10",
+          "amendment ten"
+        ],
+        "explanation": "The amendment reserving powers not delegated to the United States and not prohibited to the states to the states or the people. It does not cancel powers actually granted to the national government.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "constitutional-text",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-districting-terms",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a term about seats, district populations, or drawing district boundaries.",
+    "hint": "Name one thing that fits.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Apportionment",
+        "aliases": [
+          "reapportionment",
+          "allocating seats among states",
+          "distributing house seats among states"
+        ],
+        "explanation": "The process of determining the number of representatives for each state using census data.",
+        "basePoints": 60
+      },
+      {
+        "id": "1",
+        "label": "Redistricting",
+        "aliases": [
+          "redrawing district lines",
+          "redraw district boundaries",
+          "drawing new district boundaries"
+        ],
+        "explanation": "Redrawing electoral district boundaries within a state, usually after the census. State legislatures or commissions handle the process under rules that vary by state.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Malapportionment",
+        "aliases": [
+          "unequal district populations",
+          "districts with unequal populations"
+        ],
+        "explanation": "Unequal populations across legislative districts that give voters in less-populated districts more representation per person.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Gerrymandering",
+        "aliases": [
+          "drawing districts to favor a group",
+          "manipulating district lines for an advantage"
+        ],
+        "explanation": "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering.",
+        "basePoints": 60
+      }
+    ],
+    "difficulty": 3,
+    "family": "districting",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Lesson concepts and linked course references"
+    }
+  },
+  {
+    "id": "trivia-districting-cases",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a Supreme Court case about districting or unequal representation.",
+    "hint": "Name one thing that fits.",
+    "href": "cases/baker-v-carr.html",
+    "answers": [
+      {
+        "id": "baker-v-carr",
+        "label": "Baker v. Carr",
+        "aliases": [
+          "Baker",
+          "Baker Carr",
+          "Baker versus Carr",
+          "Baker v. Carr 1962",
+          "Baker 1962"
+        ],
+        "basePoints": 20,
+        "explanation": "Federal courts could hear the equal-protection challenge to unequal representation."
+      },
+      {
+        "id": "shaw-v-reno",
+        "label": "Shaw v. Reno",
+        "aliases": [
+          "Shaw",
+          "Shaw Reno",
+          "Shaw versus Reno",
+          "Shaw v. Reno 1993",
+          "Shaw 1993"
+        ],
+        "basePoints": 20,
+        "explanation": "Voters could pursue their equal-protection challenge to race-based districting."
+      },
+      {
+        "id": "reynolds-v-sims",
+        "label": "Reynolds v. Sims",
+        "aliases": [
+          "Reynolds",
+          "Reynolds Sims",
+          "Reynolds v. Sims 1964",
+          "Reynolds 1964"
+        ],
+        "basePoints": 60,
+        "explanation": "A later case established the population rule for state legislative districts."
+      },
+      {
+        "id": "wesberry-v-sanders",
+        "label": "Wesberry v. Sanders",
+        "aliases": [
+          "Wesberry",
+          "Wesberry Sanders",
+          "Wesberry v. Sanders 1964",
+          "Wesberry 1964"
+        ],
+        "basePoints": 80,
+        "explanation": "This case concerned population equality in congressional districts."
+      }
+    ],
+    "difficulty": 3,
+    "family": "districting",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://www.fjc.gov/history/cases/cases-that-shaped-the-federal-courts/baker-v-carr",
+      "section": "Baker and the later population cases"
+    }
+  },
+  {
+    "id": "trivia-course-cases",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a required Supreme Court case from Unit 1 or our districting lesson.",
+    "hint": "Name one thing that fits.",
+    "href": "unit2-cases.html",
+    "answers": [
+      {
+        "id": "baker-v-carr",
+        "label": "Baker v. Carr",
+        "aliases": [
+          "Baker",
+          "Baker Carr",
+          "Baker versus Carr"
+        ],
+        "basePoints": 20,
+        "explanation": "Federal courts could hear the equal-protection challenge to unequal representation."
+      },
+      {
+        "id": "shaw-v-reno",
+        "label": "Shaw v. Reno",
+        "aliases": [
+          "Shaw",
+          "Shaw Reno",
+          "Shaw versus Reno"
+        ],
+        "basePoints": 20,
+        "explanation": "Voters could pursue their equal-protection challenge to race-based districting."
+      },
+      {
+        "id": "mcculloch-v-maryland",
+        "label": "McCulloch v. Maryland",
+        "aliases": [
+          "McCulloch",
+          "McCulloch Maryland"
+        ],
+        "basePoints": 40,
+        "explanation": "McCulloch v. Maryland."
+      },
+      {
+        "id": "united-states-v-lopez",
+        "label": "United States v. Lopez",
+        "aliases": [
+          "Lopez",
+          "US v Lopez",
+          "United States Lopez"
+        ],
+        "basePoints": 60,
+        "explanation": "United States v. Lopez."
+      }
+    ],
+    "difficulty": 3,
+    "family": "cases",
+    "kind": "trivia-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "Lesson concepts and linked course references"
+    }
+  }
+]
