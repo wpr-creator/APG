@@ -1099,7 +1099,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Executive Order",
-          "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have.",
+          "Give executive officials written directions for carrying out government work. Must follow existing law. Courts can block orders that exceed presidential authority.",
           [
             "2.3"
           ]
@@ -1113,14 +1113,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Executive Agreement",
-          "An international agreement made without the Senate’s treaty-approval vote. It remains subject to the president’s legal authority and may depend on cooperation or funding.",
+          "Make an agreement with another country without the Senate’s two-thirds treaty vote. Must rely on authority from the Constitution, a law, or an earlier treaty. Congress controls needed funding.",
           [
             "2.3"
           ]
         ],
         [
           "Bully Pulpit",
-          "The president’s prominent public platform for drawing attention to an issue and building support for an agenda. Attention alone does not pass a law.",
+          "Use public attention to highlight issues and build support for proposals. Public support does not guarantee action; Congress still decides whether to pass legislation.",
           [
             "2.3"
           ]
@@ -1134,14 +1134,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Veto",
-          "Formal rejection by the president of a bill that has passed both houses of Congress.",
+          "Reject a bill and return it to Congress with reasons. Congress can override the veto with a two-thirds vote in each chamber.",
           [
             "2.3"
           ]
         ],
         [
           "Pocket Veto",
-          "A veto that occurs when the president does not sign a bill within ten days (excluding Sundays) and Congress adjourns so the bill cannot be returned; the bill does not become law and Congress cannot override this veto.",
+          "Leave a bill unsigned for 10 days, excluding Sundays, while Congress’s absence prevents its return. The bill fails. Congress cannot override it; lawmakers must pass the bill again. If the bill can be returned, inaction makes it law after 10 days.",
           [
             "2.3"
           ]
@@ -1162,7 +1162,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Signing Statement",
-          "A written explanation issued when the president signs a bill, often describing how the administration interprets or plans to implement it. It does not rewrite the law.",
+          "Explain how the administration interprets or plans to carry out a law when signing it. Does not change the law or remove its requirements.",
           [
             "2.3"
           ]
@@ -1211,7 +1211,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Informal Powers",
-          "Presidential tools developed through political practice and relationships, such as bargaining, executive agreements, and signing statements. They do not permit the president to ignore the law.",
+          "Ways presidents influence government through political practice, such as negotiating with lawmakers or asking the public to support a proposal.",
           [
             "2.3"
           ]
@@ -1225,7 +1225,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Formal Powers",
-          "Presidential powers whose basic authority is written into the Constitution, including vetoes, commander-in-chief authority, and treaty-making.",
+          "Powers the Constitution gives the president, such as rejecting bills and commanding the armed forces.",
           [
             "2.3"
           ]
@@ -1253,7 +1253,7 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Treaty",
-          "A formal agreement with another nation negotiated by the president that requires approval by two-thirds of senators present.",
+          "Negotiate a formal agreement with another country. Two-thirds of senators present must consent before the president formally approves it.",
           [
             "2.3"
           ]
@@ -1267,14 +1267,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Commander in Chief",
-          "The president’s role leading the armed forces. Congress retains its powers to declare war, authorize action, and fund the military.",
+          "The president leads the U.S. armed forces and directs military operations. Congress has the power to declare war and control military funding.",
           [
             "2.4"
           ]
         ],
         [
           "Bargaining and Persuasion",
-          "Informal presidential tools for seeking support from lawmakers or other officials. They can help advance an agenda but cannot force another branch to agree.",
+          "Negotiate with lawmakers and seek their support for proposals. Lawmakers choose how to vote; the president cannot command their support.",
           [
             "2.4"
           ]
@@ -1369,6 +1369,41 @@ window.APG_GLOSSARY_UNITS = [
           "The White House official who helps communicate and defend the administration’s positions to the press and public.",
           [
             "2.7"
+          ]
+        ],
+        [
+          "Chief Executive",
+          "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Chief Diplomat",
+          "The president leads U.S. relations with other countries, working with foreign leaders and negotiating international agreements.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Legislative Leader",
+          "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Party Leader",
+          "The president promotes the goals of the president’s political party and helps its candidates win elections.",
+          [
+            "2.4"
+          ]
+        ],
+        [
+          "Head of State",
+          "The president represents the United States at ceremonies, celebrations, and moments of national mourning.",
+          [
+            "2.4"
           ]
         ]
       ],

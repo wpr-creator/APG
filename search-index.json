@@ -1704,7 +1704,7 @@
   {
     "type": "Term",
     "title": "Executive Order",
-    "detail": "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have.",
+    "detail": "Give executive officials written directions for carrying out government work. Must follow existing law. Courts can block orders that exceed presidential authority.",
     "url": "course-tools.html?glossary=Executive%20Order#words"
   },
   {
@@ -1716,13 +1716,13 @@
   {
     "type": "Term",
     "title": "Executive Agreement",
-    "detail": "An international agreement made without the Senate’s treaty-approval vote. It remains subject to the president’s legal authority and may depend on cooperation or funding.",
+    "detail": "Make an agreement with another country without the Senate’s two-thirds treaty vote. Must rely on authority from the Constitution, a law, or an earlier treaty. Congress controls needed funding.",
     "url": "course-tools.html?glossary=Executive%20Agreement#words"
   },
   {
     "type": "Term",
     "title": "Bully Pulpit",
-    "detail": "The president’s prominent public platform for drawing attention to an issue and building support for an agenda. Attention alone does not pass a law.",
+    "detail": "Use public attention to highlight issues and build support for proposals. Public support does not guarantee action; Congress still decides whether to pass legislation.",
     "url": "course-tools.html?glossary=Bully%20Pulpit#words"
   },
   {
@@ -1734,13 +1734,13 @@
   {
     "type": "Term",
     "title": "Veto",
-    "detail": "Formal rejection by the president of a bill that has passed both houses of Congress.",
+    "detail": "Reject a bill and return it to Congress with reasons. Congress can override the veto with a two-thirds vote in each chamber.",
     "url": "course-tools.html?glossary=Veto#words"
   },
   {
     "type": "Term",
     "title": "Pocket Veto",
-    "detail": "A veto that occurs when the president does not sign a bill within ten days (excluding Sundays) and Congress adjourns so the bill cannot be returned; the bill does not become law and Congress cannot override this veto.",
+    "detail": "Leave a bill unsigned for 10 days, excluding Sundays, while Congress’s absence prevents its return. The bill fails. Congress cannot override it; lawmakers must pass the bill again. If the bill can be returned, inaction makes it law after 10 days.",
     "url": "course-tools.html?glossary=Pocket%20Veto#words"
   },
   {
@@ -1758,7 +1758,7 @@
   {
     "type": "Term",
     "title": "Signing Statement",
-    "detail": "A written explanation issued when the president signs a bill, often describing how the administration interprets or plans to implement it. It does not rewrite the law.",
+    "detail": "Explain how the administration interprets or plans to carry out a law when signing it. Does not change the law or remove its requirements.",
     "url": "course-tools.html?glossary=Signing%20Statement#words"
   },
   {
@@ -1800,7 +1800,7 @@
   {
     "type": "Term",
     "title": "Informal Powers",
-    "detail": "Presidential tools developed through political practice and relationships, such as bargaining, executive agreements, and signing statements. They do not permit the president to ignore the law.",
+    "detail": "Ways presidents influence government through political practice, such as negotiating with lawmakers or asking the public to support a proposal.",
     "url": "course-tools.html?glossary=Informal%20Powers#words"
   },
   {
@@ -1812,7 +1812,7 @@
   {
     "type": "Term",
     "title": "Formal Powers",
-    "detail": "Presidential powers whose basic authority is written into the Constitution, including vetoes, commander-in-chief authority, and treaty-making.",
+    "detail": "Powers the Constitution gives the president, such as rejecting bills and commanding the armed forces.",
     "url": "course-tools.html?glossary=Formal%20Powers#words"
   },
   {
@@ -1824,7 +1824,7 @@
   {
     "type": "Term",
     "title": "Treaty",
-    "detail": "A formal agreement with another nation negotiated by the president that requires approval by two-thirds of senators present.",
+    "detail": "Negotiate a formal agreement with another country. Two-thirds of senators present must consent before the president formally approves it.",
     "url": "course-tools.html?glossary=Treaty#words"
   },
   {
@@ -1836,13 +1836,13 @@
   {
     "type": "Term",
     "title": "Commander in Chief",
-    "detail": "The president’s role leading the armed forces. Congress retains its powers to declare war, authorize action, and fund the military.",
+    "detail": "The president leads the U.S. armed forces and directs military operations. Congress has the power to declare war and control military funding.",
     "url": "course-tools.html?glossary=Commander%20in%20Chief#words"
   },
   {
     "type": "Term",
     "title": "Bargaining and Persuasion",
-    "detail": "Informal presidential tools for seeking support from lawmakers or other officials. They can help advance an agenda but cannot force another branch to agree.",
+    "detail": "Negotiate with lawmakers and seek their support for proposals. Lawmakers choose how to vote; the president cannot command their support.",
     "url": "course-tools.html?glossary=Bargaining%20and%20Persuasion#words"
   },
   {
@@ -1922,6 +1922,36 @@
     "title": "Press Secretary",
     "detail": "The White House official who helps communicate and defend the administration’s positions to the press and public.",
     "url": "course-tools.html?glossary=Press%20Secretary#words"
+  },
+  {
+    "type": "Term",
+    "title": "Chief Executive",
+    "detail": "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws.",
+    "url": "course-tools.html?glossary=Chief%20Executive#words"
+  },
+  {
+    "type": "Term",
+    "title": "Chief Diplomat",
+    "detail": "The president leads U.S. relations with other countries, working with foreign leaders and negotiating international agreements.",
+    "url": "course-tools.html?glossary=Chief%20Diplomat#words"
+  },
+  {
+    "type": "Term",
+    "title": "Legislative Leader",
+    "detail": "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals.",
+    "url": "course-tools.html?glossary=Legislative%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "Party Leader",
+    "detail": "The president promotes the goals of the president’s political party and helps its candidates win elections.",
+    "url": "course-tools.html?glossary=Party%20Leader#words"
+  },
+  {
+    "type": "Term",
+    "title": "Head of State",
+    "detail": "The president represents the United States at ceremonies, celebrations, and moments of national mourning.",
+    "url": "course-tools.html?glossary=Head%20of%20State#words"
   },
   {
     "type": "Term",

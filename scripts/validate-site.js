@@ -289,7 +289,7 @@ function validateSharedCourseExperience() {
     'styles-design-system.css',
     'voter-guide.css?v=20261103-ballot-moved',
     'course-data.js?v=20261117-presidential-roles',
-    'glossary-data.js?v=20261112-guided-notes',
+    'glossary-data.js?v=20261119-presidential-definitions',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
@@ -575,7 +575,7 @@ function validateSharedCourseExperience() {
   });
   if (!unit2Terms.get('Line-Item Veto')?.includes('struck down the federal line-item veto in 1998') ||
       !unit2Terms.get('War Powers Resolution')?.includes('within 48 hours') ||
-      !unit2Terms.get('Pocket Veto')?.includes('cannot override this veto')) {
+      !/Congress cannot override (?:it|this veto)/i.test(unit2Terms.get('Pocket Veto') || '')) {
     errors.push('Unit 2 glossary needs accurate explanations of line-item, pocket, and war-powers rules.');
   }
   const unitTerms = glossaryUnits.map(function (unit) {
@@ -643,9 +643,9 @@ function validateSharedCourseExperience() {
     if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
-  if (!apTools.includes('data-core.js?v=20261007-canonical-glossary') ||
-      !apTools.includes('glossary-data.js?v=20261112-guided-notes') ||
-      apTools.indexOf('glossary-data.js?v=20261112-guided-notes') > apTools.indexOf('data-core.js?v=20261007-canonical-glossary') ||
+  if (!apTools.includes('data-core.js?v=20261119-presidential-definitions') ||
+      !apTools.includes('glossary-data.js?v=20261119-presidential-definitions') ||
+      apTools.indexOf('glossary-data.js?v=20261119-presidential-definitions') > apTools.indexOf('data-core.js?v=20261119-presidential-definitions') ||
       !dataCoreSource.includes('const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [')) {
     errors.push('AP study tools must load the canonical course glossary before their application data.');
   }
@@ -1722,7 +1722,7 @@ function validateUnit2WorksheetGlossary() {
     ['Appropriation', "A funding law that provides money for government agencies and programs. Budget targets alone do not fund agencies."],
     ['Logrolling', "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy."],
     ['Gridlock', "A lack of consensus that prevents Congress from acting on legislation. Polarization and divided government can contribute, but opposition does not always produce gridlock."],
-    ['Executive Order', "A directive to executive officials on how to carry out government work. It must rest on constitutional or statutory authority and cannot create a power the president does not have."],
+    ['Executive Order', "Give executive officials written directions for carrying out government work. Must follow existing law. Courts can block orders that exceed presidential authority."],
     ['Bureaucratic Adjudication', 'When the federal bureaucracy settles disputes between parties that arise over the implementation of federal laws.'],
     ['Judicial Review', 'The authority of the Supreme Court to strike down a law or executive action if it conflicts with the Constitution; established in Marbury v. Madison.']
   ];
