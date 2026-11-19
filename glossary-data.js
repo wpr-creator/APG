@@ -1302,14 +1302,14 @@ window.APG_GLOSSARY_UNITS = [
         ],
         [
           "Unity",
-          "In Federalist No. 70, having one executive who can choose a course without waiting for several executives to agree and whose responsibility the public can identify.",
+          "One president leads the executive branch. Advisers help, but do not share equal executive authority.",
           [
             "2.6"
           ]
         ],
         [
           "Accountability",
-          "Officials can be identified, questioned, and held responsible for their decisions.",
+          "Being answerable for official actions.",
           [
             "2.6"
           ]
@@ -1404,6 +1404,76 @@ window.APG_GLOSSARY_UNITS = [
           "The president represents the United States at ceremonies, celebrations, and moments of national mourning.",
           [
             "2.4"
+          ]
+        ],
+        [
+          "Duration",
+          "A president needs time in office to carry out decisions and follow through on plans.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Adequate Support",
+          "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Competent Powers",
+          "The president needs enough legal authority to carry out the responsibilities of the office.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Decision",
+          "Choosing a course of action.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Activity",
+          "Putting that choice into action.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Secrecy",
+          "Keeping sensitive plans confidential when necessary.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Dispatch",
+          "Acting promptly when delay could cause harm.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Executive Energy",
+          "The ability to make decisions and carry them out effectively.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Dependence on the people",
+          "Elections give the public a recurring voice in who leads. A president who loses public support may lose the opportunity for another term.",
+          [
+            "2.6"
+          ]
+        ],
+        [
+          "Responsibility for official conduct",
+          "People can examine and criticize presidential decisions. Serious misconduct can lead to investigation, impeachment by the House, and a Senate trial.",
+          [
+            "2.6"
           ]
         ]
       ],

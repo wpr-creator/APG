@@ -28,9 +28,27 @@ for (const row of read('presidential-roles.html').matchAll(/<tr\b[^>]*>([\s\S]*?
   if (title && definition) expected.set(plain(title[1]).toLowerCase(), plain(definition[1]));
 }
 assert.equal(expected.size, 16);
+const federalist = read('docs/federalist-70.html');
+for (const row of federalist.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/g)) {
+  const term = row[1].match(/<th scope="row">([\s\S]*?)<\/th>/);
+  const definition = row[1].match(/<td>([\s\S]*?)<\/td>/);
+  if (term && definition) expected.set(plain(term[1]).toLowerCase(), plain(definition[1]));
+}
+for (const term of ['Energy', 'Accountability']) {
+  const match = federalist.match(new RegExp('<strong>' + term + ' means ([\\s\\S]*?)</strong>'));
+  assert.ok(match, term);
+  const definition = plain(match[1]);
+  expected.set(term === 'Energy' ? 'executive energy' : 'accountability', definition[0].toUpperCase() + definition.slice(1));
+}
+for (const term of ['Dependence on the people', 'Responsibility for official conduct']) {
+  const match = federalist.match(new RegExp('<strong>' + term + '</strong> — ([\\s\\S]*?)</li>'));
+  assert.ok(match, term);
+  expected.set(term.toLowerCase(), plain(match[1]));
+}
+assert.equal(expected.size, 28);
 const questions = JSON.parse(read('pool-questions.json'));
 for (const [term, definition] of expected) {
   assert.equal(glossary.get(term), definition, term + ' must match its reference page');
   assert.ok(questions.some(q => q.unit === 2 && q.correct.toLowerCase() === term && q.prompt === definition && q.why === definition), term + ' review question must match');
 }
-console.log('Presidential glossary: all 16 definitions match their reference pages and review questions.');
+console.log('Presidential glossary: all 28 definitions match their reference pages and review questions.');

@@ -289,7 +289,7 @@ function validateSharedCourseExperience() {
     'styles-design-system.css',
     'voter-guide.css?v=20261103-ballot-moved',
     'course-data.js?v=20261117-presidential-roles',
-    'glossary-data.js?v=20261119-presidential-definitions',
+    'glossary-data.js?v=20261119-executive-terms',
     'foundations-data.js?v=20260909-madison-brutus',
     'data-required.js?v=20261007-case-summary-audit',
     'election-2026-data.js?v=20261015-plain-propositions',
@@ -643,9 +643,9 @@ function validateSharedCourseExperience() {
     if (legacyGlossary.includes('Adam Smith / The Wealth of Nations')) errors.push('AP study-tools glossary must use the document title for The Wealth of Nations.');
   }
   const apTools = fs.readFileSync(path.join(root, 'ap-tools.html'), 'utf8');
-  if (!apTools.includes('data-core.js?v=20261119-presidential-definitions') ||
-      !apTools.includes('glossary-data.js?v=20261119-presidential-definitions') ||
-      apTools.indexOf('glossary-data.js?v=20261119-presidential-definitions') > apTools.indexOf('data-core.js?v=20261119-presidential-definitions') ||
+  if (!apTools.includes('data-core.js?v=20261119-executive-terms') ||
+      !apTools.includes('glossary-data.js?v=20261119-executive-terms') ||
+      apTools.indexOf('glossary-data.js?v=20261119-executive-terms') > apTools.indexOf('data-core.js?v=20261119-executive-terms') ||
       !dataCoreSource.includes('const GLOSSARY_UNITS = window.APG_GLOSSARY_UNITS || [')) {
     errors.push('AP study tools must load the canonical course glossary before their application data.');
   }
