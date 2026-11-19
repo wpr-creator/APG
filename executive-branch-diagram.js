@@ -19,7 +19,8 @@
   const previousInert=new Map();
   if (!root || !map) return;
   const nodes = new Map(), parents = new Map(), elements = new Map();
-  const kindLabels={'central-bank-system':'Central bank system','federal-agency':'Federal agency','reserve-banks':'Regional Reserve Banks','policy-committee':'Policy committee','military-service':'Military service','military-component':'Military component','military-department':'Military department','military-command':'Military command','bureau':'Bureau','division':'Division','field-offices':'Field offices','park-unit':'National Park Service unit'};
+  const kindLabels={'central-bank-system':'Central bank system','federal-agency':'Federal agency','reserve-banks':'Regional Reserve Banks','policy-committee':'Policy committee','military-service':'Military service','military-component':'Military component','military-department':'Military department','military-command':'Military command','bureau':'Bureau','division':'Division','field-offices':'Field offices','park-unit':'National Park Service unit','center':'Center','staff-office':'Presidential staff'};
+  const linkLabels={'website':'Website','program-page':'Program page','organization-listing':'Organization listing','official-profile':'Official profile','directory':'Official directory','staff-directory':'Staff directory (PDF)'};
   const colors = {eop:'#226d61',departments:'#305d7c',independent:'#a14d37'};
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let scale = .8, stageHeight = 1200, found = [], matchIndex = 0;
@@ -40,13 +41,13 @@
     el.id = 'node-'+item.id;
     el.style.setProperty('--family', colors[family] || '#183630');
     const tag = document.createElement('span'); tag.className='node-tag';
-    tag.textContent = item===root?'Article II':depth===1?(family==='eop'?'Presidential support':family==='departments'?'Executive departments':'Independent establishments'):item.kind==='department'?'Executive department':item.kind==='program'?'Program, service, or site':item.kind==='grouping'?'Related organizations':kindLabels[item.kind]||'Agency, bureau, or office';
+    tag.textContent = item===root?'Article II':depth===1?(family==='eop'?'Presidential support':family==='departments'?'Executive departments':'Agencies & other institutions'):item.kind==='department'?'Executive department':item.kind==='program'?'Program, service, or site':item.kind==='grouping'?'Related organizations':kindLabels[item.kind]||'Agency, bureau, or office';
     el.appendChild(tag);
     const heading=document.createElement(item===root?'h2':depth<=2?'h3':'h4');
     heading.id=el.id+'-title';heading.textContent=item.title;el.setAttribute('aria-labelledby',heading.id);el.appendChild(heading);
     const desc=document.createElement('p');desc.textContent=item.desc;el.appendChild(desc);
     const controls=document.createElement('div');controls.className='node-controls';
-    if(item.source){const link=document.createElement('a');link.className='node-source';link.href=item.source;link.textContent='Official source ↗';link.target='_blank';link.rel='noopener';link.setAttribute('aria-label','Official source for '+item.title+' (opens in new tab)');controls.appendChild(link);}
+    if(item.url){const link=document.createElement('a');const label=linkLabels[item.linkType]||'Official page';link.className='node-source';link.href=item.url;link.textContent=label+' ↗';link.target='_blank';link.rel='noopener';link.setAttribute('aria-label',label+' for '+item.title+' (opens in new tab)');controls.appendChild(link);}
     if(controls.childElementCount)el.appendChild(controls);
     map.appendChild(el);elements.set(item.id,el);
     item.children.forEach(child=>register(child,item,depth===0?child.kind:family,depth+1));

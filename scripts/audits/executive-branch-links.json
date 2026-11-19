@@ -1,0 +1,4431 @@
+{
+  "checkedAt": "2026-11-19",
+  "scope": "Every displayed entry. Programs, staff offices, collections, and agencies are identified separately.",
+  "method": "USAGov agency directory, official agency pages and organization listings, HTTP GET of every primary target, and secondary web retrieval for blocked pages. Access-restricted results are not reported as successful HTTP checks. Entries without a separate current site use labeled organization listings or official profiles.",
+  "entries": [
+    {
+      "id": "president-of-the-united-states",
+      "title": "President of the United States",
+      "url": "https://www.whitehouse.gov/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "The White House"
+    },
+    {
+      "id": "executive-office-of-the-president",
+      "title": "Executive Office of the President",
+      "url": "https://www.whitehouse.gov/eop/",
+      "linkType": "website",
+      "evidence": "https://www.whitehouse.gov/eop/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Executive Office of the President – The White House"
+    },
+    {
+      "id": "white-house-office",
+      "title": "White House Office",
+      "url": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "linkType": "organization-listing",
+      "evidence": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Presidential Departments – The White House"
+    },
+    {
+      "id": "chief-of-staff",
+      "title": "Chief of Staff",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "linkType": "staff-directory",
+      "evidence": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "check": "page-opened",
+      "httpStatus": null,
+      "pageTitle": "Agency",
+      "note": "Staff role or office, not a separate agency. Current annual staff directory is supplied instead of an obsolete personnel listing. Final destination read through web retrieval; earlier HTTP result belonged to the replaced URL."
+    },
+    {
+      "id": "white-house-counsel",
+      "title": "White House Counsel",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "linkType": "staff-directory",
+      "evidence": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "check": "page-opened",
+      "httpStatus": null,
+      "pageTitle": "Agency",
+      "note": "Staff role or office, not a separate agency. Current annual staff directory is supplied instead of an obsolete personnel listing. Final destination read through web retrieval; earlier HTTP result belonged to the replaced URL."
+    },
+    {
+      "id": "press-secretary-and-communications-staff",
+      "title": "Press Secretary and communications staff",
+      "url": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "linkType": "staff-directory",
+      "evidence": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf",
+      "check": "page-opened",
+      "httpStatus": null,
+      "pageTitle": "Agency",
+      "note": "Staff role or office, not a separate agency. Current annual staff directory is supplied instead of an obsolete personnel listing. Final destination read through web retrieval; earlier HTTP result belonged to the replaced URL."
+    },
+    {
+      "id": "office-of-legislative-affairs",
+      "title": "Office of Legislative Affairs",
+      "url": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "linkType": "website",
+      "evidence": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Presidential Departments – The White House"
+    },
+    {
+      "id": "office-of-presidential-personnel",
+      "title": "Office of Presidential Personnel",
+      "url": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "linkType": "website",
+      "evidence": "https://www.whitehouse.gov/internships/presidential-departments/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Presidential Departments – The White House"
+    },
+    {
+      "id": "office-of-management-and-budget-omb",
+      "title": "Office of Management and Budget (OMB)",
+      "url": "https://www.whitehouse.gov/omb/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-management-and-budget",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Management and Budget – The White House"
+    },
+    {
+      "id": "office-of-information-and-regulatory-affairs-oira",
+      "title": "Office of Information and Regulatory Affairs (OIRA)",
+      "url": "https://www.reginfo.gov/public/",
+      "linkType": "website",
+      "evidence": "https://www.reginfo.gov/public/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "DASHBOARD - REGINFO.GOV"
+    },
+    {
+      "id": "office-of-federal-procurement-policy",
+      "title": "Office of Federal Procurement Policy",
+      "url": "https://www.whitehouse.gov/omb/",
+      "linkType": "organization-listing",
+      "evidence": "https://www.govinfo.gov/content/pkg/CFR-2026-title5-vol3/xhtml/CFR-2026-title5-vol3.html",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Management and Budget – The White House"
+    },
+    {
+      "id": "office-of-federal-financial-management",
+      "title": "Office of Federal Financial Management",
+      "url": "https://www.whitehouse.gov/omb/",
+      "linkType": "organization-listing",
+      "evidence": "https://www.govinfo.gov/content/pkg/CFR-2026-title5-vol3/xhtml/CFR-2026-title5-vol3.html",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Management and Budget – The White House"
+    },
+    {
+      "id": "national-security-council",
+      "title": "National Security Council",
+      "url": "https://www.congress.gov/crs-product/R44828#_Toc117675870",
+      "linkType": "official-profile",
+      "evidence": "https://www.usa.gov/agencies/national-security-council",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "council-of-economic-advisers",
+      "title": "Council of Economic Advisers",
+      "url": "https://www.whitehouse.gov/cea/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/council-of-economic-advisers",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Council of Economic Advisers – The White House"
+    },
+    {
+      "id": "office-of-the-u-s-trade-representative",
+      "title": "Office of the U.S. Trade Representative",
+      "url": "https://ustr.gov/",
+      "linkType": "website",
+      "evidence": "https://ustr.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | United States Trade Representative"
+    },
+    {
+      "id": "office-of-science-and-technology-policy",
+      "title": "Office of Science and Technology Policy",
+      "url": "https://www.whitehouse.gov/ostp/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-science-and-technology-policy",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Science and Technology Policy – The White House"
+    },
+    {
+      "id": "council-on-environmental-quality",
+      "title": "Council on Environmental Quality",
+      "url": "https://www.whitehouse.gov/ceq/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/council-on-environmental-quality",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Council on Environmental Quality – The White House"
+    },
+    {
+      "id": "office-of-national-drug-control-policy",
+      "title": "Office of National Drug Control Policy",
+      "url": "https://www.whitehouse.gov/ondcp/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-national-drug-control-policy",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of National Drug Control Policy – The White House"
+    },
+    {
+      "id": "office-of-administration",
+      "title": "Office of Administration",
+      "url": "https://usgovernmentmanual.gov/Agency?EType=%2FsbLHImeIYk%3D&EntityId=%2FF21Us0F6DU%3D&ParentEId=p0fnvDxExmY%3D",
+      "linkType": "official-profile",
+      "evidence": "https://usgovernmentmanual.gov/Agency?EType=%2FsbLHImeIYk%3D&EntityId=%2FF21Us0F6DU%3D&ParentEId=p0fnvDxExmY%3D",
+      "check": "page-opened",
+      "httpStatus": null,
+      "pageTitle": "Agency",
+      "note": "The U.S. Government Manual explicitly states that a dedicated website is not available. Its personnel list is dated; the diagram does not identify current personnel. Final destination read through web retrieval; earlier HTTP result belonged to the replaced URL."
+    },
+    {
+      "id": "office-of-the-national-cyber-director",
+      "title": "Office of the National Cyber Director",
+      "url": "https://www.whitehouse.gov/oncd/",
+      "linkType": "website",
+      "evidence": "https://www.whitehouse.gov/eop/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of the National Cyber Director – The White House"
+    },
+    {
+      "id": "15-executive-departments",
+      "title": "15 executive departments",
+      "url": "https://uscode.house.gov/us/usc/t5/s101/",
+      "linkType": "directory",
+      "evidence": "https://uscode.house.gov/us/usc/t5/s101/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "5 U.S.C. § 101: Executive departments"
+    },
+    {
+      "id": "department-of-state",
+      "title": "Department of State",
+      "url": "https://www.state.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-state",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Department of State – Home"
+    },
+    {
+      "id": "consular-affairs",
+      "title": "Bureau of Consular Affairs",
+      "url": "https://travel.state.gov/",
+      "linkType": "website",
+      "evidence": "https://travel.state.gov/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "passport-services",
+      "title": "Passport Services",
+      "url": "https://travel.state.gov/content/travel/en/passports.html",
+      "linkType": "program-page",
+      "evidence": "https://travel.state.gov/content/travel/en/passports.html",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "visa-services",
+      "title": "Visa Services",
+      "url": "https://travel.state.gov/content/travel/en/us-visas.html",
+      "linkType": "program-page",
+      "evidence": "https://travel.state.gov/content/travel/en/us-visas.html",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "overseas-citizens-services",
+      "title": "Overseas Citizens Services",
+      "url": "https://travel.state.gov/content/travel/en/international-travel/emergencies.html",
+      "linkType": "program-page",
+      "evidence": "https://travel.state.gov/content/travel/en/international-travel/emergencies.html",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "diplomatic-security",
+      "title": "Bureau of Diplomatic Security",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-management/bureau-of-diplomatic-security/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Diplomatic Security - United States Department of State"
+    },
+    {
+      "id": "diplomatic-security-service",
+      "title": "Diplomatic Security Service",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-management/bureau-of-diplomatic-security/",
+      "linkType": "organization-listing",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-management/bureau-of-diplomatic-security/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Diplomatic Security - United States Department of State"
+    },
+    {
+      "id": "educational-and-cultural-affairs",
+      "title": "Bureau of Educational and Cultural Affairs",
+      "url": "https://www.state.gov/bureau-of-educational-and-cultural-affairs/about-us-bureau-of-educational-and-cultural-affairs",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureau-of-educational-and-cultural-affairs/about-us-bureau-of-educational-and-cultural-affairs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About Us - United States Department of State"
+    },
+    {
+      "id": "fulbright-program",
+      "title": "Fulbright Program",
+      "url": "https://www.state.gov/the-fulbright-program",
+      "linkType": "program-page",
+      "evidence": "https://www.usa.gov/agencies/fulbright-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "The Fulbright Program - United States Department of State"
+    },
+    {
+      "id": "international-visitor-leadership-program",
+      "title": "International Visitor Leadership Program",
+      "url": "https://exchanges.state.gov/non-us/program/international-visitor-leadership-program-ivlp",
+      "linkType": "program-page",
+      "evidence": "https://exchanges.state.gov/non-us/program/international-visitor-leadership-program-ivlp",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "economic-and-business-affairs",
+      "title": "Bureau of Economic, Energy, and Business Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-economic-affairs/bureau-of-economic-energy-and-business-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-economic-affairs/bureau-of-economic-energy-and-business-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Economic, Energy, and Business Affairs - United States Department of State"
+    },
+    {
+      "id": "international-organization-affairs",
+      "title": "Bureau of International Organizations",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-international-organization/",
+      "linkType": "website",
+      "evidence": "https://fam.state.gov/fam/01fam/01fam000208.html",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of International Organizations - United States Department of State"
+    },
+    {
+      "id": "democracy-human-rights-and-labor",
+      "title": "Bureau of Democracy, Human Rights, and Labor",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-foreign-assistance-humanitarian-affairs-and-religious-freedom/bureau-of-democracy-human-rights-and-labor/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-foreign-assistance-humanitarian-affairs-and-religious-freedom/bureau-of-democracy-human-rights-and-labor/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Democracy, Human Rights, and Labor - United States Department of State"
+    },
+    {
+      "id": "population-refugees-and-migration",
+      "title": "Bureau of Population, Refugees, and Migration",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-foreign-assistance-humanitarian-affairs-and-religious-freedom/bureau-of-population-refugees-and-migration/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-foreign-assistance-humanitarian-affairs-and-religious-freedom/bureau-of-population-refugees-and-migration/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Population, Refugees, and Migration - United States Department of State"
+    },
+    {
+      "id": "international-narcotics-and-law-enforcement-affairs",
+      "title": "Bureau of International Narcotics and Law Enforcement Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-arms-control-and-international-security-affairs/bureau-of-international-narcotics-and-law-enforcement-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-arms-control-and-international-security-affairs/bureau-of-international-narcotics-and-law-enforcement-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of International Narcotics and Law Enforcement Affairs - United States Department of State"
+    },
+    {
+      "id": "regional-bureaus",
+      "title": "Regional bureaus",
+      "url": "https://www.state.gov/bureaus-offices/",
+      "linkType": "directory",
+      "evidence": "https://www.state.gov/bureaus-offices/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureaus Archive - United States Department of State"
+    },
+    {
+      "id": "african-affairs",
+      "title": "Bureau of African Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-african-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of African Affairs - United States Department of State"
+    },
+    {
+      "id": "east-asian-and-pacific-affairs",
+      "title": "Bureau of East Asian and Pacific Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-east-asian-and-pacific-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of East Asian and Pacific Affairs - United States Department of State"
+    },
+    {
+      "id": "european-and-eurasian-affairs",
+      "title": "Bureau of European and Eurasian Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of European and Eurasian Affairs - United States Department of State"
+    },
+    {
+      "id": "near-eastern-affairs",
+      "title": "Bureau of Near Eastern Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-near-eastern-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Near Eastern Affairs - United States Department of State"
+    },
+    {
+      "id": "south-and-central-asian-affairs",
+      "title": "Bureau of South and Central Asian Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-south-and-central-asian-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of South and Central Asian Affairs - United States Department of State"
+    },
+    {
+      "id": "western-hemisphere-affairs",
+      "title": "Bureau of Western Hemisphere Affairs",
+      "url": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-western-hemisphere-affairs/",
+      "linkType": "website",
+      "evidence": "https://www.state.gov/bureaus-offices/under-secretary-for-political-affairs/bureau-of-european-and-eurasian-affairs/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Western Hemisphere Affairs - United States Department of State"
+    },
+    {
+      "id": "department-of-the-treasury",
+      "title": "Department of the Treasury",
+      "url": "https://home.treasury.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-the-treasury",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Department of the Treasury"
+    },
+    {
+      "id": "internal-revenue-service-irs",
+      "title": "Internal Revenue Service (IRS)",
+      "url": "https://www.irs.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/internal-revenue-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Internal Revenue Service | An official website of the United States government"
+    },
+    {
+      "id": "taxpayer-assistance",
+      "title": "Taxpayer Assistance",
+      "url": "https://www.irs.gov/help/contact-your-local-irs-office",
+      "linkType": "program-page",
+      "evidence": "https://www.irs.gov/compliance/criminal-investigation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Contact your local IRS office | Internal Revenue Service"
+    },
+    {
+      "id": "criminal-investigation",
+      "title": "Criminal Investigation",
+      "url": "https://www.irs.gov/compliance/criminal-investigation",
+      "linkType": "program-page",
+      "evidence": "https://www.irs.gov/compliance/criminal-investigation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Criminal Investigation | Internal Revenue Service"
+    },
+    {
+      "id": "taxpayer-advocate-service",
+      "title": "Taxpayer Advocate Service",
+      "url": "https://www.taxpayeradvocate.irs.gov/",
+      "linkType": "website",
+      "evidence": "https://www.taxpayeradvocate.irs.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home - Taxpayer Advocate Service (TAS) - Taxpayer Advocate Service"
+    },
+    {
+      "id": "bureau-of-the-fiscal-service",
+      "title": "Bureau of the Fiscal Service",
+      "url": "https://fiscal.treasury.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-the-fiscal-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Bureau of the Fiscal Service"
+    },
+    {
+      "id": "treasurydirect",
+      "title": "TreasuryDirect",
+      "url": "https://www.treasurydirect.gov/",
+      "linkType": "program-page",
+      "evidence": "https://fiscal.treasury.gov/payment-integrity/do-not-pay-dnp",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home — TreasuryDirect"
+    },
+    {
+      "id": "do-not-pay",
+      "title": "Do Not Pay",
+      "url": "https://fiscal.treasury.gov/payment-integrity/do-not-pay-dnp",
+      "linkType": "program-page",
+      "evidence": "https://fiscal.treasury.gov/payment-integrity/do-not-pay-dnp",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Do Not Pay | Bureau of the Fiscal Service"
+    },
+    {
+      "id": "u-s-mint",
+      "title": "U.S. Mint",
+      "url": "https://www.usmint.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-mint",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "circulating-coins",
+      "title": "Circulating coins",
+      "url": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins",
+      "linkType": "program-page",
+      "evidence": "https://www.usmint.gov/learn/coins-and-medals/circulating-coins",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "commemorative-and-bullion-coins",
+      "title": "Commemorative and bullion coins",
+      "url": "https://www.usmint.gov/learn/coin-and-medal-programs",
+      "linkType": "program-page",
+      "evidence": "https://www.usmint.gov/learn/coin-and-medal-programs",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-engraving-and-printing",
+      "title": "Bureau of Engraving and Printing",
+      "url": "https://www.bep.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-engraving-and-printing",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Engraving & Printing"
+    },
+    {
+      "id": "office-of-the-comptroller-of-the-currency-occ",
+      "title": "Office of the Comptroller of the Currency (OCC)",
+      "url": "https://www.occ.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-the-comptroller-of-the-currency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of the Comptroller of the Currency (OCC)"
+    },
+    {
+      "id": "financial-crimes-enforcement-network-fincen",
+      "title": "Financial Crimes Enforcement Network (FinCEN)",
+      "url": "https://www.fincen.gov/",
+      "linkType": "website",
+      "evidence": "https://www.fincen.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "FinCEN.gov"
+    },
+    {
+      "id": "alcohol-and-tobacco-tax-and-trade-bureau-ttb",
+      "title": "Alcohol and Tobacco Tax and Trade Bureau (TTB)",
+      "url": "https://www.ttb.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/alcohol-and-tobacco-tax-and-trade-bureau",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | TTB: Alcohol and Tobacco Tax and Trade Bureau"
+    },
+    {
+      "id": "community-development-financial-institutions-fund",
+      "title": "Community Development Financial Institutions Fund",
+      "url": "https://www.cdfifund.gov/",
+      "linkType": "website",
+      "evidence": "https://www.cdfifund.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Community Development Financial Institutions Fund"
+    },
+    {
+      "id": "office-of-foreign-assets-control-ofac",
+      "title": "Office of Foreign Assets Control (OFAC)",
+      "url": "https://ofac.treasury.gov/",
+      "linkType": "website",
+      "evidence": "https://ofac.treasury.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Office of Foreign Assets Control"
+    },
+    {
+      "id": "department-of-defense",
+      "title": "Department of Defense",
+      "url": "https://www.defense.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-defense",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-the-secretary-of-defense",
+      "title": "Office of the Secretary of Defense",
+      "url": "https://www.defense.gov/About/office-of-the-secretary-of-defense/",
+      "linkType": "website",
+      "evidence": "https://uscode.house.gov/us/usc/119-118/t10/s111/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-the-army",
+      "title": "Department of the Army",
+      "url": "https://www.army.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agency-index",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-army",
+      "title": "U.S. Army",
+      "url": "https://www.army.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-army",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "army-national-guard",
+      "title": "Army National Guard",
+      "url": "https://www.nationalguard.mil/About-the-Guard/Army-National-Guard/",
+      "linkType": "website",
+      "evidence": "https://www.nationalguard.mil/About-the-Guard/Army-National-Guard/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "army-reserve",
+      "title": "Army Reserve",
+      "url": "https://www.usar.army.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usar.army.mil/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-army-corps-of-engineers",
+      "title": "U.S. Army Corps of Engineers",
+      "url": "https://www.usace.army.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-army-corps-of-engineers",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "civil-works",
+      "title": "Civil Works",
+      "url": "https://www.usace.army.mil/Missions/Civil-Works/",
+      "linkType": "program-page",
+      "evidence": "https://www.usace.army.mil/Missions/Civil-Works/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-the-navy",
+      "title": "Department of the Navy",
+      "url": "https://www.navy.mil/Leadership/Secretary-of-the-Navy/",
+      "linkType": "website",
+      "evidence": "https://www.navy.mil/Leadership/Secretary-of-the-Navy/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-navy",
+      "title": "U.S. Navy",
+      "url": "https://www.navy.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-navy",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-fleet-forces-command",
+      "title": "U.S. Fleet Forces Command",
+      "url": "https://www.usff.navy.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-fleet-forces-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-pacific-fleet",
+      "title": "U.S. Pacific Fleet",
+      "url": "https://www.cpf.navy.mil/",
+      "linkType": "website",
+      "evidence": "https://www.cpf.navy.mil/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-marine-corps",
+      "title": "U.S. Marine Corps",
+      "url": "https://www.marines.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-marine-corps",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-the-air-force",
+      "title": "Department of the Air Force",
+      "url": "https://www.af.mil/About-Us/",
+      "linkType": "website",
+      "evidence": "https://www.af.mil/About-Us/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-air-force",
+      "title": "U.S. Air Force",
+      "url": "https://www.af.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-air-force",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-space-force",
+      "title": "U.S. Space Force",
+      "url": "https://www.spaceforce.mil/",
+      "linkType": "website",
+      "evidence": "https://www.spaceforce.mil/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "joint-chiefs-of-staff",
+      "title": "Joint Chiefs of Staff",
+      "url": "https://www.jcs.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/joint-chiefs-of-staff",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "combatant-commands",
+      "title": "Combatant commands",
+      "url": "https://www.defense.gov/About/Combatant-Commands/",
+      "linkType": "directory",
+      "evidence": "https://uscode.house.gov/us/usc/119-118/t10/s111/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-central-command",
+      "title": "U.S. Central Command",
+      "url": "https://www.centcom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-central-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-european-command",
+      "title": "U.S. European Command",
+      "url": "https://www.eucom.mil",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-european-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-indo-pacific-command",
+      "title": "U.S. Indo-Pacific Command",
+      "url": "https://www.pacom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-indo-pacific-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-northern-command",
+      "title": "U.S. Northern Command",
+      "url": "https://www.northcom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-northern-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-southern-command",
+      "title": "U.S. Southern Command",
+      "url": "https://www.southcom.mil",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-southern-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-africa-command",
+      "title": "U.S. Africa Command",
+      "url": "https://www.africom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-africa-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-cyber-command",
+      "title": "U.S. Cyber Command",
+      "url": "https://www.cybercom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-cyber-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-special-operations-command",
+      "title": "U.S. Special Operations Command",
+      "url": "https://www.socom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-special-operations-command",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "USSOCOM"
+    },
+    {
+      "id": "u-s-strategic-command",
+      "title": "U.S. Strategic Command",
+      "url": "https://www.stratcom.mil",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-strategic-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-transportation-command",
+      "title": "U.S. Transportation Command",
+      "url": "https://www.ustranscom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-transportation-command",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "USTC: United States Transportation Command"
+    },
+    {
+      "id": "u-s-space-command",
+      "title": "U.S. Space Command",
+      "url": "https://www.spacecom.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-space-command",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "defense-agencies",
+      "title": "Defense agencies",
+      "url": "https://business.defense.gov/Work-with-us/Military-Departments-and-Defense-Agencies/",
+      "linkType": "directory",
+      "evidence": "https://files.gao.gov/reports/GAO-26-107781/index.html",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "defense-advanced-research-projects-agency-darpa",
+      "title": "Defense Advanced Research Projects Agency (DARPA)",
+      "url": "https://www.darpa.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-advanced-research-projects-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | DARPA"
+    },
+    {
+      "id": "defense-logistics-agency",
+      "title": "Defense Logistics Agency",
+      "url": "https://www.dla.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-logistics-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "defense-health-agency",
+      "title": "Defense Health Agency",
+      "url": "https://dha.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-health-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "DHA.mil - The Official Website of The Defense Health Agency"
+    },
+    {
+      "id": "missile-defense-agency",
+      "title": "Missile Defense Agency",
+      "url": "https://www.mda.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/missile-defense-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Missile Defense Agency - U.S. Department of War"
+    },
+    {
+      "id": "defense-intelligence-agency",
+      "title": "Defense Intelligence Agency",
+      "url": "https://www.dia.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-intelligence-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-security-agency-nsa",
+      "title": "National Security Agency (NSA)",
+      "url": "https://www.nsa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-security-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-geospatial-intelligence-agency",
+      "title": "National Geospatial-Intelligence Agency",
+      "url": "https://www.nga.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-geospatial-intelligence-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | National Geospatial-Intelligence Agency"
+    },
+    {
+      "id": "defense-information-systems-agency",
+      "title": "Defense Information Systems Agency",
+      "url": "https://www.disa.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-information-systems-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Welcome to LWC Communities!"
+    },
+    {
+      "id": "defense-counterintelligence-and-security-agency",
+      "title": "Defense Counterintelligence and Security Agency",
+      "url": "https://www.dcsa.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-counterintelligence-and-security-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "defense-threat-reduction-agency",
+      "title": "Defense Threat Reduction Agency",
+      "url": "https://www.dtra.mil",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/defense-threat-reduction-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-justice",
+      "title": "Department of Justice",
+      "url": "https://www.justice.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-justice",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Department of Justice |  Homepage | United States Department of Justice"
+    },
+    {
+      "id": "federal-bureau-of-investigation-fbi",
+      "title": "Federal Bureau of Investigation (FBI)",
+      "url": "https://www.fbi.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-bureau-of-investigation",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "field-offices",
+      "title": "Field offices",
+      "url": "https://www.fbi.gov/contact-us/field-offices",
+      "linkType": "directory",
+      "evidence": "https://www.fbi.gov/contact-us/field-offices",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "laboratory-division",
+      "title": "Laboratory Division",
+      "url": "https://www.fbi.gov/services/laboratory",
+      "linkType": "website",
+      "evidence": "https://www.fbi.gov/services/laboratory",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "criminal-justice-information-services",
+      "title": "Criminal Justice Information Services Division",
+      "url": "https://www.fbi.gov/services/cjis",
+      "linkType": "website",
+      "evidence": "https://www.fbi.gov/services/cjis",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "drug-enforcement-administration-dea",
+      "title": "Drug Enforcement Administration (DEA)",
+      "url": "https://www.dea.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/drug-enforcement-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-alcohol-tobacco-firearms-and-explosives-atf",
+      "title": "Bureau of Alcohol, Tobacco, Firearms and Explosives (ATF)",
+      "url": "https://www.atf.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-alcohol-tobacco-firearms-and-explosives",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-marshals-service",
+      "title": "U.S. Marshals Service",
+      "url": "https://www.usmarshals.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-marshals-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-bureau-of-prisons",
+      "title": "Federal Bureau of Prisons",
+      "url": "https://www.bop.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-bureau-of-prisons",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "BOP: Federal Bureau of Prisons Web Site"
+    },
+    {
+      "id": "u-s-attorneys",
+      "title": "U.S. Attorneys",
+      "url": "https://www.justice.gov/usao",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/usao",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Attorneys |  Offices of the United States Attorneys"
+    },
+    {
+      "id": "office-of-justice-programs",
+      "title": "Office of Justice Programs",
+      "url": "https://www.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-justice-programs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Office of Justice Programs"
+    },
+    {
+      "id": "bureau-of-justice-assistance",
+      "title": "Bureau of Justice Assistance",
+      "url": "https://bja.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://bjs.ojp.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Bureau of Justice Assistance"
+    },
+    {
+      "id": "bureau-of-justice-statistics",
+      "title": "Bureau of Justice Statistics",
+      "url": "https://bjs.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-justice-statistics",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Bureau of Justice Statistics"
+    },
+    {
+      "id": "national-institute-of-justice",
+      "title": "National Institute of Justice",
+      "url": "https://nij.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institute-of-justice",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | National Institute of Justice"
+    },
+    {
+      "id": "office-of-juvenile-justice-and-delinquency-prevention",
+      "title": "Office of Juvenile Justice and Delinquency Prevention",
+      "url": "https://ojjdp.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-juvenile-justice-and-delinquency-prevention",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Working for Youth Justice and Safety | Office of Juvenile Justice and Delinquency Prevention"
+    },
+    {
+      "id": "office-for-victims-of-crime",
+      "title": "Office for Victims of Crime",
+      "url": "https://ovc.ojp.gov/",
+      "linkType": "website",
+      "evidence": "https://bjs.ojp.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Office for Victims of Crime"
+    },
+    {
+      "id": "antitrust-division",
+      "title": "Antitrust Division",
+      "url": "https://www.justice.gov/atr",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/antitrust-division",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Antitrust Division |  Antitrust Division"
+    },
+    {
+      "id": "civil-rights-division",
+      "title": "Civil Rights Division",
+      "url": "https://www.justice.gov/crt",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/crt",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Civil Rights Division |  Civil Rights Division"
+    },
+    {
+      "id": "criminal-division",
+      "title": "Criminal Division",
+      "url": "https://www.justice.gov/criminal",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/criminal",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Criminal Division |  Criminal Division"
+    },
+    {
+      "id": "civil-division",
+      "title": "Civil Division",
+      "url": "https://www.justice.gov/civil",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/civil",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Civil Division |  Civil Division"
+    },
+    {
+      "id": "tax-division",
+      "title": "Tax Litigation Branch",
+      "url": "https://www.justice.gov/civil/tax-litigation-branch",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/civil",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Civil Division |  Tax Litigation Branch"
+    },
+    {
+      "id": "national-security-division",
+      "title": "National Security Division",
+      "url": "https://www.justice.gov/nsd",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/nsd",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Security Division |  National Security Division"
+    },
+    {
+      "id": "environment-and-natural-resources-division",
+      "title": "Energy and Natural Resources Division",
+      "url": "https://www.justice.gov/enrd",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/doj/organization-mission-and-functions-manual-energy-and-natural-resources-division",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Energy and Natural Resources Division |  Energy and Natural Resources Division"
+    },
+    {
+      "id": "executive-office-for-immigration-review",
+      "title": "Executive Office for Immigration Review",
+      "url": "https://www.justice.gov/eoir",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/executive-office-for-immigration-review",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Executive Office for Immigration Review |  Executive Office for Immigration Review"
+    },
+    {
+      "id": "immigration-courts",
+      "title": "Immigration courts",
+      "url": "https://www.justice.gov/eoir/immigration-court-administrative-control-list",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/eoir/immigration-court-administrative-control-list",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Executive Office for Immigration Review |  Immigration Court List - Administrative Control"
+    },
+    {
+      "id": "board-of-immigration-appeals",
+      "title": "Board of Immigration Appeals",
+      "url": "https://www.justice.gov/eoir/board-of-immigration-appeals",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/eoir/board-of-immigration-appeals",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Executive Office for Immigration Review |  Board of Immigration Appeals"
+    },
+    {
+      "id": "office-of-the-solicitor-general",
+      "title": "Office of the Solicitor General",
+      "url": "https://www.justice.gov/osg",
+      "linkType": "website",
+      "evidence": "https://www.justice.gov/osg",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of the Solicitor General |  Office of the Solicitor General"
+    },
+    {
+      "id": "department-of-the-interior",
+      "title": "Department of the Interior",
+      "url": "https://www.doi.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-the-interior",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Department of the Interior"
+    },
+    {
+      "id": "national-park-service",
+      "title": "National Park Service",
+      "url": "https://www.nps.gov/index.htm",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-park-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NPS.gov Homepage (U.S. National Park Service)"
+    },
+    {
+      "id": "national-parks",
+      "title": "National parks",
+      "url": "https://www.nps.gov/findapark/index.htm",
+      "linkType": "program-page",
+      "evidence": "https://www.nps.gov/index.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Find a Park (U.S. National Park Service)"
+    },
+    {
+      "id": "national-monuments-and-historic-sites",
+      "title": "National monuments and historic sites",
+      "url": "https://www.nps.gov/aboutus/national-park-system.htm",
+      "linkType": "program-page",
+      "evidence": "https://www.nps.gov/aboutus/national-park-system.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Park System (U.S. National Park Service)"
+    },
+    {
+      "id": "national-mall-and-memorial-parks",
+      "title": "National Mall and Memorial Parks",
+      "url": "https://www.nps.gov/nama/index.htm",
+      "linkType": "website",
+      "evidence": "https://www.nps.gov/aboutus/national-park-system.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Mall and Memorial Parks  (U.S. National Park Service)"
+    },
+    {
+      "id": "u-s-geological-survey-usgs",
+      "title": "U.S. Geological Survey (USGS)",
+      "url": "https://www.usgs.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-geological-survey",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "USGS.gov | Science for a changing world"
+    },
+    {
+      "id": "earthquake-hazards-program",
+      "title": "Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards",
+      "linkType": "program-page",
+      "evidence": "https://www.usgs.gov/programs/earthquake-hazards",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Earthquake Hazards Program | U.S. Geological Survey"
+    },
+    {
+      "id": "water-resources",
+      "title": "Water Resources",
+      "url": "https://www.usgs.gov/mission-areas/water-resources",
+      "linkType": "program-page",
+      "evidence": "https://www.usgs.gov/mission-areas/water-resources",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Water Resources Mission Area | U.S. Geological Survey"
+    },
+    {
+      "id": "volcano-hazards-program",
+      "title": "Volcano Hazards Program",
+      "url": "https://www.usgs.gov/programs/VHP",
+      "linkType": "program-page",
+      "evidence": "https://www.usgs.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Volcano Hazards Program | U.S. Geological Survey"
+    },
+    {
+      "id": "bureau-of-land-management",
+      "title": "Bureau of Land Management",
+      "url": "https://www.blm.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-land-management",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Bureau of Land Management"
+    },
+    {
+      "id": "u-s-fish-and-wildlife-service",
+      "title": "U.S. Fish and Wildlife Service",
+      "url": "https://www.fws.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/fish-and-wildlife-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Fish and Wildlife Service | U.S. Fish & Wildlife Service"
+    },
+    {
+      "id": "national-wildlife-refuge-system",
+      "title": "National Wildlife Refuge System",
+      "url": "https://www.fws.gov/places-go/national-wildlife-refuge-system",
+      "linkType": "program-page",
+      "evidence": "https://www.fws.gov/places-go/national-wildlife-refuge-system",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Wildlife Refuge System | U.S. Fish & Wildlife Service"
+    },
+    {
+      "id": "ecological-services",
+      "title": "Ecological Services",
+      "url": "https://www.fws.gov/program/ecological-services",
+      "linkType": "program-page",
+      "evidence": "https://www.fws.gov/program/ecological-services",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Ecological Services | U.S. Fish & Wildlife Service"
+    },
+    {
+      "id": "bureau-of-reclamation",
+      "title": "Bureau of Reclamation",
+      "url": "https://www.usbr.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-reclamation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Bureau of Reclamation"
+    },
+    {
+      "id": "bureau-of-indian-affairs",
+      "title": "Bureau of Indian Affairs",
+      "url": "https://www.bia.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-indian-affairs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Indian Affairs"
+    },
+    {
+      "id": "bureau-of-indian-education",
+      "title": "Bureau of Indian Education",
+      "url": "https://www.bie.edu/",
+      "linkType": "website",
+      "evidence": "https://www.bia.gov/bie",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Department of the Interior | Bureau of Indian Education"
+    },
+    {
+      "id": "bureau-of-ocean-energy-management",
+      "title": "Bureau of Ocean Energy Management",
+      "url": "https://www.boem.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-ocean-energy-management",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "BOEM Homepage | Bureau of Ocean Energy Management"
+    },
+    {
+      "id": "bureau-of-safety-and-environmental-enforcement",
+      "title": "Bureau of Safety and Environmental Enforcement",
+      "url": "https://www.bsee.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-safety-and-environmental-enforcement",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Bureau of Safety and Environmental Enforcement"
+    },
+    {
+      "id": "office-of-surface-mining-reclamation-and-enforcement",
+      "title": "Office of Surface Mining Reclamation and Enforcement",
+      "url": "https://www.osmre.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-surface-mining-reclamation-and-enforcement",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Office of Surface Mining"
+    },
+    {
+      "id": "department-of-agriculture",
+      "title": "Department of Agriculture",
+      "url": "https://www.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-agriculture",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "farm-service-agency",
+      "title": "Farm Service Agency",
+      "url": "https://www.fsa.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/farm-service-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Farm Service Agency (FSA) | Farm Service Agency"
+    },
+    {
+      "id": "natural-resources-conservation-service",
+      "title": "Natural Resources Conservation Service",
+      "url": "https://www.nrcs.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/natural-resources-conservation-service",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": "error",
+      "pageTitle": ""
+    },
+    {
+      "id": "risk-management-agency",
+      "title": "Risk Management Agency",
+      "url": "https://www.rma.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/risk-management-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Risk Management Agency"
+    },
+    {
+      "id": "food-and-nutrition-service",
+      "title": "Food and Nutrition Administration (FNA)",
+      "url": "https://www.fna.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/food-and-nutrition-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "USDA Food and Nutrition Administration | Food and Nutrition Administration"
+    },
+    {
+      "id": "snap",
+      "title": "SNAP",
+      "url": "https://www.fna.usda.gov/snap/supplemental-nutrition-assistance-program",
+      "linkType": "program-page",
+      "evidence": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Supplemental Nutrition Assistance Program (SNAP) | Food and Nutrition Administration"
+    },
+    {
+      "id": "national-school-lunch-program",
+      "title": "National School Lunch Program",
+      "url": "https://www.fna.usda.gov/nslp",
+      "linkType": "program-page",
+      "evidence": "https://www.fna.usda.gov/nslp",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National School Lunch Program | Food and Nutrition Administration"
+    },
+    {
+      "id": "school-breakfast-program",
+      "title": "School Breakfast Program",
+      "url": "https://www.fna.usda.gov/sbp/school-breakfast-program",
+      "linkType": "program-page",
+      "evidence": "https://www.fna.usda.gov/sbp/school-breakfast-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "School Breakfast Program | Food and Nutrition Administration"
+    },
+    {
+      "id": "wic",
+      "title": "WIC",
+      "url": "https://www.fna.usda.gov/wic",
+      "linkType": "program-page",
+      "evidence": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "WIC: USDA's Special Supplemental Nutrition Program for Women, Infants, and Children | Food and Nutrition Administration"
+    },
+    {
+      "id": "summer-food-service-program",
+      "title": "Summer Food Service Program",
+      "url": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
+      "linkType": "program-page",
+      "evidence": "https://www.fna.usda.gov/sfsp/summer-food-service-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Summer Food Service Program | Food and Nutrition Administration"
+    },
+    {
+      "id": "food-safety-and-inspection-service",
+      "title": "Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/food-safety-and-inspection-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-forest-service",
+      "title": "U.S. Forest Service",
+      "url": "https://www.fs.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | US Forest Service"
+    },
+    {
+      "id": "national-forest-system",
+      "title": "National Forest System",
+      "url": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
+      "linkType": "program-page",
+      "evidence": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Forests and Grasslands | US Forest Service"
+    },
+    {
+      "id": "research-and-development",
+      "title": "Research and Development",
+      "url": "https://research.fs.usda.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | US Forest Service Research and Development"
+    },
+    {
+      "id": "state-private-and-tribal-forestry",
+      "title": "State, Private, and Tribal Forestry",
+      "url": "https://www.fs.usda.gov/managing-land/private-land",
+      "linkType": "program-page",
+      "evidence": "https://www.fs.usda.gov/managing-land/national-forests-grasslands",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Private Land | US Forest Service"
+    },
+    {
+      "id": "agricultural-marketing-service",
+      "title": "Agricultural Marketing Service",
+      "url": "https://www.ams.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/agricultural-marketing-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Agricultural Marketing Service"
+    },
+    {
+      "id": "animal-and-plant-health-inspection-service",
+      "title": "Animal and Plant Health Inspection Service",
+      "url": "https://www.aphis.usda.gov/aphis/home/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/animal-and-plant-health-inspection-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "animal-care",
+      "title": "Animal Care",
+      "url": "https://www.aphis.usda.gov/animal-welfare",
+      "linkType": "website",
+      "evidence": "https://www.aphis.usda.gov/animal-welfare",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "veterinary-services",
+      "title": "Veterinary Services",
+      "url": "https://www.aphis.usda.gov/animal-health",
+      "linkType": "website",
+      "evidence": "https://www.aphis.usda.gov/animal-health",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "plant-protection-and-quarantine",
+      "title": "Plant Protection and Quarantine",
+      "url": "https://www.aphis.usda.gov/plant-health",
+      "linkType": "website",
+      "evidence": "https://www.aphis.usda.gov/plant-health",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "agricultural-research-service",
+      "title": "Agricultural Research Service",
+      "url": "https://www.ars.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/agricultural-research-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "ARS Home : USDA ARS"
+    },
+    {
+      "id": "economic-research-service",
+      "title": "Economic Research Service",
+      "url": "https://www.ers.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/economic-research-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Economic Research Service"
+    },
+    {
+      "id": "national-agricultural-statistics-service",
+      "title": "National Agricultural Statistics Service",
+      "url": "https://www.nass.usda.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-agricultural-statistics-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Agricultural Statistics Service Home | National Agricultural Statistics Service"
+    },
+    {
+      "id": "national-institute-of-food-and-agriculture",
+      "title": "National Institute of Food and Agriculture",
+      "url": "https://www.nifa.usda.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institute-of-food-and-agriculture",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": "error",
+      "pageTitle": ""
+    },
+    {
+      "id": "foreign-agricultural-service",
+      "title": "Foreign Agricultural Service",
+      "url": "https://www.fas.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/foreign-agricultural-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "rural-development",
+      "title": "Rural Development",
+      "url": "https://www.rd.usda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/rural-development",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "rural-housing-service",
+      "title": "Rural Housing Service",
+      "url": "https://www.rd.usda.gov/about-rd/agencies/rural-housing-service",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/rural-housing-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "rural-utilities-service",
+      "title": "Rural Utilities Service",
+      "url": "https://www.rd.usda.gov/about-rd/agencies/rural-utilities-service",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/rural-utilities-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "rural-business-cooperative-service",
+      "title": "Rural Business-Cooperative Service",
+      "url": "https://www.rd.usda.gov/about-rd/agencies/rural-business-cooperative-service",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/rural-business-and-cooperative-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-commerce",
+      "title": "Department of Commerce",
+      "url": "https://www.commerce.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-commerce",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-census-bureau",
+      "title": "U.S. Census Bureau",
+      "url": "https://www.census.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-census-bureau",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Census.gov | U.S. Census Bureau Homepage"
+    },
+    {
+      "id": "decennial-census",
+      "title": "Decennial Census",
+      "url": "https://www.census.gov/programs-surveys/decennial-census.html",
+      "linkType": "program-page",
+      "evidence": "https://www.census.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Decennial Census of Population and Housing"
+    },
+    {
+      "id": "american-community-survey",
+      "title": "American Community Survey",
+      "url": "https://www.census.gov/programs-surveys/acs.html",
+      "linkType": "program-page",
+      "evidence": "https://www.census.gov/programs-surveys/acs.html",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "American Community Survey (ACS)"
+    },
+    {
+      "id": "economic-census",
+      "title": "Economic Census",
+      "url": "https://www.census.gov/programs-surveys/economic-census.html",
+      "linkType": "program-page",
+      "evidence": "https://www.census.gov/programs-surveys/acs.html",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Economic Census"
+    },
+    {
+      "id": "national-oceanic-and-atmospheric-administration-noaa",
+      "title": "National Oceanic and Atmospheric Administration (NOAA)",
+      "url": "https://www.noaa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-oceanic-and-atmospheric-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Oceanic and Atmospheric Administration Home"
+    },
+    {
+      "id": "national-weather-service",
+      "title": "National Weather Service",
+      "url": "https://www.weather.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-weather-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Weather Service"
+    },
+    {
+      "id": "national-ocean-service",
+      "title": "National Ocean Service",
+      "url": "https://oceanservice.noaa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-ocean-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NOAA's National Ocean Service"
+    },
+    {
+      "id": "noaa-fisheries",
+      "title": "NOAA Fisheries",
+      "url": "https://www.fisheries.noaa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/noaa-fisheries",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Welcome to NOAA | NOAA Fisheries"
+    },
+    {
+      "id": "satellite-and-information-service",
+      "title": "National Environmental Satellite, Data, and Information Service",
+      "url": "https://www.nesdis.noaa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.nesdis.noaa.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NESDIS | National Environmental Satellite, Data, and Information Service NESDIS | National Environmental Satellite, Data, and Information Service"
+    },
+    {
+      "id": "oceanic-and-atmospheric-research",
+      "title": "Oceanic and Atmospheric Research",
+      "url": "https://research.noaa.gov/",
+      "linkType": "website",
+      "evidence": "https://research.noaa.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NOAA Research"
+    },
+    {
+      "id": "national-institute-of-standards-and-technology-nist",
+      "title": "National Institute of Standards and Technology (NIST)",
+      "url": "https://www.nist.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institute-of-standards-and-technology",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Institute of Standards and Technology"
+    },
+    {
+      "id": "u-s-patent-and-trademark-office",
+      "title": "U.S. Patent and Trademark Office",
+      "url": "https://www.uspto.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-patent-and-trademark-office",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "United States Patent and Trademark Office"
+    },
+    {
+      "id": "bureau-of-economic-analysis",
+      "title": "Bureau of Economic Analysis",
+      "url": "https://www.bea.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-economic-analysis",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Bureau of Economic Analysis (BEA)"
+    },
+    {
+      "id": "bureau-of-industry-and-security",
+      "title": "Bureau of Industry and Security",
+      "url": "https://www.bis.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-industry-and-security",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Homepage | Bureau of Industry and Security"
+    },
+    {
+      "id": "international-trade-administration",
+      "title": "International Trade Administration",
+      "url": "https://www.trade.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/international-trade-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "International Trade Administration"
+    },
+    {
+      "id": "economic-development-administration",
+      "title": "Economic Development Administration",
+      "url": "https://www.eda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/economic-development-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-telecommunications-and-information-administration",
+      "title": "National Telecommunications and Information Administration",
+      "url": "https://www.ntia.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-telecommunications-and-information-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home Page | National Telecommunications and Information Administration"
+    },
+    {
+      "id": "department-of-labor",
+      "title": "Department of Labor",
+      "url": "https://www.dol.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-labor",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "occupational-safety-and-health-administration-osha",
+      "title": "Occupational Safety and Health Administration (OSHA)",
+      "url": "https://www.osha.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/occupational-safety-and-health-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Occupational Safety and Health Administration"
+    },
+    {
+      "id": "wage-and-hour-division",
+      "title": "Wage and Hour Division",
+      "url": "https://www.dol.gov/agencies/whd",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/wage-and-hour-division",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "minimum-wage-and-overtime",
+      "title": "Minimum wage and overtime",
+      "url": "https://www.dol.gov/agencies/whd/flsa",
+      "linkType": "program-page",
+      "evidence": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "child-labor-protections",
+      "title": "Child labor protections",
+      "url": "https://www.dol.gov/agencies/whd/child-labor",
+      "linkType": "program-page",
+      "evidence": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "family-and-medical-leave-act",
+      "title": "Family and Medical Leave Act",
+      "url": "https://www.dol.gov/agencies/whd/fmla",
+      "linkType": "program-page",
+      "evidence": "https://www.dol.gov/agencies/whd/compliance-assistance/small-business",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-labor-statistics",
+      "title": "Bureau of Labor Statistics",
+      "url": "https://stats.bls.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-labor-statistics",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "consumer-price-index",
+      "title": "Consumer Price Index",
+      "url": "https://www.bls.gov/cpi/",
+      "linkType": "program-page",
+      "evidence": "https://www.bls.gov/cpi/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "employment-and-unemployment-statistics",
+      "title": "Employment and unemployment statistics",
+      "url": "https://www.bls.gov/cps/",
+      "linkType": "program-page",
+      "evidence": "https://www.bls.gov/cps/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "employment-and-training-administration",
+      "title": "Employment and Training Administration",
+      "url": "https://www.doleta.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/employment-and-training-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "job-corps",
+      "title": "Job Corps",
+      "url": "https://www.jobcorps.gov",
+      "linkType": "program-page",
+      "evidence": "https://www.usa.gov/agencies/job-corps",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Job Corps | Careers Begin Here"
+    },
+    {
+      "id": "unemployment-insurance",
+      "title": "Unemployment insurance",
+      "url": "https://www.dol.gov/agencies/eta/unemployment-insurance",
+      "linkType": "program-page",
+      "evidence": "https://www.dol.gov/agencies/eta/unemployment-insurance",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "registered-apprenticeship",
+      "title": "Registered Apprenticeship",
+      "url": "https://www.apprenticeship.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.apprenticeship.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Homepage | Apprenticeship.gov"
+    },
+    {
+      "id": "employee-benefits-security-administration",
+      "title": "Employee Benefits Security Administration",
+      "url": "https://www.dol.gov/agencies/ebsa",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/employee-benefits-security-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "mine-safety-and-health-administration",
+      "title": "Mine Safety and Health Administration",
+      "url": "https://www.msha.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/mine-safety-and-health-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home"
+    },
+    {
+      "id": "office-of-workers-compensation-programs",
+      "title": "Office of Workers’ Compensation Programs",
+      "url": "https://www.dol.gov/agencies/owcp",
+      "linkType": "website",
+      "evidence": "https://www.dol.gov/index.php/general/dol-agencies",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-labor-management-standards",
+      "title": "Office of Labor-Management Standards",
+      "url": "https://www.dol.gov/agencies/olms",
+      "linkType": "website",
+      "evidence": "https://www.dol.gov/index.php/general/dol-agencies",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "veterans-employment-and-training-service",
+      "title": "Veterans’ Employment and Training Service",
+      "url": "https://www.dol.gov/agencies/vets",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/veterans-employment-and-training-service",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-health-and-human-services",
+      "title": "Department of Health and Human Services",
+      "url": "https://www.hhs.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-health-and-human-services",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "food-and-drug-administration-fda",
+      "title": "Food and Drug Administration (FDA)",
+      "url": "https://www.fda.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/food-and-drug-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Food and Drug Administration"
+    },
+    {
+      "id": "center-for-drug-evaluation-and-research",
+      "title": "Center for Drug Evaluation and Research",
+      "url": "https://www.fda.gov/about-fda/fda-organization/center-drug-evaluation-and-research-cder",
+      "linkType": "website",
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-drug-evaluation-and-research-cder",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Center for Drug Evaluation and Research (CDER) | FDA"
+    },
+    {
+      "id": "center-for-biologics-evaluation-and-research",
+      "title": "Center for Biologics Evaluation and Research",
+      "url": "https://www.fda.gov/about-fda/fda-organization/center-biologics-evaluation-and-research-cber",
+      "linkType": "website",
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-biologics-evaluation-and-research-cber",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Center for Biologics Evaluation and Research (CBER) | FDA"
+    },
+    {
+      "id": "center-for-devices-and-radiological-health",
+      "title": "Center for Devices and Radiological Health",
+      "url": "https://www.fda.gov/about-fda/fda-organization/center-devices-and-radiological-health",
+      "linkType": "website",
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-devices-and-radiological-health",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Center for Devices and Radiological Health | FDA"
+    },
+    {
+      "id": "center-for-tobacco-products",
+      "title": "Center for Tobacco Products",
+      "url": "https://www.fda.gov/about-fda/fda-organization/center-tobacco-products",
+      "linkType": "website",
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-tobacco-products",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Center for Tobacco Products | FDA"
+    },
+    {
+      "id": "centers-for-disease-control-and-prevention-cdc",
+      "title": "Centers for Disease Control and Prevention (CDC)",
+      "url": "https://www.cdc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/centers-for-disease-control-and-prevention",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "disease-surveillance",
+      "title": "National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/about/organization/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "public-health-laboratories",
+      "title": "National Center for Emerging and Zoonotic Infectious Diseases",
+      "url": "https://www.cdc.gov/ncezid/",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/about/organization/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "centers-for-medicare-medicaid-services-cms",
+      "title": "Centers for Medicare & Medicaid Services (CMS)",
+      "url": "https://www.cms.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home - Centers for Medicare & Medicaid Services | CMS"
+    },
+    {
+      "id": "medicare",
+      "title": "Medicare",
+      "url": "https://www.cms.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home - Centers for Medicare & Medicaid Services | CMS"
+    },
+    {
+      "id": "medicaid",
+      "title": "Medicaid",
+      "url": "https://www.cms.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.usa.gov/agencies/centers-for-medicare-and-medicaid-services",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home - Centers for Medicare & Medicaid Services | CMS"
+    },
+    {
+      "id": "children-s-health-insurance-program-chip",
+      "title": "Children’s Health Insurance Program (CHIP)",
+      "url": "https://www.medicaid.gov/chip",
+      "linkType": "program-page",
+      "evidence": "https://www.medicaid.gov/chip",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-institutes-of-health-nih",
+      "title": "National Institutes of Health (NIH)",
+      "url": "https://www.nih.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institutes-of-health",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-cancer-institute",
+      "title": "National Cancer Institute",
+      "url": "https://www.cancer.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-cancer-institute",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Comprehensive Cancer Information - NCI"
+    },
+    {
+      "id": "national-heart-lung-and-blood-institute",
+      "title": "National Heart, Lung, and Blood Institute",
+      "url": "https://www.nhlbi.nih.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-heart-lung-and-blood-institute",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Advancing Heart, Lung, Blood, and Sleep Research & Innovation | NHLBI, NIH"
+    },
+    {
+      "id": "national-institute-of-allergy-and-infectious-diseases",
+      "title": "National Institute of Allergy and Infectious Diseases",
+      "url": "https://www.niaid.nih.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institute-of-allergy-and-infectious-diseases",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Institute of Allergy and Infectious Diseases (NIAID)"
+    },
+    {
+      "id": "national-institute-of-mental-health",
+      "title": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-institute-of-mental-health",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Institute of Mental Health (NIMH) - Transforming the understanding and treatment of mental illnesses"
+    },
+    {
+      "id": "national-library-of-medicine",
+      "title": "National Library of Medicine",
+      "url": "https://www.nlm.nih.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-library-of-medicine",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Library of Medicine - National Institutes of Health"
+    },
+    {
+      "id": "indian-health-service",
+      "title": "Indian Health Service",
+      "url": "https://www.ihs.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/indian-health-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Indian Health Service | Indian Health Service (IHS)"
+    },
+    {
+      "id": "health-resources-and-services-administration",
+      "title": "Health Resources and Services Administration",
+      "url": "https://www.hrsa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/health-resources-and-services-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "administration-for-children-and-families",
+      "title": "Administration for Children and Families",
+      "url": "https://acf.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/administration-for-children-and-families",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Welcome to ACF | The Administration for Children and Families"
+    },
+    {
+      "id": "office-of-head-start",
+      "title": "Office of Head Start",
+      "url": "https://headstart.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agency-index",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Head Start | HeadStart.gov"
+    },
+    {
+      "id": "office-of-child-care",
+      "title": "Office of Child Care",
+      "url": "https://acf.gov/occ",
+      "linkType": "website",
+      "evidence": "https://acf.gov/ofa/programs-services/TANF/state",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Child Care (OCC) | The Administration for Children and Families"
+    },
+    {
+      "id": "office-of-refugee-resettlement",
+      "title": "Office of Refugee Resettlement",
+      "url": "https://acf.gov/orr",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-refugee-resettlement",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Refugee Resettlement (ORR) | The Administration for Children and Families"
+    },
+    {
+      "id": "temporary-assistance-for-needy-families-tanf",
+      "title": "Temporary Assistance for Needy Families (TANF)",
+      "url": "https://acf.gov/ofa/programs-services/TANF/state",
+      "linkType": "program-page",
+      "evidence": "https://acf.gov/ofa/programs-services/TANF/state",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "State Temporary Assistance for Needy Families (TANF) | The Administration for Children and Families"
+    },
+    {
+      "id": "administration-for-community-living",
+      "title": "Administration for Community Living",
+      "url": "https://acl.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/administration-for-community-living",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home Page | ACL Administration for Community Living"
+    },
+    {
+      "id": "substance-abuse-and-mental-health-services-administration",
+      "title": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/substance-abuse-and-mental-health-services-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home |\n            SAMHSA - Substance Abuse and Mental Health Services Administration"
+    },
+    {
+      "id": "agency-for-healthcare-research-and-quality",
+      "title": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/agency-for-healthcare-research-and-quality",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "| Agency for Healthcare Research and Quality"
+    },
+    {
+      "id": "administration-for-strategic-preparedness-and-response",
+      "title": "Administration for Strategic Preparedness and Response",
+      "url": "https://www.aspr.gov/",
+      "linkType": "website",
+      "evidence": "https://www.aspr.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Administration for Strategic Preparedness and Response ASPR Home"
+    },
+    {
+      "id": "advanced-research-projects-agency-for-health-arpa-h",
+      "title": "Advanced Research Projects Agency for Health (ARPA-H)",
+      "url": "https://arpa-h.gov/",
+      "linkType": "website",
+      "evidence": "https://arpa-h.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "ARPA-H Home | ARPA-H"
+    },
+    {
+      "id": "department-of-housing-and-urban-development",
+      "title": "Department of Housing and Urban Development",
+      "url": "https://www.hud.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-housing-and-urban-development",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "HUD Home | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "office-of-housing-federal-housing-administration",
+      "title": "Office of Housing / Federal Housing Administration",
+      "url": "https://www.hud.gov/program_offices/housing",
+      "linkType": "website",
+      "evidence": "https://www.hud.gov/program_offices/housing/mfh",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Housing | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "fha-mortgage-insurance",
+      "title": "FHA mortgage insurance",
+      "url": "https://www.hud.gov/program_offices/housing/fhahistory",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/housing/fhahistory",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Federal Housing Administration | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "multifamily-housing-programs",
+      "title": "Multifamily housing programs",
+      "url": "https://www.hud.gov/program_offices/housing/mfh",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/housing/mfh",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Multifamily Housing | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "ginnie-mae",
+      "title": "Ginnie Mae",
+      "url": "https://www.ginniemae.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/ginnie-mae",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Ginnie Mae"
+    },
+    {
+      "id": "public-and-indian-housing",
+      "title": "Public and Indian Housing",
+      "url": "https://www.hud.gov/program_offices/public_indian_housing",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/public-and-indian-housing",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Public and Indian Housing | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "public-housing",
+      "title": "Public housing",
+      "url": "https://www.hud.gov/program_offices/public_indian_housing/programs/ph",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/public_indian_housing/programs/ph",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Public Housing | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "housing-choice-vouchers",
+      "title": "Housing Choice Vouchers",
+      "url": "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Office of Housing Choice Vouchers | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "native-american-housing-programs",
+      "title": "Native American housing programs",
+      "url": "https://www.hud.gov/program_offices/public_indian_housing/ih",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/public_indian_housing/ih",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Indian Housing - HUD's Office of Native American Programs (ONAP) | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "community-planning-and-development",
+      "title": "Community Planning and Development",
+      "url": "https://www.hud.gov/program_offices/comm_planning",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-community-planning-and-development",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-HUD Community Planning and Development | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "community-development-block-grants",
+      "title": "Community Development Block Grants",
+      "url": "https://www.hud.gov/program_offices/comm_planning/cdbg",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/program_offices/comm_planning/cdbg",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Community Development Block Grant Program | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "home-investment-partnerships",
+      "title": "HOME Investment Partnerships",
+      "url": "https://www.hud.gov/hud-partners/community-affordable-housing-programs",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/hud-partners/community-affordable-housing-programs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Affordable Housing Programs | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "homeless-assistance-grants",
+      "title": "Continuum of Care Program",
+      "url": "https://www.hud.gov/hud-partners/community-coc",
+      "linkType": "program-page",
+      "evidence": "https://www.hud.gov/hud-partners/community-coc",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Continuum of Care Program | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "fair-housing-and-equal-opportunity",
+      "title": "Fair Housing and Equal Opportunity",
+      "url": "https://www.hud.gov/program_offices/fair_housing_equal_opp",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-fair-housing-and-equal-opportunity",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-FHEO | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "policy-development-and-research",
+      "title": "Policy Development and Research",
+      "url": "https://www.huduser.gov/portal/home.html",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-policy-development-and-research",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Housing Research, Datasets & Case Studies | HUD USER"
+    },
+    {
+      "id": "office-of-healthy-homes-and-lead-hazard-control",
+      "title": "Office of Lead Hazard Control and Healthy Homes",
+      "url": "https://www.hud.gov/program_offices/healthy_homes",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-lead-hazard-control-and-healthy-homes",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "25red-Office of Lead Hazard Control and Healthy Homes | HUD.gov / U.S. Department of Housing and Urban Development (HUD)"
+    },
+    {
+      "id": "department-of-transportation",
+      "title": "Department of Transportation",
+      "url": "https://www.transportation.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-transportation",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-aviation-administration-faa",
+      "title": "Federal Aviation Administration (FAA)",
+      "url": "https://www.faa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-aviation-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Aviation Administration"
+    },
+    {
+      "id": "air-traffic-organization",
+      "title": "Air Traffic Organization",
+      "url": "https://www.faa.gov/about/office_org/headquarters_offices/ato",
+      "linkType": "program-page",
+      "evidence": "https://www.faa.gov/about/office_org/headquarters_offices/ato",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Air Traffic Organization | Federal Aviation Administration"
+    },
+    {
+      "id": "aviation-safety",
+      "title": "Aviation Safety",
+      "url": "https://www.faa.gov/about/office_org/headquarters_offices/avs",
+      "linkType": "program-page",
+      "evidence": "https://www.faa.gov/about/office_org/headquarters_offices/avs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Aviation Safety Oversight and Certification Organization (AVS) | Federal Aviation Administration"
+    },
+    {
+      "id": "airports",
+      "title": "Airports",
+      "url": "https://www.faa.gov/about/office_org/headquarters_offices/arp",
+      "linkType": "program-page",
+      "evidence": "https://www.faa.gov/about/office_org/headquarters_offices/arp",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Airports | Federal Aviation Administration"
+    },
+    {
+      "id": "commercial-space-transportation",
+      "title": "Commercial Space Transportation",
+      "url": "https://www.faa.gov/space",
+      "linkType": "program-page",
+      "evidence": "https://www.faa.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Commercial Space Transportation | Federal Aviation Administration"
+    },
+    {
+      "id": "federal-highway-administration",
+      "title": "Federal Highway Administration",
+      "url": "https://highways.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-highway-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-highway-traffic-safety-administration",
+      "title": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-highway-traffic-safety-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "vehicle-safety-standards",
+      "title": "Vehicle safety standards",
+      "url": "https://www.nhtsa.gov/laws-regulations",
+      "linkType": "program-page",
+      "evidence": "https://www.nhtsa.gov/laws-regulations",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "defect-investigations-and-recalls",
+      "title": "Defect investigations and recalls",
+      "url": "https://www.nhtsa.gov/recalls",
+      "linkType": "program-page",
+      "evidence": "https://www.nhtsa.gov/recalls",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-motor-carrier-safety-administration",
+      "title": "Federal Motor Carrier Safety Administration",
+      "url": "https://www.fmcsa.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-motor-carrier-safety-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-railroad-administration",
+      "title": "Federal Railroad Administration",
+      "url": "https://railroads.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-railroad-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-transit-administration",
+      "title": "Federal Transit Administration",
+      "url": "https://www.transit.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-transit-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "maritime-administration",
+      "title": "Maritime Administration",
+      "url": "https://www.maritime.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/maritime-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "pipeline-and-hazardous-materials-safety-administration",
+      "title": "Pipeline and Hazardous Materials Safety Administration",
+      "url": "https://www.phmsa.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/pipeline-and-hazardous-materials-safety-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "great-lakes-st-lawrence-seaway-development-corporation",
+      "title": "Great Lakes St. Lawrence Seaway Development Corporation",
+      "url": "https://www.seaway.dot.gov/",
+      "linkType": "website",
+      "evidence": "https://www.seaway.dot.gov/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-transportation-statistics",
+      "title": "Bureau of Transportation Statistics",
+      "url": "https://www.bts.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bureau-of-transportation-statistics",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-energy",
+      "title": "Department of Energy",
+      "url": "https://www.energy.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-energy",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Department of Energy"
+    },
+    {
+      "id": "national-nuclear-security-administration-nnsa",
+      "title": "National Nuclear Security Administration (NNSA)",
+      "url": "https://www.energy.gov/nnsa/national-nuclear-security-administration",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-nuclear-security-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Nuclear Security Administration | Department of Energy"
+    },
+    {
+      "id": "defense-programs",
+      "title": "Defense Programs",
+      "url": "https://www.energy.gov/nnsa/us-nuclear-weapons-stockpile",
+      "linkType": "program-page",
+      "evidence": "https://www.energy.gov/nnsa/us-nuclear-weapons-stockpile",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "The U.S. Nuclear Weapons Stockpile | Department of Energy"
+    },
+    {
+      "id": "defense-nuclear-nonproliferation",
+      "title": "Defense Nuclear Nonproliferation",
+      "url": "https://www.energy.gov/nnsa/nonproliferation",
+      "linkType": "program-page",
+      "evidence": "https://www.energy.gov/nnsa/nonproliferation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Nonproliferation | Department of Energy"
+    },
+    {
+      "id": "naval-reactors",
+      "title": "Naval Reactors",
+      "url": "https://www.energy.gov/nnsa/powering-navy",
+      "linkType": "program-page",
+      "evidence": "https://www.energy.gov/nnsa/powering-navy",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Powering the Navy | Department of Energy"
+    },
+    {
+      "id": "office-of-science",
+      "title": "Office of Science",
+      "url": "https://www.energy.gov/science/office-science",
+      "linkType": "website",
+      "evidence": "https://www.energy.gov/science/office-science-user-facilities",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Science | Department of Energy"
+    },
+    {
+      "id": "national-laboratory-research",
+      "title": "Office of Science laboratories",
+      "url": "https://www.energy.gov/science/office-science-national-laboratories",
+      "linkType": "program-page",
+      "evidence": "https://www.energy.gov/science/office-science-national-laboratories",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Science National Laboratories | Department of Energy"
+    },
+    {
+      "id": "scientific-user-facilities",
+      "title": "Scientific user facilities",
+      "url": "https://www.energy.gov/science/office-science-user-facilities",
+      "linkType": "program-page",
+      "evidence": "https://www.energy.gov/national-laboratories",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Science User Facilities | Department of Energy"
+    },
+    {
+      "id": "energy-information-administration",
+      "title": "Energy Information Administration",
+      "url": "https://www.eia.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/energy-information-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Homepage -\r\n        U.S. Energy Information Administration (EIA)"
+    },
+    {
+      "id": "office-of-nuclear-energy",
+      "title": "Office of Nuclear Energy",
+      "url": "https://www.energy.gov/ne/office-nuclear-energy",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-nuclear-energy",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Nuclear Energy | Department of Energy"
+    },
+    {
+      "id": "office-of-electricity",
+      "title": "Office of Electricity",
+      "url": "https://www.energy.gov/oe/office-electricity",
+      "linkType": "website",
+      "evidence": "https://www.energy.gov/oe/office-electricity",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Electricity | Department of Energy"
+    },
+    {
+      "id": "office-of-environmental-management",
+      "title": "Office of Environmental Management",
+      "url": "https://www.energy.gov/em/office-environmental-management",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-environmental-management",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Environmental Management | Department of Energy"
+    },
+    {
+      "id": "loan-programs-office",
+      "title": "Office of Energy Dominance Financing (formerly Loan Programs Office)",
+      "url": "https://www.energy.gov/EDF",
+      "linkType": "website",
+      "evidence": "https://www.energy.gov/EDF",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Office of Energy Dominance Financing | Department of Energy"
+    },
+    {
+      "id": "power-marketing-administrations",
+      "title": "Power Marketing Administrations",
+      "url": "https://www.energy.gov/oe/power-marketing-administrations",
+      "linkType": "directory",
+      "evidence": "https://www.energy.gov/oe/power-marketing-administrations",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Power Marketing Administrations | Department of Energy"
+    },
+    {
+      "id": "bonneville-power-administration",
+      "title": "Bonneville Power Administration",
+      "url": "https://www.bpa.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/bonneville-power-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "BPA.gov - Bonneville Power Administration - Bonneville Power Administration"
+    },
+    {
+      "id": "western-area-power-administration",
+      "title": "Western Area Power Administration",
+      "url": "https://www.wapa.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/western-area-power-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Western Area Power Administration – Safely provide reliable, cost-based hydropower and transmission to our customers and the communities we serve.​"
+    },
+    {
+      "id": "southeastern-power-administration",
+      "title": "Southeastern Power Administration",
+      "url": "https://www.energy.gov/sepa/southeastern-power-administration",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/southeastern-power-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Southeastern Power Administration | Department of Energy"
+    },
+    {
+      "id": "southwestern-power-administration",
+      "title": "Southwestern Power Administration",
+      "url": "https://www.energy.gov/swpa/southwestern-power-administration",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/southwestern-power-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Southwestern Power Administration | Department of Energy"
+    },
+    {
+      "id": "federal-energy-regulatory-commission-ferc",
+      "title": "Federal Energy Regulatory Commission (FERC)",
+      "url": "https://www.ferc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-energy-regulatory-commission",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "electric-power",
+      "title": "Electric power",
+      "url": "https://www.ferc.gov/electric",
+      "linkType": "program-page",
+      "evidence": "https://www.ferc.gov/electric",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "natural-gas",
+      "title": "Natural gas",
+      "url": "https://www.ferc.gov/natural-gas",
+      "linkType": "program-page",
+      "evidence": "https://www.ferc.gov/natural-gas",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "hydropower-licensing",
+      "title": "Hydropower licensing",
+      "url": "https://www.ferc.gov/hydropower",
+      "linkType": "program-page",
+      "evidence": "https://www.ferc.gov/hydropower",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-education",
+      "title": "Department of Education",
+      "url": "https://www.ed.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-education",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-student-aid",
+      "title": "Federal Student Aid",
+      "url": "https://studentaid.gov/",
+      "linkType": "website",
+      "evidence": "https://studentaid.gov/understand-aid/types/work-study",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Student Aid"
+    },
+    {
+      "id": "fafsa",
+      "title": "FAFSA",
+      "url": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "linkType": "program-page",
+      "evidence": "https://studentaid.gov/h/apply-for-aid/fafsa",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Student Aid"
+    },
+    {
+      "id": "federal-pell-grants",
+      "title": "Federal Pell Grants",
+      "url": "https://studentaid.gov/understand-aid/types/grants/pell",
+      "linkType": "program-page",
+      "evidence": "https://studentaid.gov/understand-aid/types/grants/pell",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Student Aid"
+    },
+    {
+      "id": "direct-loan-program",
+      "title": "Direct Loan Program",
+      "url": "https://studentaid.gov/understand-aid/types/loans",
+      "linkType": "program-page",
+      "evidence": "https://studentaid.gov/understand-aid/types/loans",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Student Aid"
+    },
+    {
+      "id": "federal-work-study",
+      "title": "Federal Work-Study",
+      "url": "https://studentaid.gov/understand-aid/types/work-study",
+      "linkType": "program-page",
+      "evidence": "https://studentaid.gov/understand-aid/types/work-study",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Student Aid"
+    },
+    {
+      "id": "office-for-civil-rights",
+      "title": "Office for Civil Rights",
+      "url": "https://www.ed.gov/about/ed-offices/ocr",
+      "linkType": "website",
+      "evidence": "https://www.ed.gov/about/ed-offices/ocr",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "institute-of-education-sciences",
+      "title": "Institute of Education Sciences",
+      "url": "https://ies.ed.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/institute-of-education-sciences",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Institute of Education Sciences (IES)"
+    },
+    {
+      "id": "national-center-for-education-statistics",
+      "title": "National Center for Education Statistics",
+      "url": "https://nces.ed.gov/",
+      "linkType": "website",
+      "evidence": "https://nces.ed.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Center for Education Statistics (NCES) | IES"
+    },
+    {
+      "id": "national-center-for-education-research",
+      "title": "National Center for Education Research",
+      "url": "https://ies.ed.gov/about/national-center-education-research-ncer",
+      "linkType": "website",
+      "evidence": "https://ies.ed.gov/about/national-center-education-research-ncer",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Center for Education Research (NCER) | IES"
+    },
+    {
+      "id": "national-center-for-special-education-research",
+      "title": "National Center for Special Education Research",
+      "url": "https://ies.ed.gov/about/national-center-special-education-research-ncser",
+      "linkType": "website",
+      "evidence": "https://ies.ed.gov/about/national-center-special-education-research-ncser",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "The National Center for Special Education Research (NCSER) | IES"
+    },
+    {
+      "id": "national-center-for-education-evaluation-and-regional-assistance",
+      "title": "National Center for Education Evaluation and Regional Assistance",
+      "url": "https://ies.ed.gov/about/national-center-education-evaluation-regional-assistance-ncee",
+      "linkType": "website",
+      "evidence": "https://ies.ed.gov/about/national-center-education-evaluation-regional-assistance-ncee",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Center for Education Evaluation and Regional Assistance | IES"
+    },
+    {
+      "id": "office-of-elementary-and-secondary-education",
+      "title": "Office of Elementary and Secondary Education",
+      "url": "https://oese.ed.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-elementary-and-secondary-education",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-special-education-and-rehabilitative-services",
+      "title": "Office of Special Education and Rehabilitative Services",
+      "url": "https://www.ed.gov/about/ed-offices/osers",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-special-education-and-rehabilitative-services",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-special-education-programs",
+      "title": "Office of Special Education Programs",
+      "url": "https://www.ed.gov/about/ed-offices/osers/osep",
+      "linkType": "website",
+      "evidence": "https://sites.ed.gov/idea/connect-with-osep/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "rehabilitation-services-administration",
+      "title": "Rehabilitation Services Administration",
+      "url": "https://rsa.ed.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/rehabilitation-services-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Rehabilitation Services Administration"
+    },
+    {
+      "id": "office-of-postsecondary-education",
+      "title": "Office of Postsecondary Education",
+      "url": "https://www.ed.gov/about/ed-offices/ope",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-postsecondary-education",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-career-technical-and-adult-education",
+      "title": "Office of Career, Technical, and Adult Education",
+      "url": "https://www.ed.gov/about/ed-offices/octae",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-career-technical-and-adult-education",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "office-of-english-language-acquisition",
+      "title": "Office of English Language Acquisition",
+      "url": "https://www.ed.gov/about/ed-offices/oela",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/english-language-acquisition-office",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "department-of-veterans-affairs",
+      "title": "Department of Veterans Affairs",
+      "url": "https://www.va.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-veterans-affairs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "VA.gov Home | Veterans Affairs"
+    },
+    {
+      "id": "veterans-health-administration",
+      "title": "Veterans Health Administration",
+      "url": "https://department.va.gov/vha/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/veterans-health-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home - Veterans Health Administration"
+    },
+    {
+      "id": "va-medical-centers",
+      "title": "VA medical centers",
+      "url": "https://www.va.gov/find-locations/",
+      "linkType": "program-page",
+      "evidence": "https://department.va.gov/vha/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Find VA Locations | Veterans Affairs"
+    },
+    {
+      "id": "community-based-outpatient-clinics",
+      "title": "Community-based outpatient clinics",
+      "url": "https://www.va.gov/find-locations/",
+      "linkType": "program-page",
+      "evidence": "https://department.va.gov/vha/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Find VA Locations | Veterans Affairs"
+    },
+    {
+      "id": "vet-centers",
+      "title": "Vet Centers",
+      "url": "https://www.vetcenter.va.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.vetcenter.va.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Vet Centers (Readjustment Counseling) Home"
+    },
+    {
+      "id": "veterans-benefits-administration",
+      "title": "Veterans Benefits Administration",
+      "url": "https://www.benefits.va.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/veterans-benefits-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Redirect to Benefits Home Page"
+    },
+    {
+      "id": "disability-compensation",
+      "title": "Disability compensation",
+      "url": "https://www.va.gov/disability/",
+      "linkType": "program-page",
+      "evidence": "https://department.va.gov/vha/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "VA Disability Compensation | Veterans Affairs"
+    },
+    {
+      "id": "gi-bill-education-benefits",
+      "title": "GI Bill education benefits",
+      "url": "https://www.va.gov/education/",
+      "linkType": "program-page",
+      "evidence": "https://department.va.gov/vha/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "VA Education And Training Benefits | Veterans Affairs"
+    },
+    {
+      "id": "va-home-loan-guaranty",
+      "title": "VA home loan guaranty",
+      "url": "https://www.va.gov/housing-assistance/home-loans/",
+      "linkType": "program-page",
+      "evidence": "https://www.va.gov/housing-assistance/home-loans/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "VA-Backed Veterans Home Loans | Veterans Affairs"
+    },
+    {
+      "id": "veteran-readiness-and-employment",
+      "title": "Veteran Readiness and Employment",
+      "url": "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+      "linkType": "program-page",
+      "evidence": "https://www.va.gov/careers-employment/vocational-rehabilitation/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Veteran Readiness And Employment (Chapter 31) | Veterans Affairs"
+    },
+    {
+      "id": "pension-benefits",
+      "title": "Pension benefits",
+      "url": "https://www.va.gov/pension/",
+      "linkType": "program-page",
+      "evidence": "https://department.va.gov/vha/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "VA Pension Benefits | Veterans Affairs"
+    },
+    {
+      "id": "national-cemetery-administration",
+      "title": "National Cemetery Administration",
+      "url": "https://www.cem.va.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-cemetery-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Cemetery Administration"
+    },
+    {
+      "id": "national-cemeteries",
+      "title": "National cemeteries",
+      "url": "https://www.cem.va.gov/find-cemetery/",
+      "linkType": "program-page",
+      "evidence": "https://www.cem.va.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Find a Cemetery - National Cemetery Administration"
+    },
+    {
+      "id": "headstones-markers-and-medallions",
+      "title": "Headstones, markers, and medallions",
+      "url": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers/",
+      "linkType": "program-page",
+      "evidence": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Veterans Headstones And Markers | Veterans Affairs"
+    },
+    {
+      "id": "board-of-veterans-appeals",
+      "title": "Board of Veterans’ Appeals",
+      "url": "https://department.va.gov/board-of-veterans-appeals/",
+      "linkType": "website",
+      "evidence": "https://department.va.gov/board-of-veterans-appeals/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Board of Veterans' Appeals"
+    },
+    {
+      "id": "office-of-inspector-general",
+      "title": "Office of Inspector General",
+      "url": "https://www.vaoig.gov/",
+      "linkType": "website",
+      "evidence": "https://www.cem.va.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Department of Veterans Affairs OIG"
+    },
+    {
+      "id": "department-of-homeland-security",
+      "title": "Department of Homeland Security",
+      "url": "https://www.dhs.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-department-of-homeland-security",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Homeland Security"
+    },
+    {
+      "id": "federal-emergency-management-agency-fema",
+      "title": "Federal Emergency Management Agency (FEMA)",
+      "url": "https://www.fema.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-emergency-management-agency",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "disaster-assistance",
+      "title": "Disaster assistance",
+      "url": "https://www.fema.gov/assistance/individual",
+      "linkType": "program-page",
+      "evidence": "https://www.fema.gov/assistance/individual",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-flood-insurance-program",
+      "title": "National Flood Insurance Program",
+      "url": "https://www.floodsmart.gov/",
+      "linkType": "program-page",
+      "evidence": "https://www.usa.gov/agencies/national-flood-insurance-program",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Floodsmart | The National Flood Insurance Program"
+    },
+    {
+      "id": "preparedness-grants",
+      "title": "Preparedness grants",
+      "url": "https://www.fema.gov/grants/preparedness",
+      "linkType": "program-page",
+      "evidence": "https://www.fema.gov/grants/preparedness",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "transportation-security-administration-tsa",
+      "title": "Transportation Security Administration (TSA)",
+      "url": "https://www.tsa.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/transportation-security-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | Transportation Security Administration"
+    },
+    {
+      "id": "airport-screening",
+      "title": "Airport screening",
+      "url": "https://www.tsa.gov/travel/security-screening",
+      "linkType": "program-page",
+      "evidence": "https://www.tsa.gov",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Security Screening | Transportation Security Administration"
+    },
+    {
+      "id": "federal-air-marshal-service",
+      "title": "Federal Air Marshal Service",
+      "url": "https://www.tsa.gov/about/tsa-leadership",
+      "linkType": "organization-listing",
+      "evidence": "https://www.tsa.gov/about/tsa-leadership",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Leadership and Organization | Transportation Security Administration"
+    },
+    {
+      "id": "u-s-customs-and-border-protection-cbp",
+      "title": "U.S. Customs and Border Protection (CBP)",
+      "url": "https://www.cbp.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-customs-and-border-protection",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Customs and Border Protection | U.S. Customs and Border Protection"
+    },
+    {
+      "id": "u-s-border-patrol",
+      "title": "U.S. Border Patrol",
+      "url": "https://www.cbp.gov/border-security/along-us-borders",
+      "linkType": "website",
+      "evidence": "https://www.cbp.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Along U.S. Borders: U.S. Border Patrol | U.S. Customs and Border Protection"
+    },
+    {
+      "id": "office-of-field-operations",
+      "title": "Office of Field Operations",
+      "url": "https://www.cbp.gov/border-security/ports-entry",
+      "linkType": "website",
+      "evidence": "https://www.cbp.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "At Ports of Entry: Field Operations | U.S. Customs and Border Protection"
+    },
+    {
+      "id": "air-and-marine-operations",
+      "title": "Air and Marine Operations",
+      "url": "https://www.cbp.gov/border-security/air-sea",
+      "linkType": "website",
+      "evidence": "https://www.cbp.gov/border-security/air-sea",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "From the Air and Sea: Air and Marine Operations | U.S. Customs and Border Protection"
+    },
+    {
+      "id": "u-s-immigration-and-customs-enforcement-ice",
+      "title": "U.S. Immigration and Customs Enforcement (ICE)",
+      "url": "https://www.ice.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-immigration-and-customs-enforcement",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "ICE | U.S. Immigration and Customs Enforcement"
+    },
+    {
+      "id": "homeland-security-investigations",
+      "title": "Homeland Security Investigations",
+      "url": "https://www.ice.gov/hsi",
+      "linkType": "website",
+      "evidence": "https://www.ice.gov/hsi",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Homeland Security Investigations | ICE"
+    },
+    {
+      "id": "enforcement-and-removal-operations",
+      "title": "Enforcement and Removal Operations",
+      "url": "https://www.ice.gov/ero",
+      "linkType": "website",
+      "evidence": "https://www.ice.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Enforcement and Removal Operations | ICE"
+    },
+    {
+      "id": "u-s-citizenship-and-immigration-services-uscis",
+      "title": "U.S. Citizenship and Immigration Services (USCIS)",
+      "url": "https://www.uscis.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-citizenship-and-immigration-services",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | USCIS"
+    },
+    {
+      "id": "naturalization",
+      "title": "Naturalization",
+      "url": "https://www.uscis.gov/citizenship",
+      "linkType": "program-page",
+      "evidence": "https://www.uscis.gov/citizenship",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Citizenship Resource Center | USCIS"
+    },
+    {
+      "id": "immigration-petitions-and-applications",
+      "title": "Immigration petitions and applications",
+      "url": "https://www.uscis.gov/forms/all-forms",
+      "linkType": "program-page",
+      "evidence": "https://www.uscis.gov/forms/all-forms",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "All Forms | USCIS"
+    },
+    {
+      "id": "u-s-coast-guard",
+      "title": "U.S. Coast Guard",
+      "url": "https://www.uscg.mil/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-coast-guard",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "search-and-rescue",
+      "title": "Search and rescue",
+      "url": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Response-Policy-CG-5R/Office-of-Incident-Management-Preparedness-CG-5RI/US-Coast-Guard-Office-of-Search-and-Rescue-CG-SAR/",
+      "linkType": "program-page",
+      "evidence": "https://www.dco.uscg.mil/Our-Organization/Assistant-Commandant-for-Response-Policy-CG-5R/Office-of-Incident-Management-Preparedness-CG-5RI/US-Coast-Guard-Office-of-Search-and-Rescue-CG-SAR/",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "maritime-safety-and-law-enforcement",
+      "title": "Maritime safety and law enforcement",
+      "url": "https://www.uscg.mil/What-We-Do/",
+      "linkType": "program-page",
+      "evidence": "https://www.uscg.mil/What-We-Do/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "u-s-secret-service",
+      "title": "U.S. Secret Service",
+      "url": "https://www.secretservice.gov/",
+      "linkType": "website",
+      "evidence": "https://www.secretservice.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | United States Secret Service"
+    },
+    {
+      "id": "cybersecurity-and-infrastructure-security-agency-cisa",
+      "title": "Cybersecurity and Infrastructure Security Agency (CISA)",
+      "url": "https://www.cisa.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/cybersecurity-and-infrastructure-security-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home Page | CISA"
+    },
+    {
+      "id": "federal-law-enforcement-training-centers",
+      "title": "Federal Law Enforcement Training Centers",
+      "url": "https://www.fletc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-law-enforcement-training-center",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Frontpage | Federal Law Enforcement Training Centers"
+    },
+    {
+      "id": "science-and-technology-directorate",
+      "title": "Science and Technology Directorate",
+      "url": "https://www.dhs.gov/science-and-technology",
+      "linkType": "website",
+      "evidence": "https://www.dhs.gov/countering-weapons-mass-destruction-office",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Science and Technology Directorate | Homeland Security"
+    },
+    {
+      "id": "countering-weapons-of-mass-destruction-office",
+      "title": "Countering Weapons of Mass Destruction Office",
+      "url": "https://www.dhs.gov/countering-weapons-mass-destruction-office",
+      "linkType": "website",
+      "evidence": "https://www.dhs.gov/countering-weapons-mass-destruction-office",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Countering Weapons of Mass Destruction Office | Homeland Security"
+    },
+    {
+      "id": "outside-the-departments",
+      "title": "Outside the departments",
+      "url": "https://www.usa.gov/agency-index",
+      "linkType": "directory",
+      "evidence": "https://www.usa.gov/agency-index",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "A-Z index of U.S. government departments and agencies | USAGov"
+    },
+    {
+      "id": "environmental-protection-agency-epa",
+      "title": "Environmental Protection Agency (EPA)",
+      "url": "https://www.epa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/environmental-protection-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "U.S. Environmental Protection Agency | US EPA"
+    },
+    {
+      "id": "office-of-air-and-radiation",
+      "title": "Office of Air and Radiation",
+      "url": "https://www.epa.gov/aboutepa/about-office-air-and-radiation",
+      "linkType": "website",
+      "evidence": "https://www.epa.gov/aboutepa/about-office-air-and-radiation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About the Office of Air and Radiation | US EPA"
+    },
+    {
+      "id": "office-of-water",
+      "title": "Office of Water",
+      "url": "https://www.epa.gov/aboutepa/about-office-water",
+      "linkType": "website",
+      "evidence": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About the Office of Water | US EPA"
+    },
+    {
+      "id": "office-of-chemical-safety-and-pollution-prevention",
+      "title": "Office of Chemical Safety and Pollution Prevention",
+      "url": "https://www.epa.gov/aboutepa/about-office-chemical-safety-and-pollution-prevention",
+      "linkType": "website",
+      "evidence": "https://www.epa.gov/aboutepa/about-office-chemical-safety-and-pollution-prevention",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About the Office of Chemical Safety and Pollution Prevention | US EPA"
+    },
+    {
+      "id": "office-of-land-and-emergency-management",
+      "title": "Office of Land and Emergency Management",
+      "url": "https://www.epa.gov/aboutepa/about-office-land-and-emergency-management",
+      "linkType": "website",
+      "evidence": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About the Office of Land and Emergency Management | US EPA"
+    },
+    {
+      "id": "office-of-enforcement-and-compliance-assurance",
+      "title": "Office of Enforcement and Compliance Assurance",
+      "url": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
+      "linkType": "website",
+      "evidence": "https://www.epa.gov/aboutepa/about-office-enforcement-and-compliance-assurance-oeca",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "About the Office of Enforcement and Compliance Assurance (OECA) | US EPA"
+    },
+    {
+      "id": "national-aeronautics-and-space-administration-nasa",
+      "title": "National Aeronautics and Space Administration (NASA)",
+      "url": "https://www.nasa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-aeronautics-and-space-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NASA"
+    },
+    {
+      "id": "kennedy-space-center",
+      "title": "Kennedy Space Center",
+      "url": "https://www.nasa.gov/kennedy/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/johnson/",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "johnson-space-center",
+      "title": "Johnson Space Center",
+      "url": "https://www.nasa.gov/johnson/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/johnson/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Johnson Space Center - NASA"
+    },
+    {
+      "id": "goddard-space-flight-center",
+      "title": "Goddard Space Flight Center",
+      "url": "https://www.nasa.gov/goddard/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/goddard/",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "marshall-space-flight-center",
+      "title": "Marshall Space Flight Center",
+      "url": "https://www.nasa.gov/marshall/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/johnson/",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "ames-research-center",
+      "title": "Ames Research Center",
+      "url": "https://www.nasa.gov/ames/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/langley/",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "langley-research-center",
+      "title": "Langley Research Center",
+      "url": "https://www.nasa.gov/langley/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/langley/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Langley Research Center - NASA"
+    },
+    {
+      "id": "glenn-research-center",
+      "title": "Glenn Research Center",
+      "url": "https://www.nasa.gov/glenn/",
+      "linkType": "website",
+      "evidence": "https://www.nasa.gov/langley/",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "central-intelligence-agency-cia",
+      "title": "Central Intelligence Agency (CIA)",
+      "url": "https://www.cia.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/central-intelligence-agency",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "CIA"
+    },
+    {
+      "id": "directorate-of-operations",
+      "title": "Directorate of Operations",
+      "url": "https://www.cia.gov/about/organization/directorate-of-operations/",
+      "linkType": "website",
+      "evidence": "https://www.cia.gov/about/organization/directorate-of-operations/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Directorate of Operations - CIA"
+    },
+    {
+      "id": "directorate-of-analysis",
+      "title": "Directorate of Analysis",
+      "url": "https://www.cia.gov/about/organization/directorate-of-analysis/",
+      "linkType": "website",
+      "evidence": "https://www.cia.gov/about/organization/directorate-of-analysis/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Directorate of Analysis - CIA"
+    },
+    {
+      "id": "directorate-of-science-and-technology",
+      "title": "Directorate of Science and Technology",
+      "url": "https://www.cia.gov/about/organization/directorate-of-science-and-technology/",
+      "linkType": "website",
+      "evidence": "https://www.cia.gov/about/organization/directorate-of-science-and-technology/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Directorate of Science and Technology - CIA"
+    },
+    {
+      "id": "directorate-of-digital-innovation",
+      "title": "Directorate of Mission Systems",
+      "url": "https://www.cia.gov/about/organization/directorate-of-mission-systems/",
+      "linkType": "website",
+      "evidence": "https://www.cia.gov/about/organization/directorate-of-mission-systems/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Directorate of Mission Systems - CIA"
+    },
+    {
+      "id": "directorate-of-support",
+      "title": "Directorate of Support",
+      "url": "https://www.cia.gov/about/organization/directorate-of-support/",
+      "linkType": "website",
+      "evidence": "https://www.cia.gov/about/organization/directorate-of-support/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Directorate of Support - CIA"
+    },
+    {
+      "id": "office-of-the-director-of-national-intelligence",
+      "title": "Office of the Director of National Intelligence",
+      "url": "https://www.dni.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-the-director-of-national-intelligence",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "social-security-administration",
+      "title": "Social Security Administration",
+      "url": "https://www.ssa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/social-security-administration",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "retirement-benefits",
+      "title": "Retirement benefits",
+      "url": "https://www.ssa.gov/retirement",
+      "linkType": "program-page",
+      "evidence": "https://www.ssa.gov/retirement",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "survivors-benefits",
+      "title": "Survivors benefits",
+      "url": "https://www.ssa.gov/survivor",
+      "linkType": "program-page",
+      "evidence": "https://www.ssa.gov/survivor",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "disability-insurance",
+      "title": "Disability Insurance",
+      "url": "https://www.ssa.gov/disability",
+      "linkType": "program-page",
+      "evidence": "https://www.ssa.gov/disability",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "supplemental-security-income-ssi",
+      "title": "Supplemental Security Income (SSI)",
+      "url": "https://www.ssa.gov/ssi",
+      "linkType": "program-page",
+      "evidence": "https://www.ssa.gov/ssi",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "small-business-administration",
+      "title": "Small Business Administration",
+      "url": "https://www.sba.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/small-business-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Homepage - Small Business Administration"
+    },
+    {
+      "id": "7-a-loan-program",
+      "title": "7(a) Loan Program",
+      "url": "https://www.sba.gov/loans/7a-loans/",
+      "linkType": "program-page",
+      "evidence": "https://www.sba.gov/loans/7a-loans/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "7(a) loans - Small Business Administration"
+    },
+    {
+      "id": "disaster-assistance-2",
+      "title": "Disaster assistance",
+      "url": "https://www.sba.gov/disaster/",
+      "linkType": "program-page",
+      "evidence": "https://www.sba.gov/disaster/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "SBA disaster assistance: Low-interest relief loans - Small Business Administration"
+    },
+    {
+      "id": "small-business-development-centers",
+      "title": "Small Business Development Centers",
+      "url": "https://www.sba.gov/counseling/local-assistance/resource-partners/#sbdcs",
+      "linkType": "program-page",
+      "evidence": "https://www.sba.gov/counseling/local-assistance/resource-partners/#sbdcs",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Resource Partners - Small Business Administration"
+    },
+    {
+      "id": "government-contracting-assistance",
+      "title": "Government contracting assistance",
+      "url": "https://www.sba.gov/certifications/",
+      "linkType": "program-page",
+      "evidence": "https://www.sba.gov/certifications/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "SBA business certifications: 8(a), WOSB, HUBZone, SDVOSB -Small Business Administration"
+    },
+    {
+      "id": "general-services-administration",
+      "title": "General Services Administration",
+      "url": "https://www.gsa.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/general-services-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | GSA"
+    },
+    {
+      "id": "public-buildings-service",
+      "title": "Public Buildings Service",
+      "url": "https://www.gsa.gov/real-estate",
+      "linkType": "website",
+      "evidence": "https://www.gsa.gov/real-estate",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Real estate | GSA"
+    },
+    {
+      "id": "federal-acquisition-service",
+      "title": "Federal Acquisition Service",
+      "url": "https://www.gsa.gov/about-gsa/organization",
+      "linkType": "organization-listing",
+      "evidence": "https://www.gsa.gov/about-gsa/organization",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "GSA organization | GSA"
+    },
+    {
+      "id": "office-of-personnel-management",
+      "title": "Office of Personnel Management",
+      "url": "https://www.opm.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-personnel-management",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "OPM Home - OPM.gov"
+    },
+    {
+      "id": "national-archives-and-records-administration",
+      "title": "National Archives and Records Administration",
+      "url": "https://www.archives.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-archives-and-records-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Archives | Home"
+    },
+    {
+      "id": "national-archives",
+      "title": "Archival records and research",
+      "url": "https://www.archives.gov/research/",
+      "linkType": "program-page",
+      "evidence": "https://www.archives.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Research Our Records | National Archives"
+    },
+    {
+      "id": "office-of-the-federal-register",
+      "title": "Office of the Federal Register",
+      "url": "https://www.archives.gov/federal-register",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/office-of-the-federal-register",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Register | National Archives"
+    },
+    {
+      "id": "presidential-libraries",
+      "title": "Presidential Libraries",
+      "url": "https://www.archives.gov/presidential-libraries",
+      "linkType": "website",
+      "evidence": "https://www.archives.gov/",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Presidential Libraries and Museums of the National Archives  | National Archives"
+    },
+    {
+      "id": "national-science-foundation",
+      "title": "National Science Foundation",
+      "url": "https://www.nsf.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-science-foundation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NSF - U.S. National Science Foundation"
+    },
+    {
+      "id": "peace-corps",
+      "title": "Peace Corps",
+      "url": "https://www.peacecorps.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/peace-corps",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-trade-commission-ftc",
+      "title": "Federal Trade Commission (FTC)",
+      "url": "https://www.ftc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-trade-commission",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 404,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-competition",
+      "title": "Bureau of Competition",
+      "url": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-competition",
+      "linkType": "website",
+      "evidence": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-competition",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 404,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-consumer-protection",
+      "title": "Bureau of Consumer Protection",
+      "url": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection",
+      "linkType": "website",
+      "evidence": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 404,
+      "pageTitle": ""
+    },
+    {
+      "id": "bureau-of-economics",
+      "title": "Bureau of Economics",
+      "url": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-economics",
+      "linkType": "website",
+      "evidence": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-economics",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 404,
+      "pageTitle": ""
+    },
+    {
+      "id": "federal-communications-commission-fcc",
+      "title": "Federal Communications Commission (FCC)",
+      "url": "https://www.fcc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-communications-commission",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "media-bureau",
+      "title": "Media Bureau",
+      "url": "https://www.fcc.gov/media",
+      "linkType": "website",
+      "evidence": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "wireless-telecommunications-bureau",
+      "title": "Wireless Telecommunications Bureau",
+      "url": "https://www.fcc.gov/wireless-telecommunications",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/wireless-telecommunications-bureau",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "space-bureau",
+      "title": "Space Bureau",
+      "url": "https://www.fcc.gov/space",
+      "linkType": "website",
+      "evidence": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "enforcement-bureau",
+      "title": "Enforcement Bureau",
+      "url": "https://www.fcc.gov/enforcement",
+      "linkType": "website",
+      "evidence": "https://docs.fcc.gov/public/attachments/DA-25-1059A1.pdf",
+      "check": "official-reference-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "securities-and-exchange-commission-sec",
+      "title": "Securities and Exchange Commission (SEC)",
+      "url": "https://www.sec.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/securities-and-exchange-commission",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-corporation-finance",
+      "title": "Division of Corporation Finance",
+      "url": "https://www.sec.gov/about/divisions-offices/division-corporation-finance",
+      "linkType": "website",
+      "evidence": "https://www.sec.gov/about/divisions-offices/division-corporation-finance",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-trading-and-markets",
+      "title": "Division of Trading and Markets",
+      "url": "https://www.sec.gov/about/divisions-offices/division-trading-markets",
+      "linkType": "website",
+      "evidence": "https://www.sec.gov/about/divisions-offices/division-trading-markets",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-investment-management",
+      "title": "Division of Investment Management",
+      "url": "https://www.sec.gov/about/divisions-offices/division-investment-management",
+      "linkType": "website",
+      "evidence": "https://www.sec.gov/about/divisions-offices/division-investment-management",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-enforcement",
+      "title": "Division of Enforcement",
+      "url": "https://www.sec.gov/about/divisions-offices/division-enforcement",
+      "linkType": "website",
+      "evidence": "https://www.sec.gov/about/divisions-offices/division-enforcement",
+      "check": "page-opened-through-web-retrieval",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "commodity-futures-trading-commission",
+      "title": "Commodity Futures Trading Commission",
+      "url": "https://www.cftc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-commodity-futures-trading-commission",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Commodity Futures Trading Commission | CFTC"
+    },
+    {
+      "id": "federal-reserve-system",
+      "title": "Federal Reserve System",
+      "url": "https://www.federalreserve.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-reserve-system",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Reserve Board - Home"
+    },
+    {
+      "id": "board-of-governors",
+      "title": "Board of Governors",
+      "url": "https://www.federalreserve.gov/aboutthefed.htm",
+      "linkType": "website",
+      "evidence": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Reserve Board - About the Fed"
+    },
+    {
+      "id": "12-federal-reserve-banks",
+      "title": "12 Federal Reserve Banks",
+      "url": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
+      "linkType": "directory",
+      "evidence": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Federal Reserve Board - Federal Reserve Banks"
+    },
+    {
+      "id": "federal-open-market-committee",
+      "title": "Federal Open Market Committee",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm",
+      "linkType": "website",
+      "evidence": "https://www.federalreserve.gov/aboutthefed/federal-reserve-system.htm",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "The Fed - Federal Open Market Committee"
+    },
+    {
+      "id": "federal-deposit-insurance-corporation-fdic",
+      "title": "Federal Deposit Insurance Corporation (FDIC)",
+      "url": "https://www.fdic.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-deposit-insurance-corporation",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "FDIC: Federal Deposit Insurance Corporation"
+    },
+    {
+      "id": "national-credit-union-administration",
+      "title": "National Credit Union Administration",
+      "url": "https://ncua.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-credit-union-administration",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "NCUA"
+    },
+    {
+      "id": "consumer-financial-protection-bureau",
+      "title": "Consumer Financial Protection Bureau",
+      "url": "https://www.consumerfinance.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/consumer-financial-protection-bureau",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-labor-relations-board",
+      "title": "National Labor Relations Board",
+      "url": "https://www.nlrb.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-labor-relations-board",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | National Labor Relations Board"
+    },
+    {
+      "id": "equal-employment-opportunity-commission",
+      "title": "Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/equal-employment-opportunity-commission",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | U.S. Equal Employment Opportunity Commission"
+    },
+    {
+      "id": "consumer-product-safety-commission",
+      "title": "Consumer Product Safety Commission",
+      "url": "https://www.cpsc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/consumer-product-safety-commission",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "nuclear-regulatory-commission",
+      "title": "Nuclear Regulatory Commission",
+      "url": "https://www.nrc.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-nuclear-regulatory-commission",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "national-transportation-safety-board",
+      "title": "National Transportation Safety Board",
+      "url": "https://www.ntsb.gov/Pages/home.aspx",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-transportation-safety-board",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home"
+    },
+    {
+      "id": "federal-election-commission",
+      "title": "Federal Election Commission",
+      "url": "https://www.fec.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/federal-election-commission",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | FEC"
+    },
+    {
+      "id": "election-assistance-commission",
+      "title": "Election Assistance Commission",
+      "url": "https://www.eac.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-election-assistance-commission",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Home | U.S. Election Assistance Commission"
+    },
+    {
+      "id": "u-s-postal-service",
+      "title": "U.S. Postal Service",
+      "url": "https://www.usps.com/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/u-s-postal-service",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Welcome | USPS"
+    },
+    {
+      "id": "tennessee-valley-authority",
+      "title": "Tennessee Valley Authority",
+      "url": "https://www.tva.com/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/tennessee-valley-authority",
+      "check": "directory-confirmed-access-restricted",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "export-import-bank",
+      "title": "Export-Import Bank",
+      "url": "https://www.exim.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/export-import-bank-of-the-united-states",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "Buy American, Build the Future | EXIM.GOV"
+    },
+    {
+      "id": "national-endowment-for-the-arts",
+      "title": "National Endowment for the Arts",
+      "url": "https://www.arts.gov/",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-endowment-for-the-arts",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Endowment for the Arts Home Page | National Endowment for the Arts"
+    },
+    {
+      "id": "national-endowment-for-the-humanities",
+      "title": "National Endowment for the Humanities",
+      "url": "https://www.neh.gov",
+      "linkType": "website",
+      "evidence": "https://www.usa.gov/agencies/national-endowment-for-the-humanities",
+      "check": "page-opened",
+      "httpStatus": 200,
+      "pageTitle": "National Endowment for the Humanities"
+    },
+    {
+      "id": "division-of-global-migration-health",
+      "title": "Division of Global Migration Health",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dgmh.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-foodborne-waterborne-and-environmental-diseases",
+      "title": "Division of Foodborne, Waterborne, and Environmental Diseases",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dfwed.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-high-consequence-pathogens-and-pathology",
+      "title": "Division of High-Consequence Pathogens and Pathology",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dhcpp.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-healthcare-quality-promotion",
+      "title": "Division of Healthcare Quality Promotion",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dhqp.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-infectious-disease-readiness-and-innovation",
+      "title": "Division of Infectious Disease Readiness and Innovation",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-didri.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-parasitic-diseases-and-malaria",
+      "title": "Division of Parasitic Diseases and Malaria",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dpdm.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "division-of-vector-borne-diseases",
+      "title": "Division of Vector-borne Diseases",
+      "url": "https://www.cdc.gov/ncezid/divisions-offices/about-dvbd.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    },
+    {
+      "id": "one-health-office",
+      "title": "One Health Office",
+      "url": "https://www.cdc.gov/one-health/php/about/index.html",
+      "linkType": "website",
+      "evidence": "https://www.cdc.gov/ncezid/divisions-offices/index.html",
+      "check": "official-directory-and-page-opened",
+      "httpStatus": 403,
+      "pageTitle": ""
+    }
+  ]
+}
