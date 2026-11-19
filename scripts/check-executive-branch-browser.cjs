@@ -37,7 +37,8 @@ const url=(process.env.APG_BASE_URL||'http://127.0.0.1:8765/').replace(/\/?$/,'/
    await page.locator('#jump').selectOption('department-of-energy');assert(await page.locator('#node-department-of-energy').evaluate(el=>el.classList.contains('selected')));
    await page.locator('#plus').click();const zoomed=await page.locator('#zoom').innerText();await page.locator('#minus').click();assert.notEqual(await page.locator('#zoom').innerText(),zoomed);
    await page.locator('#search').fill('mosquito');
-   assert.equal(await page.locator('#results-list button').count(),1);
+   assert(await page.locator('#results-list button[data-node="division-of-vector-borne-diseases"]').count());
+   assert(await page.locator('#results-list button[data-node="centers-for-disease-control-and-prevention-cdc"]').count());
    await page.locator('#fullscreen').click();assert.equal(await page.locator('#fullscreen').getAttribute('aria-pressed'),'true');
 
    await page.keyboard.press('Escape');assert.equal(await page.locator('#fullscreen').getAttribute('aria-pressed'),'false');
@@ -46,6 +47,14 @@ const url=(process.env.APG_BASE_URL||'http://127.0.0.1:8765/').replace(/\/?$/,'/
    assert.match(await page.locator('#diagram-help').innerText(),/Department of Justice.*Federal Bureau of Prisons/);
    await page.setViewportSize({width:device.name==='ipad-portrait'?1024:768,height:device.name==='ipad-portrait'?768:1024});await page.waitForTimeout(200);
    assert(await page.locator('#node-federal-bureau-of-prisons').evaluate(el=>{const n=el.getBoundingClientRect(),v=document.querySelector('#viewport').getBoundingClientRect();return n.left>=v.left&&n.right<=v.right&&n.top>=v.top;}));
+   if(device.name==='laptop'){
+    for(const [query,id] of [['Who names mountains?','u-s-board-on-geographic-names'],['airport beagles','national-detector-dog-training-center'],['space germs','office-of-planetary-protection'],['time zones','department-of-transportation'],['makeup','food-and-drug-administration-fda'],['cats','center-for-veterinary-medicine']]){
+     await page.locator('#search').fill(query);assert(await page.locator('#results-list button[data-node="'+id+'"]').count(),query+' must find '+id);
+    }
+    for(const [query,id] of [['ICE','national-park-service'],['art','national-institute-of-standards-and-technology-nist'],['street names','u-s-board-on-geographic-names']]){
+     await page.locator('#search').fill(query);assert.equal(await page.locator('#results-list button[data-node="'+id+'"]').count(),0,query+' must not misidentify '+id);
+    }
+   }
    assert.deepEqual(errors,[]);console.log(device.name+': search list, topic hints, selection, clipboard, Back, keyboard, zoom, fullscreen, deep link and resize passed.');
    await context.close();
   }

@@ -25,8 +25,8 @@
   const outsideMap=[...document.querySelectorAll('.preview-header,.branch-intro,.branch-notes,.skip')];
   const previousInert=new Map();
   if (!root || !map) return;
-  const nodes = new Map(), parents = new Map(), elements = new Map();
-  const kindLabels={'central-bank-system':'Central bank system','federal-agency':'Federal agency','reserve-banks':'Regional Reserve Banks','policy-committee':'Policy committee','military-service':'Military service','military-component':'Military component','military-department':'Military department','military-command':'Military command','bureau':'Bureau','division':'Division','field-offices':'Field offices','park-unit':'National Park Service unit','center':'Center','staff-office':'Presidential staff'};
+  const nodes = new Map(), parents = new Map(), elements = new Map(), searchIndex = new Map();
+  const kindLabels={'central-bank-system':'Central bank system','federal-agency':'Federal agency','reserve-banks':'Regional Reserve Banks','policy-committee':'Policy committee','military-service':'Military service','military-component':'Military component','military-department':'Military department','military-command':'Military command','bureau':'Bureau','division':'Division','field-offices':'Field offices','park-unit':'National Park Service unit','center':'Center','staff-office':'Presidential staff','interagency-board':'Interagency board','committee':'Committee','board':'Board','independent-regulatory-agency':'Independent regulatory agency','laboratory':'Research laboratory','library':'Research library','investigative-board':'Independent investigative board','team':'Investigative team'};
   const linkLabels={'website':'Website','program-page':'Program page','organization-listing':'Organization listing','official-profile':'Official profile','directory':'Official directory','staff-directory':'Staff directory (PDF)'};
   const colors = {eop:'#226d61',departments:'#305d7c',independent:'#a14d37'};
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -41,6 +41,8 @@
   function count(item) { return item.children.reduce((sum, child) => sum + 1 + count(child), 0); }
   function register(item, parent, family, depth) {
     nodes.set(item.id, item);
+    const fields={title:searchText(item.title),aliases:searchText((item.aliases||[]).join(' ')),description:searchText(item.desc),topics:searchText((item.topics||[]).join(' ')),related:searchText((item.relatedTopics||[]).join(' '))};
+    searchIndex.set(item.id,{...fields,words:[...new Set(Object.values(fields).join(' ').split(/\s+/))],directWords:[...new Set([fields.title,fields.aliases,fields.description,fields.topics].join(' ').split(/\s+/))]});
     if (parent) parents.set(item.id, parent.id);
     item.family = family; item.depth = depth;
     const el = document.createElement('section');
@@ -178,31 +180,33 @@
   }
   function focusMatch(index=matchIndex){if(!found.length)return;matchIndex=index;focusNode(found[matchIndex]);matches.textContent=(matchIndex+1)+' of '+found.length+(found.length===1?' result':' results');}
   function searchText(value){return value.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').replace(/\./g,'').toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
+  const questionWords=new Set('a an the who what which where how is are does do can could would should i we my our us me you it they their your for to of on in at with and that this these those handles handle deals deal responsible search find tell about please decides decide makes make made regulates regulate oversees oversee manages manage handling handled need looking'.split(' '));
+  function queryWords(value){const all=searchText(value).split(/\s+/).filter(Boolean),words=all.filter(word=>!questionWords.has(word));return words.length?words:all;}
+  function wordMatches(token,word){return token===word||token===word+'s'||token===word+'es'||word===token+'s'||word===token+'es'||(token.endsWith('y')&&word===token.slice(0,-1)+'ies')||(word.endsWith('y')&&token===word.slice(0,-1)+'ies')||(word.length>3&&token.startsWith(word));}
+  function phraseMatches(text,phrase){return (' '+text+' ').includes(' '+phrase+' ');}
   function findMatches(){
     const q=searchText(search.value);found=[];
     if(q){
-      const words=q.split(/\s+/),hits=[];
+      const words=queryWords(q),hits=[];
       nodes.forEach(item=>{
-        const title=searchText(item.title),aliases=searchText((item.aliases||[]).join(' '));
-        const description=searchText(item.desc),topics=searchText((item.topics||[]).join(' '));
-        const text=[title,aliases,description,topics].join(' ');
-        if(words.every(word=>text.includes(word))){
-          const score=title===q?120:title.includes(q)?100:aliases.includes(q)?90:topics.includes(q)?70:description.includes(q)?60:40;
-          hits.push({id:item.id,score:score-(item.kind==='department'?8:0)});
+        const entry=searchIndex.get(item.id);
+        if(words.every(word=>entry.words.some(token=>wordMatches(token,word)))){
+          const score=entry.title===q?120:phraseMatches(entry.title,q)?100:phraseMatches(entry.aliases,q)?90:phraseMatches(entry.topics,q)?70:phraseMatches(entry.description,q)?60:words.every(word=>entry.directWords.some(token=>wordMatches(token,word)))?55:phraseMatches(entry.related,q)?45:40;
+          hits.push({id:item.id,score:score-(item.kind==='department'?8:0)+Math.min(item.depth,8)/10});
         }
       });
       hits.sort((a,b)=>b.score-a.score);found=hits.map(hit=>hit.id);
     }
   }
   function renderResults(){
-    resultList.replaceChildren();resultList.scrollTop=0;const words=searchText(search.value).split(/\s+/).filter(Boolean);
+    resultList.replaceChildren();resultList.scrollTop=0;const words=queryWords(search.value);
     resultSummary.textContent=found.length?found.length+(found.length===1?' result':' results'):'No matches. Try another agency name or topic.';
     found.forEach((id,index)=>{
       const item=nodes.get(id),li=document.createElement('li'),button=document.createElement('button');
       button.type='button';button.dataset.node=id;button.tabIndex=index===0?0:-1;
       const title=document.createElement('strong');title.textContent=item.title;button.appendChild(title);
       const path=document.createElement('span');path.className='result-path';path.textContent=nodePath(id).slice(2,-1).join(' → ');button.appendChild(path);
-      const topics=item.topics||[],matched=topics.filter(topic=>words.some(word=>searchText(topic).includes(word)));
+      const topics=[...(item.topics||[]),...(item.relatedTopics||[])],matched=topics.filter(topic=>words.some(word=>searchText(topic).split(/\s+/).some(token=>wordMatches(token,word))));
       const terms=matched.length?matched.slice(0,3):topics.slice(0,2);
       const reason=document.createElement('span');reason.className='result-topics';
       reason.textContent=(matched.length?'Matching topics: ':'Topics: ')+terms.join(', ');

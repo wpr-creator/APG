@@ -15,6 +15,10 @@ function walk(node, ancestors=[]) {
   assert(node.id && !ids.has(node.id),'Every organization needs a unique identifier: '+node.title);
   ids.add(node.id);
   assert(node.title && node.desc && Array.isArray(node.children),'Every entry needs a name, explanation, and children array.');
+  for(const field of ['topics','relatedTopics']){
+    assert(Array.isArray(node[field]) && node[field].every(term=>typeof term==='string' && term.trim()),'Use readable discovery terms: '+node.title);
+    assert.strictEqual(new Set(node[field]).size,node[field].length,'Do not repeat discovery terms: '+node.title);
+  }
   const source = new URL(node.source), url = new URL(node.url);
   assert(source.protocol==='https:' && /\.(gov|mil)$/.test(source.hostname),'Use official government evidence: '+node.title);
   assert(url.protocol==='https:','Every entry needs a secure primary link: '+node.title);
@@ -54,6 +58,12 @@ assert(!paths.has('Directorate of Digital Innovation'),'Use the current CIA dire
 assert(paths.get('Energy and Natural Resources Division').includes('Department of Justice'));
 assert(paths.get('Division of Vector-borne Diseases').includes('National Center for Emerging and Zoonotic Infectious Diseases'));
 assert(paths.get('One Health Office').includes('National Center for Emerging and Zoonotic Infectious Diseases'));
+assert(paths.get('U.S. Board on Geographic Names').includes('Department of the Interior'));
+assert(!paths.get('U.S. Board on Geographic Names').includes('U.S. Geological Survey (USGS)'),'BGN is an interagency board sharing responsibility with the Interior secretary, not an ordinary USGS office.');
+assert(paths.get('Advisory Committee on Undersea Features').includes('U.S. Board on Geographic Names'));
+assert(paths.get('National Detector Dog Training Center').includes('Plant Protection and Quarantine'));
+assert(paths.get('FBI Art Crime Team').includes('Federal Bureau of Investigation (FBI)'));
+assert(paths.get('National Indian Gaming Commission').includes('Department of the Interior'));
 const diagramScript = fs.readFileSync(path.join(__dirname,'..','executive-branch-diagram.js'),'utf8');
 assert(diagramScript.includes('link.href=item.url'),'Cards must link to their own primary destination, not inherited evidence.');
 assert(!diagramScript.includes('link.href=item.source'),'Evidence is not a substitute for an organization’s own site.');
