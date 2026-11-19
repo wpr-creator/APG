@@ -3,8 +3,8 @@
   "projectId": "appgprj_6aff5c840cdc8191b7f3761eba0245b3",
   "url": "https://apg-rotunda-scores.endearingbuffalo5.chatgpt.site",
   "sourceCheckout": "/Users/weston.rogers/Documents/Projects/APG-Rotunda-Scores",
-  "bankSha256": "c772acdaf8ae5e715ac6eb3870184334fb4ffd186816029a6aed5c77fa493bbd",
-  "scope": "Anonymous daily scores, grouped by Pacific date and selected units",
+  "bankSha256": "6fd9c33b2768db41ebd2c34c9c6790eff1d13c89d08cfa4901dbf23e8686381c",
+  "scope": "Shared Monday\u2013Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
   "checked": "2026-11-19",
-  "notes": "Service enforces deadlines and one daily attempt per anonymous device per unit scope. Unit practice remains browser-local. QA identifiers are excluded from public boards."
+  "notes": "Curriculum-owned pool; no student unit selection. Weekends expose the previous Friday board. Service enforces deadlines and one daily attempt per anonymous device per curriculum. Reflecting Pool stays independent. QA accounts excluded."
 }

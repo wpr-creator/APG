@@ -2,7 +2,7 @@
 export function createRotundaScene(canvas,{reduced=false}={}){
  const ctx=canvas.getContext('2d',{alpha:false});if(!ctx)throw Error('Canvas unavailable');
  const C={sky:'#8fbfca',skyLight:'#bad9d4',cloud:'#f6ebd0',cloudShade:'#bdc9bc',navy:'#172b3b',deep:'#11222e',ink:'#26494d',stone:'#c3ba9e',shade:'#8c958b',darkStone:'#667e7b',cream:'#f0e1b8',light:'#fff1cf',gold:'#d9ab64',darkGold:'#ad7e49',grass:'#4e7770',grassLight:'#6c9180',rose:'#cf8876',blue:'#6e919c',wood:'#9b7057'};
- let width=480,height=320,stage='welcome',progress=0,target=0,pan=0,panTarget=0,vertical=0,verticalTarget=0,zoom=1.15,zoomTarget=1.15,frame,last=0,active=!document.hidden,disposed=false;
+ let width=480,height=320,stage='welcome',progress=0,target=0,pan=0,panTarget=0,vertical=0,verticalTarget=0,zoom=1.15,zoomTarget=1.15,rewardAt=-10000,rewardPoints=0,frame,last=0,active=!document.hidden,disposed=false;
  const motion=matchMedia('(prefers-reduced-motion: reduce)');
  const art=new Image();art.src='assets/rotunda/apotheosis.webp';let fresco=null;
  art.onload=()=>{if(disposed)return;const off=document.createElement('canvas');off.width=96;off.height=64;const x=off.getContext('2d');x.drawImage(art,0,0,96,64);const image=x.getImageData(0,0,96,64);for(let i=0;i<image.data.length;i+=4){for(let c=0;c<3;c++)image.data[i+c]=Math.round(image.data[i+c]/40)*40;}x.putImageData(image,0,0);fresco=off;};
@@ -85,6 +85,12 @@ export function createRotundaScene(canvas,{reduced=false}={}){
   ctx.globalAlpha=.11;poly([[58,635],[76,635],[-110,1330],[-215,1330]],C.light);poly([[-74,635],[-58,635],[160,1330],[255,1330]],C.light);ctx.globalAlpha=1;
   if(!quiet){for(let i=0;i<28;i++){const x=-220+(i*73)%440,y=70+((i*131+time*.004)%1260);r(x,y,1,1,C.light);}}
   ctx.restore();
+  // A small pixel eagle is the player's marker; answer tiers add stronger upward trails.
+  const age=(time-rewardAt)/1000,bob=quiet?0:Math.round(Math.sin(time*.003)*1.5),ex=Math.round(width*.17),ey=Math.round(height*.5+bob);
+  const sprite=['....WWWW........','...WWWWYY.......','..WWWNN.........','TTTTNNNNNTTTT...','.TTTNNNNNTTT....','...TNNNNT.......','....NNNN........','....Y..Y........'];
+  const colors={W:C.light,Y:C.gold,N:C.ink,T:C.darkStone};
+  sprite.forEach((row,y)=>[...row].forEach((v,x)=>{if(colors[v])r(ex+x,ey+y,1,1,colors[v]);}));
+  if(!quiet&&age>=0&&age<1.6&&rewardPoints){const count=Math.min(18,Math.ceil(rewardPoints/6));for(let i=0;i<count;i++){const angle=i*2.39996,spread=7+age*24,x=ex+6+Math.cos(angle)*spread,y=ey+4+Math.sin(angle)*spread-age*20;r(x,y,2,2,rewardPoints>=80?C.gold:rewardPoints>=40?C.skyLight:C.cream);if(rewardPoints>=60)r(x-1,y+1,4,1,C.light);}}
  }
  function resize(){const rect=canvas.getBoundingClientRect();const density=stage==='welcome'?3.2:2.8;width=Math.max(200,Math.min(640,Math.round(rect.width/density)));height=Math.max(160,Math.round(rect.height*width/rect.width));canvas.width=width;canvas.height=height;ctx.imageSmoothingEnabled=false;}
  const observer=new ResizeObserver(resize);observer.observe(canvas);resize();
@@ -96,5 +102,5 @@ export function createRotundaScene(canvas,{reduced=false}={}){
  const up=e=>{pointers.delete(e.pointerId);pinchDistance=null;};
  const wheel=e=>{if(stage==='welcome')return;e.preventDefault();zoomTarget=Math.max(.8,Math.min(3,zoomTarget*Math.exp(-e.deltaY*.0015)));};
  canvas.addEventListener('pointerdown',down);canvas.addEventListener('pointermove',move);canvas.addEventListener('pointerup',up);canvas.addEventListener('pointercancel',up);canvas.addEventListener('wheel',wheel,{passive:false});
- return{setProgress(p){const value=Math.max(0,Math.min(1,p));if(value!==target)verticalTarget=0;target=value;},setStage(value){if(stage!==value){stage=value;panTarget=verticalTarget=0;resize();}},setReduced(value){reduced=value;},look(dir){panTarget=Math.max(-170,Math.min(170,panTarget-dir*50));},zoom(factor){zoomTarget=Math.max(.8,Math.min(3,zoomTarget*factor));},resetView(){panTarget=verticalTarget=0;zoomTarget=1.15;},dispose(){disposed=true;cancelAnimationFrame(frame);observer.disconnect();document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointermove',move);canvas.removeEventListener('pointerup',up);canvas.removeEventListener('pointercancel',up);canvas.removeEventListener('wheel',wheel);}};
+ return{reward(points){rewardPoints=points;rewardAt=performance.now();},setProgress(p){const value=Math.max(0,Math.min(1,p));if(value!==target)verticalTarget=0;target=value;},setStage(value){if(stage!==value){stage=value;panTarget=verticalTarget=0;resize();}},setReduced(value){reduced=value;},look(dir){panTarget=Math.max(-170,Math.min(170,panTarget-dir*50));},zoom(factor){zoomTarget=Math.max(.8,Math.min(3,zoomTarget*factor));},resetView(){panTarget=verticalTarget=0;zoomTarget=1.15;},dispose(){disposed=true;cancelAnimationFrame(frame);observer.disconnect();document.removeEventListener('visibilitychange',visibility);canvas.removeEventListener('pointerdown',down);canvas.removeEventListener('pointermove',move);canvas.removeEventListener('pointerup',up);canvas.removeEventListener('pointercancel',up);canvas.removeEventListener('wheel',wheel);}};
 }

@@ -87,3 +87,5 @@ body .preview-header .preview-exit .apg-arrow { width:18px!important; height:18p
   body .preview-header .preview-nav .preview-exit { padding:0 0 0 8px; margin-left:0; }
   body .preview-header .preview-nav .preview-exit[data-ticket-state="open"] { padding:0 9px; }
 }
+/* The competition link stays beside Review without overflowing narrow screens. */
+@media(max-width:650px){body .preview-header .preview-nav{flex-wrap:wrap;justify-content:flex-start;gap:3px 13px}body .preview-header .preview-nav .preview-exit{margin-left:auto}}
