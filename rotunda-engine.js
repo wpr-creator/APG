@@ -7,6 +7,6 @@ function match(prompt,value){const n=normalize(value);if(!n)return{type:'empty'}
 function hash(s){let n=2166136261;for(const c of s){n^=c.charCodeAt(0);n=Math.imul(n,16777619);}return n>>>0;}
 function shuffle(list,seed){const a=[...list];let n=hash(seed);for(let i=a.length-1;i>0;i--){n=(Math.imul(n,1664525)+1013904223)>>>0;const j=n%(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
 function dateKey(date=new Date()){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Los_Angeles',year:'numeric',month:'2-digit',day:'2-digit'}).format(date);}
-function deck(bank,mode,unit,seed){const list=mode==='daily'?bank:bank.filter(p=>unit==='all'||p.unit===Number(unit));return shuffle(list,seed).slice(0,7);}
+function deck(bank,mode,units,seed){const selected=units==='all'?[1,2,3,4,5]:(Array.isArray(units)?units:[units]).map(Number).filter(u=>Number.isInteger(u)&&u>=1&&u<=5);const list=bank.filter(p=>selected.includes(p.unit));return shuffle(list,seed).slice(0,7);}
 const api={normalize,match,shuffle,dateKey,deck};root.RotundaEngine=api;if(typeof module!=='undefined')module.exports=api;
 })(typeof window!=='undefined'?window:globalThis);

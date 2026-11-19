@@ -8,5 +8,6 @@ const energy=bank.find(p=>p.id==='energy');assert.equal(E.match(energy,'unty').t
 assert.equal(E.match(bank.find(p=>p.id==='district-cases'),'Baker versus Carr').answer.label,'Baker v. Carr');
 assert.deepEqual(E.deck(bank,'daily','all','2026-11-19'),E.deck(bank,'daily','all','2026-11-19'));assert.equal(E.deck(bank,'daily','all','2026-11-19').length,7);assert.notDeepEqual(E.deck(bank,'daily','all','2026-11-19').map(p=>p.id),E.deck(bank,'daily','all','2026-11-20').map(p=>p.id));
 for(const u of [1,2,3,4,5])assert.ok(E.deck(bank,'practice',String(u),'test').every(p=>p.unit===u));
+for(const mode of ['daily','practice']){for(const units of [[1],[2],[1,2],[3,5]]){const deck=E.deck(bank,mode,units,'test');assert.ok(deck.length);assert.ok(deck.every(p=>units.includes(p.unit)));assert.equal(new Set(deck.map(p=>p.id)).size,deck.length);}assert.deepEqual(E.deck(bank,mode,[],'test'),[]);}
 assert.equal(E.dateKey(new Date('2026-11-20T07:59:00Z')),'2026-11-19');assert.equal(E.dateKey(new Date('2026-11-20T08:00:00Z')),'2026-11-20');
 console.log('Rotunda: 20 prompts, all answer aliases, exact-vs-suggested matching, daily ordering, Pacific rollover, unit filters, and reading links passed.');

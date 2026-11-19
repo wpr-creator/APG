@@ -1,0 +1,10 @@
+{
+  "service": "APG Rotunda Scores",
+  "projectId": "appgprj_6aff5c840cdc8191b7f3761eba0245b3",
+  "url": "https://apg-rotunda-scores.endearingbuffalo5.chatgpt.site",
+  "sourceCheckout": "/Users/weston.rogers/Documents/Projects/APG-Rotunda-Scores",
+  "bankSha256": "c772acdaf8ae5e715ac6eb3870184334fb4ffd186816029a6aed5c77fa493bbd",
+  "scope": "Anonymous daily scores, grouped by Pacific date and selected units",
+  "checked": "2026-11-19",
+  "notes": "Service enforces deadlines and one daily attempt per anonymous device per unit scope. Unit practice remains browser-local. QA identifiers are excluded from public boards."
+}
