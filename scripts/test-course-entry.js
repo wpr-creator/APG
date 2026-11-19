@@ -49,6 +49,11 @@ function checkHeaders(directory) {
   else if(filename.endsWith('.html')) {
    const html=fs.readFileSync(filename,'utf8');
    if(/http-equiv=["']refresh/i.test(html))continue;
+   if (entry.name === 'rotunda.html') {
+    assert(html.includes('class="game-header"') && html.includes('href="index.html"'), 'Rotunda must retain its course return link.');
+    assert(html.includes('course-fonts.css') && html.includes('rotunda.css'), 'Rotunda must use the course fonts and its game styles.');
+    continue;
+   }
    if (entry.name === 'reflecting-pool.html') {
     assert(html.includes('class="pool-header"') && html.includes('href="index.html"'), 'Immersive pool must retain its course return link.');
     assert(html.includes('course-fonts.css'), 'Immersive pool must use course fonts.');

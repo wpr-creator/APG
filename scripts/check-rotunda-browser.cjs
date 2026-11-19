@@ -1,0 +1,24 @@
+// Run with the existing course Playwright runtime and Chrome. Local or live base URL supported.
+const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const base=process.env.APG_BASE_URL||'http://127.0.0.1:8765/';
+const bank=JSON.parse(fs.readFileSync(path.join(__dirname,'../rotunda-data.json'),'utf8'));
+(async()=>{const browser=await chromium.launch({executablePath:process.env.BROWSER_EXECUTABLE||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});let errors=[];
+const page=await browser.newPage({viewport:{width:1440,height:1000}});page.on('pageerror',e=>errors.push(e.message));await page.goto(new URL('rotunda.html',base).href);await page.waitForFunction(()=>!document.querySelector('#start').disabled);await page.locator('#start').click();
+const total=Number((await page.locator('#prompt-counter').textContent()).split('/')[1]);assert.equal(total,7);
+for(let i=0;i<total;i++){
+ const prompt=await page.locator('#prompt').textContent(),q=bank.find(q=>q.prompt===prompt);assert.ok(q);
+ if(i===0){await page.locator('#answer').fill('completely unrelated answer');await page.locator('#submit-answer').click();assert.equal(await page.locator('#climb-track').getAttribute('aria-valuenow'),'0');await page.locator('#hint').click();assert.equal(await page.locator('#hint-text').textContent(),q.hint);}
+ await page.locator('#answer').fill(q.answers[0].label);await page.locator('#answer').press('Enter');assert.equal(await page.locator('#climb-track').getAttribute('aria-valuenow'),String(i+1));assert.ok(await page.locator('#feedback').textContent());
+ if(i===0){await page.reload();await page.locator('#resume').waitFor({state:'visible'});await page.locator('#resume').click();assert.equal(await page.locator('#climb-track').getAttribute('aria-valuenow'),'1');assert.equal(await page.locator('#answer-form').isVisible(),false);}
+ await page.locator('#next').click();
+}
+await page.locator('#finish').waitFor({state:'visible'});assert.equal(await page.locator('#finish-score').textContent(),'7 / 7');assert.equal(await page.locator('#recap details').count(),7);await page.waitForTimeout(2200);await page.screenshot({path:'/tmp/rotunda-dome.png'});
+await page.locator('#again').click();await page.locator('#unit').selectOption('2');await page.locator('#start').click();assert.match(await page.locator('#round-meta').textContent(),/UNIT 2/);await page.locator('#reveal').click();assert.equal(await page.locator('#climb-track').getAttribute('aria-valuenow'),'0');assert.equal(await page.locator('#answer-form').isVisible(),false);assert.ok(await page.locator('#answer-list li').count());
+await page.locator('#settings-toggle').click();await page.locator('#reduce-motion').check();await page.keyboard.press('Escape');assert.equal(await page.locator('#settings').isVisible(),false);assert.equal(await page.locator('#settings-toggle').getAttribute('aria-expanded'),'false');
+for(const viewport of [{width:820,height:1180},{width:1180,height:820},{width:390,height:844}]){await page.setViewportSize(viewport);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.equal(await page.locator('#next').isEnabled(),true);}
+await page.close();
+const tablet=await browser.newContext({viewport:{width:820,height:1180},hasTouch:true,isMobile:true});const touch=await tablet.newPage();await touch.goto(new URL('rotunda.html',base).href);await touch.locator('#practice-mode').tap();await touch.locator('#unit').selectOption('1');await touch.locator('#start').tap();assert.match(await touch.locator('#round-meta').textContent(),/UNIT 1/);await touch.locator('#hint').tap();assert.equal(await touch.locator('#hint-text').isVisible(),true);await touch.screenshot({path:'/tmp/rotunda-ipad.png'});await tablet.close();
+const fallback=await browser.newPage({reducedMotion:'reduce'});await fallback.route('**/rotunda-scene.js*',r=>r.abort());await fallback.goto(new URL('rotunda.html',base).href);await fallback.locator('#scene-status').waitFor({state:'visible'});await fallback.locator('#start').click();assert.equal(await fallback.locator('#answer').isVisible(),true);await fallback.close();
+assert.deepEqual(errors,[]);await browser.close();console.log('Rotunda browser checks passed: full daily climb, wrong answer, hints, saved resume, unit filters, reveal without credit, recap, settings, reduced motion, laptop/iPad/phone layouts, touch, and 3D fallback.');
+})().catch(e=>{console.error(e);process.exit(1)});

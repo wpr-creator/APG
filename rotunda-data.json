@@ -1,0 +1,962 @@
+[
+  {
+    "id": "energy",
+    "unit": 2,
+    "prompt": "Name one of Hamilton’s four ingredients of executive energy.",
+    "hint": "Think about leadership, time, financial support, or legal authority.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Unity",
+        "aliases": [
+          "one president",
+          "single executive",
+          "one executive",
+          "single president"
+        ],
+        "explanation": "One president leads the executive branch. Advisers help, but do not share equal executive authority."
+      },
+      {
+        "id": "1",
+        "label": "Duration",
+        "aliases": [
+          "time in office",
+          "tenure",
+          "term in office"
+        ],
+        "explanation": "A president needs time in office to carry out decisions and follow through on plans."
+      },
+      {
+        "id": "2",
+        "label": "Adequate support",
+        "aliases": [
+          "financial support",
+          "adequate provision for its support",
+          "salary",
+          "compensation",
+          "financial independence"
+        ],
+        "explanation": "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure."
+      },
+      {
+        "id": "3",
+        "label": "Competent powers",
+        "aliases": [
+          "sufficient legal authority",
+          "competent power",
+          "sufficient powers",
+          "legal authority"
+        ],
+        "explanation": "The president needs enough legal authority to carry out the responsibilities of the office."
+      }
+    ]
+  },
+  {
+    "id": "unity",
+    "unit": 2,
+    "prompt": "Name one of Hamilton’s four advantages of unity.",
+    "hint": "Think about choosing, carrying out a choice, confidentiality, or speed.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Decision",
+        "aliases": [
+          "decisiveness",
+          "choosing a course of action"
+        ],
+        "explanation": "Choosing a course of action."
+      },
+      {
+        "id": "1",
+        "label": "Activity",
+        "aliases": [
+          "action",
+          "putting decisions into action"
+        ],
+        "explanation": "Putting that choice into action."
+      },
+      {
+        "id": "2",
+        "label": "Secrecy",
+        "aliases": [
+          "confidentiality",
+          "keeping plans confidential"
+        ],
+        "explanation": "Keeping sensitive plans confidential when necessary."
+      },
+      {
+        "id": "3",
+        "label": "Dispatch",
+        "aliases": [
+          "despatch",
+          "prompt action",
+          "speed",
+          "acting promptly"
+        ],
+        "explanation": "Acting promptly when delay could cause harm."
+      }
+    ]
+  },
+  {
+    "id": "roles",
+    "unit": 2,
+    "prompt": "Name one of the six presidential roles on our Roles page.",
+    "hint": "The president leads a branch, commands forces, and represents the nation.",
+    "href": "presidential-roles.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Chief executive",
+        "aliases": [
+          "executive"
+        ],
+        "explanation": "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws."
+      },
+      {
+        "id": "1",
+        "label": "Commander in chief",
+        "aliases": [
+          "commander-in-chief"
+        ],
+        "explanation": "The president leads the armed forces; Congress declares war and controls military funding."
+      },
+      {
+        "id": "2",
+        "label": "Chief diplomat",
+        "aliases": [
+          "diplomat"
+        ],
+        "explanation": "The president leads relations with other countries and negotiates international agreements."
+      },
+      {
+        "id": "3",
+        "label": "Legislative leader",
+        "aliases": [
+          "chief legislator"
+        ],
+        "explanation": "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals."
+      },
+      {
+        "id": "4",
+        "label": "Party leader",
+        "aliases": [
+          "chief of party"
+        ],
+        "explanation": "The president promotes the goals of the president’s political party and helps its candidates win elections."
+      },
+      {
+        "id": "5",
+        "label": "Head of state",
+        "aliases": [
+          "chief of state"
+        ],
+        "explanation": "The president represents the nation at ceremonies, celebrations, and moments of mourning."
+      }
+    ]
+  },
+  {
+    "id": "tools",
+    "unit": 2,
+    "prompt": "Name one of the eight tools on our Presidential Toolbox page.",
+    "hint": "A president can reject a bill, direct officials, negotiate, or seek support.",
+    "href": "presidential-tools.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Regular veto",
+        "aliases": [
+          "veto"
+        ],
+        "explanation": "The president rejects a bill and returns it to Congress. Two-thirds of each chamber can override the veto."
+      },
+      {
+        "id": "1",
+        "label": "Pocket veto",
+        "aliases": [],
+        "explanation": "A bill fails after 10 days, excluding Sundays, if Congress’s adjournment prevents its return and the president has not signed it."
+      },
+      {
+        "id": "2",
+        "label": "Treaty",
+        "aliases": [
+          "treaties"
+        ],
+        "explanation": "The president negotiates a formal international agreement; two-thirds of senators present must consent before presidential ratification."
+      },
+      {
+        "id": "3",
+        "label": "Executive agreement",
+        "aliases": [],
+        "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority."
+      },
+      {
+        "id": "4",
+        "label": "Executive order",
+        "aliases": [],
+        "explanation": "Written directions to executive officials must follow existing law and stay within presidential authority."
+      },
+      {
+        "id": "5",
+        "label": "Signing statement",
+        "aliases": [],
+        "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law."
+      },
+      {
+        "id": "6",
+        "label": "Bargaining and persuasion",
+        "aliases": [
+          "bargaining",
+          "persuasion"
+        ],
+        "explanation": "Presidents negotiate for support. Lawmakers still choose how to vote."
+      },
+      {
+        "id": "7",
+        "label": "Bully pulpit",
+        "aliases": [],
+        "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation."
+      }
+    ]
+  },
+  {
+    "id": "formal-tools",
+    "unit": 2,
+    "prompt": "Name one of the three formal tools grouped on our Toolbox page.",
+    "hint": "Think of rejecting bills or negotiating a formal international agreement.",
+    "href": "presidential-tools.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Regular veto",
+        "aliases": [
+          "veto"
+        ],
+        "explanation": "Congress can override a regular veto with two-thirds of each chamber."
+      },
+      {
+        "id": "1",
+        "label": "Pocket veto",
+        "aliases": [],
+        "explanation": "Congress cannot override a pocket veto; it must pass the bill again."
+      },
+      {
+        "id": "2",
+        "label": "Treaty",
+        "aliases": [
+          "treaties"
+        ],
+        "explanation": "Two-thirds of senators present must consent before the president formally approves a treaty."
+      }
+    ]
+  },
+  {
+    "id": "house-senate",
+    "unit": 2,
+    "prompt": "Name a power held by the Senate but not the House.",
+    "hint": "Think about appointments, treaties, and the trial after an impeachment.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Confirm appointments",
+        "aliases": [
+          "confirmation",
+          "confirm presidential appointments",
+          "confirm nominees",
+          "confirmation of appointments",
+          "advice and consent on appointments"
+        ],
+        "explanation": "The Senate provides advice and consent on presidential nominations to offices that require confirmation."
+      },
+      {
+        "id": "1",
+        "label": "Consent to treaties",
+        "aliases": [
+          "approve treaties",
+          "ratify treaties",
+          "treaty approval",
+          "treaty ratification"
+        ],
+        "explanation": "Two-thirds of senators present must consent to a treaty before the president ratifies it."
+      },
+      {
+        "id": "2",
+        "label": "Try impeachments",
+        "aliases": [
+          "impeachment trial",
+          "hold impeachment trials",
+          "try impeachment",
+          "convict impeached officials",
+          "conviction"
+        ],
+        "explanation": "The House impeaches; the Senate holds the trial. Conviction requires two-thirds of senators present."
+      }
+    ]
+  },
+  {
+    "id": "house-only",
+    "unit": 2,
+    "prompt": "Name a power held by the House but not the Senate.",
+    "hint": "Think about charges, revenue bills, and a tied-up presidential election.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Impeachment",
+        "aliases": [
+          "impeach",
+          "impeach officials",
+          "impeach the president",
+          "bring impeachment charges"
+        ],
+        "explanation": "The House brings formal charges. Impeachment alone does not remove an official; conviction in a Senate trial does."
+      },
+      {
+        "id": "1",
+        "label": "Originate revenue bills",
+        "aliases": [
+          "revenue bills",
+          "initiate revenue bills",
+          "tax bills",
+          "origination of revenue bills"
+        ],
+        "explanation": "Bills for raising revenue must begin in the House. The Senate may propose amendments."
+      },
+      {
+        "id": "2",
+        "label": "Choose the president in a contingent election",
+        "aliases": [
+          "choose president",
+          "elect the president",
+          "contingent election",
+          "choose the president"
+        ],
+        "explanation": "If no candidate wins an Electoral College majority, the House chooses the president from the top three, with each state delegation casting one vote."
+      }
+    ]
+  },
+  {
+    "id": "district-cases",
+    "unit": 2,
+    "prompt": "Name a required Supreme Court case about districting from Lesson 2.2.",
+    "hint": "One began in Tennessee; the other challenged a North Carolina district.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Baker v. Carr",
+        "aliases": [
+          "baker",
+          "baker carr",
+          "baker versus carr"
+        ],
+        "explanation": "Federal courts could hear the unequal-representation claim under equal protection. Baker did not itself establish the later population rule."
+      },
+      {
+        "id": "1",
+        "label": "Shaw v. Reno",
+        "aliases": [
+          "shaw",
+          "shaw reno",
+          "shaw versus reno"
+        ],
+        "explanation": "Voters could pursue an equal protection challenge to racial districting. The Court did not declare District 12 unconstitutional in 1993."
+      }
+    ]
+  },
+  {
+    "id": "founding-principles",
+    "unit": 1,
+    "prompt": "Name one of these constitutional principles: power comes from the people, government is limited, branches have separate jobs, branches restrain each other, or levels share power.",
+    "hint": "Name the principle, rather than an example.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Popular sovereignty",
+        "aliases": [
+          "sovereignty of the people",
+          "consent of the governed"
+        ],
+        "explanation": "The people are the source of legitimate governmental authority."
+      },
+      {
+        "id": "1",
+        "label": "Limited government",
+        "aliases": [],
+        "explanation": "Government must operate within established legal and constitutional limits."
+      },
+      {
+        "id": "2",
+        "label": "Separation of powers",
+        "aliases": [],
+        "explanation": "Legislative, executive, and judicial responsibilities are assigned to different branches."
+      },
+      {
+        "id": "3",
+        "label": "Checks and balances",
+        "aliases": [
+          "checks balances"
+        ],
+        "explanation": "Each branch has ways to limit the actions of the other branches."
+      },
+      {
+        "id": "4",
+        "label": "Federalism",
+        "aliases": [],
+        "explanation": "The national government and the states share governing authority."
+      }
+    ]
+  },
+  {
+    "id": "federalist-authors",
+    "unit": 1,
+    "prompt": "Name one of the three authors of the Federalist Papers.",
+    "hint": "All three wrote using the shared name Publius.",
+    "href": "docs/federalist-10.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Alexander Hamilton",
+        "aliases": [
+          "hamilton",
+          "alex hamilton"
+        ],
+        "explanation": "Hamilton defended a more effective national government and wrote Federalist No. 70 about executive energy."
+      },
+      {
+        "id": "1",
+        "label": "James Madison",
+        "aliases": [
+          "madison"
+        ],
+        "explanation": "Madison wrote Federalist No. 10 on factions and No. 51 on constitutional checks."
+      },
+      {
+        "id": "2",
+        "label": "John Jay",
+        "aliases": [
+          "jay"
+        ],
+        "explanation": "Jay helped write the essays urging ratification of the Constitution."
+      }
+    ]
+  },
+  {
+    "id": "federalist-docs",
+    "unit": 1,
+    "prompt": "Name one of the required Federalist essays: the one on factions, checks between branches, or executive energy.",
+    "hint": "Use the essay’s number.",
+    "href": "course-tools.html#foundations",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Federalist No. 10",
+        "aliases": [
+          "federalist 10",
+          "10",
+          "federalist paper 10"
+        ],
+        "explanation": "Madison argues that an extended republic can help control the effects of factions."
+      },
+      {
+        "id": "1",
+        "label": "Federalist No. 51",
+        "aliases": [
+          "federalist 51",
+          "51",
+          "federalist paper 51"
+        ],
+        "explanation": "Madison explains how separated powers and checks can help prevent concentrated authority."
+      },
+      {
+        "id": "2",
+        "label": "Federalist No. 70",
+        "aliases": [
+          "federalist 70",
+          "70",
+          "federalist paper 70"
+        ],
+        "explanation": "Hamilton argues that one energetic executive can act effectively and be held responsible."
+      }
+    ]
+  },
+  {
+    "id": "government-levels",
+    "unit": 1,
+    "prompt": "Name a type of governmental power: held by the national government, kept by states, or shared by both.",
+    "hint": "These categories describe which level can exercise a power.",
+    "href": "lesson-1-5.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Delegated powers",
+        "aliases": [
+          "delegated",
+          "enumerated powers",
+          "enumerated",
+          "expressed powers",
+          "express powers"
+        ],
+        "explanation": "Delegated powers belong to the national government. Enumerated powers are those expressly listed in the Constitution."
+      },
+      {
+        "id": "1",
+        "label": "Reserved powers",
+        "aliases": [
+          "reserved"
+        ],
+        "explanation": "Powers neither delegated to the United States nor prohibited to states are reserved to the states or the people under the Tenth Amendment."
+      },
+      {
+        "id": "2",
+        "label": "Concurrent powers",
+        "aliases": [
+          "concurrent",
+          "shared powers"
+        ],
+        "explanation": "Both national and state governments can exercise concurrent powers, such as taxation."
+      }
+    ]
+  },
+  {
+    "id": "first-freedoms",
+    "unit": 3,
+    "prompt": "Name one of the five freedoms protected by the First Amendment.",
+    "hint": "Think about beliefs, expression, news, gathering, and asking government for change.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Religion",
+        "aliases": [
+          "religious freedom",
+          "freedom of religion",
+          "free exercise",
+          "free exercise of religion",
+          "establishment clause"
+        ],
+        "explanation": "The First Amendment protects religious exercise and restricts government establishment of religion."
+      },
+      {
+        "id": "1",
+        "label": "Speech",
+        "aliases": [
+          "free speech",
+          "freedom of speech"
+        ],
+        "explanation": "The First Amendment protects expression, subject to constitutional limits."
+      },
+      {
+        "id": "2",
+        "label": "Press",
+        "aliases": [
+          "free press",
+          "freedom of the press",
+          "freedom of press"
+        ],
+        "explanation": "The First Amendment protects the press against government abridgment."
+      },
+      {
+        "id": "3",
+        "label": "Assembly",
+        "aliases": [
+          "peaceful assembly",
+          "freedom of assembly",
+          "right to assemble"
+        ],
+        "explanation": "People have the right to assemble peaceably."
+      },
+      {
+        "id": "4",
+        "label": "Petition",
+        "aliases": [
+          "petition the government",
+          "right to petition"
+        ],
+        "explanation": "People can ask the government to address grievances."
+      }
+    ]
+  },
+  {
+    "id": "speech-cases",
+    "unit": 3,
+    "prompt": "Name a required case about speech or press: student expression, wartime speech, or prior restraint.",
+    "hint": "Think Tinker, Schenck, or the Pentagon Papers.",
+    "href": "course-tools.html#foundations",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Tinker v. Des Moines",
+        "aliases": [
+          "tinker",
+          "tinker des moines"
+        ],
+        "explanation": "Students retain speech rights at school; officials can restrict expression that materially and substantially disrupts school or invades others’ rights."
+      },
+      {
+        "id": "1",
+        "label": "Schenck v. United States",
+        "aliases": [
+          "schenck",
+          "schenck united states",
+          "schenck v us"
+        ],
+        "explanation": "The Court upheld wartime convictions using the clear-and-present-danger approach. That is not today’s controlling incitement standard."
+      },
+      {
+        "id": "2",
+        "label": "New York Times Co. v. United States",
+        "aliases": [
+          "new york times",
+          "new york times v united states",
+          "nyt v us",
+          "pentagon papers",
+          "new york times company v united states"
+        ],
+        "explanation": "The government failed to justify prior restraint of the Pentagon Papers; it faced a heavy burden to prevent publication."
+      }
+    ]
+  },
+  {
+    "id": "rights-amendments",
+    "unit": 3,
+    "prompt": "Name an amendment that protects criminal defendants: searches, self-incrimination, trial rights, or punishment.",
+    "hint": "Use an amendment’s number or name.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Fourth Amendment",
+        "aliases": [
+          "4",
+          "4th",
+          "fourth",
+          "amendment 4",
+          "4th amendment"
+        ],
+        "explanation": "The Fourth Amendment protects against unreasonable searches and seizures."
+      },
+      {
+        "id": "1",
+        "label": "Fifth Amendment",
+        "aliases": [
+          "5",
+          "5th",
+          "fifth",
+          "amendment 5",
+          "5th amendment"
+        ],
+        "explanation": "The Fifth Amendment includes protections against compelled self-incrimination and double jeopardy, and guarantees due process."
+      },
+      {
+        "id": "2",
+        "label": "Sixth Amendment",
+        "aliases": [
+          "6",
+          "6th",
+          "sixth",
+          "amendment 6",
+          "6th amendment"
+        ],
+        "explanation": "The Sixth Amendment protects criminal trial rights, including assistance of counsel."
+      },
+      {
+        "id": "3",
+        "label": "Eighth Amendment",
+        "aliases": [
+          "8",
+          "8th",
+          "eighth",
+          "amendment 8",
+          "8th amendment"
+        ],
+        "explanation": "The Eighth Amendment bars excessive bail and fines and cruel and unusual punishments."
+      }
+    ]
+  },
+  {
+    "id": "equality-cases",
+    "unit": 3,
+    "prompt": "Name Brown’s school-segregation case or the earlier Plessy segregation case.",
+    "hint": "The cases are Brown and Plessy. Give either name.",
+    "href": "course-tools.html#foundations",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Brown v. Board of Education",
+        "aliases": [
+          "brown",
+          "brown board of education"
+        ],
+        "explanation": "The Court held that state-mandated racial segregation in public education violates equal protection."
+      },
+      {
+        "id": "1",
+        "label": "Plessy v. Ferguson",
+        "aliases": [
+          "plessy",
+          "plessy ferguson"
+        ],
+        "explanation": "Plessy upheld racial segregation under the separate-but-equal doctrine; Brown later rejected that doctrine for public education. Plessy is a comparison case, not one of the current required AP cases."
+      }
+    ]
+  },
+  {
+    "id": "socialization",
+    "unit": 4,
+    "prompt": "Name a common influence on political socialization.",
+    "hint": "Think about the people, institutions, information, and experiences that shape beliefs.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Family",
+        "aliases": [
+          "parents",
+          "parent",
+          "home"
+        ],
+        "explanation": "Families can shape early political beliefs and identification."
+      },
+      {
+        "id": "1",
+        "label": "School",
+        "aliases": [
+          "schools",
+          "education",
+          "teachers"
+        ],
+        "explanation": "Education introduces civic knowledge and experiences that can shape political beliefs."
+      },
+      {
+        "id": "2",
+        "label": "Peers",
+        "aliases": [
+          "friends",
+          "peer groups",
+          "peer group"
+        ],
+        "explanation": "Friends and social groups influence attitudes through shared experiences and discussion."
+      },
+      {
+        "id": "3",
+        "label": "Media",
+        "aliases": [
+          "news",
+          "social media",
+          "mass media",
+          "internet"
+        ],
+        "explanation": "News and other media affect which issues people encounter and how they understand them."
+      },
+      {
+        "id": "4",
+        "label": "Religion",
+        "aliases": [
+          "religious institutions",
+          "church",
+          "religious community"
+        ],
+        "explanation": "Religious communities can influence values and political priorities."
+      },
+      {
+        "id": "5",
+        "label": "Life experiences",
+        "aliases": [
+          "experience",
+          "personal experiences",
+          "generational experiences"
+        ],
+        "explanation": "Events and experiences, including economic change or major crises, can influence political views."
+      }
+    ]
+  },
+  {
+    "id": "poll-quality",
+    "unit": 4,
+    "prompt": "Name something that helps a public opinion poll represent its target population.",
+    "hint": "Think about how people are selected and how questions are written.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Random sampling",
+        "aliases": [
+          "random sample",
+          "random selection",
+          "probability sample",
+          "probability sampling"
+        ],
+        "explanation": "Probability sampling gives members of the target population a known chance of selection."
+      },
+      {
+        "id": "1",
+        "label": "Representative sample",
+        "aliases": [
+          "representativeness",
+          "demographic representation"
+        ],
+        "explanation": "A representative sample reflects important characteristics of the population the poll describes."
+      },
+      {
+        "id": "2",
+        "label": "Neutral wording",
+        "aliases": [
+          "unbiased questions",
+          "unbiased wording",
+          "neutral questions",
+          "question wording",
+          "nonleading questions"
+        ],
+        "explanation": "Neutral questions reduce the risk that the wording itself pushes respondents toward an answer."
+      },
+      {
+        "id": "3",
+        "label": "Adequate sample size",
+        "aliases": [
+          "sample size",
+          "large sample",
+          "larger sample"
+        ],
+        "explanation": "A sufficiently large probability sample reduces sampling error; size alone cannot repair a biased sample."
+      }
+    ]
+  },
+  {
+    "id": "participation",
+    "unit": 5,
+    "prompt": "Name a way people participate in politics besides voting.",
+    "hint": "Think about organizing, communicating, contributing, or running.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Contact officials",
+        "aliases": [
+          "contact representatives",
+          "contacting officials",
+          "write to congress",
+          "write a representative",
+          "petition",
+          "petitioning"
+        ],
+        "explanation": "People can communicate preferences and requests directly to public officials."
+      },
+      {
+        "id": "1",
+        "label": "Protest",
+        "aliases": [
+          "protesting",
+          "demonstrate",
+          "demonstrations",
+          "march",
+          "peaceful assembly"
+        ],
+        "explanation": "Peaceful public demonstrations can draw attention to issues and communicate demands."
+      },
+      {
+        "id": "2",
+        "label": "Campaign work",
+        "aliases": [
+          "campaigning",
+          "volunteer",
+          "volunteering",
+          "canvass",
+          "canvassing",
+          "phone banking"
+        ],
+        "explanation": "Campaign volunteers help inform and mobilize voters."
+      },
+      {
+        "id": "3",
+        "label": "Donate",
+        "aliases": [
+          "donations",
+          "contribute",
+          "campaign donation",
+          "campaign contributions",
+          "donate money"
+        ],
+        "explanation": "Political contributions support campaigns or organizations, subject to applicable legal rules."
+      },
+      {
+        "id": "4",
+        "label": "Join an interest group",
+        "aliases": [
+          "interest group",
+          "join interest groups",
+          "organize an interest group"
+        ],
+        "explanation": "Groups organize people around shared interests and seek to influence policy."
+      },
+      {
+        "id": "5",
+        "label": "Run for office",
+        "aliases": [
+          "be a candidate",
+          "become a candidate",
+          "candidacy"
+        ],
+        "explanation": "Candidates offer voters a choice and seek authority to make public decisions."
+      },
+      {
+        "id": "6",
+        "label": "Attend public meetings",
+        "aliases": [
+          "town hall",
+          "town halls",
+          "attend a town hall",
+          "public comment"
+        ],
+        "explanation": "People can observe government decisions and speak at meetings that allow public participation."
+      }
+    ]
+  },
+  {
+    "id": "linkage",
+    "unit": 5,
+    "prompt": "Name one of the four main linkage institutions.",
+    "hint": "These connect people with their government.",
+    "href": "course-tools.html#words",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Political parties",
+        "aliases": [
+          "party",
+          "parties"
+        ],
+        "explanation": "Parties nominate candidates, organize elections, and help translate policy goals into government action."
+      },
+      {
+        "id": "1",
+        "label": "Interest groups",
+        "aliases": [
+          "interest group"
+        ],
+        "explanation": "Interest groups connect shared interests with policymaking through advocacy."
+      },
+      {
+        "id": "2",
+        "label": "Elections",
+        "aliases": [
+          "election"
+        ],
+        "explanation": "Elections allow voters to select leaders and express political preferences."
+      },
+      {
+        "id": "3",
+        "label": "Media",
+        "aliases": [
+          "mass media",
+          "news media",
+          "press"
+        ],
+        "explanation": "Media connect people with political information and communicate public concerns."
+      }
+    ]
+  }
+]

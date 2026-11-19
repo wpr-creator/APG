@@ -7,3 +7,5 @@
 .pool-controls #journal-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}.sound-toggle{min-height:44px;padding:8px 12px}.sound-toggle[aria-pressed="true"]{background:#dce8d5;border-color:#73927f}.sound-toggle svg{flex:none}
 
 .pool-controls .sound-toggle{width:44px;height:44px;padding:0;justify-content:center}.sound-toggle[aria-pressed="false"] .sound-waves,.sound-toggle[aria-pressed="true"] .sound-slash{display:none}
+
+.pool-header .rotunda-link{margin-left:auto;font:500 11px/1.5 'IBM Plex Mono',monospace;letter-spacing:.04em;text-decoration:none;white-space:nowrap}.pool-header .rotunda-link:hover{text-decoration:underline}@media(max-width:600px){.pool-header .rotunda-link{font-size:10px;margin-left:12px}}
