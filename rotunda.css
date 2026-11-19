@@ -84,3 +84,11 @@ body[data-stage="reveal"] .game-panel{width:min(600px,calc(100% - 48px));margin:
 
 #hud-level{font-size:21px}@media(max-width:1100px){#hud-level{font-size:18px}}
 .hud-center{background:#172b3bef;border:2px solid #547178;box-shadow:3px 3px 0 #0c202d;padding:10px 8px;color:#f6e8bd}
+
+/* Promotions stay readable while the room rises behind the result card. */
+.rank-path{font-size:1rem;line-height:1.8;color:var(--muted,#a7b5b5)}
+#answer-result[data-promoted="true"] #level-advance{color:#fff0b4;font-weight:700}
+@media(prefers-reduced-motion:no-preference){#answer-result[data-promoted="true"] #level-advance{animation:promotion-enter .7s ease-out both}@keyframes promotion-enter{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}}
+
+#hud-level{overflow-wrap:anywhere;font-size:18px;line-height:1.18}.rank-path{max-height:12rem;overflow:auto}
+@media(max-width:1100px){#hud-level{font-size:15px}}

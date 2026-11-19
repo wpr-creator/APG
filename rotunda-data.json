@@ -13,7 +13,10 @@
           "one president",
           "single executive",
           "one executive",
-          "single president"
+          "single president",
+          "one person leads the executive branch",
+          "a single person leads the executive",
+          "leadership by one president"
         ],
         "explanation": "One president leads the executive branch. Advisers help, but do not share equal executive authority."
       },
@@ -23,7 +26,10 @@
         "aliases": [
           "time in office",
           "tenure",
-          "term in office"
+          "term in office",
+          "enough time in office",
+          "time to carry out plans",
+          "a long enough term"
         ],
         "explanation": "A president needs time in office to carry out decisions and follow through on plans."
       },
@@ -35,7 +41,11 @@
           "adequate provision for its support",
           "salary",
           "compensation",
-          "financial independence"
+          "financial independence",
+          "reliable financial support",
+          "enough financial support",
+          "a reliable salary",
+          "financial resources"
         ],
         "explanation": "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure."
       },
@@ -46,7 +56,11 @@
           "sufficient legal authority",
           "competent power",
           "sufficient powers",
-          "legal authority"
+          "legal authority",
+          "enough legal authority",
+          "enough authority to do the job",
+          "sufficient authority",
+          "powers suited to the job"
         ],
         "explanation": "The president needs enough legal authority to carry out the responsibilities of the office."
       }
@@ -73,7 +87,10 @@
         "label": "Decision",
         "aliases": [
           "decisiveness",
-          "choosing a course of action"
+          "choosing a course of action",
+          "making a decision",
+          "choose a course of action",
+          "choosing what to do"
         ],
         "explanation": "Choosing a course of action."
       },
@@ -82,7 +99,10 @@
         "label": "Activity",
         "aliases": [
           "action",
-          "putting decisions into action"
+          "putting decisions into action",
+          "carrying out decisions",
+          "putting a decision into action",
+          "put a choice into action"
         ],
         "explanation": "Putting that choice into action."
       },
@@ -91,7 +111,9 @@
         "label": "Secrecy",
         "aliases": [
           "confidentiality",
-          "keeping plans confidential"
+          "keeping plans confidential",
+          "keeping sensitive plans confidential",
+          "keep sensitive plans secret"
         ],
         "explanation": "Keeping sensitive plans confidential when necessary."
       },
@@ -102,7 +124,11 @@
           "despatch",
           "prompt action",
           "speed",
-          "acting promptly"
+          "acting promptly",
+          "acting quickly",
+          "act promptly",
+          "quick action",
+          "acting without delay"
         ],
         "explanation": "Acting promptly when delay could cause harm."
       }
@@ -128,7 +154,9 @@
         "id": "0",
         "label": "Chief executive",
         "aliases": [
-          "executive"
+          "executive",
+          "leads the executive branch",
+          "directs federal agencies"
         ],
         "explanation": "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws."
       },
@@ -136,7 +164,10 @@
         "id": "1",
         "label": "Commander in chief",
         "aliases": [
-          "commander-in-chief"
+          "commander-in-chief",
+          "commander of the armed forces",
+          "leads the armed forces",
+          "military leader"
         ],
         "explanation": "The president leads the armed forces; Congress declares war and controls military funding."
       },
@@ -144,7 +175,10 @@
         "id": "2",
         "label": "Chief diplomat",
         "aliases": [
-          "diplomat"
+          "diplomat",
+          "conducting diplomacy",
+          "leads foreign relations",
+          "foreign policy leader"
         ],
         "explanation": "The president leads relations with other countries and negotiates international agreements."
       },
@@ -152,7 +186,9 @@
         "id": "3",
         "label": "Legislative leader",
         "aliases": [
-          "chief legislator"
+          "chief legislator",
+          "proposes laws",
+          "pushes congress to pass laws"
         ],
         "explanation": "The president proposes policy goals and works to persuade Congress to pass laws that help achieve those goals."
       },
@@ -160,7 +196,9 @@
         "id": "4",
         "label": "Party leader",
         "aliases": [
-          "chief of party"
+          "chief of party",
+          "leader of the presidents party",
+          "leader of their political party"
         ],
         "explanation": "The president promotes the goals of the president’s political party and helps its candidates win elections."
       },
@@ -168,7 +206,9 @@
         "id": "5",
         "label": "Head of state",
         "aliases": [
-          "chief of state"
+          "chief of state",
+          "ceremonial leader",
+          "represents the nation at ceremonies"
         ],
         "explanation": "The president represents the nation at ceremonies, celebrations, and moments of mourning."
       }
@@ -194,40 +234,58 @@
         "id": "0",
         "label": "Regular veto",
         "aliases": [
-          "veto"
+          "veto",
+          "reject a bill",
+          "rejecting a bill",
+          "reject a bill and return it to congress",
+          "presidential veto"
         ],
         "explanation": "The president rejects a bill and returns it to Congress. Two-thirds of each chamber can override the veto."
       },
       {
         "id": "1",
         "label": "Pocket veto",
-        "aliases": [],
+        "aliases": [
+          "leaving a bill unsigned when congress prevents its return",
+          "pocket veto power"
+        ],
         "explanation": "A bill fails after 10 days, excluding Sundays, if Congress’s adjournment prevents its return and the president has not signed it."
       },
       {
         "id": "2",
         "label": "Treaty",
         "aliases": [
-          "treaties"
+          "treaties",
+          "formal international agreement",
+          "formal agreement with another country"
         ],
         "explanation": "The president negotiates a formal international agreement; two-thirds of senators present must consent before presidential ratification."
       },
       {
         "id": "3",
         "label": "Executive agreement",
-        "aliases": [],
+        "aliases": [
+          "international agreement without a senate treaty vote",
+          "agreement without senate treaty approval"
+        ],
         "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority."
       },
       {
         "id": "4",
         "label": "Executive order",
-        "aliases": [],
+        "aliases": [
+          "written instructions to executive officials",
+          "written directions to executive agencies"
+        ],
         "explanation": "Written directions to executive officials must follow existing law and stay within presidential authority."
       },
       {
         "id": "5",
         "label": "Signing statement",
-        "aliases": [],
+        "aliases": [
+          "statement when signing a law",
+          "explains how the president interprets a law"
+        ],
         "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law."
       },
       {
@@ -235,14 +293,21 @@
         "label": "Bargaining and persuasion",
         "aliases": [
           "bargaining",
-          "persuasion"
+          "persuasion",
+          "negotiating with lawmakers",
+          "negotiation and persuasion",
+          "persuading congress"
         ],
         "explanation": "Presidents negotiate for support. Lawmakers still choose how to vote."
       },
       {
         "id": "7",
         "label": "Bully pulpit",
-        "aliases": [],
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
         "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation."
       }
     ],
@@ -268,21 +333,30 @@
         "id": "0",
         "label": "Regular veto",
         "aliases": [
-          "veto"
+          "veto",
+          "reject a bill",
+          "rejecting a bill",
+          "reject a bill and return it to congress",
+          "presidential veto"
         ],
         "explanation": "Congress can override a regular veto with two-thirds of each chamber."
       },
       {
         "id": "1",
         "label": "Pocket veto",
-        "aliases": [],
+        "aliases": [
+          "leaving a bill unsigned when congress prevents its return",
+          "pocket veto power"
+        ],
         "explanation": "Congress cannot override a pocket veto; it must pass the bill again."
       },
       {
         "id": "2",
         "label": "Treaty",
         "aliases": [
-          "treaties"
+          "treaties",
+          "formal international agreement",
+          "formal agreement with another country"
         ],
         "explanation": "Two-thirds of senators present must consent before the president formally approves a treaty."
       }
@@ -312,7 +386,10 @@
           "confirm presidential appointments",
           "confirm nominees",
           "confirmation of appointments",
-          "advice and consent on appointments"
+          "advice and consent on appointments",
+          "approve appointments",
+          "approving nominees",
+          "confirming presidential nominees"
         ],
         "explanation": "The Senate provides advice and consent on presidential nominations to offices that require confirmation."
       },
@@ -323,7 +400,10 @@
           "approve treaties",
           "ratify treaties",
           "treaty approval",
-          "treaty ratification"
+          "treaty ratification",
+          "approve a treaty",
+          "approving treaties",
+          "senate treaty approval"
         ],
         "explanation": "Two-thirds of senators present must consent to a treaty before the president ratifies it."
       },
@@ -335,7 +415,9 @@
           "hold impeachment trials",
           "try impeachment",
           "convict impeached officials",
-          "conviction"
+          "conviction",
+          "conduct impeachment trials",
+          "hold an impeachment trial"
         ],
         "explanation": "The House impeaches; the Senate holds the trial. Conviction requires two-thirds of senators present."
       }
@@ -364,7 +446,9 @@
           "impeach",
           "impeach officials",
           "impeach the president",
-          "bring impeachment charges"
+          "bring impeachment charges",
+          "bringing charges against an official",
+          "charge the president with misconduct"
         ],
         "explanation": "The House brings formal charges. Impeachment alone does not remove an official; conviction in a Senate trial does."
       },
@@ -375,7 +459,9 @@
           "revenue bills",
           "initiate revenue bills",
           "tax bills",
-          "origination of revenue bills"
+          "origination of revenue bills",
+          "introduce tax bills",
+          "start revenue bills"
         ],
         "explanation": "Bills for raising revenue must begin in the House. The Senate may propose amendments."
       },
@@ -451,34 +537,53 @@
         "label": "Popular sovereignty",
         "aliases": [
           "sovereignty of the people",
-          "consent of the governed"
+          "consent of the governed",
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
         ],
         "explanation": "The people are the source of legitimate governmental authority."
       },
       {
         "id": "1",
         "label": "Limited government",
-        "aliases": [],
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
         "explanation": "Government must operate within established legal and constitutional limits."
       },
       {
         "id": "2",
         "label": "Separation of powers",
-        "aliases": [],
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
         "explanation": "Legislative, executive, and judicial responsibilities are assigned to different branches."
       },
       {
         "id": "3",
         "label": "Checks and balances",
         "aliases": [
-          "checks balances"
+          "checks balances",
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
         ],
         "explanation": "Each branch has ways to limit the actions of the other branches."
       },
       {
         "id": "4",
         "label": "Federalism",
-        "aliases": [],
+        "aliases": [
+          "power divided between national and state governments",
+          "sharing power between national and state governments"
+        ],
         "explanation": "The national government and the states share governing authority."
       }
     ],
@@ -609,7 +714,8 @@
           "enumerated powers",
           "enumerated",
           "expressed powers",
-          "express powers"
+          "express powers",
+          "powers given to the federal government"
         ],
         "explanation": "Delegated powers belong to the national government. Enumerated powers are those expressly listed in the Constitution."
       },
@@ -617,7 +723,8 @@
         "id": "1",
         "label": "Reserved powers",
         "aliases": [
-          "reserved"
+          "reserved",
+          "powers kept by the states"
         ],
         "explanation": "Powers neither delegated to the United States nor prohibited to states are reserved to the states or the people under the Tenth Amendment."
       },
@@ -626,7 +733,8 @@
         "label": "Concurrent powers",
         "aliases": [
           "concurrent",
-          "shared powers"
+          "shared powers",
+          "powers shared by state and federal governments"
         ],
         "explanation": "Both national and state governments can exercise concurrent powers, such as taxation."
       }
@@ -656,34 +764,52 @@
         "id": "0",
         "label": "Natural Rights",
         "aliases": [
-          "natural right"
+          "natural right",
+          "rights people are born with",
+          "rights that exist before government",
+          "inherent rights"
         ],
         "explanation": "Rights people possess because they are human, before government exists. Government can violate these rights but does not create them."
       },
       {
         "id": "1",
         "label": "Social Contract",
-        "aliases": [],
+        "aliases": [
+          "agreement between people and government",
+          "people give up some freedom for protection",
+          "agreement to form a government"
+        ],
         "explanation": "An agreement among people to create government, accepting shared laws in exchange for order and protection of their rights. A government that abandons that purpose weakens its claim to authority."
       },
       {
         "id": "2",
         "label": "Consent of the Governed",
         "aliases": [
-          "consent"
+          "consent",
+          "permission of the people",
+          "government needs the consent of the people"
         ],
         "explanation": "The idea that government can rule legitimately only because the people authorize it."
       },
       {
         "id": "3",
         "label": "Limited Government",
-        "aliases": [],
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
         "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority."
       },
       {
         "id": "4",
         "label": "Popular Sovereignty",
-        "aliases": [],
+        "aliases": [
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
+        ],
         "explanation": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern."
       },
       {
@@ -715,7 +841,10 @@
         "label": "Participatory Democracy",
         "aliases": [
           "participatory",
-          "participation model"
+          "participation model",
+          "direct citizen participation",
+          "broad citizen participation",
+          "citizens participate directly"
         ],
         "explanation": "A model emphasizing broad, direct involvement by ordinary citizens through voting, protests, petitions, town halls, and other political action. It does not mean citizens make every decision themselves."
       },
@@ -724,7 +853,10 @@
         "label": "Pluralist Democracy",
         "aliases": [
           "pluralism",
-          "pluralist"
+          "pluralist",
+          "groups compete to influence policy",
+          "competing interest groups",
+          "competition among groups"
         ],
         "explanation": "A model describing politics as competition among organized groups seeking to influence public policy. Groups do not necessarily have equal resources or influence."
       },
@@ -733,7 +865,10 @@
         "label": "Elite Democracy",
         "aliases": [
           "elite",
-          "elite theory"
+          "elite theory",
+          "a small group holds power",
+          "power held by a small group",
+          "power concentrated among elites"
         ],
         "explanation": "A model emphasizing the influence of a smaller group of leaders, wealthy donors, experts, and other powerful decision makers who shape which choices reach the agenda. Elections and citizen participation still occur."
       }
@@ -759,7 +894,10 @@
         "id": "0",
         "label": "Federalist",
         "aliases": [
-          "federalists"
+          "federalists",
+          "supporter of ratification",
+          "supported ratification",
+          "supported the constitution"
         ],
         "explanation": "A supporter of ratifying the Constitution who argued that the Articles had made national action too difficult and that stronger national institutions were needed."
       },
@@ -769,7 +907,10 @@
         "aliases": [
           "anti federalist",
           "antifederalists",
-          "antifederalist"
+          "antifederalist",
+          "opposed ratification",
+          "opponents of ratification",
+          "opposed the constitution"
         ],
         "explanation": "Opponents of ratifying the Constitution who feared broad national powers and distance from ordinary citizens would threaten liberty and weaken the states. They demanded explicit protections for individual rights."
       }
@@ -1075,7 +1216,8 @@
           "10th amendment",
           "10th",
           "tenth",
-          "amendment 10"
+          "amendment 10",
+          "amendment ten"
         ],
         "explanation": "The amendment reserving powers not delegated to the United States and not prohibited to the states to the states or the people. It does not cancel powers actually granted to the national government."
       }
@@ -1193,7 +1335,9 @@
         "label": "Categorical Grants",
         "aliases": [
           "categorical",
-          "categorical grant"
+          "categorical grant",
+          "money for a specific purpose",
+          "grants for specific purposes"
         ],
         "explanation": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money."
       },
@@ -1202,7 +1346,9 @@
         "label": "Block Grants",
         "aliases": [
           "block",
-          "block grant"
+          "block grant",
+          "money for a broad purpose",
+          "grants for broad purposes"
         ],
         "explanation": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs."
       }
@@ -1309,7 +1455,9 @@
         "label": "Delegate Model of Representation",
         "aliases": [
           "delegate",
-          "delegate model"
+          "delegate model",
+          "vote as constituents want",
+          "follow constituent preferences"
         ],
         "explanation": "An approach in which a representative follows constituents’ preferences, acting as their agent."
       },
@@ -1318,7 +1466,9 @@
         "label": "Trustee Model of Representation",
         "aliases": [
           "trustee",
-          "trustee model"
+          "trustee model",
+          "use their own judgment",
+          "use personal judgment"
         ],
         "explanation": "An approach in which a representative uses independent judgment, even when some constituents disagree."
       },
@@ -1327,7 +1477,9 @@
         "label": "Politico Model of Representation",
         "aliases": [
           "politico",
-          "politico model"
+          "politico model",
+          "combine delegate and trustee",
+          "mix delegate and trustee models"
         ],
         "explanation": "An approach combining delegate and trustee behavior, changing emphasis with the issue or situation rather than following one fixed rule."
       }
@@ -1462,13 +1614,21 @@
       {
         "id": "0",
         "label": "Filibuster",
-        "aliases": [],
+        "aliases": [
+          "extend debate to delay a vote",
+          "prolonging senate debate",
+          "delaying a vote through debate"
+        ],
         "explanation": "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote."
       },
       {
         "id": "1",
         "label": "Cloture",
-        "aliases": [],
+        "aliases": [
+          "end senate debate",
+          "ending debate",
+          "vote to end debate"
+        ],
         "explanation": "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill."
       },
       {
@@ -1508,7 +1668,10 @@
         "id": "0",
         "label": "Logrolling",
         "aliases": [
-          "log rolling"
+          "log rolling",
+          "trading votes",
+          "vote trading",
+          "trading legislative support"
         ],
         "explanation": "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy."
       },
@@ -1595,7 +1758,10 @@
         "id": "0",
         "label": "Packing",
         "aliases": [
-          "pack"
+          "pack",
+          "concentrating opposing voters in a few districts",
+          "putting opponents in one district",
+          "concentrate voters in a few districts"
         ],
         "explanation": "Concentrating opposing voters in a few districts so their preferred candidates have fewer opportunities to win seats elsewhere."
       },
@@ -1603,7 +1769,10 @@
         "id": "1",
         "label": "Cracking",
         "aliases": [
-          "crack"
+          "crack",
+          "splitting opposing voters among districts",
+          "spreading opponents across districts",
+          "divide voters among many districts"
         ],
         "explanation": "Splitting opposing voters across several districts to reduce their ability to elect their preferred candidates."
       }
@@ -1629,26 +1798,38 @@
         "id": "0",
         "label": "Apportionment",
         "aliases": [
-          "reapportionment"
+          "reapportionment",
+          "allocating seats among states",
+          "distributing house seats among states"
         ],
         "explanation": "The process of determining the number of representatives for each state using census data."
       },
       {
         "id": "1",
         "label": "Redistricting",
-        "aliases": [],
+        "aliases": [
+          "redrawing district lines",
+          "redraw district boundaries",
+          "drawing new district boundaries"
+        ],
         "explanation": "Redrawing electoral district boundaries within a state, usually after the census. State legislatures or commissions handle the process under rules that vary by state."
       },
       {
         "id": "2",
         "label": "Malapportionment",
-        "aliases": [],
+        "aliases": [
+          "unequal district populations",
+          "districts with unequal populations"
+        ],
         "explanation": "Unequal populations across legislative districts that give voters in less-populated districts more representation per person."
       },
       {
         "id": "3",
         "label": "Gerrymandering",
-        "aliases": [],
+        "aliases": [
+          "drawing districts to favor a group",
+          "manipulating district lines for an advantage"
+        ],
         "explanation": "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering."
       }
     ],
@@ -1673,14 +1854,20 @@
         "id": "0",
         "label": "Equal Protection Clause",
         "aliases": [
-          "equal protection"
+          "equal protection",
+          "equal protection of the laws",
+          "14th amendment equal protection",
+          "fourteenth amendment equal protection"
         ],
         "explanation": "The Fourteenth Amendment’s requirement that states provide equal protection of the laws. Voters used it to challenge unequal representation in Baker and race-based district boundaries in Shaw."
       },
       {
         "id": "1",
         "label": "Strict Scrutiny",
-        "aliases": [],
+        "aliases": [
+          "compelling interest and narrow tailoring",
+          "a compelling interest and narrowly tailored means"
+        ],
         "explanation": "The Court’s toughest review: the state must show a compelling reason and a map closely fitted to it when race predominates in drawing district lines. Applying the test does not automatically invalidate the district."
       },
       {
@@ -1714,7 +1901,9 @@
         "label": "Override a veto",
         "aliases": [
           "veto override",
-          "override veto"
+          "override veto",
+          "overriding a veto",
+          "overrule a presidential veto"
         ],
         "explanation": "Two-thirds of each chamber can override a regular presidential veto."
       },
@@ -1725,7 +1914,10 @@
           "funding",
           "appropriations",
           "withhold funding",
-          "control funding"
+          "control funding",
+          "control government spending",
+          "control the money",
+          "control appropriations"
         ],
         "explanation": "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs."
       },
@@ -1735,7 +1927,9 @@
         "aliases": [
           "investigate",
           "investigations",
-          "congressional investigations"
+          "congressional investigations",
+          "monitor executive agencies",
+          "investigating the executive branch"
         ],
         "explanation": "Efforts by Congress to ensure executive branch agencies and officials are acting legally and in accordance with congressional goals."
       },
@@ -1744,7 +1938,9 @@
         "label": "Impeachment",
         "aliases": [
           "impeach",
-          "impeach the president"
+          "impeach the president",
+          "bringing charges against an official",
+          "charge the president with misconduct"
         ],
         "explanation": "The House can impeach the president; conviction and removal require a two-thirds vote of senators present in a Senate trial."
       },
@@ -1755,7 +1951,9 @@
           "confirmation",
           "reject nominees",
           "reject appointments",
-          "confirmation of appointments"
+          "confirmation of appointments",
+          "senate approval of appointments",
+          "approve presidential nominees"
         ],
         "explanation": "The Senate's approval of many presidential nominees, including Cabinet officers, ambassadors, and federal judges."
       },
@@ -1765,7 +1963,10 @@
         "aliases": [
           "treaty consent",
           "treaty approval",
-          "reject treaties"
+          "reject treaties",
+          "approve a treaty",
+          "approving treaties",
+          "senate treaty approval"
         ],
         "explanation": "Treaties require consent from two-thirds of senators present before the president ratifies them."
       }
@@ -1792,7 +1993,10 @@
         "label": "Dependence on the people",
         "aliases": [
           "dependence",
-          "elections"
+          "elections",
+          "public accountability through elections",
+          "elections give people a voice",
+          "accountable through elections"
         ],
         "explanation": "Elections give the public a recurring voice in who leads. A president who loses public support may lose the opportunity for another term."
       },
@@ -1801,7 +2005,9 @@
         "label": "Responsibility for official conduct",
         "aliases": [
           "responsibility",
-          "accountability"
+          "accountability",
+          "answering for presidential actions",
+          "accountable for official decisions"
         ],
         "explanation": "People can examine and criticize presidential decisions. Serious misconduct can lead to investigation, impeachment by the House, and a Senate trial."
       }
@@ -1835,7 +2041,11 @@
       {
         "id": "1",
         "label": "Bully Pulpit",
-        "aliases": [],
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
         "explanation": "Use public attention to highlight issues and build support for proposals. Public support does not guarantee action; Congress still decides whether to pass legislation."
       },
       {
@@ -1968,7 +2178,12 @@
       {
         "id": "1",
         "label": "Popular Sovereignty",
-        "aliases": [],
+        "aliases": [
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
+        ],
         "explanation": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern."
       },
       {
@@ -2017,19 +2232,32 @@
       {
         "id": "2",
         "label": "Separation of Powers",
-        "aliases": [],
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
         "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them."
       },
       {
         "id": "3",
         "label": "Checks and Balances",
-        "aliases": [],
+        "aliases": [
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
+        ],
         "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions."
       },
       {
         "id": "4",
         "label": "Limited Government",
-        "aliases": [],
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
         "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority."
       }
     ],
@@ -2095,7 +2323,11 @@
         "label": "Popular sovereignty",
         "aliases": [
           "popular sovereignty",
-          "sovereignty of the people"
+          "sovereignty of the people",
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
         ],
         "explanation": "The Constitution identifies the people as the source of political authority."
       }
@@ -2122,7 +2354,10 @@
         "label": "Natural rights",
         "aliases": [
           "natural rights",
-          "natural right"
+          "natural right",
+          "rights people are born with",
+          "rights that exist before government",
+          "inherent rights"
         ],
         "explanation": "Natural rights belong to people; government is supposed to protect them."
       }
@@ -2148,7 +2383,10 @@
         "id": "0",
         "label": "Social contract",
         "aliases": [
-          "social contract"
+          "social contract",
+          "agreement between people and government",
+          "people give up some freedom for protection",
+          "agreement to form a government"
         ],
         "explanation": "A social contract explains government as an agreement among people, not an inherited right to rule."
       }
@@ -2228,7 +2466,10 @@
         "id": "0",
         "label": "Limited government",
         "aliases": [
-          "limited government"
+          "limited government",
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
         ],
         "explanation": "Government must remain within legal and constitutional limits."
       }
@@ -2518,7 +2759,10 @@
         "aliases": [
           "pluralist",
           "pluralism",
-          "pluralist democracy"
+          "pluralist democracy",
+          "groups compete to influence policy",
+          "competing interest groups",
+          "competition among groups"
         ],
         "explanation": "Pluralism emphasizes competition among organized groups seeking public policy."
       }
@@ -2545,7 +2789,10 @@
         "label": "Participatory democracy",
         "aliases": [
           "participatory",
-          "participatory democracy"
+          "participatory democracy",
+          "direct citizen participation",
+          "broad citizen participation",
+          "citizens participate directly"
         ],
         "explanation": "Participatory democracy emphasizes direct involvement by ordinary citizens."
       }
@@ -2573,7 +2820,10 @@
         "aliases": [
           "elite",
           "elite democracy",
-          "elite theory"
+          "elite theory",
+          "a small group holds power",
+          "power held by a small group",
+          "power concentrated among elites"
         ],
         "explanation": "Elite democracy focuses on the disproportionate influence of a smaller set of powerful decision makers."
       }
@@ -2628,7 +2878,10 @@
         "id": "0",
         "label": "Participatory democracy",
         "aliases": [
-          "participatory"
+          "participatory",
+          "direct citizen participation",
+          "broad citizen participation",
+          "citizens participate directly"
         ],
         "explanation": "The protest is direct action by citizens."
       },
@@ -2637,7 +2890,10 @@
         "label": "Pluralist democracy",
         "aliases": [
           "pluralist",
-          "pluralism"
+          "pluralism",
+          "groups compete to influence policy",
+          "competing interest groups",
+          "competition among groups"
         ],
         "explanation": "The advocacy organization carries shared demands into negotiations."
       }
@@ -2871,19 +3127,31 @@
       {
         "id": "1",
         "label": "Separation of Powers",
-        "aliases": [],
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
         "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them."
       },
       {
         "id": "2",
         "label": "Checks and Balances",
-        "aliases": [],
+        "aliases": [
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
+        ],
         "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions."
       },
       {
         "id": "3",
         "label": "Federalism",
-        "aliases": [],
+        "aliases": [
+          "power divided between national and state governments",
+          "sharing power between national and state governments"
+        ],
         "explanation": "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share."
       }
     ],
@@ -3316,7 +3584,9 @@
         "aliases": [
           "confirmation",
           "confirm",
-          "senate confirms"
+          "senate confirms",
+          "senate approval of appointments",
+          "approve presidential nominees"
         ],
         "explanation": "The Senate decides whether to confirm presidential nominees."
       }
@@ -3370,7 +3640,11 @@
         "id": "0",
         "label": "Separation of powers",
         "aliases": [
-          "separation of powers"
+          "separation of powers",
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
         ],
         "explanation": "Separation divides responsibilities; checks and balances let the branches restrain one another."
       }
@@ -3397,7 +3671,10 @@
         "label": "Checks and balances",
         "aliases": [
           "checks and balances",
-          "checks balances"
+          "checks balances",
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
         ],
         "explanation": "The institutions have constitutional tools to restrain one another."
       }
@@ -3675,7 +3952,9 @@
         "id": "0",
         "label": "Full Faith and Credit Clause",
         "aliases": [
-          "full faith and credit"
+          "full faith and credit",
+          "recognizing other states court judgments",
+          "recognize other states records"
         ],
         "explanation": "The Article IV clause requiring states to recognize one another’s public acts, records, and court decisions. It does not require states to adopt identical laws."
       },
@@ -3691,7 +3970,9 @@
         "id": "2",
         "label": "Extradition",
         "aliases": [
-          "extradition clause"
+          "extradition clause",
+          "returning a fugitive to another state",
+          "sending a fugitive back"
         ],
         "explanation": "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge."
       }
@@ -3725,7 +4006,10 @@
         "id": "1",
         "label": "Equal Protection Clause",
         "aliases": [
-          "equal protection"
+          "equal protection",
+          "equal protection of the laws",
+          "14th amendment equal protection",
+          "fourteenth amendment equal protection"
         ],
         "explanation": "The Fourteenth Amendment requires states to provide equal protection of the laws."
       }
@@ -3752,7 +4036,9 @@
         "label": "Block Grants",
         "aliases": [
           "block grant",
-          "block"
+          "block",
+          "money for a broad purpose",
+          "grants for broad purposes"
         ],
         "explanation": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs."
       },
@@ -3787,7 +4073,9 @@
         "label": "Categorical Grants",
         "aliases": [
           "categorical grant",
-          "categorical"
+          "categorical",
+          "money for a specific purpose",
+          "grants for specific purposes"
         ],
         "explanation": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money."
       },
@@ -3796,7 +4084,9 @@
         "label": "Block Grants",
         "aliases": [
           "block grant",
-          "block"
+          "block",
+          "money for a broad purpose",
+          "grants for broad purposes"
         ],
         "explanation": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs."
       },
@@ -3813,7 +4103,9 @@
         "id": "3",
         "label": "Unfunded Mandate",
         "aliases": [
-          "unfunded mandates"
+          "unfunded mandates",
+          "a requirement without funding",
+          "federal requirement without funding"
         ],
         "explanation": "A federal requirement without enough federal money to cover its cost."
       }
@@ -3957,7 +4249,9 @@
         "label": "Unfunded mandate",
         "aliases": [
           "unfunded mandate",
-          "unfunded mandates"
+          "unfunded mandates",
+          "a requirement without funding",
+          "federal requirement without funding"
         ],
         "explanation": "A mandate requires state action; an unfunded mandate adds costs not fully paid by the national government."
       }
@@ -3983,7 +4277,9 @@
         "id": "0",
         "label": "Full Faith and Credit Clause",
         "aliases": [
-          "full faith and credit"
+          "full faith and credit",
+          "recognizing other states court judgments",
+          "recognize other states records"
         ],
         "explanation": "States must recognize one another’s qualifying public acts, records, and judicial proceedings; this does not require identical state laws."
       }
@@ -4009,7 +4305,9 @@
         "id": "0",
         "label": "Extradition",
         "aliases": [
-          "extradition"
+          "extradition",
+          "returning a fugitive to another state",
+          "sending a fugitive back"
         ],
         "explanation": "Crossing a state boundary does not automatically provide shelter from a criminal charge."
       }
@@ -4147,7 +4445,8 @@
           "10th",
           "10th amendment",
           "tenth",
-          "amendment 10"
+          "amendment 10",
+          "amendment ten"
         ],
         "explanation": "The Tenth Amendment reinforces reserved powers; it does not cancel authority actually granted to the national government."
       }
@@ -4882,7 +5181,10 @@
         "label": "Logrolling",
         "aliases": [
           "log rolling",
-          "logrolling"
+          "logrolling",
+          "trading votes",
+          "vote trading",
+          "trading legislative support"
         ],
         "explanation": "Trading support can build the coalition needed for passage."
       }
@@ -5002,7 +5304,9 @@
         "aliases": [
           "compelling interest",
           "compelling state interest",
-          "very strong reason"
+          "very strong reason",
+          "a very strong reason",
+          "a compelling government interest"
         ],
         "explanation": "The state must justify the use of race with a compelling governmental interest."
       },
@@ -5012,7 +5316,9 @@
         "aliases": [
           "narrowly tailored",
           "closely fitted map",
-          "use race only as much as needed"
+          "use race only as much as needed",
+          "using race no more than necessary",
+          "use race only as needed"
         ],
         "explanation": "The map’s use of race must be closely fitted to the compelling purpose."
       }
@@ -5037,13 +5343,19 @@
       {
         "id": "0",
         "label": "Divided Government",
-        "aliases": [],
+        "aliases": [
+          "different parties control congress and the presidency",
+          "opposing parties control the branches"
+        ],
         "explanation": "A situation in which one party controls the presidency and another controls at least one chamber of Congress. It can make cooperation harder but does not make agreement impossible."
       },
       {
         "id": "1",
         "label": "Polarization",
-        "aliases": [],
+        "aliases": [
+          "parties move further apart",
+          "growing ideological distance between parties"
+        ],
         "explanation": "The widening ideological distance between parties, which can make compromise and agreement harder."
       },
       {
@@ -5078,7 +5390,10 @@
         "label": "Reapportionment",
         "aliases": [
           "apportionment",
-          "reapportionment"
+          "reapportionment",
+          "redistributing house seats among states",
+          "reallocating house seats",
+          "redistribution of seats after the census"
         ],
         "explanation": "Reapportionment changes states’ seat totals; redistricting changes district boundaries within a state."
       }
@@ -5104,7 +5419,10 @@
         "id": "0",
         "label": "Redistricting",
         "aliases": [
-          "redistricting"
+          "redistricting",
+          "redrawing district lines",
+          "redraw district boundaries",
+          "drawing new district boundaries"
         ],
         "explanation": "The number of seats can stay the same even when the lines move."
       }
@@ -5130,7 +5448,9 @@
         "id": "0",
         "label": "Malapportionment",
         "aliases": [
-          "malapportionment"
+          "malapportionment",
+          "unequal district populations",
+          "districts with unequal populations"
         ],
         "explanation": "Unequal populations can create unequal representation per person."
       }
@@ -5184,7 +5504,9 @@
         "id": "0",
         "label": "Gridlock",
         "aliases": [
-          "gridlock"
+          "gridlock",
+          "government cannot agree on action",
+          "inability to pass legislation"
         ],
         "explanation": "Divided government and polarization can contribute to gridlock, but neither guarantees it."
       }
@@ -5268,7 +5590,8 @@
           "14th",
           "14th amendment",
           "fourteenth",
-          "amendment 14"
+          "amendment 14",
+          "amendment fourteen"
         ],
         "explanation": "The Fourteenth Amendment’s Equal Protection Clause supplied the constitutional claim in both cases."
       }
@@ -5294,7 +5617,10 @@
         "id": "0",
         "label": "Equal Protection Clause",
         "aliases": [
-          "equal protection"
+          "equal protection",
+          "equal protection of the laws",
+          "14th amendment equal protection",
+          "fourteenth amendment equal protection"
         ],
         "explanation": "The cases involved different districting problems but shared an equal-protection basis."
       }
@@ -5348,7 +5674,9 @@
         "label": "National defense",
         "aliases": [
           "defense",
-          "defend the nation"
+          "defend the nation",
+          "protecting the nation",
+          "defending the country"
         ],
         "explanation": "Energy helps government respond when the country faces attack."
       },
@@ -5357,7 +5685,10 @@
         "label": "Enforcing laws",
         "aliases": [
           "enforce laws",
-          "law enforcement"
+          "law enforcement",
+          "carrying out the laws",
+          "execute the laws",
+          "faithful execution of laws"
         ],
         "explanation": "Energy helps government carry federal law into effect."
       },
@@ -5366,7 +5697,9 @@
         "label": "Protecting property",
         "aliases": [
           "property",
-          "property rights"
+          "property rights",
+          "protection of property",
+          "protect property rights"
         ],
         "explanation": "Energy supports protection of people’s possessions and property rights."
       },
@@ -5376,7 +5709,9 @@
         "aliases": [
           "liberty",
           "freedom",
-          "protecting rights"
+          "protecting rights",
+          "protecting liberty",
+          "secure freedom"
         ],
         "explanation": "Energy can help protect people’s freedom and rights."
       }
@@ -5737,7 +6072,9 @@
         "aliases": [
           "article 2",
           "ii",
-          "2"
+          "2",
+          "article two",
+          "second article"
         ],
         "explanation": "Article II establishes the presidency and executive authority."
       }
@@ -5819,7 +6156,11 @@
         "label": "Adequate support",
         "aliases": [
           "adequate support",
-          "financial support"
+          "financial support",
+          "reliable financial support",
+          "enough financial support",
+          "a reliable salary",
+          "financial resources"
         ],
         "explanation": "Reliable financial support helps sustain the office and reduces opportunities for financial pressure."
       }
@@ -5846,7 +6187,11 @@
         "label": "Competent powers",
         "aliases": [
           "competent powers",
-          "competent power"
+          "competent power",
+          "enough legal authority",
+          "enough authority to do the job",
+          "sufficient authority",
+          "powers suited to the job"
         ],
         "explanation": "Competent means suited to the responsibilities, not unlimited presidential authority."
       }
@@ -5928,7 +6273,9 @@
         "aliases": [
           "2/3",
           "two thirds",
-          "two thirds of each chamber"
+          "two thirds of each chamber",
+          "two out of three",
+          "two thirds vote"
         ],
         "explanation": "A two-thirds vote is required in each chamber, not just a combined two-thirds of Congress."
       }
@@ -5955,7 +6302,9 @@
         "label": "Two-thirds",
         "aliases": [
           "2/3",
-          "two thirds"
+          "two thirds",
+          "two out of three",
+          "two thirds vote"
         ],
         "explanation": "The treaty threshold is two-thirds of senators present, not two-thirds of both chambers."
       }
@@ -6066,7 +6415,8 @@
           "22nd",
           "22nd amendment",
           "twenty second",
-          "amendment 22"
+          "amendment 22",
+          "amendment twenty two"
         ],
         "explanation": "Someone who serves more than two years of another president’s term may be elected only once."
       }
