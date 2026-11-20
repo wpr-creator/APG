@@ -292,7 +292,8 @@
           "Rutherford Hayes",
           "President Rutherford B. Hayes",
           "President Hayes",
-          "President Rutherford Hayes"
+          "President Rutherford Hayes",
+          "Rutherford"
         ],
         "basePoints": 100,
         "explanation": "A president of the United States."
@@ -3810,7 +3811,8 @@
           "Rutherford Hayes",
           "President Rutherford B. Hayes",
           "President Hayes",
-          "President Rutherford Hayes"
+          "President Rutherford Hayes",
+          "Rutherford"
         ],
         "basePoints": 100,
         "explanation": "Rutherford B. Hayes fits this presidential category."

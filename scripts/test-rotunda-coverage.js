@@ -2,6 +2,7 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const E=require('../rotunda-engine.js'),bank=require('../rotunda-data.json'),curriculum=require('../rotunda-curriculum.json');
 const find=id=>bank.find(p=>p.id==='trivia-'+id);
 const examples=[
+ ['presidents','Rutherford','Rutherford B. Hayes'],['presidents','Hayes','Rutherford B. Hayes'],['presidents','Rutherfod','Rutherford B. Hayes'],
  ['presidents-last-m','Madson','James Madison'],['presidents-last-m','McKinley','William McKinley'],
  ['presidents-last-m','I think Monroe','James Monroe'],['presidents-last-t','Truman','Harry S. Truman'],
  ['presidents-first-james','Polk','James K. Polk'],['presidents-first-john','JFK','John F. Kennedy'],
