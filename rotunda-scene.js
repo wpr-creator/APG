@@ -89,7 +89,7 @@ export function createRotundaScene(canvas,{reduced=false}={}){
  function cover(image,{focus=.5,zoom=1}={}){const scale=Math.max(width/image.width,height/image.height)*zoom,w=image.width*scale,h=image.height*scale;ctx.drawImage(image,Math.round((width-w)/2),Math.round((height-h)*focus),Math.round(w),Math.round(h));}
  function roomView(time,quiet){
   if(!art.room)return;
-  const image=art.room,scale=Math.max(width/image.width,height/(image.height*.62)),viewH=height/scale,travel=Math.max(0,image.height-viewH),pose=cameraPose(progress*700),sy=(1-pose.wall)*Math.max(0,travel-viewH*.25);
+  const image=art.room,scale=Math.max(width/image.width,height/(image.height*.62)),viewH=height/scale,travel=Math.max(0,image.height-viewH),pose=stage==='finish'?cameraPose(700):cameraPose(progress*700),sy=(1-pose.wall)*Math.max(0,travel-viewH*.25);
   ctx.drawImage(image,0,sy,image.width,viewH,Math.round((width-image.width*scale)/2),0,Math.round(image.width*scale),height);
   const mix=pose.dome;canvas.dataset.domeReveal=mix.toFixed(3);canvas.dataset.wallTravel=pose.wall.toFixed(3);
   if(mix>.001&&art.dome){ctx.save();const w=width*pose.zoom,h=Math.min(height,width*.8)*mix*pose.zoom,y=-Math.max(0,h-height)*.12;ctx.drawImage(art.dome,Math.round((width-w)/2),Math.round(y),Math.round(w),Math.round(h));if(h+y<height){box(ctx,0,h+y-3,width,3,'#e9d9ba');box(ctx,0,h+y,width,3,'#8c7b62');}ctx.restore();}
