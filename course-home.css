@@ -29,3 +29,17 @@
   .results-home-link { gap: 16px; padding: 16px 20px; }
   .results-home-link .label { font-size: 8px; }
 }
+
+/* Two quiet editorial panels: the next Congress and today's class standings. */
+.home-live{max-width:1310px;margin:0 auto 35px;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+.home-live .election-bar{margin:0;max-width:none;min-width:0;display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:24px;padding:28px 30px}
+.home-live .election-kicker{font-size:12px}.home-live .election-kicker>span{font-size:11px}
+.home-live .election-timing{flex:0;min-width:0}.home-live .election-timing strong{font-size:clamp(30px,3vw,42px);line-height:1.12;max-width:17ch;text-wrap:balance}.home-live .election-timing time{font-size:11px;margin-top:12px}
+.home-live .election-bar #election-progress{flex:none;margin-top:4px}
+.home-rotunda{min-width:0;min-height:285px;border:1px solid var(--line);background:#eeeee4;padding:24px 30px;display:flex;flex-direction:column}
+.home-board-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:18px}.home-board-heading .label{font-size:11px;color:var(--rust)}.home-board-heading h2{font-size:38px;margin-top:8px}.home-board-heading time{font:500 11px/1.5 'IBM Plex Mono',monospace;color:var(--muted);text-align:right;padding-top:2px}
+.home-board-status{font-size:13px;color:var(--muted);margin:15px 0 10px;line-height:1.5}
+.home-board-list{list-style:none;margin:0 0 18px;padding:0;font-size:14px}.home-board-list li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;padding:7px 0;border-top:1px solid #d7d8cb;align-items:baseline}.home-board-rank{font:500 12px 'IBM Plex Mono',monospace;color:var(--muted)}.home-board-name{overflow-wrap:anywhere}.home-board-points{font:500 13px 'IBM Plex Mono',monospace;white-space:nowrap;font-variant-numeric:tabular-nums}.home-board-list li:first-child .home-board-name{font-weight:600}
+.home-board-footer{margin-top:auto;border-top:1px solid var(--line);padding-top:10px;display:flex;align-items:center;justify-content:space-between;gap:16px}.home-board-footer a{font-size:14px;text-underline-offset:4px}.home-board-footer button{border:0;background:none;padding:8px 0;min-height:40px;font:400 12px 'Public Sans',sans-serif;color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:4px}.home-board-footer button:focus-visible{outline:3px solid var(--rust);outline-offset:4px}.home-board-footer button:disabled{opacity:.6;cursor:wait}
+@media(max-width:1400px){.home-live{margin-left:4.5%;margin-right:4.5%}}
+@media(max-width:700px){.home-live{grid-template-columns:1fr;gap:16px}.home-live .election-bar,.home-rotunda{padding:24px}.home-live .election-timing strong{font-size:34px;max-width:22ch}.home-live .election-bar{gap:20px}.home-rotunda{min-height:260px}.home-board-heading h2{font-size:34px}}
