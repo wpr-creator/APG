@@ -61,3 +61,5 @@ console.log(`Rotunda coverage: ${examples.length} representative variants, ${exc
 const today=E.courseDeck(bank,curriculum,'2026-11-19');assert.deepEqual(today.map(p=>p.id),curriculum.dailyOverrides['2026-11-19']);assert.deepEqual(today.map(p=>p.answers.length),[45,8,3,7,3,32,14]);assert.ok(today.every(p=>p.answers.length>=2));console.log('The preserved November 19 climb still has its original seven broad prompts.');
 
 assert.equal(find('executive-offices').answers.find(a=>a.id==='president').basePoints,20);assert.equal(find('executive-offices').answers.find(a=>a.id==='mayor').basePoints,40);
+
+const roster=require('../rotunda-first-names.json');assert.ok(roster.length>0);assert.equal(new Set(roster.map(n=>n.toLocaleLowerCase())).size,roster.length);assert.ok(roster.every(n=>typeof n==='string'&&!/[\s,@]/.test(n)),'Autocomplete data must contain only deduplicated first names.');

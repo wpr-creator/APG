@@ -6,7 +6,7 @@
   "bankSha256": "7482ba9715a6e0f27507d136c3b9a9a8d6271a501bdb99d4a807d43677ce9b3c",
   "scope": "Shared Monday\u2013Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
   "checked": "2026-11-20",
-  "notes": "Full 126-category rarity audit, with 126 starting ratings revised across 55 categories. Comparable answers may tie; answer ordering never sets rewards. One daily attempt, stable answer IDs, archived sessions, and server deadlines remain intact. Camera changes are client artwork only.",
-  "sourceCommit": "bd2c496bfecc6dd12ce0d07bde0161e3ddca957b",
-  "serviceVersion": 18
+  "notes": "Full 126-category rarity audit, with 126 starting ratings revised across 55 categories. Comparable answers may tie; answer ordering never sets rewards. One daily attempt, stable answer IDs, archived sessions, and server deadlines remain intact. Camera changes are client artwork only. First-name display supports roster suggestions and visitors. Duplicate names use device ownership; public rows omit device identifiers. Renaming never creates another attempt.",
+  "sourceCommit": "f9debe157fdfaeab7d740a8435c1ff0d42fe056b",
+  "serviceVersion": 19
 }
