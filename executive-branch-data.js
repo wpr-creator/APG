@@ -7414,7 +7414,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                     "nutrition labels",
                     "chemicals in food",
                     "foodborne illness",
-                    "food contamination"
+                    "food contamination",
+                    "Red 40",
+                    "red dye 40",
+                    "Red No. 40",
+                    "FD&C Red No. 40",
+                    "Allura Red"
                   ],
                   "relatedTopics": []
                 }
@@ -7521,7 +7526,12 @@ window.EXECUTIVE_BRANCH_DATA = {
                 "dietary supplements",
                 "chemicals in food",
                 "foodborne illness",
-                "food contamination"
+                "food contamination",
+                "Red 40",
+                "red dye 40",
+                "Red No. 40",
+                "FD&C Red No. 40",
+                "Allura Red"
               ]
             },
             {
@@ -8750,6 +8760,11 @@ window.EXECUTIVE_BRANCH_DATA = {
             "chemicals in food",
             "foodborne illness",
             "food contamination",
+            "Red 40",
+            "red dye 40",
+            "Red No. 40",
+            "FD&C Red No. 40",
+            "Allura Red",
             "disease outbreaks",
             "infections",
             "disease prevention",

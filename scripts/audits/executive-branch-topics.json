@@ -3792,6 +3792,17 @@
         "food contamination"
       ],
       "evidence": "https://www.fda.gov/about-fda/fda-organization/human-foods-program"
+    },
+    {
+      "id": "human-foods-program",
+      "topics": [
+        "Red 40",
+        "red dye 40",
+        "Red No. 40",
+        "FD&C Red No. 40",
+        "Allura Red"
+      ],
+      "evidence": "https://www.fda.gov/food/color-additives-information-consumers/understanding-how-fda-regulates-color-additives"
     }
   ]
 }
