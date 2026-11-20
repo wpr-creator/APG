@@ -84,7 +84,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "A president of the United States."
       },
       {
@@ -107,7 +107,7 @@
           "President Madison",
           "Father of the Constitution"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "A president of the United States."
       },
       {
@@ -429,7 +429,7 @@
           "President Herbert Hoover",
           "President Hoover"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "A president of the United States."
       },
       {
@@ -506,7 +506,7 @@
           "President Lyndon Johnson",
           "President LBJ"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "A president of the United States."
       },
       {
@@ -528,7 +528,7 @@
           "President Gerald Ford",
           "President Ford"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "A president of the United States."
       },
       {
@@ -885,7 +885,7 @@
           "criminal jury trial",
           "civil jury trial"
         ],
-        "basePoints": 20,
+        "basePoints": 40,
         "explanation": "The Sixth Amendment protects criminal jury trials; the Seventh protects juries in certain federal civil suits."
       },
       {
@@ -942,7 +942,7 @@
           "public defender",
           "free attorney"
         ],
-        "basePoints": 20,
+        "basePoints": 40,
         "explanation": "The Sixth Amendment protects assistance of counsel in criminal prosecutions."
       },
       {
@@ -1311,7 +1311,7 @@
         "id": "mayor",
         "label": "Mayor",
         "aliases": [],
-        "basePoints": 40,
+        "basePoints": 80,
         "explanation": "Mayor."
       },
       {
@@ -1762,7 +1762,7 @@
           "directs federal agencies"
         ],
         "explanation": "The president leads the executive branch and directs federal departments and agencies as they carry out federal laws.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -1774,7 +1774,7 @@
           "military leader"
         ],
         "explanation": "The president leads the armed forces; Congress declares war and controls military funding.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -1786,7 +1786,7 @@
           "foreign policy leader"
         ],
         "explanation": "The president leads relations with other countries and negotiates international agreements.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -1808,7 +1808,7 @@
           "leader of their political party"
         ],
         "explanation": "The president promotes the goals of the president’s political party and helps its candidates win elections.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "5",
@@ -1819,7 +1819,7 @@
           "represents the nation at ceremonies"
         ],
         "explanation": "The president represents the nation at ceremonies, celebrations, and moments of mourning.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "difficulty": 1,
@@ -1865,7 +1865,7 @@
           "the pursuit of happiness"
         ],
         "explanation": "The Declaration names the pursuit of happiness; it does not promise that government will make everyone happy.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "difficulty": 1,
@@ -1910,7 +1910,7 @@
           "agreement to form a government"
         ],
         "explanation": "An agreement among people to create government, accepting shared laws in exchange for order and protection of their rights. A government that abandons that purpose weakens its claim to authority.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -1932,7 +1932,7 @@
           "government must obey the law"
         ],
         "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -1956,7 +1956,7 @@
           "elected representatives"
         ],
         "explanation": "A system in which citizens govern through elected representatives.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "equality",
@@ -2009,7 +2009,7 @@
           "citizens participate directly"
         ],
         "explanation": "A model emphasizing broad, direct involvement by ordinary citizens through voting, protests, petitions, town halls, and other political action. It does not mean citizens make every decision themselves.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -2022,7 +2022,7 @@
           "competition among groups"
         ],
         "explanation": "A model describing politics as competition among organized groups seeking to influence public policy. Groups do not necessarily have equal resources or influence.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -2323,7 +2323,7 @@
           "collect taxes"
         ],
         "explanation": "Article I gives Congress the power to lay and collect taxes.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -2333,7 +2333,7 @@
           "borrow"
         ],
         "explanation": "Congress may borrow money on the credit of the United States.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -2344,7 +2344,7 @@
           "mint money"
         ],
         "explanation": "Congress has the constitutional power to coin money and regulate its value.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -2356,7 +2356,7 @@
           "commerce"
         ],
         "explanation": "Congress may regulate commerce among the states, with foreign nations, and with Indian tribes.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -2366,7 +2366,7 @@
           "declaration of war"
         ],
         "explanation": "Congress has the power to declare war; the president commands the armed forces.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "5",
@@ -2379,7 +2379,7 @@
           "army"
         ],
         "explanation": "Congress raises and supports armies and controls military funding.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "6",
@@ -2404,7 +2404,7 @@
           "create a navy"
         ],
         "explanation": "Article I gives Congress the power to provide and maintain a navy.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "naturalization",
@@ -2490,7 +2490,7 @@
           "trade with other countries",
           "regulate foreign trade"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "Congress regulates commerce with foreign nations."
       },
       {
@@ -2513,7 +2513,7 @@
           "define piracy",
           "high seas felonies"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress defines and punishes piracy and felonies on the high seas."
       },
       {
@@ -2523,7 +2523,7 @@
           "law of nations",
           "offenses against international law"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Article I expressly grants this power."
       },
       {
@@ -2534,7 +2534,7 @@
           "marque and reprisal",
           "letters of marque and reprisal"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress can authorize letters of marque and reprisal."
       },
       {
@@ -2544,7 +2544,7 @@
           "captures on land and water",
           "rules for captures"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress sets rules concerning wartime captures."
       },
       {
@@ -2580,7 +2580,7 @@
           "legislate for DC",
           "federal district"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress has legislative authority over the seat of government."
       },
       {
@@ -2594,7 +2594,7 @@
           "pay debts",
           "pay the debts"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "The taxing and spending clause covers debts, common defense, and general welfare."
       }
     ],
@@ -2624,7 +2624,7 @@
           "vp"
         ],
         "explanation": "The vice president supports the president and may take on policy or diplomatic work.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -2641,7 +2641,7 @@
           "executive office"
         ],
         "explanation": "Offices that help the president with policy, budgets, and national security by bringing information together for presidential decisions.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "3",
@@ -2679,7 +2679,7 @@
           "declaration"
         ],
         "explanation": "The 1776 document explaining why separation from Britain was justified: people possess natural rights, government needs their consent, and people may alter or abolish a government that repeatedly violates its purpose.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -2688,7 +2688,7 @@
           "articles"
         ],
         "explanation": "The first U.S. constitution, which left most power with the states. Congress could handle national responsibilities but could not tax directly, regulate interstate commerce, or reliably enforce its decisions. Its formal title was the Articles of Confederation and Perpetual Union.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -2698,7 +2698,7 @@
           "united states constitution"
         ],
         "explanation": "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -3094,7 +3094,7 @@
           "powers given to the federal government"
         ],
         "explanation": "Delegated powers belong to the national government. Enumerated powers are those expressly listed in the Constitution.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -3104,7 +3104,7 @@
           "powers kept by the states"
         ],
         "explanation": "Powers neither delegated to the United States nor prohibited to states are reserved to the states or the people under the Tenth Amendment.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -3147,7 +3147,7 @@
           "layer cake federalism"
         ],
         "explanation": "A form of American federalism in which the states and the nation operate independently in their own areas; \"layer cake.\"",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -3158,7 +3158,7 @@
           "marble cake federalism"
         ],
         "explanation": "A form of American federalism in which the states and the national government work together; \"marble cake.\"",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -3512,7 +3512,7 @@
           "standing"
         ],
         "explanation": "A permanent legislative group focused on a policy area. It holds hearings, gathers information, and studies and revises bills before a chamber votes.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -3531,7 +3531,7 @@
           "house rules"
         ],
         "explanation": "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -3540,7 +3540,7 @@
           "whole"
         ],
         "explanation": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "select-committee",
@@ -3551,7 +3551,7 @@
           "special"
         ],
         "explanation": "A temporary committee formed for a particular issue or investigation.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "joint-committee",
@@ -3560,7 +3560,7 @@
           "joint"
         ],
         "explanation": "A committee with members from both the House and Senate.",
-        "basePoints": 80
+        "basePoints": 100
       }
     ],
     "difficulty": 2,
@@ -3590,7 +3590,7 @@
           "speaker"
         ],
         "explanation": "The leader elected by the full House, usually with majority-party support, who directs legislative work and helps set the agenda.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -3599,7 +3599,7 @@
           "majority leader"
         ],
         "explanation": "A leader of the House majority party who helps set its legislative priorities and build support for bills.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -3608,7 +3608,7 @@
           "majority leader"
         ],
         "explanation": "The elected leader of the Senate's majority party, who helps set the chamber's schedule and legislative priorities.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -3619,7 +3619,7 @@
           "minority whip"
         ],
         "explanation": "A party leader who counts votes and encourages members to support the party’s position.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "4",
@@ -3630,7 +3630,7 @@
           "pro tem"
         ],
         "explanation": "The senator who acts in the absence of the vice president; usually the most senior senator of the majority party.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "house-minority-leader",
@@ -3660,7 +3660,7 @@
           "VP",
           "vice president of the United States"
         ],
-        "basePoints": 40,
+        "basePoints": 80,
         "explanation": "The vice president presides over the Senate and can break tied votes."
       }
     ],
@@ -3980,7 +3980,7 @@
           "pocket veto power"
         ],
         "explanation": "A bill fails after 10 days, excluding Sundays, if Congress’s adjournment prevents its return and the president has not signed it.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "2",
@@ -3991,7 +3991,7 @@
           "formal agreement with another country"
         ],
         "explanation": "The president negotiates a formal international agreement; two-thirds of senators present must consent before presidential ratification.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -4001,7 +4001,7 @@
           "agreement without senate treaty approval"
         ],
         "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "4",
@@ -4021,7 +4021,7 @@
           "explains how the president interprets a law"
         ],
         "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "6",
@@ -4045,7 +4045,7 @@
           "using public speeches to build support"
         ],
         "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation.",
-        "basePoints": 20
+        "basePoints": 40
       }
     ],
     "difficulty": 2,
@@ -4077,7 +4077,7 @@
           "overrule a presidential veto"
         ],
         "explanation": "Two-thirds of each chamber can override a regular presidential veto.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -4092,7 +4092,7 @@
           "control appropriations"
         ],
         "explanation": "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -4131,7 +4131,7 @@
           "approve presidential nominees"
         ],
         "explanation": "The Senate's approval of many presidential nominees, including Cabinet officers, ambassadors, and federal judges.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "5",
@@ -4145,7 +4145,7 @@
           "senate treaty approval"
         ],
         "explanation": "Treaties require consent from two-thirds of senators present before the president ratifies them.",
-        "basePoints": 60
+        "basePoints": 80
       }
     ],
     "difficulty": 2,
@@ -4773,7 +4773,7 @@
           "confirming presidential nominees"
         ],
         "explanation": "The Senate provides advice and consent on presidential nominations to offices that require confirmation.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -4788,7 +4788,7 @@
           "senate treaty approval"
         ],
         "explanation": "Two-thirds of senators present must consent to a treaty before the president ratifies it.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -4863,7 +4863,7 @@
           "choose the president"
         ],
         "explanation": "If no candidate wins an Electoral College majority, the House chooses the president from the top three, with each state delegation casting one vote.",
-        "basePoints": 60
+        "basePoints": 100
       }
     ],
     "difficulty": 3,
@@ -4956,7 +4956,7 @@
           "distributing house seats among states"
         ],
         "explanation": "The process of determining the number of representatives for each state using census data.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -4967,7 +4967,7 @@
           "drawing new district boundaries"
         ],
         "explanation": "Redrawing electoral district boundaries within a state, usually after the census. State legislatures or commissions handle the process under rules that vary by state.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -4977,7 +4977,7 @@
           "districts with unequal populations"
         ],
         "explanation": "Unequal populations across legislative districts that give voters in less-populated districts more representation per person.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "3",
@@ -4987,7 +4987,7 @@
           "manipulating district lines for an advantage"
         ],
         "explanation": "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "packing",
@@ -5025,7 +5025,7 @@
         "aliases": [
           "majority minority districts"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "A district in which a racial or ethnic minority makes up a majority of the population."
       }
     ],
@@ -5137,7 +5137,7 @@
           "Shaw Reno",
           "Shaw versus Reno"
         ],
-        "basePoints": 20,
+        "basePoints": 40,
         "explanation": "Voters could pursue their equal-protection challenge to race-based districting."
       },
       {
@@ -5147,7 +5147,7 @@
           "McCulloch",
           "McCulloch Maryland"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "McCulloch v. Maryland."
       },
       {
@@ -5158,7 +5158,7 @@
           "US v Lopez",
           "United States Lopez"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "United States v. Lopez."
       }
     ],

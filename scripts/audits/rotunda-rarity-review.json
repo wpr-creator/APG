@@ -1,0 +1,3996 @@
+{
+  "revision": "20261119-all-categories",
+  "rubric": "Editorial starting rarity for this classroom, relative to each prompt; not measured popularity. Familiar answers start at 20, then 40, 60, 80 and 100 for progressively less obvious answers. Small foundational categories use a narrower spread rather than inventing exceptional rarity. Live daily answer frequency continues to adjust these starting tiers.",
+  "categories": [
+    {
+      "id": "trivia-branches",
+      "prompt": "Name one of the three branches of the U.S. government.",
+      "rationale": "All three branches are foundational; judicial earns only a modest extra step, not an exceptional reward.",
+      "answers": [
+        {
+          "id": "legislative-branch",
+          "label": "Legislative branch",
+          "basePoints": 20
+        },
+        {
+          "id": "executive-branch",
+          "label": "Executive branch",
+          "basePoints": 20
+        },
+        {
+          "id": "judicial-branch",
+          "label": "Judicial branch",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents",
+      "prompt": "Name a U.S. president.",
+      "rationale": "Widely recognized presidents start low; less recalled administrations start high.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 40
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 40
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 60
+        },
+        {
+          "id": "martin-van-buren",
+          "label": "Martin Van Buren",
+          "basePoints": 100
+        },
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "james-k-polk",
+          "label": "James K. Polk",
+          "basePoints": 100
+        },
+        {
+          "id": "zachary-taylor",
+          "label": "Zachary Taylor",
+          "basePoints": 100
+        },
+        {
+          "id": "millard-fillmore",
+          "label": "Millard Fillmore",
+          "basePoints": 100
+        },
+        {
+          "id": "franklin-pierce",
+          "label": "Franklin Pierce",
+          "basePoints": 100
+        },
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 100
+        },
+        {
+          "id": "abraham-lincoln",
+          "label": "Abraham Lincoln",
+          "basePoints": 20
+        },
+        {
+          "id": "andrew-johnson",
+          "label": "Andrew Johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "ulysses-s-grant",
+          "label": "Ulysses S. Grant",
+          "basePoints": 60
+        },
+        {
+          "id": "rutherford-b-hayes",
+          "label": "Rutherford B. Hayes",
+          "basePoints": 100
+        },
+        {
+          "id": "james-a-garfield",
+          "label": "James A. Garfield",
+          "basePoints": 100
+        },
+        {
+          "id": "chester-a-arthur",
+          "label": "Chester A. Arthur",
+          "basePoints": 100
+        },
+        {
+          "id": "grover-cleveland",
+          "label": "Grover Cleveland",
+          "basePoints": 100
+        },
+        {
+          "id": "benjamin-harrison",
+          "label": "Benjamin Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "william-mckinley",
+          "label": "William McKinley",
+          "basePoints": 100
+        },
+        {
+          "id": "theodore-roosevelt",
+          "label": "Theodore Roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "william-howard-taft",
+          "label": "William Howard Taft",
+          "basePoints": 60
+        },
+        {
+          "id": "woodrow-wilson",
+          "label": "Woodrow Wilson",
+          "basePoints": 60
+        },
+        {
+          "id": "warren-g-harding",
+          "label": "Warren G. Harding",
+          "basePoints": 100
+        },
+        {
+          "id": "calvin-coolidge",
+          "label": "Calvin Coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "herbert-hoover",
+          "label": "Herbert Hoover",
+          "basePoints": 80
+        },
+        {
+          "id": "franklin-d-roosevelt",
+          "label": "Franklin D. Roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 60
+        },
+        {
+          "id": "dwight-d-eisenhower",
+          "label": "Dwight D. Eisenhower",
+          "basePoints": 60
+        },
+        {
+          "id": "john-f-kennedy",
+          "label": "John F. Kennedy",
+          "basePoints": 40
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 60
+        },
+        {
+          "id": "richard-nixon",
+          "label": "Richard Nixon",
+          "basePoints": 60
+        },
+        {
+          "id": "gerald-ford",
+          "label": "Gerald Ford",
+          "basePoints": 80
+        },
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 60
+        },
+        {
+          "id": "ronald-reagan",
+          "label": "Ronald Reagan",
+          "basePoints": 40
+        },
+        {
+          "id": "george-h-w-bush",
+          "label": "George H. W. Bush",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-clinton",
+          "label": "Bill Clinton",
+          "basePoints": 40
+        },
+        {
+          "id": "george-w-bush",
+          "label": "George W. Bush",
+          "basePoints": 40
+        },
+        {
+          "id": "barack-obama",
+          "label": "Barack Obama",
+          "basePoints": 20
+        },
+        {
+          "id": "donald-trump",
+          "label": "Donald Trump",
+          "basePoints": 20
+        },
+        {
+          "id": "joe-biden",
+          "label": "Joe Biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-bill-of-rights",
+      "prompt": "Name a right or protection in the Bill of Rights.",
+      "rationale": "Speech, religion, arms and self-incrimination are immediate associations; detailed trial and property protections are less obvious.",
+      "answers": [
+        {
+          "id": "freedom-of-speech",
+          "label": "Freedom of speech",
+          "basePoints": 20
+        },
+        {
+          "id": "freedom-of-religion",
+          "label": "Freedom of religion",
+          "basePoints": 20
+        },
+        {
+          "id": "freedom-of-the-press",
+          "label": "Freedom of the press",
+          "basePoints": 40
+        },
+        {
+          "id": "peaceful-assembly",
+          "label": "Peaceful assembly",
+          "basePoints": 40
+        },
+        {
+          "id": "petition-the-government",
+          "label": "Petition the government",
+          "basePoints": 60
+        },
+        {
+          "id": "keep-and-bear-arms",
+          "label": "Keep and bear arms",
+          "basePoints": 20
+        },
+        {
+          "id": "protection-from-forced-quartering",
+          "label": "Protection from forced quartering",
+          "basePoints": 100
+        },
+        {
+          "id": "protection-from-unreasonable-searches-and-seizures",
+          "label": "Protection from unreasonable searches and seizures",
+          "basePoints": 40
+        },
+        {
+          "id": "grand-jury-indictment",
+          "label": "Grand-jury indictment",
+          "basePoints": 100
+        },
+        {
+          "id": "protection-against-double-jeopardy",
+          "label": "Protection against double jeopardy",
+          "basePoints": 60
+        },
+        {
+          "id": "protection-against-self-incrimination",
+          "label": "Protection against self-incrimination",
+          "basePoints": 20
+        },
+        {
+          "id": "due-process",
+          "label": "Due process",
+          "basePoints": 40
+        },
+        {
+          "id": "compensation-for-property-taken-for-public-use",
+          "label": "Compensation for property taken for public use",
+          "basePoints": 100
+        },
+        {
+          "id": "speedy-trial",
+          "label": "Speedy trial",
+          "basePoints": 60
+        },
+        {
+          "id": "public-trial",
+          "label": "Public trial",
+          "basePoints": 80
+        },
+        {
+          "id": "jury-trial",
+          "label": "Jury trial",
+          "basePoints": 40
+        },
+        {
+          "id": "notice-of-criminal-charges",
+          "label": "Notice of criminal charges",
+          "basePoints": 80
+        },
+        {
+          "id": "confront-witnesses",
+          "label": "Confront witnesses",
+          "basePoints": 80
+        },
+        {
+          "id": "call-defense-witnesses",
+          "label": "Call defense witnesses",
+          "basePoints": 100
+        },
+        {
+          "id": "assistance-of-counsel",
+          "label": "Assistance of counsel",
+          "basePoints": 40
+        },
+        {
+          "id": "protection-against-excessive-bail",
+          "label": "Protection against excessive bail",
+          "basePoints": 60
+        },
+        {
+          "id": "protection-against-excessive-fines",
+          "label": "Protection against excessive fines",
+          "basePoints": 80
+        },
+        {
+          "id": "protection-against-cruel-and-unusual-punishment",
+          "label": "Protection against cruel and unusual punishment",
+          "basePoints": 40
+        },
+        {
+          "id": "unenumerated-rights",
+          "label": "Protection of rights not listed",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-elected-offices",
+      "prompt": "Name a public office that voters can elect someone to.",
+      "rationale": "National offices are first associations; local and specialized offices reward broader government recall.",
+      "answers": [
+        {
+          "id": "president",
+          "label": "President",
+          "basePoints": 20
+        },
+        {
+          "id": "vice-president",
+          "label": "Vice president",
+          "basePoints": 40
+        },
+        {
+          "id": "senator",
+          "label": "Senator",
+          "basePoints": 20
+        },
+        {
+          "id": "representative",
+          "label": "Representative",
+          "basePoints": 20
+        },
+        {
+          "id": "governor",
+          "label": "Governor",
+          "basePoints": 40
+        },
+        {
+          "id": "mayor",
+          "label": "Mayor",
+          "basePoints": 80
+        },
+        {
+          "id": "city-council-member",
+          "label": "City council member",
+          "basePoints": 60
+        },
+        {
+          "id": "school-board-member",
+          "label": "School board member",
+          "basePoints": 80
+        },
+        {
+          "id": "sheriff",
+          "label": "Sheriff",
+          "basePoints": 80
+        },
+        {
+          "id": "district-attorney",
+          "label": "District attorney",
+          "basePoints": 100
+        },
+        {
+          "id": "attorney-general",
+          "label": "Attorney general",
+          "basePoints": 100
+        },
+        {
+          "id": "judge",
+          "label": "Judge",
+          "basePoints": 80
+        },
+        {
+          "id": "comptroller",
+          "label": "Comptroller",
+          "basePoints": 100
+        },
+        {
+          "id": "treasurer",
+          "label": "Treasurer",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-government-institutions",
+      "prompt": "Name an institution or office in the federal government.",
+      "rationale": "The branches and Congress are immediate; the EOP and agency structure are less obvious.",
+      "answers": [
+        {
+          "id": "president",
+          "label": "President",
+          "basePoints": 20
+        },
+        {
+          "id": "house-of-representatives",
+          "label": "House of Representatives",
+          "basePoints": 20
+        },
+        {
+          "id": "senate",
+          "label": "Senate",
+          "basePoints": 20
+        },
+        {
+          "id": "supreme-court",
+          "label": "Supreme Court",
+          "basePoints": 20
+        },
+        {
+          "id": "congress",
+          "label": "Congress",
+          "basePoints": 20
+        },
+        {
+          "id": "cabinet",
+          "label": "Cabinet",
+          "basePoints": 40
+        },
+        {
+          "id": "federal-courts",
+          "label": "Federal courts",
+          "basePoints": 60
+        },
+        {
+          "id": "federal-departments-and-agencies",
+          "label": "Federal departments and agencies",
+          "basePoints": 80
+        },
+        {
+          "id": "executive-office-of-the-president",
+          "label": "Executive Office of the President",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-levels-of-government",
+      "prompt": "Name a level of government in the United States.",
+      "rationale": "All levels are familiar, so the spread stays modest.",
+      "answers": [
+        {
+          "id": "national-government",
+          "label": "National government",
+          "basePoints": 20
+        },
+        {
+          "id": "state-government",
+          "label": "State government",
+          "basePoints": 20
+        },
+        {
+          "id": "local-government",
+          "label": "Local government",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-roles",
+      "prompt": "Name a role a U.S. president performs.",
+      "rationale": "Chief executive and commander in chief are immediate; party and legislative roles require broader recall.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Chief executive",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Commander in chief",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "label": "Chief diplomat",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Legislative leader",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "label": "Party leader",
+          "basePoints": 80
+        },
+        {
+          "id": "5",
+          "label": "Head of state",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-declaration-rights",
+      "prompt": "Name a right listed in the Declaration of Independence.",
+      "rationale": "All three are familiar; the longer final ideal earns a modest extra step.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Life",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Liberty",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "label": "Pursuit of happiness",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-founding-ideas",
+      "prompt": "Name a democratic ideal or founding principle.",
+      "rationale": "Natural rights and popular sovereignty are immediate; republicanism and consent require broader conceptual recall.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Natural Rights",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Social Contract",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Consent of the Governed",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Limited Government",
+          "basePoints": 40
+        },
+        {
+          "id": "4",
+          "label": "Popular Sovereignty",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Republicanism",
+          "basePoints": 80
+        },
+        {
+          "id": "equality",
+          "label": "Equality",
+          "basePoints": 40
+        },
+        {
+          "id": "rule-of-law",
+          "label": "Rule of law",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-democracy-models",
+      "prompt": "Name a model of democracy from our course.",
+      "rationale": "Participatory is the most direct association; pluralist and elite models earn progressively larger climbs.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Participatory Democracy",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Pluralist Democracy",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Elite Democracy",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-duties",
+      "prompt": "Name a power or duty of the U.S. president.",
+      "rationale": "Signing, vetoing and command are familiar; executive agreements and special constitutional duties are less recalled.",
+      "answers": [
+        {
+          "id": "veto-a-bill",
+          "label": "Veto a bill",
+          "basePoints": 20
+        },
+        {
+          "id": "sign-a-bill-into-law",
+          "label": "Sign a bill into law",
+          "basePoints": 20
+        },
+        {
+          "id": "lead-the-executive-branch",
+          "label": "Lead the executive branch",
+          "basePoints": 20
+        },
+        {
+          "id": "command-the-armed-forces",
+          "label": "Command the armed forces",
+          "basePoints": 20
+        },
+        {
+          "id": "nominate-federal-judges",
+          "label": "Nominate federal judges",
+          "basePoints": 40
+        },
+        {
+          "id": "nominate-executive-officials",
+          "label": "Nominate executive officials",
+          "basePoints": 60
+        },
+        {
+          "id": "negotiate-treaties",
+          "label": "Negotiate treaties",
+          "basePoints": 40
+        },
+        {
+          "id": "grant-federal-pardons",
+          "label": "Grant federal pardons",
+          "basePoints": 40
+        },
+        {
+          "id": "issue-executive-orders",
+          "label": "Issue executive orders",
+          "basePoints": 40
+        },
+        {
+          "id": "make-executive-agreements",
+          "label": "Make executive agreements",
+          "basePoints": 80
+        },
+        {
+          "id": "recommend-legislation",
+          "label": "Recommend legislation",
+          "basePoints": 60
+        },
+        {
+          "id": "give-the-state-of-the-union",
+          "label": "Give the State of the Union",
+          "basePoints": 60
+        },
+        {
+          "id": "receive-ambassadors",
+          "label": "Receive ambassadors",
+          "basePoints": 100
+        },
+        {
+          "id": "call-congress-into-special-session",
+          "label": "Call Congress into special session",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-national-powers",
+      "prompt": "Name an enumerated power of Congress.",
+      "rationale": "Tax and war are immediate; detailed commerce, administrative and maritime powers are less obvious.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Tax",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Borrow money",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Coin money",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Regulate interstate commerce",
+          "basePoints": 40
+        },
+        {
+          "id": "4",
+          "label": "Declare war",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Raise and support armies",
+          "basePoints": 40
+        },
+        {
+          "id": "6",
+          "label": "Establish post offices",
+          "basePoints": 60
+        },
+        {
+          "id": "navy",
+          "label": "Provide and maintain a navy",
+          "basePoints": 60
+        },
+        {
+          "id": "naturalization",
+          "label": "Set naturalization rules",
+          "basePoints": 80
+        },
+        {
+          "id": "bankruptcy",
+          "label": "Set bankruptcy laws",
+          "basePoints": 80
+        },
+        {
+          "id": "patents",
+          "label": "Protect inventions and writings",
+          "basePoints": 80
+        },
+        {
+          "id": "lower-courts",
+          "label": "Establish lower federal courts",
+          "basePoints": 80
+        },
+        {
+          "id": "weights",
+          "label": "Set weights and measures",
+          "basePoints": 100
+        },
+        {
+          "id": "counterfeiting",
+          "label": "Punish counterfeiting",
+          "basePoints": 100
+        },
+        {
+          "id": "necessary-proper",
+          "label": "Make necessary and proper laws",
+          "basePoints": 60
+        },
+        {
+          "id": "foreign-commerce",
+          "label": "Regulate foreign commerce",
+          "basePoints": 60
+        },
+        {
+          "id": "tribal-commerce",
+          "label": "Regulate commerce with Indian tribes",
+          "basePoints": 80
+        },
+        {
+          "id": "piracy",
+          "label": "Punish piracy and offenses on the high seas",
+          "basePoints": 100
+        },
+        {
+          "id": "law-of-nations",
+          "label": "Punish offenses against the law of nations",
+          "basePoints": 100
+        },
+        {
+          "id": "marque",
+          "label": "Grant letters of marque and reprisal",
+          "basePoints": 100
+        },
+        {
+          "id": "captures",
+          "label": "Make rules concerning captures",
+          "basePoints": 100
+        },
+        {
+          "id": "military-rules",
+          "label": "Make rules for the armed forces",
+          "basePoints": 80
+        },
+        {
+          "id": "militia",
+          "label": "Organize and call forth the militia",
+          "basePoints": 80
+        },
+        {
+          "id": "federal-district",
+          "label": "Govern the federal district",
+          "basePoints": 100
+        },
+        {
+          "id": "spending",
+          "label": "Spend for the general welfare",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-team",
+      "prompt": "Name part of the team that helps the president do the job.",
+      "rationale": "Vice president and Cabinet are immediate; staff and EOP distinguish broader institutional knowledge.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Vice president",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Cabinet",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "label": "Executive Office of the President",
+          "basePoints": 80
+        },
+        {
+          "id": "3",
+          "label": "White House Staff",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-founding-documents",
+      "prompt": "Name a founding document or political text from our lessons.",
+      "rationale": "The Constitution, Declaration and Bill of Rights are immediate; specific Federalist essays are progressively less recalled.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Declaration of Independence",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Articles of Confederation",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Constitution",
+          "basePoints": 20
+        },
+        {
+          "id": "3",
+          "label": "Brutus No. 1",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-of-rights",
+          "label": "Bill of Rights",
+          "basePoints": 20
+        },
+        {
+          "id": "federalist-no-10",
+          "label": "Federalist No. 10",
+          "basePoints": 40
+        },
+        {
+          "id": "federalist-no-51",
+          "label": "Federalist No. 51",
+          "basePoints": 60
+        },
+        {
+          "id": "federalist-no-70",
+          "label": "Federalist No. 70",
+          "basePoints": 80
+        },
+        {
+          "id": "federalist-no-39",
+          "label": "Federalist No. 39",
+          "basePoints": 100
+        },
+        {
+          "id": "gettysburg-address",
+          "label": "Gettysburg Address",
+          "basePoints": 60
+        },
+        {
+          "id": "federalist-papers",
+          "label": "Federalist Papers",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-government-levels",
+      "prompt": "Name a category of government power: national, state, or shared.",
+      "rationale": "Delegated, reserved and concurrent powers get a modest graduated spread; none is treated as exceptional trivia.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Delegated powers",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Reserved powers",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Concurrent powers",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-federalism-forms",
+      "prompt": "Name a form of federalism from our course.",
+      "rationale": "Dual and cooperative are direct course associations; fiscal and devolution models are less obvious.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Dual Federalism",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Cooperative Federalism",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Fiscal Federalism",
+          "basePoints": 60
+        },
+        {
+          "id": "new-federalism",
+          "label": "New Federalism",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-committee-types",
+      "prompt": "Name a type of congressional committee or committee arrangement.",
+      "rationale": "Standing committees are immediate; Rules, select and conference are more specific; joint and Committee of the Whole are less recalled.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Standing Committee",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Conference Committee",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "House Rules Committee",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Committee of the Whole",
+          "basePoints": 80
+        },
+        {
+          "id": "select-committee",
+          "label": "Select committee",
+          "basePoints": 60
+        },
+        {
+          "id": "joint-committee",
+          "label": "Joint committee",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-congress-leaders",
+      "prompt": "Name a congressional leadership position.",
+      "rationale": "Speaker and majority leaders are familiar; whips and presiding roles are less obvious.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Speaker of the House",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "House Majority Leader",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Senate Majority Leader",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Whip",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "President Pro Tempore",
+          "basePoints": 100
+        },
+        {
+          "id": "house-minority-leader",
+          "label": "House Minority Leader",
+          "basePoints": 60
+        },
+        {
+          "id": "senate-minority-leader",
+          "label": "Senate Minority Leader",
+          "basePoints": 60
+        },
+        {
+          "id": "president-of-senate",
+          "label": "President of the Senate",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-tools",
+      "prompt": "Name a presidential tool for carrying out policy.",
+      "rationale": "Veto and executive order are direct; pocket veto, agreements and signing statements require broader recall.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Regular veto",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Pocket veto",
+          "basePoints": 80
+        },
+        {
+          "id": "2",
+          "label": "Treaty",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Executive agreement",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Executive order",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Signing statement",
+          "basePoints": 100
+        },
+        {
+          "id": "6",
+          "label": "Bargaining and persuasion",
+          "basePoints": 60
+        },
+        {
+          "id": "7",
+          "label": "Bully pulpit",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-congress-checks-president",
+      "prompt": "Name a way Congress can check the president.",
+      "rationale": "Impeachment and veto override are immediate; treaty consent is less likely to be named first.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Override a veto",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Power of the Purse",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Oversight",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Impeachment",
+          "basePoints": 20
+        },
+        {
+          "id": "4",
+          "label": "Senate Confirmation",
+          "basePoints": 40
+        },
+        {
+          "id": "5",
+          "label": "Consent to treaties",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-house-senate",
+      "prompt": "Name a power the Senate has that the House does not.",
+      "rationale": "All three Senate-only powers are covered; confirmations are first recall, treaties next, trial of impeachments less immediate.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Confirm appointments",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Consent to treaties",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Try impeachments",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-house-only",
+      "prompt": "Name a power the House has that the Senate does not.",
+      "rationale": "Impeachment is immediate, revenue bills less immediate, contingent election of the president least obvious.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Impeachment",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Originate revenue bills",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "Choose the president in a contingent election",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-districting-terms",
+      "prompt": "Name a term about seats, district populations, or drawing district boundaries.",
+      "rationale": "Redistricting and gerrymandering are immediate; malapportionment and majority-minority districts are more specialized.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Apportionment",
+          "basePoints": 40
+        },
+        {
+          "id": "1",
+          "label": "Redistricting",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "label": "Malapportionment",
+          "basePoints": 80
+        },
+        {
+          "id": "3",
+          "label": "Gerrymandering",
+          "basePoints": 20
+        },
+        {
+          "id": "packing",
+          "label": "Packing",
+          "basePoints": 60
+        },
+        {
+          "id": "cracking",
+          "label": "Cracking",
+          "basePoints": 60
+        },
+        {
+          "id": "census",
+          "label": "Census",
+          "basePoints": 40
+        },
+        {
+          "id": "majority-minority-district",
+          "label": "Majority minority district",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-course-cases",
+      "prompt": "Name a required Supreme Court case from Unit 1 or our districting lesson.",
+      "rationale": "Baker and McCulloch are familiar anchors; Shaw and Lopez require wider case recall.",
+      "answers": [
+        {
+          "id": "baker-v-carr",
+          "label": "Baker v. Carr",
+          "basePoints": 20
+        },
+        {
+          "id": "shaw-v-reno",
+          "label": "Shaw v. Reno",
+          "basePoints": 40
+        },
+        {
+          "id": "mcculloch-v-maryland",
+          "label": "McCulloch v. Maryland",
+          "basePoints": 20
+        },
+        {
+          "id": "united-states-v-lopez",
+          "label": "United States v. Lopez",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-m",
+      "prompt": "Name a U.S. president whose last name starts with M.",
+      "rationale": "Madison and Monroe are immediate M answers; McKinley is less obvious.",
+      "answers": [
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 20
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 40
+        },
+        {
+          "id": "william-mckinley",
+          "label": "William McKinley",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-t",
+      "prompt": "Name a U.S. president whose last name starts with T.",
+      "rationale": "Trump and Truman are immediate T answers; Taft, Taylor and Tyler are progressively less recalled.",
+      "answers": [
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "zachary-taylor",
+          "label": "Zachary Taylor",
+          "basePoints": 80
+        },
+        {
+          "id": "william-howard-taft",
+          "label": "William Howard Taft",
+          "basePoints": 60
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 40
+        },
+        {
+          "id": "donald-trump",
+          "label": "Donald Trump",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-h",
+      "prompt": "Name a U.S. president whose last name starts with H.",
+      "rationale": "Hoover is an accessible H association; Hayes and the Harrisons remain larger rewards within this narrower category.",
+      "answers": [
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 80
+        },
+        {
+          "id": "rutherford-b-hayes",
+          "label": "Rutherford B. Hayes",
+          "basePoints": 60
+        },
+        {
+          "id": "benjamin-harrison",
+          "label": "Benjamin Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "warren-g-harding",
+          "label": "Warren G. Harding",
+          "basePoints": 80
+        },
+        {
+          "id": "herbert-hoover",
+          "label": "Herbert Hoover",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-j",
+      "prompt": "Name a U.S. president whose last name starts with J.",
+      "rationale": "Jefferson and Jackson are immediate J associations; the Johnsons require more deliberate recall.",
+      "answers": [
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 20
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 40
+        },
+        {
+          "id": "andrew-johnson",
+          "label": "Andrew Johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-c",
+      "prompt": "Name a U.S. president whose last name starts with C.",
+      "rationale": "Clinton and Carter are familiar C answers; Cleveland and Coolidge are less immediate.",
+      "answers": [
+        {
+          "id": "grover-cleveland",
+          "label": "Grover Cleveland",
+          "basePoints": 80
+        },
+        {
+          "id": "calvin-coolidge",
+          "label": "Calvin Coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 40
+        },
+        {
+          "id": "bill-clinton",
+          "label": "Bill Clinton",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-r",
+      "prompt": "Name a U.S. president whose last name starts with R.",
+      "rationale": "Reagan is an immediate R association; the Roosevelts earn modest larger steps within this small category.",
+      "answers": [
+        {
+          "id": "theodore-roosevelt",
+          "label": "Theodore Roosevelt",
+          "basePoints": 60
+        },
+        {
+          "id": "franklin-d-roosevelt",
+          "label": "Franklin D. Roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "ronald-reagan",
+          "label": "Ronald Reagan",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-last-b",
+      "prompt": "Name a U.S. president whose last name starts with B.",
+      "rationale": "Biden and George W. Bush are immediate; George H. W. Bush and Buchanan are less recalled.",
+      "answers": [
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 100
+        },
+        {
+          "id": "george-h-w-bush",
+          "label": "George H. W. Bush",
+          "basePoints": 60
+        },
+        {
+          "id": "george-w-bush",
+          "label": "George W. Bush",
+          "basePoints": 40
+        },
+        {
+          "id": "joe-biden",
+          "label": "Joe Biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-first-james",
+      "prompt": "Name a U.S. president whose first name is James.",
+      "rationale": "Madison and Monroe are accessible; Polk, Buchanan and Garfield are progressively less recalled; James Carter is also accepted.",
+      "answers": [
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 20
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 40
+        },
+        {
+          "id": "james-k-polk",
+          "label": "James K. Polk",
+          "basePoints": 60
+        },
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 80
+        },
+        {
+          "id": "james-a-garfield",
+          "label": "James A. Garfield",
+          "basePoints": 100
+        },
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-first-john",
+      "prompt": "Name a U.S. president whose first name is John.",
+      "rationale": "Kennedy and Adams are accessible; John Quincy Adams and Tyler require more recall.",
+      "answers": [
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "john-f-kennedy",
+          "label": "John F. Kennedy",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-first-william",
+      "prompt": "Name a U.S. president whose first name is William.",
+      "rationale": "Bill Clinton is accessible; Taft, McKinley and Harrison require more recall.",
+      "answers": [
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "william-mckinley",
+          "label": "William McKinley",
+          "basePoints": 80
+        },
+        {
+          "id": "william-howard-taft",
+          "label": "William Howard Taft",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-clinton",
+          "label": "Bill Clinton",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-first-george",
+      "prompt": "Name a U.S. president whose first name is George.",
+      "rationale": "Washington is immediate; the two Bush administrations earn modest larger steps.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "george-h-w-bush",
+          "label": "George H. W. Bush",
+          "basePoints": 60
+        },
+        {
+          "id": "george-w-bush",
+          "label": "George W. Bush",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-first-five-presidents",
+      "prompt": "Name one of the first five U.S. presidents.",
+      "rationale": "Washington and Jefferson are immediate; Adams, Madison and Monroe require more recall.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 20
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 60
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-first-ten",
+      "prompt": "Name one of the first ten U.S. presidents.",
+      "rationale": "Washington and Jefferson anchor the set; Van Buren, Harrison and Tyler are less recalled.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 20
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 60
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 40
+        },
+        {
+          "id": "martin-van-buren",
+          "label": "Martin Van Buren",
+          "basePoints": 100
+        },
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-since-2000",
+      "prompt": "Name a U.S. president who served at any time from January 1, 2000 through January 20, 2025.",
+      "rationale": "Recent presidents are immediate; earlier living former presidents are less obvious for this wording.",
+      "answers": [
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 60
+        },
+        {
+          "id": "ronald-reagan",
+          "label": "Ronald Reagan",
+          "basePoints": 40
+        },
+        {
+          "id": "george-h-w-bush",
+          "label": "George H. W. Bush",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-clinton",
+          "label": "Bill Clinton",
+          "basePoints": 40
+        },
+        {
+          "id": "george-w-bush",
+          "label": "George W. Bush",
+          "basePoints": 40
+        },
+        {
+          "id": "barack-obama",
+          "label": "Barack Obama",
+          "basePoints": 20
+        },
+        {
+          "id": "donald-trump",
+          "label": "Donald Trump",
+          "basePoints": 20
+        },
+        {
+          "id": "joe-biden",
+          "label": "Joe Biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-1900s",
+      "prompt": "Name a U.S. president who served at any time during the 1900s (1900–1999).",
+      "rationale": "Theodore Roosevelt and FDR anchor the century; Harding and Coolidge are less recalled.",
+      "answers": [
+        {
+          "id": "theodore-roosevelt",
+          "label": "Theodore Roosevelt",
+          "basePoints": 20
+        },
+        {
+          "id": "william-howard-taft",
+          "label": "William Howard Taft",
+          "basePoints": 60
+        },
+        {
+          "id": "woodrow-wilson",
+          "label": "Woodrow Wilson",
+          "basePoints": 60
+        },
+        {
+          "id": "warren-g-harding",
+          "label": "Warren G. Harding",
+          "basePoints": 100
+        },
+        {
+          "id": "calvin-coolidge",
+          "label": "Calvin Coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "herbert-hoover",
+          "label": "Herbert Hoover",
+          "basePoints": 80
+        },
+        {
+          "id": "franklin-d-roosevelt",
+          "label": "Franklin D. Roosevelt",
+          "basePoints": 20
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 40
+        },
+        {
+          "id": "dwight-d-eisenhower",
+          "label": "Dwight D. Eisenhower",
+          "basePoints": 60
+        },
+        {
+          "id": "john-f-kennedy",
+          "label": "John F. Kennedy",
+          "basePoints": 40
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 60
+        },
+        {
+          "id": "richard-nixon",
+          "label": "Richard Nixon",
+          "basePoints": 40
+        },
+        {
+          "id": "gerald-ford",
+          "label": "Gerald Ford",
+          "basePoints": 80
+        },
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-before-1800",
+      "prompt": "Name a U.S. president who took office before 1820.",
+      "rationale": "Washington and Jefferson are immediate; Adams, Madison and Monroe require broader recall for the birth-date wording.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 20
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 60
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-senators",
+      "prompt": "Name a U.S. president who also served as a U.S. senator.",
+      "rationale": "Biden and Obama are immediate recent associations; nineteenth-century Senate careers are less obvious.",
+      "answers": [
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 60
+        },
+        {
+          "id": "martin-van-buren",
+          "label": "Martin Van Buren",
+          "basePoints": 100
+        },
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "franklin-pierce",
+          "label": "Franklin Pierce",
+          "basePoints": 100
+        },
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 100
+        },
+        {
+          "id": "andrew-johnson",
+          "label": "Andrew Johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "benjamin-harrison",
+          "label": "Benjamin Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "warren-g-harding",
+          "label": "Warren G. Harding",
+          "basePoints": 100
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 60
+        },
+        {
+          "id": "john-f-kennedy",
+          "label": "John F. Kennedy",
+          "basePoints": 40
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 60
+        },
+        {
+          "id": "richard-nixon",
+          "label": "Richard Nixon",
+          "basePoints": 60
+        },
+        {
+          "id": "barack-obama",
+          "label": "Barack Obama",
+          "basePoints": 20
+        },
+        {
+          "id": "joe-biden",
+          "label": "Joe Biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-vps",
+      "prompt": "Name a U.S. president who also served as vice president.",
+      "rationale": "Biden is immediate; Adams, Jefferson and Roosevelt are accessible; lesser recalled succession paths earn more.",
+      "answers": [
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 40
+        },
+        {
+          "id": "martin-van-buren",
+          "label": "Martin Van Buren",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "millard-fillmore",
+          "label": "Millard Fillmore",
+          "basePoints": 100
+        },
+        {
+          "id": "andrew-johnson",
+          "label": "Andrew Johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "chester-a-arthur",
+          "label": "Chester A. Arthur",
+          "basePoints": 100
+        },
+        {
+          "id": "theodore-roosevelt",
+          "label": "Theodore Roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "calvin-coolidge",
+          "label": "Calvin Coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 60
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 60
+        },
+        {
+          "id": "richard-nixon",
+          "label": "Richard Nixon",
+          "basePoints": 60
+        },
+        {
+          "id": "gerald-ford",
+          "label": "Gerald Ford",
+          "basePoints": 80
+        },
+        {
+          "id": "george-h-w-bush",
+          "label": "George H. W. Bush",
+          "basePoints": 60
+        },
+        {
+          "id": "joe-biden",
+          "label": "Joe Biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-succeeded",
+      "prompt": "Name a vice president who became president when the president died or resigned.",
+      "rationale": "Roosevelt, Truman and Johnson are accessible succession examples; Tyler, Fillmore and Arthur are less immediate.",
+      "answers": [
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "millard-fillmore",
+          "label": "Millard Fillmore",
+          "basePoints": 100
+        },
+        {
+          "id": "andrew-johnson",
+          "label": "Andrew Johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "chester-a-arthur",
+          "label": "Chester A. Arthur",
+          "basePoints": 100
+        },
+        {
+          "id": "theodore-roosevelt",
+          "label": "Theodore Roosevelt",
+          "basePoints": 20
+        },
+        {
+          "id": "calvin-coolidge",
+          "label": "Calvin Coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "harry-s-truman",
+          "label": "Harry S. Truman",
+          "basePoints": 40
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "label": "Lyndon B. Johnson",
+          "basePoints": 40
+        },
+        {
+          "id": "gerald-ford",
+          "label": "Gerald Ford",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-notes",
+      "prompt": "Name a president pictured on one of the seven current U.S. paper-money denominations.",
+      "rationale": "Washington and Lincoln are immediate; Grant is less likely to be recalled first.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 40
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 40
+        },
+        {
+          "id": "abraham-lincoln",
+          "label": "Abraham Lincoln",
+          "basePoints": 20
+        },
+        {
+          "id": "ulysses-s-grant",
+          "label": "Ulysses S. Grant",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-johns-james",
+      "prompt": "Name a U.S. president whose first name is John or James.",
+      "rationale": "Kennedy, Adams and Madison are accessible; Garfield, Buchanan and Tyler require broader recall.",
+      "answers": [
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 40
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "james-k-polk",
+          "label": "James K. Polk",
+          "basePoints": 80
+        },
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 100
+        },
+        {
+          "id": "james-a-garfield",
+          "label": "James A. Garfield",
+          "basePoints": 100
+        },
+        {
+          "id": "john-f-kennedy",
+          "label": "John F. Kennedy",
+          "basePoints": 20
+        },
+        {
+          "id": "jimmy-carter",
+          "label": "Jimmy Carter",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-before-lincoln",
+      "prompt": "Name a U.S. president who served before Abraham Lincoln.",
+      "rationale": "Washington, Jefferson and Jackson anchor the set; lesser recalled early administrations earn more.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "label": "John Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 20
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 60
+        },
+        {
+          "id": "james-monroe",
+          "label": "James Monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "label": "John Quincy Adams",
+          "basePoints": 80
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 40
+        },
+        {
+          "id": "martin-van-buren",
+          "label": "Martin Van Buren",
+          "basePoints": 100
+        },
+        {
+          "id": "william-henry-harrison",
+          "label": "William Henry Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "label": "John Tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "james-k-polk",
+          "label": "James K. Polk",
+          "basePoints": 100
+        },
+        {
+          "id": "zachary-taylor",
+          "label": "Zachary Taylor",
+          "basePoints": 100
+        },
+        {
+          "id": "millard-fillmore",
+          "label": "Millard Fillmore",
+          "basePoints": 100
+        },
+        {
+          "id": "franklin-pierce",
+          "label": "Franklin Pierce",
+          "basePoints": 100
+        },
+        {
+          "id": "james-buchanan",
+          "label": "James Buchanan",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents-two-names",
+      "prompt": "Name a last name shared by more than one U.S. president.",
+      "rationale": "Bush is immediate; Adams and Roosevelt are accessible; Harrison is less obvious.",
+      "answers": [
+        {
+          "id": "adams",
+          "label": "Adams",
+          "basePoints": 40
+        },
+        {
+          "id": "johnson",
+          "label": "Johnson",
+          "basePoints": 60
+        },
+        {
+          "id": "harrison",
+          "label": "Harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "roosevelt",
+          "label": "Roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "bush",
+          "label": "Bush",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-money-faces",
+      "prompt": "Name a person pictured on one of the seven current U.S. paper-money denominations.",
+      "rationale": "Washington and Lincoln are immediate; Grant and Hamilton are less likely to be named first.",
+      "answers": [
+        {
+          "id": "george-washington",
+          "label": "George Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "thomas-jefferson",
+          "label": "Thomas Jefferson",
+          "basePoints": 40
+        },
+        {
+          "id": "andrew-jackson",
+          "label": "Andrew Jackson",
+          "basePoints": 40
+        },
+        {
+          "id": "abraham-lincoln",
+          "label": "Abraham Lincoln",
+          "basePoints": 20
+        },
+        {
+          "id": "ulysses-s-grant",
+          "label": "Ulysses S. Grant",
+          "basePoints": 80
+        },
+        {
+          "id": "alexander-hamilton",
+          "label": "Alexander Hamilton",
+          "basePoints": 60
+        },
+        {
+          "id": "benjamin-franklin",
+          "label": "Benjamin Franklin",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-cabinet-departments",
+      "prompt": "Name a U.S. Cabinet department.",
+      "rationale": "Defense, Justice, Education and State are familiar; Interior, Commerce, Energy and HUD are less recalled.",
+      "answers": [
+        {
+          "id": "department-of-state",
+          "label": "Department of State",
+          "basePoints": 20
+        },
+        {
+          "id": "department-of-treasury",
+          "label": "Department of the Treasury",
+          "basePoints": 40
+        },
+        {
+          "id": "department-of-defense",
+          "label": "Department of Defense",
+          "basePoints": 20
+        },
+        {
+          "id": "department-of-justice",
+          "label": "Department of Justice",
+          "basePoints": 20
+        },
+        {
+          "id": "department-of-interior",
+          "label": "Department of the Interior",
+          "basePoints": 80
+        },
+        {
+          "id": "department-of-agriculture",
+          "label": "Department of Agriculture",
+          "basePoints": 60
+        },
+        {
+          "id": "department-of-commerce",
+          "label": "Department of Commerce",
+          "basePoints": 80
+        },
+        {
+          "id": "department-of-labor",
+          "label": "Department of Labor",
+          "basePoints": 60
+        },
+        {
+          "id": "department-of-health-and-human-services",
+          "label": "Department of Health and Human Services",
+          "basePoints": 60
+        },
+        {
+          "id": "department-of-housing-and-urban-development",
+          "label": "Department of Housing and Urban Development",
+          "basePoints": 100
+        },
+        {
+          "id": "department-of-transportation",
+          "label": "Department of Transportation",
+          "basePoints": 60
+        },
+        {
+          "id": "department-of-energy",
+          "label": "Department of Energy",
+          "basePoints": 80
+        },
+        {
+          "id": "department-of-education",
+          "label": "Department of Education",
+          "basePoints": 20
+        },
+        {
+          "id": "department-of-veterans-affairs",
+          "label": "Department of Veterans Affairs",
+          "basePoints": 80
+        },
+        {
+          "id": "department-of-homeland-security",
+          "label": "Department of Homeland Security",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-federal-elected-jobs",
+      "prompt": "Name an elected office in the U.S. federal government.",
+      "rationale": "All four are familiar; president and senator are the most immediate, with only modest extra reward for the others.",
+      "answers": [
+        {
+          "id": "president",
+          "label": "President",
+          "basePoints": 20
+        },
+        {
+          "id": "vice-president",
+          "label": "Vice president",
+          "basePoints": 40
+        },
+        {
+          "id": "u-s-senator",
+          "label": "U.S. senator",
+          "basePoints": 20
+        },
+        {
+          "id": "u-s-representative",
+          "label": "U.S. representative",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-preamble-goals",
+      "prompt": "Name a goal of government listed in the Constitution’s Preamble.",
+      "rationale": "Union and justice are immediate; domestic tranquility is less likely to be named first.",
+      "answers": [
+        {
+          "id": "form-more-perfect-union",
+          "label": "Form a more perfect union",
+          "basePoints": 20
+        },
+        {
+          "id": "establish-justice",
+          "label": "Establish justice",
+          "basePoints": 20
+        },
+        {
+          "id": "insure-domestic-tranquility",
+          "label": "Insure domestic tranquility",
+          "basePoints": 80
+        },
+        {
+          "id": "provide-for-common-defense",
+          "label": "Provide for the common defense",
+          "basePoints": 40
+        },
+        {
+          "id": "promote-general-welfare",
+          "label": "Promote the general welfare",
+          "basePoints": 60
+        },
+        {
+          "id": "secure-blessings-of-liberty",
+          "label": "Secure the blessings of liberty",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-federalist-authors",
+      "prompt": "Name one of the three authors of the Federalist Papers.",
+      "rationale": "Hamilton is immediate, Madison next, John Jay the less recalled contributor.",
+      "answers": [
+        {
+          "id": "alexander-hamilton",
+          "label": "Alexander Hamilton",
+          "basePoints": 20
+        },
+        {
+          "id": "james-madison",
+          "label": "James Madison",
+          "basePoints": 40
+        },
+        {
+          "id": "john-jay",
+          "label": "John Jay",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-a",
+      "prompt": "Name a U.S. state that starts with A.",
+      "rationale": "Arizona and Alaska are accessible; Alabama and Arkansas earn progressively larger climbs.",
+      "answers": [
+        {
+          "id": "alabama",
+          "label": "Alabama",
+          "basePoints": 60
+        },
+        {
+          "id": "alaska",
+          "label": "Alaska",
+          "basePoints": 40
+        },
+        {
+          "id": "arizona",
+          "label": "Arizona",
+          "basePoints": 20
+        },
+        {
+          "id": "arkansas",
+          "label": "Arkansas",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-c",
+      "prompt": "Name a U.S. state that starts with C.",
+      "rationale": "California is immediate for this classroom; Colorado next, Connecticut less obvious.",
+      "answers": [
+        {
+          "id": "california",
+          "label": "California",
+          "basePoints": 20
+        },
+        {
+          "id": "colorado",
+          "label": "Colorado",
+          "basePoints": 40
+        },
+        {
+          "id": "connecticut",
+          "label": "Connecticut",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-i",
+      "prompt": "Name a U.S. state that starts with I.",
+      "rationale": "Illinois and Indiana are accessible; Idaho and Iowa earn larger climbs.",
+      "answers": [
+        {
+          "id": "idaho",
+          "label": "Idaho",
+          "basePoints": 60
+        },
+        {
+          "id": "illinois",
+          "label": "Illinois",
+          "basePoints": 20
+        },
+        {
+          "id": "indiana",
+          "label": "Indiana",
+          "basePoints": 40
+        },
+        {
+          "id": "iowa",
+          "label": "Iowa",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-m",
+      "prompt": "Name a U.S. state that starts with M.",
+      "rationale": "Michigan, Maryland and Massachusetts are accessible; Maine, Missouri and Montana are less immediate.",
+      "answers": [
+        {
+          "id": "maine",
+          "label": "Maine",
+          "basePoints": 80
+        },
+        {
+          "id": "maryland",
+          "label": "Maryland",
+          "basePoints": 40
+        },
+        {
+          "id": "massachusetts",
+          "label": "Massachusetts",
+          "basePoints": 40
+        },
+        {
+          "id": "michigan",
+          "label": "Michigan",
+          "basePoints": 20
+        },
+        {
+          "id": "minnesota",
+          "label": "Minnesota",
+          "basePoints": 60
+        },
+        {
+          "id": "mississippi",
+          "label": "Mississippi",
+          "basePoints": 60
+        },
+        {
+          "id": "missouri",
+          "label": "Missouri",
+          "basePoints": 80
+        },
+        {
+          "id": "montana",
+          "label": "Montana",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-n",
+      "prompt": "Name a U.S. state that starts with N.",
+      "rationale": "New York is immediate; Nevada and New Jersey accessible; smaller northern/New England states less immediate.",
+      "answers": [
+        {
+          "id": "nebraska",
+          "label": "Nebraska",
+          "basePoints": 80
+        },
+        {
+          "id": "nevada",
+          "label": "Nevada",
+          "basePoints": 40
+        },
+        {
+          "id": "new-hampshire",
+          "label": "New Hampshire",
+          "basePoints": 100
+        },
+        {
+          "id": "new-jersey",
+          "label": "New Jersey",
+          "basePoints": 40
+        },
+        {
+          "id": "new-mexico",
+          "label": "New Mexico",
+          "basePoints": 60
+        },
+        {
+          "id": "new-york",
+          "label": "New York",
+          "basePoints": 20
+        },
+        {
+          "id": "north-carolina",
+          "label": "North Carolina",
+          "basePoints": 60
+        },
+        {
+          "id": "north-dakota",
+          "label": "North Dakota",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-o",
+      "prompt": "Name a U.S. state that starts with O.",
+      "rationale": "Ohio and Oregon are accessible; Oklahoma gets a modest larger reward.",
+      "answers": [
+        {
+          "id": "ohio",
+          "label": "Ohio",
+          "basePoints": 20
+        },
+        {
+          "id": "oklahoma",
+          "label": "Oklahoma",
+          "basePoints": 60
+        },
+        {
+          "id": "oregon",
+          "label": "Oregon",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-letter-w",
+      "prompt": "Name a U.S. state that starts with W.",
+      "rationale": "Washington and Wisconsin are accessible; West Virginia and Wyoming are less immediate.",
+      "answers": [
+        {
+          "id": "washington",
+          "label": "Washington",
+          "basePoints": 20
+        },
+        {
+          "id": "west-virginia",
+          "label": "West Virginia",
+          "basePoints": 60
+        },
+        {
+          "id": "wisconsin",
+          "label": "Wisconsin",
+          "basePoints": 40
+        },
+        {
+          "id": "wyoming",
+          "label": "Wyoming",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-formal",
+      "prompt": "Name a formal constitutional power or duty of the president.",
+      "rationale": "Veto, signing and command are immediate; receiving ambassadors and special sessions are less recalled formal powers.",
+      "answers": [
+        {
+          "id": "veto-a-bill",
+          "label": "Veto a bill",
+          "basePoints": 20
+        },
+        {
+          "id": "sign-a-bill-into-law",
+          "label": "Sign a bill into law",
+          "basePoints": 20
+        },
+        {
+          "id": "lead-the-executive-branch",
+          "label": "Lead the executive branch",
+          "basePoints": 20
+        },
+        {
+          "id": "command-the-armed-forces",
+          "label": "Command the armed forces",
+          "basePoints": 20
+        },
+        {
+          "id": "nominate-federal-judges",
+          "label": "Nominate federal judges",
+          "basePoints": 40
+        },
+        {
+          "id": "nominate-executive-officials",
+          "label": "Nominate executive officials",
+          "basePoints": 60
+        },
+        {
+          "id": "negotiate-treaties",
+          "label": "Negotiate treaties",
+          "basePoints": 40
+        },
+        {
+          "id": "grant-federal-pardons",
+          "label": "Grant federal pardons",
+          "basePoints": 40
+        },
+        {
+          "id": "recommend-legislation",
+          "label": "Recommend legislation",
+          "basePoints": 60
+        },
+        {
+          "id": "give-the-state-of-the-union",
+          "label": "Give the State of the Union",
+          "basePoints": 60
+        },
+        {
+          "id": "receive-ambassadors",
+          "label": "Receive ambassadors",
+          "basePoints": 100
+        },
+        {
+          "id": "call-congress-into-special-session",
+          "label": "Call Congress into special session",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-informal",
+      "prompt": "Name an informal tool or power presidents use to shape policy.",
+      "rationale": "Executive order and public communication are familiar; agreements, agenda setting and signing statements are less immediate.",
+      "answers": [
+        {
+          "id": "3",
+          "label": "Executive agreement",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Executive order",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Signing statement",
+          "basePoints": 100
+        },
+        {
+          "id": "6",
+          "label": "Bargaining and persuasion",
+          "basePoints": 60
+        },
+        {
+          "id": "7",
+          "label": "Bully pulpit",
+          "basePoints": 40
+        },
+        {
+          "id": "going-public",
+          "label": "Going public",
+          "basePoints": 40
+        },
+        {
+          "id": "agenda-setting",
+          "label": "Agenda setting",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-congress-powers",
+      "prompt": "Name a power of Congress.",
+      "rationale": "Passing laws, tax, war and impeachment are immediate; detailed Article I powers require broader recall.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Tax",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Borrow money",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Coin money",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Regulate interstate commerce",
+          "basePoints": 40
+        },
+        {
+          "id": "4",
+          "label": "Declare war",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Raise and support armies",
+          "basePoints": 40
+        },
+        {
+          "id": "6",
+          "label": "Establish post offices",
+          "basePoints": 60
+        },
+        {
+          "id": "navy",
+          "label": "Provide and maintain a navy",
+          "basePoints": 60
+        },
+        {
+          "id": "naturalization",
+          "label": "Set naturalization rules",
+          "basePoints": 80
+        },
+        {
+          "id": "bankruptcy",
+          "label": "Set bankruptcy laws",
+          "basePoints": 80
+        },
+        {
+          "id": "patents",
+          "label": "Protect inventions and writings",
+          "basePoints": 80
+        },
+        {
+          "id": "lower-courts",
+          "label": "Establish lower federal courts",
+          "basePoints": 80
+        },
+        {
+          "id": "weights",
+          "label": "Set weights and measures",
+          "basePoints": 100
+        },
+        {
+          "id": "counterfeiting",
+          "label": "Punish counterfeiting",
+          "basePoints": 100
+        },
+        {
+          "id": "necessary-proper",
+          "label": "Make necessary and proper laws",
+          "basePoints": 60
+        },
+        {
+          "id": "foreign-commerce",
+          "label": "Regulate foreign commerce",
+          "basePoints": 60
+        },
+        {
+          "id": "tribal-commerce",
+          "label": "Regulate commerce with Indian tribes",
+          "basePoints": 80
+        },
+        {
+          "id": "piracy",
+          "label": "Punish piracy and offenses on the high seas",
+          "basePoints": 100
+        },
+        {
+          "id": "law-of-nations",
+          "label": "Punish offenses against the law of nations",
+          "basePoints": 100
+        },
+        {
+          "id": "marque",
+          "label": "Grant letters of marque and reprisal",
+          "basePoints": 100
+        },
+        {
+          "id": "captures",
+          "label": "Make rules concerning captures",
+          "basePoints": 100
+        },
+        {
+          "id": "military-rules",
+          "label": "Make rules for the armed forces",
+          "basePoints": 80
+        },
+        {
+          "id": "militia",
+          "label": "Organize and call forth the militia",
+          "basePoints": 80
+        },
+        {
+          "id": "federal-district",
+          "label": "Govern the federal district",
+          "basePoints": 100
+        },
+        {
+          "id": "spending",
+          "label": "Spend for the general welfare",
+          "basePoints": 60
+        },
+        {
+          "id": "override-a-veto",
+          "label": "Override a veto",
+          "basePoints": 40
+        },
+        {
+          "id": "power-of-the-purse",
+          "label": "Power of the Purse",
+          "basePoints": 40
+        },
+        {
+          "id": "oversight",
+          "label": "Oversight",
+          "basePoints": 60
+        },
+        {
+          "id": "impeachment",
+          "label": "Impeachment",
+          "basePoints": 20
+        },
+        {
+          "id": "senate-confirmation",
+          "label": "Senate Confirmation",
+          "basePoints": 60
+        },
+        {
+          "id": "consent-to-treaties",
+          "label": "Consent to treaties",
+          "basePoints": 60
+        },
+        {
+          "id": "pass-laws",
+          "label": "Pass laws",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-executive-offices",
+      "prompt": "Name a chief executive position at the federal, state, or local level.",
+      "rationale": "President is immediate, governor next; mayor and local administration reward looking beyond the federal level.",
+      "answers": [
+        {
+          "id": "president",
+          "label": "President",
+          "basePoints": 20
+        },
+        {
+          "id": "governor",
+          "label": "Governor",
+          "basePoints": 40
+        },
+        {
+          "id": "mayor",
+          "label": "Mayor",
+          "basePoints": 80
+        },
+        {
+          "id": "county-executive",
+          "label": "County executive",
+          "basePoints": 80
+        },
+        {
+          "id": "city-manager",
+          "label": "City manager",
+          "basePoints": 80
+        },
+        {
+          "id": "village-president",
+          "label": "Village president",
+          "basePoints": 100
+        },
+        {
+          "id": "town-supervisor",
+          "label": "Town supervisor",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-legislative-offices",
+      "prompt": "Name a legislative position at the federal, state, or local level.",
+      "rationale": "Members of Congress are immediate; state and local bodies and specialized leadership roles earn larger climbs.",
+      "answers": [
+        {
+          "id": "u-s-senator",
+          "label": "U.S. senator",
+          "basePoints": 20
+        },
+        {
+          "id": "u-s-representative",
+          "label": "U.S. representative",
+          "basePoints": 20
+        },
+        {
+          "id": "state-senator",
+          "label": "State senator",
+          "basePoints": 40
+        },
+        {
+          "id": "state-representative",
+          "label": "State representative",
+          "basePoints": 40
+        },
+        {
+          "id": "city-council-member",
+          "label": "City council member",
+          "basePoints": 60
+        },
+        {
+          "id": "county-commissioner",
+          "label": "County commissioner",
+          "basePoints": 80
+        },
+        {
+          "id": "speaker-of-house",
+          "label": "Speaker of the House",
+          "basePoints": 40
+        },
+        {
+          "id": "town-meeting-member",
+          "label": "Town meeting member",
+          "basePoints": 100
+        },
+        {
+          "id": "1",
+          "label": "House Majority Leader",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "Senate Majority Leader",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Whip",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "President Pro Tempore",
+          "basePoints": 100
+        },
+        {
+          "id": "house-minority-leader",
+          "label": "House Minority Leader",
+          "basePoints": 80
+        },
+        {
+          "id": "senate-minority-leader",
+          "label": "Senate Minority Leader",
+          "basePoints": 80
+        },
+        {
+          "id": "president-of-senate",
+          "label": "President of the Senate",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-baker-concepts",
+      "prompt": "Name a key term or concept connected to Baker v. Carr.",
+      "rationale": "Equal protection and one person one vote are direct anchors; justiciability and political question doctrine are less obvious connections.",
+      "answers": [
+        {
+          "id": "equal-protection-clause",
+          "label": "Equal Protection Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "fourteenth-amendment",
+          "label": "Fourteenth Amendment",
+          "basePoints": 40
+        },
+        {
+          "id": "justiciability",
+          "label": "Justiciability",
+          "basePoints": 80
+        },
+        {
+          "id": "political-question-doctrine",
+          "label": "Political question doctrine",
+          "basePoints": 100
+        },
+        {
+          "id": "malapportionment",
+          "label": "Malapportionment",
+          "basePoints": 60
+        },
+        {
+          "id": "apportionment",
+          "label": "Apportionment",
+          "basePoints": 40
+        },
+        {
+          "id": "redistricting",
+          "label": "Redistricting",
+          "basePoints": 40
+        },
+        {
+          "id": "one-person-one-vote",
+          "label": "One person one vote",
+          "basePoints": 20
+        },
+        {
+          "id": "federal-court-jurisdiction",
+          "label": "Federal court jurisdiction",
+          "basePoints": 80
+        },
+        {
+          "id": "judicial-review",
+          "label": "Judicial review",
+          "basePoints": 60
+        },
+        {
+          "id": "gerrymandering",
+          "label": "Gerrymandering",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-mcculloch-concepts",
+      "prompt": "Name a key term or concept connected to McCulloch v. Maryland.",
+      "rationale": "Necessary and Proper and implied powers are direct anchors; tax immunity and broader interpretive concepts are less obvious.",
+      "answers": [
+        {
+          "id": "necessary-and-proper-clause",
+          "label": "Necessary and Proper Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "implied-powers",
+          "label": "Implied powers",
+          "basePoints": 20
+        },
+        {
+          "id": "supremacy-clause",
+          "label": "Supremacy Clause",
+          "basePoints": 40
+        },
+        {
+          "id": "federalism",
+          "label": "Federalism",
+          "basePoints": 40
+        },
+        {
+          "id": "national-bank",
+          "label": "National bank",
+          "basePoints": 60
+        },
+        {
+          "id": "intergovernmental-tax-immunity",
+          "label": "Intergovernmental tax immunity",
+          "basePoints": 100
+        },
+        {
+          "id": "enumerated-powers",
+          "label": "Enumerated powers",
+          "basePoints": 60
+        },
+        {
+          "id": "limited-government",
+          "label": "Limited government",
+          "basePoints": 80
+        },
+        {
+          "id": "broad-constitutional-interpretation",
+          "label": "Broad constitutional interpretation",
+          "basePoints": 80
+        },
+        {
+          "id": "state-sovereignty",
+          "label": "State sovereignty",
+          "basePoints": 80
+        },
+        {
+          "id": "judicial-review",
+          "label": "Judicial review",
+          "basePoints": 60
+        },
+        {
+          "id": "john-marshall",
+          "label": "John Marshall",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-constitutional-clauses",
+      "prompt": "Name a clause in the U.S. Constitution.",
+      "rationale": "Commerce, Supremacy and Necessary and Proper are familiar anchors; specialized clauses earn larger climbs.",
+      "answers": [
+        {
+          "id": "supremacy-clause",
+          "label": "Supremacy Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "necessary-and-proper-clause",
+          "label": "Necessary and Proper Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "commerce-clause",
+          "label": "Commerce Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "full-faith-and-credit-clause",
+          "label": "Full Faith and Credit Clause",
+          "basePoints": 60
+        },
+        {
+          "id": "privileges-and-immunities-clause",
+          "label": "Privileges and Immunities Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "equal-protection-clause",
+          "label": "Equal Protection Clause",
+          "basePoints": 40
+        },
+        {
+          "id": "due-process-clause",
+          "label": "Due Process Clause",
+          "basePoints": 40
+        },
+        {
+          "id": "establishment-clause",
+          "label": "Establishment Clause",
+          "basePoints": 60
+        },
+        {
+          "id": "free-exercise-clause",
+          "label": "Free Exercise Clause",
+          "basePoints": 60
+        },
+        {
+          "id": "take-care-clause",
+          "label": "Take Care Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "appointments-clause",
+          "label": "Appointments Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "treaty-clause",
+          "label": "Treaty Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "vesting-clause",
+          "label": "Vesting Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "origination-clause",
+          "label": "Origination Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "presentment-clause",
+          "label": "Presentment Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "speech-or-debate-clause",
+          "label": "Speech or Debate Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "contract-clause",
+          "label": "Contract Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "ex-post-facto-clauses",
+          "label": "Ex Post Facto Clauses",
+          "basePoints": 100
+        },
+        {
+          "id": "bill-of-attainder-clauses",
+          "label": "Bill of Attainder Clauses",
+          "basePoints": 100
+        },
+        {
+          "id": "emoluments-clauses",
+          "label": "Emoluments Clauses",
+          "basePoints": 100
+        },
+        {
+          "id": "takings-clause",
+          "label": "Takings Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "suspension-clause",
+          "label": "Suspension Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "no-religious-test-clause",
+          "label": "No Religious Test Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "guarantee-clause",
+          "label": "Guarantee Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "spending-clause",
+          "label": "Spending Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "extradition-clause",
+          "label": "Extradition Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "fugitive-slave-clause",
+          "label": "Fugitive Slave Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "three-fifths-clause",
+          "label": "Three Fifths Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "importation-clause",
+          "label": "Importation Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "territory-clause",
+          "label": "Territory Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "new-states-clause",
+          "label": "New States Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "commander-in-chief-clause",
+          "label": "Commander in Chief Clause",
+          "basePoints": 60
+        },
+        {
+          "id": "pardon-clause",
+          "label": "Pardon Clause",
+          "basePoints": 80
+        },
+        {
+          "id": "electors-clause",
+          "label": "Electors Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "elections-clause",
+          "label": "Elections Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "qualifications-clauses",
+          "label": "Qualifications Clauses",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-article-i",
+      "prompt": "Name an office, power, rule, or idea discussed in Article I of the Constitution.",
+      "rationale": "Congress and its chambers, tax and war are immediate; procedural details and prohibitions are less recalled.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Tax",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Borrow money",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Coin money",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Regulate interstate commerce",
+          "basePoints": 40
+        },
+        {
+          "id": "4",
+          "label": "Declare war",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Raise and support armies",
+          "basePoints": 40
+        },
+        {
+          "id": "6",
+          "label": "Establish post offices",
+          "basePoints": 60
+        },
+        {
+          "id": "navy",
+          "label": "Provide and maintain a navy",
+          "basePoints": 60
+        },
+        {
+          "id": "naturalization",
+          "label": "Set naturalization rules",
+          "basePoints": 80
+        },
+        {
+          "id": "bankruptcy",
+          "label": "Set bankruptcy laws",
+          "basePoints": 80
+        },
+        {
+          "id": "patents",
+          "label": "Protect inventions and writings",
+          "basePoints": 80
+        },
+        {
+          "id": "lower-courts",
+          "label": "Establish lower federal courts",
+          "basePoints": 80
+        },
+        {
+          "id": "weights",
+          "label": "Set weights and measures",
+          "basePoints": 100
+        },
+        {
+          "id": "counterfeiting",
+          "label": "Punish counterfeiting",
+          "basePoints": 100
+        },
+        {
+          "id": "necessary-proper",
+          "label": "Make necessary and proper laws",
+          "basePoints": 60
+        },
+        {
+          "id": "foreign-commerce",
+          "label": "Regulate foreign commerce",
+          "basePoints": 60
+        },
+        {
+          "id": "tribal-commerce",
+          "label": "Regulate commerce with Indian tribes",
+          "basePoints": 80
+        },
+        {
+          "id": "piracy",
+          "label": "Punish piracy and offenses on the high seas",
+          "basePoints": 100
+        },
+        {
+          "id": "law-of-nations",
+          "label": "Punish offenses against the law of nations",
+          "basePoints": 100
+        },
+        {
+          "id": "marque",
+          "label": "Grant letters of marque and reprisal",
+          "basePoints": 100
+        },
+        {
+          "id": "captures",
+          "label": "Make rules concerning captures",
+          "basePoints": 100
+        },
+        {
+          "id": "military-rules",
+          "label": "Make rules for the armed forces",
+          "basePoints": 80
+        },
+        {
+          "id": "militia",
+          "label": "Organize and call forth the militia",
+          "basePoints": 80
+        },
+        {
+          "id": "federal-district",
+          "label": "Govern the federal district",
+          "basePoints": 100
+        },
+        {
+          "id": "spending",
+          "label": "Spend for the general welfare",
+          "basePoints": 60
+        },
+        {
+          "id": "congress",
+          "label": "Congress",
+          "basePoints": 20
+        },
+        {
+          "id": "house-of-representatives",
+          "label": "House of Representatives",
+          "basePoints": 20
+        },
+        {
+          "id": "senate",
+          "label": "Senate",
+          "basePoints": 20
+        },
+        {
+          "id": "speaker-of-house",
+          "label": "Speaker of the House",
+          "basePoints": 40
+        },
+        {
+          "id": "impeachment",
+          "label": "Impeachment",
+          "basePoints": 40
+        },
+        {
+          "id": "senate-impeachment-trials",
+          "label": "Senate impeachment trials",
+          "basePoints": 60
+        },
+        {
+          "id": "president-of-senate",
+          "label": "President of the Senate",
+          "basePoints": 80
+        },
+        {
+          "id": "president-pro-tempore",
+          "label": "President pro tempore",
+          "basePoints": 100
+        },
+        {
+          "id": "house-two-year-term",
+          "label": "House two year term",
+          "basePoints": 40
+        },
+        {
+          "id": "senate-six-year-term",
+          "label": "Senate six year term",
+          "basePoints": 60
+        },
+        {
+          "id": "minimum-house-age-25",
+          "label": "Minimum House age 25",
+          "basePoints": 60
+        },
+        {
+          "id": "minimum-senate-age-30",
+          "label": "Minimum Senate age 30",
+          "basePoints": 60
+        },
+        {
+          "id": "house-citizenship-requirement",
+          "label": "House citizenship requirement",
+          "basePoints": 80
+        },
+        {
+          "id": "senate-citizenship-requirement",
+          "label": "Senate citizenship requirement",
+          "basePoints": 80
+        },
+        {
+          "id": "state-residency-requirement",
+          "label": "State residency requirement",
+          "basePoints": 80
+        },
+        {
+          "id": "census-and-apportionment",
+          "label": "Census and apportionment",
+          "basePoints": 40
+        },
+        {
+          "id": "congressional-elections",
+          "label": "Congressional elections",
+          "basePoints": 60
+        },
+        {
+          "id": "revenue-bills-originate-in-house",
+          "label": "Revenue bills originate in the House",
+          "basePoints": 60
+        },
+        {
+          "id": "presidential-veto",
+          "label": "Presidential veto",
+          "basePoints": 40
+        },
+        {
+          "id": "veto-override",
+          "label": "Veto override",
+          "basePoints": 40
+        },
+        {
+          "id": "bicameral-passage",
+          "label": "Bicameral passage",
+          "basePoints": 40
+        },
+        {
+          "id": "pocket-veto",
+          "label": "Pocket veto",
+          "basePoints": 80
+        },
+        {
+          "id": "quorum",
+          "label": "Quorum",
+          "basePoints": 80
+        },
+        {
+          "id": "congressional-rules",
+          "label": "Congressional rules",
+          "basePoints": 60
+        },
+        {
+          "id": "expulsion-of-members",
+          "label": "Expulsion of members",
+          "basePoints": 80
+        },
+        {
+          "id": "congressional-journals",
+          "label": "Congressional journals",
+          "basePoints": 100
+        },
+        {
+          "id": "speech-or-debate-clause",
+          "label": "Speech or Debate Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "appropriations",
+          "label": "Appropriations",
+          "basePoints": 80
+        },
+        {
+          "id": "habeas-corpus",
+          "label": "Habeas corpus",
+          "basePoints": 80
+        },
+        {
+          "id": "no-bills-of-attainder",
+          "label": "No bills of attainder",
+          "basePoints": 100
+        },
+        {
+          "id": "no-ex-post-facto-laws",
+          "label": "No ex post facto laws",
+          "basePoints": 100
+        },
+        {
+          "id": "no-titles-of-nobility",
+          "label": "No titles of nobility",
+          "basePoints": 100
+        },
+        {
+          "id": "foreign-emoluments-clause",
+          "label": "Foreign Emoluments Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "limits-on-state-powers",
+          "label": "Limits on state powers",
+          "basePoints": 80
+        },
+        {
+          "id": "contract-clause",
+          "label": "Contract Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "three-fifths-clause",
+          "label": "Three Fifths Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "importation-clause",
+          "label": "Importation Clause",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-article-ii",
+      "prompt": "Name an office, power, rule, or idea discussed in Article II of the Constitution.",
+      "rationale": "President and commander in chief are immediate; appointments and treaties accessible; specialized duties and qualifications less immediate.",
+      "answers": [
+        {
+          "id": "president",
+          "label": "President",
+          "basePoints": 20
+        },
+        {
+          "id": "vice-president",
+          "label": "Vice president",
+          "basePoints": 40
+        },
+        {
+          "id": "four-year-term",
+          "label": "Four year term",
+          "basePoints": 40
+        },
+        {
+          "id": "presidential-electors",
+          "label": "Presidential electors",
+          "basePoints": 40
+        },
+        {
+          "id": "presidential-oath",
+          "label": "Presidential oath",
+          "basePoints": 60
+        },
+        {
+          "id": "natural-born-citizen-requirement",
+          "label": "Natural born citizen requirement",
+          "basePoints": 60
+        },
+        {
+          "id": "minimum-presidential-age-35",
+          "label": "Minimum presidential age 35",
+          "basePoints": 60
+        },
+        {
+          "id": "fourteen-year-residency-requirement",
+          "label": "Fourteen year residency requirement",
+          "basePoints": 80
+        },
+        {
+          "id": "presidential-compensation",
+          "label": "Presidential compensation",
+          "basePoints": 80
+        },
+        {
+          "id": "commander-in-chief",
+          "label": "Commander in chief",
+          "basePoints": 20
+        },
+        {
+          "id": "written-opinions-from-department-heads",
+          "label": "Written opinions from department heads",
+          "basePoints": 100
+        },
+        {
+          "id": "federal-pardons-and-reprieves",
+          "label": "Federal pardons and reprieves",
+          "basePoints": 40
+        },
+        {
+          "id": "treaty-making",
+          "label": "Treaty making",
+          "basePoints": 40
+        },
+        {
+          "id": "federal-appointments",
+          "label": "Federal appointments",
+          "basePoints": 40
+        },
+        {
+          "id": "recess-appointments",
+          "label": "Recess appointments",
+          "basePoints": 80
+        },
+        {
+          "id": "state-of-union",
+          "label": "State of the Union",
+          "basePoints": 60
+        },
+        {
+          "id": "recommend-legislation",
+          "label": "Recommend legislation",
+          "basePoints": 60
+        },
+        {
+          "id": "convene-congress",
+          "label": "Convene Congress",
+          "basePoints": 80
+        },
+        {
+          "id": "adjourn-congress-in-specified-disagreement",
+          "label": "Adjourn Congress in a specified disagreement",
+          "basePoints": 100
+        },
+        {
+          "id": "receive-ambassadors",
+          "label": "Receive ambassadors",
+          "basePoints": 100
+        },
+        {
+          "id": "faithfully-execute-laws",
+          "label": "Faithfully execute the laws",
+          "basePoints": 40
+        },
+        {
+          "id": "commission-federal-officers",
+          "label": "Commission federal officers",
+          "basePoints": 100
+        },
+        {
+          "id": "removal-through-impeachment",
+          "label": "Removal through impeachment",
+          "basePoints": 60
+        },
+        {
+          "id": "presidential-succession",
+          "label": "Presidential succession",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-article-iii",
+      "prompt": "Name an office, power, rule, or idea discussed in Article III of the Constitution.",
+      "rationale": "Supreme Court and judicial power are immediate; specialized jurisdiction and treason requirements are less recalled.",
+      "answers": [
+        {
+          "id": "federal-judicial-power",
+          "label": "Federal judicial power",
+          "basePoints": 20
+        },
+        {
+          "id": "supreme-court",
+          "label": "Supreme Court",
+          "basePoints": 20
+        },
+        {
+          "id": "lower-federal-courts",
+          "label": "Lower federal courts",
+          "basePoints": 40
+        },
+        {
+          "id": "good-behavior-tenure",
+          "label": "Good behavior tenure",
+          "basePoints": 40
+        },
+        {
+          "id": "protected-judicial-compensation",
+          "label": "Protected judicial compensation",
+          "basePoints": 80
+        },
+        {
+          "id": "cases-and-controversies",
+          "label": "Cases and controversies",
+          "basePoints": 60
+        },
+        {
+          "id": "constitutional-cases",
+          "label": "Constitutional cases",
+          "basePoints": 60
+        },
+        {
+          "id": "federal-law-cases",
+          "label": "Federal law cases",
+          "basePoints": 40
+        },
+        {
+          "id": "treaty-cases",
+          "label": "Treaty cases",
+          "basePoints": 80
+        },
+        {
+          "id": "ambassador-cases",
+          "label": "Ambassador cases",
+          "basePoints": 80
+        },
+        {
+          "id": "admiralty-and-maritime-jurisdiction",
+          "label": "Admiralty and maritime jurisdiction",
+          "basePoints": 100
+        },
+        {
+          "id": "united-states-as-party",
+          "label": "United States as a party",
+          "basePoints": 80
+        },
+        {
+          "id": "disputes-between-states",
+          "label": "Disputes between states",
+          "basePoints": 60
+        },
+        {
+          "id": "diversity-jurisdiction",
+          "label": "Diversity jurisdiction",
+          "basePoints": 80
+        },
+        {
+          "id": "state-and-foreign-party-controversies",
+          "label": "State and foreign party controversies",
+          "basePoints": 100
+        },
+        {
+          "id": "land-grants-from-different-states",
+          "label": "Land grants from different states",
+          "basePoints": 100
+        },
+        {
+          "id": "original-jurisdiction",
+          "label": "Original jurisdiction",
+          "basePoints": 60
+        },
+        {
+          "id": "appellate-jurisdiction",
+          "label": "Appellate jurisdiction",
+          "basePoints": 60
+        },
+        {
+          "id": "exceptions-and-regulations-clause",
+          "label": "Exceptions and Regulations Clause",
+          "basePoints": 100
+        },
+        {
+          "id": "criminal-jury-trials",
+          "label": "Criminal jury trials",
+          "basePoints": 60
+        },
+        {
+          "id": "place-of-criminal-trial",
+          "label": "Place of criminal trial",
+          "basePoints": 80
+        },
+        {
+          "id": "treason",
+          "label": "Treason",
+          "basePoints": 60
+        },
+        {
+          "id": "two-witnesses-for-treason",
+          "label": "Two witnesses for treason",
+          "basePoints": 100
+        },
+        {
+          "id": "confession-in-open-court",
+          "label": "Confession in open court",
+          "basePoints": 100
+        },
+        {
+          "id": "limits-on-punishment-for-treason",
+          "label": "Limits on punishment for treason",
+          "basePoints": 100
+        }
+      ]
+    }
+  ]
+}

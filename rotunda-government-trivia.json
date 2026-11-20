@@ -19,7 +19,7 @@
           "President Madison",
           "Father of the Constitution"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "James Madison fits this presidential category."
       },
       {
@@ -30,7 +30,7 @@
           "President James Monroe",
           "President Monroe"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "James Monroe fits this presidential category."
       },
       {
@@ -347,7 +347,7 @@
           "President Zachary Taylor",
           "President Taylor"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "Zachary Taylor fits this presidential category."
       },
       {
@@ -371,7 +371,7 @@
           "President Truman",
           "President Harry Truman"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Harry S. Truman fits this presidential category."
       },
       {
@@ -670,7 +670,7 @@
           "President Harrison",
           "President William Harrison"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "William Henry Harrison fits this presidential category."
       },
       {
@@ -684,7 +684,7 @@
           "President Rutherford Hayes",
           "Rutherford"
         ],
-        "basePoints": 100,
+        "basePoints": 60,
         "explanation": "Rutherford B. Hayes fits this presidential category."
       },
       {
@@ -708,7 +708,7 @@
           "President Harding",
           "President Warren Harding"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "Warren G. Harding fits this presidential category."
       },
       {
@@ -719,7 +719,7 @@
           "President Herbert Hoover",
           "President Hoover"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Herbert Hoover fits this presidential category."
       }
     ],
@@ -1003,7 +1003,7 @@
           "President Thomas Jefferson",
           "President Jefferson"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Thomas Jefferson fits this presidential category."
       },
       {
@@ -1015,7 +1015,7 @@
           "President Jackson",
           "Old Hickory"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Andrew Jackson fits this presidential category."
       },
       {
@@ -1041,7 +1041,7 @@
           "President Lyndon Johnson",
           "President LBJ"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Lyndon B. Johnson fits this presidential category."
       }
     ],
@@ -1330,7 +1330,7 @@
           "President Grover Cleveland",
           "President Cleveland"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "Grover Cleveland fits this presidential category."
       },
       {
@@ -1359,7 +1359,7 @@
           "President James Earl Carter",
           "President James Earl Carter Jr"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Jimmy Carter fits this presidential category."
       },
       {
@@ -1374,7 +1374,7 @@
           "President William Clinton",
           "President William Jefferson Clinton"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Bill Clinton fits this presidential category."
       }
     ],
@@ -1661,7 +1661,7 @@
           "TR",
           "T R Roosevelt"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Theodore Roosevelt fits this presidential category."
       },
       {
@@ -1689,7 +1689,7 @@
           "President Ronald Reagan",
           "President Reagan"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Ronald Reagan fits this presidential category."
       }
     ],
@@ -2305,7 +2305,7 @@
           "President Madison",
           "Father of the Constitution"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "James Madison fits this presidential category."
       },
       {
@@ -2316,7 +2316,7 @@
           "President James Monroe",
           "President Monroe"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "James Monroe fits this presidential category."
       },
       {
@@ -2329,7 +2329,7 @@
           "President Polk",
           "President James Polk"
         ],
-        "basePoints": 100,
+        "basePoints": 60,
         "explanation": "James K. Polk fits this presidential category."
       },
       {
@@ -2340,7 +2340,7 @@
           "President James Buchanan",
           "President Buchanan"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "James Buchanan fits this presidential category."
       },
       {
@@ -2370,7 +2370,7 @@
           "President James Earl Carter",
           "President James Earl Carter Jr"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Jimmy Carter’s full name was James Earl Carter Jr."
       }
     ],
@@ -2643,7 +2643,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -2687,7 +2687,7 @@
           "President JFK",
           "President John Fitzgerald Kennedy"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "John F. Kennedy fits this presidential category."
       }
     ],
@@ -2983,7 +2983,7 @@
           "President William McKinley",
           "President McKinley"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "William McKinley fits this presidential category."
       },
       {
@@ -3009,7 +3009,7 @@
           "President William Clinton",
           "President William Jefferson Clinton"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Bill Clinton’s full name is William Jefferson Clinton."
       }
     ],
@@ -3628,7 +3628,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -3639,7 +3639,7 @@
           "President Thomas Jefferson",
           "President Jefferson"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Thomas Jefferson fits this presidential category."
       },
       {
@@ -3662,7 +3662,7 @@
           "President James Monroe",
           "President Monroe"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "James Monroe fits this presidential category."
       }
     ],
@@ -3960,7 +3960,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -3971,7 +3971,7 @@
           "President Thomas Jefferson",
           "President Jefferson"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Thomas Jefferson fits this presidential category."
       },
       {
@@ -4022,7 +4022,7 @@
           "President Jackson",
           "Old Hickory"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Andrew Jackson fits this presidential category."
       },
       {
@@ -4681,7 +4681,7 @@
           "TR",
           "T R Roosevelt"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Theodore Roosevelt fits this presidential category."
       },
       {
@@ -4739,7 +4739,7 @@
           "President Herbert Hoover",
           "President Hoover"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Herbert Hoover fits this presidential category."
       },
       {
@@ -4756,7 +4756,7 @@
           "President FDR",
           "President Franklin Delano Roosevelt"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Franklin D. Roosevelt fits this presidential category."
       },
       {
@@ -4769,7 +4769,7 @@
           "President Truman",
           "President Harry Truman"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Harry S. Truman fits this presidential category."
       },
       {
@@ -4816,7 +4816,7 @@
           "President Lyndon Johnson",
           "President LBJ"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Lyndon B. Johnson fits this presidential category."
       },
       {
@@ -4827,7 +4827,7 @@
           "President Richard Nixon",
           "President Nixon"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Richard Nixon fits this presidential category."
       },
       {
@@ -4838,7 +4838,7 @@
           "President Gerald Ford",
           "President Ford"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Gerald Ford fits this presidential category."
       },
       {
@@ -5083,7 +5083,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -5094,7 +5094,7 @@
           "President Thomas Jefferson",
           "President Jefferson"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Thomas Jefferson fits this presidential category."
       },
       {
@@ -5117,7 +5117,7 @@
           "President James Monroe",
           "President Monroe"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "James Monroe fits this presidential category."
       }
     ],
@@ -5571,7 +5571,7 @@
           "President Lyndon Johnson",
           "President LBJ"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Lyndon B. Johnson fits this presidential category."
       },
       {
@@ -5824,7 +5824,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -5951,7 +5951,7 @@
           "President Lyndon Johnson",
           "President LBJ"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Lyndon B. Johnson fits this presidential category."
       },
       {
@@ -5973,7 +5973,7 @@
           "President Gerald Ford",
           "President Ford"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Gerald Ford fits this presidential category."
       },
       {
@@ -6280,7 +6280,7 @@
           "TR",
           "T R Roosevelt"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Theodore Roosevelt fits this presidential category."
       },
       {
@@ -6305,7 +6305,7 @@
           "President Truman",
           "President Harry Truman"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Harry S. Truman fits this presidential category."
       },
       {
@@ -6613,7 +6613,7 @@
           "President Jackson",
           "Old Hickory"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Andrew Jackson fits this presidential category."
       },
       {
@@ -6643,7 +6643,7 @@
           "President US Grant",
           "President U S Grant"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Ulysses S. Grant fits this presidential category."
       }
     ],
@@ -6922,7 +6922,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -6934,7 +6934,7 @@
           "President Madison",
           "Father of the Constitution"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "James Madison fits this presidential category."
       },
       {
@@ -6985,7 +6985,7 @@
           "President Polk",
           "President James Polk"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "James K. Polk fits this presidential category."
       },
       {
@@ -7026,7 +7026,7 @@
           "President JFK",
           "President John Fitzgerald Kennedy"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "John F. Kennedy fits this presidential category."
       },
       {
@@ -7302,7 +7302,7 @@
           "President John Adams",
           "President Adams"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "John Adams fits this presidential category."
       },
       {
@@ -7313,7 +7313,7 @@
           "President Thomas Jefferson",
           "President Jefferson"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Thomas Jefferson fits this presidential category."
       },
       {
@@ -7364,7 +7364,7 @@
           "President Jackson",
           "Old Hickory"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Andrew Jackson fits this presidential category."
       },
       {
@@ -7705,7 +7705,7 @@
           "President JQ Adams",
           "JQA"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "More than one U.S. president has the last name Adams."
       },
       {
@@ -7771,7 +7771,7 @@
           "President FDR",
           "President Franklin Delano Roosevelt"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "More than one U.S. president has the last name Roosevelt."
       },
       {
@@ -7869,7 +7869,7 @@
           "President Jackson",
           "Old Hickory"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Andrew Jackson fits this government category."
       },
       {
@@ -7899,7 +7899,7 @@
           "President US Grant",
           "President U S Grant"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Ulysses S. Grant fits this government category."
       },
       {
@@ -7909,7 +7909,7 @@
           "Hamilton",
           "A Hamilton"
         ],
-        "basePoints": 40,
+        "basePoints": 60,
         "explanation": "Alexander Hamilton fits this government category."
       },
       {
@@ -8044,7 +8044,7 @@
           "Housing and Urban Development",
           "HUD"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Department of Housing and Urban Development fits this government category."
       },
       {
@@ -8064,7 +8064,7 @@
           "Energy",
           "DOE"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Department of Energy fits this government category."
       },
       {
@@ -8085,7 +8085,7 @@
           "VA",
           "Veterans Administration"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Department of Veterans Affairs fits this government category."
       },
       {
@@ -8191,7 +8191,7 @@
           "perfect union",
           "union"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Form a more perfect union fits this government category."
       },
       {
@@ -8339,7 +8339,7 @@
           "AK",
           "State of Alaska"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Alaska is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8349,7 +8349,7 @@
           "AZ",
           "State of Arizona"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Arizona is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8359,7 +8359,7 @@
           "AR",
           "State of Arkansas"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Arkansas is one of the 50 states in the federal system; every state has two U.S. senators."
       }
     ],
@@ -8540,7 +8540,7 @@
           "CO",
           "State of Colorado"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Colorado is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8734,7 +8734,7 @@
           "IL",
           "State of Illinois"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Illinois is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8744,7 +8744,7 @@
           "IN",
           "State of Indiana"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Indiana is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8754,7 +8754,7 @@
           "IA",
           "State of Iowa"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Iowa is one of the 50 states in the federal system; every state has two U.S. senators."
       }
     ],
@@ -8925,7 +8925,7 @@
           "ME",
           "State of Maine"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Maine is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8935,7 +8935,7 @@
           "MD",
           "State of Maryland"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Maryland is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8945,7 +8945,7 @@
           "MA",
           "State of Massachusetts"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Massachusetts is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8955,7 +8955,7 @@
           "MI",
           "State of Michigan"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Michigan is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8985,7 +8985,7 @@
           "MO",
           "State of Missouri"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Missouri is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -8995,7 +8995,7 @@
           "MT",
           "State of Montana"
         ],
-        "basePoints": 60,
+        "basePoints": 100,
         "explanation": "Montana is one of the 50 states in the federal system; every state has two U.S. senators."
       }
     ],
@@ -9154,7 +9154,7 @@
           "NE",
           "State of Nebraska"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Nebraska is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9164,7 +9164,7 @@
           "NV",
           "State of Nevada"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Nevada is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9174,7 +9174,7 @@
           "NH",
           "State of New Hampshire"
         ],
-        "basePoints": 60,
+        "basePoints": 100,
         "explanation": "New Hampshire is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9184,7 +9184,7 @@
           "NJ",
           "State of New Jersey"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "New Jersey is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9383,7 +9383,7 @@
           "OH",
           "State of Ohio"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Ohio is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9403,7 +9403,7 @@
           "OR",
           "State of Oregon"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Oregon is one of the 50 states in the federal system; every state has two U.S. senators."
       }
     ],
@@ -9577,7 +9577,7 @@
           "WA",
           "State of Washington"
         ],
-        "basePoints": 60,
+        "basePoints": 20,
         "explanation": "Washington is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9587,7 +9587,7 @@
           "WV",
           "State of West Virginia"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "West Virginia is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9597,7 +9597,7 @@
           "WI",
           "State of Wisconsin"
         ],
-        "basePoints": 60,
+        "basePoints": 40,
         "explanation": "Wisconsin is one of the 50 states in the federal system; every state has two U.S. senators."
       },
       {
@@ -9938,7 +9938,7 @@
           "agreement without senate treaty approval"
         ],
         "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "4",
@@ -9958,7 +9958,7 @@
           "explains how the president interprets a law"
         ],
         "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "6",
@@ -9982,7 +9982,7 @@
           "using public speeches to build support"
         ],
         "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "going-public",
@@ -10007,7 +10007,7 @@
           "setting the agenda",
           "policy agenda"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Presidents draw attention to policy priorities and shape what government discusses."
       }
     ],
@@ -10041,7 +10041,7 @@
           "collect taxes"
         ],
         "explanation": "Article I gives Congress the power to lay and collect taxes.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -10051,7 +10051,7 @@
           "borrow"
         ],
         "explanation": "Congress may borrow money on the credit of the United States.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -10062,7 +10062,7 @@
           "mint money"
         ],
         "explanation": "Congress has the constitutional power to coin money and regulate its value.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -10074,7 +10074,7 @@
           "commerce"
         ],
         "explanation": "Congress may regulate commerce among the states, with foreign nations, and with Indian tribes.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -10084,7 +10084,7 @@
           "declaration of war"
         ],
         "explanation": "Congress has the power to declare war; the president commands the armed forces.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "5",
@@ -10097,7 +10097,7 @@
           "army"
         ],
         "explanation": "Congress raises and supports armies and controls military funding.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "6",
@@ -10122,7 +10122,7 @@
           "create a navy"
         ],
         "explanation": "Article I gives Congress the power to provide and maintain a navy.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "naturalization",
@@ -10208,7 +10208,7 @@
           "trade with other countries",
           "regulate foreign trade"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "Congress regulates commerce with foreign nations."
       },
       {
@@ -10231,7 +10231,7 @@
           "define piracy",
           "high seas felonies"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress defines and punishes piracy and felonies on the high seas."
       },
       {
@@ -10241,7 +10241,7 @@
           "law of nations",
           "offenses against international law"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Article I expressly grants this power."
       },
       {
@@ -10252,7 +10252,7 @@
           "marque and reprisal",
           "letters of marque and reprisal"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress can authorize letters of marque and reprisal."
       },
       {
@@ -10262,7 +10262,7 @@
           "captures on land and water",
           "rules for captures"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress sets rules concerning wartime captures."
       },
       {
@@ -10298,7 +10298,7 @@
           "legislate for DC",
           "federal district"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress has legislative authority over the seat of government."
       },
       {
@@ -10312,11 +10312,11 @@
           "pay debts",
           "pay the debts"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "The taxing and spending clause covers debts, common defense, and general welfare."
       },
       {
-        "id": "0",
+        "id": "override-a-veto",
         "label": "Override a veto",
         "aliases": [
           "veto override",
@@ -10325,10 +10325,10 @@
           "overrule a presidential veto"
         ],
         "explanation": "Two-thirds of each chamber can override a regular presidential veto.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
-        "id": "1",
+        "id": "power-of-the-purse",
         "label": "Power of the Purse",
         "aliases": [
           "funding",
@@ -10340,10 +10340,10 @@
           "control appropriations"
         ],
         "explanation": "Congress's authority to provide, limit, or withhold funding, which it can use to influence executive agencies and programs.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
-        "id": "2",
+        "id": "oversight",
         "label": "Oversight",
         "aliases": [
           "investigate",
@@ -10356,7 +10356,7 @@
         "basePoints": 60
       },
       {
-        "id": "3",
+        "id": "impeachment",
         "label": "Impeachment",
         "aliases": [
           "impeach",
@@ -10368,7 +10368,7 @@
         "basePoints": 20
       },
       {
-        "id": "4",
+        "id": "senate-confirmation",
         "label": "Senate Confirmation",
         "aliases": [
           "confirmation",
@@ -10382,7 +10382,7 @@
         "basePoints": 60
       },
       {
-        "id": "5",
+        "id": "consent-to-treaties",
         "label": "Consent to treaties",
         "aliases": [
           "treaty consent",
@@ -10609,7 +10609,7 @@
           "speaker"
         ],
         "explanation": "Leads a legislative chamber.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "town-meeting-member",
@@ -10647,7 +10647,7 @@
           "minority whip"
         ],
         "explanation": "A party leader who counts votes and encourages members to support the party’s position.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "4",
@@ -10658,7 +10658,7 @@
           "pro tem"
         ],
         "explanation": "The senator who acts in the absence of the vice president; usually the most senior senator of the majority party.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "house-minority-leader",
@@ -10667,7 +10667,7 @@
           "minority leader of the house",
           "minority leader"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Leads the minority party in the House."
       },
       {
@@ -10677,7 +10677,7 @@
           "minority leader of the senate",
           "minority leader"
         ],
-        "basePoints": 60,
+        "basePoints": 80,
         "explanation": "Leads the minority party in the Senate."
       },
       {
@@ -10688,7 +10688,7 @@
           "VP",
           "vice president of the United States"
         ],
-        "basePoints": 40,
+        "basePoints": 80,
         "explanation": "The vice president presides over the Senate and can break tied votes."
       }
     ],
@@ -10755,7 +10755,7 @@
           "political questions"
         ],
         "explanation": "Baker distinguished a justiciable Equal Protection claim from a nonjusticiable political question.",
-        "basePoints": 80
+        "basePoints": 100
       },
       {
         "id": "malapportionment",
@@ -10800,7 +10800,7 @@
           "equal representation"
         ],
         "explanation": "A related district population principle developed in later cases such as Reynolds v. Sims; Baker itself opened the courthouse door.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "federal-court-jurisdiction",
@@ -10923,7 +10923,7 @@
           "no state tax on federal bank"
         ],
         "explanation": "Maryland could not tax the federal bank in a way that interfered with federal constitutional powers.",
-        "basePoints": 80
+        "basePoints": 100
       },
       {
         "id": "enumerated-powers",
@@ -11038,7 +11038,7 @@
           "interstate commerce"
         ],
         "explanation": "Authorizes Congress to regulate commerce with foreign nations, among states, and with Indian tribes.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "full-faith-and-credit-clause",
@@ -11081,7 +11081,7 @@
           "14th amendment due process"
         ],
         "explanation": "The Fifth and Fourteenth Amendments contain due process protections.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "establishment-clause",
@@ -11424,7 +11424,7 @@
           "collect taxes"
         ],
         "explanation": "Article I gives Congress the power to lay and collect taxes.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "1",
@@ -11434,7 +11434,7 @@
           "borrow"
         ],
         "explanation": "Congress may borrow money on the credit of the United States.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "2",
@@ -11445,7 +11445,7 @@
           "mint money"
         ],
         "explanation": "Congress has the constitutional power to coin money and regulate its value.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -11457,7 +11457,7 @@
           "commerce"
         ],
         "explanation": "Congress may regulate commerce among the states, with foreign nations, and with Indian tribes.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -11467,7 +11467,7 @@
           "declaration of war"
         ],
         "explanation": "Congress has the power to declare war; the president commands the armed forces.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "5",
@@ -11480,7 +11480,7 @@
           "army"
         ],
         "explanation": "Congress raises and supports armies and controls military funding.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "6",
@@ -11505,7 +11505,7 @@
           "create a navy"
         ],
         "explanation": "Article I gives Congress the power to provide and maintain a navy.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "naturalization",
@@ -11591,7 +11591,7 @@
           "trade with other countries",
           "regulate foreign trade"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "Congress regulates commerce with foreign nations."
       },
       {
@@ -11614,7 +11614,7 @@
           "define piracy",
           "high seas felonies"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress defines and punishes piracy and felonies on the high seas."
       },
       {
@@ -11624,7 +11624,7 @@
           "law of nations",
           "offenses against international law"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Article I expressly grants this power."
       },
       {
@@ -11635,7 +11635,7 @@
           "marque and reprisal",
           "letters of marque and reprisal"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress can authorize letters of marque and reprisal."
       },
       {
@@ -11645,7 +11645,7 @@
           "captures on land and water",
           "rules for captures"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress sets rules concerning wartime captures."
       },
       {
@@ -11681,7 +11681,7 @@
           "legislate for DC",
           "federal district"
         ],
-        "basePoints": 80,
+        "basePoints": 100,
         "explanation": "Congress has legislative authority over the seat of government."
       },
       {
@@ -11695,7 +11695,7 @@
           "pay debts",
           "pay the debts"
         ],
-        "basePoints": 80,
+        "basePoints": 60,
         "explanation": "The taxing and spending clause covers debts, common defense, and general welfare."
       },
       {
@@ -11737,7 +11737,7 @@
           "speaker"
         ],
         "explanation": "The House chooses its Speaker.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "impeachment",
@@ -11747,7 +11747,7 @@
           "House impeachment"
         ],
         "explanation": "The House has the sole power of impeachment.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "senate-impeachment-trials",
@@ -11770,7 +11770,7 @@
           "break ties"
         ],
         "explanation": "The vice president presides over the Senate and can break ties.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "president-pro-tempore",
@@ -11780,7 +11780,7 @@
           "president pro tem"
         ],
         "explanation": "The Senate chooses a president pro tempore.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "house-two-year-term",
@@ -11792,7 +11792,7 @@
           "2 years"
         ],
         "explanation": "House members are chosen every two years.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "senate-six-year-term",
@@ -11839,7 +11839,7 @@
           "7 years"
         ],
         "explanation": "Representatives must have been citizens for seven years.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "senate-citizenship-requirement",
@@ -11850,7 +11850,7 @@
           "9 years"
         ],
         "explanation": "Senators must have been citizens for nine years.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "state-residency-requirement",
@@ -11861,7 +11861,7 @@
           "residency"
         ],
         "explanation": "Members must inhabit the state they represent when elected.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "census-and-apportionment",
@@ -11874,7 +11874,7 @@
           "reapportionment"
         ],
         "explanation": "The Constitution calls for an enumeration every ten years for House apportionment.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "congressional-elections",
@@ -11909,7 +11909,7 @@
           "signing bills"
         ],
         "explanation": "Article I describes presenting a bill to the president and returning it with objections.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "veto-override",
@@ -11921,7 +11921,7 @@
           "override"
         ],
         "explanation": "Two thirds of both chambers can override a veto.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "bicameral-passage",
@@ -11934,7 +11934,7 @@
           "passing laws"
         ],
         "explanation": "Legislation goes through both chambers and presentment.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "pocket-veto",
@@ -11943,7 +11943,7 @@
           "pocket vetoes"
         ],
         "explanation": "Article I describes the effect of adjournment preventing a bill’s return.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "quorum",
@@ -11952,7 +11952,7 @@
           "majority quorum"
         ],
         "explanation": "A majority of each chamber constitutes a quorum.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "congressional-rules",
@@ -11972,7 +11972,7 @@
           "expel members"
         ],
         "explanation": "A chamber can expel a member with a two thirds vote.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "congressional-journals",
@@ -11983,7 +11983,7 @@
           "yeas and nays"
         ],
         "explanation": "Each chamber keeps and publishes a journal, subject to stated exceptions.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "speech-or-debate-clause",
@@ -11993,7 +11993,7 @@
           "legislative immunity"
         ],
         "explanation": "Protects members for speech or debate in either house.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "appropriations",
@@ -12004,7 +12004,7 @@
           "power of the purse"
         ],
         "explanation": "Money may be drawn from the Treasury only through appropriations made by law.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "habeas-corpus",
@@ -12014,7 +12014,7 @@
           "writ of habeas corpus"
         ],
         "explanation": "Restricts suspension of the privilege of the writ.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "no-bills-of-attainder",
@@ -12024,7 +12024,7 @@
           "bills of attainder"
         ],
         "explanation": "Article I prohibits bills of attainder.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "no-ex-post-facto-laws",
@@ -12034,7 +12034,7 @@
           "ex post facto laws"
         ],
         "explanation": "Article I prohibits ex post facto laws.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "no-titles-of-nobility",
@@ -12044,7 +12044,7 @@
           "nobility"
         ],
         "explanation": "The United States may not grant titles of nobility.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "foreign-emoluments-clause",
@@ -12055,7 +12055,7 @@
           "emoluments"
         ],
         "explanation": "Restricts acceptance of specified foreign benefits by federal officeholders.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "limits-on-state-powers",
@@ -12066,7 +12066,7 @@
           "states cannot make treaties"
         ],
         "explanation": "Section 10 restricts certain state actions.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "contract-clause",
@@ -12076,7 +12076,7 @@
           "obligation of contracts"
         ],
         "explanation": "States cannot impair the obligation of contracts.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "three-fifths-clause",
@@ -12087,7 +12087,7 @@
           "3/5 clause"
         ],
         "explanation": "An original apportionment provision superseded by later amendments.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "importation-clause",
@@ -12098,7 +12098,7 @@
           "importation of enslaved people"
         ],
         "explanation": "An original restriction on Congress banning slave importation before 1808.",
-        "basePoints": 60
+        "basePoints": 100
       }
     ],
     "unit": 2,
@@ -12142,7 +12142,7 @@
           "vice presidency"
         ],
         "explanation": "Article II discusses the vice president and succession.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "four-year-term",
@@ -12154,7 +12154,7 @@
           "term length"
         ],
         "explanation": "The president serves a four year term.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "presidential-electors",
@@ -12166,7 +12166,7 @@
           "presidential election"
         ],
         "explanation": "Article II sets out the original elector system; the Twelfth Amendment later changed parts of it.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "presidential-oath",
@@ -12212,7 +12212,7 @@
           "residency requirement"
         ],
         "explanation": "A president must have been a resident within the United States for fourteen years.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "presidential-compensation",
@@ -12224,7 +12224,7 @@
           "domestic emoluments"
         ],
         "explanation": "Article II protects presidential compensation from increases or decreases during the elected period and restricts other emoluments.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "commander-in-chief",
@@ -12236,7 +12236,7 @@
           "armed forces"
         ],
         "explanation": "The president commands the armed forces.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "written-opinions-from-department-heads",
@@ -12248,7 +12248,7 @@
           "principal officers"
         ],
         "explanation": "The president may require written opinions from principal officers of executive departments.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "federal-pardons-and-reprieves",
@@ -12261,7 +12261,7 @@
           "clemency"
         ],
         "explanation": "The president may grant reprieves and pardons for federal offenses, except in impeachment cases.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "treaty-making",
@@ -12273,7 +12273,7 @@
           "negotiate treaties"
         ],
         "explanation": "Treaties require the advice and consent of two thirds of senators present.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "federal-appointments",
@@ -12287,7 +12287,7 @@
           "nominate Supreme Court justices"
         ],
         "explanation": "Article II addresses nominations and appointments with Senate advice and consent.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "recess-appointments",
@@ -12296,7 +12296,7 @@
           "recess appointment"
         ],
         "explanation": "Article II authorizes filling certain vacancies during a Senate recess.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "state-of-union",
@@ -12329,7 +12329,7 @@
           "call a special session"
         ],
         "explanation": "The president may convene either or both chambers on extraordinary occasions.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "adjourn-congress-in-specified-disagreement",
@@ -12339,7 +12339,7 @@
           "adjournment power"
         ],
         "explanation": "The president may adjourn Congress if the chambers disagree about the time of adjournment.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "receive-ambassadors",
@@ -12351,7 +12351,7 @@
           "diplomacy"
         ],
         "explanation": "The president receives ambassadors and other public ministers.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "faithfully-execute-laws",
@@ -12364,7 +12364,7 @@
           "law enforcement"
         ],
         "explanation": "The president must take care that the laws be faithfully executed.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "commission-federal-officers",
@@ -12374,7 +12374,7 @@
           "commission officers"
         ],
         "explanation": "The president commissions all officers of the United States.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "removal-through-impeachment",
@@ -12397,7 +12397,7 @@
           "death resignation removal"
         ],
         "explanation": "Article II discusses succession; later amendments provide additional rules.",
-        "basePoints": 60
+        "basePoints": 80
       }
     ],
     "unit": 2,
@@ -12455,7 +12455,7 @@
           "lower courts"
         ],
         "explanation": "Congress may establish courts inferior to the Supreme Court.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "good-behavior-tenure",
@@ -12468,7 +12468,7 @@
           "judicial tenure"
         ],
         "explanation": "Federal judges hold office during good behavior.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "protected-judicial-compensation",
@@ -12481,7 +12481,7 @@
           "pay cannot be reduced"
         ],
         "explanation": "Judicial compensation cannot be diminished during continuance in office.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "cases-and-controversies",
@@ -12514,7 +12514,7 @@
           "federal questions"
         ],
         "explanation": "The judicial power extends to cases arising under federal laws.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "treaty-cases",
@@ -12524,7 +12524,7 @@
           "treaty disputes"
         ],
         "explanation": "The judicial power includes cases arising under U.S. treaties.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "ambassador-cases",
@@ -12535,7 +12535,7 @@
           "consuls"
         ],
         "explanation": "The judicial power includes cases affecting ambassadors, other public ministers, and consuls.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "admiralty-and-maritime-jurisdiction",
@@ -12547,7 +12547,7 @@
           "admiralty jurisdiction"
         ],
         "explanation": "Article III includes admiralty and maritime cases.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "united-states-as-party",
@@ -12557,7 +12557,7 @@
           "federal government as party"
         ],
         "explanation": "Includes controversies to which the United States is a party.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "disputes-between-states",
@@ -12578,7 +12578,7 @@
           "citizens of different states"
         ],
         "explanation": "Includes certain controversies between citizens of different states.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "state-and-foreign-party-controversies",
@@ -12589,7 +12589,7 @@
           "foreign subjects"
         ],
         "explanation": "The original text includes specified controversies involving states, their citizens, and foreign parties; later amendments affect jurisdiction.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "land-grants-from-different-states",
@@ -12599,7 +12599,7 @@
           "land claims"
         ],
         "explanation": "Includes claims to lands under grants of different states.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "original-jurisdiction",
@@ -12631,7 +12631,7 @@
           "Congress regulates appellate jurisdiction"
         ],
         "explanation": "Congress may make exceptions and regulations regarding the Supreme Court’s appellate jurisdiction.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "criminal-jury-trials",
@@ -12653,7 +12653,7 @@
           "trial in the state where crime committed"
         ],
         "explanation": "Article III addresses where criminal trials take place.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "treason",
@@ -12676,7 +12676,7 @@
           "same overt act"
         ],
         "explanation": "Treason conviction requires two witnesses to the same overt act or confession in open court.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "confession-in-open-court",
@@ -12686,7 +12686,7 @@
           "open court confession"
         ],
         "explanation": "An open court confession is an alternative constitutional proof requirement for treason.",
-        "basePoints": 60
+        "basePoints": 100
       },
       {
         "id": "limits-on-punishment-for-treason",
@@ -12697,7 +12697,7 @@
           "forfeiture"
         ],
         "explanation": "Article III limits the effects of a treason attainder.",
-        "basePoints": 60
+        "basePoints": 100
       }
     ],
     "unit": 1,

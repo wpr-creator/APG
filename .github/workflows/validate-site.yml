@@ -73,6 +73,12 @@ jobs:
       - name: Test Rotunda answer coverage and restricted categories
         run: node scripts/test-rotunda-coverage.js
 
+      - name: Test rarity across the full Rotunda bank
+        run: node scripts/test-rotunda-rarity.js
+
+      - name: Test Rotunda pixel ascent
+        run: node scripts/test-rotunda-rendering.js
+
       - name: Check Rotunda correction confirmation
         run: node scripts/test-rotunda-confirmation.js
 
