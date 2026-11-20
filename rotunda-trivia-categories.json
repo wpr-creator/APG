@@ -2320,7 +2320,17 @@
           "taxation",
           "taxing",
           "levy taxes",
-          "collect taxes"
+          "collect taxes",
+          "taxes",
+          "raise taxes",
+          "lower taxes",
+          "set taxes",
+          "power to tax",
+          "lay and collect taxes",
+          "collecting taxes",
+          "levying taxes",
+          "tax people",
+          "tax citizens"
         ],
         "explanation": "Article I gives Congress the power to lay and collect taxes.",
         "basePoints": 20
@@ -2330,7 +2340,9 @@
         "label": "Borrow money",
         "aliases": [
           "borrowing",
-          "borrow"
+          "borrow",
+          "borrowing money",
+          "borrow funds"
         ],
         "explanation": "Congress may borrow money on the credit of the United States.",
         "basePoints": 40
@@ -2341,7 +2353,11 @@
         "aliases": [
           "coin",
           "coinage",
-          "mint money"
+          "mint money",
+          "coining money",
+          "minting money",
+          "mint coins",
+          "make coins"
         ],
         "explanation": "Congress has the constitutional power to coin money and regulate its value.",
         "basePoints": 40
@@ -2353,7 +2369,11 @@
           "regulate commerce",
           "regulate trade",
           "interstate commerce",
-          "commerce"
+          "commerce",
+          "trade",
+          "regulating trade",
+          "regulating commerce",
+          "regulating interstate commerce"
         ],
         "explanation": "Congress may regulate commerce among the states, with foreign nations, and with Indian tribes.",
         "basePoints": 40
@@ -2363,7 +2383,8 @@
         "label": "Declare war",
         "aliases": [
           "war",
-          "declaration of war"
+          "declaration of war",
+          "declaring war"
         ],
         "explanation": "Congress has the power to declare war; the president commands the armed forces.",
         "basePoints": 20
@@ -2376,7 +2397,11 @@
           "raise armies",
           "fund the military",
           "military funding",
-          "army"
+          "army",
+          "raise and support an army",
+          "raise and fund an army",
+          "fund armies",
+          "funding the military"
         ],
         "explanation": "Congress raises and supports armies and controls military funding.",
         "basePoints": 40
@@ -2890,7 +2915,8 @@
         "label": "Declare war",
         "aliases": [
           "war",
-          "declaration of war"
+          "declaration of war",
+          "declaring war"
         ],
         "explanation": "Congress could declare war even though it lacked dependable taxing and enforcement power.",
         "basePoints": 60
@@ -2919,7 +2945,11 @@
         "label": "Coin money",
         "aliases": [
           "coinage",
-          "coin"
+          "coin",
+          "coining money",
+          "minting money",
+          "mint coins",
+          "make coins"
         ],
         "explanation": "Congress could coin money.",
         "basePoints": 60
@@ -2980,7 +3010,11 @@
         "label": "Regulate interstate commerce",
         "aliases": [
           "interstate commerce",
-          "commerce power"
+          "commerce power",
+          "trade",
+          "regulating trade",
+          "regulating commerce",
+          "regulating interstate commerce"
         ],
         "explanation": "Congress gained power to address conflicting state trade rules.",
         "basePoints": 60
@@ -3204,7 +3238,17 @@
         "label": "Tax",
         "aliases": [
           "taxation",
-          "taxing"
+          "taxing",
+          "taxes",
+          "raise taxes",
+          "lower taxes",
+          "set taxes",
+          "power to tax",
+          "lay and collect taxes",
+          "collecting taxes",
+          "levying taxes",
+          "tax people",
+          "tax citizens"
         ],
         "explanation": "Both levels collect taxes.",
         "basePoints": 60
@@ -3214,7 +3258,9 @@
         "label": "Borrow money",
         "aliases": [
           "borrowing",
-          "borrow"
+          "borrow",
+          "borrowing money",
+          "borrow funds"
         ],
         "explanation": "Both levels can borrow money.",
         "basePoints": 60
@@ -4074,7 +4120,9 @@
           "veto override",
           "override veto",
           "overriding a veto",
-          "overrule a presidential veto"
+          "overrule a presidential veto",
+          "override presidential veto",
+          "overriding presidential vetoes"
         ],
         "explanation": "Two-thirds of each chamber can override a regular presidential veto.",
         "basePoints": 20

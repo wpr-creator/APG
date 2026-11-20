@@ -1813,7 +1813,7 @@
     {
       "id": "trivia-presidents-before-1800",
       "prompt": "Name a U.S. president who took office before 1820.",
-      "rationale": "Washington and Jefferson are immediate; Adams, Madison and Monroe require broader recall for the birth-date wording.",
+      "rationale": "Washington and Jefferson are immediate; Adams, Madison and Monroe require broader recall among presidents who took office before 1820.",
       "answers": [
         {
           "id": "george-washington",

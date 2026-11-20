@@ -1,0 +1,2818 @@
+{
+  "revision": "20261119-plain-language",
+  "description": "Reviewed everyday equivalents for every current answer label. These are explicit per-answer aliases, not keyword or arbitrary substring matching. Unchanged labels already accept the standard name/abbreviation. Scoring and canonical answer IDs stay unchanged.",
+  "reviewedLabels": [
+    "Legislative branch",
+    "Executive branch",
+    "Judicial branch",
+    "George Washington",
+    "John Adams",
+    "Thomas Jefferson",
+    "James Madison",
+    "James Monroe",
+    "John Quincy Adams",
+    "Andrew Jackson",
+    "Martin Van Buren",
+    "William Henry Harrison",
+    "John Tyler",
+    "James K. Polk",
+    "Zachary Taylor",
+    "Millard Fillmore",
+    "Franklin Pierce",
+    "James Buchanan",
+    "Abraham Lincoln",
+    "Andrew Johnson",
+    "Ulysses S. Grant",
+    "Rutherford B. Hayes",
+    "James A. Garfield",
+    "Chester A. Arthur",
+    "Grover Cleveland",
+    "Benjamin Harrison",
+    "William McKinley",
+    "Theodore Roosevelt",
+    "William Howard Taft",
+    "Woodrow Wilson",
+    "Warren G. Harding",
+    "Calvin Coolidge",
+    "Herbert Hoover",
+    "Franklin D. Roosevelt",
+    "Harry S. Truman",
+    "Dwight D. Eisenhower",
+    "John F. Kennedy",
+    "Lyndon B. Johnson",
+    "Richard Nixon",
+    "Gerald Ford",
+    "Jimmy Carter",
+    "Ronald Reagan",
+    "George H. W. Bush",
+    "Bill Clinton",
+    "George W. Bush",
+    "Barack Obama",
+    "Donald Trump",
+    "Joe Biden",
+    "Freedom of speech",
+    "Freedom of religion",
+    "Freedom of the press",
+    "Peaceful assembly",
+    "Petition the government",
+    "Keep and bear arms",
+    "Protection from forced quartering",
+    "Protection from unreasonable searches and seizures",
+    "Grand-jury indictment",
+    "Protection against double jeopardy",
+    "Protection against self-incrimination",
+    "Due process",
+    "Compensation for property taken for public use",
+    "Speedy trial",
+    "Public trial",
+    "Jury trial",
+    "Notice of criminal charges",
+    "Confront witnesses",
+    "Call defense witnesses",
+    "Assistance of counsel",
+    "Protection against excessive bail",
+    "Protection against excessive fines",
+    "Protection against cruel and unusual punishment",
+    "Protection of rights not listed",
+    "President",
+    "Vice president",
+    "Senator",
+    "Representative",
+    "Governor",
+    "Mayor",
+    "City council member",
+    "School board member",
+    "Sheriff",
+    "District attorney",
+    "Attorney general",
+    "Judge",
+    "Comptroller",
+    "Treasurer",
+    "House of Representatives",
+    "Senate",
+    "Supreme Court",
+    "Congress",
+    "Cabinet",
+    "Federal courts",
+    "Federal departments and agencies",
+    "Executive Office of the President",
+    "National government",
+    "State government",
+    "Local government",
+    "Chief executive",
+    "Commander in chief",
+    "Chief diplomat",
+    "Legislative leader",
+    "Party leader",
+    "Head of state",
+    "Life",
+    "Liberty",
+    "Pursuit of happiness",
+    "Natural Rights",
+    "Social Contract",
+    "Consent of the Governed",
+    "Limited Government",
+    "Popular Sovereignty",
+    "Republicanism",
+    "Equality",
+    "Rule of law",
+    "Participatory Democracy",
+    "Pluralist Democracy",
+    "Elite Democracy",
+    "Veto a bill",
+    "Sign a bill into law",
+    "Lead the executive branch",
+    "Command the armed forces",
+    "Nominate federal judges",
+    "Nominate executive officials",
+    "Negotiate treaties",
+    "Grant federal pardons",
+    "Issue executive orders",
+    "Make executive agreements",
+    "Recommend legislation",
+    "Give the State of the Union",
+    "Receive ambassadors",
+    "Call Congress into special session",
+    "Tax",
+    "Borrow money",
+    "Coin money",
+    "Regulate interstate commerce",
+    "Declare war",
+    "Raise and support armies",
+    "Establish post offices",
+    "Provide and maintain a navy",
+    "Set naturalization rules",
+    "Set bankruptcy laws",
+    "Protect inventions and writings",
+    "Establish lower federal courts",
+    "Set weights and measures",
+    "Punish counterfeiting",
+    "Make necessary and proper laws",
+    "Regulate foreign commerce",
+    "Regulate commerce with Indian tribes",
+    "Punish piracy and offenses on the high seas",
+    "Punish offenses against the law of nations",
+    "Grant letters of marque and reprisal",
+    "Make rules concerning captures",
+    "Make rules for the armed forces",
+    "Organize and call forth the militia",
+    "Govern the federal district",
+    "Spend for the general welfare",
+    "White House Staff",
+    "Declaration of Independence",
+    "Articles of Confederation",
+    "Constitution",
+    "Brutus No. 1",
+    "Bill of Rights",
+    "Federalist No. 10",
+    "Federalist No. 51",
+    "Federalist No. 70",
+    "Federalist No. 39",
+    "Gettysburg Address",
+    "Federalist Papers",
+    "Delegated powers",
+    "Reserved powers",
+    "Concurrent powers",
+    "Dual Federalism",
+    "Cooperative Federalism",
+    "Fiscal Federalism",
+    "New Federalism",
+    "Standing Committee",
+    "Conference Committee",
+    "House Rules Committee",
+    "Committee of the Whole",
+    "Select committee",
+    "Joint committee",
+    "Speaker of the House",
+    "House Majority Leader",
+    "Senate Majority Leader",
+    "Whip",
+    "President Pro Tempore",
+    "House Minority Leader",
+    "Senate Minority Leader",
+    "President of the Senate",
+    "Regular veto",
+    "Pocket veto",
+    "Treaty",
+    "Executive agreement",
+    "Executive order",
+    "Signing statement",
+    "Bargaining and persuasion",
+    "Bully pulpit",
+    "Override a veto",
+    "Power of the Purse",
+    "Oversight",
+    "Impeachment",
+    "Senate Confirmation",
+    "Consent to treaties",
+    "Confirm appointments",
+    "Try impeachments",
+    "Originate revenue bills",
+    "Choose the president in a contingent election",
+    "Apportionment",
+    "Redistricting",
+    "Malapportionment",
+    "Gerrymandering",
+    "Packing",
+    "Cracking",
+    "Census",
+    "Majority minority district",
+    "Baker v. Carr",
+    "Shaw v. Reno",
+    "McCulloch v. Maryland",
+    "United States v. Lopez",
+    "Adams",
+    "Johnson",
+    "Harrison",
+    "Roosevelt",
+    "Bush",
+    "Alexander Hamilton",
+    "Benjamin Franklin",
+    "Department of State",
+    "Department of the Treasury",
+    "Department of Defense",
+    "Department of Justice",
+    "Department of the Interior",
+    "Department of Agriculture",
+    "Department of Commerce",
+    "Department of Labor",
+    "Department of Health and Human Services",
+    "Department of Housing and Urban Development",
+    "Department of Transportation",
+    "Department of Energy",
+    "Department of Education",
+    "Department of Veterans Affairs",
+    "Department of Homeland Security",
+    "U.S. senator",
+    "U.S. representative",
+    "Form a more perfect union",
+    "Establish justice",
+    "Insure domestic tranquility",
+    "Provide for the common defense",
+    "Promote the general welfare",
+    "Secure the blessings of liberty",
+    "John Jay",
+    "Alabama",
+    "Alaska",
+    "Arizona",
+    "Arkansas",
+    "California",
+    "Colorado",
+    "Connecticut",
+    "Idaho",
+    "Illinois",
+    "Indiana",
+    "Iowa",
+    "Maine",
+    "Maryland",
+    "Massachusetts",
+    "Michigan",
+    "Minnesota",
+    "Mississippi",
+    "Missouri",
+    "Montana",
+    "Nebraska",
+    "Nevada",
+    "New Hampshire",
+    "New Jersey",
+    "New Mexico",
+    "New York",
+    "North Carolina",
+    "North Dakota",
+    "Ohio",
+    "Oklahoma",
+    "Oregon",
+    "Washington",
+    "West Virginia",
+    "Wisconsin",
+    "Wyoming",
+    "Going public",
+    "Agenda setting",
+    "Pass laws",
+    "County executive",
+    "City manager",
+    "Village president",
+    "Town supervisor",
+    "State senator",
+    "State representative",
+    "County commissioner",
+    "Town meeting member",
+    "Equal Protection Clause",
+    "Fourteenth Amendment",
+    "Justiciability",
+    "Political question doctrine",
+    "One person one vote",
+    "Federal court jurisdiction",
+    "Judicial review",
+    "Necessary and Proper Clause",
+    "Implied powers",
+    "Supremacy Clause",
+    "Federalism",
+    "National bank",
+    "Intergovernmental tax immunity",
+    "Enumerated powers",
+    "Limited government",
+    "Broad constitutional interpretation",
+    "State sovereignty",
+    "John Marshall",
+    "Commerce Clause",
+    "Full Faith and Credit Clause",
+    "Privileges and Immunities Clause",
+    "Due Process Clause",
+    "Establishment Clause",
+    "Free Exercise Clause",
+    "Take Care Clause",
+    "Appointments Clause",
+    "Treaty Clause",
+    "Vesting Clause",
+    "Origination Clause",
+    "Presentment Clause",
+    "Speech or Debate Clause",
+    "Contract Clause",
+    "Ex Post Facto Clauses",
+    "Bill of Attainder Clauses",
+    "Emoluments Clauses",
+    "Takings Clause",
+    "Suspension Clause",
+    "No Religious Test Clause",
+    "Guarantee Clause",
+    "Spending Clause",
+    "Extradition Clause",
+    "Fugitive Slave Clause",
+    "Three Fifths Clause",
+    "Importation Clause",
+    "Territory Clause",
+    "New States Clause",
+    "Commander in Chief Clause",
+    "Pardon Clause",
+    "Electors Clause",
+    "Elections Clause",
+    "Qualifications Clauses",
+    "Senate impeachment trials",
+    "President pro tempore",
+    "House two year term",
+    "Senate six year term",
+    "Minimum House age 25",
+    "Minimum Senate age 30",
+    "House citizenship requirement",
+    "Senate citizenship requirement",
+    "State residency requirement",
+    "Census and apportionment",
+    "Congressional elections",
+    "Revenue bills originate in the House",
+    "Presidential veto",
+    "Veto override",
+    "Bicameral passage",
+    "Quorum",
+    "Congressional rules",
+    "Expulsion of members",
+    "Congressional journals",
+    "Appropriations",
+    "Habeas corpus",
+    "No bills of attainder",
+    "No ex post facto laws",
+    "No titles of nobility",
+    "Foreign Emoluments Clause",
+    "Limits on state powers",
+    "Four year term",
+    "Presidential electors",
+    "Presidential oath",
+    "Natural born citizen requirement",
+    "Minimum presidential age 35",
+    "Fourteen year residency requirement",
+    "Presidential compensation",
+    "Written opinions from department heads",
+    "Federal pardons and reprieves",
+    "Treaty making",
+    "Federal appointments",
+    "Recess appointments",
+    "State of the Union",
+    "Convene Congress",
+    "Adjourn Congress in a specified disagreement",
+    "Faithfully execute the laws",
+    "Commission federal officers",
+    "Removal through impeachment",
+    "Presidential succession",
+    "Federal judicial power",
+    "Lower federal courts",
+    "Good behavior tenure",
+    "Protected judicial compensation",
+    "Cases and controversies",
+    "Constitutional cases",
+    "Federal law cases",
+    "Treaty cases",
+    "Ambassador cases",
+    "Admiralty and maritime jurisdiction",
+    "United States as a party",
+    "Disputes between states",
+    "Diversity jurisdiction",
+    "State and foreign party controversies",
+    "Land grants from different states",
+    "Original jurisdiction",
+    "Appellate jurisdiction",
+    "Exceptions and Regulations Clause",
+    "Criminal jury trials",
+    "Place of criminal trial",
+    "Treason",
+    "Two witnesses for treason",
+    "Confession in open court",
+    "Limits on punishment for treason"
+  ],
+  "aliases": {
+    "Legislative branch": [
+      "legislation",
+      "lawmaking",
+      "law making",
+      "law making branch",
+      "legislative power"
+    ],
+    "Executive branch": [
+      "executive power",
+      "law enforcing branch",
+      "law enforcement branch",
+      "enforces the laws"
+    ],
+    "Judicial branch": [
+      "judges",
+      "judicial power",
+      "interprets laws",
+      "interpreting laws",
+      "the courts"
+    ],
+    "George H. W. Bush": [
+      "Bush senior",
+      "Bush Sr",
+      "George Bush senior",
+      "George Bush Sr",
+      "George Herbert Bush",
+      "GHW Bush",
+      "G H W Bush"
+    ],
+    "George W. Bush": [
+      "Bush junior",
+      "Bush Jr",
+      "George Bush junior",
+      "George Bush Jr",
+      "GW Bush",
+      "G W Bush"
+    ],
+    "William Howard Taft": [
+      "William Taft"
+    ],
+    "Dwight D. Eisenhower": [
+      "Dwight David Eisenhower"
+    ],
+    "Theodore Roosevelt": [
+      "Theodore"
+    ],
+    "Joe Biden": [
+      "Joe R Biden",
+      "Joseph Robinette Biden Jr",
+      "Joseph Biden Jr"
+    ],
+    "Freedom of speech": [
+      "right to free speech",
+      "freedom to speak",
+      "free expression"
+    ],
+    "Freedom of religion": [
+      "right to religious freedom",
+      "freedom of worship",
+      "freedom to practice religion",
+      "practice your religion",
+      "religious belief"
+    ],
+    "Freedom of the press": [
+      "freedom of press",
+      "freedom of media",
+      "press freedom"
+    ],
+    "Peaceful assembly": [
+      "freedom to assemble",
+      "right to assemble",
+      "peaceful protests",
+      "freedom to protest",
+      "peaceful demonstrations"
+    ],
+    "Petition the government": [
+      "petitions",
+      "petition government",
+      "right to petition the government",
+      "petitioning the government"
+    ],
+    "Keep and bear arms": [
+      "right to own guns",
+      "gun ownership",
+      "own firearms",
+      "right to keep and bear arms",
+      "right to bear weapons"
+    ],
+    "Protection from forced quartering": [
+      "no forced housing of soldiers",
+      "no forced housing of troops",
+      "no soldiers living in your home",
+      "no quartering of soldiers",
+      "no quartering of troops"
+    ],
+    "Protection from unreasonable searches and seizures": [
+      "unreasonable search",
+      "unreasonable searches and seizures",
+      "protection against unreasonable search and seizure",
+      "protection from unreasonable search and seizure",
+      "freedom from unreasonable searches",
+      "no unreasonable searches",
+      "no unreasonable search and seizure"
+    ],
+    "Grand-jury indictment": [
+      "right to a grand jury",
+      "grand jury charges",
+      "grand jury indictments"
+    ],
+    "Protection against double jeopardy": [
+      "cannot be tried twice",
+      "cant be tried twice",
+      "cannot be tried twice for the same offense",
+      "no double jeopardy for the same crime",
+      "no trial twice for the same crime"
+    ],
+    "Protection against self-incrimination": [
+      "right against self incrimination",
+      "not incriminate yourself",
+      "cannot be forced to testify against yourself",
+      "not testify against yourself",
+      "right to silence",
+      "pleading the fifth",
+      "take the fifth",
+      "fifth amendment right to remain silent"
+    ],
+    "Due process": [
+      "right to due process",
+      "procedural due process"
+    ],
+    "Compensation for property taken for public use": [
+      "payment for property taken by government",
+      "fair compensation for taken property",
+      "payment for eminent domain",
+      "government must pay for property it takes"
+    ],
+    "Speedy trial": [
+      "right to a speedy trial",
+      "right to speedy trial"
+    ],
+    "Public trial": [
+      "right to a public trial",
+      "right to public trial"
+    ],
+    "Jury trial": [
+      "right to trial by jury",
+      "right to a jury",
+      "right to a jury trial",
+      "impartial jury trial"
+    ],
+    "Notice of criminal charges": [
+      "right to know the charges",
+      "know your charges",
+      "be informed of charges",
+      "informed of the accusation"
+    ],
+    "Confront witnesses": [
+      "right to confront witnesses",
+      "confront your accuser",
+      "face witnesses",
+      "right to cross examine witnesses"
+    ],
+    "Call defense witnesses": [
+      "right to call witnesses",
+      "right to compulsory process",
+      "compel witnesses to testify",
+      "call witnesses in your defense"
+    ],
+    "Assistance of counsel": [
+      "right to an attorney",
+      "right to legal counsel",
+      "legal representation",
+      "assistance of an attorney",
+      "access to a lawyer"
+    ],
+    "Protection against excessive bail": [
+      "no excessive bail amounts",
+      "protection from excessive bail"
+    ],
+    "Protection against excessive fines": [
+      "no excessive fines imposed",
+      "protection from excessive fines"
+    ],
+    "Protection against cruel and unusual punishment": [
+      "no cruel or unusual punishment",
+      "freedom from cruel and unusual punishment",
+      "protection from cruel and unusual punishment"
+    ],
+    "Protection of rights not listed": [
+      "rights retained by the people",
+      "unenumerated individual rights",
+      "rights not enumerated"
+    ],
+    "President": [
+      "US president",
+      "United States president",
+      "president of the US",
+      "federal president",
+      "presidency"
+    ],
+    "Vice president": [
+      "vice presidency",
+      "vice presidents",
+      "US vice president",
+      "United States vice president"
+    ],
+    "Senator": [
+      "senators",
+      "senate member",
+      "senators in Congress"
+    ],
+    "Representative": [
+      "representatives",
+      "congress member",
+      "congress members",
+      "members of Congress",
+      "House representatives"
+    ],
+    "Governor": [
+      "governors",
+      "state governor",
+      "governorship"
+    ],
+    "Mayor": [
+      "mayors",
+      "city mayor",
+      "town mayor",
+      "mayorship",
+      "city mayors",
+      "town mayors"
+    ],
+    "City council member": [
+      "city council members",
+      "council members",
+      "councilors",
+      "councillors",
+      "city councilman",
+      "city councilwoman"
+    ],
+    "School board member": [
+      "school board members",
+      "member of the school board",
+      "school trustee",
+      "school board trustee"
+    ],
+    "Sheriff": [
+      "sheriffs",
+      "county sheriff"
+    ],
+    "District attorney": [
+      "district attorneys",
+      "county prosecutor",
+      "state prosecutor"
+    ],
+    "Attorney general": [
+      "attorneys general",
+      "attorney generals"
+    ],
+    "Comptroller": [
+      "comptrollers",
+      "controllers"
+    ],
+    "Treasurer": [
+      "treasurers"
+    ],
+    "House of Representatives": [
+      "United States House of Representatives",
+      "US House of Representatives",
+      "federal House of Representatives",
+      "House of Reps"
+    ],
+    "Senate": [
+      "United States Senate",
+      "federal Senate"
+    ],
+    "Supreme Court": [
+      "United States Supreme Court",
+      "Supreme Court of the United States",
+      "Supreme Court of the US"
+    ],
+    "Congress": [
+      "US Congress",
+      "United States Congress",
+      "Congress of the United States",
+      "federal legislature"
+    ],
+    "Cabinet": [
+      "presidential cabinet",
+      "the presidents cabinet",
+      "cabinet members",
+      "cabinet secretaries",
+      "department secretaries"
+    ],
+    "Federal courts": [
+      "federal court",
+      "US courts",
+      "United States courts",
+      "national courts"
+    ],
+    "Federal departments and agencies": [
+      "departments",
+      "agencies",
+      "executive departments",
+      "government agencies",
+      "federal bureaucracy",
+      "bureaucracy"
+    ],
+    "Executive Office of the President": [
+      "presidents executive office",
+      "executive office of president"
+    ],
+    "National government": [
+      "national level",
+      "federal level",
+      "national level of government",
+      "federal level of government",
+      "federal govt",
+      "national govt"
+    ],
+    "State government": [
+      "state level",
+      "state governments",
+      "state level of government",
+      "state govt"
+    ],
+    "Local government": [
+      "local level",
+      "city government",
+      "county government",
+      "municipal government",
+      "local level of government",
+      "local govt",
+      "municipal govt"
+    ],
+    "Chief executive": [
+      "head of the executive branch",
+      "head of executive branch",
+      "executive leader",
+      "leader of executive branch",
+      "chief administrator"
+    ],
+    "Commander in chief": [
+      "commander of the military",
+      "commander of military",
+      "head of the armed forces",
+      "head of the military",
+      "military commander"
+    ],
+    "Chief diplomat": [
+      "head diplomat",
+      "conduct foreign policy",
+      "conducting foreign policy",
+      "conduct foreign relations",
+      "diplomatic leader",
+      "chief of diplomacy"
+    ],
+    "Legislative leader": [
+      "legislative leadership",
+      "presidential legislative leader",
+      "propose legislation",
+      "legislative agenda"
+    ],
+    "Party leader": [
+      "leader of political party",
+      "political party leader",
+      "leader of the party",
+      "head of their party"
+    ],
+    "Head of state": [
+      "symbolic head of state",
+      "ceremonial head of state",
+      "national representative"
+    ],
+    "Life": [
+      "right to life"
+    ],
+    "Liberty": [
+      "right to liberty",
+      "personal freedom"
+    ],
+    "Pursuit of happiness": [
+      "right to pursue happiness",
+      "pursue happiness",
+      "pursuing happiness"
+    ],
+    "Natural Rights": [
+      "natural rights theory",
+      "unalienable rights",
+      "inalienable rights",
+      "inborn rights",
+      "born with rights",
+      "rights inherent to people"
+    ],
+    "Social Contract": [
+      "social contract theory",
+      "consent to form government",
+      "agreement to create government",
+      "citizens give consent to government"
+    ],
+    "Consent of the Governed": [
+      "consent of people",
+      "consent of the people",
+      "government by consent",
+      "peoples consent",
+      "consent to be governed"
+    ],
+    "Limited Government": [
+      "limits on government",
+      "limited governmental power",
+      "limited power of government",
+      "constitutional limits on government"
+    ],
+    "Popular Sovereignty": [
+      "power of the people",
+      "people hold the power",
+      "people have the power",
+      "people rule",
+      "sovereignty of the people",
+      "power belongs to the people"
+    ],
+    "Republicanism": [
+      "a republic",
+      "representative republic",
+      "democratic republic",
+      "representative system",
+      "people elect representatives"
+    ],
+    "Equality": [
+      "equality before the law",
+      "equal treatment under law",
+      "equality under the law"
+    ],
+    "Rule of law": [
+      "everyone must follow the law",
+      "government follows the law",
+      "everyone is subject to the law",
+      "law applies to everyone"
+    ],
+    "Participatory Democracy": [
+      "participatory model",
+      "participation democracy",
+      "participatory democratic model",
+      "widespread citizen participation"
+    ],
+    "Pluralist Democracy": [
+      "pluralistic democracy",
+      "pluralistic",
+      "pluralist model",
+      "pluralism model",
+      "interest group democracy",
+      "group competition"
+    ],
+    "Elite Democracy": [
+      "elitist democracy",
+      "elitist",
+      "elitism",
+      "elite model",
+      "elite theory of democracy",
+      "elite democratic model"
+    ],
+    "Veto a bill": [
+      "veto bills",
+      "vetoing bills",
+      "vetoing a bill",
+      "vetoing",
+      "veto power",
+      "veto laws",
+      "reject legislation",
+      "reject bills",
+      "reject laws",
+      "refuse to sign a bill and return it"
+    ],
+    "Sign a bill into law": [
+      "sign a bill",
+      "signing bills",
+      "sign bills into law",
+      "signing a bill into law",
+      "signing legislation",
+      "sign a law",
+      "signing laws",
+      "approve legislation",
+      "approve bills"
+    ],
+    "Lead the executive branch": [
+      "enforcing laws",
+      "enforce the law",
+      "enforce the laws",
+      "implement laws",
+      "implementing laws",
+      "executing laws",
+      "execute laws",
+      "carry out the laws",
+      "law enforcement"
+    ],
+    "Command the armed forces": [
+      "command the military",
+      "commanding the military",
+      "lead armed forces",
+      "lead the armed forces",
+      "lead military",
+      "direct the military",
+      "commander of the military",
+      "head of the military",
+      "military command"
+    ],
+    "Nominate federal judges": [
+      "appoint justices",
+      "appointing judges",
+      "appointing justices",
+      "nominating judges",
+      "nominate justices",
+      "nominate Supreme Court justices",
+      "appoint Supreme Court judges",
+      "judicial appointments",
+      "judicial nominations",
+      "pick Supreme Court justices",
+      "appointments",
+      "appointment power",
+      "power of appointment",
+      "nominations",
+      "nominating officials"
+    ],
+    "Nominate executive officials": [
+      "cabinet appointments",
+      "cabinet nominations",
+      "appoint the cabinet",
+      "appoint a cabinet",
+      "appoint cabinet",
+      "choose cabinet members",
+      "appointing cabinet members",
+      "nominating cabinet members",
+      "executive appointments",
+      "appoint federal officials",
+      "appointments",
+      "appointment power",
+      "power of appointment",
+      "nominations",
+      "nominating officials"
+    ],
+    "Negotiate treaties": [
+      "negotiate international treaties",
+      "making treaties",
+      "make a treaty",
+      "negotiating treaties",
+      "treaty negotiation",
+      "sign treaties",
+      "treaties",
+      "treaty ratification",
+      "ratification of treaties",
+      "treaty power"
+    ],
+    "Grant federal pardons": [
+      "pardon criminals",
+      "pardon federal crimes",
+      "pardoning",
+      "pardoning criminals",
+      "grant a pardon",
+      "give pardons",
+      "federal pardons",
+      "issue a pardon",
+      "pardoning federal offenses",
+      "pardon power",
+      "pardoning power",
+      "power to pardon"
+    ],
+    "Issue executive orders": [
+      "issue an executive order",
+      "issuing executive orders",
+      "executive order power",
+      "make executive orders",
+      "sign executive orders"
+    ],
+    "Make executive agreements": [
+      "making executive agreements",
+      "sign executive agreements",
+      "negotiate executive agreements",
+      "executive agreements with other countries"
+    ],
+    "Recommend legislation": [
+      "recommend laws",
+      "recommending legislation",
+      "recommending laws",
+      "proposing legislation",
+      "suggest laws",
+      "suggest legislation"
+    ],
+    "Give the State of the Union": [
+      "deliver the State of the Union",
+      "give State of the Union address",
+      "deliver annual address to Congress",
+      "addressing Congress"
+    ],
+    "Receive ambassadors": [
+      "receiving ambassadors",
+      "accept ambassadors",
+      "receive foreign ambassadors",
+      "receiving foreign diplomats"
+    ],
+    "Call Congress into special session": [
+      "call Congress into session",
+      "call a special session of Congress",
+      "special session of Congress",
+      "convene a special session",
+      "calling Congress into session"
+    ],
+    "Tax": [
+      "taxes",
+      "raise taxes",
+      "lower taxes",
+      "set taxes",
+      "power to tax",
+      "lay and collect taxes",
+      "collecting taxes",
+      "levying taxes",
+      "tax people",
+      "tax citizens",
+      "impose taxes",
+      "imposing taxes",
+      "levy a tax",
+      "collect tax revenue",
+      "taxing people",
+      "taxing citizens",
+      "tax power",
+      "taxation power",
+      "power of taxation"
+    ],
+    "Borrow money": [
+      "borrowing money",
+      "borrow funds",
+      "borrowing funds",
+      "government borrowing",
+      "borrow on credit"
+    ],
+    "Coin money": [
+      "coining money",
+      "minting money",
+      "mint coins",
+      "make coins",
+      "print money",
+      "printing money",
+      "issue currency",
+      "regulate currency",
+      "create currency",
+      "create money"
+    ],
+    "Regulate interstate commerce": [
+      "trade",
+      "regulating trade",
+      "regulating commerce",
+      "regulating interstate commerce",
+      "trade between states",
+      "commerce between states",
+      "regulate trade between states",
+      "interstate trade"
+    ],
+    "Declare war": [
+      "declaring war",
+      "war powers",
+      "declare a war",
+      "declarations of war"
+    ],
+    "Raise and support armies": [
+      "raise and support an army",
+      "raise and fund an army",
+      "fund armies",
+      "funding the military",
+      "support armies",
+      "raising armies",
+      "create an army",
+      "create armies",
+      "raise a military",
+      "fund the army",
+      "military budget"
+    ],
+    "Establish post offices": [
+      "establish a post office",
+      "create post offices",
+      "create a postal service",
+      "set up post offices",
+      "establish postal service",
+      "US postal service",
+      "USPS",
+      "postal roads"
+    ],
+    "Provide and maintain a navy": [
+      "provide a navy",
+      "maintain a navy",
+      "fund the navy",
+      "naval forces",
+      "naval funding",
+      "build a navy"
+    ],
+    "Set naturalization rules": [
+      "naturalization rules",
+      "naturalization laws",
+      "immigration and naturalization",
+      "citizenship laws",
+      "regulate naturalization",
+      "make naturalization laws"
+    ],
+    "Set bankruptcy laws": [
+      "bankruptcy law",
+      "regulate bankruptcy",
+      "make bankruptcy laws",
+      "bankruptcies"
+    ],
+    "Protect inventions and writings": [
+      "issue patents",
+      "grant patents",
+      "grant copyrights",
+      "patent laws",
+      "copyright laws",
+      "patents and copyrights",
+      "intellectual property protection"
+    ],
+    "Establish lower federal courts": [
+      "establish federal courts",
+      "create federal courts",
+      "establish inferior courts",
+      "create lower federal courts",
+      "set up federal courts",
+      "create district courts"
+    ],
+    "Set weights and measures": [
+      "standards of weights and measures",
+      "standardize weights and measures",
+      "regulate weights and measures",
+      "fix standards of weights and measures"
+    ],
+    "Punish counterfeiting": [
+      "punish counterfeit money",
+      "punish counterfeiting money",
+      "counterfeit money laws",
+      "counterfeit currency laws"
+    ],
+    "Make necessary and proper laws": [
+      "necessary and proper laws",
+      "necessary and proper legislation",
+      "exercise implied powers",
+      "implied powers",
+      "elastic powers"
+    ],
+    "Regulate foreign commerce": [
+      "foreign trade",
+      "international trade",
+      "regulate international trade",
+      "trade with foreign countries",
+      "regulating foreign commerce"
+    ],
+    "Regulate commerce with Indian tribes": [
+      "trade with tribes",
+      "trade with Native American tribes",
+      "regulate trade with tribes",
+      "commerce with Indian tribes",
+      "regulate tribal commerce"
+    ],
+    "Punish piracy and offenses on the high seas": [
+      "punish pirates",
+      "piracy laws",
+      "define and punish piracy",
+      "crimes on the high seas",
+      "punish crimes at sea"
+    ],
+    "Punish offenses against the law of nations": [
+      "punish violations of international law",
+      "punish offenses against international law",
+      "violations of the law of nations"
+    ],
+    "Grant letters of marque and reprisal": [
+      "letter of marque",
+      "letters of reprisal",
+      "authorize privateers",
+      "privateering",
+      "authorize privateering"
+    ],
+    "Make rules concerning captures": [
+      "rules concerning captures",
+      "rules about captures",
+      "regulate wartime captures",
+      "capture rules"
+    ],
+    "Make rules for the armed forces": [
+      "rules for the military",
+      "rules for armed forces",
+      "military regulations",
+      "military discipline"
+    ],
+    "Organize and call forth the militia": [
+      "call up the militia",
+      "organize the militia",
+      "call out the militia",
+      "fund the militia",
+      "regulate the militia"
+    ],
+    "Govern the federal district": [
+      "govern the District of Columbia",
+      "govern District of Columbia",
+      "govern D.C.",
+      "legislate for Washington DC",
+      "legislate for the District of Columbia"
+    ],
+    "Spend for the general welfare": [
+      "government spending",
+      "spend for general welfare",
+      "spend for common defense",
+      "pay government debts",
+      "pay national debts",
+      "spending for general welfare"
+    ],
+    "White House Staff": [
+      "White House staff members",
+      "presidential staff",
+      "presidents staff",
+      "White House aides",
+      "White House advisors",
+      "White House advisers"
+    ],
+    "Declaration of Independence": [
+      "US Declaration of Independence",
+      "American Declaration of Independence",
+      "Declaration of Independence 1776"
+    ],
+    "Articles of Confederation": [
+      "Articles of Confederation and Perpetual Union",
+      "Confederation Articles"
+    ],
+    "Constitution": [
+      "Constitution of the United States",
+      "Constitution of the US",
+      "American Constitution",
+      "federal Constitution"
+    ],
+    "Brutus No. 1": [
+      "Brutus number 1",
+      "Brutus essay 1",
+      "Brutus no one"
+    ],
+    "Bill of Rights": [
+      "first 10 amendments",
+      "ten amendments",
+      "10 amendments",
+      "first ten constitutional amendments"
+    ],
+    "Federalist No. 10": [
+      "Federalist number 10",
+      "Federalist essay 10",
+      "Federalist Paper No 10",
+      "Federalist ten",
+      "Federalist no ten"
+    ],
+    "Federalist No. 51": [
+      "Federalist number 51",
+      "Federalist essay 51",
+      "Federalist Paper No 51",
+      "Federalist fifty one",
+      "Federalist no fifty one"
+    ],
+    "Federalist No. 70": [
+      "Federalist number 70",
+      "Federalist essay 70",
+      "Federalist Paper No 70",
+      "Federalist seventy",
+      "Federalist no seventy"
+    ],
+    "Federalist No. 39": [
+      "Federalist number 39",
+      "Federalist essay 39",
+      "Federalist Paper No 39",
+      "Federalist thirty nine"
+    ],
+    "Gettysburg Address": [
+      "Lincolns Gettysburg Address"
+    ],
+    "Federalist Papers": [
+      "Federalist essays collection",
+      "Federalist writings",
+      "the Federalist Papers"
+    ],
+    "Delegated powers": [
+      "delegated power",
+      "expressed power",
+      "express power",
+      "national powers",
+      "powers of the federal government"
+    ],
+    "Reserved powers": [
+      "reserved power",
+      "state powers",
+      "powers reserved to the states",
+      "powers belonging to states"
+    ],
+    "Concurrent powers": [
+      "concurrent power",
+      "shared power",
+      "powers shared by federal and state governments",
+      "shared federal and state powers"
+    ],
+    "Dual Federalism": [
+      "dual federalism model",
+      "layer cake model"
+    ],
+    "Cooperative Federalism": [
+      "cooperative federalism model",
+      "cooperation between state and federal governments",
+      "marble cake model"
+    ],
+    "Fiscal Federalism": [
+      "federal funding to states",
+      "federal grants to states",
+      "fiscal federalism model",
+      "grants in aid"
+    ],
+    "New Federalism": [
+      "devolution of power",
+      "returning power to states",
+      "return power to the states",
+      "new federalism model"
+    ],
+    "Standing Committee": [
+      "standing committees",
+      "permanent committee",
+      "permanent committees"
+    ],
+    "Conference Committee": [
+      "conference committees",
+      "conference between House and Senate"
+    ],
+    "House Rules Committee": [
+      "rules",
+      "House rules committees",
+      "Rules Committee in the House"
+    ],
+    "Committee of the Whole": [
+      "committee of whole",
+      "House Committee of the Whole",
+      "committee of the whole House"
+    ],
+    "Select committee": [
+      "select committees",
+      "special committees"
+    ],
+    "Joint committee": [
+      "joint committees"
+    ],
+    "Speaker of the House": [
+      "House speaker",
+      "speaker of House",
+      "speaker of the House of Representatives"
+    ],
+    "House Majority Leader": [
+      "majority leader of the House",
+      "majority leaders",
+      "House majority leadership"
+    ],
+    "Senate Majority Leader": [
+      "majority leader of the Senate",
+      "majority leaders",
+      "Senate majority leadership"
+    ],
+    "Whip": [
+      "whips",
+      "party whips",
+      "majority whips",
+      "minority whips"
+    ],
+    "President Pro Tempore": [
+      "Senate president pro tempore",
+      "president protempore",
+      "president pro temp"
+    ],
+    "House Minority Leader": [
+      "minority leaders",
+      "House minority leadership"
+    ],
+    "Senate Minority Leader": [
+      "minority leaders",
+      "Senate minority leadership"
+    ],
+    "President of the Senate": [
+      "Senate president",
+      "presiding officer of the Senate",
+      "vice president presides over Senate"
+    ],
+    "Regular veto": [
+      "veto power",
+      "vetoing",
+      "vetoing bills",
+      "reject bills",
+      "reject legislation",
+      "vetoing a bill",
+      "veto legislation"
+    ],
+    "Pocket veto": [
+      "pocket vetoes",
+      "pocket vetoing",
+      "pocket vetoing a bill"
+    ],
+    "Treaty": [
+      "international treaty",
+      "international treaties",
+      "treaty making",
+      "treatymaking",
+      "treaty negotiation",
+      "negotiating treaties",
+      "treaty ratification",
+      "ratification of treaties",
+      "treaty power"
+    ],
+    "Executive agreement": [
+      "executive agreements",
+      "make executive agreements",
+      "making executive agreements",
+      "sign executive agreements"
+    ],
+    "Executive order": [
+      "executive orders",
+      "issue executive orders",
+      "issuing executive orders",
+      "sign executive orders",
+      "executive order power"
+    ],
+    "Signing statement": [
+      "signing statements",
+      "presidential signing statement",
+      "presidential signing statements",
+      "issue signing statements"
+    ],
+    "Bargaining and persuasion": [
+      "bargain and persuade",
+      "persuade Congress",
+      "persuasion and bargaining",
+      "bargaining with Congress",
+      "negotiating with Congress",
+      "negotiation",
+      "persuading lawmakers"
+    ],
+    "Bully pulpit": [
+      "presidential bully pulpit",
+      "use the bully pulpit",
+      "using the bully pulpit"
+    ],
+    "Override a veto": [
+      "overriding a veto",
+      "override presidential veto",
+      "overriding presidential vetoes",
+      "overriding vetoes",
+      "overriding veto",
+      "veto overrides",
+      "override the presidents veto",
+      "overrule a veto"
+    ],
+    "Power of the Purse": [
+      "power of purse",
+      "budget",
+      "budgeting",
+      "control the budget",
+      "budgetary power",
+      "control spending",
+      "control federal spending",
+      "approve funding",
+      "appropriation of funds",
+      "withholding funding",
+      "control of money"
+    ],
+    "Oversight": [
+      "oversight hearings",
+      "hearings",
+      "investigation",
+      "investigating",
+      "congressional oversight",
+      "hold hearings",
+      "conduct hearings",
+      "investigate the president",
+      "investigate executive agencies",
+      "oversee the executive branch"
+    ],
+    "Impeachment": [
+      "impeaching",
+      "impeach president",
+      "impeaching the president",
+      "impeach federal officials",
+      "impeaching officials",
+      "bring impeachment charges",
+      "articles of impeachment",
+      "bring charges against the president"
+    ],
+    "Senate Confirmation": [
+      "confirm appointments",
+      "confirming appointments",
+      "confirm judges",
+      "confirm cabinet members",
+      "confirming judges",
+      "confirming nominees",
+      "approve nominees",
+      "approve appointments",
+      "approving appointments",
+      "approve judges",
+      "approve cabinet members",
+      "Senate confirmations",
+      "confirmations",
+      "approval of appointments"
+    ],
+    "Consent to treaties": [
+      "treaties",
+      "treaty",
+      "approve treaties",
+      "consent to a treaty",
+      "consenting to treaties",
+      "ratify treaties",
+      "ratifying treaties",
+      "ratification of treaties",
+      "treaty ratification",
+      "approve international treaties",
+      "ratification",
+      "consent and ratification"
+    ],
+    "Confirm appointments": [
+      "confirming appointments",
+      "confirm judges",
+      "confirm cabinet members",
+      "confirming judges",
+      "confirming nominees",
+      "approve nominees",
+      "approving appointments",
+      "approve judges",
+      "approve cabinet members",
+      "Senate confirmation",
+      "Senate confirmations",
+      "confirmations",
+      "approval of appointments"
+    ],
+    "Try impeachments": [
+      "try impeached officials",
+      "try an impeachment",
+      "trial of impeachment",
+      "trials of impeachment",
+      "impeachment trials",
+      "convict and remove impeached officials",
+      "remove impeached officials",
+      "convict an impeached president",
+      "remove an impeached president",
+      "Senate impeachment trials"
+    ],
+    "Originate revenue bills": [
+      "start tax bills",
+      "introduce revenue bills",
+      "originate tax bills",
+      "revenue bill origination",
+      "initiate tax bills"
+    ],
+    "Choose the president in a contingent election": [
+      "elect president",
+      "choose the president if no electoral majority",
+      "choose the president when no one wins the Electoral College",
+      "contingent presidential election"
+    ],
+    "Apportionment": [
+      "allocate House seats",
+      "distribution of House seats",
+      "allocation of seats",
+      "apportionment of House seats"
+    ],
+    "Redistricting": [
+      "redistrict",
+      "redraw districts",
+      "redrawing districts",
+      "drawing districts",
+      "draw district lines",
+      "redraw voting districts"
+    ],
+    "Malapportionment": [
+      "unequal population districts",
+      "unequal populations",
+      "unequal sized districts",
+      "unequally populated districts"
+    ],
+    "Gerrymandering": [
+      "gerrymander",
+      "gerrymandered districts",
+      "partisan gerrymandering",
+      "racial gerrymandering",
+      "manipulating districts",
+      "manipulate district boundaries"
+    ],
+    "Packing": [
+      "concentrating voters",
+      "concentrate voters in one district",
+      "pack a district"
+    ],
+    "Cracking": [
+      "splitting voters among districts",
+      "spreading voters across districts",
+      "split voters across districts",
+      "crack a district"
+    ],
+    "Census": [
+      "counting the population",
+      "population count",
+      "count people",
+      "count the population"
+    ],
+    "Majority minority district": [
+      "majority minority",
+      "minority majority district",
+      "minority majority districts"
+    ],
+    "Baker v. Carr": [
+      "Baker vs Carr",
+      "Baker versus Carr"
+    ],
+    "Shaw v. Reno": [
+      "Shaw vs Reno",
+      "Shaw versus Reno"
+    ],
+    "McCulloch v. Maryland": [
+      "McCulloch vs Maryland",
+      "McCulloch versus Maryland",
+      "McCulloch v Maryland"
+    ],
+    "United States v. Lopez": [
+      "US vs Lopez",
+      "United States vs Lopez",
+      "US versus Lopez",
+      "United States versus Lopez"
+    ],
+    "Department of State": [
+      "US State Department",
+      "State Dept",
+      "Dept of State"
+    ],
+    "Department of the Treasury": [
+      "Treasury Dept",
+      "Dept of Treasury",
+      "Dept of the Treasury",
+      "Department of Treasury"
+    ],
+    "Department of Defense": [
+      "Defense Dept",
+      "Dept of Defense",
+      "Department of Defence",
+      "Defence Department",
+      "Dept of Defence"
+    ],
+    "Department of Justice": [
+      "Justice Dept",
+      "Dept of Justice"
+    ],
+    "Department of the Interior": [
+      "Interior Dept",
+      "Dept of the Interior",
+      "Dept of Interior",
+      "Department of Interior"
+    ],
+    "Department of Agriculture": [
+      "Agriculture Department",
+      "Agriculture Dept",
+      "Dept of Agriculture"
+    ],
+    "Department of Commerce": [
+      "Commerce Department",
+      "Commerce Dept",
+      "Dept of Commerce"
+    ],
+    "Department of Labor": [
+      "Labor Department",
+      "Labor Dept",
+      "Dept of Labor",
+      "Department of Labour"
+    ],
+    "Department of Health and Human Services": [
+      "HHS Department",
+      "Dept of Health and Human Services"
+    ],
+    "Department of Housing and Urban Development": [
+      "HUD Department",
+      "Dept of Housing and Urban Development"
+    ],
+    "Department of Transportation": [
+      "Transportation Department",
+      "Transportation Dept",
+      "Dept of Transportation"
+    ],
+    "Department of Energy": [
+      "Energy Department",
+      "Energy Dept",
+      "Dept of Energy"
+    ],
+    "Department of Education": [
+      "Education Department",
+      "Education Dept",
+      "Dept of Education"
+    ],
+    "Department of Veterans Affairs": [
+      "Veterans Affairs Department",
+      "Dept of Veterans Affairs",
+      "Veterans Affairs Dept"
+    ],
+    "Department of Homeland Security": [
+      "Homeland Security Department",
+      "Dept of Homeland Security",
+      "Homeland Security Dept"
+    ],
+    "U.S. senator": [
+      "US senators",
+      "United States senator",
+      "United States senators",
+      "senators",
+      "member of the Senate",
+      "members of the Senate"
+    ],
+    "U.S. representative": [
+      "US representatives",
+      "United States representative",
+      "United States representatives",
+      "representatives",
+      "congressperson",
+      "members of Congress",
+      "congress member",
+      "members of the House"
+    ],
+    "Form a more perfect union": [
+      "create a more perfect union",
+      "form a union",
+      "unite the states",
+      "unify the states"
+    ],
+    "Establish justice": [
+      "establishing justice",
+      "ensure justice",
+      "provide justice"
+    ],
+    "Insure domestic tranquility": [
+      "ensure peace at home",
+      "domestic tranquility",
+      "maintain domestic peace",
+      "keep domestic peace"
+    ],
+    "Provide for the common defense": [
+      "provide common defense",
+      "provide for national defense",
+      "provide for the common defence",
+      "protect the nation",
+      "defend the nation"
+    ],
+    "Promote the general welfare": [
+      "promote general welfare",
+      "promoting general welfare",
+      "promote wellbeing",
+      "promote the public welfare"
+    ],
+    "Secure the blessings of liberty": [
+      "protect liberty",
+      "protect freedom",
+      "secure the blessings of freedom",
+      "secure freedom",
+      "preserve liberty"
+    ],
+    "Going public": [
+      "going to the public",
+      "appealing to the public",
+      "appeal to voters",
+      "speaking to the public",
+      "public speaking",
+      "rally public support"
+    ],
+    "Agenda setting": [
+      "setting an agenda",
+      "set policy agenda",
+      "setting the policy agenda",
+      "establish policy priorities"
+    ],
+    "Pass laws": [
+      "laws",
+      "lawmaking power",
+      "make a law",
+      "make new laws",
+      "making laws",
+      "passing laws",
+      "writing laws",
+      "write bills",
+      "passing legislation",
+      "enact laws",
+      "enact legislation"
+    ],
+    "County executive": [
+      "county executives",
+      "county administrators",
+      "county managers"
+    ],
+    "City manager": [
+      "city managers",
+      "town managers",
+      "municipal managers"
+    ],
+    "Village president": [
+      "village presidents",
+      "village mayors"
+    ],
+    "Town supervisor": [
+      "town supervisors",
+      "township supervisors"
+    ],
+    "State senator": [
+      "state senators",
+      "member of the state senate",
+      "members of state senate"
+    ],
+    "State representative": [
+      "state representatives",
+      "state legislators",
+      "state assembly members",
+      "assembly members",
+      "state assemblyperson",
+      "state assemblypeople",
+      "assemblypersons",
+      "state house member",
+      "state House representative"
+    ],
+    "County commissioner": [
+      "county commissioners",
+      "county supervisors",
+      "county council",
+      "county board member",
+      "board of supervisors member"
+    ],
+    "Town meeting member": [
+      "town meeting members",
+      "representative town meeting member"
+    ],
+    "Equal Protection Clause": [
+      "equal protection under the law",
+      "equal treatment under the law",
+      "equality before the law"
+    ],
+    "Fourteenth Amendment": [
+      "fourteenth",
+      "14th constitutional amendment",
+      "amendment fourteen",
+      "amendment number 14"
+    ],
+    "Justiciability": [
+      "justiciable issue",
+      "justiciable question",
+      "justiciable case",
+      "justiciability doctrine",
+      "courts may hear redistricting cases",
+      "redistricting is justiciable"
+    ],
+    "Political question doctrine": [
+      "political question principle",
+      "political question rule"
+    ],
+    "One person one vote": [
+      "one person one ballot",
+      "one man one ballot",
+      "equal voting power",
+      "equal weight of votes",
+      "votes must have equal weight"
+    ],
+    "Federal court jurisdiction": [
+      "federal courts jurisdiction",
+      "jurisdiction of federal courts",
+      "federal judicial jurisdiction"
+    ],
+    "Judicial review": [
+      "judicial review power",
+      "constitutional review",
+      "review constitutionality",
+      "review of constitutionality",
+      "declare laws unconstitutional",
+      "power to declare laws unconstitutional"
+    ],
+    "Necessary and Proper Clause": [
+      "necessary proper",
+      "necessary and proper powers",
+      "necessary and proper law clause"
+    ],
+    "Implied powers": [
+      "implied authority",
+      "powers implied by the Constitution",
+      "implied national powers"
+    ],
+    "Supremacy Clause": [
+      "supremacy of federal law",
+      "federal law is supreme",
+      "national law is supreme",
+      "federal law overrides state law"
+    ],
+    "Federalism": [
+      "division of power between state and federal governments",
+      "division of power between national and state governments",
+      "division of powers between state and federal governments",
+      "shared power between national and state governments"
+    ],
+    "National bank": [
+      "Bank of the US",
+      "Bank of United States",
+      "Second Bank of United States",
+      "US bank"
+    ],
+    "Intergovernmental tax immunity": [
+      "state cannot tax federal government",
+      "states cant tax the federal government",
+      "states cannot tax a national bank",
+      "Maryland cant tax the bank",
+      "Maryland cannot tax a federal bank",
+      "power to tax involves the power to destroy",
+      "power to tax is the power to destroy",
+      "taxing power is power to destroy"
+    ],
+    "Enumerated powers": [
+      "enumerated authority",
+      "expressly listed powers",
+      "explicit powers",
+      "listed powers"
+    ],
+    "Limited government": [
+      "limited powers of government",
+      "limits on governmental power"
+    ],
+    "Broad constitutional interpretation": [
+      "loose constructionism",
+      "broad constructionism",
+      "loose reading of the Constitution",
+      "broad interpretation of the Constitution",
+      "broad interpretation"
+    ],
+    "State sovereignty": [
+      "sovereign state power",
+      "state sovereign authority",
+      "sovereignty of the states"
+    ],
+    "John Marshall": [
+      "Chief Justice John Marshall",
+      "Chief Justice of the Marshall Court"
+    ],
+    "Commerce Clause": [
+      "interstate commerce power",
+      "commerce power",
+      "regulate commerce clause"
+    ],
+    "Full Faith and Credit Clause": [
+      "full faith and credit provision",
+      "full faith credit clause"
+    ],
+    "Privileges and Immunities Clause": [
+      "privileges and immunities provision"
+    ],
+    "Due Process Clause": [
+      "due process of law clause",
+      "due process of law"
+    ],
+    "Establishment Clause": [
+      "nonestablishment clause",
+      "non establishment clause",
+      "no establishment of religion",
+      "no official religion",
+      "no national religion"
+    ],
+    "Free Exercise Clause": [
+      "religious free exercise",
+      "freedom of religion clause",
+      "free exercise of religion clause"
+    ],
+    "Take Care Clause": [
+      "faithful execution",
+      "faithful execution of the laws",
+      "enforce the laws clause"
+    ],
+    "Appointments Clause": [
+      "appointment power clause",
+      "appointments provision"
+    ],
+    "Treaty Clause": [
+      "treaty making clause",
+      "treaty power clause"
+    ],
+    "Vesting Clause": [
+      "vesting of powers clause",
+      "vesting of power"
+    ],
+    "Origination Clause": [
+      "revenue clause",
+      "revenue origination",
+      "tax bill origination clause"
+    ],
+    "Presentment Clause": [
+      "presentment of bills",
+      "bill presentment clause"
+    ],
+    "Speech or Debate Clause": [
+      "speech and debate",
+      "speech debate clause"
+    ],
+    "Contract Clause": [
+      "contracts",
+      "obligation of contracts clause",
+      "impairment of contracts clause"
+    ],
+    "Ex Post Facto Clauses": [
+      "ex post facto laws",
+      "ex post facto prohibition",
+      "no ex post facto laws"
+    ],
+    "Bill of Attainder Clauses": [
+      "bills of attainder",
+      "attainder clause",
+      "no bills of attainder"
+    ],
+    "Emoluments Clauses": [
+      "emolument clause",
+      "emolument clauses",
+      "emolument"
+    ],
+    "Takings Clause": [
+      "taking clause",
+      "eminent domain clause"
+    ],
+    "Suspension Clause": [
+      "suspension of habeas corpus",
+      "habeas corpus suspension clause"
+    ],
+    "No Religious Test Clause": [
+      "religious tests clause",
+      "ban on religious tests",
+      "no religious tests"
+    ],
+    "Guarantee Clause": [
+      "guarantee of republican government",
+      "guaranty of republican government"
+    ],
+    "Spending Clause": [
+      "taxing and spending",
+      "spending power clause",
+      "general welfare"
+    ],
+    "Extradition Clause": [
+      "interstate extradition",
+      "extradition of fugitives"
+    ],
+    "Fugitive Slave Clause": [
+      "fugitive slave provision",
+      "fugitive slaves clause"
+    ],
+    "Three Fifths Clause": [
+      "three fifths provision",
+      "three fifths representation",
+      "3 fifths clause",
+      "3/5 compromise"
+    ],
+    "Importation Clause": [
+      "slave importation",
+      "slave trade provision"
+    ],
+    "Territory Clause": [
+      "territorial power clause",
+      "territories clause"
+    ],
+    "New States Clause": [
+      "admission of new states",
+      "new state clause",
+      "admit new states clause"
+    ],
+    "Commander in Chief Clause": [
+      "commander in chief power",
+      "commander in chief provision"
+    ],
+    "Pardon Clause": [
+      "pardon power",
+      "pardons",
+      "pardon provision"
+    ],
+    "Electors Clause": [
+      "Electoral College clause",
+      "presidential election clause",
+      "electoral clause"
+    ],
+    "Elections Clause": [
+      "time place and manner clause",
+      "times places manner clause",
+      "congressional elections clause"
+    ],
+    "Qualifications Clauses": [
+      "eligibility requirements clause",
+      "qualifications for office clause"
+    ],
+    "Senate impeachment trials": [
+      "impeachment trials",
+      "convict impeached officials",
+      "try impeached officials",
+      "convict and remove impeached officials",
+      "remove impeached officials",
+      "remove an impeached president"
+    ],
+    "President pro tempore": [
+      "Senate president pro tempore",
+      "president protempore",
+      "president pro temp"
+    ],
+    "House two year term": [
+      "two year term",
+      "2 year term",
+      "two years",
+      "two year House terms",
+      "House terms are two years"
+    ],
+    "Senate six year term": [
+      "six year term",
+      "6 year term",
+      "six years",
+      "six year Senate terms",
+      "Senate terms are six years"
+    ],
+    "Minimum House age 25": [
+      "twenty five",
+      "25 years old",
+      "twenty five years old",
+      "must be 25",
+      "minimum age 25"
+    ],
+    "Minimum Senate age 30": [
+      "thirty",
+      "30 years old",
+      "thirty years old",
+      "must be 30",
+      "minimum age 30"
+    ],
+    "House citizenship requirement": [
+      "seven years of citizenship",
+      "seven years citizenship",
+      "7 years of citizenship",
+      "citizen for seven years",
+      "citizen for 7 years"
+    ],
+    "Senate citizenship requirement": [
+      "nine years of citizenship",
+      "nine years citizenship",
+      "9 years of citizenship",
+      "citizen for nine years",
+      "citizen for 9 years"
+    ],
+    "State residency requirement": [
+      "resident of the state",
+      "reside in the state",
+      "live in the state",
+      "state resident requirement"
+    ],
+    "Census and apportionment": [
+      "count the population",
+      "counting the population",
+      "allocation of House seats",
+      "allocate House seats",
+      "distribution of House seats"
+    ],
+    "Congressional elections": [
+      "congressional election",
+      "election of Congress",
+      "House and Senate elections",
+      "times places and manner of elections"
+    ],
+    "Revenue bills originate in the House": [
+      "tax bills",
+      "tax bills originate in the House",
+      "revenue bills start in the House",
+      "originate revenue bills",
+      "originate tax bills",
+      "start tax bills in the House"
+    ],
+    "Presidential veto": [
+      "veto power",
+      "vetoing bills",
+      "sign or veto a bill",
+      "presidential approval of bills",
+      "presentment of bills"
+    ],
+    "Veto override": [
+      "override presidential veto",
+      "overriding a veto",
+      "overriding vetoes",
+      "two thirds vote to override",
+      "veto overrides"
+    ],
+    "Bicameral passage": [
+      "bicameralism",
+      "both chambers must pass a bill",
+      "both houses must pass legislation",
+      "House and Senate must pass a bill",
+      "passing legislation",
+      "make laws",
+      "making laws",
+      "laws",
+      "legislation"
+    ],
+    "Quorum": [
+      "quorum requirement",
+      "majority needed for a quorum",
+      "majority to conduct business"
+    ],
+    "Congressional rules": [
+      "rules of procedure",
+      "each chamber sets its rules",
+      "rules for each house",
+      "Congress sets its own rules"
+    ],
+    "Expulsion of members": [
+      "expelling members",
+      "expel a member",
+      "expel members of Congress"
+    ],
+    "Congressional journals": [
+      "journals",
+      "journals of proceedings",
+      "record of proceedings",
+      "recording votes"
+    ],
+    "Appropriations": [
+      "appropriations power",
+      "appropriations of funds",
+      "spending appropriations",
+      "budget appropriations"
+    ],
+    "Habeas corpus": [
+      "writs of habeas corpus",
+      "habeas corpus suspension",
+      "suspending habeas corpus"
+    ],
+    "No bills of attainder": [
+      "ban on bills of attainder",
+      "prohibition of bills of attainder"
+    ],
+    "No ex post facto laws": [
+      "ban on ex post facto laws",
+      "prohibition of ex post facto laws"
+    ],
+    "No titles of nobility": [
+      "ban on titles of nobility",
+      "prohibition of titles of nobility"
+    ],
+    "Foreign Emoluments Clause": [
+      "foreign emolument clause",
+      "foreign gifts clause",
+      "ban on foreign emoluments"
+    ],
+    "Limits on state powers": [
+      "restrictions on state powers",
+      "limits on the states",
+      "prohibitions on state powers"
+    ],
+    "Four year term": [
+      "four year terms",
+      "4 year term",
+      "four years in office",
+      "president serves four years"
+    ],
+    "Presidential electors": [
+      "electoral votes",
+      "electoral system",
+      "presidential election process"
+    ],
+    "Presidential oath": [
+      "presidential oath of office",
+      "oath to preserve protect and defend the Constitution",
+      "preserve protect and defend the Constitution"
+    ],
+    "Natural born citizen requirement": [
+      "natural born citizenship requirement",
+      "must be a natural born citizen",
+      "president must be natural born"
+    ],
+    "Minimum presidential age 35": [
+      "thirty five",
+      "thirty five years old",
+      "must be 35",
+      "minimum age 35",
+      "at least 35 years old"
+    ],
+    "Fourteen year residency requirement": [
+      "fourteen years residency",
+      "fourteen year residency",
+      "14 years residency",
+      "resident for fourteen years",
+      "resident for 14 years",
+      "14 years living in the US"
+    ],
+    "Presidential compensation": [
+      "presidential salary",
+      "presidents salary",
+      "presidential pay",
+      "presidents pay",
+      "salary cannot be changed during term"
+    ],
+    "Written opinions from department heads": [
+      "written advice from department heads",
+      "written opinions from Cabinet members",
+      "ask Cabinet for written opinions",
+      "opinions of department heads"
+    ],
+    "Federal pardons and reprieves": [
+      "federal pardons",
+      "grant pardons",
+      "grant reprieves",
+      "grant clemency",
+      "pardon federal crimes",
+      "presidential pardons",
+      "pardon power",
+      "pardoning power",
+      "power to pardon"
+    ],
+    "Treaty making": [
+      "make treaties",
+      "making treaties",
+      "treaty negotiations",
+      "negotiate a treaty",
+      "sign treaties",
+      "treaty ratification",
+      "ratification of treaties",
+      "treaty power"
+    ],
+    "Federal appointments": [
+      "appoint judges",
+      "appoint justices",
+      "appoint cabinet members",
+      "appoint ambassadors",
+      "nominate officials",
+      "federal nominations",
+      "appoint federal officers",
+      "judicial appointments",
+      "cabinet appointments",
+      "appointment power",
+      "power of appointment",
+      "nominations",
+      "nominating officials"
+    ],
+    "Recess appointments": [
+      "appointments during Senate recess",
+      "make recess appointments",
+      "recess appointment power"
+    ],
+    "State of the Union": [
+      "give the State of the Union",
+      "State of Union",
+      "annual message to Congress",
+      "annual address to Congress"
+    ],
+    "Convene Congress": [
+      "call Congress into special session",
+      "call a special session of Congress",
+      "calling Congress into session",
+      "special session of Congress"
+    ],
+    "Adjourn Congress in a specified disagreement": [
+      "adjourn Congress when houses disagree",
+      "adjourn Congress if the chambers disagree",
+      "congressional adjournment in disagreement"
+    ],
+    "Faithfully execute the laws": [
+      "enforcing laws",
+      "enforce the law",
+      "carry out laws",
+      "carry out the laws",
+      "executing the laws",
+      "implement laws",
+      "implementing laws"
+    ],
+    "Commission federal officers": [
+      "commissioning officers",
+      "commission federal officials",
+      "issue commissions",
+      "commissions for officers"
+    ],
+    "Removal through impeachment": [
+      "removal by impeachment",
+      "impeachment and removal",
+      "impeachment process",
+      "removal after impeachment and conviction",
+      "high crimes",
+      "bribery"
+    ],
+    "Presidential succession": [
+      "succession to the presidency",
+      "succession of the president",
+      "presidential replacement"
+    ],
+    "Federal judicial power": [
+      "federal judicial authority",
+      "judicial authority",
+      "judicial branch power"
+    ],
+    "Lower federal courts": [
+      "lower court",
+      "inferior federal courts",
+      "federal district courts",
+      "federal appeals courts",
+      "appeals courts",
+      "circuit courts",
+      "federal circuit courts"
+    ],
+    "Good behavior tenure": [
+      "life appointments",
+      "lifetime appointment",
+      "life appointment",
+      "life terms",
+      "serve for life",
+      "life term",
+      "lifetime tenure",
+      "lifetime service",
+      "life in office",
+      "judges serve for life",
+      "good behavior appointments"
+    ],
+    "Protected judicial compensation": [
+      "judges pay cannot be reduced",
+      "judges salaries cannot be reduced",
+      "judicial pay protection",
+      "no reduction in judicial pay",
+      "judges pay"
+    ],
+    "Cases and controversies": [
+      "case and controversy",
+      "case or controversies",
+      "cases or controversies",
+      "case and controversy requirement",
+      "actual cases and controversies"
+    ],
+    "Constitutional cases": [
+      "cases under the Constitution",
+      "cases involving the Constitution",
+      "constitutional disputes"
+    ],
+    "Federal law cases": [
+      "cases under federal law",
+      "cases involving federal laws",
+      "federal law",
+      "federal question jurisdiction"
+    ],
+    "Treaty cases": [
+      "cases involving treaties",
+      "cases under treaties",
+      "treaty controversies"
+    ],
+    "Ambassador cases": [
+      "cases involving ambassadors",
+      "cases affecting ambassadors",
+      "cases involving consuls",
+      "cases involving public ministers"
+    ],
+    "Admiralty and maritime jurisdiction": [
+      "maritime jurisdiction",
+      "admiralty and maritime law",
+      "cases at sea",
+      "maritime cases",
+      "admiralty cases"
+    ],
+    "United States as a party": [
+      "cases involving the United States",
+      "cases where the United States is a party",
+      "United States government as a party",
+      "US government as a party",
+      "cases involving the federal government"
+    ],
+    "Disputes between states": [
+      "cases between states",
+      "state disputes",
+      "states suing each other",
+      "disputes among states",
+      "interstate controversies"
+    ],
+    "Diversity jurisdiction": [
+      "cases between citizens of different states",
+      "disputes between citizens of different states",
+      "diversity of citizenship",
+      "diverse citizenship"
+    ],
+    "State and foreign party controversies": [
+      "cases involving foreign states",
+      "cases involving foreign citizens",
+      "disputes with foreign citizens",
+      "state versus foreign citizens"
+    ],
+    "Land grants from different states": [
+      "land grant disputes",
+      "conflicting state land grants",
+      "land grants under different states"
+    ],
+    "Original jurisdiction": [
+      "original court jurisdiction",
+      "cases heard first",
+      "Supreme Court original jurisdiction"
+    ],
+    "Appellate jurisdiction": [
+      "appeals jurisdiction",
+      "appellate court jurisdiction",
+      "Supreme Court appellate jurisdiction"
+    ],
+    "Exceptions and Regulations Clause": [
+      "exceptions and regulations power",
+      "exceptions to appellate jurisdiction",
+      "Congress regulates Supreme Court appellate jurisdiction"
+    ],
+    "Criminal jury trials": [
+      "criminal jury trial",
+      "criminal trial by jury",
+      "jury trials for crimes",
+      "trial of crimes by jury"
+    ],
+    "Place of criminal trial": [
+      "trial venue",
+      "criminal trial venue",
+      "trial where the crime was committed",
+      "trial in state of the crime"
+    ],
+    "Treason": [
+      "treason against the United States",
+      "aid and comfort to enemies",
+      "levy war against the United States",
+      "levying war against the United States"
+    ],
+    "Two witnesses for treason": [
+      "two witnesses to the same overt act",
+      "2 witnesses to the same overt act",
+      "two witnesses required for treason"
+    ],
+    "Confession in open court": [
+      "confess in open court",
+      "confessing in open court",
+      "open court confession to treason"
+    ],
+    "Limits on punishment for treason": [
+      "punishment for treason",
+      "no corruption of blood",
+      "treason forfeiture limits"
+    ]
+  },
+  "stateShortForms": {
+    "Alabama": [
+      "Ala"
+    ],
+    "Alaska": [],
+    "Arizona": [
+      "Ariz"
+    ],
+    "Arkansas": [
+      "Ark"
+    ],
+    "California": [
+      "Calif",
+      "Cali"
+    ],
+    "Colorado": [
+      "Colo"
+    ],
+    "Connecticut": [
+      "Conn"
+    ],
+    "Idaho": [],
+    "Illinois": [
+      "Ill"
+    ],
+    "Indiana": [
+      "Ind"
+    ],
+    "Iowa": [],
+    "Maine": [],
+    "Maryland": [
+      "Md"
+    ],
+    "Massachusetts": [
+      "Mass"
+    ],
+    "Michigan": [
+      "Mich"
+    ],
+    "Minnesota": [
+      "Minn"
+    ],
+    "Mississippi": [
+      "Miss"
+    ],
+    "Missouri": [
+      "Mo"
+    ],
+    "Montana": [
+      "Mont"
+    ],
+    "Nebraska": [
+      "Neb",
+      "Nebr"
+    ],
+    "Nevada": [
+      "Nev"
+    ],
+    "New Hampshire": [
+      "N Hampshire",
+      "N.H."
+    ],
+    "New Jersey": [
+      "N Jersey"
+    ],
+    "New Mexico": [
+      "N Mexico"
+    ],
+    "New York": [
+      "N York"
+    ],
+    "North Carolina": [
+      "N Carolina"
+    ],
+    "North Dakota": [
+      "N Dakota"
+    ],
+    "Ohio": [],
+    "Oklahoma": [
+      "Okla"
+    ],
+    "Oregon": [
+      "Ore",
+      "Oreg"
+    ],
+    "Washington": [
+      "Wash"
+    ],
+    "West Virginia": [
+      "W Virginia",
+      "W Va",
+      "WVa"
+    ],
+    "Wisconsin": [
+      "Wis",
+      "Wisc"
+    ],
+    "Wyoming": [
+      "Wyo"
+    ]
+  },
+  "personFirstNames": {
+    "George Washington": [
+      "George"
+    ],
+    "John Adams": [
+      "John"
+    ],
+    "Thomas Jefferson": [
+      "Thomas"
+    ],
+    "James Madison": [
+      "James"
+    ],
+    "James Monroe": [
+      "James"
+    ],
+    "John Quincy Adams": [
+      "John"
+    ],
+    "Andrew Jackson": [
+      "Andrew"
+    ],
+    "Martin Van Buren": [
+      "Martin"
+    ],
+    "William Henry Harrison": [
+      "William"
+    ],
+    "John Tyler": [
+      "John"
+    ],
+    "James K. Polk": [
+      "James"
+    ],
+    "Zachary Taylor": [
+      "Zachary"
+    ],
+    "Millard Fillmore": [
+      "Millard"
+    ],
+    "Franklin Pierce": [
+      "Franklin"
+    ],
+    "James Buchanan": [
+      "James"
+    ],
+    "Abraham Lincoln": [
+      "Abraham"
+    ],
+    "Andrew Johnson": [
+      "Andrew"
+    ],
+    "Ulysses S. Grant": [
+      "Ulysses"
+    ],
+    "Rutherford B. Hayes": [
+      "Rutherford"
+    ],
+    "James A. Garfield": [
+      "James"
+    ],
+    "Chester A. Arthur": [
+      "Chester"
+    ],
+    "Grover Cleveland": [
+      "Grover"
+    ],
+    "Benjamin Harrison": [
+      "Benjamin"
+    ],
+    "William McKinley": [
+      "William"
+    ],
+    "Theodore Roosevelt": [
+      "Theodore",
+      "Teddy"
+    ],
+    "William Howard Taft": [
+      "William"
+    ],
+    "Woodrow Wilson": [
+      "Woodrow"
+    ],
+    "Warren G. Harding": [
+      "Warren"
+    ],
+    "Calvin Coolidge": [
+      "Calvin"
+    ],
+    "Herbert Hoover": [
+      "Herbert"
+    ],
+    "Franklin D. Roosevelt": [
+      "Franklin"
+    ],
+    "Harry S. Truman": [
+      "Harry"
+    ],
+    "Dwight D. Eisenhower": [
+      "Dwight"
+    ],
+    "John F. Kennedy": [
+      "John"
+    ],
+    "Lyndon B. Johnson": [
+      "Lyndon"
+    ],
+    "Richard Nixon": [
+      "Richard"
+    ],
+    "Gerald Ford": [
+      "Gerald"
+    ],
+    "Jimmy Carter": [
+      "Jimmy",
+      "James"
+    ],
+    "Ronald Reagan": [
+      "Ronald"
+    ],
+    "George H. W. Bush": [
+      "George"
+    ],
+    "Bill Clinton": [
+      "Bill",
+      "William"
+    ],
+    "George W. Bush": [
+      "George"
+    ],
+    "Barack Obama": [
+      "Barack"
+    ],
+    "Donald Trump": [
+      "Donald"
+    ],
+    "Joe Biden": [
+      "Joe",
+      "Joseph"
+    ],
+    "Alexander Hamilton": [
+      "Alexander"
+    ],
+    "Benjamin Franklin": [
+      "Benjamin"
+    ],
+    "John Jay": [
+      "John"
+    ],
+    "John Marshall": [
+      "John"
+    ]
+  },
+  "aliasTargets": {
+    "trivia-article-i": {
+      "bicameralism": "Bicameral passage"
+    }
+  },
+  "choiceQuestions": [
+    "trivia-presidential-duties",
+    "trivia-presidential-formal"
+  ]
+}

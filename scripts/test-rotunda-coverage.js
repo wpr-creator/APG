@@ -2,6 +2,11 @@ const assert=require('node:assert/strict'),fs=require('node:fs');
 const E=require('../rotunda-engine.js'),bank=require('../rotunda-data.json'),curriculum=require('../rotunda-curriculum.json');
 const find=id=>bank.find(p=>p.id==='trivia-'+id);
 const examples=[
+ ['congress-powers','taxes','Tax'],['national-powers','taxes','Tax'],['article-i','taxes','Tax'],
+ ['congress-powers','raise taxes','Tax'],['congress-powers','lower taxes','Tax'],
+ ['congress-powers','borrowing money','Borrow money'],['congress-powers','coining money','Coin money'],
+ ['congress-powers','regulating trade','Regulate interstate commerce'],['congress-powers','declaring war','Declare war'],
+ ['congress-powers','making laws','Pass laws'],['congress-powers','overriding a veto','Override a veto'],
  ['presidents','Rutherford','Rutherford B. Hayes'],['presidents','Hayes','Rutherford B. Hayes'],['presidents','Rutherfod','Rutherford B. Hayes'],
  ['presidents-last-m','Madson','James Madison'],['presidents-last-m','McKinley','William McKinley'],
  ['presidents-last-m','I think Monroe','James Monroe'],['presidents-last-t','Truman','Harry S. Truman'],
@@ -36,7 +41,7 @@ for(const [id,input,label]of examples)assert.equal(E.match(find(id),input).answe
 // Every known out-of-category president/state must remain wrong, even when a
 // valid name is within the spelling-correction distance (John vs John Quincy).
 let excluded=0;for(const p of bank)for(const input of p.rejectedAnswers||[]){assert.equal(E.match(p,input).type,'miss',p.id+': '+input);excluded++;}
-for(const [id,input]of [['presidents-first-john','James Madison'],['presidents-last-m','Lincoln'],['presidents-notes','Hamilton'],['states-letter-m','California'],['federalist-authors','Jefferson'],['democracy-models','not elite'],['national-powers','not taxation']])assert.equal(E.match(find(id),input).type,'miss',id+': '+input);
+for(const [id,input]of [['presidents-first-john','James Madison'],['presidents-last-m','Lincoln'],['presidents-notes','Hamilton'],['states-letter-m','California'],['federalist-authors','Jefferson'],['democracy-models','not elite'],['national-powers','not taxation'],['congress-powers','not taxes'],['congress-powers','president can tax'],['congress-powers','tax evasion']])assert.equal(E.match(find(id),input).type,'miss',id+': '+input);
 assert.equal(E.match(find('presidents-last-b'),'Martin Van Buren').type,'miss','Van Buren begins with V.');
 for(const id of ['presidents','presidents-last-b','presidents-first-george'])assert.equal(E.match(find(id),'Bush').type,'choice');
 for(const id of ['baker-concepts','mcculloch-concepts','article-i','article-ii','article-iii'])assert.ok(find(id).answers.length>=4);

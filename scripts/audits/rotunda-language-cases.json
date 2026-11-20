@@ -1,0 +1,917 @@
+{
+  "description": "Independent student-style phrases, including valid everyday wording, ambiguity, spelling slips, and near-but-wrong government claims.",
+  "accepted": [
+    [
+      "branches",
+      "law enforcing branch",
+      "Executive branch"
+    ],
+    [
+      "presidents",
+      "G. W. Bush",
+      "George W. Bush"
+    ],
+    [
+      "bill-of-rights",
+      "right to an attorney",
+      "Assistance of counsel"
+    ],
+    [
+      "elected-offices",
+      "city mayors",
+      "Mayor"
+    ],
+    [
+      "government-institutions",
+      "United States Congress",
+      "Congress"
+    ],
+    [
+      "levels-of-government",
+      "local govt",
+      "Local government"
+    ],
+    [
+      "roles",
+      "head of the military",
+      "Commander in chief"
+    ],
+    [
+      "declaration-rights",
+      "right to pursue happiness",
+      "Pursuit of happiness"
+    ],
+    [
+      "founding-ideas",
+      "unalienable rights",
+      "Natural Rights"
+    ],
+    [
+      "democracy-models",
+      "pluralistic democracy",
+      "Pluralist Democracy"
+    ],
+    [
+      "presidential-duties",
+      "signing bills",
+      "Sign a bill into law"
+    ],
+    [
+      "national-powers",
+      "taxes",
+      "Tax"
+    ],
+    [
+      "presidential-team",
+      "White House advisers",
+      "White House Staff"
+    ],
+    [
+      "founding-documents",
+      "first 10 amendments",
+      "Bill of Rights"
+    ],
+    [
+      "government-levels",
+      "powers reserved to the states",
+      "Reserved powers"
+    ],
+    [
+      "federalism-forms",
+      "returning power to states",
+      "New Federalism"
+    ],
+    [
+      "committee-types",
+      "standing committees",
+      "Standing Committee"
+    ],
+    [
+      "congress-leaders",
+      "House speaker",
+      "Speaker of the House"
+    ],
+    [
+      "tools",
+      "vetoing bills",
+      "Regular veto"
+    ],
+    [
+      "congress-checks-president",
+      "confirming appointments",
+      "Senate Confirmation"
+    ],
+    [
+      "house-senate",
+      "confirming judges",
+      "Confirm appointments"
+    ],
+    [
+      "house-only",
+      "start tax bills",
+      "Originate revenue bills"
+    ],
+    [
+      "districting-terms",
+      "redraw districts",
+      "Redistricting"
+    ],
+    [
+      "course-cases",
+      "McCulloch vs Maryland",
+      "McCulloch v. Maryland"
+    ],
+    [
+      "presidents-last-m",
+      "McKinley",
+      "William McKinley"
+    ],
+    [
+      "presidents-last-t",
+      "William Taft",
+      "William Howard Taft"
+    ],
+    [
+      "presidents-last-h",
+      "Rutherford",
+      "Rutherford B. Hayes"
+    ],
+    [
+      "presidents-last-j",
+      "L.B.J.",
+      "Lyndon B. Johnson"
+    ],
+    [
+      "presidents-last-c",
+      "James Earl Carter",
+      "Jimmy Carter"
+    ],
+    [
+      "presidents-last-r",
+      "F.D.R.",
+      "Franklin D. Roosevelt"
+    ],
+    [
+      "presidents-last-b",
+      "Bush senior",
+      "George H. W. Bush"
+    ],
+    [
+      "presidents-first-james",
+      "James Carter",
+      "Jimmy Carter"
+    ],
+    [
+      "presidents-first-john",
+      "J.Q. Adams",
+      "John Quincy Adams"
+    ],
+    [
+      "presidents-first-william",
+      "William Taft",
+      "William Howard Taft"
+    ],
+    [
+      "presidents-first-george",
+      "George Bush junior",
+      "George W. Bush"
+    ],
+    [
+      "first-five-presidents",
+      "Thomas",
+      "Thomas Jefferson"
+    ],
+    [
+      "presidents-first-ten",
+      "Martin",
+      "Martin Van Buren"
+    ],
+    [
+      "presidents-since-2000",
+      "Joseph Biden Jr",
+      "Joe Biden"
+    ],
+    [
+      "presidents-1900s",
+      "Dwight David Eisenhower",
+      "Dwight D. Eisenhower"
+    ],
+    [
+      "presidents-before-1800",
+      "Madison",
+      "James Madison"
+    ],
+    [
+      "presidents-senators",
+      "Barack",
+      "Barack Obama"
+    ],
+    [
+      "presidents-vps",
+      "Joe",
+      "Joe Biden"
+    ],
+    [
+      "presidents-succeeded",
+      "Lyndon",
+      "Lyndon B. Johnson"
+    ],
+    [
+      "presidents-notes",
+      "U.S. Grant",
+      "Ulysses S. Grant"
+    ],
+    [
+      "presidents-johns-james",
+      "J.F.K.",
+      "John F. Kennedy"
+    ],
+    [
+      "presidents-before-lincoln",
+      "Millard",
+      "Millard Fillmore"
+    ],
+    [
+      "presidents-two-names",
+      "George Bush senior",
+      "Bush"
+    ],
+    [
+      "money-faces",
+      "U.S. Grant",
+      "Ulysses S. Grant"
+    ],
+    [
+      "cabinet-departments",
+      "Dept. of Education",
+      "Department of Education"
+    ],
+    [
+      "federal-elected-jobs",
+      "United States senators",
+      "U.S. senator"
+    ],
+    [
+      "preamble-goals",
+      "keep domestic peace",
+      "Insure domestic tranquility"
+    ],
+    [
+      "federalist-authors",
+      "John",
+      "John Jay"
+    ],
+    [
+      "states-letter-a",
+      "Ariz.",
+      "Arizona"
+    ],
+    [
+      "states-letter-c",
+      "Calif.",
+      "California"
+    ],
+    [
+      "states-letter-i",
+      "Ill.",
+      "Illinois"
+    ],
+    [
+      "states-letter-m",
+      "Mich.",
+      "Michigan"
+    ],
+    [
+      "states-letter-n",
+      "N.Y.",
+      "New York"
+    ],
+    [
+      "states-letter-o",
+      "Oregon state",
+      "Oregon"
+    ],
+    [
+      "states-letter-w",
+      "W. Va.",
+      "West Virginia"
+    ],
+    [
+      "presidential-formal",
+      "appointing judges",
+      "Nominate federal judges"
+    ],
+    [
+      "presidential-informal",
+      "executive orders",
+      "Executive order"
+    ],
+    [
+      "congress-powers",
+      "Congress can collect taxes",
+      "Tax"
+    ],
+    [
+      "executive-offices",
+      "mayors",
+      "Mayor"
+    ],
+    [
+      "legislative-offices",
+      "state legislators",
+      "State representative"
+    ],
+    [
+      "baker-concepts",
+      "equal voting power",
+      "One person one vote"
+    ],
+    [
+      "mcculloch-concepts",
+      "states cant tax the federal government",
+      "Intergovernmental tax immunity"
+    ],
+    [
+      "constitutional-clauses",
+      "taxing and spending",
+      "Spending Clause"
+    ],
+    [
+      "article-i",
+      "taxes",
+      "Tax"
+    ],
+    [
+      "article-ii",
+      "appoint cabinet members",
+      "Federal appointments"
+    ],
+    [
+      "article-iii",
+      "lifetime appointments",
+      "Good behavior tenure"
+    ],
+    [
+      "congress-powers",
+      "laws",
+      "Pass laws"
+    ],
+    [
+      "congress-powers",
+      "making laws",
+      "Pass laws"
+    ],
+    [
+      "congress-powers",
+      "printing money",
+      "Coin money"
+    ],
+    [
+      "congress-powers",
+      "borrowing money",
+      "Borrow money"
+    ],
+    [
+      "congress-powers",
+      "regulating trade",
+      "Regulate interstate commerce"
+    ],
+    [
+      "congress-powers",
+      "funding the military",
+      "Raise and support armies"
+    ],
+    [
+      "congress-powers",
+      "declaring war",
+      "Declare war"
+    ],
+    [
+      "congress-powers",
+      "confirming judges",
+      "Senate Confirmation"
+    ],
+    [
+      "congress-powers",
+      "overriding vetoes",
+      "Override a veto"
+    ],
+    [
+      "congress-powers",
+      "hold hearings",
+      "Oversight"
+    ],
+    [
+      "congress-powers",
+      "treaty approval",
+      "Consent to treaties"
+    ],
+    [
+      "congress-powers",
+      "power to make laws",
+      "Pass laws"
+    ],
+    [
+      "congress-powers",
+      "I think taxes",
+      "Tax"
+    ],
+    [
+      "presidential-duties",
+      "vetoing bills",
+      "Veto a bill"
+    ],
+    [
+      "presidential-duties",
+      "enforcing laws",
+      "Lead the executive branch"
+    ],
+    [
+      "presidential-duties",
+      "pardoning",
+      "Grant federal pardons"
+    ],
+    [
+      "presidential-duties",
+      "the president can veto bills",
+      "Veto a bill"
+    ],
+    [
+      "presidential-formal",
+      "calling Congress into session",
+      "Call Congress into special session"
+    ],
+    [
+      "presidential-informal",
+      "negotiating with Congress",
+      "Bargaining and persuasion"
+    ],
+    [
+      "executive-offices",
+      "county administrators",
+      "County executive"
+    ],
+    [
+      "legislative-offices",
+      "members of the House",
+      "U.S. representative"
+    ],
+    [
+      "bill-of-rights",
+      "freedom to assemble",
+      "Peaceful assembly"
+    ],
+    [
+      "bill-of-rights",
+      "cannot be tried twice",
+      "Protection against double jeopardy"
+    ],
+    [
+      "bill-of-rights",
+      "cannot be forced to testify against yourself",
+      "Protection against self-incrimination"
+    ],
+    [
+      "bill-of-rights",
+      "right to call witnesses",
+      "Call defense witnesses"
+    ],
+    [
+      "bill-of-rights",
+      "no unreasonable searches",
+      "Protection from unreasonable searches and seizures"
+    ],
+    [
+      "founding-ideas",
+      "power belongs to the people",
+      "Popular Sovereignty"
+    ],
+    [
+      "founding-ideas",
+      "social contract theory",
+      "Social Contract"
+    ],
+    [
+      "democracy-models",
+      "elitism",
+      "Elite Democracy"
+    ],
+    [
+      "democracy-models",
+      "participatory model",
+      "Participatory Democracy"
+    ],
+    [
+      "government-institutions",
+      "S.C.O.T.U.S.",
+      "Supreme Court"
+    ],
+    [
+      "cabinet-departments",
+      "D.O.J.",
+      "Department of Justice"
+    ],
+    [
+      "founding-documents",
+      "Federalist number 51",
+      "Federalist No. 51"
+    ],
+    [
+      "founding-documents",
+      "Federalist fifty one",
+      "Federalist No. 51"
+    ],
+    [
+      "committee-types",
+      "permanent committees",
+      "Standing Committee"
+    ],
+    [
+      "districting-terms",
+      "unequally populated districts",
+      "Malapportionment"
+    ],
+    [
+      "districting-terms",
+      "population count",
+      "Census"
+    ],
+    [
+      "baker-concepts",
+      "redistricting is justiciable",
+      "Justiciability"
+    ],
+    [
+      "baker-concepts",
+      "fourteenth",
+      "Fourteenth Amendment"
+    ],
+    [
+      "mcculloch-concepts",
+      "power to tax is the power to destroy",
+      "Intergovernmental tax immunity"
+    ],
+    [
+      "mcculloch-concepts",
+      "loose constructionism",
+      "Broad constitutional interpretation"
+    ],
+    [
+      "constitutional-clauses",
+      "religious test clause",
+      "No Religious Test Clause"
+    ],
+    [
+      "constitutional-clauses",
+      "no national religion",
+      "Establishment Clause"
+    ],
+    [
+      "article-i",
+      "bicameralism",
+      "Bicameral passage"
+    ],
+    [
+      "article-i",
+      "Congress can declare war",
+      "Declare war"
+    ],
+    [
+      "article-i",
+      "twenty five years old",
+      "Minimum House age 25"
+    ],
+    [
+      "article-ii",
+      "thirty five years old",
+      "Minimum presidential age 35"
+    ],
+    [
+      "article-ii",
+      "presidential salary",
+      "Presidential compensation"
+    ],
+    [
+      "article-iii",
+      "states suing each other",
+      "Disputes between states"
+    ],
+    [
+      "article-iii",
+      "cases involving the Constitution",
+      "Constitutional cases"
+    ],
+    [
+      "article-iii",
+      "confess in open court",
+      "Confession in open court"
+    ],
+    [
+      "article-iii",
+      "two witnesses to the same overt act",
+      "Two witnesses for treason"
+    ],
+    [
+      "congress-powers",
+      "can tax",
+      "Tax"
+    ],
+    [
+      "congress-powers",
+      "Congress has the power to make laws",
+      "Pass laws"
+    ],
+    [
+      "presidential-duties",
+      "pardoning power",
+      "Grant federal pardons"
+    ],
+    [
+      "article-ii",
+      "appointment power",
+      "Federal appointments"
+    ]
+  ],
+  "choices": [
+    [
+      "presidents",
+      "James",
+      [
+        "James Madison",
+        "James Monroe",
+        "James K. Polk",
+        "James Buchanan",
+        "James A. Garfield",
+        "Jimmy Carter"
+      ]
+    ],
+    [
+      "presidents",
+      "George",
+      [
+        "George Washington",
+        "George H. W. Bush",
+        "George W. Bush"
+      ]
+    ],
+    [
+      "presidents-first-john",
+      "John",
+      [
+        "John Adams",
+        "John Quincy Adams",
+        "John Tyler",
+        "John F. Kennedy"
+      ]
+    ],
+    [
+      "congress-leaders",
+      "majority leader",
+      [
+        "House Majority Leader",
+        "Senate Majority Leader"
+      ]
+    ],
+    [
+      "legislative-offices",
+      "minority leaders",
+      [
+        "House Minority Leader",
+        "Senate Minority Leader"
+      ]
+    ],
+    [
+      "presidential-duties",
+      "appointments",
+      [
+        "Nominate federal judges",
+        "Nominate executive officials"
+      ]
+    ]
+  ],
+  "corrections": [
+    [
+      "congress-powers",
+      "taxs",
+      "Tax"
+    ],
+    [
+      "congress-powers",
+      "taxe",
+      "Tax"
+    ],
+    [
+      "democracy-models",
+      "particpatory",
+      "Participatory Democracy"
+    ],
+    [
+      "presidents",
+      "Rutherfod",
+      "Rutherford B. Hayes"
+    ],
+    [
+      "bill-of-rights",
+      "unresonable searches",
+      "Protection from unreasonable searches and seizures"
+    ]
+  ],
+  "rejected": [
+    [
+      "congress-powers",
+      "not taxes"
+    ],
+    [
+      "congress-powers",
+      "no taxes"
+    ],
+    [
+      "congress-powers",
+      "tax evasion"
+    ],
+    [
+      "congress-powers",
+      "president can tax"
+    ],
+    [
+      "congress-powers",
+      "Congress can appoint Supreme Court justices"
+    ],
+    [
+      "congress-powers",
+      "Congress can veto bills"
+    ],
+    [
+      "congress-powers",
+      "Congress commands the military"
+    ],
+    [
+      "congress-powers",
+      "grant federal pardons"
+    ],
+    [
+      "congress-powers",
+      "enforce laws"
+    ],
+    [
+      "congress-powers",
+      "impeachment removes the president"
+    ],
+    [
+      "presidential-duties",
+      "declare war"
+    ],
+    [
+      "presidential-duties",
+      "Congress can veto bills"
+    ],
+    [
+      "presidential-duties",
+      "confirm Supreme Court justices"
+    ],
+    [
+      "presidential-duties",
+      "the president can make laws alone"
+    ],
+    [
+      "presidential-duties",
+      "pardon state crimes"
+    ],
+    [
+      "house-only",
+      "confirming judges"
+    ],
+    [
+      "house-only",
+      "Senate impeachment trial"
+    ],
+    [
+      "house-senate",
+      "originate tax bills"
+    ],
+    [
+      "house-senate",
+      "impeach the president"
+    ],
+    [
+      "article-ii",
+      "two term limit"
+    ],
+    [
+      "article-iii",
+      "judicial review"
+    ],
+    [
+      "article-iii",
+      "civil jury trial"
+    ],
+    [
+      "article-iii",
+      "appoint judges"
+    ],
+    [
+      "article-iii",
+      "judges are elected"
+    ],
+    [
+      "article-i",
+      "Congress has four year terms"
+    ],
+    [
+      "article-ii",
+      "president serves six years"
+    ],
+    [
+      "article-ii",
+      "25 years old"
+    ],
+    [
+      "article-i",
+      "minimum House age 35"
+    ],
+    [
+      "bill-of-rights",
+      "no trials"
+    ],
+    [
+      "bill-of-rights",
+      "unlimited gun rights"
+    ],
+    [
+      "bill-of-rights",
+      "unreasonable searches are allowed"
+    ],
+    [
+      "bill-of-rights",
+      "no right to a lawyer"
+    ],
+    [
+      "democracy-models",
+      "not elite"
+    ],
+    [
+      "democracy-models",
+      "monarchy"
+    ],
+    [
+      "founding-ideas",
+      "unlimited government"
+    ],
+    [
+      "mcculloch-concepts",
+      "states can tax the federal government"
+    ],
+    [
+      "mcculloch-concepts",
+      "federal government is subordinate to states"
+    ],
+    [
+      "states-letter-m",
+      "N.Y."
+    ],
+    [
+      "states-letter-m",
+      "Calif."
+    ],
+    [
+      "states-letter-c",
+      "Mich."
+    ],
+    [
+      "presidents-first-john",
+      "James Madison"
+    ],
+    [
+      "presidents-first-john",
+      "James"
+    ],
+    [
+      "presidents-last-m",
+      "F.D.R."
+    ],
+    [
+      "presidents-last-m",
+      "Barack"
+    ],
+    [
+      "presidents-notes",
+      "Hamilton"
+    ],
+    [
+      "presidents",
+      "Benjamin Franklin"
+    ],
+    [
+      "bill-of-rights",
+      "reasonable searches"
+    ],
+    [
+      "government-institutions",
+      "bicameralism"
+    ],
+    [
+      "branches",
+      "taxes"
+    ]
+  ]
+}

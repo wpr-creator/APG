@@ -15,6 +15,7 @@ for(const letter of letters){const matched=all.filter(t=>t.term[0].toUpperCase()
 }
 const selection=read('rotunda-category-selection.json'),trivia=read('rotunda-government-trivia.json');
 const bank=[...base.filter(p=>selection.courseCategoryIds.includes(p.id)),...trivia,...letterPrompts.filter(p=>selection.glossaryLetters.includes(p.letter))];
+require('./rotunda-language.js').applyAnswerLanguage(bank,read('rotunda-answer-language.json'));
 for(const p of letterPrompts){const labels=new Map(p.answers.map(a=>[E.normalize(a.label),a.id])),claims=new Map();for(const a of p.answers)for(const value of a.aliases){const n=E.normalize(value);if(!claims.has(n))claims.set(n,new Set());claims.get(n).add(a.id);}for(const a of p.answers)a.aliases=a.aliases.filter(v=>{const n=E.normalize(v);return(!labels.has(n)||labels.get(n)===a.id)&&claims.get(n).size===1;});}
 // Keep shared surnames only where explicitly marked for a full-name choice.
 for(const p of bank){if(new Set(p.answers.map(a=>a.id)).size!==p.answers.length)throw Error(p.id+': duplicate answer IDs break scoring');const used=new Map();for(const a of p.answers){a.aliases=[...new Set(a.aliases)];for(const v of [a.label,...a.aliases]){const n=E.normalize(v);if(used.has(n)&&used.get(n)!==a.id&&!p.allowAmbiguous)throw Error(p.id+': ambiguous alias '+v);used.set(n,a.id);}}if(p.answers.length<3)throw Error('Too few concepts: '+p.id);}
