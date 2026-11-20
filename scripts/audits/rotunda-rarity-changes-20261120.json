@@ -1,0 +1,764 @@
+{
+  "reviewed": "2026-11-20",
+  "questionsReviewed": 126,
+  "answersReviewed": 968,
+  "rule": "Starting points reflect familiarity and specificity within each prompt. Comparable answers may tie. No points are assigned from list order or answer length.",
+  "changes": [
+    {
+      "question": "trivia-branches",
+      "answer": "Judicial branch",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-elected-offices",
+      "answer": "Mayor",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-levels-of-government",
+      "answer": "Local government",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-declaration-rights",
+      "answer": "Pursuit of happiness",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-founding-documents",
+      "answer": "Federalist No. 70",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-course-cases",
+      "answer": "Shaw v. Reno",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-executive-offices",
+      "answer": "Mayor",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-founding-principles",
+      "answer": "Limited government",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-founding-principles",
+      "answer": "Separation of powers",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-founding-principles",
+      "answer": "Checks and balances",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-founding-principles",
+      "answer": "Federalism",
+      "before": 80,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-citizen-actions",
+      "answer": "Protesting",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-citizen-actions",
+      "answer": "Petitioning",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-citizen-actions",
+      "answer": "Attending a town hall",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-citizen-actions",
+      "answer": "Referendum",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-citizen-actions",
+      "answer": "Ballot initiative",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-pluralist-organizations",
+      "answer": "Professional association",
+      "before": 60,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-pluralist-organizations",
+      "answer": "Advocacy organization",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-pluralist-organizations",
+      "answer": "Business group",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-pluralist-organizations",
+      "answer": "Environmental group",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-elite-actors",
+      "answer": "Wealthy donors",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-elite-actors",
+      "answer": "Major organizations",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-elite-actors",
+      "answer": "Party leaders",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-founding-texts-three",
+      "answer": "Constitution",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-gettysburg-ideals",
+      "answer": "Popular Sovereignty",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-gettysburg-ideals",
+      "answer": "Liberty",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-constitution-mechanisms",
+      "answer": "Separation of Powers",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-constitution-mechanisms",
+      "answer": "Checks and Balances",
+      "before": 80,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-constitution-mechanisms",
+      "answer": "Limited Government",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-articles-could-do",
+      "answer": "Conduct foreign relations",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-articles-could-do",
+      "answer": "Coin money",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-articles-could-do",
+      "answer": "Request money",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-articles-could-do",
+      "answer": "Request troops",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-articles-repairs",
+      "answer": "Executive branch",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-articles-repairs",
+      "answer": "Federal courts",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-articles-repairs",
+      "answer": "Federal supremacy",
+      "before": 100,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-new-power-limits",
+      "answer": "Enumerated Powers",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-new-power-limits",
+      "answer": "Separation of Powers",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-new-power-limits",
+      "answer": "Checks and Balances",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-new-power-limits",
+      "answer": "Federalism",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-national-access-points",
+      "answer": "President",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-national-access-points",
+      "answer": "Federal courts",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "Federal agencies",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "Federal courts",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "Governor",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "State legislature",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "State agencies",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "State courts",
+      "before": 100,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-federalism-access-points",
+      "answer": "Local government",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-presidential-media",
+      "answer": "Radio",
+      "before": 20,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-presidential-media",
+      "answer": "Social media",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-articles-weaknesses",
+      "answer": "No separate national executive",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-articles-weaknesses",
+      "answer": "No general national judiciary",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-articles-weaknesses",
+      "answer": "Unanimous consent to amend",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-convention-plans",
+      "answer": "Virginia Plan",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-convention-plans",
+      "answer": "New Jersey Plan",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-convention-plans",
+      "answer": "Great Compromise",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-congress-influence-channels",
+      "answer": "Committees",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-congress-influence-channels",
+      "answer": "Hearings",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-congress-influence-channels",
+      "answer": "Contact with legislators",
+      "before": 80,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-reserved-examples",
+      "answer": "Professional licensing",
+      "before": 40,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-reserved-examples",
+      "answer": "Public safety",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-reserved-examples",
+      "answer": "Election administration",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-concurrent-examples",
+      "answer": "Borrow money",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-concurrent-examples",
+      "answer": "Create courts",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-concurrent-examples",
+      "answer": "Make laws",
+      "before": 80,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-concurrent-examples",
+      "answer": "Enforce laws",
+      "before": 100,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-concurrent-examples",
+      "answer": "Spend for public purposes",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-national-policy-influence",
+      "answer": "Categorical Grants",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-national-policy-influence",
+      "answer": "Federal Mandate",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-national-policy-influence",
+      "answer": "Unfunded Mandate",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-mandatory-programs",
+      "answer": "Medicare",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-mandatory-programs",
+      "answer": "Medicaid",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-bill-stopping-points",
+      "answer": "Committee",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-bill-stopping-points",
+      "answer": "House floor",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-bill-stopping-points",
+      "answer": "Presidential veto",
+      "before": 80,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-representative-pressures",
+      "answer": "Personal judgment",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-representative-pressures",
+      "answer": "Reelection",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-representative-pressures",
+      "answer": "Party goals",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-power-expansion-forces",
+      "answer": "International responsibilities",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-power-expansion-forces",
+      "answer": "Public expectations",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-power-expansion-forces",
+      "answer": "Larger executive branch",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-power-expansion-forces",
+      "answer": "Congressional delegation",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-energy-purposes",
+      "answer": "Enforcing laws",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-energy-purposes",
+      "answer": "Securing liberty",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-presidential-communication",
+      "answer": "Going Public",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-presidential-communication",
+      "answer": "Agenda Setting",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-energy",
+      "answer": "Adequate support",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-energy",
+      "answer": "Competent powers",
+      "before": 100,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-unity",
+      "answer": "Secrecy",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-unity",
+      "answer": "Dispatch",
+      "before": 100,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-senate-debate",
+      "answer": "Hold",
+      "before": 60,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-senate-debate",
+      "answer": "Unanimous Consent Agreement",
+      "before": 80,
+      "after": 100
+    },
+    {
+      "question": "trivia-notes-congress-policy-moves",
+      "answer": "Logrolling",
+      "before": 20,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-congress-policy-moves",
+      "answer": "Pork-Barrel Politics",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-congress-policy-moves",
+      "answer": "Earmark",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-budget-categories",
+      "answer": "Discretionary Spending",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-districting-legal-terms",
+      "answer": "Strict Scrutiny",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-districting-legal-terms",
+      "answer": "Majority-Minority District",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-house-qualifications",
+      "answer": "Seven years of citizenship",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-house-qualifications",
+      "answer": "Inhabit the represented state",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-senate-qualifications",
+      "answer": "Nine years of citizenship",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-senate-qualifications",
+      "answer": "Inhabit the represented state",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-house-floor-tools",
+      "answer": "Committee of the Whole",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-house-floor-tools",
+      "answer": "Discharge Petition",
+      "before": 60,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-committee-work",
+      "answer": "Gather information",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-senate-confirmed-offices",
+      "answer": "Ambassador",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-senate-confirmed-offices",
+      "answer": "Federal judge",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-congress-military-powers",
+      "answer": "Authorize action",
+      "before": 40,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-congress-military-powers",
+      "answer": "Control military funding",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-cooperation-obstacles",
+      "answer": "Polarization",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-presidential-communication-planning",
+      "answer": "Policy goal",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-presidential-communication-planning",
+      "answer": "Desired response",
+      "before": 60,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-presidential-communication-planning",
+      "answer": "Needed cooperation",
+      "before": 80,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-hamilton-safeguards",
+      "answer": "Responsibility for official conduct",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-madison-resistance",
+      "answer": "Constitutional means",
+      "before": 80,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-federalist-39-national",
+      "answer": "Authority over national responsibilities",
+      "before": 100,
+      "after": 80
+    },
+    {
+      "question": "trivia-notes-federalist-39-federal",
+      "answer": "State ratifying conventions",
+      "before": 20,
+      "after": 60
+    },
+    {
+      "question": "trivia-notes-federalist-39-federal",
+      "answer": "Equal representation in the Senate",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-federalist-39-federal",
+      "answer": "Reserved state powers",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-article-four-rules",
+      "answer": "Extradition",
+      "before": 100,
+      "after": 40
+    },
+    {
+      "question": "trivia-notes-mcculloch-clauses",
+      "answer": "Supremacy Clause",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-legal-authority-sources",
+      "answer": "Federal law",
+      "before": 60,
+      "after": 20
+    },
+    {
+      "question": "trivia-notes-fourteenth-protections",
+      "answer": "Equal Protection Clause",
+      "before": 40,
+      "after": 20
+    },
+    {
+      "question": "trivia-states-original-states",
+      "answer": "North Carolina",
+      "before": 100,
+      "after": 60
+    },
+    {
+      "question": "trivia-states-original-states",
+      "answer": "Rhode Island",
+      "before": 100,
+      "after": 80
+    }
+  ]
+}

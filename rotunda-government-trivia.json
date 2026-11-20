@@ -10483,7 +10483,7 @@
           "mayorship"
         ],
         "explanation": "Heads many city governments.",
-        "basePoints": 80
+        "basePoints": 40
       },
       {
         "id": "county-executive",

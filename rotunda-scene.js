@@ -5,7 +5,7 @@ export function createRotundaScene(canvas,{reduced=false}={}){
  let width=1200,height=800,dpr=1,stage='welcome',progress=0,target=0,eagleX=.18,flight=null,frame,last=0,active=!document.hidden,disposed=false,rewardPoints=0,rewardAt=-1e4,finishPoints=0;
  const budget=createFrameBudget(),art={};
 
- const P={night:'#172b38',deep:'#243e49',shadow:'#5a6b69',shade:'#899181',stone:'#b2b49b',cream:'#d7cfaf',light:'#eee1b7',gold:'#c2a66c',sky:'#829ca7',blue:'#566e85',red:'#a97970',green:'#35544c'};
+ const P={night:'#172b38',deep:'#243e49',shadow:'#796f61',shade:'#a89b84',stone:'#c7baa0',cream:'#e3d4b6',light:'#f3e5c5',gold:'#c2a66c',sky:'#829ca7',blue:'#566e85',red:'#a97970',green:'#35544c'};
  function box(x,a,b,w,h,c){x.fillStyle=c;x.fillRect(Math.round(a),Math.round(b),Math.round(w),Math.round(h));}
  function polygon(x,points,c){x.fillStyle=c;x.beginPath();points.forEach(([a,b],i)=>i?x.lineTo(Math.round(a),Math.round(b)):x.moveTo(Math.round(a),Math.round(b)));x.closePath();x.fill();}
  function ellipse(x,a,b,rx,ry,c){x.fillStyle=c;x.beginPath();x.ellipse(a,b,rx,ry,0,0,Math.PI*2);x.fill();}
@@ -24,22 +24,29 @@ export function createRotundaScene(canvas,{reduced=false}={}){
   figure(x,cx-1,cy-10,'#3d5a79');figure(x,cx-18,cy-6,'#b18275',-1);figure(x,cx+16,cy-7,'#cdc4a5');
   for(const [a,b,c]of [[cx-32,cy+12,'#91747e'],[cx-11,cy+19,'#6b7b74'],[cx+15,cy+17,'#9b7b63']]){rect(x,a,b,2,2,P.cream);rect(x,a-2,b+2,6,6,c);}
  }
- function dome(){const c=surface(320,200),x=c.getContext('2d');rect(x,0,0,320,200,P.deep);
-  const cx=160,cy=50,rx=217,ry=125;
-  ellipse(x,cx,cy,rx,ry,P.shade);
-  // Each recessed coffer has hand-sized pixel bevels, stepped edges, and a rosette.
-  for(let ring=0;ring<5;ring++){const inner=.38+ring*.122,outer=inner+.115,count=ring<2?22:26;
-   for(let i=0;i<count;i++){const start=i*Math.PI*2/count+.008,end=(i+1)*Math.PI*2/count-.008,point=(r,t)=>[cx+Math.cos(t)*rx*r,cy+Math.sin(t)*ry*r];
-    polygon(x,[point(inner,start),point(outer,start),point(outer,end),point(inner,end)],P.cream);
-    polygon(x,[point(inner+.016,start+.009),point(outer-.01,start+.009),point(outer-.01,end-.009),point(inner+.016,end-.009)],P.shadow);
-    polygon(x,[point(inner+.033,start+.025),point(outer-.024,start+.025),point(outer-.024,end-.025),point(inner+.033,end-.025)],ring%2?'#9da28d':P.stone);
-    const mid=(start+end)/2,rr=(inner+outer)/2,px=cx+Math.cos(mid)*rx*rr,py=cy+Math.sin(mid)*ry*rr;rect(x,px-1,py-2,2,5,P.cream);rect(x,px-2,py-1,4,2,P.cream);rect(x,px,py,1,1,P.gold);
+ function paintedCanopy(image){
+  const c=surface(256,256),x=c.getContext('2d');x.drawImage(image,280,20,900,900,0,0,256,256);
+  const pixels=x.getImageData(0,0,256,256),colors=['#f5ecd4','#e5dbc0','#cec9b7','#b7b5ad','#9ba4ac','#7b8e9c','#617286','#47576d','#384450','#bfc5ca','#d2d7d4','#b7a2a1','#927583','#73596b','#cab29b','#ae8e71','#8b6c52','#624b3e','#433c36','#b4af88','#929b7f','#6b806e','#465e55','#c5ac69','#ac8f52','#806d44','#ad7766','#8b554c','#d4bcb1','#ddd2b2','#dbd9c8','#f1e4bd'].map(hex=>[1,3,5].map(i=>parseInt(hex.slice(i,i+2),16)));
+  for(let i=0;i<pixels.data.length;i+=4){let best=colors[0],d=Infinity;for(const color of colors){const n=(pixels.data[i]-color[0])**2+(pixels.data[i+1]-color[1])**2+(pixels.data[i+2]-color[2])**2;if(n<d){d=n;best=color;}}for(let k=0;k<3;k++)pixels.data[i+k]=best[k];}x.putImageData(pixels,0,0);return c;
+ }
+ function dome(){const c=surface(640,480),x=c.getContext('2d');rect(x,0,0,640,480,'#d8ccb3');
+  const cx=320,cy=151,rx=413,ry=287;
+  ellipse(x,cx,cy,rx,ry,'#a99d86');
+  // Recessed coffers and rosettes surrounding the central oculus.
+  for(let ring=0;ring<5;ring++){const inner=.43+ring*.112,outer=inner+.105,count=ring<2?28:36;
+   for(let i=0;i<count;i++){const start=i*Math.PI*2/count+.007,end=(i+1)*Math.PI*2/count-.007,point=(r,t)=>[cx+Math.cos(t)*rx*r,cy+Math.sin(t)*ry*r];
+    polygon(x,[point(inner,start),point(outer,start),point(outer,end),point(inner,end)],'#f4ead3');
+    polygon(x,[point(inner+.008,start+.008),point(outer-.008,start+.008),point(outer-.008,end-.008),point(inner+.008,end-.008)],'#9b8f7a');
+    polygon(x,[point(inner+.025,start+.018),point(outer-.023,start+.018),point(outer-.023,end-.018),point(inner+.025,end-.018)],'#c6bca4');
+    const mid=(start+end)/2,rr=(inner+outer)/2,px=cx+Math.cos(mid)*rx*rr,py=cy+Math.sin(mid)*ry*rr;rect(x,px-2,py-3,4,7,'#eee4cc');rect(x,px-3,py-1,7,3,'#eee4cc');rect(x,px,py,2,2,'#a99b7e');
    }
   }
-  fresco(x,cx,cy,73,49);
-  // The window drum curves below the dome, with slim rectangular panes.
-  for(let i=0;i<11;i++){const a=6+i*30,y=153-Math.round(Math.abs(5-i)*5);rect(x,a,y,16,40,P.shadow);rect(x,a+2,y+2,12,35,'#c9c5a7');rect(x,a+3,y+3,10,32,'#e0d3a5');rect(x,a+7,y+3,1,32,P.shade);for(let j=0;j<3;j++)rect(x,a+3,y+9+j*8,10,1,P.shade);rect(x,a+3,y+3,1,31,P.light);rect(x,a-2,y+39,20,3,P.cream);}
-  const dim=x.createLinearGradient(0,0,320,0);dim.addColorStop(0,'#182e3d66');dim.addColorStop(.25,'#182e3d00');dim.addColorStop(.75,'#182e3d00');dim.addColorStop(1,'#182e3d66');x.fillStyle=dim;x.fillRect(0,0,320,200);return c;
+  ellipse(x,cx,cy,181,128,'#f8efd9');ellipse(x,cx,cy,175,122,'#a79471');
+  if(art.canopy){x.save();x.beginPath();x.ellipse(cx,cy,170,117,0,0,Math.PI*2);x.clip();x.imageSmoothingEnabled=false;x.drawImage(art.canopy,cx-174,cy-122,348,244);x.restore();}else fresco(x,cx,cy,169,116);
+  for(let i=0;i<48;i++){const t=i*Math.PI*2/48;rect(x,cx+Math.cos(t)*178-1,cy+Math.sin(t)*125-1,3,3,'#d5c5a4');}
+  // A visible section of the circular window drum, rather than a second ceiling.
+  for(let i=0;i<12;i++){const a=8+i*53,y=365-Math.round(Math.abs(5.5-i)*4);rect(x,a,y,34,82,'#9f927b');rect(x,a+3,y+3,28,75,'#f1e6c8');rect(x,a+6,y+6,22,69,'#cbc7b3');rect(x,a+16,y+6,2,69,'#9b967f');for(let j=0;j<5;j++)rect(x,a+6,y+16+j*12,22,2,'#a59c85');rect(x,a+4,y+4,2,72,'#fff0d0');rect(x,a-3,y+81,40,5,'#eee0c2');}
+  for(let y=451;y<480;y+=7)rect(x,0,y,640,2,y%2?'#a69a82':'#f1e5c9');return c;
  }
  function exterior(){const c=surface(320,200),x=c.getContext('2d');const sky=x.createLinearGradient(0,0,0,200);sky.addColorStop(0,'#526f84');sky.addColorStop(1,'#b8baa5');x.fillStyle=sky;x.fillRect(0,0,320,200);
   cloud(x,15,38,51);cloud(x,230,48,64);cloud(x,250,18,38);cloud(x,93,21,39);
@@ -56,24 +63,36 @@ export function createRotundaScene(canvas,{reduced=false}={}){
   for(const side of [0,1])for(let i=0;i<4;i++){const a=side?290-i*11:8+i*11;rect(x,a+5,145+i*4,2,34,'#4b5146');foliage(x,a-8,125+i*4,29,31,i*17+side*5);}
   return c;
  }
- function room(){const c=surface(320,600),x=c.getContext('2d');rect(x,0,0,320,600,P.stone);
-  for(let y=4;y<560;y+=13){rect(x,0,y,320,1,'#a6ad96');for(let a=(y%2)*18;a<320;a+=36)rect(x,a,y+1,1,11,'#a6ad96');}
-  // Upper windows, quiet coffer bands, lower historical paintings, and the marble floor.
-  for(let i=0;i<10;i++){const a=5+i*32;pillar(x,a,70,5,160);rect(x,a+10,88,15,116,P.shadow);rect(x,a+12,90,11,111,'#d8d0ad');for(let y=94;y<201;y+=14){rect(x,a+13,y,8,10,'#e8ddb5');rect(x,a+17,y,1,10,P.shade);}rect(x,a+8,204,19,3,P.cream);}
-  ledge(x,52);ledge(x,230);ledge(x,258);
-  rect(x,0,270,320,30,P.shade);for(let i=0;i<38;i++){const a=i*9;rect(x,a+2,278,2,3,P.shadow);rect(x,a+1,281,4,8,P.shadow);rect(x,a,289,2,6,P.shadow);rect(x,a+4,289,2,6,P.shadow);}ledge(x,301);
-  for(let i=0;i<7;i++){const a=i*48;pillar(x,a,326,9,195);rect(x,a+15,374,26,72,P.shadow);rect(x,a+16,375,24,69,P.gold);rect(x,a+18,377,20,65,P.blue);polygon(x,[[a+18,410],[a+26,393],[a+38,410],[a+38,441],[a+18,441]],'#657b6c');for(let k=0;k<4;k++){rect(x,a+20+k*4,412+k%2*4,2,3,P.cream);rect(x,a+19+k*4,415+k%2*4,4,12,k%2?P.deep:'#9a8b72');}rect(x,a+23,351,12,2,P.gold);rect(x,a+21,353,2,10,P.gold);rect(x,a+35,353,2,10,P.gold);rect(x,a+24,365,10,2,P.gold);}
-  ledge(x,521);for(let y=534;y<600;y+=9)for(let a=0;a<320;a+=20)rect(x,a,y,20,9,(Math.floor(a/20)+Math.floor(y/9))%2?'#657b74':'#b7b89d');
-  const shade=x.createLinearGradient(0,0,320,0);shade.addColorStop(0,'#1b334755');shade.addColorStop(.5,'#1b334700');shade.addColorStop(1,'#1b334755');x.fillStyle=shade;x.fillRect(0,0,320,600);return c;
+ function room(){const c=surface(640,1320),x=c.getContext('2d');rect(x,0,0,640,1320,'#c9b99a');
+  // Warm sandstone, not a generic green stone tower.
+  for(let y=8;y<1190;y+=23){rect(x,0,y,640,1,'#b6a589');for(let a=(y%2)*36;a<640;a+=76)rect(x,a,y,1,22,'#b6a589');}
+  x.drawImage(art.dome,0,-50,640,480);
+  for(let i=0;i<12;i++){const a=8+i*53;pillar(x,a,420,9,196);rect(x,a+15,446,29,133,'#8c826d');rect(x,a+18,449,23,127,'#e3d6b7');rect(x,a+21,452,17,121,'#b6beb5');for(let y=460;y<570;y+=18)rect(x,a+21,y,17,2,'#8b8e7d');rect(x,a+28,452,2,121,'#8b8e7d');rect(x,a+13,581,34,5,'#f0e2c4');}
+  for(const y of [410,617,644,723]){rect(x,0,y,640,4,'#f2e3c6');rect(x,0,y+4,640,6,'#96876f');rect(x,0,y+10,640,4,'#d6c6a7');}
+  // Grisaille history frieze below the windows: figures, horses and architectural scenes.
+  rect(x,0,658,640,62,'#bfb396');for(let i=0;i<36;i++){const a=i*18,y=675+(i%3)*2;rect(x,a+4,y,4,4,'#756b59');polygon(x,[[a+3,y+4],[a+9,y+4],[a+12,y+24],[a,y+24]],i%2?'#8d816a':'#e1d2b3');rect(x,a+2,y+24,3,12,'#8d816a');rect(x,a+9,y+24,3,12,'#8d816a');rect(x,a-2,y+7,8,3,'#8d816a');if(i%7===0){rect(x,a-6,y+18,23,6,'#8d816a');rect(x,a+13,y+10,5,13,'#8d816a');}if(i%11===0)polygon(x,[[a+2,y-5],[a+2,y+19],[a+22,y+19]],'#e0d1b2');}
+  // Doric pilasters divide broad historical paintings and entrance bays.
+  for(let i=-1;i<6;i++){const a=i*128+7;pillar(x,a,759,15,378);rect(x,a-5,750,25,5,'#f0dfbe');rect(x,a-3,755,21,5,'#a99a7d');
+   const cx=a+70;ellipse(x,cx,789,17,15,'#998c73');ellipse(x,cx,789,13,11,'#dacaac');ellipse(x,cx,786,5,6,'#afa083');rect(x,cx-8,792,16,5,'#afa083');
+   if(i%2===0){rect(x,a+28,848,85,133,'#766348');rect(x,a+31,851,79,127,'#c5a66b');rect(x,a+35,855,71,119,'#52697b');polygon(x,[[a+35,900],[a+59,877],[a+79,893],[a+105,877],[a+105,973],[a+35,973]],'#788475');rect(x,a+38,941,64,28,'#7d6d58');for(let k=0;k<7;k++)figure(x,a+40+k*8,921+(k%3)*4,k%2?'#8b7260':'#b7b09b');rect(x,a+36,974,69,2,'#e5cc96');}
+   else{rect(x,a+31,839,79,267,'#a6977b');rect(x,a+37,846,67,259,'#4c554e');rect(x,a+43,852,55,252,'#6b7161');rect(x,a+69,855,2,246,'#a89c7f');for(let y=864;y<1094;y+=42){rect(x,a+46,y,20,32,'#596151');rect(x,a+75,y,20,32,'#596151');}}
+   // Carved olive wreath ornaments above the entablature.
+   for(let k=0;k<10;k++){const t=k*Math.PI*2/10;rect(x,a+70+Math.cos(t)*23,790+Math.sin(t)*20,4,3,'#dcccaf');}
+  }
+  rect(x,0,1139,640,7,'#9d8c71');rect(x,0,1146,640,6,'#e6d6b7');rect(x,0,1152,640,168,'#af8d72');
+  // The Rotunda floor has concentric stone rings, rather than a checkerboard.
+  for(let i=8;i>=0;i--)ellipse(x,320,1342,470-i*46,164-i*14,i%2?'#c1a58b':'#8e7765');ellipse(x,320,1342,92,44,'#e4dccc');
+  const shade=x.createLinearGradient(0,0,640,0);shade.addColorStop(0,'#302d3150');shade.addColorStop(.35,'#302d3100');shade.addColorStop(.65,'#302d3100');shade.addColorStop(1,'#302d3150');x.fillStyle=shade;x.fillRect(0,0,640,1320);return c;
  }
- art.front=exterior();art.room=room();art.dome=dome();canvas.dataset.artwork='handcrafted-pixels';
+ art.front=exterior();art.dome=dome();art.room=room();canvas.dataset.artwork='handcrafted-pixels';
+ const painting=new Image();painting.onload=()=>{if(disposed)return;try{art.canopy=paintedCanopy(painting);art.dome=dome();art.room=room();canvas.dataset.fresco='apotheosis-palette';}catch{canvas.dataset.fresco='sprite-fallback';}};painting.onerror=()=>{canvas.dataset.fresco='sprite-fallback';};painting.src=new URL('./assets/rotunda/apotheosis.webp',import.meta.url).href;
  function cover(image,{focus=.5,zoom=1}={}){const scale=Math.max(width/image.width,height/image.height)*zoom,w=image.width*scale,h=image.height*scale;ctx.drawImage(image,Math.round((width-w)/2),Math.round((height-h)*focus),Math.round(w),Math.round(h));}
  function roomView(time,quiet){
   if(!art.room)return;
-  const image=art.room,scale=Math.max(width/image.width,height/(image.height*.62)),viewH=height/scale,travel=Math.max(0,image.height-viewH),sy=(1-progress)*travel;
+  const image=art.room,scale=Math.max(width/image.width,height/(image.height*.62)),viewH=height/scale,travel=Math.max(0,image.height-viewH),pose=cameraPose(progress*700),sy=(1-pose.wall)*Math.max(0,travel-viewH*.25);
   ctx.drawImage(image,0,sy,image.width,viewH,Math.round((width-image.width*scale)/2),0,Math.round(image.width*scale),height);
-  const mix=Math.max(0,Math.min(1,(progress-.76)/.24));
-  if(mix>0&&art.dome){ctx.save();ctx.globalAlpha=mix*mix*(3-2*mix);cover(art.dome,{focus:0});ctx.restore();}
+  const mix=pose.dome;canvas.dataset.domeReveal=mix.toFixed(3);canvas.dataset.wallTravel=pose.wall.toFixed(3);
+  if(mix>.001&&art.dome){ctx.save();const w=width*pose.zoom,h=Math.min(height,width*.8)*mix*pose.zoom,y=-Math.max(0,h-height)*.12;ctx.drawImage(art.dome,Math.round((width-w)/2),Math.round(y),Math.round(w),Math.round(h));if(h+y<height){box(ctx,0,h+y-3,width,3,'#e9d9ba');box(ctx,0,h+y,width,3,'#8c7b62');}ctx.restore();}
   // Light motes are small pixel sprites, not vector beams or decorative banners.
   if(!quiet)for(let i=0;i<18;i++){ctx.globalAlpha=.12+(i%4)*.035;box(ctx,(i*137+73)%width,(i*83+time*.009+progress*750)%height,2,2,C.light);}ctx.globalAlpha=1;
   if(stage!=='finish')markers();if(flight&&!quiet)ascentTrail(time);eagle(time,quiet);
@@ -101,3 +120,6 @@ export function createRotundaScene(canvas,{reduced=false}={}){
 export function createFrameBudget(){let fps=60,average=0,slow=0,fast=0;return{get fps(){return fps;},sample(ms){average=average*.9+Math.max(0,ms)*.1;if(fps===60){slow=average>10?slow+1:Math.max(0,slow-2);if(slow>=30){fps=30;fast=0;}}else{fast=average<6?fast+1:0;if(fast>=180){fps=60;slow=0;}}return fps;}};}
 
 export function ascentProfile(points){const p=Math.max(20,Math.min(100,points));return{duration:650+p*18,power:p/100,particles:Math.round(p/5),color:({20:'#b4c6c2',40:'#8ccec0',60:'#95cbdc',80:'#efc870',100:'#fff0b4'})[p]||'#efc870'};}
+
+// Score remains linear for ranks; the architectural camera eases upward earlier.
+export function cameraPose(points){const p=Math.max(0,Math.min(700,points))/700,t=Math.max(0,Math.min(1,(points-40)/280));return{wall:Math.pow(p,.65),dome:t*t*(3-2*t),zoom:1+p*.18};}

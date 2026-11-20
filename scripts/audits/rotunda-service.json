@@ -3,10 +3,10 @@
   "projectId": "appgprj_6aff5c840cdc8191b7f3761eba0245b3",
   "url": "https://apg-rotunda-scores.endearingbuffalo5.chatgpt.site",
   "sourceCheckout": "/Users/westonrogers/Documents/apg-rotunda-scores",
-  "bankSha256": "167105b153bd303db2837c60929a399a7dac9e75b6b0c8635c53be118eef7581",
+  "bankSha256": "7482ba9715a6e0f27507d136c3b9a9a8d6271a501bdb99d4a807d43677ce9b3c",
   "scope": "Shared Monday\u2013Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
-  "checked": "2026-11-19",
-  "notes": "Teacher-requested easier replacement begins November 19 with a fresh competition namespace and seven broad category prompts. Old sessions and answers remain in D1 and resolve against their archived bank. Seven 25-second rounds, existing rarity priors, and scoring thresholds are unchanged. QA accounts stay excluded.",
-  "sourceCommit": "0e2552dc85a99a521e623a15931a51724750cf56",
-  "serviceVersion": 11
+  "checked": "2026-11-20",
+  "notes": "Full 126-category rarity audit, with 126 starting ratings revised across 55 categories. Comparable answers may tie; answer ordering never sets rewards. One daily attempt, stable answer IDs, archived sessions, and server deadlines remain intact. Camera changes are client artwork only.",
+  "sourceCommit": "bd2c496bfecc6dd12ce0d07bde0161e3ddca957b",
+  "serviceVersion": 18
 }

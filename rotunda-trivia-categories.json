@@ -42,7 +42,7 @@
           "courts",
           "court system"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Judicial branch."
       }
     ],
@@ -1311,7 +1311,7 @@
         "id": "mayor",
         "label": "Mayor",
         "aliases": [],
-        "basePoints": 80,
+        "basePoints": 40,
         "explanation": "Mayor."
       },
       {
@@ -1586,7 +1586,7 @@
           "city",
           "town government"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Local government."
       }
     ],
@@ -1865,7 +1865,7 @@
           "the pursuit of happiness"
         ],
         "explanation": "The Declaration names the pursuit of happiness; it does not promise that government will make everyone happy.",
-        "basePoints": 40
+        "basePoints": 20
       }
     ],
     "difficulty": 1,
@@ -2775,7 +2775,7 @@
           "Federalist paper 70",
           "Fed 70"
         ],
-        "basePoints": 80,
+        "basePoints": 40,
         "explanation": "Federalist No. 70."
       },
       {
@@ -5185,7 +5185,7 @@
           "Shaw Reno",
           "Shaw versus Reno"
         ],
-        "basePoints": 40,
+        "basePoints": 20,
         "explanation": "Voters could pursue their equal-protection challenge to race-based districting."
       },
       {

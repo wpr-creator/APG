@@ -29,7 +29,7 @@
           "government must obey the law"
         ],
         "explanation": "Government must operate within established legal and constitutional limits.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -41,7 +41,7 @@
           "division of powers among branches"
         ],
         "explanation": "Legislative, executive, and judicial responsibilities are assigned to different branches.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -53,7 +53,7 @@
           "branches check one another"
         ],
         "explanation": "Each branch has ways to limit the actions of the other branches.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "4",
@@ -63,7 +63,7 @@
           "sharing power between national and state governments"
         ],
         "explanation": "The national government and the states share governing authority.",
-        "basePoints": 80
+        "basePoints": 20
       }
     ],
     "lesson": "1.4",
@@ -114,7 +114,7 @@
           "demonstration"
         ],
         "explanation": "Public demonstrations communicate demands directly.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -123,7 +123,7 @@
           "petition"
         ],
         "explanation": "Petitions ask officials to address a concern.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -134,7 +134,7 @@
           "public meeting"
         ],
         "explanation": "Public meetings give citizens a chance to raise concerns.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "4",
@@ -144,7 +144,7 @@
           "referenda"
         ],
         "explanation": "A referendum lets voters decide a policy question directly.",
-        "basePoints": 100
+        "basePoints": 80
       },
       {
         "id": "5",
@@ -154,7 +154,7 @@
           "initiatives"
         ],
         "explanation": "A ballot initiative lets citizens seek a direct vote on a proposal under the rules of their state.",
-        "basePoints": 100
+        "basePoints": 80
       }
     ],
     "kind": "notes-category",
@@ -204,7 +204,7 @@
           "professional associations"
         ],
         "explanation": "Professional associations organize people in an occupation.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "3",
@@ -214,7 +214,7 @@
           "advocacy organizations"
         ],
         "explanation": "Advocacy organizations pursue shared public-policy goals.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "4",
@@ -224,7 +224,7 @@
           "business association"
         ],
         "explanation": "Business groups can seek policies favorable to their members.",
-        "basePoints": 100
+        "basePoints": 40
       },
       {
         "id": "5",
@@ -233,7 +233,7 @@
           "environmental groups"
         ],
         "explanation": "Environmental groups can seek different versions of a policy than business organizations support.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -275,7 +275,7 @@
           "wealthy people"
         ],
         "explanation": "Financial resources can increase political access and influence.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -284,7 +284,7 @@
           "large organizations"
         ],
         "explanation": "Large organizations can have resources and institutional access unavailable to ordinary individuals.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -302,7 +302,7 @@
           "party leadership"
         ],
         "explanation": "Party leaders can help decide which proposals reach the legislative agenda.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -341,7 +341,7 @@
           "united states constitution"
         ],
         "explanation": "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -392,7 +392,7 @@
           "rule by the people"
         ],
         "explanation": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -401,7 +401,7 @@
           "freedom"
         ],
         "explanation": "Lincoln described a nation conceived in liberty and dedicated to equality.",
-        "basePoints": 60
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -454,7 +454,7 @@
           "division of powers among branches"
         ],
         "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -465,7 +465,7 @@
           "branches check one another"
         ],
         "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
-        "basePoints": 80
+        "basePoints": 20
       },
       {
         "id": "4",
@@ -476,7 +476,7 @@
           "government must obey the law"
         ],
         "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -527,7 +527,7 @@
           "diplomacy"
         ],
         "explanation": "Congress could conduct foreign relations.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -537,7 +537,7 @@
           "coin"
         ],
         "explanation": "Congress could coin money.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "4",
@@ -547,7 +547,7 @@
           "ask states for money"
         ],
         "explanation": "Congress could request state contributions rather than collect taxes directly.",
-        "basePoints": 100
+        "basePoints": 80
       },
       {
         "id": "5",
@@ -557,7 +557,7 @@
           "request soldiers"
         ],
         "explanation": "Congress depended on the states when requesting troops.",
-        "basePoints": 100
+        "basePoints": 80
       }
     ],
     "kind": "notes-category",
@@ -610,7 +610,7 @@
           "presidency"
         ],
         "explanation": "A separate president could carry out federal laws.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -621,7 +621,7 @@
           "judiciary"
         ],
         "explanation": "A national judiciary could resolve federal legal disputes.",
-        "basePoints": 80
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -630,7 +630,7 @@
           "supremacy clause"
         ],
         "explanation": "Valid federal law took precedence over conflicting state law.",
-        "basePoints": 100
+        "basePoints": 60
       }
     ],
     "kind": "notes-category",
@@ -660,7 +660,7 @@
         "label": "Enumerated Powers",
         "aliases": [],
         "explanation": "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -672,7 +672,7 @@
           "division of powers among branches"
         ],
         "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -683,7 +683,7 @@
           "branches check one another"
         ],
         "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -693,7 +693,7 @@
           "sharing power between national and state governments"
         ],
         "explanation": "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -735,7 +735,7 @@
           "white house"
         ],
         "explanation": "People can seek attention and action from the president.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -755,7 +755,7 @@
           "lawsuits"
         ],
         "explanation": "People can bring legal claims to challenge government action.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -793,7 +793,7 @@
           "federal agency"
         ],
         "explanation": "People can seek action from agencies implementing national law.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -802,7 +802,7 @@
           "federal court"
         ],
         "explanation": "People can bring appropriate legal claims in federal court.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -811,7 +811,7 @@
           "governors"
         ],
         "explanation": "People can seek action from a state executive.",
-        "basePoints": 80
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -820,7 +820,7 @@
           "state legislatures"
         ],
         "explanation": "People can seek state laws through elected state legislators.",
-        "basePoints": 100
+        "basePoints": 40
       },
       {
         "id": "5",
@@ -829,7 +829,7 @@
           "state agency"
         ],
         "explanation": "People can seek action from state administrative institutions.",
-        "basePoints": 100
+        "basePoints": 80
       },
       {
         "id": "6",
@@ -838,7 +838,7 @@
           "state court"
         ],
         "explanation": "People can bring appropriate legal claims in state court.",
-        "basePoints": 100
+        "basePoints": 60
       },
       {
         "id": "7",
@@ -849,7 +849,7 @@
           "county government"
         ],
         "explanation": "People can seek policy changes through local institutions.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -878,7 +878,7 @@
         "label": "Radio",
         "aliases": [],
         "explanation": "Radio lets a president address a large audience directly.",
-        "basePoints": 20
+        "basePoints": 80
       },
       {
         "id": "1",
@@ -896,7 +896,7 @@
           "online platforms"
         ],
         "explanation": "Social media lets presidents publish immediately and reach followers without first passing through a news organization.",
-        "basePoints": 60
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -951,7 +951,7 @@
           "lack of executive"
         ],
         "explanation": "There was no separate national executive branch to carry out Congress’s decisions.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -962,7 +962,7 @@
           "no judiciary"
         ],
         "explanation": "The Articles did not establish a general national court system to resolve federal legal disputes.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "4",
@@ -975,7 +975,7 @@
           "unanimous consent"
         ],
         "explanation": "Changing the Articles required approval from all thirteen states, making reform difficult.",
-        "basePoints": 100
+        "basePoints": 80
       }
     ],
     "source": {
@@ -1006,7 +1006,7 @@
           "virginia"
         ],
         "explanation": "A plan of government calling for a three-branch government with a bicameral legislature, where more populous states would have more representation.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -1015,7 +1015,7 @@
           "new jersey"
         ],
         "explanation": "A plan of government that provided for a unicameral legislature with equal votes for each state.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1024,7 +1024,7 @@
           "connecticut compromise"
         ],
         "explanation": "The agreement creating a House with representation based on population and a Senate with two members from each state, resolving the large-state and small-state dispute.",
-        "basePoints": 60
+        "basePoints": 20
       }
     ],
     "source": {
@@ -1068,7 +1068,7 @@
           "committee"
         ],
         "explanation": "Committees consider bills and gather information.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1077,7 +1077,7 @@
           "hearing"
         ],
         "explanation": "Hearings let Congress receive information and arguments.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -1088,7 +1088,7 @@
           "write to congress"
         ],
         "explanation": "People can communicate concerns directly to their representatives.",
-        "basePoints": 80
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -1130,7 +1130,7 @@
           "licenses"
         ],
         "explanation": "States license many professions.",
-        "basePoints": 40
+        "basePoints": 80
       },
       {
         "id": "2",
@@ -1150,7 +1150,7 @@
           "policing"
         ],
         "explanation": "States exercise broad public-safety responsibilities.",
-        "basePoints": 80
+        "basePoints": 40
       },
       {
         "id": "4",
@@ -1160,7 +1160,7 @@
           "administer elections"
         ],
         "explanation": "States administer elections subject to constitutional and federal legal requirements.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -1202,7 +1202,7 @@
           "borrow"
         ],
         "explanation": "Both levels can borrow money.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1212,7 +1212,7 @@
           "establish courts"
         ],
         "explanation": "Both levels have court systems.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -1222,7 +1222,7 @@
           "legislate"
         ],
         "explanation": "Both levels make laws within their authority.",
-        "basePoints": 80
+        "basePoints": 20
       },
       {
         "id": "4",
@@ -1231,7 +1231,7 @@
           "law enforcement"
         ],
         "explanation": "Both levels carry out and enforce laws.",
-        "basePoints": 100
+        "basePoints": 20
       },
       {
         "id": "5",
@@ -1241,7 +1241,7 @@
           "spend"
         ],
         "explanation": "Both levels spend to carry out public responsibilities.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -1275,7 +1275,7 @@
           "grants for specific purposes"
         ],
         "explanation": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -1297,7 +1297,7 @@
           "mandate"
         ],
         "explanation": "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -1308,7 +1308,7 @@
           "federal requirement without funding"
         ],
         "explanation": "A federal requirement without enough federal money to cover its cost.",
-        "basePoints": 80
+        "basePoints": 60
       }
     ],
     "kind": "notes-category",
@@ -1346,14 +1346,14 @@
         "label": "Medicare",
         "aliases": [],
         "explanation": "Medicare is a mandatory-spending program.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
         "label": "Medicaid",
         "aliases": [],
         "explanation": "Medicaid is a mandatory-spending program.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -1593,7 +1593,7 @@
           "committee inaction"
         ],
         "explanation": "A committee may refuse to advance a bill.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -1603,7 +1603,7 @@
           "house rejection"
         ],
         "explanation": "The full House may reject the proposal.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1622,7 +1622,7 @@
           "veto"
         ],
         "explanation": "A regular veto blocks enactment unless both chambers override it.",
-        "basePoints": 80
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -1665,7 +1665,7 @@
           "independent judgment"
         ],
         "explanation": "Members may use their own assessment of the public interest.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1675,7 +1675,7 @@
           "winning reelection"
         ],
         "explanation": "Members consider whether their choices help or hurt their chances of remaining in office.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "3",
@@ -1685,7 +1685,7 @@
           "party leadership"
         ],
         "explanation": "Party priorities may conflict with local preferences.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -1727,7 +1727,7 @@
           "international affairs"
         ],
         "explanation": "International responsibilities can encourage a stronger executive role.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -1736,7 +1736,7 @@
           "expectations"
         ],
         "explanation": "The public may expect the president to solve national problems.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -1746,7 +1746,7 @@
           "bigger executive branch"
         ],
         "explanation": "A larger executive organization provides more capacity for presidential action.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "4",
@@ -1756,7 +1756,7 @@
           "broad laws"
         ],
         "explanation": "Broad laws can give the executive room to choose implementation details.",
-        "basePoints": 100
+        "basePoints": 80
       }
     ],
     "kind": "notes-category",
@@ -1803,7 +1803,7 @@
           "faithful execution of laws"
         ],
         "explanation": "Energy helps government carry federal law into effect.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -1828,7 +1828,7 @@
           "secure freedom"
         ],
         "explanation": "Energy can help protect people’s freedom and rights.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -1876,7 +1876,7 @@
           "go public"
         ],
         "explanation": "A tactic through which presidents reach out directly to the American people to pressure Congress on policy goals.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -1885,7 +1885,7 @@
           "setting the agenda"
         ],
         "explanation": "Influencing which problems officials and the public treat as priorities. A presidential address can draw attention to a proposal without itself making the proposal law.",
-        "basePoints": 80
+        "basePoints": 60
       }
     ],
     "source": {
@@ -1949,7 +1949,7 @@
           "financial resources"
         ],
         "explanation": "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure.",
-        "basePoints": 80
+        "basePoints": 60
       },
       {
         "id": "3",
@@ -1965,7 +1965,7 @@
           "powers suited to the job"
         ],
         "explanation": "The president needs enough legal authority to carry out the responsibilities of the office.",
-        "basePoints": 100
+        "basePoints": 60
       }
     ],
     "lesson": "2.3",
@@ -2025,7 +2025,7 @@
           "keep sensitive plans secret"
         ],
         "explanation": "Keeping sensitive plans confidential when necessary.",
-        "basePoints": 80
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -2041,7 +2041,7 @@
           "acting without delay"
         ],
         "explanation": "Acting promptly when delay could cause harm.",
-        "basePoints": 100
+        "basePoints": 60
       }
     ],
     "lesson": "2.3",
@@ -2154,7 +2154,7 @@
         "label": "Hold",
         "aliases": [],
         "explanation": "A senator’s signal that they may object to a unanimous-consent request, potentially delaying action.",
-        "basePoints": 60
+        "basePoints": 80
       },
       {
         "id": "3",
@@ -2163,7 +2163,7 @@
           "unanimous consent"
         ],
         "explanation": "A Senate agreement to proceed without objection, often used to bring up bills and manage debate.",
-        "basePoints": 80
+        "basePoints": 100
       }
     ],
     "source": {
@@ -2198,7 +2198,7 @@
           "trading legislative support"
         ],
         "explanation": "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy.",
-        "basePoints": 20
+        "basePoints": 40
       },
       {
         "id": "1",
@@ -2209,7 +2209,7 @@
           "pork barrel spending"
         ],
         "explanation": "Directing spending toward a member’s district or state, often within a larger spending bill. Local benefits can help build support for legislation.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -2218,7 +2218,7 @@
           "earmarks"
         ],
         "explanation": "An addition to a piece of legislation that directs specific funds to projects within districts or states.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "source": {
@@ -2258,7 +2258,7 @@
           "discretionary"
         ],
         "explanation": "Spending set through annual appropriations, including funding for defense, education, and infrastructure.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -2312,7 +2312,7 @@
           "a compelling interest and narrowly tailored means"
         ],
         "explanation": "The Court’s toughest review: the state must show a compelling reason and a map closely fitted to it when race predominates in drawing district lines. Applying the test does not automatically invalidate the district.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2321,7 +2321,7 @@
           "majority minority"
         ],
         "explanation": "A district in which a racial or ethnic minority forms a majority of the population. Shaw did not ban every such district; the constitutional question concerns how race shaped the boundaries.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "source": {
@@ -2369,7 +2369,7 @@
           "7 years citizenship"
         ],
         "explanation": "Representatives must have been U.S. citizens for seven years.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2380,7 +2380,7 @@
           "state residency"
         ],
         "explanation": "Representatives must inhabit their state when elected; the Constitution does not require residence within the district.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -2424,7 +2424,7 @@
           "9 years citizenship"
         ],
         "explanation": "Senators must have been U.S. citizens for nine years.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2435,7 +2435,7 @@
           "state residency"
         ],
         "explanation": "Senators must inhabit the state they represent when elected.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -2473,7 +2473,7 @@
           "whole"
         ],
         "explanation": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2482,7 +2482,7 @@
           "discharge"
         ],
         "explanation": "A way to bring a bill out of a House committee with signatures from a majority of House members. It is difficult to use and does not itself pass the bill.",
-        "basePoints": 60
+        "basePoints": 80
       }
     ],
     "kind": "notes-category",
@@ -2525,7 +2525,7 @@
           "investigate"
         ],
         "explanation": "Committees study policy details and proposals.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -2579,7 +2579,7 @@
           "ambassadors"
         ],
         "explanation": "The president nominates ambassadors, subject to Senate confirmation.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2590,7 +2590,7 @@
           "judge"
         ],
         "explanation": "The Senate confirms presidential nominations to the federal judiciary.",
-        "basePoints": 60
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -2632,7 +2632,7 @@
           "congressional authorization"
         ],
         "explanation": "Congress can authorize military action through legislation.",
-        "basePoints": 40
+        "basePoints": 60
       },
       {
         "id": "2",
@@ -2644,7 +2644,7 @@
           "appropriations"
         ],
         "explanation": "Congress controls needed military appropriations.",
-        "basePoints": 60
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -2686,7 +2686,7 @@
           "growing ideological distance between parties"
         ],
         "explanation": "The widening ideological distance between parties, which can make compromise and agreement harder.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -2737,7 +2737,7 @@
           "purpose"
         ],
         "explanation": "The strategy is intended to advance a particular policy objective.",
-        "basePoints": 40
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -2747,7 +2747,7 @@
           "action sought"
         ],
         "explanation": "A president may seek public support, a legislative vote, or another response.",
-        "basePoints": 60
+        "basePoints": 40
       },
       {
         "id": "3",
@@ -2757,7 +2757,7 @@
           "whose cooperation is needed"
         ],
         "explanation": "Communication does not remove the need for other officials’ lawful cooperation.",
-        "basePoints": 80
+        "basePoints": 60
       }
     ],
     "kind": "notes-category",
@@ -2945,7 +2945,7 @@
           "accountable for official decisions"
         ],
         "explanation": "People can examine and criticize presidential decisions. Serious misconduct can lead to investigation, impeachment by the House, and a Senate trial.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "source": {
@@ -2991,7 +2991,7 @@
           "constitutional tools"
         ],
         "explanation": "Officials also need institutional powers that make resistance possible.",
-        "basePoints": 80
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -3136,7 +3136,7 @@
           "national powers"
         ],
         "explanation": "The government receives responsibilities assigned to the whole country.",
-        "basePoints": 100
+        "basePoints": 80
       }
     ],
     "kind": "notes-category",
@@ -3168,7 +3168,7 @@
           "state conventions"
         ],
         "explanation": "People approved the Constitution through separate state conventions.",
-        "basePoints": 20
+        "basePoints": 60
       },
       {
         "id": "1",
@@ -3179,7 +3179,7 @@
           "equal state representation"
         ],
         "explanation": "Every state receives two senators.",
-        "basePoints": 60
+        "basePoints": 20
       },
       {
         "id": "2",
@@ -3189,7 +3189,7 @@
           "state governments"
         ],
         "explanation": "States keep their own governments and important powers.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -3242,7 +3242,7 @@
           "sending a fugitive back"
         ],
         "explanation": "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge.",
-        "basePoints": 100
+        "basePoints": 40
       }
     ],
     "kind": "notes-category",
@@ -3283,7 +3283,7 @@
           "supremacy"
         ],
         "explanation": "Maryland could not tax and obstruct a valid federal institution.",
-        "basePoints": 40
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -3327,7 +3327,7 @@
           "congressional authorization"
         ],
         "explanation": "A law enacted by Congress can authorize a particular action.",
-        "basePoints": 60
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -3370,7 +3370,7 @@
           "fourteenth amendment equal protection"
         ],
         "explanation": "The Fourteenth Amendment requires states to provide equal protection of the laws.",
-        "basePoints": 40
+        "basePoints": 20
       }
     ],
     "kind": "notes-category",
@@ -4326,7 +4326,7 @@
           "NC",
           "State of North Carolina"
         ],
-        "basePoints": 100,
+        "basePoints": 60,
         "explanation": "North Carolina was one of the original thirteen states."
       },
       {
@@ -4336,7 +4336,7 @@
           "RI",
           "State of Rhode Island"
         ],
-        "basePoints": 100,
+        "basePoints": 80,
         "explanation": "Rhode Island was one of the original thirteen states."
       }
     ],
