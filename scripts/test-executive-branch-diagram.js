@@ -64,6 +64,26 @@ assert(paths.get('Advisory Committee on Undersea Features').includes('U.S. Board
 assert(paths.get('National Detector Dog Training Center').includes('Plant Protection and Quarantine'));
 assert(paths.get('FBI Art Crime Team').includes('Federal Bureau of Investigation (FBI)'));
 assert(paths.get('National Indian Gaming Commission').includes('Department of the Interior'));
+[
+ ['U.S. National Arboretum','Agricultural Research Service'],
+ ['National Bonsai & Penjing Museum','U.S. National Arboretum'],
+ ['National Plant Germplasm System','Agricultural Research Service'],
+ ['Pension Benefit Guaranty Corporation (PBGC)','Department of Labor'],
+ ['Defense POW/MIA Accounting Agency (DPAA)','Defense agencies'],
+ ['United States Antarctic Program','National Science Foundation'],
+ ['Human Foods Program','Food and Drug Administration (FDA)'],
+ ['Jet Propulsion Laboratory (JPL)','National Aeronautics and Space Administration (NASA)']
+].forEach(([child,parent])=>assert(paths.get(child).includes(parent),child+' belongs under '+parent));
+['Surface Transportation Board (STB)','Occupational Safety and Health Review Commission','Federal Labor Relations Authority (FLRA)','Postal Regulatory Commission'].forEach(name=>{
+ assert(paths.get(name).includes('Outside the departments'),name+' is independent of the executive departments.');
+});
+function findNode(id,node=tree){return node.id===id?node:node.children.map(child=>findNode(id,child)).find(Boolean);}
+assert.match(findNode('jet-propulsion-laboratory').desc,/managed by Caltech/);
+assert.strictEqual(findNode('national-bonsai-penjing-museum').kind,'collection','A museum collection is not a standalone agency.');
+for(const [id,term] of [['office-of-special-counsel','Hatch Act'],['defense-pow-mia-accounting-agency','missing soldiers'],['us-national-arboretum','bonsai'],['human-foods-program','food dyes']]){
+ const n=findNode(id);assert([...n.topics,...n.relatedTopics].includes(term),id+' should be discoverable by '+term);
+}
+assert(!findNode('national-bonsai-penjing-museum').topics.includes('food dyes'),'Do not spread unrelated mission tags down the tree.');
 const diagramScript = fs.readFileSync(path.join(__dirname,'..','executive-branch-diagram.js'),'utf8');
 assert(diagramScript.includes('link.href=item.url'),'Cards must link to their own primary destination, not inherited evidence.');
 assert(!diagramScript.includes('link.href=item.source'),'Evidence is not a substitute for an organization’s own site.');

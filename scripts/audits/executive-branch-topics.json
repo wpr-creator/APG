@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19",
+  "updatedAt": "2026-11-20",
   "method": "Curated plain-language discovery terms based on the responsibilities described by official sources. Related topics propagate only upward from subunits; they do not assign a department’s whole mission to every child office.",
   "additions": [
     {
@@ -3213,6 +3213,585 @@
         "compact assistance"
       ],
       "evidence": "https://www.doi.gov/oia"
+    },
+    {
+      "id": "center-for-devices-and-radiological-health",
+      "topics": [
+        "hearing aids",
+        "contact lens safety",
+        "medical implants",
+        "MRI machines",
+        "laser pointers",
+        "radiation emitting products"
+      ],
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-devices-and-radiological-health"
+    },
+    {
+      "id": "consumer-product-safety-commission",
+      "topics": [
+        "bunk beds",
+        "trampolines",
+        "toy magnets",
+        "baby walkers",
+        "playground equipment",
+        "portable generators",
+        "space heaters",
+        "pool drains"
+      ],
+      "evidence": "https://www.usa.gov/agencies/consumer-product-safety-commission"
+    },
+    {
+      "id": "office-of-weights-and-measures",
+      "topics": [
+        "gas pump accuracy",
+        "grocery price scanners",
+        "price per ounce",
+        "package net weight",
+        "checkout price accuracy"
+      ],
+      "evidence": "https://www.nist.gov/pml/owm"
+    },
+    {
+      "id": "center-for-tobacco-products",
+      "topics": [
+        "vape pens",
+        "nicotine pouches",
+        "flavored tobacco",
+        "smokeless tobacco"
+      ],
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/center-tobacco-products"
+    },
+    {
+      "id": "national-institute-on-deafness-and-other-communication-disorders",
+      "topics": [
+        "stuttering",
+        "dizziness research",
+        "loss of smell",
+        "loss of taste",
+        "speech and language research"
+      ],
+      "evidence": "https://www.nidcd.nih.gov/"
+    },
+    {
+      "id": "national-institute-of-dental-and-craniofacial-research",
+      "topics": [
+        "dry mouth",
+        "jaw pain",
+        "dental fillings research",
+        "cleft palate research"
+      ],
+      "evidence": "https://www.nidcr.nih.gov/"
+    },
+    {
+      "id": "planetary-defense-coordination-office",
+      "topics": [
+        "asteroid impact"
+      ],
+      "evidence": "https://science.nasa.gov/planetary-defense/"
+    },
+    {
+      "id": "office-of-planetary-protection",
+      "topics": [
+        "contaminating other planets",
+        "samples returning from space"
+      ],
+      "evidence": "https://sma.nasa.gov/sma-disciplines/planetary-protection"
+    },
+    {
+      "id": "fair-housing-and-equal-opportunity",
+      "topics": [
+        "service animals in housing",
+        "disability accommodations in housing"
+      ],
+      "evidence": "https://www.usa.gov/agencies/office-of-fair-housing-and-equal-opportunity"
+    },
+    {
+      "id": "bureau-of-consumer-protection",
+      "topics": [
+        "video game purchases",
+        "fake online reviews",
+        "impersonation scams",
+        "online shopping scams"
+      ],
+      "evidence": "https://www.ftc.gov/about-ftc/bureaus-offices/bureau-consumer-protection"
+    },
+    {
+      "id": "u-s-postal-inspection-service",
+      "topics": [
+        "stolen checks in mail",
+        "postal money order scams"
+      ],
+      "evidence": "https://www.uspis.gov/"
+    },
+    {
+      "id": "national-detector-dog-training-center",
+      "topics": [
+        "agriculture detector dogs",
+        "training detection dogs"
+      ],
+      "evidence": "https://www.aphis.usda.gov/plant-protection-quarantine/detector-dogs"
+    },
+    {
+      "id": "fbi-art-crime-team",
+      "topics": [
+        "cultural property crime"
+      ],
+      "evidence": "https://www.fbi.gov/investigate/transnational-organized-crime/art-crime"
+    },
+    {
+      "id": "bee-research-laboratory",
+      "topics": [
+        "bee colony health"
+      ],
+      "evidence": "https://www.ars.usda.gov/northeast-area/beltsville-md-barc/beltsville-agricultural-research-center/bee-research-laboratory/"
+    },
+    {
+      "id": "office-of-surface-mining-reclamation-and-enforcement",
+      "topics": [
+        "mine reclamation",
+        "coal mine cleanup"
+      ],
+      "evidence": "https://www.usa.gov/agencies/office-of-surface-mining-reclamation-and-enforcement"
+    },
+    {
+      "id": "headstones-markers-and-medallions",
+      "topics": [
+        "veteran grave markers",
+        "military headstones",
+        "veteran burial medallions"
+      ],
+      "evidence": "https://www.va.gov/burials-memorials/memorial-items/headstones-markers/"
+    },
+    {
+      "id": "national-geodetic-survey",
+      "topics": [
+        "survey benchmarks",
+        "measuring elevation",
+        "mapping coordinates",
+        "geodetic control"
+      ],
+      "evidence": "https://geodesy.noaa.gov/"
+    },
+    {
+      "id": "defect-investigations-and-recalls",
+      "topics": [
+        "airbag recalls",
+        "vehicle safety complaints",
+        "car recalls",
+        "defective seat belts"
+      ],
+      "evidence": "https://www.nhtsa.gov/recalls"
+    },
+    {
+      "id": "u-s-board-on-geographic-names",
+      "topics": [
+        "naming a mountain",
+        "place name spelling",
+        "geographic name disputes",
+        "official place names"
+      ],
+      "evidence": "https://www.usgs.gov/us-board-on-geographic-names"
+    },
+    {
+      "id": "office-of-insular-affairs",
+      "topics": [
+        "island territories",
+        "territorial assistance",
+        "Guam assistance",
+        "American Samoa assistance"
+      ],
+      "evidence": "https://www.doi.gov/oia"
+    },
+    {
+      "id": "federal-maritime-commission",
+      "topics": [
+        "shipping containers",
+        "ocean freight",
+        "cargo shipping",
+        "shipping rates",
+        "port detention charges",
+        "demurrage",
+        "freight forwarders",
+        "cruise passenger assistance"
+      ],
+      "evidence": "https://www.fmc.gov/"
+    },
+    {
+      "id": "surface-transportation-board",
+      "topics": [
+        "railroad mergers",
+        "freight rail rates",
+        "train shipping",
+        "rail service complaints",
+        "rail line abandonment",
+        "railroad competition",
+        "railway construction",
+        "rail freight"
+      ],
+      "evidence": "https://www.stb.gov/about-stb/"
+    },
+    {
+      "id": "selective-service-system",
+      "topics": [
+        "draft registration",
+        "military draft",
+        "turning 18",
+        "conscientious objectors",
+        "alternative service",
+        "register for the draft",
+        "selective service number",
+        "military registration"
+      ],
+      "evidence": "https://www.sss.gov/"
+    },
+    {
+      "id": "federal-housing-finance-agency",
+      "topics": [
+        "mortgage finance",
+        "Fannie Mae",
+        "Freddie Mac",
+        "Federal Home Loan Banks",
+        "housing finance",
+        "mortgage markets",
+        "home loans",
+        "mortgage funding"
+      ],
+      "evidence": "https://www.fhfa.gov/"
+    },
+    {
+      "id": "postal-regulatory-commission",
+      "topics": [
+        "postage rates",
+        "stamp prices",
+        "postal rates",
+        "mail service standards",
+        "postal complaints",
+        "mail delivery performance",
+        "postal finances",
+        "postal regulation"
+      ],
+      "evidence": "https://www.prc.gov/"
+    },
+    {
+      "id": "office-of-government-ethics",
+      "topics": [
+        "conflicts of interest",
+        "government ethics",
+        "financial disclosures",
+        "official gifts",
+        "ethics agreements",
+        "public financial reports",
+        "ethics training",
+        "outside employment"
+      ],
+      "evidence": "https://www.oge.gov/"
+    },
+    {
+      "id": "office-of-special-counsel",
+      "topics": [
+        "federal whistleblowers",
+        "Hatch Act",
+        "political activity at work",
+        "retaliation against employees",
+        "prohibited personnel practices",
+        "report government wrongdoing",
+        "civil service protections",
+        "whistleblower disclosures"
+      ],
+      "evidence": "https://osc.gov/"
+    },
+    {
+      "id": "federal-labor-relations-authority",
+      "topics": [
+        "federal employee unions",
+        "federal collective bargaining",
+        "federal labor disputes",
+        "unfair labor practices in government",
+        "union representation in government",
+        "federal union elections",
+        "federal labor negotiations"
+      ],
+      "evidence": "https://www.usa.gov/agencies/federal-labor-relations-authority"
+    },
+    {
+      "id": "merit-systems-protection-board",
+      "topics": [
+        "federal employee appeals",
+        "civil service appeals",
+        "federal employee firing",
+        "merit system",
+        "reductions in force",
+        "personnel appeals",
+        "government job protections"
+      ],
+      "evidence": "https://www.mspb.gov/"
+    },
+    {
+      "id": "mine-safety-health-review-commission",
+      "topics": [
+        "mine safety appeals",
+        "mining penalties",
+        "contested mine citations",
+        "miners discrimination complaints",
+        "Mine Act",
+        "mine enforcement disputes"
+      ],
+      "evidence": "https://fmshrc.gov/content/frequently-asked-questions"
+    },
+    {
+      "id": "occupational-safety-health-review-commission",
+      "topics": [
+        "OSHA appeals",
+        "workplace safety penalties",
+        "contested OSHA citations",
+        "workplace inspection disputes",
+        "safety enforcement hearings",
+        "occupational safety cases"
+      ],
+      "evidence": "https://www.oshrc.gov/"
+    },
+    {
+      "id": "american-battle-monuments-commission",
+      "topics": [
+        "overseas military cemeteries",
+        "Normandy cemetery",
+        "war memorials abroad",
+        "burial records overseas",
+        "military remembrance",
+        "fallen service members",
+        "battle monuments"
+      ],
+      "evidence": "https://www.abmc.gov/"
+    },
+    {
+      "id": "national-capital-planning-commission",
+      "topics": [
+        "Washington DC planning",
+        "capital region",
+        "federal building plans",
+        "National Mall planning",
+        "memorial locations",
+        "public space design",
+        "federal development review"
+      ],
+      "evidence": "https://www.ncpc.gov/"
+    },
+    {
+      "id": "commission-of-fine-arts",
+      "topics": [
+        "memorial design",
+        "public art",
+        "coin designs",
+        "medal designs",
+        "architecture in Washington",
+        "Georgetown design",
+        "federal building design",
+        "aesthetic review"
+      ],
+      "evidence": "https://www.cfa.gov/"
+    },
+    {
+      "id": "advisory-council-historic-preservation",
+      "topics": [
+        "historic preservation",
+        "historic buildings",
+        "Section 106",
+        "historic properties",
+        "tribal consultation",
+        "preserving old places",
+        "federal projects and history"
+      ],
+      "evidence": "https://www.achp.gov/"
+    },
+    {
+      "id": "us-arctic-research-commission",
+      "topics": [
+        "Arctic research",
+        "Alaska research",
+        "polar science policy",
+        "permafrost research",
+        "Arctic communities",
+        "Arctic research goals",
+        "Arctic water and sanitation"
+      ],
+      "evidence": "https://www.arctic.gov/"
+    },
+    {
+      "id": "railroad-retirement-board",
+      "topics": [
+        "railroad pensions",
+        "railroad retirement",
+        "railroad unemployment",
+        "railroad sickness benefits",
+        "rail worker survivors",
+        "railroad worker benefits",
+        "train worker retirement"
+      ],
+      "evidence": "https://www.rrb.gov/"
+    },
+    {
+      "id": "federal-retirement-thrift-investment-board",
+      "topics": [
+        "Thrift Savings Plan",
+        "TSP",
+        "federal retirement savings",
+        "federal retirement investments",
+        "military retirement savings",
+        "TSP funds",
+        "government employee savings"
+      ],
+      "evidence": "https://www.frtib.gov/"
+    },
+    {
+      "id": "pension-benefit-guaranty-corporation",
+      "topics": [
+        "pension insurance",
+        "failed pension plans",
+        "lost pensions",
+        "private retirement pensions",
+        "pension guarantees",
+        "bankrupt employer pensions",
+        "defined benefit plans"
+      ],
+      "evidence": "https://www.govinfo.gov/content/pkg/USCODE-2024-title29/pdf/USCODE-2024-title29-chap18-subchapIII-subtitleA-sec1301.pdf"
+    },
+    {
+      "id": "defense-pow-mia-accounting-agency",
+      "topics": [
+        "missing soldiers",
+        "prisoners of war",
+        "POW",
+        "MIA",
+        "identifying remains",
+        "wartime missing personnel",
+        "battlefield recovery",
+        "forensic identification",
+        "military DNA identification"
+      ],
+      "evidence": "https://www.usa.gov/agencies/defense-pow/mia-accounting-agency"
+    },
+    {
+      "id": "defense-security-cooperation-agency",
+      "topics": [
+        "foreign military sales",
+        "military aid",
+        "security assistance",
+        "training allied forces",
+        "foreign military equipment",
+        "defense cooperation",
+        "arms transfers"
+      ],
+      "evidence": "https://www.usa.gov/agencies/defense-security-cooperation-agency"
+    },
+    {
+      "id": "armstrong-flight-research-center",
+      "topics": [
+        "experimental aircraft",
+        "flight testing",
+        "supersonic research",
+        "sonic booms",
+        "Edwards California",
+        "aeronautics",
+        "research pilots"
+      ],
+      "evidence": "https://www.nasa.gov/armstrong/"
+    },
+    {
+      "id": "stennis-space-center",
+      "topics": [
+        "rocket engine testing",
+        "rocket propulsion",
+        "Mississippi space research",
+        "engine test stands",
+        "space engines",
+        "propulsion testing"
+      ],
+      "evidence": "https://www.nasa.gov/stennis/"
+    },
+    {
+      "id": "jet-propulsion-laboratory",
+      "topics": [
+        "Mars rovers",
+        "Voyager",
+        "robotic spacecraft",
+        "Deep Space Network",
+        "planetary probes",
+        "Caltech",
+        "space robots",
+        "interplanetary missions"
+      ],
+      "evidence": "https://www.jpl.nasa.gov/who-we-are/"
+    },
+    {
+      "id": "us-national-arboretum",
+      "topics": [
+        "arboretum",
+        "trees",
+        "garden plants",
+        "plant breeding",
+        "ornamental plants",
+        "horticulture",
+        "plant collections",
+        "botanical research"
+      ],
+      "evidence": "https://usna.usda.gov/discover/plant-finder/"
+    },
+    {
+      "id": "national-bonsai-penjing-museum",
+      "topics": [
+        "bonsai",
+        "penjing",
+        "miniature trees",
+        "Japanese trees",
+        "Chinese tree art",
+        "living sculptures",
+        "bonsai museum"
+      ],
+      "evidence": "https://www.usna.usda.gov/discover/gardens-collections/national-bonsai-penjing-museum"
+    },
+    {
+      "id": "national-plant-germplasm-system",
+      "topics": [
+        "seed banks",
+        "crop genetic diversity",
+        "germplasm",
+        "heirloom crops",
+        "crop wild relatives",
+        "preserving seeds",
+        "plant gene banks",
+        "crop breeding"
+      ],
+      "evidence": "https://www.ars.usda.gov/crop-production-and-protection/plant-genetic-resources-genomics-and-genetic-improvement/docs/npgs-plan/"
+    },
+    {
+      "id": "united-states-antarctic-program",
+      "topics": [
+        "Antarctica",
+        "South Pole",
+        "McMurdo Station",
+        "Palmer Station",
+        "polar research stations",
+        "Antarctic science",
+        "ice research",
+        "Antarctic research logistics"
+      ],
+      "evidence": "https://www.usap.gov/"
+    },
+    {
+      "id": "human-foods-program",
+      "topics": [
+        "food dyes",
+        "food additives",
+        "infant formula safety",
+        "food allergies",
+        "food poisoning",
+        "dietary supplements",
+        "nutrition labels",
+        "chemicals in food",
+        "foodborne illness",
+        "food contamination"
+      ],
+      "evidence": "https://www.fda.gov/about-fda/fda-organization/human-foods-program"
     }
   ]
 }

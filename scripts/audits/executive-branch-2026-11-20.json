@@ -1,0 +1,28 @@
+{
+  "checkedAt": "2026-11-20",
+  "previousEntries": 482,
+  "currentEntries": 511,
+  "addedEntries": 29,
+  "addedDirectSearchTerms": 285,
+  "findings": [
+    "Replaced the Navy department\u2019s dead Secretary URL with the official SECNAV homepage.",
+    "Replaced the dead ETA unemployment-insurance URL with Labor\u2019s current unemployment-insurance resource.",
+    "Kept current DOJ, USDA, and CIA organization names rather than restoring former titles.",
+    "Kept statutory Department of Defense and all 15 executive departments.",
+    "Kept proposed HHS reorganizations separate from verified operating divisions.",
+    "Placed PBGC within Labor per 29 USC 1302; independent review commissions remain outside Labor.",
+    "Distinguished JPL as a NASA-funded, Caltech-managed center and the bonsai museum as a collection.",
+    "Preserved upward-only topic propagation; no broad department missions are copied down to unrelated offices."
+  ],
+  "placementReferences": {
+    "PBGC": "https://www.govinfo.gov/content/pkg/USCODE-2024-title29/pdf/USCODE-2024-title29-chap18-subchapIII-subtitleA-sec1301.pdf",
+    "STB": "https://www.stb.gov/about-stb/",
+    "OSHRC": "https://www.oshrc.gov/",
+    "JPL": "https://www.jpl.nasa.gov/who-we-are/",
+    "NASA centers": "https://www.nasa.gov/centers-and-facilities/",
+    "USAP": "https://www.usap.gov/",
+    "US National Arboretum": "https://usna.usda.gov/discover/plant-finder/",
+    "FDA Human Foods Program": "https://www.fda.gov/about-fda/fda-organization/human-foods-program"
+  },
+  "httpMethod": "GET all original 482 entries; retry network failures; GET all 29 added entries and the two replacement links. Per-entry latestHttpCheck records preserve access restrictions and errors rather than claiming identity verification from HTTP alone."
+}

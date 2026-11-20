@@ -19,13 +19,13 @@ async function worker(){
       const response=await fetch(url,{signal:AbortSignal.timeout(20000),headers:{'User-Agent':'APG course-site link audit'}});
       const title=(await response.text()).match(/<title[^>]*>([\s\S]*?)<\/title>/i)?.[1]?.replace(/\s+/g,' ').trim()||'';
       const softError=/page not found|404 error|access denied|request rejected/i.test(title);
-      checks.set(url,{httpStatus:response.status,finalUrl:response.url,title,result:response.ok&&!softError?'reachable':[401,403,429].includes(response.status)?'automated-access-restricted':'review'});
+      checks.set(url,{httpStatus:response.status,finalUrl:response.url,pageTitle:title,result:response.ok&&!softError?'reachable':[401,403,429].includes(response.status)?'automated-access-restricted':'review'});
     }catch(error){checks.set(url,{result:'review',error:error.message});}
   }
 }
 (async()=>{
   await Promise.all(Array.from({length:6},worker));
-  const entries=nodes.map(node=>({id:node.id,title:node.title,url:node.url,evidence:node.source,...checks.get(node.url)}));
+  const entries=nodes.map(node=>({id:node.id,title:node.title,url:node.url,linkType:node.linkType,evidence:node.source,...checks.get(node.url)}));
   const report={checkedAt:new Date().toISOString(),entries};
   const out=process.argv.indexOf('--output');
   if(out!==-1){if(!process.argv[out+1])throw new Error('--output requires a file path');fs.writeFileSync(process.argv[out+1],JSON.stringify(report,null,2)+'\n');}

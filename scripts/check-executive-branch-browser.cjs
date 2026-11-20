@@ -36,6 +36,11 @@ const url=(process.env.APG_BASE_URL||'http://127.0.0.1:8765/').replace(/\/?$/,'/
    await page.keyboard.press('Escape');assert(await page.locator('#branch-results').isHidden());
    await page.locator('#jump').selectOption('department-of-energy');assert(await page.locator('#node-department-of-energy').evaluate(el=>el.classList.contains('selected')));
    await page.locator('#plus').click();const zoomed=await page.locator('#zoom').innerText();await page.locator('#minus').click();assert.notEqual(await page.locator('#zoom').innerText(),zoomed);
+   for(const [query,id] of [['bonsai','national-bonsai-penjing-museum'],['missing soldiers','defense-pow-mia-accounting-agency'],['food dyes','human-foods-program'],['Hatch Act','office-of-special-counsel'],['railroad mergers','surface-transportation-board']]){
+    await page.locator('#search').fill(query);
+    const result=page.locator('#results-list button[data-node="'+id+'"]');await result.waitFor();await result.click();
+    assert(await page.locator('#node-'+id).evaluate(el=>el.classList.contains('selected')),'Focus '+query+' on '+device.name);
+   }
    await page.locator('#search').fill('mosquito');
    assert(await page.locator('#results-list button[data-node="division-of-vector-borne-diseases"]').count());
    assert(await page.locator('#results-list button[data-node="centers-for-disease-control-and-prevention-cdc"]').count());

@@ -93,3 +93,6 @@ jobs:
 
       - name: Test Rotunda ascent sound and mute
         run: node scripts/test-rotunda-audio.js
+
+      - name: Test executive branch organization and audited links
+        run: node scripts/test-executive-branch-diagram.js
