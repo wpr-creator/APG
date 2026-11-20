@@ -1,6 +1,6 @@
 {
   "id": "course-through-2-3-notes-157",
-  "label": "Unit 1 \u00b7 Unit 2 through Lesson 2.3",
+  "label": "Unit 1 · Unit 2 through Lesson 2.3",
   "apTopicLimit": "2.7",
   "lessons": [
     "1.1",
@@ -19,12 +19,12 @@
   "weekdaysOnly": true,
   "promptsPerDay": 7,
   "secondsPerPrompt": 25,
-  "bankSize": 68,
-  "revision": "civics-trivia-20261120",
+  "bankSize": 70,
+  "revision": "government-trivia-20261120",
   "effectiveFrom": "2026-11-20",
   "previous": {
     "id": "course-through-2-3-notes-157",
-    "label": "Unit 1 \u00b7 Unit 2 through Lesson 2.3",
+    "label": "Unit 1 · Unit 2 through Lesson 2.3",
     "apTopicLimit": "2.7",
     "lessons": [
       "1.1",

@@ -69,3 +69,6 @@ jobs:
 
       - name: Test Rotunda answers and daily sets
         run: node scripts/test-rotunda.js
+
+      - name: Test Rotunda answer coverage and restricted categories
+        run: node scripts/test-rotunda-coverage.js

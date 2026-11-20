@@ -2,9 +2,11 @@
   "service": "APG Rotunda Scores",
   "projectId": "appgprj_6aff5c840cdc8191b7f3761eba0245b3",
   "url": "https://apg-rotunda-scores.endearingbuffalo5.chatgpt.site",
-  "sourceCheckout": "/Users/weston.rogers/Documents/Projects/APG-Rotunda-Scores",
-  "bankSha256": "9f3362956ebab478fa3407859cf387e7dd70cea240b5e570b0df63672fc5d13c",
-  "scope": "Shared Monday\u2013Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
+  "sourceCheckout": "/Users/westonrogers/Documents/apg-rotunda-scores",
+  "bankSha256": "4d2d17948e6e5237589a5c3b425f664d6a14976ded1dd6a6942d39545bc49ae6",
+  "scope": "Shared Monday–Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
   "checked": "2026-11-19",
-  "notes": "Curriculum-owned pool; no student unit selection. Weekends expose the previous Friday board. Service enforces deadlines and one daily attempt per anonymous device per curriculum. Reflecting Pool stays independent. QA accounts excluded. New broad trivia revision begins 2026-11-20; archived bank preserves previous sessions. Stable competition ID. Editorial rarity priors blend with observed answer frequencies."
+  "notes": "Curriculum-owned pool; no student unit selection. Weekends expose the previous Friday board. Service enforces deadlines and one daily attempt per anonymous device per curriculum. Reflecting Pool stays independent. QA accounts excluded. New broad trivia revision begins 2026-11-20; archived bank preserves previous sessions. Stable competition ID. Editorial rarity priors blend with observed answer frequencies. Answer coverage audit: 70 prompts and 697 answer groups. Variant corrections and known outside-category name guards synchronized with service; daily format, scoring and archive retained.",
+  "sourceCommit": "87243427d0433bdf1eb182c8650ee3a24e12b9fa",
+  "serviceVersion": 10
 }

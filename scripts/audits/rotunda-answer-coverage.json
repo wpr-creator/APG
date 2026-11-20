@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-19",
+  "effectiveFrom": "2026-11-20",
+  "categories": 70,
+  "answerGroups": 697,
+  "explicitVariants": 2685,
+  "bankSha256": "4d2d17948e6e5237589a5c3b425f664d6a14976ded1dd6a6942d39545bc49ae6",
+  "checks": [
+    "Every canonical answer and alias recognized",
+    "Known outside-category presidents and states rejected",
+    "54 targeted variant regressions",
+    "Daily pool reaches every category",
+    "Existing rarity priors preserved",
+    "Seven rounds and 25-second timer preserved",
+    "November 19 archive unchanged",
+    "Browser confirmed suggestion before submission, retry, canonical acceptance, full climb, and searchable guide"
+  ],
+  "sources": [
+    "https://krillion.io/",
+    "https://www.archives.gov/founding-docs/constitution-transcript",
+    "https://www.archives.gov/research/census/presidents",
+    "https://guides.loc.gov/presidents-portraits/chronological",
+    "https://www.senate.gov/artandhistory/history/common/briefing/senators_became_president.htm",
+    "https://guides.loc.gov/federalist-papers/full-text",
+    "https://www.uscurrency.gov/denominations",
+    "https://www.bls.gov/respondents/mwr/electronic-data-interchange/appendix-d-usps-state-abbreviations-and-fips-codes.htm",
+    "https://www.jimmycarterlibrary.gov/the-carters/jimmy-carter",
+    "https://www.clintonlibrary.gov/research/clinton-biographies"
+  ],
+  "approach": "Accessible name-one government categories, with state/presidential name trivia and covered AP Government concepts. Case prompts accept multiple meaningful connections. Article prompts distinguish original text from later amendments and interpretations."
+}

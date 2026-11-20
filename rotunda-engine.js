@@ -7,6 +7,8 @@ function distance(a,b){const d=Array.from({length:a.length+1},()=>Array(b.length
 function answerText(value){return normalize(value).replace(/^(?:(?:i think|i believe|my answer is|my guess is|answer is|answer would be|i would say|i d say|maybe|probably|it would be|it is|it s|its|that is|that s|this is|one of them is|one example is|example is|for example) )+/,'').replace(/^(?:would be|is called) /,'').split(/ (?:because|since|which means|meaning that) /)[0].trim();}
 function typoLimit(a,b){if(/\d/.test(a+b)||Math.min(a.length,b.length)<4)return 0;return Math.max(a.length,b.length)>=10?2:1;}
 function match(prompt,value){const n=answerText(value);if(!n)return{type:'empty'};if(n.length>120)return{type:'miss'};
+ // A real president outside a constrained category is not a spelling mistake.
+ if(prompt.rejectedAnswers?.some(value=>answerText(value)===n))return{type:'miss'};
  const exact=prompt.answers.filter(a=>[a.label,...a.aliases].some(s=>answerText(s)===n));if(exact.length===1)return{type:'correct',answer:exact[0]};if(exact.length>1&&prompt.allowAmbiguous)return{type:'choice',answers:exact};
  // Whole-answer distance only: no substring matches, no numeric guessing, no ambiguous ties.
  const guesses=prompt.answers.map(answer=>{let best=999;for(const s of [answer.label,...answer.aliases]){const v=answerText(s),negative=t=>/\b(?:no|not|never|cannot|cant)\b/.test(t),limit=negative(n)!==negative(v)?0:typoLimit(n,v);if(!limit||Math.abs(n.length-v.length)>limit)continue;const d=distance(n,v);if(d<=limit)best=Math.min(best,d);}return{answer,d:best};}).sort((a,b)=>a.d-b.d);

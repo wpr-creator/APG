@@ -5,7 +5,7 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'glossary-data.js'),'utf8'),co
 const synonym={bicameralism:'bicameral legislature','elite theory':'elite democracy',pluralism:'pluralist democracy',republic:'representative democracy',republicanism:'representative democracy','expressed powers':'enumerated powers','delegated powers':'enumerated powers','elastic clause':'necessary and proper clause'};
 const rootTerm=t=>synonym[E.normalize(t)]||E.normalize(t),rows=context.window.APG_GLOSSARY_UNITS.slice(0,2).flatMap(u=>Object.values(u.groups).flat()).filter(row=>row[2]?.some(lesson=>['1.1','1.2','1.3','1.4','1.5','2.1','2.2','2.3'].includes(lesson))),byTerm=new Map();
 for(const [term,definition]of rows)if(!byTerm.has(E.normalize(term)))byTerm.set(E.normalize(term),{term,definition,key:rootTerm(term)});
-const all=[...byTerm.values()],aliases=new Map();for(const p of archive)for(const a of p.answers){const key=rootTerm(a.label);aliases.set(key,[...(aliases.get(key)||[]),...a.aliases]);}
+const all=[...byTerm.values()],aliases=new Map();for(const p of [...archive,...base])for(const a of p.answers){const key=rootTerm(a.label);aliases.set(key,[...(aliases.get(key)||[]),...a.aliases]);}
 const common=new Set(['federalism','popular sovereignty','natural rights','checks and balances','separation of powers','limited government','democracy','constitution','bill of rights','executive branch','supreme court','cabinet','voting','impeachment','treaty','executive order']);
 const rare=new Set(['unanimous consent agreement','president pro tempore','committee of the whole','general revenue sharing','congressional authorization','responsibility for official conduct','privileges and immunities clause','full faith and credit clause']);
 const letters='ABCDEFGHILMNPRSTUW'.split(''),letterPrompts=[];
@@ -13,9 +13,10 @@ for(const letter of letters){const matched=all.filter(t=>t.term[0].toUpperCase()
  if(answers.length<4)continue;
  letterPrompts.push({id:'trivia-letter-'+letter.toLowerCase(),unit:1,lesson:'1.1',apTopics:['1.1','2.1','2.4'],prompt:'Name a Unit 1–2 glossary term that starts with '+letter+'.',hint:'Use a government term, principle, document, or case.',href:'course-tools.html#glossary',answers,difficulty:3,family:'glossary-letter',kind:'letter-category',letter,source:{document:'glossary-data.js',section:'Lessons 1.1–1.5 and 2.1–2.3; '+letter+' terms'}});
 }
-const bank=[...base,...letterPrompts];
+const selection=read('rotunda-category-selection.json'),trivia=read('rotunda-government-trivia.json');
+const bank=[...base.filter(p=>selection.courseCategoryIds.includes(p.id)),...trivia,...letterPrompts.filter(p=>selection.glossaryLetters.includes(p.letter))];
 for(const p of letterPrompts){const labels=new Map(p.answers.map(a=>[E.normalize(a.label),a.id])),claims=new Map();for(const a of p.answers)for(const value of a.aliases){const n=E.normalize(value);if(!claims.has(n))claims.set(n,new Set());claims.get(n).add(a.id);}for(const a of p.answers)a.aliases=a.aliases.filter(v=>{const n=E.normalize(v);return(!labels.has(n)||labels.get(n)===a.id)&&claims.get(n).size===1;});}
 // Keep shared surnames only where explicitly marked for a full-name choice.
 for(const p of bank){const used=new Map();for(const a of p.answers){a.aliases=[...new Set(a.aliases)];for(const v of [a.label,...a.aliases]){const n=E.normalize(v);if(used.has(n)&&used.get(n)!==a.id&&!p.allowAmbiguous)throw Error(p.id+': ambiguous alias '+v);used.set(n,a.id);}}if(p.answers.length<3)throw Error('Too few concepts: '+p.id);}
 const output=JSON.stringify(bank,null,2)+'\n',target=path.join(root,'rotunda-data.json');if(process.argv.includes('--check')){if(fs.readFileSync(target,'utf8')!==output)throw Error('Rebuild Rotunda bank with node scripts/build-rotunda-bank.js');}else fs.writeFileSync(target,output);
-console.log('Rotunda trivia:',bank.length,'categories;',bank.reduce((n,p)=>n+p.answers.length,0),'answer groups;',letterPrompts.length,'glossary letters.');
+console.log('Rotunda trivia:',bank.length,'categories;',bank.reduce((n,p)=>n+p.answers.length,0),'answer groups;',bank.filter(p=>p.kind==='letter-category').length,'letter categories.');

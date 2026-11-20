@@ -104,7 +104,8 @@
         "aliases": [
           "Madison",
           "President James Madison",
-          "President Madison"
+          "President Madison",
+          "Father of the Constitution"
         ],
         "basePoints": 60,
         "explanation": "A president of the United States."
@@ -130,7 +131,8 @@
           "President John Quincy Adams",
           "President Adams",
           "President John Q Adams",
-          "President JQ Adams"
+          "President JQ Adams",
+          "JQA"
         ],
         "basePoints": 80,
         "explanation": "A president of the United States."
@@ -141,7 +143,8 @@
         "aliases": [
           "Jackson",
           "President Andrew Jackson",
-          "President Jackson"
+          "President Jackson",
+          "Old Hickory"
         ],
         "basePoints": 60,
         "explanation": "A president of the United States."
@@ -411,7 +414,8 @@
         "aliases": [
           "Coolidge",
           "President Calvin Coolidge",
-          "President Coolidge"
+          "President Coolidge",
+          "Silent Cal"
         ],
         "basePoints": 100,
         "explanation": "A president of the United States."
@@ -573,7 +577,9 @@
           "President George H Bush",
           "President Bush 41",
           "President George Herbert Walker Bush",
-          "H W Bush"
+          "H W Bush",
+          "GHWB",
+          "George Bush Sr"
         ],
         "basePoints": 60,
         "explanation": "A president of the United States."
@@ -609,7 +615,9 @@
           "President Dubya",
           "President W Bush",
           "President Bush 43",
-          "President George Walker Bush"
+          "President George Walker Bush",
+          "GWB",
+          "George W Bush Jr"
         ],
         "basePoints": 40,
         "explanation": "A president of the United States."
@@ -659,7 +667,7 @@
       }
     ],
     "difficulty": 1,
-    "family": "presidents",
+    "family": "presidential-trivia",
     "kind": "trivia-category",
     "source": {
       "document": "https://www.archives.gov/research/census/presidents",
@@ -1476,7 +1484,42 @@
           "agency",
           "federal agencies",
           "executive agencies",
-          "executive department"
+          "executive department",
+          "Department of State",
+          "State Department",
+          "Department of the Treasury",
+          "Treasury Department",
+          "Department of Justice",
+          "Justice Department",
+          "DOJ",
+          "Department of Education",
+          "Department of Agriculture",
+          "USDA",
+          "FBI",
+          "Federal Bureau of Investigation",
+          "CIA",
+          "Central Intelligence Agency",
+          "EPA",
+          "Environmental Protection Agency",
+          "NASA",
+          "National Aeronautics and Space Administration",
+          "IRS",
+          "Internal Revenue Service",
+          "Department of Homeland Security",
+          "DHS",
+          "Department of Defense",
+          "Defense Department",
+          "Department of Labor",
+          "Department of Commerce",
+          "Department of the Interior",
+          "Department of Transportation",
+          "Department of Energy",
+          "Department of Health and Human Services",
+          "HHS",
+          "Department of Housing and Urban Development",
+          "HUD",
+          "Department of Veterans Affairs",
+          "VA"
         ],
         "basePoints": 80,
         "explanation": "Federal departments and agencies."
@@ -1825,7 +1868,7 @@
       }
     ],
     "difficulty": 1,
-    "family": "rights",
+    "family": "declaration-rights",
     "kind": "trivia-category",
     "source": {
       "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
@@ -1850,7 +1893,9 @@
           "natural right",
           "rights people are born with",
           "rights that exist before government",
-          "inherent rights"
+          "inherent rights",
+          "life liberty and the pursuit of happiness",
+          "life liberty happiness"
         ],
         "explanation": "Rights people possess because they are human, before government exists. Government can violate these rights but does not create them.",
         "basePoints": 20
@@ -1903,7 +1948,12 @@
       {
         "id": "5",
         "label": "Republicanism",
-        "aliases": [],
+        "aliases": [
+          "republic",
+          "representative democracy",
+          "representative government",
+          "elected representatives"
+        ],
         "explanation": "A system in which citizens govern through elected representatives.",
         "basePoints": 60
       },
@@ -1911,7 +1961,9 @@
         "id": "equality",
         "label": "Equality",
         "aliases": [
-          "equal political standing"
+          "equal political standing",
+          "political equality",
+          "equal rights"
         ],
         "basePoints": 40,
         "explanation": "Equality."
@@ -2086,7 +2138,8 @@
         "label": "Veto a bill",
         "aliases": [
           "veto",
-          "reject a bill"
+          "reject a bill",
+          "veto legislation"
         ],
         "basePoints": 20,
         "explanation": "Veto a bill."
@@ -2142,7 +2195,11 @@
         "aliases": [
           "appoint cabinet members",
           "appoint department heads",
-          "nominate cabinet secretaries"
+          "nominate cabinet secretaries",
+          "appoint ambassadors",
+          "nominate ambassadors",
+          "appoint executive officials",
+          "appoint officials"
         ],
         "basePoints": 60,
         "explanation": "Nominate executive officials."
@@ -2164,7 +2221,9 @@
         "aliases": [
           "pardon",
           "pardons",
-          "grant pardons"
+          "grant pardons",
+          "issue pardons",
+          "clemency"
         ],
         "basePoints": 40,
         "explanation": "Grant federal pardons."
@@ -2327,7 +2386,10 @@
         "aliases": [
           "post offices",
           "postal service",
-          "post office"
+          "post office",
+          "post roads",
+          "establish post roads",
+          "post offices and post roads"
         ],
         "explanation": "Congress can establish post offices and post roads.",
         "basePoints": 60
@@ -2418,6 +2480,121 @@
         ],
         "explanation": "Congress can make laws needed to carry out its enumerated powers.",
         "basePoints": 60
+      },
+      {
+        "id": "foreign-commerce",
+        "label": "Regulate foreign commerce",
+        "aliases": [
+          "foreign commerce",
+          "trade with other countries",
+          "regulate foreign trade"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress regulates commerce with foreign nations."
+      },
+      {
+        "id": "tribal-commerce",
+        "label": "Regulate commerce with Indian tribes",
+        "aliases": [
+          "tribal commerce",
+          "Indian commerce",
+          "commerce with tribes"
+        ],
+        "basePoints": 80,
+        "explanation": "Article I includes commerce with Indian tribes."
+      },
+      {
+        "id": "piracy",
+        "label": "Punish piracy and offenses on the high seas",
+        "aliases": [
+          "punish piracy",
+          "piracy",
+          "define piracy",
+          "high seas felonies"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress defines and punishes piracy and felonies on the high seas."
+      },
+      {
+        "id": "law-of-nations",
+        "label": "Punish offenses against the law of nations",
+        "aliases": [
+          "law of nations",
+          "offenses against international law"
+        ],
+        "basePoints": 80,
+        "explanation": "Article I expressly grants this power."
+      },
+      {
+        "id": "marque",
+        "label": "Grant letters of marque and reprisal",
+        "aliases": [
+          "letters of marque",
+          "marque and reprisal",
+          "letters of marque and reprisal"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress can authorize letters of marque and reprisal."
+      },
+      {
+        "id": "captures",
+        "label": "Make rules concerning captures",
+        "aliases": [
+          "captures on land and water",
+          "rules for captures"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress sets rules concerning wartime captures."
+      },
+      {
+        "id": "military-rules",
+        "label": "Make rules for the armed forces",
+        "aliases": [
+          "military rules",
+          "regulate the military",
+          "regulate the armed forces"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress makes rules governing the land and naval forces."
+      },
+      {
+        "id": "militia",
+        "label": "Organize and call forth the militia",
+        "aliases": [
+          "organize militia",
+          "call forth militia",
+          "arm the militia",
+          "discipline the militia",
+          "militia"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress can organize, arm, discipline, and call forth the militia within constitutional limits."
+      },
+      {
+        "id": "federal-district",
+        "label": "Govern the federal district",
+        "aliases": [
+          "govern DC",
+          "govern Washington DC",
+          "legislate for DC",
+          "federal district"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress has legislative authority over the seat of government."
+      },
+      {
+        "id": "spending",
+        "label": "Spend for the general welfare",
+        "aliases": [
+          "spend money",
+          "spending",
+          "general welfare",
+          "provide for common defense",
+          "pay debts",
+          "pay the debts"
+        ],
+        "basePoints": 80,
+        "explanation": "The taxing and spending clause covers debts, common defense, and general welfare."
       }
     ],
     "difficulty": 1,
@@ -2944,7 +3121,9 @@
         "id": "0",
         "label": "Dual Federalism",
         "aliases": [
-          "dual"
+          "dual",
+          "layer cake",
+          "layer cake federalism"
         ],
         "explanation": "A form of American federalism in which the states and the nation operate independently in their own areas; \"layer cake.\"",
         "basePoints": 60
@@ -2953,7 +3132,9 @@
         "id": "1",
         "label": "Cooperative Federalism",
         "aliases": [
-          "cooperative"
+          "cooperative",
+          "marble cake",
+          "marble cake federalism"
         ],
         "explanation": "A form of American federalism in which the states and the national government work together; \"marble cake.\"",
         "basePoints": 60
@@ -2966,6 +3147,16 @@
         ],
         "explanation": "The federal government's use of grants-in-aid to influence policies in the states.",
         "basePoints": 60
+      },
+      {
+        "id": "new-federalism",
+        "label": "New Federalism",
+        "aliases": [
+          "devolution",
+          "devolutionary federalism"
+        ],
+        "basePoints": 80,
+        "explanation": "New Federalism shifts responsibilities and discretion toward state governments."
       }
     ],
     "difficulty": 2,
@@ -3383,14 +3574,18 @@
       {
         "id": "1",
         "label": "House Majority Leader",
-        "aliases": [],
+        "aliases": [
+          "majority leader"
+        ],
         "explanation": "A leader of the House majority party who helps set its legislative priorities and build support for bills.",
         "basePoints": 60
       },
       {
         "id": "2",
         "label": "Senate Majority Leader",
-        "aliases": [],
+        "aliases": [
+          "majority leader"
+        ],
         "explanation": "The elected leader of the Senate's majority party, who helps set the chamber's schedule and legislative priorities.",
         "basePoints": 60
       },
@@ -3415,6 +3610,37 @@
         ],
         "explanation": "The senator who acts in the absence of the vice president; usually the most senior senator of the majority party.",
         "basePoints": 60
+      },
+      {
+        "id": "house-minority-leader",
+        "label": "House Minority Leader",
+        "aliases": [
+          "minority leader of the house",
+          "minority leader"
+        ],
+        "basePoints": 60,
+        "explanation": "Leads the minority party in the House."
+      },
+      {
+        "id": "senate-minority-leader",
+        "label": "Senate Minority Leader",
+        "aliases": [
+          "minority leader of the senate",
+          "minority leader"
+        ],
+        "basePoints": 60,
+        "explanation": "Leads the minority party in the Senate."
+      },
+      {
+        "id": "president-of-senate",
+        "label": "President of the Senate",
+        "aliases": [
+          "vice president",
+          "VP",
+          "vice president of the United States"
+        ],
+        "basePoints": 40,
+        "explanation": "The vice president presides over the Senate and can break tied votes."
       }
     ],
     "difficulty": 2,
@@ -3423,7 +3649,8 @@
     "source": {
       "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
       "section": "Lesson concepts and linked course references"
-    }
+    },
+    "allowAmbiguous": true
   },
   {
     "id": "trivia-congress-representation",
@@ -4740,6 +4967,45 @@
         ],
         "explanation": "Drawing district boundaries to favor a party or group, often by packing or cracking voters. An unusual district shape alone does not prove gerrymandering.",
         "basePoints": 60
+      },
+      {
+        "id": "packing",
+        "label": "Packing",
+        "aliases": [
+          "pack voters",
+          "packing voters"
+        ],
+        "basePoints": 60,
+        "explanation": "Concentrates a group of voters in a small number of districts."
+      },
+      {
+        "id": "cracking",
+        "label": "Cracking",
+        "aliases": [
+          "crack voters",
+          "cracking voters"
+        ],
+        "basePoints": 60,
+        "explanation": "Splits a group of voters among districts to dilute its influence."
+      },
+      {
+        "id": "census",
+        "label": "Census",
+        "aliases": [
+          "decennial census",
+          "population census"
+        ],
+        "basePoints": 40,
+        "explanation": "The population count used to apportion House seats."
+      },
+      {
+        "id": "majority-minority-district",
+        "label": "Majority minority district",
+        "aliases": [
+          "majority minority districts"
+        ],
+        "basePoints": 80,
+        "explanation": "A district in which a racial or ethnic minority makes up a majority of the population."
       }
     ],
     "difficulty": 3,

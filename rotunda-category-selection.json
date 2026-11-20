@@ -1,0 +1,30 @@
+{
+  "description": "Government trivia first, with covered AP Government concepts mixed in. Retired categories remain in the authoring source; archived daily sessions keep their original bank.",
+  "courseCategoryIds": [
+    "trivia-branches",
+    "trivia-presidents",
+    "trivia-bill-of-rights",
+    "trivia-elected-offices",
+    "trivia-government-institutions",
+    "trivia-levels-of-government",
+    "trivia-roles",
+    "trivia-declaration-rights",
+    "trivia-founding-ideas",
+    "trivia-democracy-models",
+    "trivia-presidential-duties",
+    "trivia-presidential-team",
+    "trivia-founding-documents",
+    "trivia-government-levels",
+    "trivia-federalism-forms",
+    "trivia-committee-types",
+    "trivia-congress-leaders",
+    "trivia-congress-checks-president",
+    "trivia-house-senate",
+    "trivia-house-only",
+    "trivia-course-cases",
+    "trivia-districting-terms",
+    "trivia-national-powers",
+    "trivia-tools"
+  ],
+  "glossaryLetters": []
+}
