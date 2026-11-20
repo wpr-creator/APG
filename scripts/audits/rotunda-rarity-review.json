@@ -1,5 +1,5 @@
 {
-  "revision": "20261119-all-categories",
+  "revision": "20261120-pyramid",
   "rubric": "Editorial starting rarity for this classroom, relative to each prompt; not measured popularity. Familiar answers start at 20, then 40, 60, 80 and 100 for progressively less obvious answers. Small foundational categories use a narrower spread rather than inventing exceptional rarity. Live daily answer frequency continues to adjust these starting tiers.",
   "categories": [
     {
@@ -3989,6 +3989,1596 @@
           "id": "limits-on-punishment-for-treason",
           "label": "Limits on punishment for treason",
           "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-founding-principles",
+      "prompt": "Name one of these constitutional principles: power comes from the people, government is limited, branches have separate jobs, branches restrain each other, or levels share power.",
+      "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Popular sovereignty",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Limited government",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Separation of powers",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Checks and balances",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "label": "Federalism",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-citizen-actions",
+      "prompt": "Name a form of direct citizen involvement listed in the participatory-democracy notes.",
+      "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Voting",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Protesting",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Petitioning",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Attending a town hall",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Referendum",
+          "basePoints": 100
+        },
+        {
+          "id": "5",
+          "label": "Ballot initiative",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-pluralist-organizations",
+      "prompt": "Name a type of organized group used as a pluralist-democracy example in the notes.",
+      "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Interest group",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Labor union",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Professional association",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Advocacy organization",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Business group",
+          "basePoints": 100
+        },
+        {
+          "id": "5",
+          "label": "Environmental group",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-elite-actors",
+      "prompt": "Name a type of influential actor discussed in the elite-democracy model.",
+      "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Elected leaders",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Wealthy donors",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Major organizations",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Policy experts",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Party leaders",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-founding-texts-three",
+      "prompt": "Name one of the three texts compared in our Founding Ideals notes.",
+      "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Declaration of Independence",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Constitution",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "The Gettysburg Address",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-gettysburg-ideals",
+      "prompt": "Name a democratic ideal Lincoln reaffirmed in the Gettysburg Address.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Equality",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Popular Sovereignty",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Liberty",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-constitution-mechanisms",
+      "prompt": "Name a constitutional arrangement that turns democratic ideals into a working government.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Elections",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Representation",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Separation of Powers",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Checks and Balances",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Limited Government",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-articles-could-do",
+      "prompt": "Name a power Congress had under the Articles of Confederation.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Declare war",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Make peace",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Conduct foreign relations",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Coin money",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Request money",
+          "basePoints": 100
+        },
+        {
+          "id": "5",
+          "label": "Request troops",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-articles-repairs",
+      "prompt": "Name a power or institution in the Constitution that addressed an Articles-era weakness.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Direct taxation",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Regulate interstate commerce",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Executive branch",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Federal courts",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Federal supremacy",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-new-power-limits",
+      "prompt": "Name a constitutional design that limited the stronger national government created in 1787.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Enumerated Powers",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Separation of Powers",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Checks and Balances",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Federalism",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-national-access-points",
+      "prompt": "Name a national institution or process people can approach to influence policy.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Congress",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "President",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Federal agencies",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Federal courts",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-federalism-access-points",
+      "prompt": "Name a national, state, or local access point listed in our federalism notes.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Congress",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Federal agencies",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Federal courts",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Governor",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "State legislature",
+          "basePoints": 100
+        },
+        {
+          "id": "5",
+          "label": "State agencies",
+          "basePoints": 100
+        },
+        {
+          "id": "6",
+          "label": "State courts",
+          "basePoints": 100
+        },
+        {
+          "id": "7",
+          "label": "Local government",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-presidential-media",
+      "prompt": "Name a communication medium compared in our presidential-communication notes.",
+      "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Radio",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Television",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Social media",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-articles-weaknesses",
+      "prompt": "Name a weakness of the national government under the Articles of Confederation.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "No independent taxing power",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "No power to regulate interstate commerce",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "No separate national executive",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "No general national judiciary",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Unanimous consent to amend",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-convention-plans",
+      "prompt": "Name a representation plan or compromise from the Constitutional Convention.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Virginia Plan",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "New Jersey Plan",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Great Compromise",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-congress-influence-channels",
+      "prompt": "Name a congressional access point listed in our constitutional-friction notes.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Elections",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Committees",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Hearings",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Contact with legislators",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-reserved-examples",
+      "prompt": "Name a state responsibility used as a reserved-power example in our notes.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Education",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Professional licensing",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Local government",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Public safety",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Election administration",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-concurrent-examples",
+      "prompt": "Name a power the national and state governments both exercise.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Tax",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Borrow money",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Create courts",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Make laws",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Enforce laws",
+          "basePoints": 100
+        },
+        {
+          "id": "5",
+          "label": "Spend for public purposes",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-national-policy-influence",
+      "prompt": "Name a way the national government uses funding or legal requirements to influence state policy.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Categorical Grants",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Block Grants",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Federal Mandate",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Unfunded Mandate",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-mandatory-programs",
+      "prompt": "Name a mandatory-spending program listed in our notes.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Social Security",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Medicare",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Medicaid",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-discretionary-areas",
+      "prompt": "Name an area used as a discretionary-spending example in our notes.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Defense",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Education",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Infrastructure",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-bill-stopping-points",
+      "prompt": "Name a decision point that can stop a bill from becoming law.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Committee",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "House floor",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Senate floor",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Presidential veto",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-representative-pressures",
+      "prompt": "Name a pressure members weigh when deciding how to vote.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Constituents",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Personal judgment",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Reelection",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Party goals",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-power-expansion-forces",
+      "prompt": "Name a force our notes connect with the expansion of presidential power.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Crises",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "International responsibilities",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Public expectations",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Larger executive branch",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Congressional delegation",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-energy-purposes",
+      "prompt": "Name a responsibility Hamilton connected to executive energy.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "National defense",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Enforcing laws",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Protecting property",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Securing liberty",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-presidential-communication",
+      "prompt": "Name a presidential communication tool or strategy from our lesson.",
+      "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "State of the Union Address",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Bully Pulpit",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Going Public",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Agenda Setting",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-energy",
+      "prompt": "Name one of Hamilton’s four ingredients of executive energy.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Unity",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Duration",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Adequate support",
+          "basePoints": 80
+        },
+        {
+          "id": "3",
+          "label": "Competent powers",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-unity",
+      "prompt": "Name one of Hamilton’s four advantages of unity.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Decision",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Activity",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Secrecy",
+          "basePoints": 80
+        },
+        {
+          "id": "3",
+          "label": "Dispatch",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-congress-representation",
+      "prompt": "Name one of the three decision-making models for a representative.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Delegate Model of Representation",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Trustee Model of Representation",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Politico Model of Representation",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-senate-debate",
+      "prompt": "Name a Senate tool used to delay business, end debate, or arrange how business proceeds.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Filibuster",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Cloture",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Hold",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Unanimous Consent Agreement",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-congress-policy-moves",
+      "prompt": "Name a congressional practice involving exchanging support, adding district projects, or directing funds to a specific project.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Logrolling",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Pork-Barrel Politics",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Earmark",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-budget-categories",
+      "prompt": "Name a federal budget category from our spending comparison.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Mandatory Spending",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Discretionary Spending",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Net Interest",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-districting-legal-terms",
+      "prompt": "Name a key term from our Baker and Shaw readings.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Equal Protection Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Strict Scrutiny",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Majority-Minority District",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-house-qualifications",
+      "prompt": "Name a constitutional qualification for serving in the House.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "At least 25 years old",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Seven years of citizenship",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Inhabit the represented state",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-senate-qualifications",
+      "prompt": "Name a constitutional qualification for serving in the Senate.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "At least 30 years old",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Nine years of citizenship",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Inhabit the represented state",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-house-floor-tools",
+      "prompt": "Name a House mechanism from our notes that affects debate, amendments, or getting a bill out of committee.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "House Rules Committee",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Committee of the Whole",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Discharge Petition",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-committee-work",
+      "prompt": "Name a task standing committees perform before a bill reaches the chamber floor.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Hold hearings",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Gather information",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Mark up bills",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-senate-confirmed-offices",
+      "prompt": "Name a type of nominee from our notes who generally requires Senate confirmation.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Cabinet secretary",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Ambassador",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Federal judge",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-congress-military-powers",
+      "prompt": "Name a military-related power Congress retains while the president is commander in chief.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Declare war",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Authorize action",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Control military funding",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-cooperation-obstacles",
+      "prompt": "Name a political condition from our notes that can make cooperation between Congress and the president harder.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Divided Government",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Polarization",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Lame Duck Period",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-presidential-communication-planning",
+      "prompt": "Name something our notes say to identify when judging a presidential communication strategy.",
+      "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Audience",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Policy goal",
+          "basePoints": 40
+        },
+        {
+          "id": "2",
+          "label": "Desired response",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "label": "Needed cooperation",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-strict-scrutiny-elements",
+      "prompt": "Name one of the two requirements in the strict-scrutiny explanation from our Shaw notes.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Compelling reason",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Narrow tailoring",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-hamilton-safeguards",
+      "prompt": "Name either safeguard for republican government Hamilton identifies in Federalist No. 70.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Dependence on the people",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Responsibility for official conduct",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-madison-resistance",
+      "prompt": "Name one of the two things Madison said officials need to resist other officials’ encroachment.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Motive",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Constitutional means",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-amendment-proposals",
+      "prompt": "Name an Article V proposal route, including who must reach the two-thirds threshold.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Two-thirds of both houses of Congress",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "A convention called by Congress at the request of two-thirds of state legislatures",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-amendment-ratification",
+      "prompt": "Name a way states can ratify a constitutional amendment.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "State legislatures",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "State ratifying conventions",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-federalist-39-national",
+      "prompt": "Name a national feature of the Constitution identified in our Federalist No. 39 notes.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Population-based House representation",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "National laws act directly on individuals",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "Authority over national responsibilities",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-federalist-39-federal",
+      "prompt": "Name a federal feature of the Constitution identified in our Federalist No. 39 notes.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "State ratifying conventions",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Equal representation in the Senate",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "Reserved state powers",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-article-four-rules",
+      "prompt": "Name an Article IV rule governing relationships among states from our notes.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Full Faith and Credit Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Privileges and Immunities Clause",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "label": "Extradition",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-mcculloch-clauses",
+      "prompt": "Name either constitutional clause central to the two questions in McCulloch v. Maryland.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Necessary and Proper Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Supremacy Clause",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-legal-authority-sources",
+      "prompt": "Name a source of legal authority for presidential action.",
+      "rationale": "Identify the constitutional or statutory authority behind presidential action, rather than simply naming a presidential role. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Constitution",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Federal law",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-notes-fourteenth-protections",
+      "prompt": "Name either Fourteenth Amendment clause discussed as a protection against state action.",
+      "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Due Process Clause",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Equal Protection Clause",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-flag-star-counts",
+      "prompt": "Name a number of stars used on an official U.S. flag at any time.",
+      "rationale": "A broad civic warm-up with 27 possible counts, not a single-answer question. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "stars-13",
+          "label": "13 stars",
+          "basePoints": 20
+        },
+        {
+          "id": "stars-15",
+          "label": "15 stars",
+          "basePoints": 40
+        },
+        {
+          "id": "stars-20",
+          "label": "20 stars",
+          "basePoints": 60
+        },
+        {
+          "id": "stars-21",
+          "label": "21 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-23",
+          "label": "23 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-24",
+          "label": "24 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-25",
+          "label": "25 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-26",
+          "label": "26 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-27",
+          "label": "27 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-28",
+          "label": "28 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-29",
+          "label": "29 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-30",
+          "label": "30 stars",
+          "basePoints": 80
+        },
+        {
+          "id": "stars-31",
+          "label": "31 stars",
+          "basePoints": 80
+        },
+        {
+          "id": "stars-32",
+          "label": "32 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-33",
+          "label": "33 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-34",
+          "label": "34 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-35",
+          "label": "35 stars",
+          "basePoints": 80
+        },
+        {
+          "id": "stars-36",
+          "label": "36 stars",
+          "basePoints": 80
+        },
+        {
+          "id": "stars-37",
+          "label": "37 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-38",
+          "label": "38 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-43",
+          "label": "43 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-44",
+          "label": "44 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-45",
+          "label": "45 stars",
+          "basePoints": 80
+        },
+        {
+          "id": "stars-46",
+          "label": "46 stars",
+          "basePoints": 100
+        },
+        {
+          "id": "stars-48",
+          "label": "48 stars",
+          "basePoints": 40
+        },
+        {
+          "id": "stars-49",
+          "label": "49 stars",
+          "basePoints": 60
+        },
+        {
+          "id": "stars-50",
+          "label": "50 stars",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-original-states",
+      "prompt": "Name one of the original thirteen states.",
+      "rationale": "Broad civic recall with multiple familiar states available. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "delaware",
+          "label": "Delaware",
+          "basePoints": 20
+        },
+        {
+          "id": "pennsylvania",
+          "label": "Pennsylvania",
+          "basePoints": 40
+        },
+        {
+          "id": "new-jersey",
+          "label": "New Jersey",
+          "basePoints": 40
+        },
+        {
+          "id": "georgia",
+          "label": "Georgia",
+          "basePoints": 40
+        },
+        {
+          "id": "connecticut",
+          "label": "Connecticut",
+          "basePoints": 60
+        },
+        {
+          "id": "massachusetts",
+          "label": "Massachusetts",
+          "basePoints": 20
+        },
+        {
+          "id": "maryland",
+          "label": "Maryland",
+          "basePoints": 60
+        },
+        {
+          "id": "south-carolina",
+          "label": "South Carolina",
+          "basePoints": 60
+        },
+        {
+          "id": "new-hampshire",
+          "label": "New Hampshire",
+          "basePoints": 80
+        },
+        {
+          "id": "virginia",
+          "label": "Virginia",
+          "basePoints": 20
+        },
+        {
+          "id": "new-york",
+          "label": "New York",
+          "basePoints": 20
+        },
+        {
+          "id": "north-carolina",
+          "label": "North Carolina",
+          "basePoints": 100
+        },
+        {
+          "id": "rhode-island",
+          "label": "Rhode Island",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-states-two-words",
+      "prompt": "Name a U.S. state whose name has two words.",
+      "rationale": "Broad civic recall with multiple familiar states available. Starting rewards still distinguish direct recall from less obvious correct answers.",
+      "answers": [
+        {
+          "id": "new-jersey",
+          "label": "New Jersey",
+          "basePoints": 20
+        },
+        {
+          "id": "south-carolina",
+          "label": "South Carolina",
+          "basePoints": 40
+        },
+        {
+          "id": "new-hampshire",
+          "label": "New Hampshire",
+          "basePoints": 40
+        },
+        {
+          "id": "new-york",
+          "label": "New York",
+          "basePoints": 20
+        },
+        {
+          "id": "north-carolina",
+          "label": "North Carolina",
+          "basePoints": 60
+        },
+        {
+          "id": "rhode-island",
+          "label": "Rhode Island",
+          "basePoints": 60
+        },
+        {
+          "id": "new-mexico",
+          "label": "New Mexico",
+          "basePoints": 60
+        },
+        {
+          "id": "north-dakota",
+          "label": "North Dakota",
+          "basePoints": 60
+        },
+        {
+          "id": "south-dakota",
+          "label": "South Dakota",
+          "basePoints": 80
+        },
+        {
+          "id": "west-virginia",
+          "label": "West Virginia",
+          "basePoints": 80
         }
       ]
     }

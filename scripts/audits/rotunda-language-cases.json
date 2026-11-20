@@ -630,6 +630,281 @@
       "article-ii",
       "appointment power",
       "Federal appointments"
+    ],
+    [
+      "notes-founding-principles",
+      "dividing power among branches",
+      "Separation of powers"
+    ],
+    [
+      "notes-citizen-actions",
+      "town hall",
+      "Attending a town hall"
+    ],
+    [
+      "notes-pluralist-organizations",
+      "labor unions",
+      "Labor union"
+    ],
+    [
+      "notes-elite-actors",
+      "donors",
+      "Wealthy donors"
+    ],
+    [
+      "notes-founding-texts-three",
+      "gettysburg",
+      "The Gettysburg Address"
+    ],
+    [
+      "notes-gettysburg-ideals",
+      "freedom",
+      "Liberty"
+    ],
+    [
+      "notes-constitution-mechanisms",
+      "elected representatives",
+      "Representation"
+    ],
+    [
+      "notes-articles-could-do",
+      "ask states for troops",
+      "Request troops"
+    ],
+    [
+      "notes-articles-repairs",
+      "taxation",
+      "Direct taxation"
+    ],
+    [
+      "notes-new-power-limits",
+      "enumerated authority",
+      "Enumerated Powers"
+    ],
+    [
+      "notes-national-access-points",
+      "legislators",
+      "Congress"
+    ],
+    [
+      "notes-federalism-access-points",
+      "state agencies",
+      "State agencies"
+    ],
+    [
+      "notes-presidential-media",
+      "tv",
+      "Television"
+    ],
+    [
+      "notes-articles-weaknesses",
+      "could not tax",
+      "No independent taxing power"
+    ],
+    [
+      "notes-convention-plans",
+      "Connecticut compromise",
+      "Great Compromise"
+    ],
+    [
+      "notes-congress-influence-channels",
+      "contact legislators",
+      "Contact with legislators"
+    ],
+    [
+      "notes-reserved-examples",
+      "schools",
+      "Education"
+    ],
+    [
+      "notes-concurrent-examples",
+      "taxes",
+      "Tax"
+    ],
+    [
+      "notes-national-policy-influence",
+      "unfunded mandates",
+      "Unfunded Mandate"
+    ],
+    [
+      "notes-mandatory-programs",
+      "Medicare",
+      "Medicare"
+    ],
+    [
+      "notes-discretionary-areas",
+      "roads",
+      "Infrastructure"
+    ],
+    [
+      "notes-bill-stopping-points",
+      "veto",
+      "Presidential veto"
+    ],
+    [
+      "notes-representative-pressures",
+      "constituency",
+      "Constituents"
+    ],
+    [
+      "notes-power-expansion-forces",
+      "crisis",
+      "Crises"
+    ],
+    [
+      "notes-energy-purposes",
+      "enforce laws",
+      "Enforcing laws"
+    ],
+    [
+      "notes-presidential-communication",
+      "state of the union",
+      "State of the Union Address"
+    ],
+    [
+      "notes-energy",
+      "financial independence",
+      "Adequate support"
+    ],
+    [
+      "notes-unity",
+      "decisiveness",
+      "Decision"
+    ],
+    [
+      "notes-congress-representation",
+      "trustee",
+      "Trustee Model of Representation"
+    ],
+    [
+      "notes-senate-debate",
+      "ending debate",
+      "Cloture"
+    ],
+    [
+      "notes-congress-policy-moves",
+      "log rolling",
+      "Logrolling"
+    ],
+    [
+      "notes-budget-categories",
+      "interest",
+      "Net Interest"
+    ],
+    [
+      "notes-districting-legal-terms",
+      "majority minority",
+      "Majority-Minority District"
+    ],
+    [
+      "notes-house-qualifications",
+      "twenty five",
+      "At least 25 years old"
+    ],
+    [
+      "notes-senate-qualifications",
+      "thirty",
+      "At least 30 years old"
+    ],
+    [
+      "notes-house-floor-tools",
+      "discharge",
+      "Discharge Petition"
+    ],
+    [
+      "notes-committee-work",
+      "research",
+      "Gather information"
+    ],
+    [
+      "notes-senate-confirmed-offices",
+      "federal judges",
+      "Federal judge"
+    ],
+    [
+      "notes-congress-military-powers",
+      "authorization",
+      "Authorize action"
+    ],
+    [
+      "notes-cooperation-obstacles",
+      "lame duck",
+      "Lame Duck Period"
+    ],
+    [
+      "notes-presidential-communication-planning",
+      "target audience",
+      "Audience"
+    ],
+    [
+      "notes-strict-scrutiny-elements",
+      "narrowly tailored",
+      "Narrow tailoring"
+    ],
+    [
+      "notes-hamilton-safeguards",
+      "accountability",
+      "Responsibility for official conduct"
+    ],
+    [
+      "notes-madison-resistance",
+      "constitutional powers",
+      "Constitutional means"
+    ],
+    [
+      "notes-amendment-proposals",
+      "two thirds of the House and Senate",
+      "Two-thirds of both houses of Congress"
+    ],
+    [
+      "notes-amendment-ratification",
+      "state conventions",
+      "State ratifying conventions"
+    ],
+    [
+      "notes-federalist-39-national",
+      "House seats based on population",
+      "Population-based House representation"
+    ],
+    [
+      "notes-federalist-39-federal",
+      "equal state representation",
+      "Equal representation in the Senate"
+    ],
+    [
+      "notes-article-four-rules",
+      "extradition clause",
+      "Extradition"
+    ],
+    [
+      "notes-mcculloch-clauses",
+      "elastic clause",
+      "Necessary and Proper Clause"
+    ],
+    [
+      "notes-legal-authority-sources",
+      "constitutional authority",
+      "Constitution"
+    ],
+    [
+      "notes-fourteenth-protections",
+      "equal protection",
+      "Equal Protection Clause"
+    ],
+    [
+      "flag-star-counts",
+      "fifty",
+      "50 stars"
+    ],
+    [
+      "states-original-states",
+      "VA",
+      "Virginia"
+    ],
+    [
+      "states-two-words",
+      "Rhode Island",
+      "Rhode Island"
     ]
   ],
   "choices": [
@@ -912,6 +1187,46 @@
     [
       "branches",
       "taxes"
+    ],
+    [
+      "notes-amendment-proposals",
+      "Congress"
+    ],
+    [
+      "notes-amendment-proposals",
+      "simple majority of Congress"
+    ],
+    [
+      "notes-madison-resistance",
+      "powers"
+    ],
+    [
+      "notes-strict-scrutiny-elements",
+      "rational basis"
+    ],
+    [
+      "notes-federalist-39-federal",
+      "Senate"
+    ],
+    [
+      "notes-federalist-39-national",
+      "House"
+    ],
+    [
+      "flag-star-counts",
+      "22"
+    ],
+    [
+      "flag-star-counts",
+      "39 stars"
+    ],
+    [
+      "states-original-states",
+      "California"
+    ],
+    [
+      "states-two-words",
+      "Maryland"
     ]
   ]
 }

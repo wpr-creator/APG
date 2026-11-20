@@ -11,7 +11,7 @@ function applyAnswerLanguage(bank,language){
  }
  for(const p of bank)for(const a of p.answers){
   const original=a.aliases;a.aliases=[];for(const v of [...original,...groups.get(E.normalize(a.label))])add(a.aliases,v);
-  if(/^trivia-states-letter-/.test(p.id)){
+  if(/^trivia-states-/.test(p.id)){
    add(a.aliases,a.label+' state');for(const v of language.stateShortForms[a.label]||[])add(a.aliases,v);
   }
   // Only expand a reviewed abbreviation already attached to this exact answer.
@@ -67,10 +67,10 @@ function applyAnswerLanguage(bank,language){
   for(const v of [person.label,...person.aliases])if(!first.has(E.normalize(v)))add(group.aliases,v);
  }
  const knownPresidents=people.flatMap(a=>[a.label,...a.aliases]);
- const knownStates=bank.filter(p=>/^trivia-states-letter-/.test(p.id)).flatMap(p=>p.answers.flatMap(a=>[a.label,...a.aliases]));
+ const knownStates=bank.filter(p=>/^trivia-states-/.test(p.id)).flatMap(p=>p.answers.flatMap(a=>[a.label,...a.aliases]));
  for(const p of bank)if(p.rejectedAnswers){
   const valid=new Set(p.answers.flatMap(a=>[a.label,...a.aliases]).map(E.normalize));
-  const known=/^trivia-states-letter-/.test(p.id)?knownStates:/^trivia-(presidents|first-five-presidents)/.test(p.id)?knownPresidents:[];
+  const known=/^trivia-states-/.test(p.id)?knownStates:/^trivia-(presidents|first-five-presidents)/.test(p.id)?knownPresidents:[];
   const rejected=[];for(const v of [...p.rejectedAnswers,...known])if(!valid.has(E.normalize(v)))add(rejected,v);p.rejectedAnswers=rejected;
  }
  return bank;

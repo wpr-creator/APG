@@ -308,7 +308,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -640,7 +640,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -975,7 +975,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -1302,7 +1302,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -1627,7 +1627,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -1947,7 +1947,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -2276,7 +2276,7 @@
       "President Donald J Trump",
       "President Donald John Trump"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "presidential-letter",
     "kind": "letter-category",
     "source": {
@@ -3921,7 +3921,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-first-five-presidents",
     "kind": "trivia-category",
     "source": {
@@ -4290,7 +4290,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-presidents-first-ten",
     "kind": "trivia-category",
     "source": {
@@ -4647,7 +4647,7 @@
       "President Gerald Ford",
       "President Ford"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-presidents-since-2000",
     "kind": "trivia-category",
     "source": {
@@ -5044,7 +5044,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-presidents-1900s",
     "kind": "trivia-category",
     "source": {
@@ -5796,7 +5796,7 @@
       "President Donald J Trump",
       "President Donald John Trump"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "trivia-presidents-senators",
     "kind": "trivia-category",
     "source": {
@@ -6562,7 +6562,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 3,
+    "difficulty": 2,
     "family": "trivia-presidents-succeeded",
     "kind": "trivia-category",
     "source": {
@@ -6894,7 +6894,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-presidents-notes",
     "kind": "trivia-category",
     "source": {
@@ -7263,7 +7263,7 @@
       "President Joseph R Biden",
       "President Joseph Robinette Biden"
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "trivia-presidents-johns-james",
     "kind": "trivia-category",
     "source": {
@@ -7923,7 +7923,7 @@
         "explanation": "Benjamin Franklin fits this government category."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "family": "money-faces",
     "kind": "trivia-category",
     "theme": "government-trivia",
@@ -8099,7 +8099,7 @@
         "explanation": "Department of Homeland Security fits this government category."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 3,
     "family": "cabinet-departments",
     "kind": "trivia-category",
     "theme": "government-trivia",
@@ -8163,7 +8163,7 @@
         "explanation": "U.S. representative fits this government category."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "federal-elected-jobs",
     "kind": "trivia-category",
     "theme": "government-trivia",
@@ -8251,7 +8251,7 @@
         "explanation": "Secure the blessings of liberty fits this government category."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 3,
     "family": "preamble-goals",
     "kind": "trivia-category",
     "theme": "government-trivia",
@@ -8302,7 +8302,7 @@
         "explanation": "John Jay fits this government category."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 3,
     "family": "federalist-authors",
     "kind": "trivia-category",
     "theme": "government-trivia",
@@ -8503,7 +8503,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -8697,7 +8697,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -8898,7 +8898,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -9127,7 +9127,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -9356,7 +9356,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -9550,7 +9550,7 @@
       "WY",
       "State of Wyoming"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -9751,7 +9751,7 @@
       "VA",
       "State of Virginia"
     ],
-    "difficulty": 3,
+    "difficulty": 1,
     "family": "state-letter",
     "kind": "letter-category",
     "theme": "government-trivia",
@@ -9910,7 +9910,7 @@
         "explanation": "Call Congress into special session."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 4,
     "family": "presidential-powers",
     "kind": "trivia-category",
     "source": {
@@ -10011,7 +10011,7 @@
         "explanation": "Presidents draw attention to policy priorities and shape what government discusses."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 5,
     "family": "presidential-powers",
     "kind": "trivia-category",
     "source": {
@@ -10441,7 +10441,7 @@
         "explanation": "Congress passes legislation; a bill must clear both chambers and the constitutional presentment process."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 4,
     "family": "congress-powers",
     "kind": "trivia-category",
     "source": {
@@ -10530,7 +10530,7 @@
         "basePoints": 100
       }
     ],
-    "difficulty": 1,
+    "difficulty": 2,
     "unit": 2,
     "lesson": "2.3",
     "apTopics": [
@@ -10723,7 +10723,7 @@
         "explanation": "The vice president presides over the Senate and can break tied votes."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 4,
     "unit": 2,
     "lesson": "2.1",
     "apTopics": [
@@ -10864,7 +10864,7 @@
         "explanation": "A related districting issue. Baker concerned unequal apportionment and justiciability, rather than deciding a partisan gerrymandering claim."
       }
     ],
-    "difficulty": 3,
+    "difficulty": 5,
     "unit": 2,
     "lesson": "2.1",
     "apTopics": [
@@ -11019,7 +11019,7 @@
         "explanation": "Chief Justice John Marshall wrote the Court’s opinion in McCulloch v. Maryland."
       }
     ],
-    "difficulty": 3,
+    "difficulty": 5,
     "unit": 1,
     "lesson": "1.4",
     "apTopics": [
@@ -11421,7 +11421,7 @@
         "basePoints": 100
       }
     ],
-    "difficulty": 3,
+    "difficulty": 4,
     "unit": 1,
     "lesson": "1.4",
     "apTopics": [
@@ -12164,7 +12164,7 @@
       "2.2"
     ],
     "href": "docs/constitution.html",
-    "difficulty": 3,
+    "difficulty": 4,
     "family": "constitution-articles",
     "kind": "trivia-category",
     "theme": "course",
@@ -12462,7 +12462,7 @@
       "2.4"
     ],
     "href": "docs/constitution.html",
-    "difficulty": 3,
+    "difficulty": 4,
     "family": "constitution-articles",
     "kind": "trivia-category",
     "theme": "course",
@@ -12762,7 +12762,7 @@
       "1.6"
     ],
     "href": "docs/constitution.html",
-    "difficulty": 3,
+    "difficulty": 5,
     "family": "constitution-articles",
     "kind": "trivia-category",
     "theme": "course",

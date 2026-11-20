@@ -1,0 +1,4658 @@
+[
+  {
+    "id": "trivia-notes-founding-principles",
+    "unit": 1,
+    "prompt": "Name one of these constitutional principles: power comes from the people, government is limited, branches have separate jobs, branches restrain each other, or levels share power.",
+    "hint": "Name the principle, rather than an example.",
+    "href": "lesson-1-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Popular sovereignty",
+        "aliases": [
+          "sovereignty of the people",
+          "consent of the governed",
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
+        ],
+        "explanation": "The people are the source of legitimate governmental authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Limited government",
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
+        "explanation": "Government must operate within established legal and constitutional limits.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Separation of powers",
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
+        "explanation": "Legislative, executive, and judicial responsibilities are assigned to different branches.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Checks and balances",
+        "aliases": [
+          "checks balances",
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
+        ],
+        "explanation": "Each branch has ways to limit the actions of the other branches.",
+        "basePoints": 60
+      },
+      {
+        "id": "4",
+        "label": "Federalism",
+        "aliases": [
+          "power divided between national and state governments",
+          "sharing power between national and state governments"
+        ],
+        "explanation": "The national government and the states share governing authority.",
+        "basePoints": 80
+      }
+    ],
+    "lesson": "1.4",
+    "apTopics": [
+      "1.1",
+      "1.6"
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 3,
+    "family": "notes-founding-principles",
+    "theme": "course",
+    "difficultyRationale": "Accessible foundational concepts with several routes to a correct answer."
+  },
+  {
+    "id": "trivia-notes-citizen-actions",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a form of direct citizen involvement listed in the participatory-democracy notes.",
+    "hint": "Use the terms and examples from Lesson 1.2.",
+    "href": "lesson-1-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "2. PARTICIPATORY DEMOCRACY"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Voting",
+        "aliases": [
+          "vote"
+        ],
+        "explanation": "Voting lets citizens help choose officials or decide ballot questions.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Protesting",
+        "aliases": [
+          "protest",
+          "demonstrate",
+          "demonstration"
+        ],
+        "explanation": "Public demonstrations communicate demands directly.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Petitioning",
+        "aliases": [
+          "petition"
+        ],
+        "explanation": "Petitions ask officials to address a concern.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Attending a town hall",
+        "aliases": [
+          "town hall",
+          "town halls",
+          "public meeting"
+        ],
+        "explanation": "Public meetings give citizens a chance to raise concerns.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Referendum",
+        "aliases": [
+          "referendums",
+          "referenda"
+        ],
+        "explanation": "A referendum lets voters decide a policy question directly.",
+        "basePoints": 100
+      },
+      {
+        "id": "5",
+        "label": "Ballot initiative",
+        "aliases": [
+          "initiative",
+          "initiatives"
+        ],
+        "explanation": "A ballot initiative lets citizens seek a direct vote on a proposal under the rules of their state.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 3,
+    "family": "notes-citizen-actions",
+    "theme": "course",
+    "difficultyRationale": "Accessible foundational concepts with several routes to a correct answer."
+  },
+  {
+    "id": "trivia-notes-pluralist-organizations",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a type of organized group used as a pluralist-democracy example in the notes.",
+    "hint": "Use the terms and examples from Lesson 1.2.",
+    "href": "lesson-1-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "3. PLURALIST DEMOCRACY"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Interest group",
+        "aliases": [
+          "interest groups"
+        ],
+        "explanation": "Interest groups organize people around shared policy goals.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Labor union",
+        "aliases": [
+          "union",
+          "unions"
+        ],
+        "explanation": "Unions can carry workers’ shared demands to officials.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Professional association",
+        "aliases": [
+          "professional associations"
+        ],
+        "explanation": "Professional associations organize people in an occupation.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Advocacy organization",
+        "aliases": [
+          "advocacy group",
+          "advocacy organizations"
+        ],
+        "explanation": "Advocacy organizations pursue shared public-policy goals.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Business group",
+        "aliases": [
+          "business groups",
+          "business association"
+        ],
+        "explanation": "Business groups can seek policies favorable to their members.",
+        "basePoints": 100
+      },
+      {
+        "id": "5",
+        "label": "Environmental group",
+        "aliases": [
+          "environmental groups"
+        ],
+        "explanation": "Environmental groups can seek different versions of a policy than business organizations support.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 3,
+    "family": "notes-pluralist-organizations",
+    "theme": "course",
+    "difficultyRationale": "Accessible foundational concepts with several routes to a correct answer."
+  },
+  {
+    "id": "trivia-notes-elite-actors",
+    "unit": 1,
+    "lesson": "1.2",
+    "apTopics": [
+      "1.2"
+    ],
+    "prompt": "Name a type of influential actor discussed in the elite-democracy model.",
+    "hint": "Use the terms and examples from Lesson 1.2.",
+    "href": "lesson-1-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1Aq_lAJypODHhX0IUcOTzjL4Olp8jVyIF95c-evf_6vs",
+      "section": "4. ELITE DEMOCRACY"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Elected leaders",
+        "aliases": [
+          "elected officials",
+          "politicians"
+        ],
+        "explanation": "Elected leaders can filter which proposals receive official consideration.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Wealthy donors",
+        "aliases": [
+          "donors",
+          "wealthy people"
+        ],
+        "explanation": "Financial resources can increase political access and influence.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Major organizations",
+        "aliases": [
+          "large organizations"
+        ],
+        "explanation": "Large organizations can have resources and institutional access unavailable to ordinary individuals.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Policy experts",
+        "aliases": [
+          "experts"
+        ],
+        "explanation": "Specialized knowledge can give policy experts influence.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Party leaders",
+        "aliases": [
+          "party leadership"
+        ],
+        "explanation": "Party leaders can help decide which proposals reach the legislative agenda.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 3,
+    "family": "notes-elite-actors",
+    "theme": "course",
+    "difficultyRationale": "Accessible foundational concepts with several routes to a correct answer."
+  },
+  {
+    "id": "trivia-notes-founding-texts-three",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name one of the three texts compared in our Founding Ideals notes.",
+    "hint": "Use the terms and examples from Lesson 1.1.",
+    "href": "lesson-1-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "5. How the Three Documents Connected"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Declaration of Independence",
+        "aliases": [],
+        "explanation": "The 1776 document explaining why separation from Britain was justified: people possess natural rights, government needs their consent, and people may alter or abolish a government that repeatedly violates its purpose.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Constitution",
+        "aliases": [
+          "us constitution",
+          "united states constitution"
+        ],
+        "explanation": "The document that creates the institutions, powers, and legal limits of the U.S. government. It turns democratic ideals into an operating system of government.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "The Gettysburg Address",
+        "aliases": [
+          "gettysburg",
+          "gettysburg address"
+        ],
+        "explanation": "A speech Abraham Lincoln delivered during the Civil War, reaffirming equality and popular sovereignty as foundations of democracy.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 3,
+    "family": "notes-founding-texts-three",
+    "theme": "course",
+    "difficultyRationale": "Accessible foundational concepts with several routes to a correct answer."
+  },
+  {
+    "id": "trivia-notes-gettysburg-ideals",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a democratic ideal Lincoln reaffirmed in the Gettysburg Address.",
+    "hint": "Use the terms and examples from Lesson 1.1.",
+    "href": "lesson-1-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "4. Gettysburg Reaffirmed the Promise"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Equality",
+        "aliases": [],
+        "explanation": "The democratic ideal that people possess equal political standing and that no person has a natural right to rule others.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Popular Sovereignty",
+        "aliases": [
+          "power comes from the people",
+          "the people are the source of power",
+          "government gets its power from the people",
+          "rule by the people"
+        ],
+        "explanation": "The people are the source of government power. Elections and constitutional ratification are ways people authorize officials to govern.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Liberty",
+        "aliases": [
+          "freedom"
+        ],
+        "explanation": "Lincoln described a nation conceived in liberty and dedicated to equality.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-gettysburg-ideals",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-constitution-mechanisms",
+    "unit": 1,
+    "lesson": "1.1",
+    "apTopics": [
+      "1.1"
+    ],
+    "prompt": "Name a constitutional arrangement that turns democratic ideals into a working government.",
+    "hint": "Use the terms and examples from Lesson 1.1.",
+    "href": "lesson-1-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1miD29ZfEz4ag8IvzqMLRSo9DRrfT2ItyPBD5pFr3AR0",
+      "section": "3. The Constitution Built the Government"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Elections",
+        "aliases": [
+          "voting"
+        ],
+        "explanation": "Elections connect public consent with the choice of officials.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Representation",
+        "aliases": [
+          "elected representatives",
+          "republicanism"
+        ],
+        "explanation": "Citizens govern through representatives rather than deciding every national policy directly.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Separation of Powers",
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
+        "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Checks and Balances",
+        "aliases": [
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
+        ],
+        "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Limited Government",
+        "aliases": [
+          "government is limited by law",
+          "limits on government power",
+          "government must obey the law"
+        ],
+        "explanation": "The principle that law restricts government power and prevents rulers from exercising absolute authority.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-constitution-mechanisms",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-articles-could-do",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a power Congress had under the Articles of Confederation.",
+    "hint": "Use the terms and examples from Lesson 1.3.",
+    "href": "lesson-1-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "2. The ARTICLES OF CONFEDERATION Protected the States"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Declare war",
+        "aliases": [
+          "war",
+          "declaration of war"
+        ],
+        "explanation": "Congress could declare war even though it lacked dependable taxing and enforcement power.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Make peace",
+        "aliases": [
+          "peace"
+        ],
+        "explanation": "Congress could make peace.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Conduct foreign relations",
+        "aliases": [
+          "foreign relations",
+          "diplomacy"
+        ],
+        "explanation": "Congress could conduct foreign relations.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Coin money",
+        "aliases": [
+          "coinage",
+          "coin"
+        ],
+        "explanation": "Congress could coin money.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Request money",
+        "aliases": [
+          "request funds",
+          "ask states for money"
+        ],
+        "explanation": "Congress could request state contributions rather than collect taxes directly.",
+        "basePoints": 100
+      },
+      {
+        "id": "5",
+        "label": "Request troops",
+        "aliases": [
+          "ask states for troops",
+          "request soldiers"
+        ],
+        "explanation": "Congress depended on the states when requesting troops.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-articles-could-do",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-articles-repairs",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a power or institution in the Constitution that addressed an Articles-era weakness.",
+    "hint": "Use the terms and examples from Lesson 1.3.",
+    "href": "lesson-1-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "4. The Constitution Created Usable Power"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Direct taxation",
+        "aliases": [
+          "taxation",
+          "tax",
+          "collect taxes"
+        ],
+        "explanation": "Congress gained power to collect taxes directly.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Regulate interstate commerce",
+        "aliases": [
+          "interstate commerce",
+          "commerce power"
+        ],
+        "explanation": "Congress gained power to address conflicting state trade rules.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Executive branch",
+        "aliases": [
+          "president",
+          "presidency"
+        ],
+        "explanation": "A separate president could carry out federal laws.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Federal courts",
+        "aliases": [
+          "national courts",
+          "judicial branch",
+          "judiciary"
+        ],
+        "explanation": "A national judiciary could resolve federal legal disputes.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Federal supremacy",
+        "aliases": [
+          "supremacy clause"
+        ],
+        "explanation": "Valid federal law took precedence over conflicting state law.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-articles-repairs",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-new-power-limits",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4",
+      "1.5"
+    ],
+    "prompt": "Name a constitutional design that limited the stronger national government created in 1787.",
+    "hint": "Use the terms and examples from Lesson 1.3.",
+    "href": "lesson-1-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "4. The Constitution Created Usable Power"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Enumerated Powers",
+        "aliases": [],
+        "explanation": "Powers written into the Constitution, such as Congress’s powers to tax, borrow money, regulate interstate commerce, and raise armed forces.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Separation of Powers",
+        "aliases": [
+          "dividing power among branches",
+          "powers divided among three branches",
+          "separate branches of government",
+          "division of powers among branches"
+        ],
+        "explanation": "The division of national authority among legislative, executive, and judicial branches: Congress makes laws, the president carries them out, and courts interpret them.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Checks and Balances",
+        "aliases": [
+          "branches limit each other",
+          "each branch checks the others",
+          "branches check one another"
+        ],
+        "explanation": "Constitutional powers that let the branches restrain one another, such as vetoes, Senate confirmation, and judicial review. They make branches share important decisions.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Federalism",
+        "aliases": [
+          "power divided between national and state governments",
+          "sharing power between national and state governments"
+        ],
+        "explanation": "A federal system divides governing authority between national and state governments, each with some independent powers and other powers they share.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-new-power-limits",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-national-access-points",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.6"
+    ],
+    "prompt": "Name a national institution or process people can approach to influence policy.",
+    "hint": "Use the terms and examples from Lesson 1.4.",
+    "href": "lesson-1-4.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "4. Divided Power Created ACCESS POINTS"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Congress",
+        "aliases": [
+          "legislators",
+          "members of congress"
+        ],
+        "explanation": "People can contact lawmakers and participate through congressional elections, hearings, and committees.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "President",
+        "aliases": [
+          "presidency",
+          "white house"
+        ],
+        "explanation": "People can seek attention and action from the president.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Federal agencies",
+        "aliases": [
+          "agencies",
+          "rulemaking"
+        ],
+        "explanation": "People and groups can participate in administrative processes such as rulemaking.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Federal courts",
+        "aliases": [
+          "courts",
+          "lawsuits"
+        ],
+        "explanation": "People can bring legal claims to challenge government action.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-national-access-points",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-federalism-access-points",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.9"
+    ],
+    "prompt": "Name a national, state, or local access point listed in our federalism notes.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "7. FEDERALISM in Action"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Congress",
+        "aliases": [],
+        "explanation": "People can seek federal legislation through Congress.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Federal agencies",
+        "aliases": [
+          "federal agency"
+        ],
+        "explanation": "People can seek action from agencies implementing national law.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Federal courts",
+        "aliases": [
+          "federal court"
+        ],
+        "explanation": "People can bring appropriate legal claims in federal court.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Governor",
+        "aliases": [
+          "governors"
+        ],
+        "explanation": "People can seek action from a state executive.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "State legislature",
+        "aliases": [
+          "state legislatures"
+        ],
+        "explanation": "People can seek state laws through elected state legislators.",
+        "basePoints": 100
+      },
+      {
+        "id": "5",
+        "label": "State agencies",
+        "aliases": [
+          "state agency"
+        ],
+        "explanation": "People can seek action from state administrative institutions.",
+        "basePoints": 100
+      },
+      {
+        "id": "6",
+        "label": "State courts",
+        "aliases": [
+          "state court"
+        ],
+        "explanation": "People can bring appropriate legal claims in state court.",
+        "basePoints": 100
+      },
+      {
+        "id": "7",
+        "label": "Local government",
+        "aliases": [
+          "local governments",
+          "city council",
+          "county government"
+        ],
+        "explanation": "People can seek policy changes through local institutions.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-federalism-access-points",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-presidential-media",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.7"
+    ],
+    "prompt": "Name a communication medium compared in our presidential-communication notes.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 5 — The Power to Persuade"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Radio",
+        "aliases": [],
+        "explanation": "Radio lets a president address a large audience directly.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Television",
+        "aliases": [
+          "tv"
+        ],
+        "explanation": "Television adds visual communication to a national address.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Social media",
+        "aliases": [
+          "online platforms"
+        ],
+        "explanation": "Social media lets presidents publish immediately and reach followers without first passing through a news organization.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 4,
+    "family": "notes-presidential-media",
+    "theme": "course",
+    "difficultyRationale": "Recall examples and mechanisms from covered lessons."
+  },
+  {
+    "id": "trivia-notes-articles-weaknesses",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a weakness of the national government under the Articles of Confederation.",
+    "hint": "Think about taxes, trade, enforcing decisions, or changing the rules.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "No independent taxing power",
+        "aliases": [
+          "could not tax",
+          "no taxes",
+          "cannot tax",
+          "no power to tax",
+          "taxation"
+        ],
+        "explanation": "Congress depended on state contributions rather than collecting national taxes directly.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "No power to regulate interstate commerce",
+        "aliases": [
+          "could not regulate trade",
+          "no commerce power",
+          "could not regulate commerce",
+          "trade",
+          "interstate commerce"
+        ],
+        "explanation": "Congress lacked a general power to regulate trade among the states.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "No separate national executive",
+        "aliases": [
+          "no executive",
+          "no president",
+          "lack of executive"
+        ],
+        "explanation": "There was no separate national executive branch to carry out Congress’s decisions.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "No general national judiciary",
+        "aliases": [
+          "no national courts",
+          "no federal courts",
+          "no judiciary"
+        ],
+        "explanation": "The Articles did not establish a general national court system to resolve federal legal disputes.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Unanimous consent to amend",
+        "aliases": [
+          "unanimity",
+          "unanimous amendments",
+          "all 13 states",
+          "13 states",
+          "unanimous consent"
+        ],
+        "explanation": "Changing the Articles required approval from all thirteen states, making reform difficult.",
+        "basePoints": 100
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-articles-weaknesses",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-convention-plans",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.5"
+    ],
+    "prompt": "Name a representation plan or compromise from the Constitutional Convention.",
+    "hint": "Think population, equal state votes, or a Congress with two different chambers.",
+    "href": "lesson-1-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Virginia Plan",
+        "aliases": [
+          "virginia"
+        ],
+        "explanation": "A plan of government calling for a three-branch government with a bicameral legislature, where more populous states would have more representation.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "New Jersey Plan",
+        "aliases": [
+          "new jersey"
+        ],
+        "explanation": "A plan of government that provided for a unicameral legislature with equal votes for each state.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Great Compromise",
+        "aliases": [
+          "connecticut compromise"
+        ],
+        "explanation": "The agreement creating a House with representation based on population and a Senate with two members from each state, resolving the large-state and small-state dispute.",
+        "basePoints": 60
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1zQTQgg852JUmoB1uvhUK9JC4G8Z-wM90IRSutxl4QUs",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-convention-plans",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-congress-influence-channels",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.6"
+    ],
+    "prompt": "Name a congressional access point listed in our constitutional-friction notes.",
+    "hint": "Use the terms and examples from Lesson 1.4.",
+    "href": "lesson-1-4.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "4. Divided Power Created ACCESS POINTS"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Elections",
+        "aliases": [
+          "voting"
+        ],
+        "explanation": "Voters can choose or replace members of Congress.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Committees",
+        "aliases": [
+          "committee"
+        ],
+        "explanation": "Committees consider bills and gather information.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Hearings",
+        "aliases": [
+          "hearing"
+        ],
+        "explanation": "Hearings let Congress receive information and arguments.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Contact with legislators",
+        "aliases": [
+          "contact legislators",
+          "contact representatives",
+          "write to congress"
+        ],
+        "explanation": "People can communicate concerns directly to their representatives.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-congress-influence-channels",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-reserved-examples",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a state responsibility used as a reserved-power example in our notes.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "2. The Constitutional Power Map"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Education",
+        "aliases": [
+          "schools",
+          "public education"
+        ],
+        "explanation": "States have a major role in education, even though federal authority can also affect schools.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Professional licensing",
+        "aliases": [
+          "licensing",
+          "licenses"
+        ],
+        "explanation": "States license many professions.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Local government",
+        "aliases": [
+          "create local governments",
+          "local governments"
+        ],
+        "explanation": "States establish and structure local governments.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Public safety",
+        "aliases": [
+          "police",
+          "policing"
+        ],
+        "explanation": "States exercise broad public-safety responsibilities.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Election administration",
+        "aliases": [
+          "elections",
+          "administer elections"
+        ],
+        "explanation": "States administer elections subject to constitutional and federal legal requirements.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-reserved-examples",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-concurrent-examples",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a power the national and state governments both exercise.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "2. The Constitutional Power Map"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Tax",
+        "aliases": [
+          "taxation",
+          "taxing"
+        ],
+        "explanation": "Both levels collect taxes.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Borrow money",
+        "aliases": [
+          "borrowing",
+          "borrow"
+        ],
+        "explanation": "Both levels can borrow money.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Create courts",
+        "aliases": [
+          "courts",
+          "establish courts"
+        ],
+        "explanation": "Both levels have court systems.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Make laws",
+        "aliases": [
+          "lawmaking",
+          "legislate"
+        ],
+        "explanation": "Both levels make laws within their authority.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Enforce laws",
+        "aliases": [
+          "law enforcement"
+        ],
+        "explanation": "Both levels carry out and enforce laws.",
+        "basePoints": 100
+      },
+      {
+        "id": "5",
+        "label": "Spend for public purposes",
+        "aliases": [
+          "spending",
+          "spend"
+        ],
+        "explanation": "Both levels spend to carry out public responsibilities.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-concurrent-examples",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-national-policy-influence",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.9"
+    ],
+    "prompt": "Name a way the national government uses funding or legal requirements to influence state policy.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "5. Money Connected the Levels"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Categorical Grants",
+        "aliases": [
+          "categorical grant",
+          "categorical",
+          "money for a specific purpose",
+          "grants for specific purposes"
+        ],
+        "explanation": "Federal funding for a specific purpose with detailed conditions, giving the national government more control over how states use the money.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Block Grants",
+        "aliases": [
+          "block grant",
+          "block",
+          "money for a broad purpose",
+          "grants for broad purposes"
+        ],
+        "explanation": "Federal funding for a broad policy area with fewer restrictions, giving states more discretion over how to meet local needs.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Federal Mandate",
+        "aliases": [
+          "mandates",
+          "mandate"
+        ],
+        "explanation": "A federal requirement that states take specified actions. Unlike a grant, which encourages action through funding, a mandate requires action through law.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Unfunded Mandate",
+        "aliases": [
+          "unfunded mandates",
+          "a requirement without funding",
+          "federal requirement without funding"
+        ],
+        "explanation": "A federal requirement without enough federal money to cover its cost.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-national-policy-influence",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-mandatory-programs",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a mandatory-spending program listed in our notes.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "BUDGET CHOICES"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Social Security",
+        "aliases": [
+          "social security"
+        ],
+        "explanation": "Social Security spending follows benefit commitments established by law.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Medicare",
+        "aliases": [],
+        "explanation": "Medicare is a mandatory-spending program.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Medicaid",
+        "aliases": [],
+        "explanation": "Medicaid is a mandatory-spending program.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-mandatory-programs",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-discretionary-areas",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name an area used as a discretionary-spending example in our notes.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "BUDGET CHOICES"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Defense",
+        "aliases": [
+          "military",
+          "military funding"
+        ],
+        "explanation": "Much defense spending is set in annual appropriations.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Education",
+        "aliases": [
+          "schools"
+        ],
+        "explanation": "Many federal education appropriations are discretionary.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Infrastructure",
+        "aliases": [
+          "roads",
+          "bridges"
+        ],
+        "explanation": "Infrastructure appropriations are a discretionary-spending example; not every program in an area has the same budget treatment.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-discretionary-areas",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-bill-stopping-points",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a decision point that can stop a bill from becoming law.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Part 3 — Easier Said Than Done"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Committee",
+        "aliases": [
+          "committee rejection",
+          "committee inaction"
+        ],
+        "explanation": "A committee may refuse to advance a bill.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "House floor",
+        "aliases": [
+          "house vote",
+          "house rejection"
+        ],
+        "explanation": "The full House may reject the proposal.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Senate floor",
+        "aliases": [
+          "senate vote",
+          "senate rejection"
+        ],
+        "explanation": "The Senate may reject or fail to advance a proposal.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Presidential veto",
+        "aliases": [
+          "veto"
+        ],
+        "explanation": "A regular veto blocks enactment unless both chambers override it.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-bill-stopping-points",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-representative-pressures",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a pressure members weigh when deciding how to vote.",
+    "hint": "Use the terms and examples from Lesson 2.2.",
+    "href": "lesson-2-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Part 4 — Interfering Interests"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Constituents",
+        "aliases": [
+          "constituency",
+          "voters",
+          "district interests"
+        ],
+        "explanation": "Members consider the people they represent.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Personal judgment",
+        "aliases": [
+          "own judgment",
+          "independent judgment"
+        ],
+        "explanation": "Members may use their own assessment of the public interest.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Reelection",
+        "aliases": [
+          "election",
+          "winning reelection"
+        ],
+        "explanation": "Members consider whether their choices help or hurt their chances of remaining in office.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Party goals",
+        "aliases": [
+          "party",
+          "party leadership"
+        ],
+        "explanation": "Party priorities may conflict with local preferences.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-representative-pressures",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-power-expansion-forces",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name a force our notes connect with the expansion of presidential power.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 4 — The Expanding Presidency"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Crises",
+        "aliases": [
+          "crisis",
+          "emergencies"
+        ],
+        "explanation": "Crises can create pressure for fast presidential action.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "International responsibilities",
+        "aliases": [
+          "foreign affairs",
+          "international affairs"
+        ],
+        "explanation": "International responsibilities can encourage a stronger executive role.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Public expectations",
+        "aliases": [
+          "expectations"
+        ],
+        "explanation": "The public may expect the president to solve national problems.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Larger executive branch",
+        "aliases": [
+          "growth of executive branch",
+          "bigger executive branch"
+        ],
+        "explanation": "A larger executive organization provides more capacity for presidential action.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Congressional delegation",
+        "aliases": [
+          "delegation",
+          "broad laws"
+        ],
+        "explanation": "Broad laws can give the executive room to choose implementation details.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-power-expansion-forces",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-energy-purposes",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name a responsibility Hamilton connected to executive energy.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "WHY GOVERNMENT NEEDS ENERGY"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "National defense",
+        "aliases": [
+          "defense",
+          "defend the nation",
+          "protecting the nation",
+          "defending the country"
+        ],
+        "explanation": "Energy helps government respond when the country faces attack.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Enforcing laws",
+        "aliases": [
+          "enforce laws",
+          "law enforcement",
+          "carrying out the laws",
+          "execute the laws",
+          "faithful execution of laws"
+        ],
+        "explanation": "Energy helps government carry federal law into effect.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Protecting property",
+        "aliases": [
+          "property",
+          "property rights",
+          "protection of property",
+          "protect property rights"
+        ],
+        "explanation": "Energy supports protection of people’s possessions and property rights.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Securing liberty",
+        "aliases": [
+          "liberty",
+          "freedom",
+          "protecting rights",
+          "protecting liberty",
+          "secure freedom"
+        ],
+        "explanation": "Energy can help protect people’s freedom and rights.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-energy-purposes",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-presidential-communication",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.7"
+    ],
+    "prompt": "Name a presidential communication tool or strategy from our lesson.",
+    "hint": "Think the annual message to Congress, public attention, direct appeals, or the agenda.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "State of the Union Address",
+        "aliases": [
+          "state of the union",
+          "sotu"
+        ],
+        "explanation": "The modern presidential address that informs Congress about national affairs, recommends measures, and communicates policy priorities to the public. The Constitution requires information and recommendations, not a particular speech format.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Bully Pulpit",
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
+        "explanation": "Use public attention to highlight issues and build support for proposals. Public support does not guarantee action; Congress still decides whether to pass legislation.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Going Public",
+        "aliases": [
+          "go public"
+        ],
+        "explanation": "A tactic through which presidents reach out directly to the American people to pressure Congress on policy goals.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Agenda Setting",
+        "aliases": [
+          "setting the agenda"
+        ],
+        "explanation": "Influencing which problems officials and the public treat as priorities. A presidential address can draw attention to a proposal without itself making the proposal law.",
+        "basePoints": 80
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 5,
+    "family": "notes-presidential-communication",
+    "theme": "course",
+    "difficultyRationale": "Apply a covered concept to institutions, powers, or policy."
+  },
+  {
+    "id": "trivia-notes-energy",
+    "unit": 2,
+    "prompt": "Name one of Hamilton’s four ingredients of executive energy.",
+    "hint": "Think about leadership, time, financial support, or legal authority.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Unity",
+        "aliases": [
+          "one president",
+          "single executive",
+          "one executive",
+          "single president",
+          "one person leads the executive branch",
+          "a single person leads the executive",
+          "leadership by one president"
+        ],
+        "explanation": "One president leads the executive branch. Advisers help, but do not share equal executive authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Duration",
+        "aliases": [
+          "time in office",
+          "tenure",
+          "term in office",
+          "enough time in office",
+          "time to carry out plans",
+          "a long enough term"
+        ],
+        "explanation": "A president needs time in office to carry out decisions and follow through on plans.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Adequate support",
+        "aliases": [
+          "financial support",
+          "adequate provision for its support",
+          "salary",
+          "compensation",
+          "financial independence",
+          "reliable financial support",
+          "enough financial support",
+          "a reliable salary",
+          "financial resources"
+        ],
+        "explanation": "Reliable financial support lets the president perform the job and reduces others’ ability to apply financial pressure.",
+        "basePoints": 80
+      },
+      {
+        "id": "3",
+        "label": "Competent powers",
+        "aliases": [
+          "sufficient legal authority",
+          "competent power",
+          "sufficient powers",
+          "legal authority",
+          "enough legal authority",
+          "enough authority to do the job",
+          "sufficient authority",
+          "powers suited to the job"
+        ],
+        "explanation": "The president needs enough legal authority to carry out the responsibilities of the office.",
+        "basePoints": 100
+      }
+    ],
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-energy",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-unity",
+    "unit": 2,
+    "prompt": "Name one of Hamilton’s four advantages of unity.",
+    "hint": "Think about choosing, carrying out a choice, confidentiality, or speed.",
+    "href": "docs/federalist-70.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Decision",
+        "aliases": [
+          "decisiveness",
+          "choosing a course of action",
+          "making a decision",
+          "choose a course of action",
+          "choosing what to do"
+        ],
+        "explanation": "Choosing a course of action.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Activity",
+        "aliases": [
+          "action",
+          "putting decisions into action",
+          "carrying out decisions",
+          "putting a decision into action",
+          "put a choice into action"
+        ],
+        "explanation": "Putting that choice into action.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Secrecy",
+        "aliases": [
+          "confidentiality",
+          "keeping plans confidential",
+          "keeping sensitive plans confidential",
+          "keep sensitive plans secret"
+        ],
+        "explanation": "Keeping sensitive plans confidential when necessary.",
+        "basePoints": 80
+      },
+      {
+        "id": "3",
+        "label": "Dispatch",
+        "aliases": [
+          "despatch",
+          "prompt action",
+          "speed",
+          "acting promptly",
+          "acting quickly",
+          "act promptly",
+          "quick action",
+          "acting without delay"
+        ],
+        "explanation": "Acting promptly when delay could cause harm.",
+        "basePoints": 100
+      }
+    ],
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-unity",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-congress-representation",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name one of the three decision-making models for a representative.",
+    "hint": "Think following constituents, using personal judgment, or combining the two.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Delegate Model of Representation",
+        "aliases": [
+          "delegate",
+          "delegate model",
+          "vote as constituents want",
+          "follow constituent preferences"
+        ],
+        "explanation": "An approach in which a representative follows constituents’ preferences, acting as their agent.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Trustee Model of Representation",
+        "aliases": [
+          "trustee",
+          "trustee model",
+          "use their own judgment",
+          "use personal judgment"
+        ],
+        "explanation": "An approach in which a representative uses independent judgment, even when some constituents disagree.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Politico Model of Representation",
+        "aliases": [
+          "politico",
+          "politico model",
+          "combine delegate and trustee",
+          "mix delegate and trustee models"
+        ],
+        "explanation": "An approach combining delegate and trustee behavior, changing emphasis with the issue or situation rather than following one fixed rule.",
+        "basePoints": 60
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-congress-representation",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-senate-debate",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a Senate tool used to delay business, end debate, or arrange how business proceeds.",
+    "hint": "Think filibuster, cloture, holds, or unanimous consent.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Filibuster",
+        "aliases": [
+          "extend debate to delay a vote",
+          "prolonging senate debate",
+          "delaying a vote through debate"
+        ],
+        "explanation": "Extended Senate debate, or its threat, used to delay or block action. A bill can have majority support yet struggle to reach a final vote.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Cloture",
+        "aliases": [
+          "end senate debate",
+          "ending debate",
+          "vote to end debate"
+        ],
+        "explanation": "The Senate procedure that limits further debate and moves toward a final vote. On most legislation it requires 60 senators; invoking cloture does not itself pass the bill.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Hold",
+        "aliases": [],
+        "explanation": "A senator’s signal that they may object to a unanimous-consent request, potentially delaying action.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Unanimous Consent Agreement",
+        "aliases": [
+          "unanimous consent"
+        ],
+        "explanation": "A Senate agreement to proceed without objection, often used to bring up bills and manage debate.",
+        "basePoints": 80
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-senate-debate",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-congress-policy-moves",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2",
+      "2.3"
+    ],
+    "prompt": "Name a congressional practice involving exchanging support, adding district projects, or directing funds to a specific project.",
+    "hint": "Think logrolling, pork-barrel politics, or earmarks.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Logrolling",
+        "aliases": [
+          "log rolling",
+          "trading votes",
+          "vote trading",
+          "trading legislative support"
+        ],
+        "explanation": "A trade of support between lawmakers for one another’s proposals, helping build a coalition to pass policy.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Pork-Barrel Politics",
+        "aliases": [
+          "pork barrel",
+          "pork",
+          "pork barrel spending"
+        ],
+        "explanation": "Directing spending toward a member’s district or state, often within a larger spending bill. Local benefits can help build support for legislation.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Earmark",
+        "aliases": [
+          "earmarks"
+        ],
+        "explanation": "An addition to a piece of legislation that directs specific funds to projects within districts or states.",
+        "basePoints": 60
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-congress-policy-moves",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-budget-categories",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a federal budget category from our spending comparison.",
+    "hint": "Think mandatory spending, discretionary spending, or net interest.",
+    "href": "lesson-2-1.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Mandatory Spending",
+        "aliases": [
+          "mandatory"
+        ],
+        "explanation": "Spending that follows existing law, including programs such as Social Security, Medicare, and Medicaid. Congress must change the law to alter those commitments; they are not a permanently fixed share of the budget.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Discretionary Spending",
+        "aliases": [
+          "discretionary"
+        ],
+        "explanation": "Spending set through annual appropriations, including funding for defense, education, and infrastructure.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Net Interest",
+        "aliases": [
+          "interest",
+          "interest payments"
+        ],
+        "explanation": "The federal government’s net cost of borrowing, which affects the money available for other budget choices.",
+        "basePoints": 60
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-budget-categories",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-districting-legal-terms",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a key term from our Baker and Shaw readings.",
+    "hint": "Think the constitutional claim, the demanding judicial test, or a district’s racial composition.",
+    "href": "lesson-2-2.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Equal Protection Clause",
+        "aliases": [
+          "equal protection",
+          "equal protection of the laws",
+          "14th amendment equal protection",
+          "fourteenth amendment equal protection"
+        ],
+        "explanation": "The Fourteenth Amendment’s requirement that states provide equal protection of the laws. Voters used it to challenge unequal representation in Baker and race-based district boundaries in Shaw.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Strict Scrutiny",
+        "aliases": [
+          "compelling interest and narrow tailoring",
+          "a compelling interest and narrowly tailored means"
+        ],
+        "explanation": "The Court’s toughest review: the state must show a compelling reason and a map closely fitted to it when race predominates in drawing district lines. Applying the test does not automatically invalidate the district.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Majority-Minority District",
+        "aliases": [
+          "majority minority"
+        ],
+        "explanation": "A district in which a racial or ethnic minority forms a majority of the population. Shaw did not ban every such district; the constitutional question concerns how race shaped the boundaries.",
+        "basePoints": 60
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-districting-legal-terms",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-house-qualifications",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.1"
+    ],
+    "prompt": "Name a constitutional qualification for serving in the House.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "HOUSE REPRESENTATION AND CONGRESS’S POWERS"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "At least 25 years old",
+        "aliases": [
+          "25",
+          "25 years old",
+          "age 25"
+        ],
+        "explanation": "Representatives must be at least twenty-five.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Seven years of citizenship",
+        "aliases": [
+          "7 years",
+          "seven years",
+          "7 years citizenship"
+        ],
+        "explanation": "Representatives must have been U.S. citizens for seven years.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Inhabit the represented state",
+        "aliases": [
+          "state resident",
+          "live in the state",
+          "state residency"
+        ],
+        "explanation": "Representatives must inhabit their state when elected; the Constitution does not require residence within the district.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-house-qualifications",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-senate-qualifications",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.1"
+    ],
+    "prompt": "Name a constitutional qualification for serving in the Senate.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "SENATE REPRESENTATION AND POWERS"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "At least 30 years old",
+        "aliases": [
+          "30",
+          "30 years old",
+          "age 30"
+        ],
+        "explanation": "Senators must be at least thirty.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Nine years of citizenship",
+        "aliases": [
+          "9 years",
+          "nine years",
+          "9 years citizenship"
+        ],
+        "explanation": "Senators must have been U.S. citizens for nine years.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Inhabit the represented state",
+        "aliases": [
+          "state resident",
+          "live in the state",
+          "state residency"
+        ],
+        "explanation": "Senators must inhabit the state they represent when elected.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-senate-qualifications",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-house-floor-tools",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a House mechanism from our notes that affects debate, amendments, or getting a bill out of committee.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "HOUSE FLOOR RULES"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "House Rules Committee",
+        "aliases": [],
+        "explanation": "The House committee that proposes limits on debate time and amendments for many bills. The full House votes on the proposed rule.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Committee of the Whole",
+        "aliases": [
+          "whole"
+        ],
+        "explanation": "A House procedure that speeds debate and amendment under a lower attendance threshold. The full House still votes on final passage.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Discharge Petition",
+        "aliases": [
+          "discharge"
+        ],
+        "explanation": "A way to bring a bill out of a House committee with signatures from a majority of House members. It is difficult to use and does not itself pass the bill.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-house-floor-tools",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-committee-work",
+    "unit": 2,
+    "lesson": "2.1",
+    "apTopics": [
+      "2.2"
+    ],
+    "prompt": "Name a task standing committees perform before a bill reaches the chamber floor.",
+    "hint": "Use the terms and examples from Lesson 2.1.",
+    "href": "lesson-2-1.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
+      "section": "LEADERSHIP AND COMMITTEES"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Hold hearings",
+        "aliases": [
+          "hearings",
+          "hearing"
+        ],
+        "explanation": "Committees receive evidence and testimony.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Gather information",
+        "aliases": [
+          "research",
+          "study bills",
+          "investigate"
+        ],
+        "explanation": "Committees study policy details and proposals.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Mark up bills",
+        "aliases": [
+          "markup",
+          "mark up",
+          "revise bills",
+          "amend bills"
+        ],
+        "explanation": "Markup involves debating and proposing changes to a bill.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-committee-work",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-senate-confirmed-offices",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.5"
+    ],
+    "prompt": "Name a type of nominee from our notes who generally requires Senate confirmation.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 3 — Power Meets Resistance"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Cabinet secretary",
+        "aliases": [
+          "cabinet secretaries",
+          "cabinet members",
+          "department head"
+        ],
+        "explanation": "Executive department heads generally require Senate confirmation.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Ambassador",
+        "aliases": [
+          "ambassadors"
+        ],
+        "explanation": "The president nominates ambassadors, subject to Senate confirmation.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Federal judge",
+        "aliases": [
+          "federal judges",
+          "supreme court justice",
+          "judge"
+        ],
+        "explanation": "The Senate confirms presidential nominations to the federal judiciary.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-senate-confirmed-offices",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-congress-military-powers",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.5"
+    ],
+    "prompt": "Name a military-related power Congress retains while the president is commander in chief.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "CONGRESS AND THE PRESIDENT CHECK ONE ANOTHER"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Declare war",
+        "aliases": [
+          "declaration of war"
+        ],
+        "explanation": "Commander-in-chief authority does not transfer Congress’s power to declare war.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Authorize action",
+        "aliases": [
+          "authorization",
+          "authorize military action",
+          "congressional authorization"
+        ],
+        "explanation": "Congress can authorize military action through legislation.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Control military funding",
+        "aliases": [
+          "funding",
+          "military funding",
+          "fund armed forces",
+          "appropriations"
+        ],
+        "explanation": "Congress controls needed military appropriations.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-congress-military-powers",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-cooperation-obstacles",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name a political condition from our notes that can make cooperation between Congress and the president harder.",
+    "hint": "Use the terms and examples from Lesson 2.2.",
+    "href": "lesson-2-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "Part 5 — The Public Good"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Divided Government",
+        "aliases": [
+          "different parties control congress and the presidency",
+          "opposing parties control the branches"
+        ],
+        "explanation": "A situation in which one party controls the presidency and another controls at least one chamber of Congress. It can make cooperation harder but does not make agreement impossible.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Polarization",
+        "aliases": [
+          "parties move further apart",
+          "growing ideological distance between parties"
+        ],
+        "explanation": "The widening ideological distance between parties, which can make compromise and agreement harder.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Lame Duck Period",
+        "aliases": [
+          "lame duck",
+          "lame duck presidency"
+        ],
+        "explanation": "A period when a president is leaving office without another term ahead, such as after a successor is elected or when the president will not seek reelection. Lawmakers may become less responsive as they look toward the next president.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-cooperation-obstacles",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-presidential-communication-planning",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.7"
+    ],
+    "prompt": "Name something our notes say to identify when judging a presidential communication strategy.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Part 5 — The Power to Persuade"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Audience",
+        "aliases": [
+          "target audience"
+        ],
+        "explanation": "A communication strategy addresses a particular audience.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Policy goal",
+        "aliases": [
+          "goal",
+          "purpose"
+        ],
+        "explanation": "The strategy is intended to advance a particular policy objective.",
+        "basePoints": 40
+      },
+      {
+        "id": "2",
+        "label": "Desired response",
+        "aliases": [
+          "response",
+          "action sought"
+        ],
+        "explanation": "A president may seek public support, a legislative vote, or another response.",
+        "basePoints": 60
+      },
+      {
+        "id": "3",
+        "label": "Needed cooperation",
+        "aliases": [
+          "cooperation",
+          "whose cooperation is needed"
+        ],
+        "explanation": "Communication does not remove the need for other officials’ lawful cooperation.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-presidential-communication-planning",
+    "theme": "course",
+    "difficultyRationale": "Specific procedures, qualifications, or distinctions from covered notes."
+  },
+  {
+    "id": "trivia-notes-strict-scrutiny-elements",
+    "unit": 2,
+    "lesson": "2.2",
+    "apTopics": [
+      "2.3"
+    ],
+    "prompt": "Name one of the two requirements in the strict-scrutiny explanation from our Shaw notes.",
+    "hint": "Use the terms and examples from Lesson 2.2.",
+    "href": "lesson-2-2.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
+      "section": "SHAW v. RENO (1993)"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Compelling reason",
+        "aliases": [
+          "compelling interest",
+          "compelling state interest",
+          "very strong reason",
+          "a very strong reason",
+          "a compelling government interest"
+        ],
+        "explanation": "The state must justify the use of race with a compelling governmental interest.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Narrow tailoring",
+        "aliases": [
+          "narrowly tailored",
+          "closely fitted map",
+          "use race only as much as needed",
+          "using race no more than necessary",
+          "use race only as needed"
+        ],
+        "explanation": "The map’s use of race must be closely fitted to the compelling purpose.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-strict-scrutiny-elements",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-hamilton-safeguards",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.6"
+    ],
+    "prompt": "Name either safeguard for republican government Hamilton identifies in Federalist No. 70.",
+    "hint": "Think about the people and responsibility for official conduct.",
+    "href": "lesson-2-3.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Dependence on the people",
+        "aliases": [
+          "dependence",
+          "elections",
+          "public accountability through elections",
+          "elections give people a voice",
+          "accountable through elections"
+        ],
+        "explanation": "Elections give the public a recurring voice in who leads. A president who loses public support may lose the opportunity for another term.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Responsibility for official conduct",
+        "aliases": [
+          "responsibility",
+          "accountability",
+          "answering for presidential actions",
+          "accountable for official decisions"
+        ],
+        "explanation": "People can examine and criticize presidential decisions. Serious misconduct can lead to investigation, impeachment by the House, and a Senate trial.",
+        "basePoints": 80
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-hamilton-safeguards",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-madison-resistance",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.6"
+    ],
+    "prompt": "Name one of the two things Madison said officials need to resist other officials’ encroachment.",
+    "hint": "Use the terms and examples from Lesson 1.4.",
+    "href": "lesson-1-4.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "3. FEDERALIST NO. 51 Explained the Design"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Motive",
+        "aliases": [
+          "motives",
+          "ambition",
+          "incentive"
+        ],
+        "explanation": "Officials need a reason to resist another institution’s overreach.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Constitutional means",
+        "aliases": [
+          "constitutional tools"
+        ],
+        "explanation": "Officials also need institutional powers that make resistance possible.",
+        "basePoints": 80
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-madison-resistance",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-amendment-proposals",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.6"
+    ],
+    "prompt": "Name an Article V proposal route, including who must reach the two-thirds threshold.",
+    "hint": "There is a congressional route and a convention route.",
+    "href": "lesson-1-4.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Two-thirds of both houses of Congress",
+        "aliases": [
+          "two thirds of Congress",
+          "two thirds of each house of Congress",
+          "two thirds of the House and Senate",
+          "2/3 of both houses of Congress",
+          "two thirds congressional vote"
+        ],
+        "explanation": "Two-thirds of each chamber of Congress can propose an amendment.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "A convention called by Congress at the request of two-thirds of state legislatures",
+        "aliases": [
+          "two thirds of state legislatures request a convention",
+          "convention requested by two thirds of state legislatures",
+          "national convention requested by two thirds of states",
+          "2/3 of state legislatures call a convention"
+        ],
+        "explanation": "Congress calls a proposing convention when two-thirds of state legislatures apply for one.",
+        "basePoints": 80
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-amendment-proposals",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-amendment-ratification",
+    "unit": 1,
+    "lesson": "1.4",
+    "apTopics": [
+      "1.6"
+    ],
+    "prompt": "Name a way states can ratify a constitutional amendment.",
+    "hint": "Both routes require three-fourths of the states.",
+    "href": "lesson-1-4.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "State legislatures",
+        "aliases": [
+          "legislatures",
+          "three fourths state legislatures",
+          "3/4 state legislatures"
+        ],
+        "explanation": "Three-fourths of state legislatures can ratify an amendment when Congress selects this route.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "State ratifying conventions",
+        "aliases": [
+          "state conventions",
+          "ratifying conventions",
+          "conventions"
+        ],
+        "explanation": "Conventions in three-fourths of the states can ratify an amendment when Congress selects this route.",
+        "basePoints": 80
+      }
+    ],
+    "source": {
+      "document": "https://docs.google.com/document/d/1CVG72iOlvr0ruEF0qR5exUA79S7AkepZXXi6xkloRpI",
+      "section": "Lesson concepts and linked course references"
+    },
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-amendment-ratification",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-federalist-39-national",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a national feature of the Constitution identified in our Federalist No. 39 notes.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "1. A \"Composition of Both\""
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Population-based House representation",
+        "aliases": [
+          "house representation",
+          "population",
+          "House seats based on population",
+          "House representation based on population"
+        ],
+        "explanation": "House representation is apportioned by population.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "National laws act directly on individuals",
+        "aliases": [
+          "laws act on individuals",
+          "direct authority over individuals"
+        ],
+        "explanation": "The new government acts on people, not only through requests to state governments.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Authority over national responsibilities",
+        "aliases": [
+          "national responsibilities",
+          "national powers"
+        ],
+        "explanation": "The government receives responsibilities assigned to the whole country.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-federalist-39-national",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-federalist-39-federal",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name a federal feature of the Constitution identified in our Federalist No. 39 notes.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "1. A \"Composition of Both\""
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "State ratifying conventions",
+        "aliases": [
+          "ratification by states",
+          "state conventions"
+        ],
+        "explanation": "People approved the Constitution through separate state conventions.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Equal representation in the Senate",
+        "aliases": [
+          "equal senate representation",
+          "equal representation of states in the Senate",
+          "equal state representation"
+        ],
+        "explanation": "Every state receives two senators.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Reserved state powers",
+        "aliases": [
+          "reserved powers",
+          "state governments"
+        ],
+        "explanation": "States keep their own governments and important powers.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-federalist-39-federal",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-article-four-rules",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.7"
+    ],
+    "prompt": "Name an Article IV rule governing relationships among states from our notes.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "6. The Constitution Connected the States"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Full Faith and Credit Clause",
+        "aliases": [
+          "full faith and credit",
+          "recognizing other states court judgments",
+          "recognize other states records"
+        ],
+        "explanation": "The Article IV clause requiring states to recognize one another’s public acts, records, and court decisions. It does not require states to adopt identical laws.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Privileges and Immunities Clause",
+        "aliases": [
+          "privileges and immunities"
+        ],
+        "explanation": "The Article IV clause generally preventing a state from denying citizens of other states basic rights or important economic opportunities simply because they come from elsewhere. Some resident–nonresident distinctions remain allowed.",
+        "basePoints": 60
+      },
+      {
+        "id": "2",
+        "label": "Extradition",
+        "aliases": [
+          "extradition clause",
+          "returning a fugitive to another state",
+          "sending a fugitive back"
+        ],
+        "explanation": "Returning a person charged with a crime to the state with authority to handle the case after a proper demand. Crossing a state line does not erase the charge.",
+        "basePoints": 100
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-article-four-rules",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-mcculloch-clauses",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.8"
+    ],
+    "prompt": "Name either constitutional clause central to the two questions in McCulloch v. Maryland.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "4. The Supreme Court Moved the Line"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Necessary and Proper Clause",
+        "aliases": [
+          "necessary and proper",
+          "elastic clause"
+        ],
+        "explanation": "The clause supported Congress’s implied authority to create the bank.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Supremacy Clause",
+        "aliases": [
+          "supremacy"
+        ],
+        "explanation": "Maryland could not tax and obstruct a valid federal institution.",
+        "basePoints": 40
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-mcculloch-clauses",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-notes-legal-authority-sources",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4",
+      "2.6"
+    ],
+    "prompt": "Name a source of legal authority for presidential action.",
+    "hint": "Use the terms and examples from Lesson 2.3.",
+    "href": "lesson-2-3.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "FORMAL AND INFORMAL POWERS"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Constitution",
+        "aliases": [
+          "constitutional authority"
+        ],
+        "explanation": "The Constitution gives the president powers attached to the office.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Federal law",
+        "aliases": [
+          "law",
+          "statute",
+          "statutory authority",
+          "congressional authorization"
+        ],
+        "explanation": "A law enacted by Congress can authorize a particular action.",
+        "basePoints": 60
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 6,
+    "family": "notes-legal-authority-sources",
+    "theme": "course",
+    "difficultyRationale": "Identify the constitutional or statutory authority behind presidential action, rather than simply naming a presidential role."
+  },
+  {
+    "id": "trivia-notes-fourteenth-protections",
+    "unit": 1,
+    "lesson": "1.5",
+    "apTopics": [
+      "1.8"
+    ],
+    "prompt": "Name either Fourteenth Amendment clause discussed as a protection against state action.",
+    "hint": "Use the terms and examples from Lesson 1.5.",
+    "href": "lesson-1-5.html",
+    "source": {
+      "document": "https://docs.google.com/document/d/1IY5uFpgcX44exOioGEW4v9htJZGOkj87WntMy735lwY",
+      "section": "3. The Clauses That Drew the Boundary"
+    },
+    "answers": [
+      {
+        "id": "0",
+        "label": "Due Process Clause",
+        "aliases": [
+          "due process"
+        ],
+        "explanation": "The Fourteenth Amendment’s Due Process Clause protects people against certain unlawful state action.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Equal Protection Clause",
+        "aliases": [
+          "equal protection",
+          "equal protection of the laws",
+          "14th amendment equal protection",
+          "fourteenth amendment equal protection"
+        ],
+        "explanation": "The Fourteenth Amendment requires states to provide equal protection of the laws.",
+        "basePoints": 40
+      }
+    ],
+    "kind": "notes-category",
+    "difficulty": 7,
+    "family": "notes-fourteenth-protections",
+    "theme": "course",
+    "difficultyRationale": "Precise close-reading category from the assigned notes; two or three distinct answers."
+  },
+  {
+    "id": "trivia-flag-star-counts",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a number of stars used on an official U.S. flag at any time.",
+    "hint": "Give one historical star count, including the original or current flag.",
+    "href": "https://www.si.edu/spotlight/flag-day/flag-facts",
+    "difficulty": 2,
+    "family": "flag-facts",
+    "kind": "trivia-category",
+    "theme": "civic-facts",
+    "source": {
+      "document": "https://www.si.edu/spotlight/flag-day/flag-facts",
+      "section": "Official star-count timeline; verified 2026-11-20"
+    },
+    "difficultyRationale": "A broad civic warm-up with 27 possible counts, not a single-answer question.",
+    "answers": [
+      {
+        "id": "stars-13",
+        "label": "13 stars",
+        "aliases": [
+          "13",
+          "thirteen",
+          "thirteen stars",
+          "13 star flag",
+          "thirteen star flag"
+        ],
+        "basePoints": 20,
+        "explanation": "13 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-15",
+        "label": "15 stars",
+        "aliases": [
+          "15",
+          "fifteen",
+          "fifteen stars",
+          "15 star flag",
+          "fifteen star flag"
+        ],
+        "basePoints": 40,
+        "explanation": "15 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-20",
+        "label": "20 stars",
+        "aliases": [
+          "20",
+          "twenty",
+          "twenty stars",
+          "20 star flag",
+          "twenty star flag"
+        ],
+        "basePoints": 60,
+        "explanation": "20 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-21",
+        "label": "21 stars",
+        "aliases": [
+          "21",
+          "twenty one",
+          "twenty one stars",
+          "21 star flag",
+          "twenty one star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "21 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-23",
+        "label": "23 stars",
+        "aliases": [
+          "23",
+          "twenty three",
+          "twenty three stars",
+          "23 star flag",
+          "twenty three star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "23 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-24",
+        "label": "24 stars",
+        "aliases": [
+          "24",
+          "twenty four",
+          "twenty four stars",
+          "24 star flag",
+          "twenty four star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "24 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-25",
+        "label": "25 stars",
+        "aliases": [
+          "25",
+          "twenty five",
+          "twenty five stars",
+          "25 star flag",
+          "twenty five star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "25 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-26",
+        "label": "26 stars",
+        "aliases": [
+          "26",
+          "twenty six",
+          "twenty six stars",
+          "26 star flag",
+          "twenty six star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "26 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-27",
+        "label": "27 stars",
+        "aliases": [
+          "27",
+          "twenty seven",
+          "twenty seven stars",
+          "27 star flag",
+          "twenty seven star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "27 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-28",
+        "label": "28 stars",
+        "aliases": [
+          "28",
+          "twenty eight",
+          "twenty eight stars",
+          "28 star flag",
+          "twenty eight star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "28 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-29",
+        "label": "29 stars",
+        "aliases": [
+          "29",
+          "twenty nine",
+          "twenty nine stars",
+          "29 star flag",
+          "twenty nine star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "29 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-30",
+        "label": "30 stars",
+        "aliases": [
+          "30",
+          "thirty",
+          "thirty stars",
+          "30 star flag",
+          "thirty star flag"
+        ],
+        "basePoints": 80,
+        "explanation": "30 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-31",
+        "label": "31 stars",
+        "aliases": [
+          "31",
+          "thirty one",
+          "thirty one stars",
+          "31 star flag",
+          "thirty one star flag"
+        ],
+        "basePoints": 80,
+        "explanation": "31 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-32",
+        "label": "32 stars",
+        "aliases": [
+          "32",
+          "thirty two",
+          "thirty two stars",
+          "32 star flag",
+          "thirty two star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "32 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-33",
+        "label": "33 stars",
+        "aliases": [
+          "33",
+          "thirty three",
+          "thirty three stars",
+          "33 star flag",
+          "thirty three star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "33 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-34",
+        "label": "34 stars",
+        "aliases": [
+          "34",
+          "thirty four",
+          "thirty four stars",
+          "34 star flag",
+          "thirty four star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "34 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-35",
+        "label": "35 stars",
+        "aliases": [
+          "35",
+          "thirty five",
+          "thirty five stars",
+          "35 star flag",
+          "thirty five star flag"
+        ],
+        "basePoints": 80,
+        "explanation": "35 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-36",
+        "label": "36 stars",
+        "aliases": [
+          "36",
+          "thirty six",
+          "thirty six stars",
+          "36 star flag",
+          "thirty six star flag"
+        ],
+        "basePoints": 80,
+        "explanation": "36 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-37",
+        "label": "37 stars",
+        "aliases": [
+          "37",
+          "thirty seven",
+          "thirty seven stars",
+          "37 star flag",
+          "thirty seven star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "37 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-38",
+        "label": "38 stars",
+        "aliases": [
+          "38",
+          "thirty eight",
+          "thirty eight stars",
+          "38 star flag",
+          "thirty eight star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "38 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-43",
+        "label": "43 stars",
+        "aliases": [
+          "43",
+          "forty three",
+          "forty three stars",
+          "43 star flag",
+          "forty three star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "43 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-44",
+        "label": "44 stars",
+        "aliases": [
+          "44",
+          "forty four",
+          "forty four stars",
+          "44 star flag",
+          "forty four star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "44 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-45",
+        "label": "45 stars",
+        "aliases": [
+          "45",
+          "forty five",
+          "forty five stars",
+          "45 star flag",
+          "forty five star flag"
+        ],
+        "basePoints": 80,
+        "explanation": "45 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-46",
+        "label": "46 stars",
+        "aliases": [
+          "46",
+          "forty six",
+          "forty six stars",
+          "46 star flag",
+          "forty six star flag"
+        ],
+        "basePoints": 100,
+        "explanation": "46 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-48",
+        "label": "48 stars",
+        "aliases": [
+          "48",
+          "forty eight",
+          "forty eight stars",
+          "48 star flag",
+          "forty eight star flag"
+        ],
+        "basePoints": 40,
+        "explanation": "48 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-49",
+        "label": "49 stars",
+        "aliases": [
+          "49",
+          "forty nine",
+          "forty nine stars",
+          "49 star flag",
+          "forty nine star flag"
+        ],
+        "basePoints": 60,
+        "explanation": "49 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      },
+      {
+        "id": "stars-50",
+        "label": "50 stars",
+        "aliases": [
+          "50",
+          "fifty",
+          "fifty stars",
+          "50 star flag",
+          "fifty star flag"
+        ],
+        "basePoints": 20,
+        "explanation": "50 stars appears in the Smithsonian timeline of official U.S. flags. Stars represent states; not every number from 13 to 50 became an official flag."
+      }
+    ],
+    "rejectedAnswers": [
+      "0",
+      "0 stars",
+      "zero",
+      "zero stars",
+      "0 star flag",
+      "zero star flag",
+      "1",
+      "1 stars",
+      "one",
+      "one stars",
+      "1 star flag",
+      "one star flag",
+      "2",
+      "2 stars",
+      "two",
+      "two stars",
+      "2 star flag",
+      "two star flag",
+      "3",
+      "3 stars",
+      "three",
+      "three stars",
+      "3 star flag",
+      "three star flag",
+      "4",
+      "4 stars",
+      "four",
+      "four stars",
+      "4 star flag",
+      "four star flag",
+      "5",
+      "5 stars",
+      "five",
+      "five stars",
+      "5 star flag",
+      "five star flag",
+      "6",
+      "6 stars",
+      "six",
+      "six stars",
+      "6 star flag",
+      "six star flag",
+      "7",
+      "7 stars",
+      "seven",
+      "seven stars",
+      "7 star flag",
+      "seven star flag",
+      "8",
+      "8 stars",
+      "eight",
+      "eight stars",
+      "8 star flag",
+      "eight star flag",
+      "9",
+      "9 stars",
+      "nine",
+      "nine stars",
+      "9 star flag",
+      "nine star flag",
+      "10",
+      "10 stars",
+      "ten",
+      "ten stars",
+      "10 star flag",
+      "ten star flag",
+      "11",
+      "11 stars",
+      "eleven",
+      "eleven stars",
+      "11 star flag",
+      "eleven star flag",
+      "12",
+      "12 stars",
+      "twelve",
+      "twelve stars",
+      "12 star flag",
+      "twelve star flag",
+      "14",
+      "14 stars",
+      "fourteen",
+      "fourteen stars",
+      "14 star flag",
+      "fourteen star flag",
+      "16",
+      "16 stars",
+      "sixteen",
+      "sixteen stars",
+      "16 star flag",
+      "sixteen star flag",
+      "17",
+      "17 stars",
+      "seventeen",
+      "seventeen stars",
+      "17 star flag",
+      "seventeen star flag",
+      "18",
+      "18 stars",
+      "eighteen",
+      "eighteen stars",
+      "18 star flag",
+      "eighteen star flag",
+      "19",
+      "19 stars",
+      "nineteen",
+      "nineteen stars",
+      "19 star flag",
+      "nineteen star flag",
+      "22",
+      "22 stars",
+      "twenty two",
+      "twenty two stars",
+      "22 star flag",
+      "twenty two star flag",
+      "39",
+      "39 stars",
+      "thirty nine",
+      "thirty nine stars",
+      "39 star flag",
+      "thirty nine star flag",
+      "40",
+      "40 stars",
+      "forty",
+      "forty stars",
+      "40 star flag",
+      "forty star flag",
+      "41",
+      "41 stars",
+      "forty one",
+      "forty one stars",
+      "41 star flag",
+      "forty one star flag",
+      "42",
+      "42 stars",
+      "forty two",
+      "forty two stars",
+      "42 star flag",
+      "forty two star flag",
+      "47",
+      "47 stars",
+      "forty seven",
+      "forty seven stars",
+      "47 star flag",
+      "forty seven star flag",
+      "51",
+      "51 stars",
+      "fifty one",
+      "fifty one stars",
+      "51 star flag",
+      "fifty one star flag",
+      "52",
+      "52 stars",
+      "fifty two",
+      "fifty two stars",
+      "52 star flag",
+      "fifty two star flag",
+      "53",
+      "53 stars",
+      "fifty three",
+      "fifty three stars",
+      "53 star flag",
+      "fifty three star flag",
+      "54",
+      "54 stars",
+      "fifty four",
+      "fifty four stars",
+      "54 star flag",
+      "fifty four star flag",
+      "55",
+      "55 stars",
+      "fifty five",
+      "fifty five stars",
+      "55 star flag",
+      "fifty five star flag",
+      "56",
+      "56 stars",
+      "fifty six",
+      "fifty six stars",
+      "56 star flag",
+      "fifty six star flag",
+      "57",
+      "57 stars",
+      "fifty seven",
+      "fifty seven stars",
+      "57 star flag",
+      "fifty seven star flag",
+      "58",
+      "58 stars",
+      "fifty eight",
+      "fifty eight stars",
+      "58 star flag",
+      "fifty eight star flag",
+      "59",
+      "59 stars",
+      "fifty nine",
+      "fifty nine stars",
+      "59 star flag",
+      "fifty nine star flag",
+      "60",
+      "60 stars",
+      "sixty",
+      "sixty stars",
+      "60 star flag",
+      "sixty star flag",
+      "61",
+      "61 stars",
+      "sixty one",
+      "sixty one stars",
+      "61 star flag",
+      "sixty one star flag",
+      "62",
+      "62 stars",
+      "sixty two",
+      "sixty two stars",
+      "62 star flag",
+      "sixty two star flag",
+      "63",
+      "63 stars",
+      "sixty three",
+      "sixty three stars",
+      "63 star flag",
+      "sixty three star flag",
+      "64",
+      "64 stars",
+      "sixty four",
+      "sixty four stars",
+      "64 star flag",
+      "sixty four star flag",
+      "65",
+      "65 stars",
+      "sixty five",
+      "sixty five stars",
+      "65 star flag",
+      "sixty five star flag",
+      "66",
+      "66 stars",
+      "sixty six",
+      "sixty six stars",
+      "66 star flag",
+      "sixty six star flag",
+      "67",
+      "67 stars",
+      "sixty seven",
+      "sixty seven stars",
+      "67 star flag",
+      "sixty seven star flag",
+      "68",
+      "68 stars",
+      "sixty eight",
+      "sixty eight stars",
+      "68 star flag",
+      "sixty eight star flag",
+      "69",
+      "69 stars",
+      "sixty nine",
+      "sixty nine stars",
+      "69 star flag",
+      "sixty nine star flag",
+      "70",
+      "70 stars",
+      "seventy",
+      "seventy stars",
+      "70 star flag",
+      "seventy star flag",
+      "71",
+      "71 stars",
+      "seventy one",
+      "seventy one stars",
+      "71 star flag",
+      "seventy one star flag",
+      "72",
+      "72 stars",
+      "seventy two",
+      "seventy two stars",
+      "72 star flag",
+      "seventy two star flag",
+      "73",
+      "73 stars",
+      "seventy three",
+      "seventy three stars",
+      "73 star flag",
+      "seventy three star flag",
+      "74",
+      "74 stars",
+      "seventy four",
+      "seventy four stars",
+      "74 star flag",
+      "seventy four star flag",
+      "75",
+      "75 stars",
+      "seventy five",
+      "seventy five stars",
+      "75 star flag",
+      "seventy five star flag",
+      "76",
+      "76 stars",
+      "seventy six",
+      "seventy six stars",
+      "76 star flag",
+      "seventy six star flag",
+      "77",
+      "77 stars",
+      "seventy seven",
+      "seventy seven stars",
+      "77 star flag",
+      "seventy seven star flag",
+      "78",
+      "78 stars",
+      "seventy eight",
+      "seventy eight stars",
+      "78 star flag",
+      "seventy eight star flag",
+      "79",
+      "79 stars",
+      "seventy nine",
+      "seventy nine stars",
+      "79 star flag",
+      "seventy nine star flag",
+      "80",
+      "80 stars",
+      "eighty",
+      "eighty stars",
+      "80 star flag",
+      "eighty star flag",
+      "81",
+      "81 stars",
+      "eighty one",
+      "eighty one stars",
+      "81 star flag",
+      "eighty one star flag",
+      "82",
+      "82 stars",
+      "eighty two",
+      "eighty two stars",
+      "82 star flag",
+      "eighty two star flag",
+      "83",
+      "83 stars",
+      "eighty three",
+      "eighty three stars",
+      "83 star flag",
+      "eighty three star flag",
+      "84",
+      "84 stars",
+      "eighty four",
+      "eighty four stars",
+      "84 star flag",
+      "eighty four star flag",
+      "85",
+      "85 stars",
+      "eighty five",
+      "eighty five stars",
+      "85 star flag",
+      "eighty five star flag",
+      "86",
+      "86 stars",
+      "eighty six",
+      "eighty six stars",
+      "86 star flag",
+      "eighty six star flag",
+      "87",
+      "87 stars",
+      "eighty seven",
+      "eighty seven stars",
+      "87 star flag",
+      "eighty seven star flag",
+      "88",
+      "88 stars",
+      "eighty eight",
+      "eighty eight stars",
+      "88 star flag",
+      "eighty eight star flag",
+      "89",
+      "89 stars",
+      "eighty nine",
+      "eighty nine stars",
+      "89 star flag",
+      "eighty nine star flag",
+      "90",
+      "90 stars",
+      "ninety",
+      "ninety stars",
+      "90 star flag",
+      "ninety star flag",
+      "91",
+      "91 stars",
+      "ninety one",
+      "ninety one stars",
+      "91 star flag",
+      "ninety one star flag",
+      "92",
+      "92 stars",
+      "ninety two",
+      "ninety two stars",
+      "92 star flag",
+      "ninety two star flag",
+      "93",
+      "93 stars",
+      "ninety three",
+      "ninety three stars",
+      "93 star flag",
+      "ninety three star flag",
+      "94",
+      "94 stars",
+      "ninety four",
+      "ninety four stars",
+      "94 star flag",
+      "ninety four star flag",
+      "95",
+      "95 stars",
+      "ninety five",
+      "ninety five stars",
+      "95 star flag",
+      "ninety five star flag",
+      "96",
+      "96 stars",
+      "ninety six",
+      "ninety six stars",
+      "96 star flag",
+      "ninety six star flag",
+      "97",
+      "97 stars",
+      "ninety seven",
+      "ninety seven stars",
+      "97 star flag",
+      "ninety seven star flag",
+      "98",
+      "98 stars",
+      "ninety eight",
+      "ninety eight stars",
+      "98 star flag",
+      "ninety eight star flag",
+      "99",
+      "99 stars",
+      "ninety nine",
+      "ninety nine stars",
+      "99 star flag",
+      "ninety nine star flag",
+      "100",
+      "100 stars",
+      "one hundred",
+      "one hundred stars",
+      "100 star flag",
+      "one hundred star flag"
+    ]
+  },
+  {
+    "id": "trivia-states-original-states",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name one of the original thirteen states.",
+    "hint": "Name one state that fits.",
+    "href": "https://www.si.edu/spotlight/flag-day/flag-facts",
+    "answers": [
+      {
+        "id": "delaware",
+        "label": "Delaware",
+        "aliases": [
+          "DE",
+          "State of Delaware"
+        ],
+        "basePoints": 20,
+        "explanation": "Delaware was one of the original thirteen states."
+      },
+      {
+        "id": "pennsylvania",
+        "label": "Pennsylvania",
+        "aliases": [
+          "PA",
+          "State of Pennsylvania"
+        ],
+        "basePoints": 40,
+        "explanation": "Pennsylvania was one of the original thirteen states."
+      },
+      {
+        "id": "new-jersey",
+        "label": "New Jersey",
+        "aliases": [
+          "NJ",
+          "State of New Jersey"
+        ],
+        "basePoints": 40,
+        "explanation": "New Jersey was one of the original thirteen states."
+      },
+      {
+        "id": "georgia",
+        "label": "Georgia",
+        "aliases": [
+          "GA",
+          "State of Georgia"
+        ],
+        "basePoints": 40,
+        "explanation": "Georgia was one of the original thirteen states."
+      },
+      {
+        "id": "connecticut",
+        "label": "Connecticut",
+        "aliases": [
+          "CT",
+          "State of Connecticut"
+        ],
+        "basePoints": 60,
+        "explanation": "Connecticut was one of the original thirteen states."
+      },
+      {
+        "id": "massachusetts",
+        "label": "Massachusetts",
+        "aliases": [
+          "MA",
+          "State of Massachusetts"
+        ],
+        "basePoints": 20,
+        "explanation": "Massachusetts was one of the original thirteen states."
+      },
+      {
+        "id": "maryland",
+        "label": "Maryland",
+        "aliases": [
+          "MD",
+          "State of Maryland"
+        ],
+        "basePoints": 60,
+        "explanation": "Maryland was one of the original thirteen states."
+      },
+      {
+        "id": "south-carolina",
+        "label": "South Carolina",
+        "aliases": [
+          "SC",
+          "State of South Carolina"
+        ],
+        "basePoints": 60,
+        "explanation": "South Carolina was one of the original thirteen states."
+      },
+      {
+        "id": "new-hampshire",
+        "label": "New Hampshire",
+        "aliases": [
+          "NH",
+          "State of New Hampshire"
+        ],
+        "basePoints": 80,
+        "explanation": "New Hampshire was one of the original thirteen states."
+      },
+      {
+        "id": "virginia",
+        "label": "Virginia",
+        "aliases": [
+          "VA",
+          "State of Virginia"
+        ],
+        "basePoints": 20,
+        "explanation": "Virginia was one of the original thirteen states."
+      },
+      {
+        "id": "new-york",
+        "label": "New York",
+        "aliases": [
+          "NY",
+          "State of New York"
+        ],
+        "basePoints": 20,
+        "explanation": "New York was one of the original thirteen states."
+      },
+      {
+        "id": "north-carolina",
+        "label": "North Carolina",
+        "aliases": [
+          "NC",
+          "State of North Carolina"
+        ],
+        "basePoints": 100,
+        "explanation": "North Carolina was one of the original thirteen states."
+      },
+      {
+        "id": "rhode-island",
+        "label": "Rhode Island",
+        "aliases": [
+          "RI",
+          "State of Rhode Island"
+        ],
+        "basePoints": 100,
+        "explanation": "Rhode Island was one of the original thirteen states."
+      }
+    ],
+    "rejectedAnswers": [
+      "California",
+      "CA",
+      "State of California",
+      "Colorado",
+      "CO",
+      "State of Colorado",
+      "Florida",
+      "FL",
+      "State of Florida",
+      "Hawaii",
+      "HI",
+      "State of Hawaii",
+      "Idaho",
+      "ID",
+      "State of Idaho",
+      "Illinois",
+      "IL",
+      "State of Illinois",
+      "Indiana",
+      "IN",
+      "State of Indiana",
+      "Iowa",
+      "IA",
+      "State of Iowa",
+      "Kansas",
+      "KS",
+      "State of Kansas",
+      "Kentucky",
+      "KY",
+      "State of Kentucky",
+      "Louisiana",
+      "LA",
+      "State of Louisiana",
+      "Maine",
+      "ME",
+      "State of Maine",
+      "Michigan",
+      "MI",
+      "State of Michigan",
+      "Minnesota",
+      "MN",
+      "State of Minnesota",
+      "Mississippi",
+      "MS",
+      "State of Mississippi",
+      "Missouri",
+      "MO",
+      "State of Missouri",
+      "Montana",
+      "MT",
+      "State of Montana",
+      "Nebraska",
+      "NE",
+      "State of Nebraska",
+      "Nevada",
+      "NV",
+      "State of Nevada",
+      "New Mexico",
+      "NM",
+      "State of New Mexico",
+      "North Dakota",
+      "ND",
+      "State of North Dakota",
+      "Ohio",
+      "OH",
+      "State of Ohio",
+      "Oklahoma",
+      "OK",
+      "State of Oklahoma",
+      "Oregon",
+      "OR",
+      "State of Oregon",
+      "South Dakota",
+      "SD",
+      "State of South Dakota",
+      "Tennessee",
+      "TN",
+      "State of Tennessee",
+      "Texas",
+      "TX",
+      "State of Texas",
+      "Utah",
+      "UT",
+      "State of Utah",
+      "Vermont",
+      "VT",
+      "State of Vermont",
+      "Washington",
+      "WA",
+      "State of Washington",
+      "West Virginia",
+      "WV",
+      "State of West Virginia",
+      "Wisconsin",
+      "WI",
+      "State of Wisconsin",
+      "Wyoming",
+      "WY",
+      "State of Wyoming",
+      "California state",
+      "Calif",
+      "Cali",
+      "C.A.",
+      "Colorado state",
+      "Colo",
+      "C.O.",
+      "Connecticut state",
+      "Conn",
+      "C.T.",
+      "Idaho state",
+      "I.D.",
+      "Illinois state",
+      "Ill",
+      "I.L.",
+      "Indiana state",
+      "Ind",
+      "I.N.",
+      "Iowa state",
+      "I.A.",
+      "Maine state",
+      "M.E.",
+      "Maryland state",
+      "M.D.",
+      "Massachusetts state",
+      "Mass",
+      "M.A.",
+      "Michigan state",
+      "Mich",
+      "M.I.",
+      "Minnesota state",
+      "Minn",
+      "M.N.",
+      "Mississippi state",
+      "Miss",
+      "M.S.",
+      "Missouri state",
+      "M.O.",
+      "Montana state",
+      "Mont",
+      "M.T.",
+      "Nebraska state",
+      "Neb",
+      "Nebr",
+      "N.E.",
+      "Nevada state",
+      "Nev",
+      "N.V.",
+      "New Hampshire state",
+      "N Hampshire",
+      "N.H.",
+      "New Jersey state",
+      "N Jersey",
+      "N.J.",
+      "New Mexico state",
+      "N Mexico",
+      "N.M.",
+      "New York state",
+      "N York",
+      "N.Y.",
+      "North Carolina state",
+      "N Carolina",
+      "N.C.",
+      "North Dakota state",
+      "N Dakota",
+      "N.D.",
+      "Ohio state",
+      "O.H.",
+      "Oklahoma state",
+      "Okla",
+      "O.K.",
+      "Oregon state",
+      "Ore",
+      "Oreg",
+      "O.R.",
+      "Washington state",
+      "Wash",
+      "W.A.",
+      "West Virginia state",
+      "W Virginia",
+      "W Va",
+      "WVa",
+      "W.V.",
+      "Wisconsin state",
+      "Wis",
+      "Wisc",
+      "W.I.",
+      "Wyoming state",
+      "Wyo",
+      "W.Y.",
+      "Alabama",
+      "AL",
+      "State of Alabama",
+      "Alabama state",
+      "Ala",
+      "A.L.",
+      "Alaska",
+      "AK",
+      "State of Alaska",
+      "Alaska state",
+      "A.K.",
+      "Arizona",
+      "AZ",
+      "State of Arizona",
+      "Arizona state",
+      "Ariz",
+      "A.Z.",
+      "Arkansas",
+      "AR",
+      "State of Arkansas",
+      "Arkansas state",
+      "Ark",
+      "A.R."
+    ],
+    "difficulty": 2,
+    "family": "state-facts",
+    "kind": "trivia-category",
+    "theme": "civic-facts",
+    "source": {
+      "document": "https://www.si.edu/spotlight/flag-day/flag-facts",
+      "section": "Original states in the 13-star flag timeline"
+    },
+    "difficultyRationale": "Broad civic recall with multiple familiar states available."
+  },
+  {
+    "id": "trivia-states-two-words",
+    "unit": 1,
+    "lesson": "1.3",
+    "apTopics": [
+      "1.4"
+    ],
+    "prompt": "Name a U.S. state whose name has two words.",
+    "hint": "Name one state that fits.",
+    "href": "https://www.bls.gov/respondents/mwr/electronic-data-interchange/appendix-d-usps-state-abbreviations-and-fips-codes.htm",
+    "answers": [
+      {
+        "id": "new-jersey",
+        "label": "New Jersey",
+        "aliases": [
+          "NJ",
+          "State of New Jersey"
+        ],
+        "basePoints": 20,
+        "explanation": "New Jersey is a U.S. state with a two-word name."
+      },
+      {
+        "id": "south-carolina",
+        "label": "South Carolina",
+        "aliases": [
+          "SC",
+          "State of South Carolina"
+        ],
+        "basePoints": 40,
+        "explanation": "South Carolina is a U.S. state with a two-word name."
+      },
+      {
+        "id": "new-hampshire",
+        "label": "New Hampshire",
+        "aliases": [
+          "NH",
+          "State of New Hampshire"
+        ],
+        "basePoints": 40,
+        "explanation": "New Hampshire is a U.S. state with a two-word name."
+      },
+      {
+        "id": "new-york",
+        "label": "New York",
+        "aliases": [
+          "NY",
+          "State of New York"
+        ],
+        "basePoints": 20,
+        "explanation": "New York is a U.S. state with a two-word name."
+      },
+      {
+        "id": "north-carolina",
+        "label": "North Carolina",
+        "aliases": [
+          "NC",
+          "State of North Carolina"
+        ],
+        "basePoints": 60,
+        "explanation": "North Carolina is a U.S. state with a two-word name."
+      },
+      {
+        "id": "rhode-island",
+        "label": "Rhode Island",
+        "aliases": [
+          "RI",
+          "State of Rhode Island"
+        ],
+        "basePoints": 60,
+        "explanation": "Rhode Island is a U.S. state with a two-word name."
+      },
+      {
+        "id": "new-mexico",
+        "label": "New Mexico",
+        "aliases": [
+          "NM",
+          "State of New Mexico"
+        ],
+        "basePoints": 60,
+        "explanation": "New Mexico is a U.S. state with a two-word name."
+      },
+      {
+        "id": "north-dakota",
+        "label": "North Dakota",
+        "aliases": [
+          "ND",
+          "State of North Dakota"
+        ],
+        "basePoints": 60,
+        "explanation": "North Dakota is a U.S. state with a two-word name."
+      },
+      {
+        "id": "south-dakota",
+        "label": "South Dakota",
+        "aliases": [
+          "SD",
+          "State of South Dakota"
+        ],
+        "basePoints": 80,
+        "explanation": "South Dakota is a U.S. state with a two-word name."
+      },
+      {
+        "id": "west-virginia",
+        "label": "West Virginia",
+        "aliases": [
+          "WV",
+          "State of West Virginia"
+        ],
+        "basePoints": 80,
+        "explanation": "West Virginia is a U.S. state with a two-word name."
+      }
+    ],
+    "rejectedAnswers": [
+      "California",
+      "CA",
+      "State of California",
+      "Colorado",
+      "CO",
+      "State of Colorado",
+      "Connecticut",
+      "CT",
+      "State of Connecticut",
+      "Delaware",
+      "DE",
+      "State of Delaware",
+      "Florida",
+      "FL",
+      "State of Florida",
+      "Georgia",
+      "GA",
+      "State of Georgia",
+      "Hawaii",
+      "HI",
+      "State of Hawaii",
+      "Idaho",
+      "ID",
+      "State of Idaho",
+      "Illinois",
+      "IL",
+      "State of Illinois",
+      "Indiana",
+      "IN",
+      "State of Indiana",
+      "Iowa",
+      "IA",
+      "State of Iowa",
+      "Kansas",
+      "KS",
+      "State of Kansas",
+      "Kentucky",
+      "KY",
+      "State of Kentucky",
+      "Louisiana",
+      "LA",
+      "State of Louisiana",
+      "Maine",
+      "ME",
+      "State of Maine",
+      "Maryland",
+      "MD",
+      "State of Maryland",
+      "Massachusetts",
+      "MA",
+      "State of Massachusetts",
+      "Michigan",
+      "MI",
+      "State of Michigan",
+      "Minnesota",
+      "MN",
+      "State of Minnesota",
+      "Mississippi",
+      "MS",
+      "State of Mississippi",
+      "Missouri",
+      "MO",
+      "State of Missouri",
+      "Montana",
+      "MT",
+      "State of Montana",
+      "Nebraska",
+      "NE",
+      "State of Nebraska",
+      "Nevada",
+      "NV",
+      "State of Nevada",
+      "Ohio",
+      "OH",
+      "State of Ohio",
+      "Oklahoma",
+      "OK",
+      "State of Oklahoma",
+      "Oregon",
+      "OR",
+      "State of Oregon",
+      "Pennsylvania",
+      "PA",
+      "State of Pennsylvania",
+      "Tennessee",
+      "TN",
+      "State of Tennessee",
+      "Texas",
+      "TX",
+      "State of Texas",
+      "Utah",
+      "UT",
+      "State of Utah",
+      "Vermont",
+      "VT",
+      "State of Vermont",
+      "Virginia",
+      "VA",
+      "State of Virginia",
+      "Washington",
+      "WA",
+      "State of Washington",
+      "Wisconsin",
+      "WI",
+      "State of Wisconsin",
+      "Wyoming",
+      "WY",
+      "State of Wyoming",
+      "California state",
+      "Calif",
+      "Cali",
+      "C.A.",
+      "Colorado state",
+      "Colo",
+      "C.O.",
+      "Connecticut state",
+      "Conn",
+      "C.T.",
+      "Idaho state",
+      "I.D.",
+      "Illinois state",
+      "Ill",
+      "I.L.",
+      "Indiana state",
+      "Ind",
+      "I.N.",
+      "Iowa state",
+      "I.A.",
+      "Maine state",
+      "M.E.",
+      "Maryland state",
+      "M.D.",
+      "Massachusetts state",
+      "Mass",
+      "M.A.",
+      "Michigan state",
+      "Mich",
+      "M.I.",
+      "Minnesota state",
+      "Minn",
+      "M.N.",
+      "Mississippi state",
+      "Miss",
+      "M.S.",
+      "Missouri state",
+      "M.O.",
+      "Montana state",
+      "Mont",
+      "M.T.",
+      "Nebraska state",
+      "Neb",
+      "Nebr",
+      "N.E.",
+      "Nevada state",
+      "Nev",
+      "N.V.",
+      "New Hampshire state",
+      "N Hampshire",
+      "N.H.",
+      "New Jersey state",
+      "N Jersey",
+      "N.J.",
+      "New Mexico state",
+      "N Mexico",
+      "N.M.",
+      "New York state",
+      "N York",
+      "N.Y.",
+      "North Carolina state",
+      "N Carolina",
+      "N.C.",
+      "North Dakota state",
+      "N Dakota",
+      "N.D.",
+      "Ohio state",
+      "O.H.",
+      "Oklahoma state",
+      "Okla",
+      "O.K.",
+      "Oregon state",
+      "Ore",
+      "Oreg",
+      "O.R.",
+      "Washington state",
+      "Wash",
+      "W.A.",
+      "West Virginia state",
+      "W Virginia",
+      "W Va",
+      "WVa",
+      "W.V.",
+      "Wisconsin state",
+      "Wis",
+      "Wisc",
+      "W.I.",
+      "Wyoming state",
+      "Wyo",
+      "W.Y.",
+      "Alabama",
+      "AL",
+      "State of Alabama",
+      "Alabama state",
+      "Ala",
+      "A.L.",
+      "Alaska",
+      "AK",
+      "State of Alaska",
+      "Alaska state",
+      "A.K.",
+      "Arizona",
+      "AZ",
+      "State of Arizona",
+      "Arizona state",
+      "Ariz",
+      "A.Z.",
+      "Arkansas",
+      "AR",
+      "State of Arkansas",
+      "Arkansas state",
+      "Ark",
+      "A.R."
+    ],
+    "difficulty": 2,
+    "family": "state-facts",
+    "kind": "trivia-category",
+    "theme": "civic-facts",
+    "source": {
+      "document": "https://www.bls.gov/respondents/mwr/electronic-data-interchange/appendix-d-usps-state-abbreviations-and-fips-codes.htm",
+      "section": "Official state names"
+    },
+    "difficultyRationale": "Broad civic recall with multiple familiar states available."
+  }
+]

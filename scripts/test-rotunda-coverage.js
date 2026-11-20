@@ -50,14 +50,14 @@ assert.equal(E.match(find('article-ii'),'two term limit').type,'miss');
 assert.equal(E.match(find('presidents-first-john'),'Adams').type,'choice');
 assert.equal(curriculum.promptsPerDay,7);assert.equal(curriculum.secondsPerPrompt,25);
 assert.equal(curriculum.id,'government-categories-20261119');assert.equal(curriculum.previous.id,'course-through-2-3-notes-157');assert.equal(curriculum.effectiveFrom,'2026-11-19');
-assert.equal(bank.length,curriculum.bankSize);assert.ok(bank.every(p=>p.answers.length>=3));
+assert.equal(bank.length,curriculum.bankSize);assert.ok(bank.every(p=>p.answers.length>=2));
 const archive=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../rotunda-archive.json'),'utf8'));
 assert.deepEqual(E.selectBank(bank,archive,curriculum,'2026-11-18'),archive);
-for(let d=20;d<=30;d++){const deck=E.courseDeck(bank,curriculum,'2026-11-'+d);assert.equal(deck.length,7);assert.equal(deck.at(-1).kind,'letter-category');}
+for(let d=20;d<=30;d++){const deck=E.courseDeck(bank,curriculum,'2026-11-'+d);assert.equal(deck.length,7);assert.equal(deck.at(-1).difficulty,7);assert.ok(deck.at(-1).answers.length<=3);}
 const drawn=new Set();for(let n=0;n<260;n++){const date=new Date('2026-11-20T12:00:00Z');date.setUTCDate(date.getUTCDate()+n);if([0,6].includes(date.getUTCDay()))continue;for(const p of E.courseDeck(bank,curriculum,date.toISOString().slice(0,10)))drawn.add(p.id);}
 assert.deepEqual(bank.filter(p=>!drawn.has(p.id)).map(p=>p.id),[],'Family preferences must not starve any category.');
 console.log(`Rotunda coverage: ${examples.length} representative variants, ${excluded} outside-category names, ambiguous surnames, and existing attempts passed.`);
 
-const today=E.courseDeck(bank,curriculum,'2026-11-19');assert.deepEqual(today.map(p=>p.id),curriculum.dailyOverrides['2026-11-19']);assert.deepEqual(today.map(p=>p.answers.length),[45,8,3,7,3,32,14]);assert.ok(today.every(p=>p.answers.length>=3));console.log('Today’s fresh category climb has seven broad prompts and at least three accepted answers each.');
+const today=E.courseDeck(bank,curriculum,'2026-11-19');assert.deepEqual(today.map(p=>p.id),curriculum.dailyOverrides['2026-11-19']);assert.deepEqual(today.map(p=>p.answers.length),[45,8,3,7,3,32,14]);assert.ok(today.every(p=>p.answers.length>=2));console.log('The preserved November 19 climb still has its original seven broad prompts.');
 
 assert.equal(find('executive-offices').answers.find(a=>a.id==='president').basePoints,20);assert.equal(find('executive-offices').answers.find(a=>a.id==='mayor').basePoints,80);

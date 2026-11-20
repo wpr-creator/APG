@@ -76,6 +76,9 @@ jobs:
       - name: Test Rotunda answer coverage and restricted categories
         run: node scripts/test-rotunda-coverage.js
 
+      - name: Test daily Rotunda difficulty pyramid
+        run: node scripts/test-rotunda-pyramid.js
+
       - name: Test everyday wording across Rotunda questions
         run: node scripts/test-rotunda-language.js
 

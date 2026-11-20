@@ -19,8 +19,8 @@
   "weekdaysOnly": true,
   "promptsPerDay": 7,
   "secondsPerPrompt": 25,
-  "bankSize": 70,
-  "revision": "government-categories-20261119-easy",
+  "bankSize": 125,
+  "revision": "government-categories-20261120-pyramid",
   "effectiveFrom": "2026-11-19",
   "previous": {
     "id": "course-through-2-3-notes-157",
@@ -47,14 +47,14 @@
   },
   "roundDifficulties": [
     1,
-    1,
-    2,
-    2,
     2,
     3,
-    3
+    4,
+    5,
+    6,
+    7
   ],
-  "minimumAnswerGroups": 3,
+  "minimumAnswerGroups": 2,
   "dailyOverrides": {
     "2026-11-19": [
       "trivia-presidents",
@@ -66,5 +66,14 @@
       "trivia-presidential-duties"
     ]
   },
-  "welcomeNote": "A fresh, easier climb is ready today."
+  "pyramidFrom": "2026-11-20",
+  "levelLabels": [
+    "Warm-up",
+    "Familiar facts",
+    "Core ideas",
+    "Institutions",
+    "Connections",
+    "Analysis",
+    "Summit"
+  ]
 }

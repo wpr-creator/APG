@@ -1822,7 +1822,7 @@
         "basePoints": 40
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "presidency",
     "kind": "trivia-category",
     "source": {
@@ -1979,7 +1979,7 @@
         "explanation": "Rule of law."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "principles",
     "kind": "trivia-category",
     "source": {
@@ -2038,7 +2038,7 @@
         "basePoints": 60
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "democracy",
     "kind": "trivia-category",
     "source": {
@@ -2293,7 +2293,7 @@
         "explanation": "Call Congress into special session."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "presidency",
     "kind": "trivia-category",
     "source": {
@@ -2623,7 +2623,7 @@
         "explanation": "The taxing and spending clause covers debts, common defense, and general welfare."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 4,
     "family": "congress",
     "kind": "trivia-category",
     "source": {
@@ -2676,7 +2676,7 @@
         "basePoints": 60
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "presidency",
     "kind": "trivia-category",
     "source": {
@@ -2810,7 +2810,7 @@
         "explanation": "The collection of essays by Alexander Hamilton, James Madison, and John Jay supporting constitutional ratification."
       }
     ],
-    "difficulty": 1,
+    "difficulty": 3,
     "family": "documents",
     "kind": "trivia-category",
     "source": {
@@ -3152,7 +3152,7 @@
         "basePoints": 60
       }
     ],
-    "difficulty": 2,
+    "difficulty": 3,
     "family": "federalism",
     "kind": "trivia-category",
     "source": {
@@ -3214,7 +3214,7 @@
         "explanation": "New Federalism shifts responsibilities and discretion toward state governments."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 4,
     "family": "federalism",
     "kind": "trivia-category",
     "source": {
@@ -3609,7 +3609,7 @@
         "basePoints": 100
       }
     ],
-    "difficulty": 2,
+    "difficulty": 5,
     "family": "committees",
     "kind": "trivia-category",
     "source": {
@@ -3710,7 +3710,7 @@
         "explanation": "The vice president presides over the Senate and can break tied votes."
       }
     ],
-    "difficulty": 2,
+    "difficulty": 4,
     "family": "congress-leadership",
     "kind": "trivia-category",
     "source": {
@@ -4094,7 +4094,7 @@
         "basePoints": 40
       }
     ],
-    "difficulty": 2,
+    "difficulty": 4,
     "family": "presidency",
     "kind": "trivia-category",
     "source": {
@@ -4196,7 +4196,7 @@
         "basePoints": 80
       }
     ],
-    "difficulty": 2,
+    "difficulty": 5,
     "family": "checks",
     "kind": "trivia-category",
     "source": {
@@ -4854,7 +4854,7 @@
         "basePoints": 60
       }
     ],
-    "difficulty": 3,
+    "difficulty": 6,
     "family": "chamber-powers",
     "kind": "trivia-category",
     "source": {
@@ -4914,7 +4914,7 @@
         "basePoints": 100
       }
     ],
-    "difficulty": 3,
+    "difficulty": 6,
     "family": "chamber-powers",
     "kind": "trivia-category",
     "source": {
@@ -5077,7 +5077,7 @@
         "explanation": "A district in which a racial or ethnic minority makes up a majority of the population."
       }
     ],
-    "difficulty": 3,
+    "difficulty": 5,
     "family": "districting",
     "kind": "trivia-category",
     "source": {
@@ -5210,7 +5210,7 @@
         "explanation": "United States v. Lopez."
       }
     ],
-    "difficulty": 3,
+    "difficulty": 5,
     "family": "cases",
     "kind": "trivia-category",
     "source": {
