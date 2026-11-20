@@ -9,6 +9,8 @@ To refresh the reviewed question bank after course content changes, run:
     node scripts/build-pool-questions.js
     node scripts/test-pool-questions.js
 
-Units 1–2 reuse concept practice without attached passages, tables, or images. All units reuse glossary definitions; case descriptions use data-required.js and document arguments use foundations-data.js. The game generates answer order and distractors locally, not new instructional claims. Progress saves in localStorage; ambient sound begins only with the sound control. The journal works if WebGL is unavailable.
+Units 1–2 reuse concept practice without attached passages, tables, or images. All units reuse glossary definitions; case descriptions use data-required.js and document arguments use foundations-data.js. The game generates answer order and distractors locally, not new instructional claims. Progress saves in localStorage; natural ambience defaults on, starts when browser playback policy permits, and retries on the first trusted gesture; a chosen mute is remembered. The journal works if WebGL is unavailable.
 
 The distant World War II Memorial is modeled as a simplified Rainbow Pool, 56 pillars, and two pavilions. Reference: https://www.nps.gov/articles/ww2memorialguide.htm. The camera looks east along the pool axis from the Lincoln Memorial end; spacing and peripheral landscaping remain stylized.
+
+The page is named The Reflecting Pool. Its scene title is visible during setup and hidden during both selected review and direct lesson practice; mobile layout removes the title space during play. The standalone header links back to the AP Government site, with no Rotunda cross-link.
