@@ -45,7 +45,7 @@ assert.equal(E.match(find('presidents-first-john'),'Adams').type,'choice');
 assert.equal(curriculum.promptsPerDay,7);assert.equal(curriculum.secondsPerPrompt,25);
 assert.equal(curriculum.id,'course-through-2-3-notes-157');assert.equal(curriculum.effectiveFrom,'2026-11-20');
 assert.equal(bank.length,curriculum.bankSize);assert.ok(bank.every(p=>p.answers.length>=3));
-const old=JSON.parse(require('node:child_process').execFileSync('git',['show','33209f7:rotunda-data.json'],{encoding:'utf8'}));
+const old=require('./audits/rotunda-rarity-baseline.json').categories;
 for(const p of bank){const prior=old.find(q=>q.id===p.id);if(!prior)continue;for(const a of prior.answers){assert.equal(p.answers.find(b=>b.id===a.id)?.basePoints,a.basePoints,p.id+': original rarity changed');}}
 const archive=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../rotunda-archive.json'),'utf8'));
 assert.deepEqual(E.selectBank(bank,archive,curriculum,'2026-11-19'),archive);

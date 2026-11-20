@@ -1,0 +1,946 @@
+{
+  "sourceCommit": "33209f7d06b7fb69da3f5a5c90f5f8b438b87173",
+  "description": "Original editorial rarity priors for retained categories. Frozen independently of the generated bank so regression checks work in shallow GitHub checkouts.",
+  "categories": [
+    {
+      "id": "trivia-branches",
+      "answers": [
+        {
+          "id": "legislative-branch",
+          "basePoints": 20
+        },
+        {
+          "id": "executive-branch",
+          "basePoints": 20
+        },
+        {
+          "id": "judicial-branch",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidents",
+      "answers": [
+        {
+          "id": "george-washington",
+          "basePoints": 20
+        },
+        {
+          "id": "john-adams",
+          "basePoints": 60
+        },
+        {
+          "id": "thomas-jefferson",
+          "basePoints": 40
+        },
+        {
+          "id": "james-madison",
+          "basePoints": 60
+        },
+        {
+          "id": "james-monroe",
+          "basePoints": 60
+        },
+        {
+          "id": "john-quincy-adams",
+          "basePoints": 80
+        },
+        {
+          "id": "andrew-jackson",
+          "basePoints": 60
+        },
+        {
+          "id": "martin-van-buren",
+          "basePoints": 100
+        },
+        {
+          "id": "william-henry-harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "john-tyler",
+          "basePoints": 100
+        },
+        {
+          "id": "james-k-polk",
+          "basePoints": 100
+        },
+        {
+          "id": "zachary-taylor",
+          "basePoints": 100
+        },
+        {
+          "id": "millard-fillmore",
+          "basePoints": 100
+        },
+        {
+          "id": "franklin-pierce",
+          "basePoints": 100
+        },
+        {
+          "id": "james-buchanan",
+          "basePoints": 100
+        },
+        {
+          "id": "abraham-lincoln",
+          "basePoints": 20
+        },
+        {
+          "id": "andrew-johnson",
+          "basePoints": 80
+        },
+        {
+          "id": "ulysses-s-grant",
+          "basePoints": 60
+        },
+        {
+          "id": "rutherford-b-hayes",
+          "basePoints": 100
+        },
+        {
+          "id": "james-a-garfield",
+          "basePoints": 100
+        },
+        {
+          "id": "chester-a-arthur",
+          "basePoints": 100
+        },
+        {
+          "id": "grover-cleveland",
+          "basePoints": 100
+        },
+        {
+          "id": "benjamin-harrison",
+          "basePoints": 100
+        },
+        {
+          "id": "william-mckinley",
+          "basePoints": 100
+        },
+        {
+          "id": "theodore-roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "william-howard-taft",
+          "basePoints": 60
+        },
+        {
+          "id": "woodrow-wilson",
+          "basePoints": 60
+        },
+        {
+          "id": "warren-g-harding",
+          "basePoints": 100
+        },
+        {
+          "id": "calvin-coolidge",
+          "basePoints": 100
+        },
+        {
+          "id": "herbert-hoover",
+          "basePoints": 60
+        },
+        {
+          "id": "franklin-d-roosevelt",
+          "basePoints": 40
+        },
+        {
+          "id": "harry-s-truman",
+          "basePoints": 60
+        },
+        {
+          "id": "dwight-d-eisenhower",
+          "basePoints": 60
+        },
+        {
+          "id": "john-f-kennedy",
+          "basePoints": 40
+        },
+        {
+          "id": "lyndon-b-johnson",
+          "basePoints": 40
+        },
+        {
+          "id": "richard-nixon",
+          "basePoints": 60
+        },
+        {
+          "id": "gerald-ford",
+          "basePoints": 60
+        },
+        {
+          "id": "jimmy-carter",
+          "basePoints": 60
+        },
+        {
+          "id": "ronald-reagan",
+          "basePoints": 40
+        },
+        {
+          "id": "george-h-w-bush",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-clinton",
+          "basePoints": 40
+        },
+        {
+          "id": "george-w-bush",
+          "basePoints": 40
+        },
+        {
+          "id": "barack-obama",
+          "basePoints": 20
+        },
+        {
+          "id": "donald-trump",
+          "basePoints": 20
+        },
+        {
+          "id": "joe-biden",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-bill-of-rights",
+      "answers": [
+        {
+          "id": "freedom-of-speech",
+          "basePoints": 20
+        },
+        {
+          "id": "freedom-of-religion",
+          "basePoints": 20
+        },
+        {
+          "id": "freedom-of-the-press",
+          "basePoints": 40
+        },
+        {
+          "id": "peaceful-assembly",
+          "basePoints": 40
+        },
+        {
+          "id": "petition-the-government",
+          "basePoints": 60
+        },
+        {
+          "id": "keep-and-bear-arms",
+          "basePoints": 20
+        },
+        {
+          "id": "protection-from-forced-quartering",
+          "basePoints": 100
+        },
+        {
+          "id": "protection-from-unreasonable-searches-and-seizures",
+          "basePoints": 40
+        },
+        {
+          "id": "grand-jury-indictment",
+          "basePoints": 100
+        },
+        {
+          "id": "protection-against-double-jeopardy",
+          "basePoints": 60
+        },
+        {
+          "id": "protection-against-self-incrimination",
+          "basePoints": 20
+        },
+        {
+          "id": "due-process",
+          "basePoints": 40
+        },
+        {
+          "id": "compensation-for-property-taken-for-public-use",
+          "basePoints": 100
+        },
+        {
+          "id": "speedy-trial",
+          "basePoints": 60
+        },
+        {
+          "id": "public-trial",
+          "basePoints": 80
+        },
+        {
+          "id": "jury-trial",
+          "basePoints": 20
+        },
+        {
+          "id": "notice-of-criminal-charges",
+          "basePoints": 80
+        },
+        {
+          "id": "confront-witnesses",
+          "basePoints": 80
+        },
+        {
+          "id": "call-defense-witnesses",
+          "basePoints": 100
+        },
+        {
+          "id": "assistance-of-counsel",
+          "basePoints": 20
+        },
+        {
+          "id": "protection-against-excessive-bail",
+          "basePoints": 60
+        },
+        {
+          "id": "protection-against-excessive-fines",
+          "basePoints": 80
+        },
+        {
+          "id": "protection-against-cruel-and-unusual-punishment",
+          "basePoints": 40
+        },
+        {
+          "id": "unenumerated-rights",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-elected-offices",
+      "answers": [
+        {
+          "id": "president",
+          "basePoints": 20
+        },
+        {
+          "id": "vice-president",
+          "basePoints": 40
+        },
+        {
+          "id": "senator",
+          "basePoints": 20
+        },
+        {
+          "id": "representative",
+          "basePoints": 20
+        },
+        {
+          "id": "governor",
+          "basePoints": 40
+        },
+        {
+          "id": "mayor",
+          "basePoints": 40
+        },
+        {
+          "id": "city-council-member",
+          "basePoints": 60
+        },
+        {
+          "id": "school-board-member",
+          "basePoints": 80
+        },
+        {
+          "id": "sheriff",
+          "basePoints": 80
+        },
+        {
+          "id": "district-attorney",
+          "basePoints": 100
+        },
+        {
+          "id": "attorney-general",
+          "basePoints": 100
+        },
+        {
+          "id": "judge",
+          "basePoints": 80
+        },
+        {
+          "id": "comptroller",
+          "basePoints": 100
+        },
+        {
+          "id": "treasurer",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-government-institutions",
+      "answers": [
+        {
+          "id": "president",
+          "basePoints": 20
+        },
+        {
+          "id": "house-of-representatives",
+          "basePoints": 20
+        },
+        {
+          "id": "senate",
+          "basePoints": 20
+        },
+        {
+          "id": "supreme-court",
+          "basePoints": 20
+        },
+        {
+          "id": "congress",
+          "basePoints": 20
+        },
+        {
+          "id": "cabinet",
+          "basePoints": 40
+        },
+        {
+          "id": "federal-courts",
+          "basePoints": 60
+        },
+        {
+          "id": "federal-departments-and-agencies",
+          "basePoints": 80
+        },
+        {
+          "id": "executive-office-of-the-president",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-levels-of-government",
+      "answers": [
+        {
+          "id": "national-government",
+          "basePoints": 20
+        },
+        {
+          "id": "state-government",
+          "basePoints": 20
+        },
+        {
+          "id": "local-government",
+          "basePoints": 40
+        }
+      ]
+    },
+    {
+      "id": "trivia-roles",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "basePoints": 60
+        },
+        {
+          "id": "5",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-declaration-rights",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-founding-ideas",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 20
+        },
+        {
+          "id": "4",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "basePoints": 60
+        },
+        {
+          "id": "equality",
+          "basePoints": 40
+        },
+        {
+          "id": "rule-of-law",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-democracy-models",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-duties",
+      "answers": [
+        {
+          "id": "veto-a-bill",
+          "basePoints": 20
+        },
+        {
+          "id": "sign-a-bill-into-law",
+          "basePoints": 20
+        },
+        {
+          "id": "lead-the-executive-branch",
+          "basePoints": 20
+        },
+        {
+          "id": "command-the-armed-forces",
+          "basePoints": 20
+        },
+        {
+          "id": "nominate-federal-judges",
+          "basePoints": 40
+        },
+        {
+          "id": "nominate-executive-officials",
+          "basePoints": 60
+        },
+        {
+          "id": "negotiate-treaties",
+          "basePoints": 40
+        },
+        {
+          "id": "grant-federal-pardons",
+          "basePoints": 40
+        },
+        {
+          "id": "issue-executive-orders",
+          "basePoints": 40
+        },
+        {
+          "id": "make-executive-agreements",
+          "basePoints": 80
+        },
+        {
+          "id": "recommend-legislation",
+          "basePoints": 60
+        },
+        {
+          "id": "give-the-state-of-the-union",
+          "basePoints": 60
+        },
+        {
+          "id": "receive-ambassadors",
+          "basePoints": 100
+        },
+        {
+          "id": "call-congress-into-special-session",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-national-powers",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "basePoints": 60
+        },
+        {
+          "id": "5",
+          "basePoints": 60
+        },
+        {
+          "id": "6",
+          "basePoints": 60
+        },
+        {
+          "id": "navy",
+          "basePoints": 80
+        },
+        {
+          "id": "naturalization",
+          "basePoints": 80
+        },
+        {
+          "id": "bankruptcy",
+          "basePoints": 80
+        },
+        {
+          "id": "patents",
+          "basePoints": 80
+        },
+        {
+          "id": "lower-courts",
+          "basePoints": 80
+        },
+        {
+          "id": "weights",
+          "basePoints": 100
+        },
+        {
+          "id": "counterfeiting",
+          "basePoints": 100
+        },
+        {
+          "id": "necessary-proper",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-presidential-team",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 20
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-founding-documents",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "bill-of-rights",
+          "basePoints": 20
+        },
+        {
+          "id": "federalist-no-10",
+          "basePoints": 40
+        },
+        {
+          "id": "federalist-no-51",
+          "basePoints": 60
+        },
+        {
+          "id": "federalist-no-70",
+          "basePoints": 80
+        },
+        {
+          "id": "federalist-no-39",
+          "basePoints": 100
+        }
+      ]
+    },
+    {
+      "id": "trivia-government-levels",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-federalism-forms",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-committee-types",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "select-committee",
+          "basePoints": 80
+        },
+        {
+          "id": "joint-committee",
+          "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-congress-leaders",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-tools",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 20
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        },
+        {
+          "id": "4",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "basePoints": 60
+        },
+        {
+          "id": "6",
+          "basePoints": 60
+        },
+        {
+          "id": "7",
+          "basePoints": 20
+        }
+      ]
+    },
+    {
+      "id": "trivia-congress-checks-president",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 20
+        },
+        {
+          "id": "4",
+          "basePoints": 60
+        },
+        {
+          "id": "5",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-house-senate",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-house-only",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-districting-terms",
+      "answers": [
+        {
+          "id": "0",
+          "basePoints": 60
+        },
+        {
+          "id": "1",
+          "basePoints": 60
+        },
+        {
+          "id": "2",
+          "basePoints": 60
+        },
+        {
+          "id": "3",
+          "basePoints": 60
+        }
+      ]
+    },
+    {
+      "id": "trivia-course-cases",
+      "answers": [
+        {
+          "id": "baker-v-carr",
+          "basePoints": 20
+        },
+        {
+          "id": "shaw-v-reno",
+          "basePoints": 20
+        },
+        {
+          "id": "mcculloch-v-maryland",
+          "basePoints": 40
+        },
+        {
+          "id": "united-states-v-lopez",
+          "basePoints": 60
+        }
+      ]
+    }
+  ]
+}
