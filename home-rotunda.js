@@ -17,7 +17,7 @@
     if(next!==signature){list.replaceChildren();for(const row of rows){const li=document.createElement('li');for(const [className,text]of [['home-board-rank',String(row.rank)],['home-board-name',row.nickname],['home-board-points',row.score+' pts']]){const span=document.createElement('span');span.className=className;span.textContent=text;li.append(span);}list.append(li);}signature=next;}
     list.hidden=!rows.length;
     const today=data.date===dayKey(),count=data.players+' completed '+(data.players===1?'climb':'climbs');
-    status.textContent=rows.length?(today?'Today · ':'Latest board · ')+count+' · updates every minute.':today?'No completed climbs yet today. The first score starts the board.':'No completed climbs on the latest board.';
+    status.textContent=rows.length?(today?'Today · ':'Latest board · ')+count+' · updates every minute.':today?'No completed climbs yet today.':'No completed climbs on the latest board.';
     lastGood=true;
   }
   function schedule(){clearTimeout(timer);if(!stopped&&!document.hidden)timer=setTimeout(load,60000);}
