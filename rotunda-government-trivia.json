@@ -10728,7 +10728,8 @@
         "aliases": [
           "14th amendment",
           "amendment 14",
-          "14 amendment"
+          "14 amendment",
+          "14th"
         ],
         "explanation": "Contains the Equal Protection Clause used in the case.",
         "basePoints": 40
@@ -10762,7 +10763,6 @@
           "unequal representation",
           "unequal district populations",
           "unequal districts",
-          "equal representation",
           "unequal population"
         ],
         "explanation": "Unequal legislative district populations were central to the dispute.",
@@ -10795,7 +10795,8 @@
         "aliases": [
           "one man one vote",
           "equal population",
-          "equally populated districts"
+          "equally populated districts",
+          "equal representation"
         ],
         "explanation": "A related district population principle developed in later cases such as Reynolds v. Sims; Baker itself opened the courthouse door.",
         "basePoints": 60
@@ -10858,7 +10859,8 @@
           "necessary and proper",
           "elastic clause",
           "elastic",
-          "necessary proper clause"
+          "necessary proper clause",
+          "necessary proper"
         ],
         "explanation": "Supports congressional choice of appropriate means to carry out enumerated powers.",
         "basePoints": 20
@@ -10968,13 +10970,21 @@
         "id": "judicial-review",
         "label": "Judicial review",
         "aliases": [
-          "constitutional interpretation",
-          "Marshall Court",
-          "John Marshall",
-          "Chief Justice Marshall"
+          "constitutional interpretation"
         ],
         "basePoints": 60,
         "explanation": "Chief Justice John Marshall’s Court interpreted national powers and constitutional supremacy in deciding the dispute."
+      },
+      {
+        "id": "john-marshall",
+        "label": "John Marshall",
+        "aliases": [
+          "Marshall",
+          "Marshall Court",
+          "Chief Justice Marshall"
+        ],
+        "basePoints": 60,
+        "explanation": "Chief Justice John Marshall wrote the Court’s opinion in McCulloch v. Maryland."
       }
     ],
     "difficulty": 3,
@@ -11034,7 +11044,8 @@
         "label": "Full Faith and Credit Clause",
         "aliases": [
           "full faith and credit",
-          "faith and credit"
+          "faith and credit",
+          "full faith credit"
         ],
         "explanation": "Addresses state recognition of other states’ public acts, records, and judicial proceedings.",
         "basePoints": 60
@@ -11044,7 +11055,9 @@
         "label": "Privileges and Immunities Clause",
         "aliases": [
           "privileges and immunities",
-          "privileges immunities"
+          "privileges immunities",
+          "privilege and immunity",
+          "privileges and immunity"
         ],
         "explanation": "Protects citizens of each state in the privileges and immunities of citizens in the several states.",
         "basePoints": 80

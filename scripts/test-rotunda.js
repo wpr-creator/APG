@@ -10,7 +10,7 @@ assert.deepEqual(E.deck(bank,'daily','all','2026-11-19'),E.deck(bank,'daily','al
 const curriculum=JSON.parse(fs.readFileSync(path.join(root,'rotunda-curriculum.json'),'utf8'));
 assert.equal(E.courseBank(bank,curriculum).length,bank.length);
 assert.equal(E.courseBank([...bank,{id:'future',lesson:'2.4',apTopics:['2.8']}],curriculum).length,bank.length);
-assert.deepEqual(E.courseDeck(archive,curriculum,'2026-11-19').map(p=>p.id),['strict-scrutiny-elements','annual-congress-message','administration-spokesperson','house-size','declaration-rights','presidential-communication-planning','articles-repairs']);
+assert.deepEqual(E.courseDeck(archive,curriculum.previous,'2026-11-19').map(p=>p.id),['strict-scrutiny-elements','annual-congress-message','administration-spokesperson','house-size','declaration-rights','presidential-communication-planning','articles-repairs']);
 for(let day=20;day<=30;day++){const deck=E.courseDeck(bank,curriculum,'2026-11-'+day);assert.equal(deck.length,7);assert.deepEqual(deck.map(p=>p.difficulty),[1,1,2,2,2,3,3]);assert.equal(deck[6].kind,'letter-category');assert.equal(new Set(deck.map(p=>p.id)).size,7);assert.deepEqual(deck,E.courseDeck(bank,curriculum,'2026-11-'+day));}
 for(const p of bank){assert.ok(curriculum.lessons.includes(p.lesson));assert.ok(p.apTopics.length);}
 for(const [iso,open,active,next]of[['2026-11-20T20:00:00Z',true,'2026-11-20','2026-11-23'],['2026-11-21T20:00:00Z',false,'2026-11-20','2026-11-23'],['2026-11-22T20:00:00Z',false,'2026-11-20','2026-11-23'],['2026-11-23T20:00:00Z',true,'2026-11-23','2026-11-24']]){const schedule=E.schoolSchedule(new Date(iso));assert.equal(schedule.open,open);assert.equal(schedule.activeDate,active);assert.equal(schedule.nextDate,next);}
@@ -33,5 +33,5 @@ assert.equal(E.match(archive.find(p=>p.id==='budget-categories'),'not interest')
 const presidents=bank.find(p=>p.id==='trivia-presidents');assert.equal(presidents.answers.length,45);assert.equal(E.match(presidents,'Bush').type,'choice');assert.equal(E.match(presidents,'Bush').answers.length,2);assert.equal(E.match(presidents,'John Adams').answer.label,'John Adams');assert.equal(E.match(presidents,'Garfeild').answer.label,'James A. Garfield');
 const rare=E.match(presidents,'Fillmore').answer,common=E.match(presidents,'Lincoln').answer;assert.equal(E.answerPoints(presidents,rare.id,1,1),100);assert.equal(E.answerPoints(presidents,common.id,1,1),20);
 const districts=bank.find(p=>p.id==='trivia-course-cases');assert.equal(E.match(districts,'Shwa').answer.label,'Shaw v. Reno');assert.equal(E.match(districts,'Bkaer').answer.label,'Baker v. Carr');
-assert.equal(bank.filter(p=>p.kind==='letter-category').length,14);assert.equal(bank.reduce((n,p)=>n+p.answers.length,0),697);
-console.log('New bank: canonical names, ambiguous presidents, typo tolerance, baseline rarity, difficulty ramp, and preservation of today’s deck passed.');
+assert.equal(bank.filter(p=>p.kind==='letter-category').length,14);assert.equal(bank.reduce((n,p)=>n+p.answers.length,0),700);
+console.log('New bank: canonical names, ambiguous presidents, typo tolerance, baseline rarity, difficulty ramp, and preservation of the retired deck passed.');

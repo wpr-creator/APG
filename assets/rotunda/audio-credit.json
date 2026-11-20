@@ -1,0 +1,10 @@
+{
+  "asset": "eagle-screech.wav",
+  "description": "A brief movie-style eagle cry using a red-tailed hawk recording.",
+  "source": "https://orangefreesounds.com/red-tailed-hawk-sound/",
+  "download": "https://www.orangefreesounds.com/wp-content/uploads/2019/11/Red-tailed-hawk-sound.mp3",
+  "license": "Public Domain",
+  "licenseStatement": "The sound effect is permitted for commercial use under license Public Domain, non copyrighted.",
+  "edits": "First 1.95 seconds; mono 22050 Hz PCM; normalized to 72 percent peak with short fades.",
+  "sha256": "4ae4621fb621177d41811a8f2178201d0a92608389d01c3c6ba816cba78cbbd7"
+}

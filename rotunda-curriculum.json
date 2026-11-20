@@ -1,5 +1,5 @@
 {
-  "id": "course-through-2-3-notes-157",
+  "id": "government-categories-20261119",
   "label": "Unit 1 · Unit 2 through Lesson 2.3",
   "apTopicLimit": "2.7",
   "lessons": [
@@ -20,8 +20,8 @@
   "promptsPerDay": 7,
   "secondsPerPrompt": 25,
   "bankSize": 70,
-  "revision": "government-trivia-20261120",
-  "effectiveFrom": "2026-11-20",
+  "revision": "government-categories-20261119-easy",
+  "effectiveFrom": "2026-11-19",
   "previous": {
     "id": "course-through-2-3-notes-157",
     "label": "Unit 1 · Unit 2 through Lesson 2.3",
@@ -54,5 +54,17 @@
     3,
     3
   ],
-  "minimumAnswerGroups": 3
+  "minimumAnswerGroups": 3,
+  "dailyOverrides": {
+    "2026-11-19": [
+      "trivia-presidents",
+      "trivia-states-letter-m",
+      "trivia-branches",
+      "trivia-executive-offices",
+      "trivia-democracy-models",
+      "trivia-congress-powers",
+      "trivia-presidential-duties"
+    ]
+  },
+  "welcomeNote": "A fresh, easier climb is ready today."
 }

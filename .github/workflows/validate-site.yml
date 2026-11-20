@@ -72,3 +72,6 @@ jobs:
 
       - name: Test Rotunda answer coverage and restricted categories
         run: node scripts/test-rotunda-coverage.js
+
+      - name: Test Rotunda ascent sound and mute
+        run: node scripts/test-rotunda-audio.js

@@ -3,10 +3,10 @@
   "projectId": "appgprj_6aff5c840cdc8191b7f3761eba0245b3",
   "url": "https://apg-rotunda-scores.endearingbuffalo5.chatgpt.site",
   "sourceCheckout": "/Users/westonrogers/Documents/apg-rotunda-scores",
-  "bankSha256": "4d2d17948e6e5237589a5c3b425f664d6a14976ded1dd6a6942d39545bc49ae6",
+  "bankSha256": "d65a830ffe3a5b19da5202dcf12966250ddb851b387ea5da219510fb96ca757c",
   "scope": "Shared Monday–Friday class competition; Unit 1 and Unit 2 through Lesson 2.3 / AP Topic 2.7",
   "checked": "2026-11-19",
-  "notes": "Curriculum-owned pool; no student unit selection. Weekends expose the previous Friday board. Service enforces deadlines and one daily attempt per anonymous device per curriculum. Reflecting Pool stays independent. QA accounts excluded. New broad trivia revision begins 2026-11-20; archived bank preserves previous sessions. Stable competition ID. Editorial rarity priors blend with observed answer frequencies. Answer coverage audit: 70 prompts and 697 answer groups. Variant corrections and known outside-category name guards synchronized with service; daily format, scoring and archive retained.",
-  "sourceCommit": "87243427d0433bdf1eb182c8650ee3a24e12b9fa",
-  "serviceVersion": 10
+  "notes": "Teacher-requested easier replacement begins November 19 with a fresh competition namespace and seven broad category prompts. Old sessions and answers remain in D1 and resolve against their archived bank. Seven 25-second rounds, existing rarity priors, and scoring thresholds are unchanged. QA accounts stay excluded.",
+  "sourceCommit": "0e2552dc85a99a521e623a15931a51724750cf56",
+  "serviceVersion": 11
 }
