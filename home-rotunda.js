@@ -10,7 +10,7 @@
   showDate(dayKey());
   function render(data){
     if(!/^\d{4}-\d{2}-\d{2}$/.test(data.date)||!Number.isInteger(data.players)||data.players<0||!Array.isArray(data.rows))throw Error('Invalid standings');
-    const rows=data.rows.slice(0,5);
+    const rows=data.rows.slice(0,3);
     if(rows.some(row=>typeof row.nickname!=='string'||row.nickname.length>60||!Number.isInteger(row.rank)||row.rank<1||!Number.isInteger(row.score)||row.score<0||row.score>700))throw Error('Invalid score');
     showDate(data.date);
     const next=JSON.stringify([data.date,rows]);
