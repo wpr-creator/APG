@@ -56,3 +56,5 @@ assert.deepEqual(bank.filter(p=>!drawn.has(p.id)).map(p=>p.id),[],'Family prefer
 console.log(`Rotunda coverage: ${examples.length} representative variants, ${excluded} outside-category names, ambiguous surnames, original rarity values, and existing attempts passed.`);
 
 const today=E.courseDeck(bank,curriculum,'2026-11-19');assert.deepEqual(today.map(p=>p.id),curriculum.dailyOverrides['2026-11-19']);assert.deepEqual(today.map(p=>p.answers.length),[45,8,3,7,3,32,14]);assert.ok(today.every(p=>p.answers.length>=3));console.log('Today’s fresh category climb has seven broad prompts and at least three accepted answers each.');
+
+assert.equal(find('executive-offices').answers.find(a=>a.id==='president').basePoints,20);assert.equal(find('executive-offices').answers.find(a=>a.id==='mayor').basePoints,80);
