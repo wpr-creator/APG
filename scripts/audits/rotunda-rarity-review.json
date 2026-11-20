@@ -900,7 +900,7 @@
     },
     {
       "id": "trivia-founding-documents",
-      "prompt": "Name a founding document or political text from our lessons.",
+      "prompt": "Name a founding document or political text .",
       "rationale": "The Constitution, Declaration and Bill of Rights are immediate; specific Federalist essays are progressively less recalled.",
       "answers": [
         {
@@ -4026,7 +4026,7 @@
     },
     {
       "id": "trivia-notes-citizen-actions",
-      "prompt": "Name a form of direct citizen involvement listed in the participatory-democracy notes.",
+      "prompt": "Name a form of direct citizen participation in government.",
       "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4063,7 +4063,7 @@
     },
     {
       "id": "trivia-notes-pluralist-organizations",
-      "prompt": "Name a type of organized group used as a pluralist-democracy example in the notes.",
+      "prompt": "Name a type of organized group used as a pluralist-democracy example.",
       "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4132,7 +4132,7 @@
     },
     {
       "id": "trivia-notes-founding-texts-three",
-      "prompt": "Name one of the three texts compared in our Founding Ideals notes.",
+      "prompt": "Name a founding document about the structure or principles of American government.",
       "rationale": "Accessible foundational concepts with several routes to a correct answer. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4331,7 +4331,7 @@
     },
     {
       "id": "trivia-notes-federalism-access-points",
-      "prompt": "Name a national, state, or local access point listed in our federalism notes.",
+      "prompt": "Name a national, state, or local institution people can approach to influence policy.",
       "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4378,7 +4378,7 @@
     },
     {
       "id": "trivia-notes-presidential-media",
-      "prompt": "Name a communication medium compared in our presidential-communication notes.",
+      "prompt": "Name a medium presidents use to communicate with the public.",
       "rationale": "Recall examples and mechanisms from covered lessons. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4454,7 +4454,7 @@
     },
     {
       "id": "trivia-notes-congress-influence-channels",
-      "prompt": "Name a congressional access point listed in our constitutional-friction notes.",
+      "prompt": "Name a way people can approach Congress to influence policy.",
       "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4481,7 +4481,7 @@
     },
     {
       "id": "trivia-notes-reserved-examples",
-      "prompt": "Name a state responsibility used as a reserved-power example in our notes.",
+      "prompt": "Name a state responsibility used as a reserved-power example.",
       "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4577,7 +4577,7 @@
     },
     {
       "id": "trivia-notes-mandatory-programs",
-      "prompt": "Name a mandatory-spending program listed in our notes.",
+      "prompt": "Name a mandatory-spending program listed.",
       "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4599,7 +4599,7 @@
     },
     {
       "id": "trivia-notes-discretionary-areas",
-      "prompt": "Name an area used as a discretionary-spending example in our notes.",
+      "prompt": "Name an area of discretionary spending.",
       "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4610,12 +4610,67 @@
         {
           "id": "1",
           "label": "Education",
-          "basePoints": 40
+          "basePoints": 20
         },
         {
           "id": "2",
           "label": "Infrastructure",
+          "basePoints": 40
+        },
+        {
+          "id": "research",
+          "label": "Scientific research",
           "basePoints": 60
+        },
+        {
+          "id": "space",
+          "label": "Space exploration",
+          "basePoints": 60
+        },
+        {
+          "id": "environment",
+          "label": "Environmental protection",
+          "basePoints": 60
+        },
+        {
+          "id": "parks",
+          "label": "National parks",
+          "basePoints": 80
+        },
+        {
+          "id": "housing",
+          "label": "Housing assistance",
+          "basePoints": 60
+        },
+        {
+          "id": "diplomacy",
+          "label": "Diplomacy and foreign aid",
+          "basePoints": 80
+        },
+        {
+          "id": "justice",
+          "label": "Law enforcement and courts",
+          "basePoints": 40
+        },
+        {
+          "id": "health",
+          "label": "Public health programs",
+          "basePoints": 60
+        },
+        {
+          "id": "disasters",
+          "label": "Disaster response",
+          "basePoints": 80
+        },
+        {
+          "id": "veterans",
+          "label": "Veterans health care",
+          "basePoints": 80
+        },
+        {
+          "id": "weather",
+          "label": "Weather forecasting",
+          "basePoints": 100
         }
       ]
     },
@@ -4675,7 +4730,7 @@
     },
     {
       "id": "trivia-notes-power-expansion-forces",
-      "prompt": "Name a force our notes connect with the expansion of presidential power.",
+      "prompt": "Name something that has contributed to the growth of presidential power.",
       "rationale": "Apply a covered concept to institutions, powers, or policy. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -4974,7 +5029,7 @@
     },
     {
       "id": "trivia-notes-house-floor-tools",
-      "prompt": "Name a House mechanism from our notes that affects debate, amendments, or getting a bill out of committee.",
+      "prompt": "Name a House mechanism that affects debate, amendments, or getting a bill out of committee.",
       "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5018,7 +5073,7 @@
     },
     {
       "id": "trivia-notes-senate-confirmed-offices",
-      "prompt": "Name a type of nominee from our notes who generally requires Senate confirmation.",
+      "prompt": "Name a type of nominee who generally requires Senate confirmation.",
       "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5062,7 +5117,7 @@
     },
     {
       "id": "trivia-notes-cooperation-obstacles",
-      "prompt": "Name a political condition from our notes that can make cooperation between Congress and the president harder.",
+      "prompt": "Name a political condition that can make cooperation between Congress and the president harder.",
       "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5084,7 +5139,7 @@
     },
     {
       "id": "trivia-notes-presidential-communication-planning",
-      "prompt": "Name something our notes say to identify when judging a presidential communication strategy.",
+      "prompt": "Name something a president considers when planning a public message.",
       "rationale": "Specific procedures, qualifications, or distinctions from covered notes. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5111,18 +5166,58 @@
     },
     {
       "id": "trivia-notes-strict-scrutiny-elements",
-      "prompt": "Name one of the two requirements in the strict-scrutiny explanation from our Shaw notes.",
+      "prompt": "What did Shaw v. Reno deal with?",
       "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
+          "id": "race",
+          "label": "Race in drawing districts",
+          "basePoints": 20
+        },
+        {
+          "id": "districts",
+          "label": "Congressional districts",
+          "basePoints": 20
+        },
+        {
+          "id": "redistricting",
+          "label": "Redistricting",
+          "basePoints": 40
+        },
+        {
+          "id": "gerrymandering",
+          "label": "Gerrymandering",
+          "basePoints": 40
+        },
+        {
+          "id": "racial-gerrymandering",
+          "label": "Racial gerrymandering",
+          "basePoints": 60
+        },
+        {
+          "id": "equal-protection",
+          "label": "Equal protection",
+          "basePoints": 80
+        },
+        {
+          "id": "majority-minority",
+          "label": "Majority-minority districts",
+          "basePoints": 80
+        },
+        {
+          "id": "strict-scrutiny",
+          "label": "Strict scrutiny",
+          "basePoints": 100
+        },
+        {
           "id": "0",
           "label": "Compelling reason",
-          "basePoints": 20
+          "basePoints": 80
         },
         {
           "id": "1",
           "label": "Narrow tailoring",
-          "basePoints": 80
+          "basePoints": 100
         }
       ]
     },
@@ -5196,7 +5291,7 @@
     },
     {
       "id": "trivia-notes-federalist-39-national",
-      "prompt": "Name a national feature of the Constitution identified in our Federalist No. 39 notes.",
+      "prompt": "Name a national feature of the Constitution discussed in Federalist No. 39.",
       "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5218,7 +5313,7 @@
     },
     {
       "id": "trivia-notes-federalist-39-federal",
-      "prompt": "Name a federal feature of the Constitution identified in our Federalist No. 39 notes.",
+      "prompt": "Name a federal feature of the Constitution discussed in Federalist No. 39.",
       "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5240,7 +5335,7 @@
     },
     {
       "id": "trivia-notes-article-four-rules",
-      "prompt": "Name an Article IV rule governing relationships among states from our notes.",
+      "prompt": "Name an Article IV rule governing relationships among states.",
       "rationale": "Precise close-reading category from the assigned notes; two or three distinct answers. Starting rewards still distinguish direct recall from less obvious correct answers.",
       "answers": [
         {
@@ -5579,6 +5674,53 @@
           "id": "west-virginia",
           "label": "West Virginia",
           "basePoints": 80
+        }
+      ]
+    },
+    {
+      "id": "trivia-policy-agenda-tools",
+      "prompt": "Name a tool presidents use to carry out their policy agenda.",
+      "rationale": "Familiar presidential actions earn a smaller bump; less obvious tools earn a larger starting reward.",
+      "answers": [
+        {
+          "id": "0",
+          "label": "Regular veto",
+          "basePoints": 20
+        },
+        {
+          "id": "1",
+          "label": "Pocket veto",
+          "basePoints": 80
+        },
+        {
+          "id": "2",
+          "label": "Treaty",
+          "basePoints": 40
+        },
+        {
+          "id": "3",
+          "label": "Executive agreement",
+          "basePoints": 80
+        },
+        {
+          "id": "4",
+          "label": "Executive order",
+          "basePoints": 20
+        },
+        {
+          "id": "5",
+          "label": "Signing statement",
+          "basePoints": 100
+        },
+        {
+          "id": "6",
+          "label": "Bargaining and persuasion",
+          "basePoints": 60
+        },
+        {
+          "id": "7",
+          "label": "Bully pulpit",
+          "basePoints": 40
         }
       ]
     }

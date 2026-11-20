@@ -88,7 +88,7 @@
     "apTopics": [
       "1.2"
     ],
-    "prompt": "Name a form of direct citizen involvement listed in the participatory-democracy notes.",
+    "prompt": "Name a form of direct citizen participation in government.",
     "hint": "Use the terms and examples from Lesson 1.2.",
     "href": "lesson-1-2.html",
     "source": {
@@ -170,7 +170,7 @@
     "apTopics": [
       "1.2"
     ],
-    "prompt": "Name a type of organized group used as a pluralist-democracy example in the notes.",
+    "prompt": "Name a type of organized group used as a pluralist-democracy example.",
     "hint": "Use the terms and examples from Lesson 1.2.",
     "href": "lesson-1-2.html",
     "source": {
@@ -318,7 +318,7 @@
     "apTopics": [
       "1.1"
     ],
-    "prompt": "Name one of the three texts compared in our Founding Ideals notes.",
+    "prompt": "Name a founding document about the structure or principles of American government.",
     "hint": "Use the terms and examples from Lesson 1.1.",
     "href": "lesson-1-1.html",
     "source": {
@@ -771,7 +771,7 @@
     "apTopics": [
       "1.9"
     ],
-    "prompt": "Name a national, state, or local access point listed in our federalism notes.",
+    "prompt": "Name a national, state, or local institution people can approach to influence policy.",
     "hint": "Use the terms and examples from Lesson 1.5.",
     "href": "lesson-1-5.html",
     "source": {
@@ -865,7 +865,7 @@
     "apTopics": [
       "2.7"
     ],
-    "prompt": "Name a communication medium compared in our presidential-communication notes.",
+    "prompt": "Name a medium presidents use to communicate with the public.",
     "hint": "Use the terms and examples from Lesson 2.3.",
     "href": "lesson-2-3.html",
     "source": {
@@ -1044,7 +1044,7 @@
     "apTopics": [
       "1.6"
     ],
-    "prompt": "Name a congressional access point listed in our constitutional-friction notes.",
+    "prompt": "Name a way people can approach Congress to influence policy.",
     "hint": "Use the terms and examples from Lesson 1.4.",
     "href": "lesson-1-4.html",
     "source": {
@@ -1104,7 +1104,7 @@
     "apTopics": [
       "1.7"
     ],
-    "prompt": "Name a state responsibility used as a reserved-power example in our notes.",
+    "prompt": "Name a state responsibility used as a reserved-power example.",
     "hint": "Use the terms and examples from Lesson 1.5.",
     "href": "lesson-1-5.html",
     "source": {
@@ -1324,7 +1324,7 @@
     "apTopics": [
       "2.2"
     ],
-    "prompt": "Name a mandatory-spending program listed in our notes.",
+    "prompt": "Name a mandatory-spending program listed.",
     "hint": "Use the terms and examples from Lesson 2.1.",
     "href": "lesson-2-1.html",
     "source": {
@@ -1369,8 +1369,8 @@
     "apTopics": [
       "2.2"
     ],
-    "prompt": "Name an area used as a discretionary-spending example in our notes.",
-    "hint": "Use the terms and examples from Lesson 2.1.",
+    "prompt": "Name an area of discretionary spending.",
+    "hint": "Think of programs Congress funds through annual spending bills.",
     "href": "lesson-2-1.html",
     "source": {
       "document": "https://docs.google.com/document/d/1aldBSNJylpZtq3e2y8C4PKA5YEew7t3VARyFD80CkVU",
@@ -1382,29 +1382,186 @@
         "label": "Defense",
         "aliases": [
           "military",
+          "army",
+          "navy",
+          "armed forces",
           "military funding"
         ],
-        "explanation": "Much defense spending is set in annual appropriations.",
-        "basePoints": 20
+        "basePoints": 20,
+        "explanation": "Congress provides defense funding through annual appropriations."
       },
       {
         "id": "1",
         "label": "Education",
         "aliases": [
-          "schools"
+          "schools",
+          "school funding",
+          "education funding",
+          "public schools"
         ],
-        "explanation": "Many federal education appropriations are discretionary.",
-        "basePoints": 40
+        "basePoints": 20,
+        "explanation": "Many federal education programs receive annual appropriations."
       },
       {
         "id": "2",
         "label": "Infrastructure",
         "aliases": [
           "roads",
-          "bridges"
+          "bridges",
+          "highways",
+          "transportation",
+          "public transit",
+          "railroads",
+          "trains"
         ],
-        "explanation": "Infrastructure appropriations are a discretionary-spending example; not every program in an area has the same budget treatment.",
-        "basePoints": 60
+        "basePoints": 40,
+        "explanation": "Congress funds transportation and infrastructure programs through appropriations."
+      },
+      {
+        "id": "research",
+        "label": "Scientific research",
+        "aliases": [
+          "science",
+          "research",
+          "medical research",
+          "NIH",
+          "NSF",
+          "cancer research"
+        ],
+        "basePoints": 60,
+        "explanation": "Many federal research programs depend on annual appropriations."
+      },
+      {
+        "id": "space",
+        "label": "Space exploration",
+        "aliases": [
+          "NASA",
+          "space",
+          "space research",
+          "space program"
+        ],
+        "basePoints": 60,
+        "explanation": "NASA programs receive annual appropriations."
+      },
+      {
+        "id": "environment",
+        "label": "Environmental protection",
+        "aliases": [
+          "environment",
+          "EPA",
+          "conservation",
+          "clean water",
+          "clean air",
+          "climate research"
+        ],
+        "basePoints": 60,
+        "explanation": "Congress appropriates money for environmental programs."
+      },
+      {
+        "id": "parks",
+        "label": "National parks",
+        "aliases": [
+          "parks",
+          "national park service",
+          "NPS",
+          "park service"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress funds national park operations through appropriations."
+      },
+      {
+        "id": "housing",
+        "label": "Housing assistance",
+        "aliases": [
+          "housing",
+          "HUD",
+          "public housing",
+          "rental assistance",
+          "homelessness"
+        ],
+        "basePoints": 60,
+        "explanation": "Many housing assistance programs receive annual appropriations."
+      },
+      {
+        "id": "diplomacy",
+        "label": "Diplomacy and foreign aid",
+        "aliases": [
+          "foreign aid",
+          "diplomacy",
+          "embassies",
+          "state department",
+          "international aid"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress appropriates funds for diplomatic operations and foreign assistance."
+      },
+      {
+        "id": "justice",
+        "label": "Law enforcement and courts",
+        "aliases": [
+          "police",
+          "law enforcement",
+          "FBI",
+          "DOJ",
+          "courts",
+          "federal courts",
+          "prisons",
+          "border security",
+          "homeland security"
+        ],
+        "basePoints": 40,
+        "explanation": "Many federal law enforcement and court operations receive appropriations."
+      },
+      {
+        "id": "health",
+        "label": "Public health programs",
+        "aliases": [
+          "public health",
+          "CDC",
+          "disease prevention",
+          "health research",
+          "healthcare",
+          "health care",
+          "health"
+        ],
+        "basePoints": 60,
+        "explanation": "Programs such as disease prevention receive annual appropriations; Medicare and Medicaid are mainly mandatory spending."
+      },
+      {
+        "id": "disasters",
+        "label": "Disaster response",
+        "aliases": [
+          "disaster relief",
+          "disaster assistance",
+          "FEMA",
+          "emergency relief"
+        ],
+        "basePoints": 80,
+        "explanation": "Congress appropriates funding for disaster preparedness and response."
+      },
+      {
+        "id": "veterans",
+        "label": "Veterans health care",
+        "aliases": [
+          "veterans",
+          "veterans care",
+          "VA",
+          "veterans hospitals"
+        ],
+        "basePoints": 80,
+        "explanation": "Many veterans medical programs receive annual appropriations."
+      },
+      {
+        "id": "weather",
+        "label": "Weather forecasting",
+        "aliases": [
+          "weather",
+          "NOAA",
+          "national weather service",
+          "weather forecasts"
+        ],
+        "basePoints": 100,
+        "explanation": "Congress funds weather forecasting and related research through appropriations."
       }
     ],
     "kind": "notes-category",
@@ -1544,7 +1701,7 @@
     "apTopics": [
       "2.6"
     ],
-    "prompt": "Name a force our notes connect with the expansion of presidential power.",
+    "prompt": "Name something that has contributed to the growth of presidential power.",
     "hint": "Use the terms and examples from Lesson 2.3.",
     "href": "lesson-2-3.html",
     "source": {
@@ -2294,7 +2451,7 @@
     "apTopics": [
       "2.2"
     ],
-    "prompt": "Name a House mechanism from our notes that affects debate, amendments, or getting a bill out of committee.",
+    "prompt": "Name a House mechanism that affects debate, amendments, or getting a bill out of committee.",
     "hint": "Use the terms and examples from Lesson 2.1.",
     "href": "lesson-2-1.html",
     "source": {
@@ -2396,7 +2553,7 @@
     "apTopics": [
       "2.5"
     ],
-    "prompt": "Name a type of nominee from our notes who generally requires Senate confirmation.",
+    "prompt": "Name a type of nominee who generally requires Senate confirmation.",
     "hint": "Use the terms and examples from Lesson 2.3.",
     "href": "lesson-2-3.html",
     "source": {
@@ -2503,7 +2660,7 @@
     "apTopics": [
       "2.3"
     ],
-    "prompt": "Name a political condition from our notes that can make cooperation between Congress and the president harder.",
+    "prompt": "Name a political condition that can make cooperation between Congress and the president harder.",
     "hint": "Use the terms and examples from Lesson 2.2.",
     "href": "lesson-2-2.html",
     "source": {
@@ -2555,7 +2712,7 @@
     "apTopics": [
       "2.7"
     ],
-    "prompt": "Name something our notes say to identify when judging a presidential communication strategy.",
+    "prompt": "Name something a president considers when planning a public message.",
     "hint": "Use the terms and examples from Lesson 2.3.",
     "href": "lesson-2-3.html",
     "source": {
@@ -2616,14 +2773,113 @@
     "apTopics": [
       "2.3"
     ],
-    "prompt": "Name one of the two requirements in the strict-scrutiny explanation from our Shaw notes.",
-    "hint": "Use the terms and examples from Lesson 2.2.",
-    "href": "lesson-2-2.html",
+    "prompt": "What did Shaw v. Reno deal with?",
+    "hint": "Name an issue involved in the case about congressional district lines.",
+    "href": "cases/shaw-v-reno.html",
     "source": {
       "document": "https://docs.google.com/document/d/1rDlqEEdjtR8hnBb6KR_jGlxya4Sgt4TjqVs-m95Pef4",
       "section": "SHAW v. RENO (1993)"
     },
     "answers": [
+      {
+        "id": "race",
+        "label": "Race in drawing districts",
+        "aliases": [
+          "race",
+          "racial",
+          "racism",
+          "racial discrimination",
+          "race based districts",
+          "racial districting"
+        ],
+        "basePoints": 20,
+        "explanation": "Voters challenged how race shaped North Carolina’s congressional district boundaries."
+      },
+      {
+        "id": "districts",
+        "label": "Congressional districts",
+        "aliases": [
+          "district",
+          "districts",
+          "district lines",
+          "district boundaries",
+          "voting districts",
+          "congressional district",
+          "voting district",
+          "drawing district lines"
+        ],
+        "basePoints": 20,
+        "explanation": "The case concerned congressional district boundaries."
+      },
+      {
+        "id": "redistricting",
+        "label": "Redistricting",
+        "aliases": [
+          "redrawing districts",
+          "drawing districts",
+          "district drawing",
+          "redraw district lines"
+        ],
+        "basePoints": 40,
+        "explanation": "The challenge arose from North Carolina’s redistricting plan."
+      },
+      {
+        "id": "gerrymandering",
+        "label": "Gerrymandering",
+        "aliases": [
+          "gerrymander",
+          "gerrymandered districts"
+        ],
+        "basePoints": 40,
+        "explanation": "The case involved a challenge to how district boundaries were drawn."
+      },
+      {
+        "id": "racial-gerrymandering",
+        "label": "Racial gerrymandering",
+        "aliases": [
+          "racial gerrymander",
+          "race based gerrymandering",
+          "gerrymandering by race"
+        ],
+        "basePoints": 60,
+        "explanation": "Voters alleged that race drove the district boundaries."
+      },
+      {
+        "id": "equal-protection",
+        "label": "Equal protection",
+        "aliases": [
+          "equal protection clause",
+          "14th amendment",
+          "fourteenth amendment",
+          "equal treatment"
+        ],
+        "basePoints": 80,
+        "explanation": "The voters brought an Equal Protection challenge under the Fourteenth Amendment."
+      },
+      {
+        "id": "majority-minority",
+        "label": "Majority-minority districts",
+        "aliases": [
+          "majority minority",
+          "majority minority district",
+          "black majority district",
+          "District 12",
+          "North Carolina district 12",
+          "NC district 12"
+        ],
+        "basePoints": 80,
+        "explanation": "District 12 was a majority-Black district; the Court did not ban all majority-minority districts."
+      },
+      {
+        "id": "strict-scrutiny",
+        "label": "Strict scrutiny",
+        "aliases": [
+          "strict scrutiny test",
+          "strict judicial scrutiny"
+        ],
+        "basePoints": 100,
+        "explanation": "Race-based districting raises constitutional scrutiny; the Court allowed the challenge to proceed rather than finally invalidating District 12 in 1993."
+      },
       {
         "id": "0",
         "label": "Compelling reason",
@@ -2631,11 +2887,10 @@
           "compelling interest",
           "compelling state interest",
           "very strong reason",
-          "a very strong reason",
-          "a compelling government interest"
+          "compelling government interest"
         ],
-        "explanation": "The state must justify the use of race with a compelling governmental interest.",
-        "basePoints": 20
+        "basePoints": 80,
+        "explanation": "A state must have a compelling justification when race predominates."
       },
       {
         "id": "1",
@@ -2644,11 +2899,10 @@
           "narrowly tailored",
           "closely fitted map",
           "use race only as much as needed",
-          "using race no more than necessary",
-          "use race only as needed"
+          "using race no more than necessary"
         ],
-        "explanation": "The map’s use of race must be closely fitted to the compelling purpose.",
-        "basePoints": 80
+        "basePoints": 100,
+        "explanation": "The use of race must be narrowly tailored to the compelling justification."
       }
     ],
     "kind": "notes-category",
@@ -2844,7 +3098,7 @@
     "apTopics": [
       "1.7"
     ],
-    "prompt": "Name a national feature of the Constitution identified in our Federalist No. 39 notes.",
+    "prompt": "Name a national feature of the Constitution discussed in Federalist No. 39.",
     "hint": "Use the terms and examples from Lesson 1.5.",
     "href": "lesson-1-5.html",
     "source": {
@@ -2898,7 +3152,7 @@
     "apTopics": [
       "1.7"
     ],
-    "prompt": "Name a federal feature of the Constitution identified in our Federalist No. 39 notes.",
+    "prompt": "Name a federal feature of the Constitution discussed in Federalist No. 39.",
     "hint": "Use the terms and examples from Lesson 1.5.",
     "href": "lesson-1-5.html",
     "source": {
@@ -2951,7 +3205,7 @@
     "apTopics": [
       "1.7"
     ],
-    "prompt": "Name an Article IV rule governing relationships among states from our notes.",
+    "prompt": "Name an Article IV rule governing relationships among states.",
     "hint": "Use the terms and examples from Lesson 1.5.",
     "href": "lesson-1-5.html",
     "source": {
@@ -4654,5 +4908,114 @@
       "section": "Official state names"
     },
     "difficultyRationale": "Broad civic recall with multiple familiar states available."
+  },
+  {
+    "id": "trivia-policy-agenda-tools",
+    "unit": 2,
+    "lesson": "2.3",
+    "apTopics": [
+      "2.4",
+      "2.5"
+    ],
+    "prompt": "Name a tool presidents use to carry out their policy agenda.",
+    "hint": "Think of presidential actions and ways to build support.",
+    "href": "presidential-tools.html",
+    "answers": [
+      {
+        "id": "0",
+        "label": "Regular veto",
+        "aliases": [
+          "veto",
+          "reject a bill",
+          "rejecting a bill",
+          "reject a bill and return it to congress",
+          "presidential veto"
+        ],
+        "explanation": "The president rejects a bill and returns it to Congress. Two-thirds of each chamber can override the veto.",
+        "basePoints": 20
+      },
+      {
+        "id": "1",
+        "label": "Pocket veto",
+        "aliases": [
+          "leaving a bill unsigned when congress prevents its return",
+          "pocket veto power"
+        ],
+        "explanation": "A bill fails after 10 days, excluding Sundays, if Congress’s adjournment prevents its return and the president has not signed it.",
+        "basePoints": 80
+      },
+      {
+        "id": "2",
+        "label": "Treaty",
+        "aliases": [
+          "treaties",
+          "formal international agreement",
+          "formal agreement with another country"
+        ],
+        "explanation": "The president negotiates a formal international agreement; two-thirds of senators present must consent before presidential ratification.",
+        "basePoints": 40
+      },
+      {
+        "id": "3",
+        "label": "Executive agreement",
+        "aliases": [
+          "international agreement without a senate treaty vote",
+          "agreement without senate treaty approval"
+        ],
+        "explanation": "An international agreement without the Senate’s two-thirds treaty vote must still rest on valid legal authority.",
+        "basePoints": 80
+      },
+      {
+        "id": "4",
+        "label": "Executive order",
+        "aliases": [
+          "written instructions to executive officials",
+          "written directions to executive agencies"
+        ],
+        "explanation": "Written directions to executive officials must follow existing law and stay within presidential authority.",
+        "basePoints": 20
+      },
+      {
+        "id": "5",
+        "label": "Signing statement",
+        "aliases": [
+          "statement when signing a law",
+          "explains how the president interprets a law"
+        ],
+        "explanation": "A statement issued when signing legislation explains the administration’s interpretation; it does not change the law.",
+        "basePoints": 100
+      },
+      {
+        "id": "6",
+        "label": "Bargaining and persuasion",
+        "aliases": [
+          "bargaining",
+          "persuasion",
+          "negotiating with lawmakers",
+          "negotiation and persuasion",
+          "persuading congress"
+        ],
+        "explanation": "Presidents negotiate for support. Lawmakers still choose how to vote.",
+        "basePoints": 60
+      },
+      {
+        "id": "7",
+        "label": "Bully pulpit",
+        "aliases": [
+          "using public attention to build support",
+          "using the presidency to gain public support",
+          "using public speeches to build support"
+        ],
+        "explanation": "The president uses public attention to highlight issues and build support. Public support does not guarantee legislation.",
+        "basePoints": 40
+      }
+    ],
+    "difficulty": 6,
+    "family": "presidential-policy-tools",
+    "kind": "government-category",
+    "source": {
+      "document": "https://docs.google.com/document/d/1RQht3EUtblFY8--n6kCwOQRMhRFzSkcL8JGb05aH5oQ",
+      "section": "Lesson concepts and linked course references"
+    }
   }
 ]

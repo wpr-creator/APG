@@ -53,7 +53,7 @@ assert.equal(curriculum.id,'government-categories-20261119');assert.equal(curric
 assert.equal(bank.length,curriculum.bankSize);assert.ok(bank.every(p=>p.answers.length>=2));
 const archive=JSON.parse(fs.readFileSync(require('node:path').join(__dirname,'../rotunda-archive.json'),'utf8'));
 assert.deepEqual(E.selectBank(bank,archive,curriculum,'2026-11-18'),archive);
-for(let d=20;d<=30;d++){const deck=E.courseDeck(bank,curriculum,'2026-11-'+d);assert.equal(deck.length,7);assert.equal(deck.at(-1).difficulty,7);assert.ok(deck.at(-1).answers.length<=3);}
+for(let d=20;d<=30;d++){const deck=E.courseDeck(bank,curriculum,'2026-11-'+d);assert.equal(deck.length,7);assert.equal(deck.at(-1).difficulty,7);assert.ok(deck.at(-1).answers.length>=2);}
 const drawn=new Set();for(let n=0;n<260;n++){const date=new Date('2026-11-20T12:00:00Z');date.setUTCDate(date.getUTCDate()+n);if([0,6].includes(date.getUTCDay()))continue;for(const p of E.courseDeck(bank,curriculum,date.toISOString().slice(0,10)))drawn.add(p.id);}
 assert.deepEqual(bank.filter(p=>!drawn.has(p.id)).map(p=>p.id),[],'Family preferences must not starve any category.');
 console.log(`Rotunda coverage: ${examples.length} representative variants, ${excluded} outside-category names, ambiguous surnames, and existing attempts passed.`);

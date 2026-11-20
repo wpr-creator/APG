@@ -19,7 +19,7 @@
   "weekdaysOnly": true,
   "promptsPerDay": 7,
   "secondsPerPrompt": 25,
-  "bankSize": 125,
+  "bankSize": 126,
   "revision": "government-categories-20261120-pyramid",
   "effectiveFrom": "2026-11-19",
   "previous": {
@@ -64,6 +64,15 @@
       "trivia-democracy-models",
       "trivia-congress-powers",
       "trivia-presidential-duties"
+    ],
+    "2026-11-20": [
+      "trivia-branches",
+      "trivia-presidents-last-b",
+      "trivia-federal-elected-jobs",
+      "trivia-legislative-offices",
+      "trivia-notes-discretionary-areas",
+      "trivia-policy-agenda-tools",
+      "trivia-notes-strict-scrutiny-elements"
     ]
   },
   "pyramidFrom": "2026-11-20",
@@ -75,5 +84,8 @@
     "Connections",
     "Analysis",
     "Summit"
-  ]
+  ],
+  "promptReplacements": {
+    "trivia-notes-cooperation-obstacles": "trivia-policy-agenda-tools"
+  }
 }
